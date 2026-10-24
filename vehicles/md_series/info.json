@@ -1,0 +1,150 @@
+{
+  "Author": "BeamNG",
+  "Brand": "Gavril",
+  "defaultPaintName1": "White",
+  "defaultPaintName2": "Charcoal",
+  "defaultPaintName3": "Charcoal",
+  "default_pc": "md_70_dump",
+  "Country": "United States",
+  "Derby Class": "Medium Truck",
+  "Description": "vehiclesData.md_series.Description",
+  "Name": "vehiclesData.md_series.Name",
+  "Type": "Truck",
+  "InsuranceClass": "commercial",
+  "Region": "northAmerica",
+  "useSubCluster": true,
+  "vehicleSelectorSubCluster": "vehiclesData.md_series.vehicleSelectorSubGroup",
+  "vehicleSelectorSubGroup": "vehiclesData.md_series.vehicleSelectorSubGroup",
+  "paints": {
+    "Beach Yellow": {
+      "baseColor": [0.67,  0.53,  0.36,  1.2],
+      "clearcoat": 0.1,
+      "clearcoatRoughness": 0.09,
+      "metallic": 0,
+      "roughness": 0.07
+    },
+    "Mid Gray Matte": {
+      "class": "custom",
+      "baseColor": [0.501,  0.501,  0.501,  2],
+      "clearcoat": 0,
+      "clearcoatRoughness": 0,
+      "metallic": 0,
+      "roughness": 0.65
+    },
+    "Pink Matte": {
+      "class": "custom",
+      "baseColor": [0.906,  0.361,  0.721,  2],
+      "clearcoat": 0,
+      "clearcoatRoughness": 0,
+      "metallic": 0,
+      "roughness": 0.65
+    },
+    "Lime Matte": {
+      "class": "custom",
+      "baseColor": [0.72,  1,  0.213,  2],
+      "clearcoat": 0,
+      "clearcoatRoughness": 0,
+      "metallic": 0,
+      "roughness": 0.65
+    },
+    "Orange Matte": {
+      "class": "custom",
+      "baseColor": [1,  0.378,  0.097,  2],
+      "clearcoat": 0,
+      "clearcoatRoughness": 0,
+      "metallic": 0,
+      "roughness": 0.65
+    },
+    "Dark Gray Matte": {
+      "class": "custom",
+      "baseColor": [0.284,  0.284,  0.284,  2],
+      "clearcoat": 0,
+      "clearcoatRoughness": 0,
+      "metallic": 0,
+      "roughness": 0.65
+    },
+    "Black Matte": {
+      "class": "custom",
+      "baseColor": [0,  0,  0,  2],
+      "clearcoat": 0,
+      "clearcoatRoughness": 0,
+      "metallic": 0,
+      "roughness": 0.65
+    },
+    "Primer": {
+      "class": "custom",
+      "baseColor": [0.5,  0.5,  0.5,  2],
+      "clearcoat": 0,
+      "clearcoatRoughness": 0,
+      "metallic": 0,
+      "roughness": 1
+    },
+    "Spearleaf Blue": {
+      "class": "custom",
+      "baseColor": [0.14,  0.28,  0.61,  2],
+      "clearcoat": 1,
+      "clearcoatRoughness": 0.06,
+      "metallic": 0,
+      "roughness": 1
+    }
+  },
+  "multiPaintSetups": [],
+  "libraryPaints": [
+    "burgundy",
+    "black",
+    "white",
+    "solar_yellow",
+    "steel_blue",
+    "navy_blue",
+    "silver",
+    "royal_green",
+    "champagne",
+    "olive_green",
+    "oxide_red",
+    "seafoam_green",
+	
+      "G_ambitious_orange",
+      "G_royal_red",
+      "G_arctic_blue",
+      "G_cerulean_sky",
+      "G_blueberry",
+      "G_dark_silver",
+      "G_deep_green",
+      "G_soft_white",
+      "G_shingle_red",
+      "G_summer_sky",
+      "G_dark_lime",
+	  "G_ambitious_yellow",
+
+    { "id": "charcoal",         "class": "custom" },
+    { "id": "arsenic_green",    "class": "custom" },
+    { "id": "taxi_yellow",      "class": "custom" },
+    { "id": "fire_red",         "class": "custom" },
+    { "id": "vibrant_red",      "class": "custom" },
+    { "id": "dusted_mica",      "class": "custom" },
+    { "id": "chestnut",         "class": "custom" },
+    { "id": "orange",           "class": "custom" },
+    { "id": "butterscotch",     "class": "custom" },
+    { "id": "cream",            "class": "custom" },
+    { "id": "autumn_yellow",    "class": "custom" },
+    { "id": "cactus_green",     "class": "custom" },
+    { "id": "verdant_green",    "class": "custom" },
+    { "id": "shale_green",      "class": "custom" },
+    { "id": "forest_green",     "class": "custom" },
+    { "id": "aquamarine",       "class": "custom" },
+    { "id": "bermuda_blue",     "class": "custom" },
+    { "id": "steel_gray",       "class": "custom" },
+    { "id": "pleasant_blue",    "class": "custom" },
+    { "id": "brilliant_blue",   "class": "custom" },
+	
+    { "id": "G_tropical_blue",  "class": "custom" },
+    { "id": "G_royal_green",    "class": "custom" }
+    { "id": "G_overcast_blue",  "class": "custom" },
+    { "id": "G_lead",           "class": "custom" },
+    { "id": "G_nightshade",     "class": "custom" },
+    { "id": "G_royal_magenta",  "class": "custom" },
+    { "id": "G_grassland_green","class": "custom" },
+  ]
+  }
+}
+

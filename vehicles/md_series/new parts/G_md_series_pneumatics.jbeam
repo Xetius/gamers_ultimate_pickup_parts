@@ -1,0 +1,26 @@
+{
+"G_md_series_air_compressor_alt": {
+    "information": {
+        "authors": "Gamer!",
+        "name": "Heavy Duty Air Compressor",
+        "value": 4100,
+    },
+    "slotType" : "md_series_air_compressor",
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["compressor", "airCompressor1", "mainEngine", 3],
+    ],
+    "airCompressor1": {
+        //"pumpDisplacement": 0.00027
+        "pumpDisplacement": 0.00042
+        //"cutOutPressure":896318       //896318=130psi   1024250=150psi -- these need to account for atmosphere pressure
+        "cutOutPressure":1024250       //896318=130psi   1024250=150psi -- these need to account for atmosphere pressure
+        //"cutInPressure":723950
+        "cutInPressure":800950
+        "pumpEfficiency":0.8
+        "energyStorage": "mainAirTank",
+        "purgeSoundNode": "atnk1r"
+        "compressorSoundNode": "en3l",
+    },
+},
+}

@@ -1,0 +1,820 @@
+{
+"G_pickup_transmission_D55_8A": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Gas 8-Speed Late Automatic Transmission",
+        "value":6200,
+    },
+    "slotType" : ["G_pickup_transmission_D55", "pickup_classic_transmission"],
+    "slots": [
+        ["type", "default", "description"],
+        ["pickup_converter","pickup_converter_heavy","Torque Converter", {"coreSlot":true}],
+    ],
+    "components": {
+        "fueltank": {
+            "fueltype": "gasoline",
+        },
+    },
+    "mainEngine": {
+        //fuel system
+        "energyStorage": ["mainTank","auxTank","G_auxTank_alt","G_auxTank_altb","D55Tank_L","D55Tank_R"],
+    },
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torqueConverter", "torqueConverter", "mainEngine", 1],
+        ["automaticGearbox", "gearbox", "torqueConverter", 1],
+    ],
+    "gearbox": {
+        "uiName":"Gearbox",
+        //premultiplied to account for 3.55 differential ratio instead of 3.15
+        //source ratios: [-3.4, 0, 4.17, 2.34, 1.52, 1.14, 0.87, 0.69]
+        "gearRatios":[-6.0, 0, 6.0, 4.2, 3.0, 2.35, 1.85, 1.4, 1.1, 0.84],
+        "parkLockTorque":2500,
+        "oneWayViscousCoef":60,
+        "friction": 1.68,
+        "dynamicFriction": 0.0017,
+        "torqueLossCoef": 0.017,
+        "gearboxNode:":"tra1",
+    },
+    "vehicleController": {
+        "automaticModes":"PRND21",
+        "transmissionGearChangeDelay":1.5,
+        "calculateOptimalLoadShiftPoints": true,
+        "aggressionSmoothingUp":1,
+        "aggressionSmoothingDown":0.5,
+        "aggressionHoldOffThrottleDelay":1.75,
+        "gearboxDecisionSmoothingUp":2,
+        "gearboxDecisionSmoothingDown":2,
+        "lowShiftDownRPM":1000,
+        "lowShiftUpRPM":[0,0,1700,1500,1500,1500,1500],
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         //--6 Speed Auto-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":37.6},
+         {"group":"pickup_transmission"},
+         ["tra1", 0.0, -0.29, 0.36],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":18800940,"beamDamp":470},
+          {"beamDeform":175000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_transmission_D55_8A_Diesel": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Diesel 8-Speed Late Automatic Transmission",
+        "value":6200,
+    },
+    "slotType" : ["G_pickup_transmission_D55_diesel", "pickup_classic_transmission"],
+    "slots": [
+        ["type", "default", "description"],
+        ["pickup_converter_diesel","pickup_converter_diesel","Torque Converter", {"coreSlot":true}],
+    ],
+    "components": {
+        "fueltank": {
+            "fueltype": "diesel",
+        },
+    },
+    "mainEngine": {
+        //fuel system
+        "energyStorage": ["mainTank","auxTank","G_auxTank_alt","G_auxTank_altb","D55Tank_L","D55Tank_R"],
+    },
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torqueConverter", "torqueConverter", "mainEngine", 1],
+        ["automaticGearbox", "gearbox", "torqueConverter", 1],
+    ],
+    "gearbox": {
+        "uiName":"Gearbox",
+        "gearRatios":[-5.0, 0, 5.0, 3.1, 2.3, 1.85, 1.52, 1.3, 1.07, 0.83],
+        "parkLockTorque":2500,
+        "oneWayViscousCoef":60,
+        "friction": 1.68,
+        "dynamicFriction": 0.0017,
+        "torqueLossCoef": 0.017,
+        "gearboxNode:":"tra1",
+    },
+    "vehicleController": {
+        "automaticModes":"PRND21",
+        "transmissionGearChangeDelay":1,
+        "transmissionShiftDelay":0.15,
+        "minGearChangeTime":0.05,
+        "maxGearChangeTime":0.15,
+        "calculateOptimalLoadShiftPoints":true,
+        "useSmartAggressionCalculation":true,
+        "lowShiftDownRPM":1500,
+        "lowShiftUpRPM":2500,
+        "gearboxDecisionSmoothingUp":2,
+        "gearboxDecisionSmoothingDown":2,
+        "aggressionSmoothingUp":2.0,
+        "aggressionSmoothingDown":0.5,
+        "throttleCoefWhileShifting":0.95,
+        "torqueConverterLockupRPM":3000,
+        "torqueConverterLockupMinGear":2,
+        "torqueConverterLockupRange":50,
+        "torqueConverterLockupInRate":10,
+        "torqueConverterLockupOutRate":1,
+        "autoDownShiftInM":false,
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         //--6 Speed Auto-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":37.6},
+         {"group":"pickup_transmission"},
+         ["tra1", 0.0, -0.29, 0.36],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":18800940,"beamDamp":470},
+          {"beamDeform":175000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_transmission_D55_6A": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Gas 6-Speed Automatic Transmission",
+        "value":3600,
+    },
+    "slotType" : ["G_pickup_transmission_D55", "pickup_classic_transmission"],
+    "slots": [
+        ["type", "default", "description"],
+        ["pickup_converter","pickup_converter_heavy","Torque Converter", {"coreSlot":true}],
+    ],
+    "components": {
+        "fueltank": {
+            "fueltype": "gasoline",
+        },
+    },
+    "mainEngine": {
+        //fuel system
+        "energyStorage": ["mainTank","auxTank","G_auxTank_alt","G_auxTank_altb","D55Tank_L","D55Tank_R"],
+    },
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torqueConverter", "torqueConverter", "mainEngine", 1],
+        ["automaticGearbox", "gearbox", "torqueConverter", 1],
+    ],
+    "gearbox": {
+        "uiName":"Gearbox",
+        //premultiplied to account for 3.55 differential ratio instead of 3.15
+        //source ratios: [-3.4, 0, 4.17, 2.34, 1.52, 1.14, 0.87, 0.69]
+        "gearRatios":[-3.02, 0, 3.70, 2.08, 1.35, 1.02, 0.89, 0.62],
+        "parkLockTorque":2500,
+        "oneWayViscousCoef":60,
+        "friction": 1.68,
+        "dynamicFriction": 0.0017,
+        "torqueLossCoef": 0.017,
+        "gearboxNode:":"tra1",
+    },
+    "vehicleController": {
+        "automaticModes":"PRND21",
+        "transmissionGearChangeDelay":1.5,
+        "calculateOptimalLoadShiftPoints": true,
+        "aggressionSmoothingUp":1,
+        "aggressionSmoothingDown":0.5,
+        "aggressionHoldOffThrottleDelay":1.75,
+        "gearboxDecisionSmoothingUp":2,
+        "gearboxDecisionSmoothingDown":2,
+        "lowShiftDownRPM":1000,
+        "lowShiftUpRPM":[0,0,1700,1500,1500,1500,1500],
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         //--6 Speed Auto-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":37.6},
+         {"group":"pickup_transmission"},
+         ["tra1", 0.0, -0.29, 0.36],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":18800940,"beamDamp":470},
+          {"beamDeform":175000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_transmission_D55_6A_Diesel": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Diesel 6-Speed Automatic Transmission",
+        "value":3600,
+    },
+    "slotType" : ["G_pickup_transmission_D55_diesel", "pickup_classic_transmission"],
+    "slots": [
+        ["type", "default", "description"],
+        ["pickup_converter_diesel","pickup_converter_diesel","Torque Converter", {"coreSlot":true}],
+    ],
+    "components": {
+        "fueltank": {
+            "fueltype": "diesel",
+        },
+    },
+    "mainEngine": {
+        //fuel system
+        "energyStorage": ["mainTank","auxTank","G_auxTank_alt","G_auxTank_altb","D55Tank_L","D55Tank_R"],
+    },
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torqueConverter", "torqueConverter", "mainEngine", 1],
+        ["automaticGearbox", "gearbox", "torqueConverter", 1],
+    ],
+    "gearbox": {
+        "uiName":"Gearbox",
+        "gearRatios":[-3.4, 0, 3.09, 1.81, 1.33, 1.0, 0.78, 0.65],
+        "parkLockTorque":2500,
+        "oneWayViscousCoef":60,
+        "friction": 1.68,
+        "dynamicFriction": 0.0017,
+        "torqueLossCoef": 0.017,
+        "gearboxNode:":"tra1",
+    },
+    "vehicleController": {
+        "automaticModes":"PRND21",
+        "transmissionGearChangeDelay":1,
+        "transmissionShiftDelay":0.15,
+        "minGearChangeTime":0.05,
+        "maxGearChangeTime":0.15,
+        "calculateOptimalLoadShiftPoints":true,
+        "useSmartAggressionCalculation":true,
+        "lowShiftDownRPM":1500,
+        "lowShiftUpRPM":2500,
+        "gearboxDecisionSmoothingUp":2,
+        "gearboxDecisionSmoothingDown":2,
+        "aggressionSmoothingUp":2.0,
+        "aggressionSmoothingDown":0.5,
+        "throttleCoefWhileShifting":0.95,
+        "torqueConverterLockupRPM":3000,
+        "torqueConverterLockupMinGear":2,
+        "torqueConverterLockupRange":50,
+        "torqueConverterLockupInRate":10,
+        "torqueConverterLockupOutRate":1,
+        "autoDownShiftInM":false,
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         //--6 Speed Auto-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":37.6},
+         {"group":"pickup_transmission"},
+         ["tra1", 0.0, -0.29, 0.36],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":18800940,"beamDamp":470},
+          {"beamDeform":175000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_transmission_D55_5A": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Gas 5-Speed Automatic Transmission",
+        "value":2900,
+    },
+    "slotType" : ["G_pickup_transmission_D55", "pickup_classic_transmission"],
+    "slots": [
+        ["type", "default", "description"],
+        ["pickup_converter","pickup_converter_heavy","Torque Converter", {"coreSlot":true}],
+    ],
+    "components": {
+        "fueltank": {
+            "fueltype": "gasoline",
+        },
+    },
+    "mainEngine": {
+        //fuel system
+        "energyStorage": ["mainTank","auxTank","G_auxTank_alt","G_auxTank_altb","D55Tank_L","D55Tank_R"],
+    },
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torqueConverter", "torqueConverter", "mainEngine", 1],
+        ["automaticGearbox", "gearbox", "torqueConverter", 1],
+    ],
+    "gearbox": {
+        "uiName":"Gearbox",
+        //premultiplied to account for 3.55 differential ratio instead of 3.15
+        //source ratios: [-3.4, 0, 4.17, 2.34, 1.52, 1.14, 0.87, 0.69]
+        "gearRatios":[-3.02, 0, 3.60, 1.78, 1.25, 0.92, , 0.72],
+        "parkLockTorque":2500,
+        "oneWayViscousCoef":60,
+        "friction": 1.68,
+        "dynamicFriction": 0.0017,
+        "torqueLossCoef": 0.017,
+        "gearboxNode:":"tra1",
+    },
+    "vehicleController": {
+        "automaticModes":"PRND21",
+        "transmissionGearChangeDelay":1.5,
+        "calculateOptimalLoadShiftPoints": true,
+        "aggressionSmoothingUp":1,
+        "aggressionSmoothingDown":0.5,
+        "aggressionHoldOffThrottleDelay":1.75,
+        "gearboxDecisionSmoothingUp":2,
+        "gearboxDecisionSmoothingDown":2,
+        "lowShiftDownRPM":1000,
+        "lowShiftUpRPM":[0,0,1700,1500,1500,1500,1500],
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         //--5 Speed Auto-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":37.6},
+         {"group":"pickup_transmission"},
+         ["tra1", 0.0, -0.29, 0.36],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":18800940,"beamDamp":470},
+          {"beamDeform":175000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_transmission_D55_5A_Diesel": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Diesel 5-Speed Automatic Transmission",
+        "value":2900,
+    },
+    "slotType" : ["G_pickup_transmission_D55_diesel", "pickup_classic_transmission"],
+    "slots": [
+        ["type", "default", "description"],
+        ["pickup_converter_diesel","pickup_converter_diesel","Torque Converter", {"coreSlot":true}],
+    ],
+    "components": {
+        "fueltank": {
+            "fueltype": "diesel",
+        },
+    },
+    "mainEngine": {
+        //fuel system
+        "energyStorage": ["mainTank","auxTank","G_auxTank_alt","G_auxTank_altb","D55Tank_L","D55Tank_R"],
+    },
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torqueConverter", "torqueConverter", "mainEngine", 1],
+        ["automaticGearbox", "gearbox", "torqueConverter", 1],
+    ],
+    "gearbox": {
+        "uiName":"Gearbox",
+        "gearRatios":[-3.4, 0, 2.99, 1.61, 1.18, 0.93,     , 0.75],
+        "parkLockTorque":2500,
+        "oneWayViscousCoef":60,
+        "friction": 1.68,
+        "dynamicFriction": 0.0017,
+        "torqueLossCoef": 0.017,
+        "gearboxNode:":"tra1",
+    },
+    "vehicleController": {
+        "automaticModes":"PRND21",
+        "transmissionGearChangeDelay":1,
+        "transmissionShiftDelay":0.15,
+        "minGearChangeTime":0.05,
+        "maxGearChangeTime":0.15,
+        "calculateOptimalLoadShiftPoints":true,
+        "useSmartAggressionCalculation":true,
+        "lowShiftDownRPM":1500,
+        "lowShiftUpRPM":2500,
+        "gearboxDecisionSmoothingUp":2,
+        "gearboxDecisionSmoothingDown":2,
+        "aggressionSmoothingUp":2.0,
+        "aggressionSmoothingDown":0.5,
+        "throttleCoefWhileShifting":0.95,
+        "torqueConverterLockupRPM":3000,
+        "torqueConverterLockupMinGear":2,
+        "torqueConverterLockupRange":50,
+        "torqueConverterLockupInRate":10,
+        "torqueConverterLockupOutRate":1,
+        "autoDownShiftInM":false,
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         //--5 Speed Auto-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":37.6},
+         {"group":"pickup_transmission"},
+         ["tra1", 0.0, -0.29, 0.36],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":18800940,"beamDamp":470},
+          {"beamDeform":175000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_transmission_D55_5M": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Gas 5-Speed Manual Transmission",
+        "value":1800,
+    },
+    "slotType" : ["G_pickup_transmission_D55", "pickup_classic_transmission"],
+    "slots": [
+        ["type", "default","description"],
+        ["pickup_flywheel","G_pickup_flywheel_D55","Flywheel", {"coreSlot":true}],
+    ],
+    "components": {
+        "fueltank": {
+            "fueltype": "gasoline",
+        },
+    },
+    "mainEngine": {
+        //fuel system
+        "energyStorage": ["mainTank","auxTank","G_auxTank_alt","G_auxTank_altb","D55Tank_L","D55Tank_R"],
+    },
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "uiName":"Gearbox",
+        "gearRatios":[-3.39, 0, 3.9, 2.25, 1.5, 1.0, 0.8],
+        "friction": 1.38,
+        "dynamicFriction": 0.00141,
+        "torqueLossCoef": 0.0155,
+        "gearboxNode:":"tra1",
+
+        "gearWhineCoefsInput":  [0.60, 0.00, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12],
+        "gearWhineCoefsOutput": [0.00, 0.00, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24],
+        "gearWhineInputEvent": "event:>Vehicle>Transmission>helical_01>twine_in_tuned",
+        "gearWhineOutputEvent": "event:>Vehicle>Transmission>helical_01>twine_out_tuned",
+
+        "forwardInputPitchCoef":0.95
+        "forwardOutputPitchCoef":0.95
+        //"reverseInputPitchCoef":0.7
+        //"reverseOutputPitchCoef":0.7
+
+        //"gearWhineInputPitchCoefSmoothing":50
+        //"gearWhineOutputPitchCoefSmoothing":50
+        //"gearWhineInputVolumeCoefSmoothing":10
+        //"gearWhineOutputVolumeCoefSmoothing":10
+
+        //"gearWhineFixedCoefOutput": 0.7
+        //"gearWhineFixedCoefInput": 0.4
+    },
+    "clutch": {
+        "uiName":"Clutch",
+    },
+    "vehicleController": {
+        "calculateOptimalLoadShiftPoints": true,
+        "shiftDownRPMOffsetCoef":1.1,
+        "lowShiftDownRPM":[0,0,0,1300,1500,1400,1300,1100],
+        "lowShiftUpRPM":[0,0,2800,2600,2500,2300,2000],
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         //--6 Speed Auto-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":37.6},
+         {"group":"pickup_transmission"},
+         ["tra1", 0.0, -0.29, 0.36],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":18800940,"beamDamp":470},
+          {"beamDeform":175000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_transmission_D55_5M_diesel": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Diesel 5-Speed Manual Transmission",
+        "value":1800,
+    },
+    "slotType" : ["G_pickup_transmission_D55_diesel", "pickup_classic_transmission"],
+    "slots": [
+        ["type", "default","description"],
+        ["pickup_flywheel","G_pickup_flywheel_D55","Flywheel", {"coreSlot":true}],
+    ],
+    "components": {
+        "fueltank": {
+            "fueltype": "diesel",
+        },
+    },
+    "mainEngine": {
+        //fuel system
+        "energyStorage": ["mainTank","auxTank","G_auxTank_alt","G_auxTank_altb","D55Tank_L","D55Tank_R"],
+    },
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "uiName":"Gearbox",
+        "gearRatios":[-4.66, 0, 5.08, 2.60, 1.53, 1.0, 0.77],
+        "friction": 1.42,
+        "dynamicFriction": 0.00144,
+        "torqueLossCoef": 0.0155,
+        "gearboxNode:":"tra1",
+
+        "gearWhineCoefsInput":  [0.60, 0.00, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12],
+        "gearWhineCoefsOutput": [0.00, 0.00, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24],
+        "gearWhineInputEvent": "event:>Vehicle>Transmission>helical_01>twine_in_tuned",
+        "gearWhineOutputEvent": "event:>Vehicle>Transmission>helical_01>twine_out_tuned",
+
+        "forwardInputPitchCoef":0.95
+        "forwardOutputPitchCoef":0.95
+        //"reverseInputPitchCoef":0.7
+        //"reverseOutputPitchCoef":0.7
+
+        //"gearWhineInputPitchCoefSmoothing":50
+        //"gearWhineOutputPitchCoefSmoothing":50
+        //"gearWhineInputVolumeCoefSmoothing":10
+        //"gearWhineOutputVolumeCoefSmoothing":10
+
+        //"gearWhineFixedCoefOutput": 0.7
+        //"gearWhineFixedCoefInput": 0.4
+    },
+    "vehicleController": {
+        "calculateOptimalLoadShiftPoints": true,
+        "shiftDownRPMOffsetCoef":1.1,
+        "transmissionShiftDelay":0.28,
+        "lowShiftDownRPM":[0,0,0,1000,1000,1000,1000,1000],
+        "lowShiftUpRPM":[0,0,2300,2300,2300,2200,2100],
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         //--6 Speed Auto-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":37.6},
+         {"group":"pickup_transmission"},
+         ["tra1", 0.0, -0.29, 0.36],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":18800940,"beamDamp":470},
+          {"beamDeform":175000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_transmission_D55_8M": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Gas 8-Speed Manual Transmission",
+        "value":2800,
+    },
+    "slotType" : ["G_pickup_transmission_D55", "pickup_classic_transmission"],
+    "slots": [
+        ["type", "default","description"],
+        ["pickup_flywheel","G_pickup_flywheel_D55","Flywheel", {"coreSlot":true}],
+    ],
+    "components": {
+        "fueltank": {
+            "fueltype": "gasoline",
+        },
+    },
+    "mainEngine": {
+        //fuel system
+        "energyStorage": ["mainTank","auxTank","G_auxTank_alt","G_auxTank_altb","D55Tank_L","D55Tank_R"],
+    },
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "uiName":"Gearbox",
+        //"gearRatios":[-3.39, 0, 3.9, 2.25, 1.5, 1.0, 0.8],
+        "gearRatios":[-4.9, -7.4, 0, 6.0, 4.2, 3.0, 2.35, 1.85, 1.4, 1.1, 0.84],
+        "friction": 1.38,
+        "dynamicFriction": 0.00141,
+        "torqueLossCoef": 0.0155,
+        "gearboxNode:":"tra1",
+
+        "gearWhineCoefsInput":  [0.60, 0.00, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12],
+        "gearWhineCoefsOutput": [0.00, 0.00, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24],
+        "gearWhineInputEvent": "event:>Vehicle>Transmission>helical_01>twine_in_tuned",
+        "gearWhineOutputEvent": "event:>Vehicle>Transmission>helical_01>twine_out_tuned",
+
+        "forwardInputPitchCoef":0.95
+        "forwardOutputPitchCoef":0.95
+        //"reverseInputPitchCoef":0.7
+        //"reverseOutputPitchCoef":0.7
+
+        //"gearWhineInputPitchCoefSmoothing":50
+        //"gearWhineOutputPitchCoefSmoothing":50
+        //"gearWhineInputVolumeCoefSmoothing":10
+        //"gearWhineOutputVolumeCoefSmoothing":10
+
+        //"gearWhineFixedCoefOutput": 0.7
+        //"gearWhineFixedCoefInput": 0.4
+    },
+    "clutch": {
+        "uiName":"Clutch",
+    },
+    "vehicleController": {
+        "calculateOptimalLoadShiftPoints": true,
+        "shiftDownRPMOffsetCoef":1.1,
+        "lowShiftDownRPM":[0,0,0,1300,1500,1400,1300,1100],
+        "lowShiftUpRPM":[0,0,2800,2600,2500,2300,2000],
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         //--6 Speed Auto-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":37.6},
+         {"group":"pickup_transmission"},
+         ["tra1", 0.0, -0.29, 0.36],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":18800940,"beamDamp":470},
+          {"beamDeform":175000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_transmission_D55_8M_diesel": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Diesel 8-Speed Manual Transmission",
+        "value":2800,
+    },
+    "slotType" : ["G_pickup_transmission_D55_diesel", "pickup_classic_transmission"],
+    "slots": [
+        ["type", "default","description"],
+        ["pickup_flywheel","G_pickup_flywheel_D55","Flywheel", {"coreSlot":true}],
+    ],
+    "components": {
+        "fueltank": {
+            "fueltype": "diesel",
+        },
+    },
+    "mainEngine": {
+        //fuel system
+        "energyStorage": ["mainTank","auxTank","G_auxTank_alt","G_auxTank_altb","D55Tank_L","D55Tank_R"],
+    },
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "uiName":"Gearbox",
+        "gearRatios":[-3.8, -5.9, 0, 5.0, 3.1, 2.3, 1.85, 1.52, 1.3, 1.07, 0.83],
+        "friction": 1.42,
+        "dynamicFriction": 0.00144,
+        "torqueLossCoef": 0.0155,
+        "gearboxNode:":"tra1",
+
+        "gearWhineCoefsInput":  [0.60, 0.00, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12],
+        "gearWhineCoefsOutput": [0.00, 0.00, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24],
+        "gearWhineInputEvent": "event:>Vehicle>Transmission>helical_01>twine_in_tuned",
+        "gearWhineOutputEvent": "event:>Vehicle>Transmission>helical_01>twine_out_tuned",
+
+        "forwardInputPitchCoef":0.95
+        "forwardOutputPitchCoef":0.95
+        //"reverseInputPitchCoef":0.7
+        //"reverseOutputPitchCoef":0.7
+
+        //"gearWhineInputPitchCoefSmoothing":50
+        //"gearWhineOutputPitchCoefSmoothing":50
+        //"gearWhineInputVolumeCoefSmoothing":10
+        //"gearWhineOutputVolumeCoefSmoothing":10
+
+        //"gearWhineFixedCoefOutput": 0.7
+        //"gearWhineFixedCoefInput": 0.4
+    },
+    "vehicleController": {
+        "calculateOptimalLoadShiftPoints": true,
+        "shiftDownRPMOffsetCoef":1.1,
+        "transmissionShiftDelay":0.28,
+        "lowShiftDownRPM":[0,0,0,1000,1000,1000,1000,1000],
+        "lowShiftUpRPM":[0,0,2300,2300,2300,2200,2100],
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         //--6 Speed Auto-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":37.6},
+         {"group":"pickup_transmission"},
+         ["tra1", 0.0, -0.29, 0.36],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":18800940,"beamDamp":470},
+          {"beamDeform":175000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_flywheel_D55": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Flywheel",
+        "value":320,
+    },
+    "slotType" : "pickup_flywheel",
+    "clutch": {
+        "uiName":"Clutch",
+        "additionalEngineInertia":0.28,
+        "clutchMass":9.6,
+    },
+},
+}

@@ -1,0 +1,218 @@
+{
+"G_pickup_frame_D55_F_trailer":{
+    "information":{
+        "authors":"Gamer!",
+        "name":"Trailer D55 Front Frame",
+        "value":1000,
+    },
+    "slotType" :"pickup_frame",
+    "slots":[
+        ["type", "default", "description"],
+        //running gear
+        ["G_pickup_frame_D55_R","G_pickup_frame_D55_R_upfit", "Rear Frame",                        {"coreSlot":true}],
+        ["G_pickup_front_trailer_hitch","G_pickup_front_trailer_hitch_heavy","Trailer Hitch Type", {"nodeOffset":{"x":0.0,"y":-0.05,"z":-0.055}}],
+    ],
+    "electrics": {
+        "allowedIgnitionLevels":[0]
+        "ignitionLevelOverrideType": "none"
+    }
+    "controller": [
+        ["fileName"],
+        //["vehicleController", {}],
+        ["trailerFeet"],
+    ],
+    "refNodes":[
+        ["ref:", "back:", "left:", "up:", "leftCorner:", "rightCorner:"],
+        //["f5r", "f6r", "f5l", "f15r", "f1l", "f1r"],
+        ["f7r", "f8r", "f7l", "f17r", "f6l", "f6r"],
+    ],
+    "components": {
+        "camera": {
+            "offset_Y": 0,
+            "offset_Z": 0,
+            "offset_distance": 0,
+            "offset_upfit_Y": -4.0,
+            "offset_upfit_distance": 0.0,
+        },
+        "frame_F": {
+            "offset_Y": 0.0,
+        },
+    },
+    "actionsEnabled": [
+        ["id"],
+    ],
+    "cameraChase":{
+        "distance":"$=6.0+$components.camera.offset_distance",
+        "distanceMin":2,
+        "defaultRotation":{"x":0,"y":-12,"z":0},
+        "offset":{"x":0.55, "y":"$=-1.8+$components.camera.offset_Y", "z":"$=1.4+$components.camera.offset_Z"},
+        "fov":65,
+    },
+    "cameraExternal":{
+        "distance":"$=6.0+$components.camera.offset_distance",
+        "distanceMin":2,
+        "offset":{"x":0.55, "y":"$=-1.8+$components.camera.offset_Y", "z":"$=0.5+$components.camera.offset_Z"},
+        "fov":65,
+    },
+   "torsionbars":[
+       ["id1:", "id2:", "id3:", "id4:"],
+       //frame middle deform
+       {"spring":3500000, "damp":5, "deform": 250000, "strength":200000},
+       ["f15r", "f6r", "f16r", "f7r"],
+       ["f15l", "f6l", "f16l", "f7l"],
+       ["f15r", "f16r", "f16l", "f17l"],
+       ["f15l", "f16l", "f16r", "f17r"],
+    ],
+
+
+    "nodes":[
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"group":["pickup_frame", "pickup_frame_upfit"]},
+
+         //{"chemEnergy":200, "burnRate":1,"flashPoint":400, "specHeat":0.8, "smokePoint":150, "selfIgnitionCoef":false},
+         //{"chemEnergy":false, "burnRate":false, "flashPoint":false, "specHeat":false, "smokePoint":false, "selfIgnitionCoef":false},
+
+         //--FRAME RAILS--
+
+         //mid
+         {"selfCollision":true},
+         {"nodeWeight":29},
+         ["f5r", -0.55, 0.4, 0.25],
+         ["f5l", 0.55, 0.4, 0.25],
+
+         {"selfCollision":false},
+         ["f15r", -0.55, 0.4, 0.55],
+         ["f15l", 0.55, 0.4, 0.55],
+
+
+         //--CROSSMEMBERS--
+         {"nodeWeight":9.05},
+         //h45 crossmember
+         ["f5", 0.0, 0.4, 0.25],
+         ["f15", 0.0, 0.4, 0.55, {"selfCollision":false}],
+
+         {"collision":true},
+         {"selfCollision":true},
+        ],
+
+    "beams":[
+          ["id1:", "id2:"],
+          {"optional":true},
+          {"deformLimitExpansion":""},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+
+          //--MISC--
+          //frame bend enticers
+          {"deformLimitExpansion":""},
+          {"beamSpring":4700940, "beamDamp":52.17},
+
+          //torsion bar break beams
+          {"beamSpring":94, "beamDamp":0.94},
+          {"beamDeform":105, "beamStrength":3885},
+          {"optional":true},
+          {"disableMeshBreaking":true,"disableTriangleBreaking":true}
+          ["f20r", "f16r"],
+          ["f16r", "f16"],
+          ["f20l", "f16l"],
+          ["f16l", "f16"],
+          ["f9r", "f10r"],
+          ["f10r", "f10l"],
+          ["f10l", "f9l"],
+          ["f7r", "f16r"],
+          ["f7l", "f16l"],
+          {"disableMeshBreaking":false,"disableTriangleBreaking":false}
+          {"optional":false},
+
+          //--FRAME RAILS--
+
+          //mid
+          //main shape
+          {"deformLimitExpansion":1.2},
+          {"beamSpring":16920940, "beamDamp":235},
+          {"beamDeform":63000, "beamStrength":"FLT_MAX"},
+          //lengthwise
+          ["f4r", "f5r"],
+          ["f5r", "f6r"],
+          ["f4l", "f5l"],
+          ["f5l", "f6l"],
+          ["f14r", "f15r"],
+          ["f15r", "f16r"],
+          ["f14l", "f15l"],
+          ["f15l", "f16l"],
+          //vertical
+          ["f4r", "f14r"],
+          ["f5r", "f15r"],
+          ["f6r", "f16r"],
+          ["f4l", "f14l"],
+          ["f5l", "f15l"],
+          ["f6l", "f16l"],
+          //surficial crossing
+          {"deformLimitExpansion":""},
+          {"beamDeform":49000, "beamStrength":"FLT_MAX"},
+          ["f4r", "f15r"],
+          ["f5r", "f14r"],
+          ["f5r", "f16r"],
+          ["f6r", "f15r"],
+          ["f4l", "f15l"],
+          ["f5l", "f14l"],
+          ["f5l", "f16l"],
+          ["f6l", "f15l"],
+          //rigids
+          {"beamDeform":14000, "beamStrength":"FLT_MAX"},
+          ["f4r", "f6r"],
+          ["f4l", "f6l"],
+          ["f14r", "f16r"],
+          ["f14l", "f16l"],
+
+          //--CROSSMEMBERS--
+
+          //h45 crossmember
+          //main shape
+          {"deformLimitExpansion":1.2},
+          {"beamSpring":6580940, "beamDamp":705},
+          {"beamDeform":21000, "beamStrength":"FLT_MAX"},
+          //widthwise
+          ["f5r", "f5"],
+          ["f5", "f5l"],
+          ["f15l", "f15"],
+          ["f15", "f15r"],
+          //vertical
+          ["f5", "f15"],
+          //surficial crossing
+          {"deformLimitExpansion":""},
+          {"beamDeform":17500, "beamStrength":"FLT_MAX"},
+          ["f5r", "f15"],
+          ["f5", "f15r"],
+          ["f5", "f15l"],
+          ["f5l", "f15"],
+          //rigids
+          {"beamSpring":94940, "beamDamp":1645},
+          {"beamDeform":7000, "beamStrength":"FLT_MAX"},
+          //corner
+          ["f5", "f6r"],
+          ["f15", "f16r"],
+          ["f15", "f16l"],
+          ["f5", "f6l"],
+          //widthwise
+          ["f5r", "f5l"],
+          ["f15l", "f15r"],
+
+          {"deformLimitExpansion":1.2},
+    ],
+
+    "triangles":[
+        ["id1:", "id2:", "id3:"],
+        {"groundModel":"metal"},
+
+        //bottom
+        ["f6", "f6l", "f5l"],
+        ["f5l", "f5", "f6"],
+        ["f6r", "f6", "f5"],
+        ["f5", "f5r", "f6r"],
+        ],
+},
+}

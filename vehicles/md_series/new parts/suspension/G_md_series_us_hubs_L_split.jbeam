@@ -1,0 +1,106 @@
+{
+"G_md_series_us_hubs_R_liftaxle_split": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Demountable Rim Lift Axle Hubs",
+        "value":100,
+    },
+    "slotType" : "G_md_series_us_hubs_R_liftaxle",
+    "slots2": [
+        ["name",                                  "allowTypes",                              "denyTypes", "default",                               "description"],
+        ["G_md_series_us_brake_R_liftaxle_split", ["G_md_series_us_brake_R_liftaxle_split"], [],          "G_md_series_us_brake_R_liftaxle_split", "Lift Axle Brakes",   {"nodeOffset2":{"x":0.0, "y":0.0, "z":0.0}}],
+        //The case() is for backwards compatibility for old configs that use "trackwidth_R" variable.
+        //To change the base track width, edit the trackoffset_R offset in the expression.
+        ["G_wheel_La_5_old",                      ["G_wheel_La_5_old"],                      [],          "G_wheel_La_split_20",                   "Lift Axle Wheels",   {"nodeOffset2":{"x":-0.035, "y":2.054, "z":0.462}}],
+        ["G_md_series_us_wheeldata_R_liftaxle",   ["G_md_series_us_wheeldata_R_liftaxle"],   [],          "G_md_series_us_wheeldata_R_liftaxle",   "Lift Axle Spindles", {"coreSlot":true}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["md_series_hub_split_F", ["wheel_LaR","wheelhub_LaR"], [], {"pos":{"x":-1.07, "y":2.353, "z":0.45}, "rot":{"x":36, "y":0, "z":180}, "scale":{"x":0.9, "y":0.88, "z":0.88}}],
+         ["md_series_hub_split_F", ["wheel_LaL","wheelhub_LaL"], [], {"pos":{"x": 1.07, "y":2.353, "z":0.45}, "rot":{"x":36, "y":0, "z":0},   "scale":{"x":0.9, "y":0.88, "z":0.88}}],
+       //["md_series_hub_split_bolts_F", ["wheel_LaR","wheelhub_LaR"], [], {"pos":{"x":-1.105, "y":2.353, "z":0.45}, "rot":{"x":36, "y":0, "z":180}, "scale":{"x":0.6, "y":1, "z":1}}],
+       //["md_series_hub_split_bolts_F", ["wheel_LaL","wheelhub_LaL"], [], {"pos":{"x": 1.105, "y":2.353, "z":0.45}, "rot":{"x":36, "y":0, "z":0},   "scale":{"x":0.6, "y":1, "z":1}}],
+         ["semi_wheel_split_F_hub_20", ["wheel_LaR","wheelhub_LaR"], [], {"pos":{"x":-1.0304, "y":2.353, "z":0.45}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["semi_wheel_split_F_hub_20", ["wheel_LaL","wheelhub_LaL"], [], {"pos":{"x": 1.0304, "y":2.353, "z":0.45}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeWeight":8.5},
+         {"group":"wheelhub_LaR"},
+         //law1 as in steer wheel 1
+         ["Law1r", -0.85, 2.003, 0.45],
+         ["Law1rr",-1.22, 2.003, 0.45],
+         {"group":"wheelhub_LaL"},
+         ["Law1l",  0.85, 2.003, 0.45],
+         ["Law1ll", 1.22, 2.003, 0.45],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"deformLimitExpansion":""},
+
+          //wheel to axle
+          {"deformLimitExpansion":1.2},
+          {"optional":true},
+          {"beamSpring":25001000,"beamDamp":250},
+          {"beamDeform":175000,"beamStrength":1250000},
+          //Lift Axle hub
+          {"breakGroup":"wheel_LaR"},
+          //["Law1r","Lah2r"],
+          //["Law1rr","Lah2r"],
+          ["Law1r","La6r"],
+          ["Law1rr","La6r"],
+          ["Law1r","La4r", {"name":"axle_LaR"}],
+          ["Law1rr","La4r"],
+          ["Law1r","La5r"],
+          ["Law1rr","La5r"],
+          ["Law1r","Lah3r"],
+          ["Law1rr","Lah3r"],
+          ["Law1r","Lah4r"],
+          ["Law1rr","Lah4r"],
+          {"breakGroup":"wheel_LaL"},
+          //["Law1l","Lah2l"],
+          //["Law1ll","Lah2l"],
+          ["Law1l","La6l"],
+          ["Law1ll","La6l"],
+          ["Law1l","La4l", {"name":"axle_LaL"}],
+          ["Law1ll","La4l"],
+          ["Law1l","La5l"],
+          ["Law1ll","La5l"],
+          ["Law1l","Lah3l"],
+          ["Law1ll","Lah3l"],
+          ["Law1l","Lah4l"],
+          ["Law1ll","Lah4l"],
+          {"breakGroup":""},
+          {"optional":false},
+          {"breakGroup":""},
+
+          {"deformLimitExpansion":1.2},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+        //hub
+        //general settings
+        {"hubRadius":0.25},
+        {"hubWidth":0.25},
+        {"numRays":5},
+        {"brakeSpring":25},//define lower value for stability with no wheels
+        {"wheelAngle":-17.5},
+
+        //hub options
+        {"hubTreadBeamSpring":2500000, "hubTreadBeamDamp":5},
+        {"hubPeripheryBeamSpring":2500000, "hubPeripheryBeamDamp":5},
+        {"hubSideBeamSpring":2500000, "hubSideBeamDamp":5},
+        {"hubNodeWeight":1.5},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.2},
+        {"hubBeamDeform":75000, "hubBeamStrength":185000},
+    ],
+},
+}

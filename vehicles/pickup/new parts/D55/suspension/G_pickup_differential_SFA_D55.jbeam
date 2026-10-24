@@ -1,0 +1,155 @@
+{
+"G_pickup_differential_SFA_D55_heavy_LSD": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Limited Slip Front Differential",
+        "value":1000,
+    },
+    "slotType" : "G_pickup_differential_SFA_D55",
+    "slots": [
+        ["type", "default", "description"],
+        //["pickup_driveshaft_SFA","pickup_driveshaft_SFA","Front Driveshaft"],
+        ["G_pickup_axleshafts_F_D55","G_pickup_axleshafts_F_D55","Front Axle Shafts"],
+        ["pickup_finaldrive_SFA","G_pickup_finaldrive_SFA_486", "Front Final Drive", {"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //front diff
+        ["differential", "differential_F", "driveshaft_F", 1, {"diffType":"lsd", "lsdPreload":150, "lsdLockCoef":0.2, "lsdRevLockCoef":0.2, "friction":5, "uiName":"Front Differential","defaultVirtualInertia":0.5}],
+    ],
+    "differential_F": {
+        "friction": 5.95
+        "dynamicFriction": 0.0028,
+        "torqueLossCoef": 0.03,
+    },
+},
+"G_pickup_differential_SFA_D55_welded": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Welded Front Differential",
+        "value":1000,
+    },
+    "slotType" : "G_pickup_differential_SFA_D55",
+    "slots": [
+        ["type", "default", "description"],
+        //["pickup_driveshaft_SFA","pickup_driveshaft_SFA","Front Driveshaft"],
+        ["G_pickup_axleshafts_F_D55","G_pickup_axleshafts_F_D55","Front Axle Shafts"],
+        ["pickup_finaldrive_SFA","G_pickup_finaldrive_SFA_486", "Front Final Drive", {"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //front diff
+        ["differential", "differential_F", "driveshaft_F", 1, {"diffType":"locked", "lockTorque":10000, "friction":5, "uiName":"Front Differential","defaultVirtualInertia":0.5}],
+    ],
+    "differential_F": {
+        "friction": 5.95
+        "dynamicFriction": 0.0028,
+        "torqueLossCoef": 0.03,
+    },
+},
+"G_pickup_differential_SFA_D55_locking": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Locking Front Differential",
+        "value":1300,
+    },
+    "slotType" : "G_pickup_differential_SFA_D55",
+    "slots": [
+        ["type", "default", "description"],
+        //["pickup_driveshaft_SFA","pickup_driveshaft_SFA","Front Driveshaft"],
+        ["G_pickup_axleshafts_F_D55","G_pickup_axleshafts_F_D55","Front Axle Shafts"],
+        ["pickup_finaldrive_SFA","G_pickup_finaldrive_SFA_486", "Front Final Drive", {"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //front diff
+        ["differential", "differential_F", "driveshaft_F", 1, {"diffType":["open","locked"], "lockTorque":20000, "friction":5, "uiName":"Front Differential","defaultVirtualInertia":0.5}],
+    ],
+    "differential_F": {
+        "friction": 5.95
+        "dynamicFriction": 0.0028,
+        "torqueLossCoef": 0.03,
+    },
+},
+"G_pickup_finaldrive_SFA_486": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"4.86:1 D55 Front Final Drive",
+        "value":150,
+    },
+
+    "slotType" : "pickup_finaldrive_SFA",
+
+    "differential_F" : {
+        "gearRatio":4.86,
+    },
+},
+"G_pickup_finaldrive_SFA_566": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"5.66:1 D55 Front Final Drive",
+        "value":150,
+    },
+
+    "slotType" : "pickup_finaldrive_SFA",
+
+    "differential_F" : {
+        "gearRatio":5.66,
+    },
+},
+"G_pickup_driveshaft_SFA_D55": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Front Driveshaft",
+        "value":300,
+    },
+    "slotType" : "G_pickup_driveshaft_SFA_D55",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //front driveshaft
+        ["torsionReactor", "torsionReactorF", "transfercase_F", 1, {}],
+        ["shaft", "driveshaft_F", "torsionReactorF", 1, {"breakTriggerBeam":"driveshaft_F", "uiName":"Front Driveshaft", "electricsName":"driveshaft_F", "friction":0.467, "dynamicFriction": 0.00101}],
+    ],
+    "torsionReactorF": {
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+    },
+    "props": [
+        ["func",       "mesh",               "idRef:","idX:","idY:", "baseRotation",         "rotation",            "translation",         "min", "max", "offset", "multiplier",],
+        //["driveshaft_F", "G_pickup_propshaft_F_D55", "tra3","tra2","fax4", {"x":91, "y":3.5, "z":0}, {"x":0, "y":-1, "z":0}, {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"baseTranslation":{"x":0.0, "y":0.22, "z":0.005},"breakGroup":"driveshaft_F","deformGroup":"driveshaft_F","optional":true}],
+        ["driveshaft_F", "G_pickup_driveshaft_D55_segment_0.5m", "tra3","fax4","fax4r", {"x":90, "y":-90, "z":10}, {"x":0, "y":-1, "z":0}, {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"baseTranslation":{"x":0.05, "y":0.0, "z":0.0},"breakGroup":"driveshaft_F","deformGroup":"driveshaft_F","optional":true}],
+        ["driveshaft_F", "G_pickup_driveshaft_D55_segment_0.5m", "fax4","tra3","fax4r", {"x":90, "y":-90, "z":-80}, {"x":0, "y":-1, "z":0}, {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"baseTranslation":{"x":0.05, "y":0.0, "z":0.0},"breakGroup":"driveshaft_F","deformGroup":"driveshaft_F","optional":true}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //driveshaft
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.2, "beamShortBound":0.2},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":7535,"beamStrength":9599},
+          {"beamLimitSpring":10001000,"beamLimitDamp":1000},
+          ["fax4","tra3", {"name":"driveshaft_F","optional":true,"breakGroup":"driveshaft_F","deformGroup":"driveshaft_F"}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_axleshafts_F_D55": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Front Axle Shafts",
+        "value":150,
+    },
+    "slotType" : "G_pickup_axleshafts_F_D55",
+    "props":[
+        ["func"      , "mesh"           , "idRef:", "idX:", "idY:", "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["axle_FR", "G_pickup_ujoint_hub_SFA_FR_D55", "fh3r", "fh2r", "fh4r", {"x":10, "y":-80, "z":55}, {"x":1, "y":0, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"baseTranslationGlobal":{"x":-0.816631, "y":-1.46191,"z":0.32782},"breakGroup":"driveshaft","deformGroup":"driveshaft","optional":true}],
+
+        ["axle_FL", "G_pickup_ujoint_hub_SFA_FL_D55", "fh3l", "fh2l", "fh4l", {"x":10, "y":100, "z":55}, {"x":1, "y":0, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"baseTranslationGlobal":{"x":0.816631, "y":-1.46191,"z":0.32782},"breakGroup":"driveshaft","deformGroup":"driveshaft","optional":true}],
+
+        ["axle_FL", "G_pickup_ujoint_SFA_FL_D55", "fh3l", "fh2l", "fh2r", {"x":-0, "y":-95, "z":0}, {"x":1, "y":0, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"baseTranslationGlobal":{"x":0.687309, "y":-1.46249,"z":0.32782},"breakGroup":"driveshaft","deformGroup":"driveshaft","optional":true}],
+
+        ["axle_FR", "G_pickup_ujoint_SFA_FR_D55", "fh3r", "fh2r", "fh2l", {"x":0, "y":85, "z":0}, {"x":1, "y":0, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"baseTranslationGlobal":{"x":-0.687309, "y":-1.46249,"z":0.32782},"breakGroup":"driveshaft","deformGroup":"driveshaft","optional":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["shaft", "halfshaftFL", "differential_F", 1, {"breakTriggerBeam":"axle_FL", "uiName":"Front Left Axle Shaft", "friction":1.97, "dynamicFriction": 0.00489}],
+        ["shaft", "halfshaftFR", "differential_F", 2, {"breakTriggerBeam":"axle_FR", "uiName":"Front Right Axle Shaft", "friction":1.97, "dynamicFriction": 0.00489}],
+    ],
+},
+}

@@ -1,0 +1,36 @@
+{
+"autobello_hubcap_01a_13_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Autobello Dog Dish Rear Rear Hubcaps",
+        "value":80,
+    },
+    "slotType" : "hubcap_RR_6x6_13",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //hubcaps
+         ["autobello_hubcap_01a_10", ["hubcap_RRR"], [], {"pos":{"x":-0.487, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1.02, "z":1.02}}],
+         ["autobello_hubcap_01a_10", ["hubcap_RRL"], [], {"pos":{"x": 0.487, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":1.02, "z":1.02}}],
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            //hubcap options
+            {"enableHubcaps":true},
+            {"hubcapSelfCollision":true},
+            {"hubcapCollision":true},
+            {"enableExtraHubcapBeams":true},
+            {"hubcapOffset":-0.025},
+            {"hubcapWidth":-0.025},
+            {"hubcapRadius":0.11},
+            {"hubcapBeamSpring":91000, "hubcapBeamDamp":5},
+            {"hubcapBeamDeform":3500, "hubcapBeamStrength":15000},
+            {"hubcapAttachBeamSpring":101000, "hubcapAttachBeamDamp":5},
+            {"hubcapAttachBeamDeform":1100, "hubcapAttachBeamStrength":1400},
+            {"hubcapSupportBeamDeform":2500, "hubcapSupportBeamStrength":5000},
+            {"hubcapNodeWeight":0.05},
+            {"hubcapCenterNodeWeight":0.06},
+            {"hubcapNodeMaterial":"|NM_METAL"},
+            {"hubcapFrictionCoef":0.7},
+    ],
+},
+}

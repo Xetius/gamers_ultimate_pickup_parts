@@ -1,0 +1,554 @@
+{
+"G_steelwheel_03a_20x11_F": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"20x11 STX Goliath Off-Road Steel Front Wheels (White)",
+        "value":1100,
+    },
+    "slotType" : "wheel_F_8",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_F_20x11_offroad","G_tire_F_38_14_20_11_dirt","Front Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["G_steelwheel_03a_20x11", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["G_steelwheel_03a_20x11", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["hub_locking", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+        ["hub_locking", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //front wheels
+        {"nodeWeight":5.6},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_FR"},
+        ["fw1r", -0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FR"},
+        ["fw1rr", -0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1l", 0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1ll", 0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamDeform":110000,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //front wheel
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.27},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.285},
+        {"numRays":20},
+
+        //hub options
+        {"hubTreadBeamSpring":1001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1751000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.59},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":45000, "hubBeamStrength":125000},
+    ],
+},
+"G_steelwheel_03b_20x11_F": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"20x11 STX Goliath Off-Road Steel Front Wheels (Black)",
+        "value":1100,
+    },
+    "slotType" : "wheel_F_8",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_F_20x11_offroad","G_tire_F_38_14_20_11_dirt","Front Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["G_steelwheel_03b_20x11", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["G_steelwheel_03b_20x11", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["hub_locking", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+        ["hub_locking", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //front wheels
+        {"nodeWeight":5.6},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_FR"},
+        ["fw1r", -0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FR"},
+        ["fw1rr", -0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1l", 0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1ll", 0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamDeform":110000,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //front wheel
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.27},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.285},
+        {"numRays":20},
+
+        //hub options
+        {"hubTreadBeamSpring":1001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1751000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.59},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":45000, "hubBeamStrength":125000},
+    ],
+},
+"G_steelwheel_03c_20x11_F": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"20x11 STX Goliath Off-Road Steel Front Wheels (Gray)",
+        "value":1100,
+    },
+    "slotType" : "wheel_F_8",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_F_20x11_offroad","G_tire_F_38_14_20_11_dirt","Front Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["G_steelwheel_03c_20x11", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["G_steelwheel_03c_20x11", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["hub_locking", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+        ["hub_locking", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //front wheels
+        {"nodeWeight":5.6},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_FR"},
+        ["fw1r", -0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FR"},
+        ["fw1rr", -0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1l", 0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1ll", 0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamDeform":110000,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //front wheel
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.27},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.285},
+        {"numRays":20},
+
+        //hub options
+        {"hubTreadBeamSpring":1001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1751000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.59},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":45000, "hubBeamStrength":125000},
+    ],
+},
+"G_steelwheel_03d_20x11_F": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"20x11 STX Goliath Off-Road Steel Front Wheels (Chrome)",
+        "value":1100,
+    },
+    "slotType" : "wheel_F_8",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_F_20x11_offroad","G_tire_F_38_14_20_11_dirt","Front Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["G_steelwheel_03d_20x11", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["G_steelwheel_03d_20x11", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["hub_locking", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+        ["hub_locking", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //front wheels
+        {"nodeWeight":5.6},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_FR"},
+        ["fw1r", -0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FR"},
+        ["fw1rr", -0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1l", 0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1ll", 0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamDeform":110000,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //front wheel
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.27},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.285},
+        {"numRays":20},
+
+        //hub options
+        {"hubTreadBeamSpring":1001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1751000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.59},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":45000, "hubBeamStrength":125000},
+    ],
+},
+"G_steelwheel_03a_20x13_F": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"20x13 STX Goliath Off-Road Steel Front Wheels (White)",
+        "value":1300,
+    },
+    "slotType" : "wheel_F_8",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_F_20x13_offroad","G_tire_F_38_16_20_13_dirt","Front Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["G_steelwheel_03a_20x13", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["G_steelwheel_03a_20x13", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["hub_locking", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+        ["hub_locking", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //front wheels
+        {"nodeWeight":5.6},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_FR"},
+        ["fw1r", -0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FR"},
+        ["fw1rr", -0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1l", 0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1ll", 0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamDeform":110000,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //front wheel
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.27},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.335},
+        {"numRays":20},
+
+        //hub options
+        {"hubTreadBeamSpring":1001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1751000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.59},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":45000, "hubBeamStrength":125000},
+    ],
+},
+"G_steelwheel_03b_20x13_F": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"20x13 STX Goliath Off-Road Steel Front Wheels (Black)",
+        "value":1300,
+    },
+    "slotType" : "wheel_F_8",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_F_20x13_offroad","G_tire_F_38_16_20_13_dirt","Front Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["G_steelwheel_03b_20x13", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["G_steelwheel_03b_20x13", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["hub_locking", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+        ["hub_locking", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //front wheels
+        {"nodeWeight":5.6},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_FR"},
+        ["fw1r", -0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FR"},
+        ["fw1rr", -0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1l", 0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1ll", 0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamDeform":110000,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //front wheel
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.27},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.335},
+        {"numRays":20},
+
+        //hub options
+        {"hubTreadBeamSpring":1001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1751000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.59},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":45000, "hubBeamStrength":125000},
+    ],
+},
+"G_steelwheel_03c_20x13_F": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"20x13 STX Goliath Off-Road Steel Front Wheels (Gray)",
+        "value":1300,
+    },
+    "slotType" : "wheel_F_8",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_F_20x13_offroad","G_tire_F_38_16_20_13_dirt","Front Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["G_steelwheel_03c_20x13", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["G_steelwheel_03c_20x13", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["hub_locking", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+        ["hub_locking", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //front wheels
+        {"nodeWeight":5.6},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_FR"},
+        ["fw1r", -0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FR"},
+        ["fw1rr", -0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1l", 0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1ll", 0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamDeform":110000,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //front wheel
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.27},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.335},
+        {"numRays":20},
+
+        //hub options
+        {"hubTreadBeamSpring":1001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1751000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.59},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":45000, "hubBeamStrength":125000},
+    ],
+},
+"G_steelwheel_03d_20x13_F": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"20x13 STX Goliath Off-Road Steel Front Wheels (Chrome)",
+        "value":1300,
+    },
+    "slotType" : "wheel_F_8",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_F_20x13_offroad","G_tire_F_38_16_20_13_dirt","Front Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["G_steelwheel_03d_20x13", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["G_steelwheel_03d_20x13", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["hub_locking", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+        ["hub_locking", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //front wheels
+        {"nodeWeight":5.6},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_FR"},
+        ["fw1r", -0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FR"},
+        ["fw1rr", -0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1l", 0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1ll", 0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamDeform":110000,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //front wheel
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.27},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.335},
+        {"numRays":20},
+
+        //hub options
+        {"hubTreadBeamSpring":1001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1751000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.59},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":45000, "hubBeamStrength":125000},
+    ],
+},
+}

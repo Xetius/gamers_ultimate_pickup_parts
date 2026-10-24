@@ -1,0 +1,174 @@
+{
+"G_pickup_D55_hydraulic_pump_0010": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Hydraulic Pump (100mL/rev)",
+        "value":4100,
+    },
+    "slotType" : "G_pickup_hydraulic_pump",
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["hydraulicPump", "pump1", "mainEngine", 2],
+    ],
+    "controller": [
+        ["fileName"],
+        ["vehicleController", {}],
+        ["hydraulics/hydraulicsCombustionEngineControl", {"name":"hydraulicsControl"}],
+    ],
+    "hydraulicsControl":{
+        "mode":"electricsRaiseAndConnect",
+        "relevantPump":"pump1",
+        "relevantElectrics":["hydraulicPTOControl","upfit_tilt","upfit_extendRetract","upfit_extendRetractFeet","upfit_winch","axle_updn","axle_tilt","axle_boom","axle_lock","boom_boom","boom_tilt","boom_winL","boom_winR"],
+        "raisedIdleRPM": 1500,
+        "actOnNegativeElectric": true
+    },
+    "pump1":{
+        "pumpLoopEvent":"event:>Vehicle>Hydraulics>Pump_Big",
+        "pumpLoopNode":"e4l",
+        "pumpType":"fixedDisplacement",
+        "pumpMaxDisplacement":0.00010,
+        "pumpWorkingPressure":20000000
+        "reliefOpeningPressure":20000000
+        "reliefPressureRange": 500000
+        "gearRatio":1.7,
+        "accumulatorMaxVolume":0.0001,
+        "reliefValveArea":0.0002,
+
+        "hydraulicPTOConsumerCouplerNodeNames":["fwk2"]
+
+        "pumpLoopVolumeFlowCoefMinFlow": 0.00001,
+        "pumpLoopVolumeFlowCoefMaxFlow": 0.001,
+        "pumpLoopVolumeMinPressure": 100000,
+        "pumpLoopVolumeMaxPressure": 20000000,
+        "pumpLoopPitchMinFlow": 0.003,
+        "pumpLoopPitchMaxFlow": 0.0045,
+
+        "pumpLoopVolumeSmoothingInRate":2
+        "pumpLoopVolumeSmoothingStartAccel":300
+        "pumpLoopVolumeSmoothingStopAccel":300
+        "pumpLoopVolumeSmoothingOutRate":10
+        "pumpLoopPitchSmoothingInRate":50
+        "pumpLoopPitchSmoothingStartAccel":30
+        "pumpLoopPitchSmoothingStopAccel":30
+        "pumpLoopPitchSmoothingOutRate":50
+
+        //"showDebugGraph":true
+        //"showDebugGraphSound":true
+
+    }
+},
+"G_pickup_D55_hydraulic_pump_0006": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Hydraulic Pump (65mL/rev)",
+        "value":3600,
+    },
+    "slotType" : "G_pickup_hydraulic_pump",
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["hydraulicPump", "pump1", "mainEngine", 2],
+    ],
+    "controller": [
+        ["fileName"],
+        ["vehicleController", {}],
+        ["hydraulics/hydraulicsCombustionEngineControl", {"name":"hydraulicsControl"}],
+    ],
+    "hydraulicsControl":{
+        "mode":"electricsRaiseAndConnect",
+        "relevantPump":"pump1",
+        "relevantElectrics":["hydraulicPTOControl","upfit_tilt","upfit_extendRetract","upfit_extendRetractFeet","upfit_winch","axle_updn","axle_tilt","axle_boom","axle_lock","boom_boom","boom_tilt","boom_winL","boom_winR"],
+        "raisedIdleRPM": 1500,
+        "actOnNegativeElectric": true
+    },
+    "pump1":{
+        "pumpLoopEvent":"event:>Vehicle>Hydraulics>Pump_Big",
+        "pumpLoopNode":"e4l",
+        "pumpType":"fixedDisplacement",
+        "pumpMaxDisplacement":0.000065,
+        "pumpWorkingPressure":20000000
+        "reliefOpeningPressure":20000000
+        "reliefPressureRange": 500000
+        "gearRatio":1.6,
+        "accumulatorMaxVolume":0.0001,
+        "reliefValveArea":0.0002
+
+        "hydraulicPTOConsumerCouplerNodeNames":["fwk2"]
+
+        "pumpLoopVolumeFlowCoefMinFlow": 0.00001,
+        "pumpLoopVolumeFlowCoefMaxFlow": 0.001,
+        "pumpLoopVolumeMinPressure": 100000,
+        "pumpLoopVolumeMaxPressure": 20000000,
+        "pumpLoopPitchMinFlow": 0.001,
+        "pumpLoopPitchMaxFlow": 0.002,
+
+        "pumpLoopVolumeSmoothingInRate":2
+        "pumpLoopVolumeSmoothingStartAccel":300
+        "pumpLoopVolumeSmoothingStopAccel":300
+        "pumpLoopVolumeSmoothingOutRate":10
+        "pumpLoopPitchSmoothingInRate":50
+        "pumpLoopPitchSmoothingStartAccel":30
+        "pumpLoopPitchSmoothingStopAccel":30
+        "pumpLoopPitchSmoothingOutRate":50
+
+        //"showDebugGraph":true
+        //"showDebugGraphSound":true
+    }
+},
+"G_pickup_D55_hydraulic_pump_0004": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Hydraulic Pump (40mL/rev)",
+        "value":3600,
+    },
+    "slotType" : "G_pickup_hydraulic_pump",
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["hydraulicPump", "pump1", "mainEngine", 2],
+    ],
+    "controller": [
+        ["fileName"],
+        ["vehicleController", {}],
+        ["hydraulics/hydraulicsCombustionEngineControl", {"name":"hydraulicsControl"}],
+    ],
+    "hydraulicsControl":{
+        "mode":"electricsRaiseAndConnect",
+        "relevantPump":"pump1",
+        "relevantElectrics":["hydraulicPTOControl","upfit_tilt","upfit_extendRetract","upfit_extendRetractFeet","upfit_winch","axle_updn","axle_tilt","axle_boom","axle_lock","boom_boom","boom_tilt","boom_winL","boom_winR"],
+        "raisedIdleRPM": 1500,
+        "actOnNegativeElectric": true
+    },
+    "pump1":{
+        "pumpLoopEvent":"event:>Vehicle>Hydraulics>Pump_Big",
+        "pumpLoopNode":"e4l",
+        "pumpType":"fixedDisplacement",
+        "pumpMaxDisplacement":0.00004,
+        "pumpWorkingPressure":20000000
+        "reliefOpeningPressure":20000000
+        "reliefPressureRange": 500000
+        "gearRatio":1.2,
+        "accumulatorMaxVolume":0.00001,
+        "reliefValveArea":0.00014
+
+        "hydraulicPTOConsumerCouplerNodeNames":["fwk2"]
+
+        "pumpLoopVolumeFlowCoefMinFlow": 0.00001,
+        "pumpLoopVolumeFlowCoefMaxFlow": 0.001,
+        "pumpLoopVolumeMinPressure": 100000,
+        "pumpLoopVolumeMaxPressure": 20000000,
+        "pumpLoopPitchMinFlow": 0.001,
+        "pumpLoopPitchMaxFlow": 0.002,
+
+        "pumpLoopVolumeSmoothingInRate":2
+        "pumpLoopVolumeSmoothingStartAccel":300
+        "pumpLoopVolumeSmoothingStopAccel":300
+        "pumpLoopVolumeSmoothingOutRate":10
+        "pumpLoopPitchSmoothingInRate":50
+        "pumpLoopPitchSmoothingStartAccel":30
+        "pumpLoopPitchSmoothingStopAccel":30
+        "pumpLoopPitchSmoothingOutRate":50
+
+        //"showDebugGraph":true
+        //"showDebugGraphSound":true
+    }
+},
+}

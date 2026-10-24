@@ -1,0 +1,38 @@
+{
+"G_pickup_skin_interior_pink": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Pink Interior",
+        "value":100
+    },
+    "slotType" : "skin_interior",
+    "skinName" : "pink"
+  },
+"G_pickup_skin_interior_green": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Green Interior",
+        "value":100
+    },
+    "slotType" : "skin_interior",
+    "skinName" : "green"
+  },
+"G_pickup_skin_interior_dark_borwn": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Dark Brown Interior",
+        "value":100
+    },
+    "slotType" : "skin_interior",
+    "skinName" : "dark_brown"
+  },
+"G_pickup_skin_interior_dark_blue": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Dark Blue Interior",
+        "value":100
+    },
+    "slotType" : "skin_interior",
+    "skinName" : "dark_blue"
+  },
+}

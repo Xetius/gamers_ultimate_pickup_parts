@@ -1,0 +1,432 @@
+{
+  "G_us_semi_mechanicals": {
+    "name": "G_us_semi_mechanicals",
+    "mapTo": "G_us_semi_mechanicals",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/us_semi/us_semi_mechanicals_ao.data.png",
+        "baseColorMap": "/vehicles/us_semi/us_semi_mechanicals_b.color.png",
+        "clearCoatRoughnessFactor": 0,
+        "instanceDiffuse": null,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/us_semi/us_semi_mechanicals_m.data.png",
+        "normalMap": "/vehicles/us_semi/us_semi_mechanicals_nm.normal.png",
+        "opacityFactor": 0,
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/us_semi/us_semi_mechanicals_r.data.png"
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/us_semi/us_semi_mechanicals_ao.data.png",
+        "baseColorMap": "/vehicles/us_semi/us_semi_mechanicals_b.color.png",
+        "clearCoatRoughnessFactor": null,
+        "colorPaletteMap": "/vehicles/common/nullcolormaskG.dds",
+        "instanceDiffuse": true,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/us_semi/us_semi_mechanicals_m.data.png",
+        "normalMap": "/vehicles/us_semi/us_semi_mechanicals_nm.normal.png",
+        "opacityFactor": null,
+        "opacityMap": "/vehicles/us_semi/us_semi_mechanicals_c.data.png",
+        "pixelSpecular": null,
+        "roughnessMap": "/vehicles/us_semi/us_semi_mechanicals_r.data.png"
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      }
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "G_md_series_main": {
+    "name": "G_md_series_main",
+    "mapTo": "G_md_series_main",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/md_series/md_series_main_ao.data.png",
+        "clearCoatFactor": 1,
+        "clearCoatMap": "/vehicles/md_series/md_series_main_cc.data.png",
+        "colorPaletteMap": "/vehicles/common/nullcolormaskR.color.png",
+        "metallicFactor": 1,
+        "detailNormalMap": "/vehicles/common/orange_peel_n.normal.png",
+        "detailNormalMapStrength": 0.3,
+        "detailScale": [
+          128,
+          64
+        ],
+        "normalDetailMapUseUV": 1,
+        "normalMap": "vehicles/md_series/md_series_main_nm.normal.png"
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/md_series/md_series_main_ao.data.png",
+        "baseColorMap": "/vehicles/md_series/md_series_main_b.color.png",
+        "clearCoatFactor": 1,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/md_series/md_series_main_m.data.png",
+        "normalMap": "vehicles/md_series/md_series_main_nm.normal.png",
+        "opacityMap": "/vehicles/md_series/md_series_main_o.data.png",
+        "roughnessMap": "/vehicles/md_series/md_series_main_r.data.png"
+      },
+      {
+        "clearCoatFactor": null,
+        "metallicFactor": null
+      },
+      {
+        "clearCoatFactor": null,
+        "metallicFactor": null
+      }
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "G_md_series_main_alt": {
+    "name": "G_md_series_main_alt",
+    "mapTo": "G_md_series_main_alt",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/md_series/md_series_main_ao.data.png",
+        "baseColorMap": "/vehicles/md_series/md_series_main_alt_b.color.png",
+        "clearCoatFactor": null,
+        "colorPaletteMapUseUV": null,
+        "instanceDiffuse": null,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/md_series/md_series_main_alt_m.data.png",
+        "normalMap": "vehicles/md_series/md_series_main_nm.normal.png",
+        "roughnessMap": "/vehicles/md_series/md_series_main_alt_r.data.png"
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/md_series/md_series_main_ao.data.png",
+        "clearCoatFactor": 1,
+        "clearCoatMap": "/vehicles/md_series/md_series_main_alt_cc.data.png",
+        "colorPaletteMap": "/vehicles/pickup/pickup_skin_metallic_uv1.color.png",
+        "colorPaletteMapUseUV": 1,
+        "instanceDiffuse": true,
+        "metallicFactor": 1,
+        "detailNormalMap": "/vehicles/common/orange_peel_n.normal.png",
+        "detailNormalMapStrength": 0.3,
+        "detailScale": [
+          128,
+          64
+        ],
+        "normalDetailMapUseUV": 1,
+        "normalMap": "vehicles/md_series/md_series_main_nm.normal.png",
+        "opacityMap": "/vehicles/md_series/md_series_main_alt_c.data.png"
+      },
+      {
+        "clearCoatFactor": null,
+        "colorPaletteMapUseUV": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null
+      },
+      {
+        "clearCoatFactor": null,
+        "colorPaletteMapUseUV": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null
+      }
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "G_md_series_main_black": {
+    "name": "G_md_series_main_black",
+    "mapTo": "G_md_series_main_black",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/md_series/md_series_main_ao.data.png",
+        "baseColorFactor": [
+          0.129399002,
+          0.129399002,
+          0.129399002,
+          1
+        ],
+        "baseColorMap": "/vehicles/md_series/md_series_main_b.color.png",
+        "clearCoatFactor": 1,
+        "clearCoatMap": "/vehicles/md_series/md_series_main_cc.data.png",
+        "colorPaletteMap": "/vehicles/md_series/md_series_main_cc.data.png",
+        "instanceDiffuse": null,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/md_series/md_series_main_m.data.png",
+        "normalMap": "vehicles/md_series/md_series_main_nm.normal.png",
+        "roughnessMap": "/vehicles/md_series/md_series_main_r.data.png"
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/md_series/md_series_main_ao.data.png",
+        "baseColorFactor": null,
+        "clearCoatFactor": 1,
+        "clearCoatMap": "/vehicles/md_series/md_series_main_cc.data.png",
+        "colorPaletteMap": "/vehicles/md_series/md_series_main_p.color.png",
+        "instanceDiffuse": true,
+        "metallicFactor": 1,
+        "detailNormalMap": "/vehicles/common/orange_peel_n.normal.png",
+        "detailNormalMapStrength": 0.3,
+        "detailScale": [
+          128,
+          64
+        ],
+        "normalDetailMapUseUV": 1,
+        "normalMap": "vehicles/md_series/md_series_main_nm.normal.png",
+        "opacityMap": "/vehicles/md_series/md_series_main_c.data.png"
+      },
+      {
+        "baseColorFactor": null,
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null
+      },
+      {
+        "baseColorFactor": null,
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null
+      }
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "G_tiltdeck": {
+    "name": "G_tiltdeck",
+    "mapTo": "G_tiltdeck",
+    "class": "Material",
+    "persistentId": "b471debe-d916-49c1-beb9-3cce4516ff1f",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/tiltdeck/tiltdeck_ao.data.png",
+        "baseColorMap": "/vehicles/tiltdeck/tiltdeck_b.color.png",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/tiltdeck/tiltdeck_m.data.png",
+        "normalMap": "/vehicles/tiltdeck/tiltdeck_nm.normal.png",
+        "roughnessMap": "/vehicles/tiltdeck/tiltdeck_r.data.png"
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/tiltdeck/tiltdeck_ao.data.png",
+        "colorPaletteMap": "/vehicles/common/nullcolormaskR.dds",
+        "metallicFactor": null,
+        "normalMap": "/vehicles/tiltdeck/tiltdeck_nm.normal.png",
+        "opacityMap": "/vehicles/tiltdeck/tiltdeck_c.data.png"
+      },
+      {
+        "metallicFactor": null
+      },
+      {
+        "metallicFactor": null
+      }
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "version": 1.5
+  },
+  "G_cargotrailer": {
+    "name": "G_cargotrailer",
+    "mapTo": "G_cargotrailer",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/cargotrailer/cargotrailer_ao.data.png",
+        "baseColorMap": "/vehicles/cargotrailer/cargotrailer_b.color.png",
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/cargotrailer/cargotrailer_m.data.png",
+        "normalMap": "vehicles/cargotrailer/cargotrailer_nm.normal.png",
+        "roughnessMap": "/vehicles/cargotrailer/cargotrailer_r.data.png"
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/cargotrailer/cargotrailer_ao.data.png",
+        "clearCoatFactor": 1,
+        "clearCoatMap": "/vehicles/cargotrailer/cargotrailer_o.data.png",
+        "colorPaletteMap": "/vehicles/cargotrailer/cargotrailer_p.color.png",
+        "instanceDiffuse": true,
+        "metallicFactor": 1,
+        "normalMap": "/vehicles/cargotrailer/cargotrailer_nm.normal.png",
+        "opacityMap": "/vehicles/cargotrailer/cargotrailer_o.data.png"
+      },
+      {
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null
+      },
+      {
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null
+      }
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "G_boxutility": {
+    "name": "G_boxutility",
+    "mapTo": "G_boxutility",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/boxutility/boxutility_ao.data.png",
+        "baseColorMap": "/vehicles/boxutility/boxutility_b.color.png",
+        "clearCoatFactor": 1,
+        "clearCoatMap": "/vehicles/boxutility/boxutility_cc.data.png",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/boxutility/boxutility_m.data.png",
+        "normalMap": "/vehicles/boxutility/boxutility_nm.normal.png",
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/boxutility/boxutility_r.data.png"
+      },
+      {
+        "pixelSpecular": true,
+        "roughnessFactor": 0.607767701
+      },
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "G_md_series_flatbed": {
+    "name": "G_md_series_flatbed",
+    "mapTo": "G_md_series_flatbed",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/tiltdeck/tiltdeck_ao.data.png",
+        "baseColorMap": "/vehicles/tiltdeck/tiltdeck_b.color.png",
+        "clearCoatFactor": 1,
+        "clearCoatMap": "/vehicles/tiltdeck/tiltdeck_c.data.png",
+        "instanceDiffuse": null,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/tiltdeck/tiltdeck_m.data.png",
+        "normalMap": "/vehicles/tiltdeck/tiltdeck_nm.normal.png",
+        "roughnessMap": "/vehicles/tiltdeck/tiltdeck_r.data.png"
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/tiltdeck/tiltdeck_ao.data.png",
+        "clearCoatFactor": 1,
+        "clearCoatMap": "/vehicles/tiltdeck/tiltdeck_c.data.png",
+        "colorPaletteMap": "/vehicles/common/nullcolormaskG.color.png",
+        "instanceDiffuse": true,
+        "metallicFactor": 1,
+        "normalMap": "/vehicles/tiltdeck/tiltdeck_nm.normal.png",
+        "opacityMap": "/vehicles/tiltdeck/tiltdeck_c.data.png"
+      },
+      {
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null
+      },
+      {
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null
+      }
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "G_flat_bed_upfit_main": {
+    "name": "G_flat_bed_upfit_main",
+    "mapTo": "G_flat_bed_upfit_main",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/common/trailers/flat_bed_trailer_ao.data.png",
+        "baseColorMap": "/vehicles/common/trailers/flat_bed_trailer_b.color.png",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/common/trailers/flat_bed_trailer_m.data.png",
+        "normalMap": "/vehicles/common/trailers/flat_bed_trailer_nm.normal.png",
+        "opacityMap": "/vehicles/common/trailers/flat_bed_trailer_o.data.png",
+        "roughnessMap": "/vehicles/common/trailers/flat_bed_trailer_r.data.png"
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/common/trailers/flat_bed_trailer_ao.data.png",
+        "clearCoatFactor": 1,
+        "clearCoatMap": "/vehicles/common/trailers/flat_bed_trailer_o.data.png",
+        "colorPaletteMap": "/vehicles/common/trailers/flat_bed_upfit_p.color.png",
+        "instanceDiffuse": true,
+        "metallicFactor": 1,
+        "normalMap": "/vehicles/common/trailers/flat_bed_trailer_nm.normal.png",
+        "opacityMap": "/vehicles/common/trailers/flat_bed_trailer_o.data.png"
+      },
+      {},
+      {}
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "G_tt_interior": {
+    "name": "G_tt_interior",
+    "mapTo": "G_tt_interior",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/racetruck/racetruck_interior_o.data.png",
+        "baseColorMap": "/vehicles/racetruck/racetruck_interior_d.color.png",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/racetruck/racetruck_interior_m.data.png",
+        "normalMap": "/vehicles/racetruck/racetruck_interior_n.data.png",
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/racetruck/racetruck_interior_r.data.png"
+      },
+      {
+        "metallicFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "metallicFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "metallicFactor": null,
+        "pixelSpecular": null
+      }
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+}

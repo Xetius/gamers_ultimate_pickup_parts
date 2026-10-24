@@ -1,0 +1,34 @@
+{
+"G_pickup_desert_driveshaft_R_extra": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Driveshaft",
+        "value":350,
+    },
+    "slotType" : "G_pickup_desert_driveshaft_R_extra",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear driveshaft
+        ["torsionReactor", "torsionReactorR", "transfercase", 1, {}],
+        ["shaft", "driveshaft", "torsionReactorR", 1, {"breakTriggerBeam":"driveshaft", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":2.5}],
+    ],
+    "torsionReactorR": {
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+    },
+    "props":[
+        ["func"      , "mesh"           , "idRef:", "idX:", "idY:", "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["driveshaft", "G_pickup_desert_yoke_RR_extra",         "ax1l", "ax1r", "ax3l",{"x":180, "y":-90, "z":0},  {"x":1, "y":0, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "pickup_desert_yoke_R",          "e1l", "e1r", "tra1",  {"x":0, "y":90, "z":-3},    {"x":1, "y":0, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "G_pickup_desert_driveshaft_R_extra",    "tra1", "ax3", "ax7r", {"x":-90, "y":91.1, "z":0}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //driveshaft
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.07, "beamShortBound":0.05},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":5000,"beamStrength":7000},
+          {"beamLimitSpring":5001000,"beamLimitDamp":250},
+          ["ax3","tra1", {"name":"driveshaft","breakGroup":"driveshaft_R","optional":true,"deformGroup":"driveshaft_R"}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+}

@@ -1,0 +1,41 @@
+{
+  "Body Style":"Rollback Truck",
+  "BoundingBox":[
+    [
+      -0.8854,
+      -1.136,
+      -0.7234
+    ],
+    [
+      1.7534,
+      5.0361,
+      1.632
+    ]
+  ],
+  "Commercial Class":"Class 8 Truck",
+  "Config Type":"Custom",
+  "Configuration":"MD80 Rollback Lift Axle (A)",
+  "Description":"Late model crew cab truck with a rollback upfit and extra weight capacity in the form of a lift axle",
+  "Drivetrain":"RWD",
+  "Fuel Type":"Diesel",
+  "Induction Type":"Turbo",
+  "Off-Road Score":34,
+  "Population":4000,
+  "Power":196,
+  "PowerPeakRPM":2400,
+  "Propulsion":"ICE",
+  "Top Speed":32.65652803,
+  "Torque":624,
+  "TorquePeakRPM":"1150 - 1900",
+  "Transmission":"Automatic",
+  "Value":102000,
+  "Weight":8239,
+  "Weight/Power":27.83163265,
+  "Years":{
+    "max":1998,
+    "min":1992
+  },
+  "defaultPaintName1":"Pearl White",
+  "defaultPaintName2":"Orange",
+  "defaultPaintName3":"Orange"
+}

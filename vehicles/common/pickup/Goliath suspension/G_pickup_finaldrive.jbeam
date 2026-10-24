@@ -1,0 +1,56 @@
+{
+"G_pickup_finaldrive_R_race_ext": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Extended Race Adjustable Rear Final Drive",
+        "value":750,
+    },
+
+    "slotType" : "pickup_finaldrive_R",
+
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$finaldrive_R", "range", ":1", "Differentials", 3.0, 2.0, 18.0, "Final Drive Gear Ratio", "Torque multiplication ratio", {"subCategory":"Rear", "stepDis":0.05}],
+    ],
+
+    "differential_R" : {
+        "gearRatio":"$finaldrive_R",
+    },
+},
+"G_pickup_finaldrive_F_race_ext": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Extended Race Adjustable Front Final Drive",
+        "value":750,
+    },
+
+    "slotType" : "pickup_finaldrive_F",
+
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$finaldrive_F", "range", ":1", "Differentials", 3.0, 2.0, 18.0, "Final Drive Gear Ratio", "Torque multiplication ratio", {"subCategory":"Front", "stepDis":0.05}],
+    ],
+
+    "torsionReactorF" : {
+        "gearRatio":"$finaldrive_F",
+    },
+},
+"G_pickup_finaldrive_SFA_race_ext": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Extended Race Adjustable Front Final Drive",
+        "value":750,
+    },
+
+    "slotType" : "pickup_finaldrive_SFA",
+
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$finaldrive_F", "range", ":1", "Differentials", 3.0, 2.0, 18.0, "Final Drive Gear Ratio", "Torque multiplication ratio", {"subCategory":"Front", "stepDis":0.05}],
+    ],
+
+    "differential_F" : {
+        "gearRatio":"$finaldrive_F",
+    },
+},
+}

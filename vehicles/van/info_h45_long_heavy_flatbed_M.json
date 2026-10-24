@@ -1,0 +1,47 @@
+{
+  "0-100 km/h":14.4,
+  "0-60 mph":13.5,
+  "100-0 km/h":70.4,
+  "60-0 mph":216.6,
+  "Body Style":"Flatbed",
+  "BoundingBox":[
+    [
+      -0.86,
+      -1.4,
+      -0.4103
+    ],
+    [
+      1.96,
+      6.212,
+      1.895
+    ]
+  ],
+  "Braking G":0.559,
+  "Config Type":"Custom",
+  "Configuration":"H45 Cabster Long Heavy Duty Flatbed (M)",
+  "Description":"A long Flatbed Cabster with a rear extension",
+  "Drivetrain":"RWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Off-Road Score":33,
+  "Performance Class":"2",
+  "Population":2000,
+  "Power":221,
+  "PowerPeakRPM":3050,
+  "Propulsion":"ICE",
+  "Top Speed":43.7424653,
+  "Torque":405,
+  "TorquePeakRPM":"1300 - 2750",
+  "Transmission":"Manual",
+  "Value":83000,
+  "Weight":2942,
+  "Weight/Power":15.8097166,
+  "Years":{
+    "max":2005,
+    "min":1993
+  },
+  "defaultPaintName1":"Blueberry",
+  "defaultPaintName2":"Blueberry",
+  "defaultPaintName3":"Blueberry",
+  "vehicleSelectorSubGroup":"vehiclesData.van.ambulance.vehicleSelectorSubGroup"
+}

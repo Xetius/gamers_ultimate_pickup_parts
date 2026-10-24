@@ -1,0 +1,215 @@
+{
+"G_pickup_differential_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Open Rear Rear Differential",
+        "value":450,
+    },
+    "slotType" : "G_pickup_differential_RR_6x6",
+    "slots": [
+        ["type", "default", "description"],
+        //["pickup_driveshaft_R","pickup_driveshaft_R","Rear Driveshaft"],
+        ["G_pickup_finaldrive_RR_6x6","G_pickup_finaldrive_RR_6x6_355", "Rear Rear Final Drive", {"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear diff
+        ["differential", "differential_RR_6x6", "driveshaft_RR_6x6", 1, {"diffType":"open", "uiName":"Rear Rear Differential","defaultVirtualInertia":0.5}],
+    ],
+    "differential_RR__6x6": {
+        "friction": 6.6,
+        "dynamicFriction": 0.00311,
+        "torqueLossCoef": 0.03,
+    },
+},
+"G_pickup_differential_RR_6x6_LSD": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Limited Slip Rear Rear Differential",
+        "value":750,
+    },
+    "slotType" : "G_pickup_differential_RR_6x6",
+    "slots": [
+        ["type", "default", "description"],
+        //["pickup_driveshaft_R","pickup_driveshaft_R","Rear Driveshaft"],
+        ["G_pickup_finaldrive_RR_6x6","G_pickup_finaldrive_RR_6x6_355", "Rear Rear Final Drive", {"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear diff
+        ["differential", "differential_RR_6x6", "driveshaft_RR_6x6", 1, {"diffType":"lsd", "lsdPreload":150, "lsdLockCoef":0.15, "lsdRevLockCoef":0.075, "uiName":"Rear Rear Differential","defaultVirtualInertia":0.5}],
+    ],
+    "differential_RR__6x6": {
+        "friction": 6.6,
+        "dynamicFriction": 0.00311,
+        "torqueLossCoef": 0.03,
+    },
+},
+"G_pickup_differential_RR_6x6_heavy_LSD": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Heavy Duty Limited Slip Rear Rear Differential",
+        "value":850,
+    },
+    "slotType" : "G_pickup_differential_RR_6x6",
+    "slots": [
+        ["type", "default", "description"],
+        //["pickup_driveshaft_R","pickup_driveshaft_R","Rear Driveshaft"],
+        ["G_pickup_finaldrive_RR_6x6","G_pickup_finaldrive_RR_6x6_355", "Rear Rear Final Drive", {"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear diff
+        ["differential", "differential_RR_6x6", "driveshaft_RR_6x6", 1, {"diffType":"lsd", "lsdPreload":250, "lsdLockCoef":0.2, "lsdRevLockCoef":0.2, "uiName":"Rear Rear Differential","defaultVirtualInertia":0.5}],
+    ],
+    "differential_RR_6x6": {
+        "friction": 4.95,
+        "dynamicFriction": 0.00218,
+        "torqueLossCoef": 0.03,
+    },
+},
+"G_pickup_differential_RR_6x6_welded": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Welded Rear Rear Differential",
+        "value":450,
+    },
+    "slotType" : "G_pickup_differential_RR_6x6",
+    "slots": [
+        ["type", "default", "description"],
+        //["pickup_driveshaft_R","pickup_driveshaft_R","Rear Driveshaft"],
+        ["G_pickup_finaldrive_RR_6x6","G_pickup_finaldrive_RR_6x6_355", "Rear Rear Final Drive", {"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear diff
+        ["differential", "differential_RR_6x6", "driveshaft_RR_6x6", 1, {"diffType":"locked", "lockTorque":10000, "uiName":"Rear Rear Differential","defaultVirtualInertia":0.5}],
+    ],
+    "differential_RR_6x6": {
+        "friction": 6.6,
+        "dynamicFriction": 0.00311,
+        "torqueLossCoef": 0.03,
+    },
+},
+"G_pickup_differential_RR_6x6_locking": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Locking Rear Rear Differential",
+        "value":950,
+    },
+    "slotType" : "G_pickup_differential_RR_6x6",
+    "slots": [
+        ["type", "default", "description"],
+        //["pickup_driveshaft_R","pickup_driveshaft_R","Rear Driveshaft"],
+        ["G_pickup_finaldrive_RR_6x6","G_pickup_finaldrive_RR_6x6_355", "Rear Rear Final Drive", {"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear diff
+        ["differential", "differential_RR_6x6", "driveshaft_RR_6x6", 1, {"uiSimpleModeControl":false, "diffType":["open","locked"], "lockTorque":20000, "uiName":"Rear Rear Differential","defaultVirtualInertia":0.5}],
+    ],
+    "differential_RR_6x6": {
+        "friction": 6.6,
+        "dynamicFriction": 0.00311,
+        "torqueLossCoef": 0.03,
+    },
+},
+"G_pickup_differential_RR_6x6_lsd_locking": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Locking Limited Slip Rear Rear Differential",
+        "value":1650,
+    },
+    "slotType" : "G_pickup_differential_RR_6x6",
+    "slots": [
+        ["type", "default", "description"],
+        //["pickup_driveshaft_R","pickup_driveshaft_R","Rear Driveshaft"],
+        ["G_pickup_finaldrive_RR_6x6","G_pickup_finaldrive_RR_6x6_355", "Rear Rear Final Drive", {"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear diff
+        ["differential", "differential_RR_6x6", "driveshaft_RR_6x6", 1, {"uiSimpleModeControl":false, "diffType":["lsd","locked"], "lsdPreload":250, "lsdLockCoef":0.2, "lsdRevLockCoef":0.2, "lockTorque":20000, "uiName":"Rear Rear Differential","defaultVirtualInertia":0.5}],
+    ],
+    "differential_RR_6x6": {
+        "friction": 6.6,
+        "dynamicFriction": 0.00311,
+        "torqueLossCoef": 0.03,
+    },
+},
+"G_pickup_finaldrive_RR_6x6_355": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"3.55:1 Rear Rear Final Drive",
+        "value":150,
+    },
+
+    "slotType" : "G_pickup_finaldrive_RR_6x6",
+
+    "differential_RR_6x6" : {
+        "gearRatio":3.55,
+    },
+},
+"G_pickup_finaldrive_RR_6x6_410": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"4.10:1 Rear Rear Final Drive",
+        "value":150,
+    },
+
+    "slotType" : "G_pickup_finaldrive_RR_6x6",
+
+    "differential_RR_6x6" : {
+        "gearRatio":4.10,
+    },
+},
+"G_pickup_finaldrive_RR_6x6_444": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"4.44:1 Rear Rear Final Drive",
+        "value":150,
+    },
+
+    "slotType" : "G_pickup_finaldrive_RR_6x6",
+
+    "differential_RR_6x6" : {
+        "gearRatio":4.44,
+    },
+},
+"G_pickup_finaldrive_RR_6x6_race": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Race Adjustable Rear Rear Final Drive",
+        "value":750,
+    },
+
+    "slotType" : "G_pickup_finaldrive_RR_6x6",
+
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$finaldrive_RR", "range", ":1", "Differentials", 4.10, 2.0, 6.0, "Final Drive Gear Ratio", "Torque multiplication ratio", {"subCategory":"Rear Rear", "stepDis":0.01}],
+    ],
+
+    "differential_RR_6x6" : {
+        "gearRatio":"$finaldrive_RR",
+    },
+},
+"G_pickup_finaldrive_RR_6x6_race_ext": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Extended Race Adjustable Rear Final Drive",
+        "value":750,
+    },
+
+    "slotType" : "G_pickup_finaldrive_RR_6x6",
+
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$finaldrive_RR", "range", ":1", "Differentials", 3.0, 2.0, 18.0, "Final Drive Gear Ratio", "Torque multiplication ratio", {"subCategory":"Rear Rear", "stepDis":0.05}],
+    ],
+
+    "differential_RR_6x6" : {
+        "gearRatio":"$finaldrive_RR",
+    },
+},
+}

@@ -1,0 +1,236 @@
+{
+"G_offroadwheel_02a_17x9_8lug_F": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"17x9 Trial 1000 Off-Road Front Wheels",
+        "value":1100,
+    },
+    "slotType" : "wheel_F_8",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_F_17x9_offroad","tire_F_33_12_17_offroad","Front Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //front spacers
+        ["pickup_40mm_spacer", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.08, "z":1.08}}],
+        ["pickup_40mm_spacer", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.08, "z":1.08}}],
+        //wheels
+        ["G_offroadwheel_02a_17x9_8lug", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.04, "y":0.99, "z":0.99}}],
+        ["G_offroadwheel_02a_17x9_8lug", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.04, "y":0.99, "z":0.99}}],
+        //center hubs
+        ["hub_locking", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.59, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":0.92, "z":0.92}}],
+        ["hub_locking", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.59, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":0.92, "z":0.92}}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$tireballast_F", "range", "kg", "Wheels", 0, 0, 100, "Tire Ballast", "Tire ballast weight per tire", {"minDis":0,"maxDis":100,"stepDis":5, "subCategory":"Front"}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"collision":true},
+        {"selfCollision":true},
+        {"nodeWeight":"$=6+$tireballast_F/2"},
+        {"group":"wheelhub_FR"},
+        ["fw1r", -0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1l", 0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FR"},
+        ["fw1rr", -0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1ll", 0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"collision":true},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //hub
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":110000,"beamStrength":1100000},
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.235},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.26},
+        {"numRays":20},
+
+        //hub options
+        {"hubTreadBeamSpring":1201000, "hubTreadBeamDamp":20},
+        {"hubPeripheryBeamSpring":1401000, "hubPeripheryBeamDamp":20},
+        {"hubSideBeamSpring":1751000, "hubSideBeamDamp":20},
+        {"hubBeamDeform":75000, "hubBeamStrength":125000},
+        {"hubNodeWeight":0.68},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_offroadwheel_02a_20x11_8lug_F": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"20x11 Trial 1000 Off-Road Front Wheels",
+        "value":1250,
+    },
+    "slotType" : "wheel_F_8",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_F_20x11_offroad","G_tire_F_38_14_20_11_dirt","Front Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //front spacers
+        ["pickup_40mm_spacer", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.08, "z":1.08}}],
+        ["pickup_40mm_spacer", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.08, "z":1.08}}],
+        //wheels
+        ["G_offroadwheel_02a_20x11_8lug", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["G_offroadwheel_02a_20x11_8lug", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1, "z":1}}],
+        //center hubs
+        ["hub_locking", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.6, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["hub_locking", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.6, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$tireballast_F", "range", "kg", "Wheels", 0, 0, 100, "Tire Ballast", "Tire ballast weight per tire", {"minDis":0,"maxDis":100,"stepDis":5, "subCategory":"Front"}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"collision":true},
+        {"selfCollision":true},
+        {"nodeWeight":"$=6+$tireballast_F/2"},
+        {"group":"wheelhub_FR"},
+        ["fw1r", -0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1l", 0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FR"},
+        ["fw1rr", -0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1ll", 0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"collision":true},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //hub
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":110000,"beamStrength":1100000},
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.27},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.285},
+        {"numRays":20},
+
+        //hub options
+        {"hubTreadBeamSpring":1201000, "hubTreadBeamDamp":20},
+        {"hubPeripheryBeamSpring":1401000, "hubPeripheryBeamDamp":20},
+        {"hubSideBeamSpring":1751000, "hubSideBeamDamp":20},
+        {"hubBeamDeform":75000, "hubBeamStrength":125000},
+        {"hubNodeWeight":0.68},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_offroadwheel_02a_20x13_8lug_F": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"20x13 Trial 1000 Off-Road Front Wheels",
+        "value":1400,
+    },
+    "slotType" : "wheel_F_8",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_F_20x13_offroad","G_tire_F_38_16_20_13_dirt","Front Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //front spacers
+        ["pickup_40mm_spacer", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.08, "z":1.08}}],
+        ["pickup_40mm_spacer", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.08, "z":1.08}}],
+        //wheels
+        ["G_offroadwheel_02a_20x13_8lug", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["G_offroadwheel_02a_20x13_8lug", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1, "z":1}}],
+        //center hubs
+        ["hub_locking", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.6, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["hub_locking", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.6, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$tireballast_F", "range", "kg", "Wheels", 0, 0, 100, "Tire Ballast", "Tire ballast weight per tire", {"minDis":0,"maxDis":100,"stepDis":5, "subCategory":"Front"}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"collision":true},
+        {"selfCollision":true},
+        {"nodeWeight":"$=6+$tireballast_F/2"},
+        {"group":"wheelhub_FR"},
+        ["fw1r", -0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1l", 0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FR"},
+        ["fw1rr", -0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1ll", 0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"collision":true},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //hub
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":110000,"beamStrength":1100000},
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.27},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.335},
+        {"numRays":20},
+
+        //hub options
+        {"hubTreadBeamSpring":1201000, "hubTreadBeamDamp":20},
+        {"hubPeripheryBeamSpring":1401000, "hubPeripheryBeamDamp":20},
+        {"hubSideBeamSpring":1751000, "hubSideBeamDamp":20},
+        {"hubBeamDeform":75000, "hubBeamStrength":125000},
+        {"hubNodeWeight":0.68},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+}

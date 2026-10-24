@@ -1,0 +1,530 @@
+{
+"G_pickup_big_roofrack_front_armchair": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Armchair",
+        "value":300,
+    },
+    "slotType" : "G_pickup_big_roofrack_top_front_load",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["chair_body", ["armchair"],[],{"pos":{"x":0.00, "y":0.0, "z":0.12}}],
+        ["couch_cushion_M", ["cushion_M"],[],{"pos":{"x":0.00, "y":0.0, "z":0.12}}],
+        {"deformGroup":"armchair_leftStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["armchair_strap_L", ["armchair", "G_pallet"],[],{"pos":{"x":0.45, "y":0.0, "z":0.105}, "scale":{"x":1.0,"y":1.0,"z":1.02}}],
+        {"deformGroup":"armchair_rightStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["armchair_strap_R", ["armchair", "G_pallet"],[],{"pos":{"x":-0.45, "y":0.0, "z":0.105}, "scale":{"x":1.0,"y":1.0,"z":1.02}}],
+        {"deformGroup":""},
+    ],
+    "slots": [
+        ["type", "default", "description"]
+        ["skin_couch","couch_skin_stripes","Fabric type", {"coreSlot":true}],
+    ],
+
+    "camerasInternal":[
+        ["type", "x", "y", "z", "fov", "id1:", "id2:", "id3:", "id4:", "id5:", "id6:"],
+        {"nodeWeight":1.5},
+        {"beamSpring":400, "beamDamp":120},
+        {"selfCollision":false},
+        {"collision":false},
+        {"idBack:":"armchair4al", "idUp:":"armchair5al", "idRef:":"armchair3al"},
+        ["mrbeam", 0.0, 0.05, 1.19, 60, "armchair3al","armchair3ar","armchair4al","armchair4ar","armchair6al","armchair6ar", {"beamDeform":5001000,"beamStrength":"FLT_MAX"}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"frictionCoef":1.0},
+        {"nodeMaterial":"|NM_WOOD"},
+        {"collision":true},
+        {"selfCollision":true},
+        {"group":"armchair"},
+        {"nodeWeight":2},
+        ["armchair1al", 0.43, -0.35, 0.055],
+        ["armchair1ar", -0.43, -0.35, 0.055],
+        ["armchair2al", 0.43, 0.35, 0.055],
+        ["armchair2ar", -0.43, 0.35, 0.055],
+        {"nodeMaterial":"|NM_RUBBER"},
+         {"nodeWeight":1.25},
+        //node layer2
+        ["armchair3all", 0.6, -0.4, 0.84],
+        ["armchair3arr", -0.6, -0.4, 0.84],
+        ["armchair4all", 0.6, 0.35, 0.84],
+        ["armchair4arr", -0.6, 0.35, 0.84],
+
+        ["armchair8a", 0.0, 0.42, 1.03],
+
+        ["armchair5al", 0.3, -0.4, 0.84],
+        ["armchair5ar", -0.3, -0.4, 0.84],
+
+
+
+        ["armchair4al", 0.3, 0.2, 0.45],
+        ["armchair4ar", -0.3, 0.2, 0.45],
+        ["armchair6al", 0.3, 0.24, 0.86],
+        ["armchair6a", 0.0, 0.24, 0.86{"group":""}],
+        ["armchair6ar", -0.3, 0.24, 0.86],
+        ["armchair3al", 0.3, -0.4, 0.45],
+        ["armchair3ar", -0.3, -0.4, 0.45],
+        //cushion
+        {"group":"cushion_M"},
+        ["armchaircsha1l", 0.275, -0.37, 0.46],
+        ["armchaircsha1r", -0.275, -0.37, 0.46],
+        ["armchaircsha2l", 0.275, 0.2, 0.46],
+        ["armchaircsha2r", -0.275, 0.2, 0.46],
+
+        ["armchaircsha3l", 0.275, -0.37, 0.60],
+        ["armchaircsha3r", -0.275, -0.37, 0.60],
+        ["armchaircsha4l", 0.275, 0.2, 0.60],
+        ["armchaircsha4r", -0.275, 0.2, 0.60],
+
+        //cushion guide nodes
+        {"group":""},
+        ["armchaircshag1l", 0.15, -0.4, 0.45],
+        ["armchaircshag1r", -0.15, -0.4, 0.45],
+        ["armchaircshag2l", 0.3, -0.4, 0.51],
+        ["armchaircshag2r", -0.3, -0.4, 0.51],
+
+
+        {"collision":true},
+        {"selfCollision":true},
+
+        ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+        {"beamSpring":450000,"beamDamp":150},
+        {"beamDeform":2000,"beamStrength":72000},
+        {"deformLimitExpansion":1.2},
+        {"deformLimit":1.5},
+
+
+
+        //middle section
+        //vertical
+        ["armchair2al", "armchair4al"],
+        ["armchair1al", "armchair3al"],
+        ["armchair2ar", "armchair4ar"],
+        ["armchair1ar", "armchair3ar"],
+        ["armchair3al", "armchair5al"],
+        ["armchair3ar", "armchair5ar"],
+        ["armchair4al", "armchair6al"],
+        ["armchair4ar", "armchair6ar"],
+        //backrest node
+        ["armchair8a", "armchair2al"],
+        ["armchair2ar", "armchair8a"],
+
+
+
+
+
+        //widthwise
+        ["armchair1al", "armchair1ar"],
+        ["armchair2ar", "armchair2al"],
+        ["armchair4al", "armchair4ar"{"deformLimitExpansion":1.0}],
+        ["armchair6ar", "armchair6a"{"deformLimitExpansion":1.0}],
+        ["armchair6a", "armchair6al"{"deformLimitExpansion":1.0}],
+
+        ["armchair3ar", "armchair3al"{"deformLimitExpansion":1.0}],
+
+        //widthwise diagonals
+        ["armchair3ar", "armchair1al"{"beamDeform":3500}],
+        ["armchair3al", "armchair1ar"{"beamDeform":3500}],
+
+        ["armchair6a", "armchair4ar"],
+        ["armchair6a", "armchair4al"],
+        ["armchair6al", "armchair4ar"],
+        ["armchair6ar", "armchair4al"],
+        ["armchair4ar", "armchair2al"],
+        ["armchair4al", "armchair2ar"],
+        //lenghtwise
+        ["armchair2al", "armchair1al"],
+        ["armchair2ar", "armchair1ar"],
+        ["armchair4al", "armchair3al"],
+        ["armchair4ar", "armchair3ar"],
+        ["armchair5ar", "armchair6ar"],
+        ["armchair5al", "armchair6al"],
+        //lenghtwise diagonals
+        ["armchair5al", "armchair4al"],
+        ["armchair6al", "armchair3al"],
+        ["armchair3al", "armchair2al"],
+        ["armchair4al", "armchair1al"],
+        ["armchair5ar", "armchair4ar"],
+        ["armchair6ar", "armchair3ar"],
+        ["armchair3ar", "armchair2ar"],
+        ["armchair4ar", "armchair1ar"],
+
+        ["armchair6a", "armchair2ar"],
+        ["armchair6a", "armchair2al"],
+        //backrest top node to the inner backrest nodes
+        ["armchair6ar", "armchair8a"],
+        ["armchair6a", "armchair8a"],
+        ["armchair6al", "armchair8a"],
+        //inner seat bottom crosses
+        ["armchair3ar", "armchair2al"],
+        ["armchair4al", "armchair1ar"],
+        ["armchair3al", "armchair2ar"],
+        ["armchair4ar", "armchair1al"],
+        //back seat bottom nodes to top backrest
+        ["armchair4al", "armchair8a"],
+        ["armchair4ar", "armchair8a"],
+
+
+        //right armrest
+        //vertical
+        ["armchair1ar", "armchair3arr"],
+        ["armchair2ar", "armchair4arr"],
+        //width
+        ["armchair3arr", "armchair5ar"],
+        ["armchair4arr", "armchair6ar"],
+        ["armchair4arr", "armchair6a"],//may need to make this beam softer or remove it later
+        ["armchair4arr", "armchair8a"],
+        //crosses
+        ["armchair3arr", "armchair3ar"],
+        ["armchair5ar", "armchair1ar"],
+        ["armchair4arr", "armchair4ar"],
+        ["armchair6ar", "armchair2ar"],
+
+
+        //lenghtwise
+        ["armchair4arr", "armchair3arr"],
+        //crosses
+        ["armchair2ar", "armchair3arr"],
+        ["armchair1ar", "armchair4arr"],
+        //cross on top of the armrest
+        ["armchair4arr", "armchair5ar"],
+        ["armchair6ar", "armchair3arr"],
+
+        //left armrest
+        //vertical
+        ["armchair1al", "armchair3all"],
+        ["armchair2al", "armchair4all"],
+        //width
+        ["armchair3all", "armchair5al"],
+        ["armchair4all", "armchair6al"],
+        ["armchair4all", "armchair6a"],//may need to make this beam softer or remove it later
+        ["armchair4all", "armchair8a"],
+        //crosses
+        ["armchair3all", "armchair3al"],
+        ["armchair5al", "armchair1al"],
+        ["armchair4all", "armchair4al"],
+        ["armchair6al", "armchair2al"],
+
+
+        //lenghtwise
+        ["armchair4all", "armchair3all"],
+        //crosses
+        ["armchair2al", "armchair3all"],
+        ["armchair1al", "armchair4all"],
+        //cross on top of the armrest
+        ["armchair4all", "armchair5al"],
+        ["armchair6al", "armchair3all"],
+
+        //backrest width
+        ["armchair4all", "armchair4arr"],
+
+        //cross
+        ["armchair4all", "armchair2ar"],
+        ["armchair4arr", "armchair2al"],
+
+
+        {"beamSpring":500000,"beamDamp":250},
+        {"beamDeform":3500,"beamStrength":72000},
+        //sides to seat bottom
+        {"deformLimit":1.1},
+
+
+        //rigifiers
+        {"beamSpring":500000,"beamDamp":250},
+        {"beamDeform":4500,"beamStrength":72000},
+        //outer armrest nodes anti-invert beams
+        ["armchair3all", "armchair3ar"],
+        ["armchair3arr", "armchair3al"],
+        {"beamSpring":450000,"beamDamp":200},
+        {"beamDeform":3000},
+        ["armchair4all", "armchair6ar"],
+        ["armchair4arr", "armchair6al"],
+        ["armchair4all", "armchair4ar"],
+        ["armchair4arr", "armchair4al"],
+        {"beamSpring":150000},
+        {"beamDeform":1000},
+        //backrest top to front armrest nodes
+        ["armchair8a", "armchair5al"],
+        ["armchair8a", "armchair5ar"],
+        //cushion
+        {"beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":0.3,"boundZone":0.01},
+        {"beamLimitSpring":450000,"beamLimitDamp":500},
+        {"beamSpring":15500,"beamDamp":55},
+        {"beamDeform":26500,"beamStrength":17000},
+        //--EXPANSION DEFORM LIMIT DEFAULT--
+        {"deformLimitExpansion":1.2},
+        //vertical
+        ["armchaircsha1l", "armchaircsha3l"],
+        ["armchaircsha2l", "armchaircsha4l"],
+        ["armchaircsha1r", "armchaircsha3r"],
+        ["armchaircsha2r", "armchaircsha4r"],
+        //horizontal
+        {"beamSpring":15000,"beamDamp":150},
+        ["armchaircsha1l", "armchaircsha1r"],
+        ["armchaircsha2l", "armchaircsha2r"],
+        ["armchaircsha3l", "armchaircsha3r"],
+        ["armchaircsha4l", "armchaircsha4r"],
+
+        ["armchaircsha1l", "armchaircsha2l"],
+        ["armchaircsha1r", "armchaircsha2r"],
+        ["armchaircsha3l", "armchaircsha4l"],
+        ["armchaircsha3r", "armchaircsha4r"],
+        //crossing
+        {"beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":0.05,"boundZone":0.01},
+        {"beamLimitSpring":450000,"beamLimitDamp":800},
+        {"beamSpring":14000,"beamDamp":50},
+        ["armchaircsha1l", "armchaircsha4l"],
+        ["armchaircsha3l", "armchaircsha2l"],
+        ["armchaircsha1r", "armchaircsha4r"],
+        ["armchaircsha3r", "armchaircsha2r"],
+
+        ["armchaircsha1l", "armchaircsha3r"],
+        ["armchaircsha3l", "armchaircsha1r"],
+        ["armchaircsha2l", "armchaircsha4r"],
+        ["armchaircsha4l", "armchaircsha2r"],
+
+        ["armchaircsha1l", "armchaircsha4r"],
+        ["armchaircsha4l", "armchaircsha1r"],
+
+        ["armchaircsha3l", "armchaircsha2r"],
+        ["armchaircsha2l", "armchaircsha3r"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0}
+        {"beamSpring":100000,"beamDamp":50},
+        {"beamDeform":1500,"beamStrength":15000},
+        //cushion guides
+        ["armchaircshag1r", "armchaircshag1l"],
+        ["armchaircshag1l", "armchaircshag2l"],
+        ["armchaircshag1r", "armchaircshag2r"],
+        ["armchaircshag2r", "armchair1ar"],
+        ["armchair1ar", "armchaircshag1r"],
+        ["armchaircshag1l", "armchair1al"],
+        ["armchaircshag1l", "armchair4al"],
+        ["armchaircshag2l", "armchair1al"],
+        ["armchaircshag1l", "armchair1ar"],
+        ["armchaircshag1r", "armchair1al"],
+        ["armchaircshag2l", "armchair3all"],
+        ["armchaircshag2r", "armchair3arr"],
+
+        ["armchair2al", "armchaircshag1l"],
+        ["armchaircshag2l", "armchair2al"],
+        ["armchaircshag1r", "armchair2ar"],
+        ["armchaircshag1r", "armchair4ar"],
+        ["armchaircshag2r", "armchair2ar"],
+        ["armchaircshag2r", "armchair5ar"],
+        ["armchaircshag1r", "armchair5ar"],
+        ["armchaircshag1l", "armchair5al"],
+        ["armchaircshag2l", "armchair5al"],
+        //cushion support beams - prevent the back cushion nodes from falling through the join between seat bottom and seat back
+        {"beamType":"|SUPPORT","beamLongBound":1.05},
+        {"beamPrecompression":1,"beamSpring":1200,"beamDamp":50},
+        {"breakGroup":"cushion_detach"},
+        ["armchaircsha3r", "armchair4ar"],
+        ["armchaircsha3l", "armchair4al"],
+        ["armchaircsha3r", "armchair4al"],
+        ["armchaircsha3l", "armchair4ar"],
+
+        ["armchaircsha3r", "armchair3ar"],
+        ["armchaircsha3l", "armchair3al"],
+        ["armchaircsha3r", "armchair3al"],
+        ["armchaircsha3l", "armchair3ar"],
+
+        ["armchaircsha4r", "armchair3ar"],
+        ["armchaircsha4l", "armchair3al"],
+        ["armchaircsha4r", "armchair3al"],
+        ["armchaircsha4l", "armchair3ar"],
+        //middle cushion fly trajectory helper beams
+        {"beamType":"|SUPPORT","beamLongBound":4.1},
+        {"beamPrecompression":0.2,"beamSpring":2200,"beamDamp":50},
+        {"breakGroup":""},
+        ["armchaircsha3l", "armchair8a"],
+        ["armchaircsha3r", "armchair8a"],
+        {"beamPrecompression":0.5,"beamSpring":2200,"beamDamp":50},
+        ["armchaircsha3l", "armchair6al"],
+        ["armchaircsha3r", "armchair6ar"],
+        ["armchaircsha3r", "armchair6al"],
+        ["armchaircsha3l", "armchair6ar"],
+        {"beamPrecompression":1.01,"beamLongBound":4.1},
+        ["armchaircsha4l", "armchair2al"],
+        ["armchaircsha4r", "armchair2ar"],
+        ["armchaircsha4r", "armchair2al"],
+        ["armchaircsha4l", "armchair2ar"],
+        ["armchaircsha3l", "armchair2al"],
+        ["armchaircsha3r", "armchair2ar"],
+        ["armchaircsha3r", "armchair2al"],
+        ["armchaircsha3l", "armchair2ar"],
+        //attach straps
+        {"beamPrecompression":1, "beamType":"|ANISOTROPIC", "beamLongBound":0.05},
+        {"beamSpring":1001000,"beamDamp":90},
+        {"beamDeform":768000,"beamStrength":"FLT_MAX"},
+        {"springExpansion":65000,"dampExpansion":500,"transitionZone":0.002},
+        {"breakGroup":"armchair_rightStrap"},
+        {"deformGroup":"armchair_rightStrap", "deformationTriggerRatio":0.5},
+
+        ["armchair3ar", "pallet10r"],
+        ["armchair3ar", "pallet10"],
+        ["armchair3ar", "pallet20r"],
+        ["armchair3ar", "pallet20"],
+
+        ["armchair2ar", "pallet30r"],
+        ["armchair2ar", "pallet30"],
+        ["armchair2ar", "pallet20r"],
+        ["armchair2ar", "pallet20"],
+
+        ["armchair8a", "pallet30r"],
+        ["armchair8a", "pallet20r"],
+
+        ["armchair1ar", "pallet10r"],
+        ["armchair1ar", "pallet10"],
+        ["armchair1ar", "pallet20r"],
+        ["armchair1ar", "pallet20"],
+
+        {"breakGroup":"armchair_leftStrap"},
+        {"deformGroup":"armchair_leftStrap", "deformationTriggerRatio":0.5}
+        ["armchair3al", "pallet10l"],
+        ["armchair3al", "pallet10"],
+        ["armchair3al", "pallet20l"],
+        ["armchair3al", "pallet20"],
+
+        ["armchair2al", "pallet30l"],
+        ["armchair2al", "pallet30"],
+        ["armchair2al", "pallet20l"],
+        ["armchair2al", "pallet20"],
+
+        ["armchair8a", "pallet30l"],
+        ["armchair8a", "pallet20l"],
+
+        ["armchair1al", "pallet10l"],
+        ["armchair1al", "pallet10"],
+        ["armchair1al", "pallet20l"],
+        ["armchair1al", "pallet20"],
+
+
+        {"breakGroup":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0}
+    ],
+    "torsionbars": [
+        ["id1:", "id2:", "id3:", "id4:"],
+        {"spring":20, "damp":0.5, "deform":250000, "strength":100000},
+        //Invert prevention for the cushions
+        ["armchaircsha1r", "armchaircsha3r", "armchaircsha3l", "armchaircsha4l"],
+        ["armchaircsha1l", "armchaircsha3l", "armchaircsha3r", "armchaircsha4r"],
+        ["armchaircsha2r", "armchaircsha4r", "armchaircsha4l", "armchaircsha3l"],
+        ["armchaircsha2l", "armchaircsha4l", "armchaircsha4r", "armchaircsha3r"],
+        ["armchaircsha3r", "armchaircsha1r", "armchaircsha1l", "armchaircsha2l"],
+        ["armchaircsha3l", "armchaircsha1l", "armchaircsha1r", "armchaircsha2r"],
+        ["armchaircsha4r", "armchaircsha2r", "armchaircsha2l", "armchaircsha3l"],
+        ["armchaircsha4l", "armchaircsha2l", "armchaircsha2r", "armchaircsha3r"],
+        ["armchaircsha1r", "armchaircsha3r", "armchaircsha4r", "armchaircsha4l"],
+        ["armchaircsha1l", "armchaircsha3l", "armchaircsha4l", "armchaircsha4r"],
+        ["armchaircsha2r", "armchaircsha4r", "armchaircsha3r", "armchaircsha3l"],
+        ["armchaircsha2l", "armchaircsha4l", "armchaircsha3l", "armchaircsha3r"],
+        ["armchaircsha3r", "armchaircsha1r", "armchaircsha2r", "armchaircsha2l"],
+        ["armchaircsha3l", "armchaircsha1l", "armchaircsha2l", "armchaircsha2r"],
+        ["armchaircsha4r", "armchaircsha2r", "armchaircsha1r", "armchaircsha1l"],
+        ["armchaircsha4l", "armchaircsha2l", "armchaircsha1l", "armchaircsha1r"],
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":20},
+        //front face
+        ["armchair3arr", "armchaircshag2r", "armchair5ar"],
+        ["armchair3arr", "armchair3ar", "armchaircshag2r"],
+        ["armchair3ar", "armchair3arr", "armchair1ar"],
+        ["armchair1ar", "armchaircshag1r", "armchair3ar"],
+        ["armchair1al", "armchair3al", "armchaircshag1l"],
+        ["armchaircshag1l", "armchaircshag1r", "armchair1ar"],
+        ["armchair1ar", "armchair1al", "armchaircshag1l"],
+        ["armchair3al", "armchair1al", "armchair3all"],
+        ["armchair3all", "armchaircshag2l", "armchair3al"],
+        ["armchaircshag2l", "armchair3all", "armchair5al"],
+        ["armchair4al", "armchair6al", "armchair6a"],
+        ["armchair6a", "armchair6ar", "armchair4ar"],
+        ["armchair4ar", "armchair4al", "armchair6a"],
+        ["armchair4arr", "armchair6ar", "armchair8a"],
+        ["armchair8a", "armchair6ar", "armchair6a"],
+        ["armchair6a", "armchair6al", "armchair8a"],
+        ["armchair6al", "armchair4all", "armchair8a"],
+
+
+
+
+        //back face
+        ["armchair4all", "armchair2al", "armchair8a"],
+        ["armchair8a", "armchair2ar", "armchair4arr"],
+        ["armchair8a", "armchair2al", "armchair2ar"],
+
+
+
+        //right side
+        ["armchair4arr", "armchair2ar", "armchair1ar"],
+        ["armchair1ar", "armchair3arr", "armchair4arr"],
+
+
+        {"dragCoef":0},
+        //inner
+        ["armchair5ar", "armchaircshag2r", "armchair4ar"],
+        ["armchair4ar", "armchair6ar", "armchair5ar"],
+        ["armchaircshag2r", "armchair3ar", "armchair4ar"],
+
+
+        //left side inner
+        ["armchair6al", "armchair4al", "armchair3al"],
+        ["armchair3al", "armchaircshag2l", "armchair6al"],
+        ["armchair6al", "armchaircshag2l", "armchair5al"],
+
+
+        {"dragCoef":10},
+        //outer
+        ["armchair3all", "armchair1al", "armchair2al"],
+        ["armchair2al", "armchair4all", "armchair3all"],
+
+        {"dragCoef":2},
+        //top
+        ["armchair3arr", "armchair5ar", "armchair4arr"],
+        ["armchair4arr", "armchair5ar", "armchair6ar"],
+        ["armchair6al", "armchair5al", "armchair3all"],
+        ["armchair3all", "armchair4all", "armchair6al"],
+        ["armchair4ar", "armchair3ar", "armchaircshag1r"],
+        ["armchaircshag1l", "armchair3al", "armchair4al"],
+        ["armchair4al", "armchair4ar", "armchaircshag1r"],
+        ["armchaircshag1r", "armchaircshag1l", "armchair4al"],
+
+
+
+        //bottom
+        ["armchair1al", "armchair1ar", "armchair2ar"],
+        ["armchair2ar", "armchair2al", "armchair1al"],
+
+
+        //cushion
+        {"dragCoef":15},
+        {"liftCoef":125},
+        {"stallAngle":0.7},
+        ["armchaircsha1l", "armchaircsha2l", "armchaircsha4l"],
+        ["armchaircsha3l", "armchaircsha1l", "armchaircsha4l"],
+
+        ["armchaircsha2r", "armchaircsha1r", "armchaircsha3r"],
+        ["armchaircsha3r", "armchaircsha4r", "armchaircsha2r"],
+        {"dragCoef":15},
+        ["armchaircsha1r", "armchaircsha1l", "armchaircsha3l"],
+        ["armchaircsha3l", "armchaircsha3r", "armchaircsha1r"],
+
+        ["armchaircsha4l", "armchaircsha2l", "armchaircsha2r"],
+        ["armchaircsha2r", "armchaircsha4r", "armchaircsha4l"],
+        {"dragCoef":2},
+        {"liftCoef":25},
+        {"stallAngle":0.2},
+        ["armchaircsha4r", "armchaircsha3r", "armchaircsha3l"],
+        ["armchaircsha3l", "armchaircsha4l", "armchaircsha4r"],
+
+        {"dragCoef":20},
+        {"liftCoef":345},
+        ["armchaircsha2r", "armchaircsha2l", "armchaircsha1r"],
+        ["armchaircsha1r", "armchaircsha2l", "armchaircsha1l"],
+        {"liftCoef":""},
+        ],
+},
+}

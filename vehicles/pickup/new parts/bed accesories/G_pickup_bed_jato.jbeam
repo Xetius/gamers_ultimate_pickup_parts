@@ -1,0 +1,382 @@
+{
+"G_pickup_bed_jato_customizable": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Customizable JATO Liquid Fuel Rocket",
+        "value":40000,
+    },
+    "slotType" : "pickup_tailgate",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+        ["jato",               ["us_semi_jato"], [], {"pos":{"x":0,"y":2.4228,"z":0.8478}}],
+        ["jato_nozzle",        ["us_semi_jato"], [], {"pos":{"x":0,"y":2.4228,"z":0.8478}, "nodeRotate1":{"x":"$jatoAngle","y":0,"z":0,"px":0,"py":2.4228,"pz":0.8478}}],
+        ["jato_shockdiamonds", ["us_semi_jato"], [], {"pos":{"x":0,"y":2.4228,"z":0.8478}, "nodeRotate1":{"x":"$jatoAngle","y":0,"z":0,"px":0,"py":2.4228,"pz":0.8478}}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$jato_factor", "range", "%", "JATO Rockets", 100, 5, 400, "Jato Strength", "Tune the strength of propulsion" {"stepDis":5}],
+        ["$jatoAngle", "range", "degrees", "JATO Rockets", 5, -45, 45, "Nozzle Vertical Angle",  "Adjusts the boost direction", {"stepDis":1}],
+    ],
+    "glowMap":{
+        "shockdiamonds": {"simpleFunction":"jato", "off":"invis", "on":"shockdiamonds_glow"},
+    },
+    "controller": [
+        ["fileName"],
+        ["jato"],
+    ],
+    "jato":{
+        "thrusterNodes:":["jt5", "jt6"],
+        "fuel": 600,
+    },
+    "actionsEnabled": [
+        ["id"],
+        ["jato"],
+    ],
+    "thrusters": [
+        ["id1:", "id2:", "factor", "thrustLimit", "control"],
+        ["jt5", "jt6", "$=300*$jato_factor", "$=300*$jato_factor", "jato"],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"frictionCoef":0.7},
+        {"nodeMaterial":"|NM_METAL"},
+        {"collision":true},
+        {"selfCollision":true},
+        //--JATO--
+        {"nodeWeight":7},
+        {"group":"us_semi_jato"},
+        ["jt1r", -0.35, 1.051, 0.967],
+        ["jt2r", -0.35, 2.406, 0.967],
+        ["jt3r", -0.35, 1.051, 0.770],
+        ["jt4r", -0.35, 2.406, 0.770],
+
+        ["jt1l", 0.35, 1.051, 0.967],
+        ["jt2l", 0.35, 2.406, 0.967],
+        ["jt3l", 0.35, 1.051, 0.770],
+        ["jt4l", 0.35, 2.406, 0.770],
+
+        ["jt5",  -0.0000, 2.4228, 0.8478],
+        ["jt6",  -0.0000, 3.0162, 0.8478, {"nodeRotate1":{"x":"$jatoAngle","y":0,"z":0,"px":0,"py":2.4228,"pz":0.8478}}],
+        {"collision":false},
+        {"selfCollision":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--JATO ROCKETS--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+        {"deformLimitExpansion":1.2},
+        {"beamSpring":10001000,"beamDamp":500},
+        {"beamDeform":50000,"beamStrength":950000},
+        //main shape
+
+        ["jt1r", "jt2r"],
+        ["jt3r", "jt4r"],
+        ["jt1r", "jt3r"],
+        ["jt2r", "jt4r"],
+        ["jt1r", "jt4r"],
+        ["jt3r", "jt2r"],
+
+        ["jt1l", "jt2l"],
+        ["jt3l", "jt4l"],
+        ["jt1l", "jt3l"],
+        ["jt2l", "jt4l"],
+        ["jt1l", "jt4l"],
+        ["jt3l", "jt2l"],
+
+        ["jt1r", "jt1l"],
+        ["jt2r", "jt2l"],
+        ["jt3r", "jt3l"],
+        ["jt4r", "jt4l"],
+
+        ["jt1l", "jt2r"],
+        ["jt1r", "jt2l"],
+        ["jt3l", "jt4r"],
+        ["jt3r", "jt4l"],
+        ["jt1l", "jt3r"],
+        ["jt1r", "jt3l"],
+        ["jt2r", "jt4l"],
+        ["jt2l", "jt4r"],
+
+        //nozzle
+        ["jt5", "jt6", {"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"}],
+        ["jt5", "jt2l"],
+        ["jt5", "jt2r"],
+        ["jt5", "jt4l"],
+        ["jt5", "jt4r"],
+        ["jt5", "jt3l"],
+        ["jt5", "jt1r"],
+
+        ["jt6", "jt4l"],
+        ["jt6", "jt4r"],
+        ["jt6", "jt2r"],
+        ["jt6", "jt2l"],
+
+        //rigids
+        {"beamDeform":26000,"beamStrength":450000},
+        {"beamSpring":2501000,"beamDamp":500},
+        ["jt6", "jt1r"],
+        ["jt6", "jt1l"],
+        ["jt6", "jt3l"],
+        ["jt6", "jt3r"],
+
+        //attach
+        {"beamSpring":1001000,"beamDamp":500},
+        {"beamDeform":30000,"beamStrength":50000},
+        {"breakGroup":"jato"},
+
+        ["jt1l", "bdw3l"],
+        ["jt1l", "bd7l"],
+        ["jt1l", "bdw1l"],
+        ["jt1l", "bdw4l"],
+        ["jt3l", "bdw3l"],
+
+        ["jt1r", "bdw3r"],
+        ["jt1r", "bd7r"],
+        ["jt1r", "bdw1r"],
+        ["jt1r", "bdw4r"],
+        ["jt3r", "bdw3r"],
+
+        ["jt2l", "bdw4l"],
+        ["jt2l", "bd9l"],
+        ["jt2l", "bdw2l"],
+        ["jt2l", "bdw3l"],
+        ["jt4l", "bdw4l"],
+
+        ["jt2r", "bdw4r"],
+        ["jt2r", "bd9r"],
+        ["jt2r", "bdw2r"],
+        ["jt2r", "bdw3r"],
+        ["jt4r", "bdw4r"],
+
+        //additional attatch
+        ["jt2l", "bd10"],
+        ["jt2l", "bd10l"],
+        ["jt4l", "bd10l"],
+        ["jt4l", "bd9l"],
+
+        ["jt2r", "bd10"],
+        ["jt2r", "bd10r"],
+        ["jt4r", "bd10r"],
+        ["jt4r", "bd9r"],
+
+        {"breakGroup":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":20},
+        {"groundModel":"metal"},
+        ["jt1l", "jt3l", "jt4l"],
+        ["jt4l", "jt2l", "jt1l"],
+        ["jt3r", "jt1r", "jt4r"],
+        ["jt2r", "jt4r", "jt1r"],
+        ["jt1l", "jt2l", "jt2r"],
+        ["jt2r", "jt1r", "jt1l"],
+        ["jt2l", "jt6",  "jt2r"],
+        ["jt2l", "jt4l", "jt6"],
+        ["jt4l", "jt4r", "jt6"],
+        ["jt2r", "jt6",  "jt4r"],
+        ["jt1r", "jt3r", "jt3l"],
+        ["jt3l", "jt1l", "jt1r"],
+        ["jt3l", "jt3r", "jt4r"],
+        ["jt4r", "jt4l", "jt3l"],
+    ],
+},
+"G_pickup_bed_jato_customizable_steering": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Customizable JATO Liquid Fuel Rocket (with steering)",
+        "value":50000,
+    },
+    "slotType" : "pickup_tailgate",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+        ["jato",               ["us_semi_jato"], [], {"pos":{"x":0,"y":2.4228,"z":0.8478}}],
+        ["jato_nozzle",        ["us_semi_jato_nozzle"], [], {"pos":{"x":0,"y":2.4228,"z":0.8478}, "nodeRotate1":{"x":"$jatoAngle","y":0,"z":0,"px":0,"py":2.4228,"pz":0.8478}}],
+        ["jato_shockdiamonds", ["us_semi_jato_nozzle"], [], {"pos":{"x":0,"y":2.4228,"z":0.8478}, "nodeRotate1":{"x":"$jatoAngle","y":0,"z":0,"px":0,"py":2.4228,"pz":0.8478}}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$jato_factor", "range", "%", "JATO Rockets", 100, 5, 400, "Jato Strength", "Tune the strength of propulsion" {"stepDis":5}],
+        ["$jato_angle", "range", "", "JATO Rockets", 0.02, 0, 0.10, "Jato Steering Angle", "Tune the ammount of steering", {"minDis":0, "maxDis":500}]
+        ["$jatoAngle", "range", "degrees", "JATO Rockets", 5, -45, 45, "Nozzle Vertical Angle",  "Adjusts the boost direction", {"stepDis":1}],
+    ],
+    "glowMap":{
+        "shockdiamonds": {"simpleFunction":"jato", "off":"invis", "on":"shockdiamonds_glow"},
+    },
+    "controller": [
+        ["fileName"],
+        ["jato"],
+    ],
+    "jato":{
+        "thrusterNodes:":["jt5", "jt6"],
+        "fuel": 600,
+    },
+    "actionsEnabled": [
+        ["id"],
+        ["jato"],
+    ],
+    "thrusters": [
+        ["id1:", "id2:", "factor", "thrustLimit", "control"],
+        ["jt5", "jt6", "$=300*$jato_factor", "$=300*$jato_factor", "jato"],
+    ],
+    "hydros": [
+        ["id1:","id2:"],
+        {"beamPrecompression":1.0, "beamType":"| BOUNDED", "beamLongBound":1, "beamShortBound":1},
+        {"beamSpring":20001000,"beamDamp":250,"beamDeform":"FLT_MAX","beamStrength":276500},
+        ["jt6","jt2r", {"factor":"$=-$jato_angle","inRate":1.0,"outRate":1.0}],
+        ["jt6","jt4r", {"factor":"$=-$jato_angle","inRate":1.0,"outRate":1.0}],
+        ["jt6","jt2l", {"factor":"$=$jato_angle", "inRate":1.0,"outRate":1.0}],
+        ["jt6","jt4l", {"factor":"$=$jato_angle", "inRate":1.0,"outRate":1.0}],
+        {"beamPrecompression":1.0, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"frictionCoef":0.7},
+        {"nodeMaterial":"|NM_METAL"},
+        {"collision":true},
+        {"selfCollision":true},
+        //--JATO--
+        {"nodeWeight":7},
+        {"group":["us_semi_jato", "us_semi_jato_nozzle"]},
+        ["jt1r", -0.35, 1.051, 0.967],
+        ["jt2r", -0.35, 2.406, 0.967],
+        ["jt3r", -0.35, 1.051, 0.770],
+        ["jt4r", -0.35, 2.406, 0.770],
+
+        ["jt1l", 0.35, 1.051, 0.967],
+        ["jt2l", 0.35, 2.406, 0.967],
+        ["jt3l", 0.35, 1.051, 0.770],
+        ["jt4l", 0.35, 2.406, 0.770],
+
+        ["jt5",  -0.0000, 2.4228, 0.8478],
+        ["jt6",  -0.0000, 3.0162, 0.8478, {"group":["us_semi_jato_nozzle"], "nodeRotate1":{"x":"$jatoAngle","y":0,"z":0,"px":0,"py":2.4228,"pz":0.8478}}],
+        {"collision":false},
+        {"selfCollision":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--JATO ROCKETS--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+        {"deformLimitExpansion":1.2},
+        {"beamSpring":10001000,"beamDamp":500},
+        {"beamDeform":50000,"beamStrength":950000},
+        //main shape
+
+        ["jt1r", "jt2r"],
+        ["jt3r", "jt4r"],
+        ["jt1r", "jt3r"],
+        ["jt2r", "jt4r"],
+        ["jt1r", "jt4r"],
+        ["jt3r", "jt2r"],
+
+        ["jt1l", "jt2l"],
+        ["jt3l", "jt4l"],
+        ["jt1l", "jt3l"],
+        ["jt2l", "jt4l"],
+        ["jt1l", "jt4l"],
+        ["jt3l", "jt2l"],
+
+        ["jt1r", "jt1l"],
+        ["jt2r", "jt2l"],
+        ["jt3r", "jt3l"],
+        ["jt4r", "jt4l"],
+
+        ["jt1l", "jt2r"],
+        ["jt1r", "jt2l"],
+        ["jt3l", "jt4r"],
+        ["jt3r", "jt4l"],
+        ["jt1l", "jt3r"],
+        ["jt1r", "jt3l"],
+        ["jt2r", "jt4l"],
+        ["jt2l", "jt4r"],
+
+        //nozzle
+        ["jt5", "jt6", {"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX", "beamSpring":80000}],
+        ["jt5", "jt2l"],
+        ["jt5", "jt2r"],
+        ["jt5", "jt4l"],
+        ["jt5", "jt4r"],
+        ["jt5", "jt3l"],
+        ["jt5", "jt1r"],
+
+        //["jt6", "jt4l"],
+        //["jt6", "jt4r"],
+        //["jt6", "jt2r"],
+        //["jt6", "jt2l"],
+
+        //rigids
+        {"beamDeform":26000,"beamStrength":450000},
+        {"beamSpring":2501000,"beamDamp":500},
+        //["jt6", "jt1r"],
+        //["jt6", "jt1l"],
+        //["jt6", "jt3l"],
+        //["jt6", "jt3r"],
+
+        //attach
+        {"beamSpring":1001000,"beamDamp":500},
+        {"beamDeform":30000,"beamStrength":50000},
+        {"breakGroup":"jato"},
+
+        ["jt1l", "bdw3l"],
+        ["jt1l", "bd7l"],
+        ["jt1l", "bdw1l"],
+        ["jt1l", "bdw4l"],
+        ["jt3l", "bdw3l"],
+
+        ["jt1r", "bdw3r"],
+        ["jt1r", "bd7r"],
+        ["jt1r", "bdw1r"],
+        ["jt1r", "bdw4r"],
+        ["jt3r", "bdw3r"],
+
+        ["jt2l", "bdw4l"],
+        ["jt2l", "bd9l"],
+        ["jt2l", "bdw2l"],
+        ["jt2l", "bdw3l"],
+        ["jt4l", "bdw4l"],
+
+        ["jt2r", "bdw4r"],
+        ["jt2r", "bd9r"],
+        ["jt2r", "bdw2r"],
+        ["jt2r", "bdw3r"],
+        ["jt4r", "bdw4r"],
+
+        //additional attatch
+        ["jt2l", "bd10"],
+        ["jt2l", "bd10l"],
+        ["jt4l", "bd10l"],
+        ["jt4l", "bd9l"],
+
+        ["jt2r", "bd10"],
+        ["jt2r", "bd10r"],
+        ["jt4r", "bd10r"],
+        ["jt4r", "bd9r"],
+
+        {"breakGroup":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":20},
+        {"groundModel":"metal"},
+        ["jt1l", "jt3l", "jt4l"],
+        ["jt4l", "jt2l", "jt1l"],
+        ["jt3r", "jt1r", "jt4r"],
+        ["jt2r", "jt4r", "jt1r"],
+        ["jt1l", "jt2l", "jt2r"],
+        ["jt2r", "jt1r", "jt1l"],
+        ["jt2l", "jt6",  "jt2r"],
+        ["jt2l", "jt4l", "jt6"],
+        ["jt4l", "jt4r", "jt6"],
+        ["jt2r", "jt6",  "jt4r"],
+        ["jt1r", "jt3r", "jt3l"],
+        ["jt3l", "jt1l", "jt1r"],
+        ["jt3l", "jt3r", "jt4r"],
+        ["jt4r", "jt4l", "jt3l"],
+    ],
+},
+
+}

@@ -1,0 +1,49 @@
+{
+  "0-100 km/h":9.8,
+  "0-100 mph":34.9,
+  "0-60 mph":9.2,
+  "100-0 km/h":40.3,
+  "60-0 mph":123.7,
+  "60-100 mph":25.7,
+  "BoundingBox":[
+    [
+      -0.6,
+      -1.42,
+      -0.3099
+    ],
+    [
+      1.7,
+      3.54,
+      1.41
+    ]
+  ],
+  "Braking G":0.975,
+  "Commercial Class":"Class 5 Truck",
+  "Config Type":"Custom",
+  "Configuration":"D55 6x6 Extra Cab Long Rollback Off-Road (A)",
+  "Description":"An offroad capable 6x6 rollback with jump seats, and the tires to always put down power",
+  "Drivetrain":"6x6",
+  "Fuel Type":"Diesel",
+  "Induction Type":"TURBO",
+  "Off-Road Score":46,
+  "Performance Class":"4",
+  "Population":4000,
+  "Power":224,
+  "PowerPeakRPM":"3950 - 4600",
+  "Propulsion":"ICE",
+  "Top Speed":48.48723133,
+  "Torque":620,
+  "TorquePeakRPM":"2950 - 3650",
+  "Transmission":"Automatic",
+  "Value":160000,
+  "Weight":5142,
+  "Weight/Power":10.45685279,
+  "Years":{
+    "max":1997,
+    "min":1992
+  },
+  "defaultPaintName1":"Opal Green",
+  "defaultPaintName2":"Black",
+  "defaultPaintName3":"Opal Green",
+  "vehicleSelectorSubGroup":"D55"
+}

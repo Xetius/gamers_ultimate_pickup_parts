@@ -1,0 +1,559 @@
+{
+"G_md_series_us_cargobox_reardoor_R": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Right Rear Cargo Door",
+        "value":700,
+    },
+    "slotType" : "G_md_series_us_cargobox_reardoor_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_cargobox_reardoor_R", ["md_series_cargobox_reardoor_R"]],
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"cargoDoorRRCoupler"}],
+    ],
+    "cargoDoorRRCoupler":{
+        "couplerNodes":[
+            ["cid1",  "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["dh1r", "cd1r",     146000,                     0.01,                   0.005,                      0.2,                 1.1,                   "reardoorhinge_b_R", {"forceCid1":"cd5r", "forceCid2":"cd2r"}],
+            ["dh2r", "cd4r",     146000,                     0.01,                   0.005,                      0.2,                 1.1,                   "reardoorhinge_a_R", {"forceCid1":"cd5r", "forceCid2":"cd3r"}],
+        ]
+        "groupType": "manualClose",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["cd1r", "cd4r"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>dryvan_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>dryvan_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 120,
+        "openForceDuration": 1.5,
+        "closeForceMagnitude": 380,
+        "closeForceDuration": 1.6
+    },
+    "triggers2":[
+        ["id",  "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["cargodoorR", "cd4r","cd4rr","cd3r", "box", {"x":0.32, "y":0.1, "z":0.08}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.2, "y":0.36, "z":-0.05}, {"deformGroup":"reardoorhinge_b_R"}],
+    ],
+    "triggerEventLinks2":[
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["cargodoorR", "action0", "toggle_cargodoorRR"]
+    ],
+    "actionsEnabled": [
+        ["id"],
+        ["toggle_cargodoorRR"],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         //--CARGO DOOR--
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"group":"md_series_cargobox_reardoor_R"},
+         {"nodeWeight":4},
+         ["cd1rrr",-1.16, 8.55, 3.47],
+         ["cd1rr", -0.58, 8.55, 3.47],
+         ["cd1r",  -0.01, 8.55, 3.47],     //    0.01, 9.5092, 3.6086
+
+         ["cd2rrr",-1.16, 8.55, 2.70],
+         ["cd2rr", -0.58, 8.55, 2.70],
+         ["cd2r",  -0.01, 8.55, 2.70],
+
+         ["cd3rrr",-1.16, 8.55, 1.87],
+         ["cd3rr", -0.58, 8.55, 1.87],
+         ["cd3r",  -0.01, 8.55, 1.87],
+
+         ["cd4rrr",-1.16, 8.55, 1.23],
+         ["cd4rr", -0.58, 8.55, 1.23],
+         ["cd4r",  -0.01, 8.55, 1.23],
+
+         //hinge nodes
+         ["cdh1r",-1.267, 8.541, 3.33],
+         ["cdh2r",-1.267, 8.541, 2.44],
+         ["cdh3r",-1.267, 8.541, 1.95],
+         ["cdh4r",-1.267, 8.541, 1.42],
+
+         //rigidifier
+         {"collision":false},
+         {"selfCollision":false},
+         ["cd5r",-0.7644, 8.0807, 2.233],
+         {"group":""},
+    ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--RIGHT CARGO DOOR--
+          {"beamSpring":2001000,"beamDamp":100},
+          {"beamDeform":222000,"beamStrength":"FLT_MAX"},
+          //main shape
+          ["cd1r","cd1rr"],
+          ["cd1rr","cd1rrr"],
+          ["cd2r","cd2rr"],
+          ["cd2rr","cd2rrr"],
+          ["cd3r","cd3rr"],
+          ["cd3rr","cd3rrr"],
+          ["cd4r","cd4rr"],
+          ["cd4rr","cd4rrr"],
+          //vertical
+          ["cd1r","cd2r"],
+          ["cd2r","cd3r"],
+          ["cd3r","cd4r"],
+
+          ["cd1rr","cd2rr"],
+          ["cd2rr","cd3rr"],
+          ["cd3rr","cd4rr"],
+
+          ["cd1rrr","cd2rrr"],
+          ["cd2rrr","cd3rrr"],
+          ["cd3rrr","cd4rrr"],
+
+          //cross
+          {"beamDeform":72000,"beamStrength":"FLT_MAX"},
+          ["cd1r","cd2rr"],
+          ["cd1rr","cd2r"],
+          ["cd1rr","cd2rrr"],
+          ["cd1rrr","cd2rr"],
+
+          ["cd2r","cd3rr"],
+          ["cd2rr","cd3r"],
+          ["cd2rr","cd3rrr"],
+          ["cd2rrr","cd3rr"],
+
+          ["cd3r","cd4rr"],
+          ["cd3rr","cd4r"],
+          ["cd3rr","cd4rrr"],
+          ["cd3rrr","cd4rr"],
+
+          {"beamDeform":32000,"beamStrength":"FLT_MAX"},
+          //rigids
+          ["cd1r","cd1rrr"],
+          ["cd2r","cd2rrr"],
+          ["cd3r","cd3rrr"],
+          ["cd4r","cd4rrr"],
+
+          ["cd1r","cd3r"],
+          ["cd1rr","cd3rr"],
+          ["cd1rrr","cd3rrr"],
+
+          ["cd2r","cd4r"],
+          ["cd2rr","cd4rr"],
+          ["cd2rrr","cd4rrr"],
+          //rigidifier
+          {"beamDeform":11000,"beamStrength":"FLT_MAX"},
+          {"beamSpring":1251000,"beamDamp":75},
+          ["cd5r","cd1r"],
+          ["cd5r","cd1rr"],
+          ["cd5r","cd1rrr"],
+          ["cd5r","cd2r"],
+          ["cd5r","cd2rr"],
+          ["cd5r","cd2rrr"],
+          ["cd5r","cd3r"],
+          ["cd5r","cd3rr"],
+          ["cd5r","cd3rrr"],
+          ["cd5r","cd4r"],
+          ["cd5r","cd4rr"],
+          ["cd5r","cd4rrr"],
+
+          {"beamDeform":48850,"beamStrength":"FLT_MAX"},
+          {"beamSpring":2001000,"beamDamp":125},
+          //attach to hinge
+          ["cd1rr","cdh1r"],
+          ["cd1rrr","cdh1r"],
+          ["cd2rr","cdh1r"],
+          ["cd2rrr","cdh1r"],
+
+          ["cd1rr","cdh2r"],
+          ["cd1rrr","cdh2r"],
+          ["cd2rr","cdh2r"],
+          ["cd2rrr","cdh2r"],
+          ["cd3rr","cdh2r"],
+          ["cd3rrr","cdh2r"],
+
+          ["cd2rr","cdh3r"],
+          ["cd2rrr","cdh3r"],
+          ["cd3rr","cdh3r"],
+          ["cd3rrr","cdh3r"],
+          ["cd4rr","cdh3r"],
+          ["cd4rrr","cdh3r"],
+
+          ["cd3rr","cdh4r"],
+          ["cd3rrr","cdh4r"],
+          ["cd4rr","cdh4r"],
+          ["cd4rrr","cdh4r"],
+
+          ["cd5r","cdh1r"],
+          ["cd5r","cdh2r"],
+          ["cd5r","cdh3r"],
+          ["cd5r","cdh4r"],
+
+          //--DOOR SUPPORT BEAMS--
+          {"beamPrecompression":1,"beamType":"|SUPPORT","beamLongBound":15},
+          {"beamSpring":2001000,"beamDamp":125},
+          {"beamDeform":12900,"beamStrength":280000},
+          {"breakGroup":"door_RR_supportBeams"},
+          ["cd1rrr","fra4rr", {"beamPrecompression":0.85}],
+          ["cd1rrr","fra14rr", {"beamPrecompression":0.65}],
+
+          ["cd4r","flo7r"],
+          ["cd3r","flo7r"],
+
+          ["cd4rr","fra2"],
+          ["cd1rr","fra4"],
+
+          //pop open
+          {"beamSpring":1000,"beamDamp":125},
+          {"beamPrecompression":1.05,"beamLongBound":25},
+          ["cd4r","fra12"],
+          ["cd3r","fra12"],
+          ["cd2r","fra14"],
+          ["cd1r","fra14"],
+
+          //door hinge
+          {"beamPrecompression":1,"beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamSpring":1501000,"beamDamp":75},
+          {"beamDeform":40000,"beamStrength":80000},
+          //r
+          {"breakGroup":"reardoorhinge_a_R"},
+          ["cdh1r","fra4rr"],
+          ["cdh1r","fra14rr"],
+          ["cdh1r","fra3rr"],
+          ["cdh1r","fra13rr"],
+
+          ["cdh1r","fra4"],
+          ["cdh1r","fra14"],
+
+          {"breakGroup":"reardoorhinge_b_R"},
+          ["cdh2r","fra4rr"],
+          ["cdh2r","fra14rr"],
+          ["cdh2r","fra3rr"],
+          ["cdh2r","fra13rr"],
+          ["cdh2r","fra2rr"],
+          ["cdh2r","fra12rr"],
+
+          {"breakGroup":"reardoorhinge_c_R"},
+          ["cdh3r","fra3rr"],
+          ["cdh3r","fra13rr"],
+          ["cdh3r","fra2rr"],
+          ["cdh3r","fra12rr"],
+
+          {"breakGroup":"reardoorhinge_d_R"},
+          ["cdh4r","fra2rr"],
+          ["cdh4r","fra12rr"],
+          ["cdh4r","fra1rr"],
+          ["cdh4r","fra11rr"],
+          ["cdh4r","fra1r"],
+          ["cdh4r","flo7r"],
+          ["cdh4r","fra1"],
+
+          //door detents and damping
+          {"beamPrecompression":0.25},
+          {"beamSpring":10,"beamDamp":12.5},
+          ["cd4r","flo7rr", {"breakGroup":"reardoorhinge_b_R"}],
+          ["cd4r","flo17rr", {"breakGroup":"reardoorhinge_c_R"}],
+
+          {"breakGroup":""},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //right rear door
+            {"dragCoef":5},
+            {"group":"md_series_cargobox_reardoor_R"},
+            ["cd2rrr","cd1rrr","cd2rr"],
+            ["cd1rrr","cd1rr","cd2rr"],
+            ["cd2rr","cd1rr","cd2r"],
+            ["cd1rr","cd1r","cd2r"],
+            ["cd3rrr","cd2rrr","cd3rr"],
+            ["cd2rrr","cd2rr","cd3rr"],
+            ["cd3rr","cd2rr","cd3r"],
+            ["cd2rr","cd2r","cd3r"],
+            ["cd4rrr","cd3rrr","cd4rr"],
+            ["cd3rrr","cd3rr","cd4rr"],
+            ["cd4rr","cd3rr","cd4r"],
+            ["cd3rr","cd3r","cd4r"],
+            {"breakGroup":""},
+    ],
+},
+"G_md_series_us_cargobox_reardoor_L": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Left Rear Cargo Door",
+        "value":700,
+    },
+    "slotType" : "G_md_series_us_cargobox_reardoor_L",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_cargobox_reardoor_L", ["md_series_cargobox_reardoor_L"]],
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"cargoDoorRLCoupler"}],
+    ],
+    "cargoDoorRLCoupler":{
+        "couplerNodes":[
+            ["cid1",  "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["dh1l", "cd1l",     146000,                     0.01,                   0.005,                      0.2,                 1.1,                   "reardoorhinge_b_L", {"forceCid1":"cd5l", "forceCid2":"cd2l"}],
+            ["dh2l", "cd4l",     146000,                     0.01,                   0.005,                      0.2,                 1.1,                   "reardoorhinge_a_L", {"forceCid1":"cd5l", "forceCid2":"cd3l"}],
+        ]
+        "groupType": "manualClose",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["cd1l", "cd4l"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>dryvan_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>dryvan_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 120,
+        "openForceDuration": 1.5,
+        "closeForceMagnitude": 380,
+        "closeForceDuration": 1.6
+    },
+    "triggers2":[
+        ["id",  "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["cargodoorL", "cd4l","cd4ll","cd3l", "box", {"x":0.32, "y":0.1, "z":0.08}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.2, "y":0.36, "z":-0.05}, {"deformGroup":"reardoorhinge_b_L"}],
+    ],
+    "triggerEventLinks2":[
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["cargodoorL", "action0", "toggle_cargodoorRL"]
+    ],
+    "actionsEnabled": [
+        ["id"],
+        ["toggle_cargodoorRL"],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         //--CARGO DOOR--
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"group":"md_series_cargobox_reardoor_L"},
+         {"nodeWeight":4},
+         ["cd1lll", 1.16, 8.55, 3.47],
+         ["cd1ll",  0.58, 8.55, 3.47],
+         ["cd1l",   0.01, 8.55, 3.47],
+
+         ["cd2lll", 1.16, 8.55, 2.70],
+         ["cd2ll",  0.58, 8.55, 2.70],
+         ["cd2l",   0.01, 8.55, 2.70],
+
+         ["cd3lll", 1.16, 8.55, 1.87],
+         ["cd3ll",  0.58, 8.55, 1.87],
+         ["cd3l",   0.01, 8.55, 1.87],
+
+         ["cd4lll", 1.16, 8.55, 1.23],
+         ["cd4ll",  0.58, 8.55, 1.23],
+         ["cd4l",   0.01, 8.55, 1.23],
+
+         //hinge nodes
+         ["cdh1l", 1.267, 8.541, 3.33],
+         ["cdh2l", 1.267, 8.541, 2.44],
+         ["cdh3l", 1.267, 8.541, 1.95],
+         ["cdh4l", 1.267, 8.541, 1.42],
+
+         //rigidifier
+         {"collision":false},
+         {"selfCollision":false},
+         ["cd5l", 0.7644, 8.0807, 2.233],
+         {"group":""},
+    ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--LEFT CARGO DOOR--
+          {"beamSpring":2001000,"beamDamp":100},
+          {"beamDeform":222000,"beamStrength":"FLT_MAX"},
+          //main shape
+          ["cd1l","cd1ll"],
+          ["cd1ll","cd1lll"],
+          ["cd2l","cd2ll"],
+          ["cd2ll","cd2lll"],
+          ["cd3l","cd3ll"],
+          ["cd3ll","cd3lll"],
+          ["cd4l","cd4ll"],
+          ["cd4ll","cd4lll"],
+          //vertical
+          ["cd1l","cd2l"],
+          ["cd2l","cd3l"],
+          ["cd3l","cd4l"],
+
+          ["cd1ll","cd2ll"],
+          ["cd2ll","cd3ll"],
+          ["cd3ll","cd4ll"],
+
+          ["cd1lll","cd2lll"],
+          ["cd2lll","cd3lll"],
+          ["cd3lll","cd4lll"],
+
+          //cross
+          {"beamDeform":72000,"beamStrength":"FLT_MAX"},
+          ["cd1l","cd2ll"],
+          ["cd1ll","cd2l"],
+          ["cd1ll","cd2lll"],
+          ["cd1lll","cd2ll"],
+
+          ["cd2l","cd3ll"],
+          ["cd2ll","cd3l"],
+          ["cd2ll","cd3lll"],
+          ["cd2lll","cd3ll"],
+
+          ["cd3l","cd4ll"],
+          ["cd3ll","cd4l"],
+          ["cd3ll","cd4lll"],
+          ["cd3lll","cd4ll"],
+
+          {"beamDeform":32000,"beamStrength":"FLT_MAX"},
+          //rigids
+          ["cd1l","cd1lll"],
+          ["cd2l","cd2lll"],
+          ["cd3l","cd3lll"],
+          ["cd4l","cd4lll"],
+
+          ["cd1l","cd3l"],
+          ["cd1ll","cd3ll"],
+          ["cd1lll","cd3lll"],
+
+          ["cd2l","cd4l"],
+          ["cd2ll","cd4ll"],
+          ["cd2lll","cd4lll"],
+          //rigidifier
+          {"beamDeform":11000,"beamStrength":"FLT_MAX"},
+          {"beamSpring":1251000,"beamDamp":75},
+          ["cd5l","cd1l"],
+          ["cd5l","cd1ll"],
+          ["cd5l","cd1lll"],
+          ["cd5l","cd2l"],
+          ["cd5l","cd2ll"],
+          ["cd5l","cd2lll"],
+          ["cd5l","cd3l"],
+          ["cd5l","cd3ll"],
+          ["cd5l","cd3lll"],
+          ["cd5l","cd4l"],
+          ["cd5l","cd4ll"],
+          ["cd5l","cd4lll"],
+
+          {"beamDeform":48850,"beamStrength":"FLT_MAX"},
+          {"beamSpring":2001000,"beamDamp":125},
+          //attach to hinge
+          ["cd1ll","cdh1l"],
+          ["cd1lll","cdh1l"],
+          ["cd2ll","cdh1l"],
+          ["cd2lll","cdh1l"],
+
+          ["cd1ll","cdh2l"],
+          ["cd1lll","cdh2l"],
+          ["cd2ll","cdh2l"],
+          ["cd2lll","cdh2l"],
+          ["cd3ll","cdh2l"],
+          ["cd3lll","cdh2l"],
+
+          ["cd2ll","cdh3l"],
+          ["cd2lll","cdh3l"],
+          ["cd3ll","cdh3l"],
+          ["cd3lll","cdh3l"],
+          ["cd4ll","cdh3l"],
+          ["cd4lll","cdh3l"],
+
+          ["cd3ll","cdh4l"],
+          ["cd3lll","cdh4l"],
+          ["cd4ll","cdh4l"],
+          ["cd4lll","cdh4l"],
+
+          ["cd5l","cdh1l"],
+          ["cd5l","cdh2l"],
+          ["cd5l","cdh3l"],
+          ["cd5l","cdh4l"],
+
+          //--DOOR SUPPORT BEAMS--
+          {"beamPrecompression":1,"beamType":"|SUPPORT","beamLongBound":15},
+          {"beamSpring":2001000,"beamDamp":125},
+          {"beamDeform":12900,"beamStrength":280000},
+          {"breakGroup":"door_RL_supportBeams"},
+          ["cd1lll","fra4ll", {"beamPrecompression":0.85}],
+          ["cd1lll","fra14ll", {"beamPrecompression":0.65}],
+
+          ["cd4l","flo7l"],
+          ["cd3l","flo7l"],
+
+
+          ["cd4ll","fra2"],
+          ["cd1ll","fra4"],
+
+          //pop open
+          {"beamSpring":1000,"beamDamp":125},
+          {"beamPrecompression":1.05,"beamLongBound":25},
+          ["cd4l","fra12"],
+          ["cd3l","fra12"],
+          ["cd2l","fra14"],
+          ["cd1l","fra14"],
+
+          //door hinge
+          {"beamPrecompression":1,"beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamSpring":1501000,"beamDamp":75},
+          {"beamDeform":40000,"beamStrength":80000},
+          //r
+          {"breakGroup":"reardoorhinge_a_L"},
+          ["cdh1l","fra4ll"],
+          ["cdh1l","fra14ll"],
+          ["cdh1l","fra3ll"],
+          ["cdh1l","fra13ll"],
+
+          ["cdh1l","fra4"],
+          ["cdh1l","fra14"],
+
+          {"breakGroup":"reardoorhinge_b_L"},
+          ["cdh2l","fra4ll"],
+          ["cdh2l","fra14ll"],
+          ["cdh2l","fra3ll"],
+          ["cdh2l","fra13ll"],
+          ["cdh2l","fra2ll"],
+          ["cdh2l","fra12ll"],
+
+          {"breakGroup":"reardoorhinge_c_L"},
+          ["cdh3l","fra3ll"],
+          ["cdh3l","fra13ll"],
+          ["cdh3l","fra2ll"],
+          ["cdh3l","fra12ll"],
+
+          {"breakGroup":"reardoorhinge_d_L"},
+          ["cdh4l","fra2ll"],
+          ["cdh4l","fra12ll"],
+          ["cdh4l","fra1ll"],
+          ["cdh4l","fra11ll"],
+          ["cdh4l","flo7l"],
+          ["cdh4l","fra1l"],
+          ["cdh4l","fra1"],
+
+          //door detents and damping
+          {"beamPrecompression":0.25},
+          {"beamSpring":10,"beamDamp":12.5},
+          ["cd4l","flo7ll", {"breakGroup":"reardoorhinge_b_L"}],
+          ["cd4l","flo17ll", {"breakGroup":"reardoorhinge_c_L"}],
+
+          {"breakGroup":""},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //left rear door
+            {"dragCoef":5},
+            {"group":"md_series_cargobox_reardoor_L"},
+            ["cd1lll","cd2lll","cd2ll"],
+            ["cd1lll","cd2ll","cd1ll"],
+            ["cd1ll","cd2ll","cd2l"],
+            ["cd1ll","cd2l","cd1l"],
+            ["cd2lll","cd3lll","cd3ll"],
+            ["cd2lll","cd3ll","cd2ll"],
+            ["cd2ll","cd3ll","cd3l"],
+            ["cd2ll","cd3l","cd2l"],
+            ["cd3lll","cd4lll","cd4ll"],
+            ["cd3lll","cd4ll","cd3ll"],
+            ["cd3ll","cd4ll","cd4l"],
+            ["cd3ll","cd4l","cd3l"],
+            {"breakGroup":""},
+    ],
+},
+}

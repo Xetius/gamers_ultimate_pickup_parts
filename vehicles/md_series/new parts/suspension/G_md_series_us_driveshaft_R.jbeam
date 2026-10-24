@@ -1,0 +1,31 @@
+{
+"G_md_series_us_intershaft": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Inter Axle Driveshaft",
+        "value":250,
+    },
+    "slotType" : "G_md_series_us_intershaft",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //intershaft
+        ["shaft", "intershaft", "transfercase_interaxle", 2, {"electricsName":"intershaft", "breakTriggerBeam":"intershaft", "uiName":"Inter Axle Driveshaft", "friction":1.74, "dynamicFriction": 0.00378}],
+    ],
+    "props": [
+        ["func"      , "mesh"           , "idRef:", "idX:", "idY:",               "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["intershaft", "us_semi_driveshaft_R_yoke_b","1ax3","1ax2","1ax3r", {"x":0, "y":0, "z":0},   {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.087, "y":0.003, "z":-0.007},"baseRotationGlobal":{"x":0, "y":7.0, "z":0.0},"breakGroup":"intershaft","deformGroup":"intershaft","optional":true}],
+        ["intershaft", "us_semi_driveshaft_R_yoke_b","2ax2","2ax3","2ax3r", {"x":0, "y":0, "z":0},   {"x":0, "y":-1, "z":0}, {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.090, "y":-0.009, "z":-0.007},"baseRotationGlobal":{"x":180.0, "y":83.0, "z":0.0},"breakGroup":"intershaft","deformGroup":"intershaft","optional":true}],
+        ["intershaft", "us_semi_slipshaft_R_0_42",      "1ax3","2ax2","2ax3r", {"x":90, "y":-90, "z":0},{"x":0, "y":1, "z":0}, {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.0, "y":0.0, "z":0.0},"breakGroup":"intershaft","deformGroup":"intershaft","optional":true}],
+        ["intershaft", "us_semi_driveshaft_R_0_3",     "2ax2","1ax3","1ax3r", {"x":0, "y":0, "z":-90}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.0, "y":0.0, "z":0.0},"breakGroup":"intershaft","deformGroup":"intershaft","optional":true}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //interaxle driveshaft
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.20, "beamShortBound":0.20},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":2000,"beamStrength":8000},
+          {"beamLimitSpring":5001000,"beamLimitDamp":250},
+          ["2ax2","1ax3", {"name":"intershaft","optional":true,"breakGroup":"intershaft","deformGroup":"intershaft"}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+},
+}

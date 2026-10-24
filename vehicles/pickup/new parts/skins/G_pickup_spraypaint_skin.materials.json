@@ -1,0 +1,40 @@
+{
+  "pickup.skin.spraypaint": {
+    "name": "pickup.skin.spraypaint",
+    "mapTo": "pickup.skin.spraypaint",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/common/pickup/pickup_main_ao.data.png",
+        "baseColorMap": "/vehicles/common/pickup/pickup_main_b.color.png",
+        "metallicMap": "/vehicles/common/pickup/pickup_main_m.data.png",
+        "metallicFactor": 1,
+        "normalMap": "vehicles/common/pickup/pickup_n.dds",
+        "roughnessMap": "/vehicles/common/pickup/pickup_main_r.data.png",
+        "useAnisotropic": true
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/common/pickup/pickup_main_ao.data.png",
+        "instanceDiffuse": true,
+        "diffuseMapUseUV": 1,
+        "useAnisotropic": true,
+        "colorPaletteMapUseUV": 1,
+        "clearCoatFactor": 1,
+        "clearCoatRoughnessFactor": 1,
+        "metallicFactor": 1,
+        "clearCoatMap": "/vehicles/common/pickup/pickup_main_cc.data.png",
+        "normalMap": "/vehicles/common/pickup/pickup_n.dds",
+        "opacityMap": "/vehicles/pickup/pickup_skin_o.data.png",
+        "colorPaletteMap": "/vehicles/pickup/new parts/skins/G_pickup_skin_spraypaint_uv1.color.png",
+        //"baseColorMap": "/vehicles/pickup/new parts/skins/G_pickup_clear_d.color.png"
+      },
+      {},
+      {}
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  }
+}

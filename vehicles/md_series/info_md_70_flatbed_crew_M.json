@@ -1,0 +1,41 @@
+{
+  "Body Style":"Flatbed Truck",
+  "BoundingBox":[
+    [
+      -0.8854,
+      -1.136,
+      -0.7234
+    ],
+    [
+      1.7534,
+      5.0361,
+      1.632
+    ]
+  ],
+  "Commercial Class":"Class 7 Truck",
+  "Config Type":"Custom",
+  "Configuration":"MD70 Flatbed (M)",
+  "Description":"Early model crew cab truck equipped with a flatbed upfit",
+  "Drivetrain":"RWD",
+  "Fuel Type":"Diesel",
+  "Induction Type":"Turbo",
+  "Off-Road Score":34,
+  "Population":4000,
+  "Power":196,
+  "PowerPeakRPM":2400,
+  "Propulsion":"ICE",
+  "Top Speed":32.65652803,
+  "Torque":624,
+  "TorquePeakRPM":"1150 - 1900",
+  "Transmission":"Manual",
+  "Value":87000,
+  "Weight":6944,
+  "Weight/Power":27.83163265,
+  "Years":{
+    "max":1992,
+    "min":1986
+  },
+  "defaultPaintName1":"Cerulean Sky",
+  "defaultPaintName2":"Cerulean Sky",
+  "defaultPaintName3":"Cream"
+}

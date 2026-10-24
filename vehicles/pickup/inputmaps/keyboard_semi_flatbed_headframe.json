@@ -1,0 +1,6 @@
+{
+  "bindings":[
+    {"control":"pagedown", "action":"G_carliftDown"},
+    {"control":"pageup", "action":"G_carliftUp"}
+  ]
+}

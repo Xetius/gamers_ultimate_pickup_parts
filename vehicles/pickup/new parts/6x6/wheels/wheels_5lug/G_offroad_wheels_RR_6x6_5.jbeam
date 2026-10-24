@@ -1,0 +1,836 @@
+{
+"G_offroadwheel_07a_17x9_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"17x9 Alder Supertrail Off-Road Rear Rear Wheels",
+        "value":1100,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_17x9_offroad","tire_RR_6x6_33_12_17_offroad","Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //rear spacers
+        ["pickup_40mm_spacer", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["pickup_40mm_spacer", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        //rear wheels
+        ["offroadwheel_07a_17x9", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.03, "y":0.98, "z":0.98}}],
+        ["offroadwheel_07a_17x9", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.03, "y":0.98, "z":0.98}}],
+        ["hub_trophy", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.1, "y":1.0, "z":1.0}}],
+        ["hub_trophy", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180},   "scale":{"x":1.1, "y":1.0, "z":1.0}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--REAR WHEELS--
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"nodeWeight":6.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"collision":true},
+        //wheel nodes
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--REAR WHEELS--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":100000,"beamStrength":1100000},
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.235},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.26},
+        {"numRays":20},
+
+        //hub options
+        {"hubTreadBeamSpring":1201000, "hubTreadBeamDamp":25},
+        {"hubPeripheryBeamSpring":1401000, "hubPeripheryBeamDamp":25},
+        {"hubSideBeamSpring":1751000, "hubSideBeamDamp":25},
+        {"hubBeamDeform":75000, "hubBeamStrength":125000},
+        {"hubNodeWeight":0.68},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_offroadwheel_07a_17x7_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"17x7 Alder Supertrail Off-Road Rear Rear Wheels",
+        "value":1000,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_17x7_alt","tire_RR_6x6_35_11_17_desert", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //rear spacers
+        ["pickup_40mm_spacer", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["pickup_40mm_spacer", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        //rear wheels
+        ["offroadwheel_07a_17x7", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.03, "y":0.98, "z":0.98}}],
+        ["offroadwheel_07a_17x7", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.03, "y":0.98, "z":0.98}}],
+        ["hub_trophy", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.1, "y":1.0, "z":1.0}}],
+        ["hub_trophy", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180},   "scale":{"x":1.1, "y":1.0, "z":1.0}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--REAR WHEELS--
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"nodeWeight":6.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"collision":true},
+        //wheel nodes
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--REAR WHEELS--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":100000,"beamStrength":1100000},
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.235},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.2},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.43},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_offroadwheel_08a_15x6_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x6 UTR Impact Off-Road Rear Rear Wheels",
+        "value":500,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x6_alt","tire_RR_6x6_27_7_15_alt_offroad", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         ["offroadwheel_08a_15x6", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["offroadwheel_08a_15x6", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":1, "z":1}}],
+        ["hub_trophy", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1.0, "z":1.0}}],
+        ["hub_trophy", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180},   "scale":{"x":1, "y":1.0, "z":1.0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //rear wheel nodes
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+         {"selfCollision":true},
+         {"collision":true},
+         {"nodeWeight":5.0},
+         {"group":"wheelhub_RRR"},
+         ["rwg1r", -0.33, 0.0, 0.0, {"staticCollision":false}],
+         ["rwg1l", 0.33, 0.0, 0.0, {"staticCollision":false}],
+         {"group":"wheelhub_RRR"},
+         ["rwg1rr", -0.60, 0.0, 0.0, {"staticCollision":false}],
+         ["rwg1ll", 0.60, 0.0, 0.0, {"staticCollision":false}],
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //rear wheels
+          {"beamSpring":1501000,"beamDamp":25},
+          {"beamDeform":78500,"beamStrength":434000},
+          ["rwg1r","rwg1rr"],
+          ["rwg1l","rwg1ll"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.085},
+        {"hubWidth":0.175},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":990900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":990900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1601000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.47},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_faser_offroadwheel_01a_15x6_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x6 FASER High-tide Off-Road Rear Rear Wheels (Colorable)",
+        "value":1000,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x6_alt","tire_RR_6x6_27_7_15_alt_offroad", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         ["faser_offroadwheel_01a_15x6", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["faser_offroadwheel_01a_15x6", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //rear wheel nodes
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+         {"selfCollision":true},
+         {"collision":true},
+         {"nodeWeight":5.0},
+         {"group":"wheelhub_RRR"},
+         ["rwg1r", -0.33, 0.0, 0.0, {"staticCollision":false}],
+         ["rwg1l", 0.33, 0.0, 0.0, {"staticCollision":false}],
+         {"group":"wheelhub_RRR"},
+         ["rwg1rr", -0.60, 0.0, 0.0, {"staticCollision":false}],
+         ["rwg1ll", 0.60, 0.0, 0.0, {"staticCollision":false}],
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //rear wheels
+          {"beamSpring":1501000,"beamDamp":25},
+          {"beamDeform":78500,"beamStrength":434000},
+          ["rwg1r","rwg1rr"],
+          ["rwg1l","rwg1ll"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.085},
+        {"hubWidth":0.175},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":990900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":990900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1601000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.47},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_faser_offroadwheel_01b_15x6_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x6 FASER High-tide Off-Road Rear Rear Wheels (Bronze)",
+        "value":1000,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x6_alt","tire_RR_6x6_27_7_15_alt_offroad", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         ["faser_offroadwheel_01b_15x6", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["faser_offroadwheel_01b_15x6", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //rear wheel nodes
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+         {"selfCollision":true},
+         {"collision":true},
+         {"nodeWeight":5.0},
+         {"group":"wheelhub_RRR"},
+         ["rwg1r", -0.33, 0.0, 0.0, {"staticCollision":false}],
+         ["rwg1l", 0.33, 0.0, 0.0, {"staticCollision":false}],
+         {"group":"wheelhub_RRR"},
+         ["rwg1rr", -0.60, 0.0, 0.0, {"staticCollision":false}],
+         ["rwg1ll", 0.60, 0.0, 0.0, {"staticCollision":false}],
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //rear wheels
+          {"beamSpring":1501000,"beamDamp":25},
+          {"beamDeform":78500,"beamStrength":434000},
+          ["rwg1r","rwg1rr"],
+          ["rwg1l","rwg1ll"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.085},
+        {"hubWidth":0.175},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":990900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":990900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1601000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.47},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_faser_offroadwheel_01c_15x6_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x6 FASER High-tide Off-Road Rear Rear Wheels (Chrome)",
+        "value":1000,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x6_alt","tire_RR_6x6_27_7_15_alt_offroad", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         ["faser_offroadwheel_01c_15x6", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["faser_offroadwheel_01c_15x6", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //rear wheel nodes
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+         {"selfCollision":true},
+         {"collision":true},
+         {"nodeWeight":5.0},
+         {"group":"wheelhub_RRR"},
+         ["rwg1r", -0.33, 0.0, 0.0, {"staticCollision":false}],
+         ["rwg1l", 0.33, 0.0, 0.0, {"staticCollision":false}],
+         {"group":"wheelhub_RRR"},
+         ["rwg1rr", -0.60, 0.0, 0.0, {"staticCollision":false}],
+         ["rwg1ll", 0.60, 0.0, 0.0, {"staticCollision":false}],
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //rear wheels
+          {"beamSpring":1501000,"beamDamp":25},
+          {"beamDeform":78500,"beamStrength":434000},
+          ["rwg1r","rwg1rr"],
+          ["rwg1l","rwg1ll"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.085},
+        {"hubWidth":0.175},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":990900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":990900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1601000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.47},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_faser_offroadwheel_01a_17x9_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"17x9 FASER High-tide Off-Road Rear Rear Wheels (Colorable)",
+        "value":1200,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_17x9_offroad","tire_RR_6x6_33_12_17_offroad","Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //rear wheels
+        ["faser_offroadwheel_01a_17x9", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.03, "y":0.98, "z":0.98}}],
+        ["faser_offroadwheel_01a_17x9", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.03, "y":0.98, "z":0.98}}],
+
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--REAR WHEELS--
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"nodeWeight":6.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"collision":true},
+        //wheel nodes
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--REAR WHEELS--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":100000,"beamStrength":1100000},
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.235},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.26},
+        {"numRays":20},
+
+        //hub options
+        {"hubTreadBeamSpring":1201000, "hubTreadBeamDamp":25},
+        {"hubPeripheryBeamSpring":1401000, "hubPeripheryBeamDamp":25},
+        {"hubSideBeamSpring":1751000, "hubSideBeamDamp":25},
+        {"hubBeamDeform":75000, "hubBeamStrength":125000},
+        {"hubNodeWeight":0.68},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_faser_offroadwheel_01b_17x9_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"17x9 FASER High-tide Off-Road Rear Rear Wheels (Bronze)",
+        "value":1200,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_17x9_offroad","tire_RR_6x6_33_12_17_offroad","Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //rear wheels
+        ["faser_offroadwheel_01b_17x9", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.03, "y":0.98, "z":0.98}}],
+        ["faser_offroadwheel_01b_17x9", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.03, "y":0.98, "z":0.98}}],
+
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--REAR WHEELS--
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"nodeWeight":6.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"collision":true},
+        //wheel nodes
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--REAR WHEELS--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":100000,"beamStrength":1100000},
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.235},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.26},
+        {"numRays":20},
+
+        //hub options
+        {"hubTreadBeamSpring":1201000, "hubTreadBeamDamp":25},
+        {"hubPeripheryBeamSpring":1401000, "hubPeripheryBeamDamp":25},
+        {"hubSideBeamSpring":1751000, "hubSideBeamDamp":25},
+        {"hubBeamDeform":75000, "hubBeamStrength":125000},
+        {"hubNodeWeight":0.68},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_faser_offroadwheel_01c_17x9_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"17x9 FASER High-tide Off-Road Rear Rear Wheels (Chrome)",
+        "value":1200,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_17x9_offroad","tire_RR_6x6_33_12_17_offroad","Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //rear wheels
+        ["faser_offroadwheel_01c_17x9", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.03, "y":0.98, "z":0.98}}],
+        ["faser_offroadwheel_01c_17x9", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.03, "y":0.98, "z":0.98}}],
+
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--REAR WHEELS--
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"nodeWeight":6.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"collision":true},
+        //wheel nodes
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--REAR WHEELS--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":100000,"beamStrength":1100000},
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.235},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.26},
+        {"numRays":20},
+
+        //hub options
+        {"hubTreadBeamSpring":1201000, "hubTreadBeamDamp":25},
+        {"hubPeripheryBeamSpring":1401000, "hubPeripheryBeamDamp":25},
+        {"hubSideBeamSpring":1751000, "hubSideBeamDamp":25},
+        {"hubBeamDeform":75000, "hubBeamStrength":125000},
+        {"hubNodeWeight":0.68},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_faser_offroadwheel_01a_17x7_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"17x7 FASER High-tide Off-Road Rear Rear Wheels (Colorable)",
+        "value":1200,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_17x7_alt","tire_RR_6x6_35_11_17_desert", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+
+        //rear wheels
+        ["faser_offroadwheel_01a_17x7", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.03, "y":0.98, "z":0.98}}],
+        ["faser_offroadwheel_01a_17x7", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.03, "y":0.98, "z":0.98}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--REAR WHEELS--
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"nodeWeight":6.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"collision":true},
+        //wheel nodes
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--REAR WHEELS--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":100000,"beamStrength":1100000},
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.235},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.2},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.43},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_faser_offroadwheel_01b_17x7_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"17x7 FASER High-tide Off-Road Rear Rear Wheels (Bronze)",
+        "value":1200,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_17x7_alt","tire_RR_6x6_35_11_17_desert", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+
+        //rear wheels
+        ["faser_offroadwheel_01b_17x7", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.03, "y":0.98, "z":0.98}}],
+        ["faser_offroadwheel_01b_17x7", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.03, "y":0.98, "z":0.98}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--REAR WHEELS--
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"nodeWeight":6.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"collision":true},
+        //wheel nodes
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--REAR WHEELS--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":100000,"beamStrength":1100000},
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.235},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.2},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.43},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_faser_offroadwheel_01c_17x7_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"17x7 FASER High-tide Off-Road Rear Rear Wheels (Chrome)",
+        "value":1200,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_17x7_alt","tire_RR_6x6_35_11_17_desert", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+
+        //rear wheels
+        ["faser_offroadwheel_01c_17x7", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.03, "y":0.98, "z":0.98}}],
+        ["faser_offroadwheel_01c_17x7", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.03, "y":0.98, "z":0.98}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--REAR WHEELS--
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"nodeWeight":6.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.32, 0.0, 0.0, {"staticCollision":false}],
+        {"collision":true},
+        //wheel nodes
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--REAR WHEELS--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":100000,"beamStrength":1100000},
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.235},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.2},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.43},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+}

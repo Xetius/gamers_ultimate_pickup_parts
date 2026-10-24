@@ -1,0 +1,140 @@
+{
+"G_pickup_goliath_hydro_steering": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Hydraulic Steering",
+        "value":1900,
+    },
+    "slotType" : "G_pickup_goliath_steering_4link",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["G_pickup_goliath_hydro_steering_ram", ["pickup_steeringrack_hydro"]],
+        ["G_pickup_goliath_hydro_steering_frame", ["pickup_axle_F"]],
+        ["G_pickup_goliath_hydro_steering_tierod_FR", ["pickup_tierod_FR","pickup_tierod_F"]],
+        ["G_pickup_goliath_hydro_steering_tierod_FL", ["pickup_tierod_FL","pickup_tierod_F"]],
+    ],
+    //steering rack rail
+    "rails": {
+        "steeringrack_main":{"links:":["st1r", "st1l"], "broken:":[], "looped":false, "capped":true},
+        "steeringrack_extra":{"links:":["st3r", "st3l"], "broken:":[], "looped":false, "capped":true},
+    },
+    "slidenodes": [
+        ["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
+        ["st2r", "steeringrack_main", true, true, 0.0, 20001000, "FLT_MAX", "FLT_MAX"],
+        ["st2l", "steeringrack_main", true, true, 0.0, 20001000, "FLT_MAX", "FLT_MAX"],
+        ["st4r", "steeringrack_extra", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
+        ["st4l", "steeringrack_extra", true, true, 0.0, 1001000, "FLT_MAX", "FLT_MAX"],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$toe_FR", "range", "", "Wheel Alignment", 0.999, 1.1, 0.9, "Toe Adjust", "Adjusts the wheel toe-in angle", {"subCategory":"Front"}],
+        ["$steer_center_F", "range", "", "Wheel Alignment", 0.003, -0.01, 0.01, "Toe Left/Right Trim", "Fine tunes the centerpoint of the steering", {"subCategory":"Front"}]
+        ["$steer_angle_F", "range", "", "Suspension", 0.15, 0, 0.15, "Maximum Steering Angle", "Used to prevent fender clipping", {"subCategory":"Front", "minDis":0, "maxDis":100}]
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"selfCollision":false},
+        {"collision":true},
+        {"nodeMaterial":"|NM_METAL"},
+        {"frictionCoef":0.5},
+        {"nodeWeight":7.0},
+        //steering rack ends
+        {"group":["pickup_steeringrack_hydro_body"]},
+        ["st2r", -0.22, -1.66, 0.347, {"selfCollision":true}],
+        ["st4r", -0.22, -1.66, 0.29, {"nodeWeight":0.5,"collision":false}],
+        ["st2l",  0.22, -1.66, 0.347, {"selfCollision":true}],
+        ["st4l",  0.22, -1.66, 0.29, {"nodeWeight":0.5,"collision":false}],
+        //axle mounting points for steering rack
+        {"nodeWeight":7.0},
+        {"group":["pickup_steeringrack_hydro","pickup_tierod_FR"]},
+        ["st1r", -0.41, -1.66, 0.347, {"selfCollision":true}],
+        ["st3r", -0.41, -1.66, 0.29, {"nodeWeight":0.5,"collision":false}],
+        {"group":["pickup_steeringrack_hydro","pickup_tierod_FL"]},
+        ["st1l",  0.41, -1.66, 0.347, {"selfCollision":true}],
+        ["st3l",  0.41, -1.66, 0.29, {"nodeWeight":0.5,"collision":false}],
+         //tie rod
+         {"nodeWeight":15.5},
+         ["fh1r",-0.95, -1.64, 0.327, {"group":["pickup_hub_F","pickup_tierod_F"]}],
+         ["fh1l", 0.95, -1.64, 0.327, {"group":["pickup_hub_F","pickup_tierod_F"]}],
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:","id2:"],
+        {"beamPrecompression":1.0, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+        {"beamSpring":6001000,"beamDamp":100},
+        {"beamDeform":1010000,"beamStrength":"FLT_MAX"},
+        //steering rack mounting to axle
+        {"deformLimitExpansion":1.2},
+        ["st2r", "fax1"],
+        ["st2l", "fax1"],
+        ["st2r", "fax2"],
+        ["st2l", "fax2"],
+
+        {"beamSpring":10001000,"beamDamp":100},
+        ["st2r", "fax1r"],
+        ["st2r", "fax2r"],
+        ["st2l", "fax1l"],
+        ["st2l", "fax2l"],
+
+        {"beamSpring":501000,"beamDamp":100},
+        //rack extra flexbody helpers
+        ["st4r", "fax1"],
+        ["st4l", "fax1"],
+        ["st4r", "fax3"],
+        ["st4l", "fax3"],
+        ["st4r", "fax1r"],
+        ["st4r", "fax2r"],
+        ["st4l", "fax1l"],
+        ["st4l", "fax2l"],
+
+        ["st1r", "st3r"],
+        ["st1l", "st3l"],
+        ["st1r", "st3l"],
+        ["st1l", "st3r"],
+        ["st1r", "st1l"],
+        ["st3l", "st3r"],
+
+        ["st2r", "st4r"],
+        ["st2l", "st4l"],
+        ["st2r", "st4l"],
+        ["st2l", "st4r"],
+        ["st4l", "st4r"],
+        {"deformLimitExpansion":""},
+
+        //center link
+        {"beamDeform":2500000,"beamStrength":2450000},
+        {"beamSpring":10001000,"beamDamp":150},
+        ["st2r","st2l"],
+
+        //tie rod ends
+        {"beamSpring":20001000,"beamDamp":150},
+        //["fh3r","st2r", {"beamPrecompression":1,"highlight":{"radius":0.0075, "col":"#7FFFD4ff"}}],
+        //["fh3l","st2l", {"beamPrecompression":1,"highlight":{"radius":0.0075, "col":"#7FFFD4ff"}}],
+        ["fh1r","st1r", {"beamPrecompression":"$=$toe_FR+$steer_center_F","beamPrecompressionTime":0.5}],
+        ["fh1l","st1l", {"beamPrecompression":"$=$toe_FR-$steer_center_F","beamPrecompressionTime":0.5}],
+
+        //steering damper
+        {"beamSpring":0,"beamDeform":788000,"beamStrength":195000},
+        {"beamLimitSpring":0,"beamLimitDamp":0},
+        {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamDamp":450},
+        ["fx5r","fx3l", {"beamDampVelocitySplit":0.05,"beamDampFast":1500,"dampCutoffHz":750}],
+        ["fx5l","fx3r", {"beamDampVelocitySplit":0.05,"beamDampFast":1500,"dampCutoffHz":750}],
+        ["fx6r","fx3l", {"beamDampVelocitySplit":0.05,"beamDampFast":1500,"dampCutoffHz":750}],
+        ["fx6l","fx3r", {"beamDampVelocitySplit":0.05,"beamDampFast":1500,"dampCutoffHz":750}],
+        {"deformLimitExpansion":1.2},
+        {"beamPrecompression":1.0, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "hydros": [
+        ["id1:","id2:"],
+        {"beamPrecompression":1.0, "beamType":"| BOUNDED", "beamLongBound":1, "beamShortBound":1},
+        {"beamSpring":20001000,"beamDamp":250,"beamDeform":"FLT_MAX","beamStrength":276500},
+        ["st2l","st1r", {"factor":"$=$steer_angle_F", "steeringWheelLock":600, "inRate":1.0,"outRate":1.0}],
+        ["st2r","st1l", {"factor":"$=-$steer_angle_F","steeringWheelLock":600, "inRate":1.0,"outRate":1.0}],
+        {"beamPrecompression":1.0, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "input": {
+        "FFBcoef":"$=$ffbstrength*4",
+    },
+},
+}

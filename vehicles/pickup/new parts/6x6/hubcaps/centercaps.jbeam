@@ -1,0 +1,394 @@
+{
+"hubcap_01a_RR_6x6_14": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Rear Center Caps",
+        "value":25,
+    },
+    "slotType" : "hubcap_RR_6x6_14",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["hubcap_01a", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.465, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["hubcap_01a", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.465, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+"hubcap_01a_RR_6x6_15": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Rear Center Caps",
+        "value":25,
+    },
+    "slotType" : "hubcap_RR_6x6_15",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["hubcap_01a", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["hubcap_01a", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+"hubcap_01a_RR_6x6_altb": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Rear Center Caps",
+        "value":25,
+    },
+    "slotType" : "hubcap_RR_6x6_15_altb",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["hubcap_01a", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.50, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["hubcap_01a", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.50, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+"hubcap_01a_RR_6x6_16": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Rear Center Caps",
+        "value":25,
+    },
+    "slotType" : "hubcap_RR_6x6_16",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["hubcap_01a", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.475, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.5, "y":1.06, "z":1.06}}],
+        ["hubcap_01a", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.475, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.5, "y":1.06, "z":1.06}}],
+    ],
+},
+"hubcap_01a_RR_6x6_altc": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Rear Center Caps",
+        "value":25,
+    },
+    "slotType" : "hubcap_RR_6x6_15_altc",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["hubcap_01a", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.525, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["hubcap_01a", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.525, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+"hubcap_01a_RR_6x6_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Rear Center Caps",
+        "value":25,
+    },
+    "slotType" : "hubcap_RR_6x6_15_alt",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["hubcap_01a", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.495, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["hubcap_01a", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.495, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+"hubcap_09a_RR_6x6_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"DutyPro-L Chrome Center Caps",
+        "value":70,
+    },
+    "slotType" : "hubcap_RR_6x6_15_alt",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["hubcap_09a", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.495, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["hubcap_09a", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.495, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+"hubcap_10a_RR_6x6_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"DutyPro-S Chrome Center Caps",
+        "value":50,
+    },
+    "slotType" : "hubcap_RR_6x6_15_alt",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["hubcap_10a", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.495, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["hubcap_10a", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.495, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+"hubcap_09b_RR_6x6_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"DutyPro-L Black Center Caps",
+        "value":50,
+    },
+    "slotType" : "hubcap_RR_6x6_15_alt",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["hubcap_09b", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.495, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["hubcap_09b", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.495, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+"hubcap_10b_RR_6x6_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"DutyPro-S Black Center Caps",
+        "value":30,
+    },
+    "slotType" : "hubcap_RR_6x6_15_alt",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["hubcap_10b", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.495, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["hubcap_10b", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.495, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+"hubcap_09a_RR_6x6_altd": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"DutyPro-L Chrome Center Caps",
+        "value":70,
+    },
+    "slotType" : "hubcap_RR_6x6_15_altd",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["hubcap_09a", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["hubcap_09a", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+"hubcap_10a_RR_6x6_altd": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"DutyPro-S Chrome Center Caps",
+        "value":50,
+    },
+    "slotType" : "hubcap_RR_6x6_15_altd",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["hubcap_10a", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["hubcap_10a", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+"hubcap_09b_RR_6x6_altd": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"DutyPro-L Black Center Caps",
+        "value":50,
+    },
+    "slotType" : "hubcap_RR_6x6_15_altd",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["hubcap_09b", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["hubcap_09b", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+"hubcap_10b_RR_6x6_altd": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"DutyPro-S Black Center Caps",
+        "value":30,
+    },
+    "slotType" : "hubcap_RR_6x6_15_altd",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["hubcap_10b", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["hubcap_10b", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+"alder_hubcap_01a_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Gavril 423S Chrome Center Caps",
+        "value":80,
+    },
+    "slotType" : "alder_hubcap_RR_6x6_15",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["alder_hubcap_01a", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.54, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["alder_hubcap_01a", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.54, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+"alder_hubcap_01b_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Gavril 423S Black Center Caps",
+        "value":80,
+    },
+    "slotType" : "alder_hubcap_RR_6x6_15",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["alder_hubcap_01b", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.54, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["alder_hubcap_01b", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.54, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+"alder_hubcap_01a_RR_6x6_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Gavril 423S Chrome Center Caps",
+        "value":80,
+    },
+    "slotType" : "alder_hubcap_RR_6x6_15_alt",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["alder_hubcap_01a", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.52, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["alder_hubcap_01a", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.52, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+"alder_hubcap_01b_RR_6x6_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Gavril 423S Black Center Caps",
+        "value":80,
+    },
+    "slotType" : "alder_hubcap_RR_6x6_15_alt",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["alder_hubcap_01b", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.52, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["alder_hubcap_01b", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.52, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+"hubcap_09c_RR_6x6_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"DutyPro-L Black Center Caps",
+        "value":50,
+    },
+    "slotType" : "hubcap_RR_6x6_16",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["hubcap_09b", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.505, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.1,, "z":1.1,}}],
+        ["hubcap_09b", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.505, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":1.1,, "z":1.1,}}],
+    ],
+},
+"hubcap_10c_RR_6x6_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"DutyPro-S Black Center Caps",
+        "value":30,
+    },
+    "slotType" : "hubcap_RR_6x6_16",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["hubcap_10b", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.505, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.1,, "z":1.1,}}],
+        ["hubcap_10b", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.505, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":1.1,, "z":1.1,}}],
+    ],
+},
+"hubcap_09c_RR_6x6_altd": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"DutyPro-L Chrome Center Caps",
+        "value":70,
+    },
+    "slotType" : "hubcap_RR_6x6_16",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //hubcaps
+         ["hubcap_09a", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.505, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.1,, "z":1.1,}}],
+         ["hubcap_09a", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.505, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":1.1,, "z":1.1,}}],
+    ],
+},
+ "hubcap_10c_RR_6x6_altd": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"DutyPro-S Chrome Center Caps",
+        "value":50,
+    },
+    "slotType" : "hubcap_RR_6x6_16",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["hubcap_10a", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.505, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.1,, "z":1.1,}}],
+        ["hubcap_10a", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.505, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":1.1,, "z":1.1,}}],
+    ],
+},
+ "hubcap_10a_RR_6x6_alte": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"DutyPro-XL Chrome Center Caps",
+        "value":100,
+    },
+    "slotType" : "hubcap_RR_6x6_16_alt",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["hubcap_10a", ["wheel_RRR2","wheelhub_RRR"], [], {"pos":{"x":-0.497, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.95, "y":1.44, "z":1.44,}}],
+        ["hubcap_10a", ["wheel_RRL2","wheelhub_RRL"], [], {"pos":{"x": 0.497, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.95, "y":1.44, "z":1.44,}}],
+    ],
+},
+ "hubcap_10b_RR_6x6_alte": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"DutyPro-XL Black Center Caps",
+        "value":100,
+    },
+    "slotType" : "hubcap_RR_6x6_16_alt",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["hubcap_10b", ["wheel_RRR2","wheelhub_RRR"], [], {"pos":{"x":-0.497, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.95, "y":1.44, "z":1.44,}}],
+        ["hubcap_10b", ["wheel_RRL2","wheelhub_RRL"], [], {"pos":{"x": 0.497, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.95, "y":1.44, "z":1.44,}}],
+    ],
+},
+"hubcap_09c_RR_6x6_altf": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"DutyPro-L Black Center Caps",
+        "value":50,
+    },
+    "slotType" : "hubcap_RR_6x6_17",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["hubcap_09b", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.15, "z":1.15}}],
+        ["hubcap_09b", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.15, "z":1.15}}],
+    ],
+},
+"hubcap_10c_RR_6x6_altf": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"DutyPro-S Black Center Caps",
+        "value":30,
+    },
+    "slotType" : "hubcap_RR_6x6_17",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["hubcap_10b", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.15, "z":1.15}}],
+        ["hubcap_10b", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.15, "z":1.15}}],
+    ],
+},
+"hubcap_09c_RR_6x6_altg": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"DutyPro-L Chrome Center Caps",
+        "value":70,
+    },
+    "slotType" : "hubcap_RR_6x6_17",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //hubcaps
+         ["hubcap_09a", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.15, "z":1.15}}],
+         ["hubcap_09a", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.15, "z":1.15}}],
+    ],
+},
+ "hubcap_10c_RR_6x6_altg": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"DutyPro-S Chrome Center Caps",
+        "value":50,
+    },
+    "slotType" : "hubcap_RR_6x6_17",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["hubcap_10a", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.15, "z":1.15}}],
+        ["hubcap_10a", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.15, "z":1.15}}],
+    ],
+},
+}

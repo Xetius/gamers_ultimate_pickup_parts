@@ -1,0 +1,16 @@
+{
+  "Config Type":"Factory",
+  "Configuration":"Trailer D45 Heavy Duty Flatbed",
+  "Description":"A heavy duty Flatbed trailer with a pintle hitch, with a more european approach",
+  "Population":4000,
+  "Value":46400,
+  "Weight":1604,
+  "Years":{
+    "max":2003,
+    "min":1986
+  },
+  "defaultPaintName1":"Chestnut",
+  "defaultPaintName2":"Chestnut",
+  "defaultPaintName3":"Chestnut",
+  "vehicleSelectorSubGroup":"Trailers"
+}

@@ -1,0 +1,1322 @@
+{
+"G_pickup_bedcover_black": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Bed Cover (Black)",
+        "value":450,
+    },
+    "slotType" : "pickup_bedextra",
+    "slots": [
+        ["type", "default", "description"],
+        ["pickup_spoiler","","Spoiler"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_bedcover_black", ["pickup_bedcover"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"bedCoverCoupler"}],
+    ]
+    "bedCoverCoupler":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["t1",      "bc1",       20000,                     0.015,                  0.005,                      0.2,                 0.1,                   "bedCoverLatch_break", {"forceCid1":"bd10", "forceCid2":"bc1"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["bc1"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 20,
+        "openForceDuration": 0.2,
+        "closeForceMagnitude": 10,
+        "closeForceDuration": 1.0
+    }
+    "triggers2":[
+        ["id", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["bedCover", "bc1","bc1r","bc2", "box", {"x":0.15, "y":0.05, "z":0.05}, {"x":0, "y":0, "z":0}, {"x":-5, "y":2.5, "z":2}, {"x":0, "y":0, "z":0}, {"x":-0.075, "y":0.0, "z":0}, {"deformGroup":"pickup_tailgate_R"}],
+    ],
+    "actionsEnabled": [
+        ["id"],
+        ["tailgate_upper"],
+    ],
+    "triggerEventLinks2":[
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["bedCover", "action0", "tailgate_upper"],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"nodeWeight":0.47},
+         {"frictionCoef":0.5},
+         {"group":"pickup_bedcover"},
+         {"selfCollision":true},
+         ["bc1r",-0.90, 2.49, 1.236],
+         ["bc1", 0.00, 2.53, 1.21,{"selfCollision":false}],
+         ["bc1l", 0.90, 2.49, 1.236],
+
+         ["bc2r",-0.90, 1.49, 1.236],
+         ["bc2", 0.0, 1.49, 1.236],
+         ["bc2l", 0.90, 1.49, 1.236],
+
+         ["bc3r",-0.90, 0.46, 1.236],
+         ["bc3", 0.0, 0.46, 1.236],
+         ["bc3l", 0.90, 0.46, 1.236],
+
+         //rigidifier
+         {"collision":false},
+         {"selfCollision":false},
+         {"group":""},
+         ["bc4", 0.0, 1.49, 0.89],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--bedcover--
+          {"beamSpring":376940,"beamDamp":37.6},
+          {"beamDeform":14000,"beamStrength":28000},
+          {"deformLimitExpansion":1.2},
+          ["bc1r","bc1"],
+          ["bc1l","bc1"],
+          ["bc2r","bc2"],
+          ["bc2l","bc2"],
+          ["bc3r","bc3"],
+          ["bc3l","bc3"],
+
+          ["bc1r","bc2r"],
+          ["bc1","bc2"],
+          ["bc1l","bc2l"],
+
+          ["bc2r","bc3r"],
+          ["bc2","bc3"],
+          ["bc2l","bc3l"],
+
+          //cross
+          {"deformLimitExpansion":""},
+          ["bc1r","bc2"],
+          ["bc1l","bc2"],
+          ["bc2r","bc1"],
+          ["bc2l","bc1"],
+          ["bc2r","bc3"],
+          ["bc2l","bc3"],
+          ["bc3r","bc2"],
+          ["bc3l","bc2"],
+
+          {"beamDeform":3500,"beamStrength":28000},
+          //rigid
+          {"disableMeshBreaking":true},
+          ["bc1r","bc1l"],
+          ["bc2r","bc2l"],
+          ["bc3r","bc3l"],
+
+          ["bc1r","bc3r"],
+          ["bc1","bc3"],
+          ["bc1l","bc3l"],
+
+
+          {"beamDeform":2100,"beamStrength":28000},
+          //rigidifier
+          ["bc1r","bc4"],
+          ["bc1","bc4"],
+          ["bc1l","bc4"],
+          ["bc2r","bc4"],
+          ["bc2","bc4"],
+          ["bc2l","bc4"],
+          ["bc3r","bc4"],
+          ["bc3","bc4"],
+          ["bc3l","bc4"],
+          {"disableMeshBreaking":false},
+
+          //attach
+          {"beamDeform":4100,"beamStrength":6500},
+          {"breakGroup":"bedcover_RR"},
+         // ["bc1r","bd5rr"],
+         // ["bc1","bd5rr"],
+         // ["bc2r","bd5rr"],
+         // ["bc1r","bd4rr"],
+         // ["bc2r","bd4rr"],
+         //
+         // ["bc1r","bd10rr"],
+         // {"breakGroup":"bedcover_RL"},
+         // ["bc1l","bd5ll"],
+         // ["bc1","bd5ll"],
+         // ["bc2l","bd5ll"],
+         // ["bc1l","bd4ll"],
+         // ["bc2l","bd4ll"],
+
+         // ["bc1l","bd10ll"],
+          //hinges
+          {"breakGroup":"bedcover_FR"},
+          ["bc3r","bd1rr"],
+          ["bc3","bd1rr"],
+          ["bc3r","bd2rr"],
+
+          ["bc3r","bd6rr"],
+
+          {"breakGroup":"bedcover_FL"},
+          ["bc3l","bd1ll"],
+          ["bc3","bd1ll"],
+          ["bc3l","bd2ll"],
+          ["bc3l","bd6ll"],
+          {"breakGroup":""},
+          {"beamSpring":1880,"beamDamp":100},
+          {"beamDeform":4000,"beamStrength":10000},
+          {"beamPrecompression":1.2},
+          ["bc2l", "bd2ll", {"breakGroup":"bedcover_FR"}],
+          ["bc2r", "bd2rr", {"breakGroup":"bedcover_FL"}],
+          {"beamPrecompression":1},
+
+          //--SUPPORT BEAMS--
+          {"beamType":"|SUPPORT","beamLongBound":24},
+          {"beamSpring":376940,"beamDamp":37.6},
+          {"beamDeform":2835,"beamStrength":57400},
+          ["bc3r","bd1rr"],
+          ["bc3l","bd1ll"],
+          ["bc3r","bdc1rr"],
+          ["bc3l","bdc1ll"],
+
+          ["bc2r","bd3rr"],
+          ["bc2l","bd3ll"],
+          ["bc2r","bdc2rr"],
+          ["bc2l","bdc2ll"],
+          ["bc2r","bdc3rr"],
+          ["bc2l","bdc3ll"],
+          //
+          ["bc1r","bd5rr"],
+          ["bc1l","bd5ll"],
+          ["bc1r","ibd5rr"],
+          ["bc1l","ibd5ll"],
+          ["bc1r","bdc4rr"],
+          ["bc1l","bdc4ll"],
+
+          {"optional":true},
+          ["bc1r","t1"],
+          ["bc1l","t1"],
+          ["bc1","t2"],
+          {"optional":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.2},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"group":"pickup_bedcover"},
+            {"groundModel":"plastic"},
+            {"dragCoef":12},
+            ["bc3l","bc2l","bc2"],
+            ["bc3l","bc2","bc3"],
+            ["bc2r","bc3r","bc2"],
+            ["bc3r","bc3","bc2"],
+            ["bc2l","bc1l","bc1"],
+            ["bc2l","bc1","bc2"],
+            ["bc1r","bc2r","bc1"],
+            ["bc2r","bc2","bc1"],
+            {"dragCoef":0},
+    ],
+},
+"G_pickup_bedcover_longbed_black": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Bed Cover (Black)",
+        "value":560,
+    },
+    "slotType" : "pickup_bedextra_long",
+    "slots": [
+        ["type", "default", "description"],
+        ["pickup_spoiler","","Spoiler", {"nodeMove":{"x":0.0,"y":0.47,"z":0}}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_bedcover_long_black", ["pickup_bedcover"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"bedCoverCoupler"}],
+    ]
+    "bedCoverCoupler":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["t1",      "bc1",       20000,                     0.015,                  0.005,                      0.2,                 0.1,                   "bedCoverLatch_break", {"forceCid1":"bd10", "forceCid2":"bc1"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["bc1"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 20,
+        "openForceDuration": 0.2,
+        "closeForceMagnitude": 35,
+        "closeForceDuration": 1.0
+    }
+    "triggers2":[
+        ["id", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["bedCover", "bc1","bc1r","bc2", "box", {"x":0.15, "y":0.05, "z":0.05}, {"x":0, "y":0, "z":0}, {"x":-5, "y":2.5, "z":2}, {"x":0, "y":0, "z":0}, {"x":-0.075, "y":0.0, "z":0}, {"deformGroup":"pickup_tailgate_R"}],
+    ],
+    "actionsEnabled": [
+        ["id"],
+        ["tailgate_upper"],
+    ],
+    "triggerEventLinks2":[
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["bedCover", "action0", "tailgate_upper"],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"nodeWeight":0.47},
+         {"frictionCoef":0.5},
+         {"group":"pickup_bedcover"},
+         {"selfCollision":true},
+         ["bc1r",-0.90, 2.96, 1.236],
+         ["bc1", 0.00, 3.00, 1.21,{"selfCollision":false}],
+         ["bc1l", 0.90, 2.96, 1.236],
+
+         ["bc2r",-0.90, 1.73, 1.236],
+         ["bc2", 0.0, 1.73, 1.236],
+         ["bc2l", 0.90, 1.73, 1.236],
+
+         ["bc3r",-0.90, 0.46, 1.236],
+         ["bc3", 0.0, 0.46, 1.236],
+         ["bc3l", 0.90, 0.46, 1.236],
+
+         //rigidifier
+         {"collision":false},
+         {"selfCollision":false},
+         {"group":""},
+         ["bc4", 0.0, 1.73, 0.89],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--bedcover--
+          {"beamSpring":376940,"beamDamp":37.6},
+          {"beamDeform":14000,"beamStrength":28000},
+          {"deformLimitExpansion":1.2},
+          ["bc1r","bc1"],
+          ["bc1l","bc1"],
+          ["bc2r","bc2"],
+          ["bc2l","bc2"],
+          ["bc3r","bc3"],
+          ["bc3l","bc3"],
+
+          ["bc1r","bc2r"],
+          ["bc1","bc2"],
+          ["bc1l","bc2l"],
+
+          ["bc2r","bc3r"],
+          ["bc2","bc3"],
+          ["bc2l","bc3l"],
+
+          //cross
+          {"deformLimitExpansion":""},
+          ["bc1r","bc2"],
+          ["bc1l","bc2"],
+          ["bc2r","bc1"],
+          ["bc2l","bc1"],
+          ["bc2r","bc3"],
+          ["bc2l","bc3"],
+          ["bc3r","bc2"],
+          ["bc3l","bc2"],
+
+          {"beamDeform":3500,"beamStrength":28000},
+          //rigid
+          {"disableMeshBreaking":true},
+          ["bc1r","bc1l"],
+          ["bc2r","bc2l"],
+          ["bc3r","bc3l"],
+
+          ["bc1r","bc3r"],
+          ["bc1","bc3"],
+          ["bc1l","bc3l"],
+
+
+          {"beamDeform":2100,"beamStrength":28000},
+          //rigidifier
+          ["bc1r","bc4"],
+          ["bc1","bc4"],
+          ["bc1l","bc4"],
+          ["bc2r","bc4"],
+          ["bc2","bc4"],
+          ["bc2l","bc4"],
+          ["bc3r","bc4"],
+          ["bc3","bc4"],
+          ["bc3l","bc4"],
+          {"disableMeshBreaking":false},
+
+          //attach
+          {"beamDeform":4100,"beamStrength":6500},
+          {"breakGroup":"bedcover_RR"},
+         // ["bc1r","bd5rr"],
+         // ["bc1","bd5rr"],
+         // ["bc2r","bd5rr"],
+         // ["bc1r","bd4rr"],
+         // ["bc2r","bd4rr"],
+         //
+         // ["bc1r","bd10rr"],
+         // {"breakGroup":"bedcover_RL"},
+         // ["bc1l","bd5ll"],
+         // ["bc1","bd5ll"],
+         // ["bc2l","bd5ll"],
+         // ["bc1l","bd4ll"],
+         // ["bc2l","bd4ll"],
+
+         // ["bc1l","bd10ll"],
+          //hinges
+          {"breakGroup":"bedcover_FR"},
+          ["bc3r","bd1rr"],
+          ["bc3","bd1rr"],
+          ["bc3r","bd2rr"],
+
+          ["bc3r","bd6rr"],
+
+          {"breakGroup":"bedcover_FL"},
+          ["bc3l","bd1ll"],
+          ["bc3","bd1ll"],
+          ["bc3l","bd2ll"],
+          ["bc3l","bd6ll"],
+          {"breakGroup":""},
+          {"beamSpring":580,"beamDamp":100},
+          {"beamDeform":4000,"beamStrength":10000},
+          {"beamPrecompression":1.5},
+          ["bc2l", "bdc3ll", {"breakGroup":"hoodhinge_R"}],
+          ["bc2r", "bdc3rr", {"breakGroup":"hoodhinge_L"}],
+          {"beamPrecompression":1},
+
+          //--SUPPORT BEAMS--
+          {"beamType":"|SUPPORT","beamLongBound":24},
+          {"beamSpring":376940,"beamDamp":37.6},
+          {"beamDeform":2835,"beamStrength":57400},
+          ["bc3r","bd1rr"],
+          ["bc3l","bd1ll"],
+          ["bc3r","bdc1rr"],
+          ["bc3l","bdc1ll"],
+
+          ["bc2r","bd3rr"],
+          ["bc2l","bd3ll"],
+          ["bc2r","bdc2rr"],
+          ["bc2l","bdc2ll"],
+          ["bc2r","bdc3rr"],
+          ["bc2l","bdc3ll"],
+          //
+          ["bc1r","bd5rr"],
+          ["bc1l","bd5ll"],
+          ["bc1r","ibd5rr"],
+          ["bc1l","ibd5ll"],
+          ["bc1r","bdc4rr"],
+          ["bc1l","bdc4ll"],
+
+          {"optional":true},
+          ["bc1r","t1"],
+          ["bc1l","t1"],
+          ["bc1","t2"],
+          {"optional":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.2},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"group":"pickup_bedcover"},
+            {"groundModel":"plastic"},
+            {"dragCoef":12},
+            ["bc3l","bc2l","bc2"],
+            ["bc3l","bc2","bc3"],
+            ["bc2r","bc3r","bc2"],
+            ["bc3r","bc3","bc2"],
+            ["bc2l","bc1l","bc1"],
+            ["bc2l","bc1","bc2"],
+            ["bc1r","bc2r","bc1"],
+            ["bc2r","bc2","bc1"],
+            {"dragCoef":0},
+    ],
+},
+"G_pickup_bedcover_stepside_black": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Bed Cover (Black)",
+        "value":400,
+    },
+    "slotType" : "pickup_bedextra_stepside",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_bedcover_stepside_black", ["pickup_bedcover"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+     "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"bedCoverCoupler"}],
+    ]
+    "bedCoverCoupler":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["t1",      "bc1",       20000,                     0.015,                  0.005,                      0.2,                 0.1,                   "bedCoverLatch_break", {"forceCid1":"bd10", "forceCid2":"bc1"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["bc1"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 20,
+        "openForceDuration": 0.3,
+        "closeForceMagnitude": 10,
+        "closeForceDuration": 1.0
+    }
+    "triggers2":[
+        ["id", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["bedCover", "bc1","bc1r","bc2", "box", {"x":0.15, "y":0.05, "z":0.05}, {"x":0, "y":0, "z":0}, {"x":-5, "y":2.5, "z":2}, {"x":0, "y":0, "z":0}, {"x":-0.075, "y":0.0, "z":0}, {"deformGroup":"pickup_tailgate_R"}],
+    ],
+    "actionsEnabled": [
+        ["id"],
+        ["tailgate_upper"],
+    ],
+    "triggerEventLinks2":[
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["bedCover", "action0", "tailgate_upper"],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"nodeWeight":0.47},
+         {"frictionCoef":0.5},
+         {"group":"pickup_bedcover"},
+         {"selfCollision":true},
+         ["bc1r",-0.72, 2.49, 1.236],
+         ["bc1", 0.0, 2.53, 1.21,{"selfCollision":false}],
+         ["bc1l", 0.72, 2.49, 1.236],
+
+         ["bc2r",-0.72, 1.49, 1.236],
+         ["bc2", 0.0, 1.49, 1.236],
+         ["bc2l", 0.72, 1.49, 1.236],
+
+         ["bc3r",-0.72, 0.46, 1.236],
+         ["bc3", 0.0, 0.46, 1.236],
+         ["bc3l", 0.72, 0.46, 1.236],
+
+         //rigidifier
+         {"collision":false},
+         {"selfCollision":false},
+         {"group":""},
+         ["bc4", 0.0, 1.49, 0.99],
+    ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--bedcover--
+          {"beamSpring":376940,"beamDamp":37.6},
+          {"beamDeform":14000,"beamStrength":28000},
+          {"deformLimitExpansion":1.2},
+          ["bc1r","bc1"],
+          ["bc1l","bc1"],
+          ["bc2r","bc2"],
+          ["bc2l","bc2"],
+          ["bc3r","bc3"],
+          ["bc3l","bc3"],
+
+          ["bc1r","bc2r"],
+          ["bc1","bc2"],
+          ["bc1l","bc2l"],
+
+          ["bc2r","bc3r"],
+          ["bc2","bc3"],
+          ["bc2l","bc3l"],
+
+          //cross
+          {"deformLimitExpansion":""},
+          ["bc1r","bc2"],
+          ["bc1l","bc2"],
+          ["bc2r","bc1"],
+          ["bc2l","bc1"],
+          ["bc2r","bc3"],
+          ["bc2l","bc3"],
+          ["bc3r","bc2"],
+          ["bc3l","bc2"],
+
+          {"beamDeform":3500,"beamStrength":28000},
+          //rigid
+          {"disableMeshBreaking":true},
+          ["bc1r","bc1l"],
+          ["bc2r","bc2l"],
+          ["bc3r","bc3l"],
+
+          ["bc1r","bc3r"],
+          ["bc1","bc3"],
+          ["bc1l","bc3l"],
+
+
+          {"beamDeform":2100,"beamStrength":28000},
+          //rigidifier
+          ["bc1r","bc4"],
+          ["bc1","bc4"],
+          ["bc1l","bc4"],
+          ["bc2r","bc4"],
+          ["bc2","bc4"],
+          ["bc2l","bc4"],
+          ["bc3r","bc4"],
+          ["bc3","bc4"],
+          ["bc3l","bc4"],
+          {"disableMeshBreaking":false},
+
+          //attach
+          {"beamDeform":4100,"beamStrength":6500},
+          {"breakGroup":"bedcover_RR"},
+         // ["bc1r","bd5rr"],
+         // ["bc1","bd5rr"],
+         // ["bc2r","bd5rr"],
+         // ["bc1r","bd4rr"],
+         // ["bc2r","bd4rr"],
+         //
+         // ["bc1r","bd10rr"],
+         // {"breakGroup":"bedcover_RL"},
+         // ["bc1l","bd5ll"],
+         // ["bc1","bd5ll"],
+         // ["bc2l","bd5ll"],
+         // ["bc1l","bd4ll"],
+         // ["bc2l","bd4ll"],
+
+         // ["bc1l","bd10ll"],
+          //hinges
+          {"breakGroup":"bedcover_FR"},
+          ["bc3r","bd1rr"],
+          ["bc3","bd1rr"],
+          ["bc3r","bd2rr"],
+
+          ["bc3r","bd6rr"],
+
+          {"breakGroup":"bedcover_FL"},
+          ["bc3l","bd1ll"],
+          ["bc3","bd1ll"],
+          ["bc3l","bd2ll"],
+          ["bc3l","bd6ll"],
+
+          {"breakGroup":"bedcover_M"},
+          ["bc3","bd1r"],
+          ["bc3","bd6r"],
+          ["bc3","bd1l"],
+          ["bc3","bd6l"],
+
+          {"breakGroup":"bedcover_tailgate"},
+          {"breakGroup":""},
+          {"beamSpring":1580,"beamDamp":100},
+          {"beamDeform":4000,"beamStrength":10000},
+          {"beamPrecompression":1.2},
+          ["bc2l", "bd2ll", {"breakGroup":"hoodhinge_R"}],
+          ["bc2r", "bd2rr", {"breakGroup":"hoodhinge_L"}],
+          {"beamPrecompression":1},
+
+          //--SUPPORT BEAMS--
+          {"beamType":"|SUPPORT","beamLongBound":24},
+          {"beamSpring":376940,"beamDamp":37.6},
+          {"beamDeform":2835,"beamStrength":57400},
+          ["bc3r","bd1rr"],
+          ["bc3l","bd1ll"],
+          ["bc2r","bd3rr"],
+          ["bc2l","bd3ll"],
+          //
+          ["bc1r","bd5rr"],
+          ["bc1l","bd5ll"],
+
+          {"optional":true},
+          ["bc1r","t1"],
+          ["bc1l","t1"],
+          ["bc1","t2"],
+          {"optional":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.2},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"group":"pickup_bedcover"},
+            {"groundModel":"plastic"},
+            {"dragCoef":10},
+            ["bc3l","bc2l","bc2"],
+            ["bc3l","bc2","bc3"],
+            ["bc2r","bc3r","bc2"],
+            ["bc3r","bc3","bc2"],
+            ["bc2l","bc1l","bc1"],
+            ["bc2l","bc1","bc2"],
+            ["bc1r","bc2r","bc1"],
+            ["bc2r","bc2","bc1"],
+            {"dragCoef":0},
+    ],
+},
+"G_pickup_bedcover_tiny_black": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Bed Cover (Black)",
+        "value":300,
+    },
+    "slotType" : "G_pickup_bedextra_tiny",
+    "slots": [
+        ["type", "default", "description"],
+        ["pickup_spoiler","","Spoiler"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_bedcover_tiny_black", ["pickup_bedcover"], [],{"pos":{"x":0,"y":1.1,"z":0}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"bedCoverCoupler"}],
+    ]
+    "bedCoverCoupler":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["t1",      "bc1",       20000,                     0.015,                  0.005,                      0.2,                 0.1,                   "bedCoverLatch_break", {"forceCid1":"bd10", "forceCid2":"bc1"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["bc1"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 20,
+        "openForceDuration": 0.2,
+        "closeForceMagnitude": 10,
+        "closeForceDuration": 1.0
+    }
+    "triggers2":[
+        ["id", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["bedCover", "bc1","bc1r","bc2", "box", {"x":0.15, "y":0.05, "z":0.05}, {"x":0, "y":0, "z":0}, {"x":-5, "y":2.5, "z":2}, {"x":0, "y":0, "z":0}, {"x":-0.075, "y":0.0, "z":0}, {"deformGroup":"pickup_tailgate_R"}],
+    ],
+    "actionsEnabled": [
+        ["id"],
+        ["tailgate_upper"],
+    ],
+    "triggerEventLinks2":[
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["bedCover", "action0", "tailgate_upper"],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"nodeWeight":0.47},
+         {"frictionCoef":0.5},
+         {"group":"pickup_bedcover"},
+         {"selfCollision":true},
+         ["bc1r",-0.90, 2.49, 1.236],
+         ["bc1", 0.00, 2.53, 1.21,{"selfCollision":false}],
+         ["bc1l", 0.90, 2.49, 1.236],
+
+         ["bc2r",-0.90, 1.765, 1.236],
+         ["bc2", 0.0, 1.765, 1.236],
+         ["bc2l", 0.90, 1.765, 1.236],
+
+         ["bc3r",-0.90, 1.01, 1.236],
+         ["bc3", 0.0, 1.01, 1.236],
+         ["bc3l", 0.90, 1.01, 1.236],
+
+         //rigidifier
+         {"collision":false},
+         {"selfCollision":false},
+         {"group":""},
+         ["bc4", 0.0, 1.49, 0.89],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--bedcover--
+          {"beamSpring":376940,"beamDamp":37.6},
+          {"beamDeform":14000,"beamStrength":28000},
+          {"deformLimitExpansion":1.2},
+          ["bc1r","bc1"],
+          ["bc1l","bc1"],
+          ["bc2r","bc2"],
+          ["bc2l","bc2"],
+          ["bc3r","bc3"],
+          ["bc3l","bc3"],
+
+          ["bc1r","bc2r"],
+          ["bc1","bc2"],
+          ["bc1l","bc2l"],
+
+          ["bc2r","bc3r"],
+          ["bc2","bc3"],
+          ["bc2l","bc3l"],
+
+          //cross
+          {"deformLimitExpansion":""},
+          ["bc1r","bc2"],
+          ["bc1l","bc2"],
+          ["bc2r","bc1"],
+          ["bc2l","bc1"],
+          ["bc2r","bc3"],
+          ["bc2l","bc3"],
+          ["bc3r","bc2"],
+          ["bc3l","bc2"],
+
+          {"beamDeform":3500,"beamStrength":28000},
+          //rigid
+          {"disableMeshBreaking":true},
+          ["bc1r","bc1l"],
+          ["bc2r","bc2l"],
+          ["bc3r","bc3l"],
+
+          ["bc1r","bc3r"],
+          ["bc1","bc3"],
+          ["bc1l","bc3l"],
+
+
+          {"beamDeform":2100,"beamStrength":28000},
+          //rigidifier
+          ["bc1r","bc4"],
+          ["bc1","bc4"],
+          ["bc1l","bc4"],
+          ["bc2r","bc4"],
+          ["bc2","bc4"],
+          ["bc2l","bc4"],
+          ["bc3r","bc4"],
+          ["bc3","bc4"],
+          ["bc3l","bc4"],
+          {"disableMeshBreaking":false},
+
+          //attach
+          {"beamDeform":4100,"beamStrength":6500},
+          {"breakGroup":"bedcover_RR"},
+         // ["bc1r","bd5rr"],
+         // ["bc1","bd5rr"],
+         // ["bc2r","bd5rr"],
+         // ["bc1r","bd4rr"],
+         // ["bc2r","bd4rr"],
+         //
+         // ["bc1r","bd10rr"],
+         // {"breakGroup":"bedcover_RL"},
+         // ["bc1l","bd5ll"],
+         // ["bc1","bd5ll"],
+         // ["bc2l","bd5ll"],
+         // ["bc1l","bd4ll"],
+         // ["bc2l","bd4ll"],
+
+         // ["bc1l","bd10ll"],
+          //hinges
+          {"breakGroup":"bedcover_FR"},
+          ["bc3r","bd1rr"],
+          ["bc3","bd1rr"],
+          ["bc3r","bd3rr"],
+
+          ["bc3r","bd6rr"],
+
+          {"breakGroup":"bedcover_FL"},
+          ["bc3l","bd1ll"],
+          ["bc3","bd1ll"],
+          ["bc3l","bd3ll"],
+          ["bc3l","bd6ll"],
+          {"breakGroup":""},
+          {"beamSpring":1880,"beamDamp":100},
+          {"beamDeform":4000,"beamStrength":10000},
+          {"beamPrecompression":1.25},
+          ["bc2l", "bd3ll", {"breakGroup":"bedcover_FR"}],
+          ["bc2r", "bd3rr", {"breakGroup":"bedcover_FL"}],
+          {"beamPrecompression":1},
+
+          //--SUPPORT BEAMS--
+          {"beamType":"|SUPPORT","beamLongBound":24},
+          {"beamSpring":376940,"beamDamp":37.6},
+          {"beamDeform":2835,"beamStrength":57400},
+          ["bc3r","bd1rr"],
+          ["bc3l","bd1ll"],
+          ["bc3r","bdc1rr"],
+          ["bc3l","bdc1ll"],
+
+          ["bc2r","bd3rr"],
+          ["bc2l","bd3ll"],
+          ["bc2r","bdc2rr"],
+          ["bc2l","bdc2ll"],
+          ["bc2r","bdc3rr"],
+          ["bc2l","bdc3ll"],
+	  //custom
+          ["bc2r","bd4rr"],
+          ["bc2l","bd4ll"],
+          ["bc2r","bdw2rr"],
+          ["bc2l","bdw2ll"],
+          ["bc2r","bd9rr"],
+          ["bc2l","bd9ll"],
+          ["bc2r","bd8rr"],
+          ["bc2l","bd8ll"],
+          //
+          ["bc1r","bd5rr"],
+          ["bc1l","bd5ll"],
+          ["bc1r","ibd5rr"],
+          ["bc1l","ibd5ll"],
+          ["bc1r","bdc4rr"],
+          ["bc1l","bdc4ll"],
+
+          {"optional":true},
+          ["bc1r","t1"],
+          ["bc1l","t1"],
+          ["bc1","t2"],
+          {"optional":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.2},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"group":"pickup_bedcover"},
+            {"groundModel":"plastic"},
+            {"dragCoef":12},
+            ["bc3l","bc2l","bc2"],
+            ["bc3l","bc2","bc3"],
+            ["bc2r","bc3r","bc2"],
+            ["bc3r","bc3","bc2"],
+            ["bc2l","bc1l","bc1"],
+            ["bc2l","bc1","bc2"],
+            ["bc1r","bc2r","bc1"],
+            ["bc2r","bc2","bc1"],
+            {"dragCoef":0},
+    ],
+},
+"G_pickup_bedcover_6x6_black": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Bed Cover (Black)",
+        "value":560,
+    },
+    "slotType" : "G_pickup_bedextra_6x6",
+    "slots": [
+        ["type", "default", "description"],
+        ["pickup_spoiler","","Spoiler", {"nodeMove":{"x":0.0,"y":0.9,"z":0}}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_bedcover_6x6_black", ["pickup_bedcover"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"bedCoverCoupler"}],
+    ]
+    "bedCoverCoupler":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["t1",      "bc1",       20000,                     0.015,                  0.005,                      0.2,                 0.1,                   "bedCoverLatch_break", {"forceCid1":"bd10", "forceCid2":"bc1"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["bc1"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 20,
+        "openForceDuration": 0.2,
+        "closeForceMagnitude": 45,
+        "closeForceDuration": 1.0
+    }
+    "triggers2":[
+        ["id", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["bedCover", "bc1","bc1r","bc2", "box", {"x":0.15, "y":0.05, "z":0.05}, {"x":0, "y":0, "z":0}, {"x":-5, "y":2.5, "z":2}, {"x":0, "y":0, "z":0}, {"x":-0.075, "y":0.0, "z":0}, {"deformGroup":"pickup_tailgate_R"}],
+    ],
+    "actionsEnabled": [
+        ["id"],
+        ["tailgate_upper"],
+    ],
+    "triggerEventLinks2":[
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["bedCover", "action0", "tailgate_upper"],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"nodeWeight":0.47},
+         {"frictionCoef":0.5},
+         {"group":"pickup_bedcover"},
+         {"selfCollision":true},
+         ["bc1r",-0.90, 3.39, 1.236],
+         ["bc1", 0.00, 3.43, 1.21,{"selfCollision":false}],
+         ["bc1l", 0.90, 3.39, 1.236],
+
+         ["bc2r",-0.90, 1.945, 1.236],
+         ["bc2", 0.0, 1.945, 1.236],
+         ["bc2l", 0.90, 1.945, 1.236],
+
+         ["bc3r",-0.90, 0.46, 1.236],
+         ["bc3", 0.0, 0.46, 1.236],
+         ["bc3l", 0.90, 0.46, 1.236],
+
+         //rigidifier
+         {"collision":false},
+         {"selfCollision":false},
+         {"group":""},
+         ["bc4", 0.0, 1.945, 0.89],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--bedcover--
+          {"beamSpring":376940,"beamDamp":37.6},
+          {"beamDeform":14000,"beamStrength":28000},
+          {"deformLimitExpansion":1.2},
+          ["bc1r","bc1"],
+          ["bc1l","bc1"],
+          ["bc2r","bc2"],
+          ["bc2l","bc2"],
+          ["bc3r","bc3"],
+          ["bc3l","bc3"],
+
+          ["bc1r","bc2r"],
+          ["bc1","bc2"],
+          ["bc1l","bc2l"],
+
+          ["bc2r","bc3r"],
+          ["bc2","bc3"],
+          ["bc2l","bc3l"],
+
+          //cross
+          {"deformLimitExpansion":""},
+          ["bc1r","bc2"],
+          ["bc1l","bc2"],
+          ["bc2r","bc1"],
+          ["bc2l","bc1"],
+          ["bc2r","bc3"],
+          ["bc2l","bc3"],
+          ["bc3r","bc2"],
+          ["bc3l","bc2"],
+
+          {"beamDeform":3500,"beamStrength":28000},
+          //rigid
+          {"disableMeshBreaking":true},
+          ["bc1r","bc1l"],
+          ["bc2r","bc2l"],
+          ["bc3r","bc3l"],
+
+          ["bc1r","bc3r"],
+          ["bc1","bc3"],
+          ["bc1l","bc3l"],
+
+
+          {"beamDeform":2100,"beamStrength":28000},
+          //rigidifier
+          ["bc1r","bc4"],
+          ["bc1","bc4"],
+          ["bc1l","bc4"],
+          ["bc2r","bc4"],
+          ["bc2","bc4"],
+          ["bc2l","bc4"],
+          ["bc3r","bc4"],
+          ["bc3","bc4"],
+          ["bc3l","bc4"],
+          {"disableMeshBreaking":false},
+
+          //attach
+          {"beamDeform":4100,"beamStrength":6500},
+          {"breakGroup":"bedcover_RR"},
+         // ["bc1r","bd5rr"],
+         // ["bc1","bd5rr"],
+         // ["bc2r","bd5rr"],
+         // ["bc1r","bd4rr"],
+         // ["bc2r","bd4rr"],
+         //
+         // ["bc1r","bd10rr"],
+         // {"breakGroup":"bedcover_RL"},
+         // ["bc1l","bd5ll"],
+         // ["bc1","bd5ll"],
+         // ["bc2l","bd5ll"],
+         // ["bc1l","bd4ll"],
+         // ["bc2l","bd4ll"],
+
+         // ["bc1l","bd10ll"],
+          //hinges
+          {"breakGroup":"bedcover_FR"},
+          ["bc3r","bd1rr"],
+          ["bc3","bd1rr"],
+          ["bc3r","bd2rr"],
+
+          ["bc3r","bd6rr"],
+
+          {"breakGroup":"bedcover_FL"},
+          ["bc3l","bd1ll"],
+          ["bc3","bd1ll"],
+          ["bc3l","bd2ll"],
+          ["bc3l","bd6ll"],
+          {"breakGroup":""},
+          {"beamSpring":580,"beamDamp":100},
+          {"beamDeform":4000,"beamStrength":10000},
+          {"beamPrecompression":1.5},
+          ["bc2l", "bdc3ll", {"breakGroup":"hoodhinge_R"}],
+          ["bc2r", "bdc3rr", {"breakGroup":"hoodhinge_L"}],
+          {"beamPrecompression":1},
+
+          //--SUPPORT BEAMS--
+          {"beamType":"|SUPPORT","beamLongBound":24},
+          {"beamSpring":376940,"beamDamp":37.6},
+          {"beamDeform":2835,"beamStrength":57400},
+          ["bc3r","bd1rr"],
+          ["bc3l","bd1ll"],
+          ["bc3r","bdc1rr"],
+          ["bc3l","bdc1ll"],
+
+          ["bc2r","bd3rr"],
+          ["bc2l","bd3ll"],
+          ["bc2r","bdc2rr"],
+          ["bc2l","bdc2ll"],
+          //["bc2r","bdc3rr"],
+          //["bc2l","bdc3ll"],
+          //
+          ["bc1r","bd5rr"],
+          ["bc1l","bd5ll"],
+          ["bc1r","ibd5rr"],
+          ["bc1l","ibd5ll"],
+          ["bc1r","bdc4rr"],
+          ["bc1l","bdc4ll"],
+
+          {"optional":true},
+          ["bc1r","t1"],
+          ["bc1l","t1"],
+          ["bc1","t2"],
+          {"optional":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.2},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"group":"pickup_bedcover"},
+            {"groundModel":"plastic"},
+            {"dragCoef":12},
+            ["bc3l","bc2l","bc2"],
+            ["bc3l","bc2","bc3"],
+            ["bc2r","bc3r","bc2"],
+            ["bc3r","bc3","bc2"],
+            ["bc2l","bc1l","bc1"],
+            ["bc2l","bc1","bc2"],
+            ["bc1r","bc2r","bc1"],
+            ["bc2r","bc2","bc1"],
+            {"dragCoef":0},
+    ],
+},
+"G_pickup_bedcover_6x6_tiny_black": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Bed Cover (Black)",
+        "value":410,
+    },
+    "slotType" : "G_pickup_bedextra_6x6_tiny",
+    "slots": [
+        ["type", "default", "description"],
+        ["pickup_spoiler","","Spoiler"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_bedcover_6x6_tiny_black", ["pickup_bedcover"], [],{"pos":{"x":0,"y":1.1,"z":0}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"bedCoverCoupler"}],
+    ]
+    "bedCoverCoupler":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["t1",      "bc1",       20000,                     0.015,                  0.005,                      0.2,                 0.1,                   "bedCoverLatch_break", {"forceCid1":"bd10", "forceCid2":"bc1"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["bc1"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 20,
+        "openForceDuration": 0.2,
+        "closeForceMagnitude": 10,
+        "closeForceDuration": 1.0
+    }
+    "triggers2":[
+        ["id", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["bedCover", "bc1","bc1r","bc2", "box", {"x":0.15, "y":0.05, "z":0.05}, {"x":0, "y":0, "z":0}, {"x":-5, "y":2.5, "z":2}, {"x":0, "y":0, "z":0}, {"x":-0.075, "y":0.0, "z":0}, {"deformGroup":"pickup_tailgate_R"}],
+    ],
+    "actionsEnabled": [
+        ["id"],
+        ["tailgate_upper"],
+    ],
+    "triggerEventLinks2":[
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["bedCover", "action0", "tailgate_upper"],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"nodeWeight":0.47},
+         {"frictionCoef":0.5},
+         {"group":"pickup_bedcover"},
+         {"selfCollision":true},
+         ["bc1r",-0.90, 3.39, 1.236],
+         ["bc1", 0.00, 3.43, 1.21,{"selfCollision":false}],
+         ["bc1l", 0.90, 3.39, 1.236],
+
+         ["bc2r",-0.90, 2.215, 1.236],
+         ["bc2", 0.0, 2.215, 1.236],
+         ["bc2l", 0.90, 2.215, 1.236],
+
+         ["bc3r",-0.90, 1.01, 1.236],
+         ["bc3", 0.0, 1.01, 1.236],
+         ["bc3l", 0.90, 1.01, 1.236],
+
+         //rigidifier
+         {"collision":false},
+         {"selfCollision":false},
+         {"group":""},
+         ["bc4", 0.0, 1.49, 0.89],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--bedcover--
+          {"beamSpring":376940,"beamDamp":37.6},
+          {"beamDeform":14000,"beamStrength":28000},
+          {"deformLimitExpansion":1.2},
+          ["bc1r","bc1"],
+          ["bc1l","bc1"],
+          ["bc2r","bc2"],
+          ["bc2l","bc2"],
+          ["bc3r","bc3"],
+          ["bc3l","bc3"],
+
+          ["bc1r","bc2r"],
+          ["bc1","bc2"],
+          ["bc1l","bc2l"],
+
+          ["bc2r","bc3r"],
+          ["bc2","bc3"],
+          ["bc2l","bc3l"],
+
+          //cross
+          {"deformLimitExpansion":""},
+          ["bc1r","bc2"],
+          ["bc1l","bc2"],
+          ["bc2r","bc1"],
+          ["bc2l","bc1"],
+          ["bc2r","bc3"],
+          ["bc2l","bc3"],
+          ["bc3r","bc2"],
+          ["bc3l","bc2"],
+
+          {"beamDeform":3500,"beamStrength":28000},
+          //rigid
+          {"disableMeshBreaking":true},
+          ["bc1r","bc1l"],
+          ["bc2r","bc2l"],
+          ["bc3r","bc3l"],
+
+          ["bc1r","bc3r"],
+          ["bc1","bc3"],
+          ["bc1l","bc3l"],
+
+
+          {"beamDeform":2100,"beamStrength":28000},
+          //rigidifier
+          ["bc1r","bc4"],
+          ["bc1","bc4"],
+          ["bc1l","bc4"],
+          ["bc2r","bc4"],
+          ["bc2","bc4"],
+          ["bc2l","bc4"],
+          ["bc3r","bc4"],
+          ["bc3","bc4"],
+          ["bc3l","bc4"],
+          {"disableMeshBreaking":false},
+
+          //attach
+          {"beamDeform":4100,"beamStrength":6500},
+          {"breakGroup":"bedcover_RR"},
+         // ["bc1r","bd5rr"],
+         // ["bc1","bd5rr"],
+         // ["bc2r","bd5rr"],
+         // ["bc1r","bd4rr"],
+         // ["bc2r","bd4rr"],
+         //
+         // ["bc1r","bd10rr"],
+         // {"breakGroup":"bedcover_RL"},
+         // ["bc1l","bd5ll"],
+         // ["bc1","bd5ll"],
+         // ["bc2l","bd5ll"],
+         // ["bc1l","bd4ll"],
+         // ["bc2l","bd4ll"],
+
+         // ["bc1l","bd10ll"],
+          //hinges
+          {"breakGroup":"bedcover_FR"},
+          ["bc3r","bd1rr"],
+          ["bc3","bd1rr"],
+          ["bc3r","bd3rr"],
+
+          ["bc3r","bd6rr"],
+
+          {"breakGroup":"bedcover_FL"},
+          ["bc3l","bd1ll"],
+          ["bc3","bd1ll"],
+          ["bc3l","bd3ll"],
+          ["bc3l","bd6ll"],
+          {"breakGroup":""},
+          {"beamSpring":1880,"beamDamp":100},
+          {"beamDeform":4000,"beamStrength":10000},
+          {"beamPrecompression":1.25},
+          ["bc2l", "bd3ll", {"breakGroup":"bedcover_FR"}],
+          ["bc2r", "bd3rr", {"breakGroup":"bedcover_FL"}],
+          {"beamPrecompression":1},
+
+          //--SUPPORT BEAMS--
+          {"beamType":"|SUPPORT","beamLongBound":24},
+          {"beamSpring":376940,"beamDamp":37.6},
+          {"beamDeform":2835,"beamStrength":57400},
+          ["bc3r","bd1rr"],
+          ["bc3l","bd1ll"],
+          ["bc3r","bdc1rr"],
+          ["bc3l","bdc1ll"],
+
+          ["bc2r","bd3rr"],
+          ["bc2l","bd3ll"],
+          ["bc2r","bdc2rr"],
+          ["bc2l","bdc2ll"],
+          ["bc2r","bdc3rr"],
+          ["bc2l","bdc3ll"],
+	  //custom
+          ["bc2r","bd4rr"],
+          ["bc2l","bd4ll"],
+          ["bc2r","bdw2rr"],
+          ["bc2l","bdw2ll"],
+          ["bc2r","bd9rr"],
+          ["bc2l","bd9ll"],
+          ["bc2r","bd8rr"],
+          ["bc2l","bd8ll"],
+          //
+          ["bc1r","bd5rr"],
+          ["bc1l","bd5ll"],
+          ["bc1r","ibd5rr"],
+          ["bc1l","ibd5ll"],
+          ["bc1r","bdc4rr"],
+          ["bc1l","bdc4ll"],
+
+          {"optional":true},
+          ["bc1r","t1"],
+          ["bc1l","t1"],
+          ["bc1","t2"],
+          {"optional":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.2},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"group":"pickup_bedcover"},
+            {"groundModel":"plastic"},
+            {"dragCoef":12},
+            ["bc3l","bc2l","bc2"],
+            ["bc3l","bc2","bc3"],
+            ["bc2r","bc3r","bc2"],
+            ["bc3r","bc3","bc2"],
+            ["bc2l","bc1l","bc1"],
+            ["bc2l","bc1","bc2"],
+            ["bc1r","bc2r","bc1"],
+            ["bc2r","bc2","bc1"],
+            {"dragCoef":0},
+    ],
+},
+}

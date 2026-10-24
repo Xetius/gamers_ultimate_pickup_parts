@@ -1,0 +1,757 @@
+{
+"G_wheel_36a_16x8_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"16x8 Soliad Tornado Rear Rear Wheels (Silver)",
+        "value":300,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_16x8_altb","tire_RR_6x6_235_55_16_altb_standard", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["wheel_36a_16x8", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["wheel_36a_16x8", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheels
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":5.0},
+        {"group":"wheelhub_RRR"},
+        {"chemEnergy":200,"burnRate":0.12,"flashPoint":200},
+        ["rwg1r", -0.33, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0.0, 0.0, {"staticCollision":false}],
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //rear wheels
+        {"breakGroupType":0},
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":78500,"beamStrength":434000},
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"breakGroup":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.215},
+        {"wheelOffset":-0.055},
+        {"hubWidth":0.225},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1080900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1080900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1601000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.50},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_wheel_36b_16x8_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"16x8 Soliad Tornado Rear Rear Wheels (Black)",
+        "value":300,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_16x8_altb","tire_RR_6x6_235_55_16_altb_standard", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["wheel_36b_16x8", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["wheel_36b_16x8", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheels
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":5.0},
+        {"group":"wheelhub_RRR"},
+        {"chemEnergy":200,"burnRate":0.12,"flashPoint":200},
+        ["rwg1r", -0.33, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0.0, 0.0, {"staticCollision":false}],
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //rear wheels
+        {"breakGroupType":0},
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":78500,"beamStrength":434000},
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"breakGroup":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.215},
+        {"wheelOffset":-0.055},
+        {"hubWidth":0.225},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1080900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1080900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1601000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.50},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_wheel_36c_16x8_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"16x8 Soliad Tornado Rear Rear Wheels (Two-Tone)",
+        "value":350,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_16x8_altb","tire_RR_6x6_235_55_16_altb_standard", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["wheel_36c_16x8", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["wheel_36c_16x8", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheels
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":5.0},
+        {"group":"wheelhub_RRR"},
+        {"chemEnergy":200,"burnRate":0.12,"flashPoint":200},
+        ["rwg1r", -0.33, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0.0, 0.0, {"staticCollision":false}],
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //rear wheels
+        {"breakGroupType":0},
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":78500,"beamStrength":434000},
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"breakGroup":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.215},
+        {"wheelOffset":-0.055},
+        {"hubWidth":0.225},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1080900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1080900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1601000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.50},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_wheel_37a_15x7_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x7 Soliad Vertigo Rear Rear Wheels (Silver)",
+        "value":200,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x7_alt","tire_RR_6x6_205_75_15_alt_standard", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["wheel_37a_15x7", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.52, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["wheel_37a_15x7", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.52, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1rr", -0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1ll", 0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.055},
+        {"hubWidth":0.2},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":990900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":990900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.44},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_wheel_37b_15x7_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x7 Soliad Vertigo Rear Rear Wheels (Chrome)",
+        "value":250,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x7_alt","tire_RR_6x6_205_75_15_alt_standard", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["wheel_37b_15x7", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.52, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["wheel_37b_15x7", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.52, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1rr", -0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1ll", 0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.055},
+        {"hubWidth":0.2},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":990900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":990900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.44},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_wheel_38a_15x7_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x7 Soliad Bragenham Rear Rear Wheels (Two-Tone)",
+        "value":300,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x7_alt","tire_RR_6x6_205_75_15_alt_standard", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["wheel_38a_15x7", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.52, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["wheel_38a_15x7", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.52, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1rr", -0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1ll", 0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.055},
+        {"hubWidth":0.2},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":990900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":990900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.44},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_wheel_38b_15x7_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x7 Soliad Bragenham Rear Rear Wheels (Silver)",
+        "value":250,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x7_alt","tire_RR_6x6_205_75_15_alt_standard", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["wheel_38b_15x7", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.52, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["wheel_38b_15x7", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.52, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1rr", -0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1ll", 0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.055},
+        {"hubWidth":0.2},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":990900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":990900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.44},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_lansdale_wheel_alloy_A_17x7_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"17x7 Soliad Platinum Rear Rear Wheels (Silver)",
+        "value":850,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_17x8","tire_RR_6x6_235_60_17_standard", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["lansdale_wheel_alloy_A_17x7", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.445, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["lansdale_wheel_alloy_A_17x7", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.445, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, -0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, -0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, -0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, -0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.235},
+        {"wheelOffset":-0.035},
+        {"hubWidth":0.2},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.45},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_lansdale_wheel_alloy_B_17x7_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"17x7 Soliad Requiem Rear Rear Wheels (Gray)",
+        "value":850,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_17x8","tire_RR_6x6_235_60_17_standard", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["lansdale_wheel_alloy_B_17x7", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.445, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.01, "y":1, "z":1}}],
+        ["lansdale_wheel_alloy_B_17x7", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.445, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.01, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, -0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, -0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, -0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, -0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.235},
+        {"wheelOffset":-0.035},
+        {"hubWidth":0.2},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.45},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_lansdale_wheel_alloy_C_15x7_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x7 Soliad Emerald Rear Rear Wheels (Two-Tone)",
+        "value":480,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x7","tire_RR_6x6_195_60_15_standard", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["lansdale_wheel_alloy_C_15x7", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.4825, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.08, "y":0.98, "z":0.98}}],
+        ["lansdale_wheel_alloy_C_15x7", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.4825, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.08, "y":0.98, "z":0.98}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, -0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, -0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, -0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, -0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.015},
+        {"hubWidth":0.2},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":901000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":901000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1451000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.44},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":36500, "hubBeamStrength":67000},
+    ],
+},
+"G_lansdale_wheel_alloy_D_16x7_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"16x7 Soliad Chariot Rear Rear Wheels (Silver)",
+        "value":650,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_16x7","tire_RR_6x6_205_55_16_standard", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["lansdale_wheel_alloy_D_16x7", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.47, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.1, "y":1, "z":1}}],
+        ["lansdale_wheel_alloy_D_16x7", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.47, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, -0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, -0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, -0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, -0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.22},
+        {"wheelOffset":-0.015},
+        {"hubWidth":0.205},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":901000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":901000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1451000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.44},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":36500, "hubBeamStrength":67000},
+    ],
+},
+}

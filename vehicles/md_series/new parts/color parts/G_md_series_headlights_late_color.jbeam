@@ -1,0 +1,26 @@
+{
+"G_md_series_headlight_R_late_color_black": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Black Bezel",
+        "value":0,
+    },
+    "slotType" : "md_series_headlight_R_late_color",
+    "flexbodies": [
+       ["mesh", "[group]:", "nonFlexMaterials"],
+       ["md_series_headlight_bezel_late_R", ["md_series_headlight_R"], [],{"materialOverride":[["md_series_main","md_series_main_black"]]}],
+    ],
+},
+"G_md_series_headlight_L_late_color_black": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Black Bezel",
+        "value":0,
+    },
+    "slotType" : "md_series_headlight_L_late_color",
+    "flexbodies": [
+       ["mesh", "[group]:", "nonFlexMaterials"],
+       ["md_series_headlight_bezel_late_L", ["md_series_headlight_L"], [],{"materialOverride":[["md_series_main","md_series_main_black"]]}],
+    ],
+},
+}

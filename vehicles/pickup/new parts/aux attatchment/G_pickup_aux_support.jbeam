@@ -1,0 +1,242 @@
+    {
+"G_pickup_aux_support": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Multipurpose Auxiliary Support",
+        "value":1750,
+    },
+    "slotType" : "G_pickup_aux",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_pickup_aux_L","G_pickup_aux_toolbox_L_FH_panel","Left Auxiliary Addon"],
+        ["G_pickup_aux_trim","","Auxiliary Panel Trim"],
+        ["G_pickup_aux_R","G_pickup_aux_toolbox_R_FH_panel","Right Auxiliary Addon"],
+        ["G_pickup_aux_top","","Top Auxiliary Addon"],
+        ["G_pickup_aux_F","G_pickup_aux_toolbox_F_small","Front Auxiliary Addon"],
+        ["G_pickup_aux_spare_mount","G_pickup_aux_spare_mount","Rear Auxiliary Addon"],
+        ["G_pickup_aux_roof","","Top Cover"],
+        ["G_pickup_aux_runningboard","","Running Boards"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_aux_support_L", ["G_pickup_aux_support"],[],{"pos":{"x":0.0, "y":0.0, "z":0.0}}],
+         ["G_pickup_aux_support_R", ["G_pickup_aux_support"],[],{"pos":{"x":0.0, "y":0.0, "z":0.0}}],
+         ["G_pickup_aux_support_strut", ["G_pickup_aux_support"],[],{"pos":{"x":0.0, "y":0.0, "z":0.0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"collision":true},
+         {"selfCollision":false},
+
+         //left support
+         {"group":["G_pickup_aux_support","G_pickup_aux_support_regular"]},
+         {"nodeWeight":8.5},
+         ["aus1r" ,-0.38, 0.72, 0.41],
+         ["aus2r" ,-0.38, 0.87, 0.41],
+         ["aus3r" ,-0.38, 0.72, 1.20],
+         ["aus4r" ,-0.38, 0.87, 1.20],
+	 //right support
+         ["aus1l" ,0.38, 0.72, 0.41],
+         ["aus2l" ,0.38, 0.87, 0.41],
+         ["aus3l" ,0.38, 0.72, 1.20],
+         ["aus4l" ,0.38, 0.87, 1.20],
+         ["aus5" ,0.0, 0.795, 1.05],
+         {"collision":true},
+         {"selfCollision":true},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          //--EXPANSION DEFORM LIMIT DEFAULT--
+          {"deformLimitExpansion":1.2},
+
+	  //left support
+          {"beamSpring":752940,"beamDamp":188},
+          {"beamDeform":14000,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":1.2},
+          ["aus1l","aus2l"],
+          ["aus3l","aus4l"],
+          ["aus1l","aus3l"],
+          ["aus2l","aus4l"],
+          ["aus1l","aus4l"],
+          ["aus2l","aus3l"],
+
+	  ["aus5","aus1l"]
+	  ["aus5","aus2l"]
+	  ["aus5","aus3l"]
+	  ["aus5","aus4l"]
+
+	  //attatch
+          {"optional":true},
+          ["aus1l","f6l"],
+          ["aus1l","f6r"],
+          ["aus1l","f16l"],
+          ["aus1l","f16r"],
+          ["aus1l","f7l"],
+          ["aus1l","f7r"],
+          ["aus1l","f17l"],
+          ["aus1l","f17r"],
+          ["aus1l","f5l"],
+          ["aus1l","f15l"],
+
+          ["aus2l","f6l"],
+          ["aus2l","f6r"],
+          ["aus2l","f16l"],
+          ["aus2l","f16r"],
+          ["aus2l","f7l"],
+          ["aus2l","f7r"],
+          ["aus2l","f17l"],
+          ["aus2l","f17r"],
+          ["aus2l","f5l"],
+          ["aus2l","f15l"],
+
+          ["aus3l","f16l"],
+          ["aus3l","f16r"],
+          ["aus3l","f17l"],
+          ["aus3l","f17r"],
+
+          ["aus4l","f16l"],
+          ["aus4l","f16r"],
+          ["aus4l","f17l"],
+          ["aus4l","f17r"],
+
+          ["aus5","f16l"],
+          ["aus5","f16r"],
+          ["aus5","f17l"],
+          ["aus5","f17r"],
+          ["aus5","f6"],
+          ["aus5","f7"],
+          ["aus5","f15l"],
+          ["aus5","f5l"],
+          ["aus5","f15r"],
+          ["aus5","f5r"],
+
+
+          ["aus1l","gt25l"],
+          ["aus2l","gt25l"],
+          ["aus3l","gt25l"],
+          ["aus4l","gt25l"],
+          ["aus1l","gt25r"],
+          ["aus2l","gt25r"],
+
+          ["aus1l","gtt2l"],
+          ["aus2l","gtt2l"],
+          ["aus3l","gtt2l"],
+          ["aus4l","gtt2l"],
+          ["aus3l","gtt2r"],
+          ["aus4l","gtt2r"],
+
+          ["aus1l","gt13l"],
+          ["aus2l","gt13l"],
+          ["aus3l","gt13l"],
+          ["aus4l","gt13l"],
+          ["aus1l","gt13r"],
+          ["aus2l","gt13r"],
+          ["aus3l","gt13r"],
+          ["aus4l","gt13r"],
+          {"optional":false},
+
+
+	  //right support
+          ["aus1r","aus2r"],
+          ["aus3r","aus4r"],
+          ["aus1r","aus3r"],
+          ["aus2r","aus4r"],
+          ["aus1r","aus4r"],
+          ["aus2r","aus3r"],
+
+	  ["aus5","aus1r"]
+	  ["aus5","aus2r"]
+	  ["aus5","aus3r"]
+	  ["aus5","aus4r"]
+
+	  //attatch
+          {"optional":true},
+          ["aus1r","f6l"],
+          ["aus1r","f6r"],
+          ["aus1r","f16l"],
+          ["aus1r","f16r"],
+          ["aus1r","f7l"],
+          ["aus1r","f7r"],
+          ["aus1r","f17l"],
+          ["aus1r","f17r"],
+          ["aus1r","f5r"],
+          ["aus1r","f15r"],
+
+          ["aus2r","f6l"],
+          ["aus2r","f6r"],
+          ["aus2r","f16l"],
+          ["aus2r","f16r"],
+          ["aus2r","f7l"],
+          ["aus2r","f7r"],
+          ["aus2r","f17l"],
+          ["aus2r","f17r"],
+          ["aus2r","f5r"],
+          ["aus2r","f15r"],
+
+          ["aus3r","f16l"],
+          ["aus3r","f16r"],
+          ["aus3r","f17l"],
+          ["aus3r","f17r"],
+
+          ["aus4r","f16l"],
+          ["aus4r","f16r"],
+          ["aus4r","f17l"],
+          ["aus4r","f17r"],
+
+
+          ["aus1r","gt25r"],
+          ["aus2r","gt25r"],
+          ["aus3r","gt25r"],
+          ["aus4r","gt25r"],
+          ["aus1r","gt25l"],
+          ["aus2r","gt25l"],
+
+          ["aus1r","gtt2r"],
+          ["aus2r","gtt2r"],
+          ["aus3r","gtt2r"],
+          ["aus4r","gtt2r"],
+          ["aus3r","gtt2l"],
+          ["aus4r","gtt2l"],
+
+          ["aus1r","gt13r"],
+          ["aus2r","gt13r"],
+          ["aus3r","gt13r"],
+          ["aus4r","gt13r"],
+          ["aus1r","gt13l"],
+          ["aus2r","gt13l"],
+          ["aus3r","gt13l"],
+          ["aus4r","gt13l"],
+          {"optional":false},
+
+          {"deformLimitExpansion":1.2},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"dragCoef":18},
+            {"group":"G_pickup_aux_support"},
+            ["aus1l", "aus2l", "aus3l"],
+            ["aus2l", "aus4l", "aus3l"],
+            ["aus1r", "aus3r", "aus2r"],
+            ["aus2r", "aus3r", "aus4r"],
+            {"breakGroup":""},
+    ],
+},
+"G_pickup_aux_trim": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Auxiliary Panel Trim",
+        "value":75,
+    },
+    "slotType" : "G_pickup_aux_trim",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_aux_trim_L", ["G_pickup_aux_panel_L"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_pickup_aux_trim_R", ["G_pickup_aux_panel_R"],[]{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+},
+}

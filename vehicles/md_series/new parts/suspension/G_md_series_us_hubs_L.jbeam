@@ -1,0 +1,247 @@
+{
+"G_md_series_us_hubs_R_liftaxle": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"10-Lug Lift Axle Hubs",
+        "value":100,
+    },
+    "slotType" : "G_md_series_us_hubs_R_liftaxle",
+    "slots2": [
+        ["name",                                "allowTypes",                            "denyTypes", "default",                             "description"],
+        ["G_md_series_us_brake_R_liftaxle",     ["G_md_series_us_brake_R_liftaxle"],     [],          "G_md_series_us_brake_R_liftaxle",     "Lift Axle Brakes",   {"nodeOffset2":{"x":0.0, "y":0.0, "z":0.0}}],
+        //The case() is for backwards compatibility for old configs that use "trackwidth_R" variable.
+        //To change the base track width, edit the trackoffset_R offset in the expression.
+        ["G_md_series_wheel_La_10",             ["G_md_series_wheel_La_10"],             [],          "G_steelwheel_12a_22x10_La",           "Lift Axle Wheels",   {"nodeOffset2":{"x":-0.035, "y":2.054, "z":0.462}}],
+        ["G_md_series_us_wheeldata_R_liftaxle", ["G_md_series_us_wheeldata_R_liftaxle"], [],          "G_md_series_us_wheeldata_R_liftaxle", "Lift Axle Spindles", {"coreSlot":true}]
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["md_series_hub_FR", ["wheel_LaR","wheelhub_LaR"], [], {"pos":{"x":-0.013, "y":3.80876, "z":-0.113}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+         ["md_series_hub_FL", ["wheel_LaL","wheelhub_LaL"], [], {"pos":{"x": 0.013, "y":3.80876, "z":-0.113}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+         ["md_series_hub_bolts_FR", ["wheel_LaR","wheelhub_LaR"], [], {"pos":{"x":-0.013, "y":3.80876, "z":-0.113}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+         ["md_series_hub_bolts_FL", ["wheel_LaL","wheelhub_LaL"], [], {"pos":{"x": 0.013, "y":3.80876, "z":-0.113}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeWeight":10},
+         {"group":"wheelhub_LaR"},
+         //law1 as in steer wheel 1
+         ["Law1r", -0.85, 2.003, 0.45],
+         ["Law1rr",-1.22, 2.003, 0.45],
+         {"group":"wheelhub_LaL"},
+         ["Law1l",  0.85, 2.003, 0.45],
+         ["Law1ll", 1.22, 2.003, 0.45],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"deformLimitExpansion":""},
+
+          //wheel to axle
+          {"deformLimitExpansion":1.2},
+          {"optional":true},
+          {"beamSpring":25001000,"beamDamp":250},
+          {"beamDeform":175000,"beamStrength":1250000},
+          //Lift Axle hub
+          {"breakGroup":"wheel_LaR"},
+          //["Law1r","Lah2r"],
+          //["Law1rr","Lah2r"],
+          ["Law1r","La6r"],
+          ["Law1rr","La6r"],
+          ["Law1r","La4r", {"name":"axle_LaR"}],
+          ["Law1rr","La4r"],
+          ["Law1r","La5r"],
+          ["Law1rr","La5r"],
+          ["Law1r","Lah3r"],
+          ["Law1rr","Lah3r"],
+          ["Law1r","Lah4r"],
+          ["Law1rr","Lah4r"],
+          {"breakGroup":"wheel_LaL"},
+          //["Law1l","Lah2l"],
+          //["Law1ll","Lah2l"],
+          ["Law1l","La6l"],
+          ["Law1ll","La6l"],
+          ["Law1l","La4l", {"name":"axle_LaL"}],
+          ["Law1ll","La4l"],
+          ["Law1l","La5l"],
+          ["Law1ll","La5l"],
+          ["Law1l","Lah3l"],
+          ["Law1ll","Lah3l"],
+          ["Law1l","Lah4l"],
+          ["Law1ll","Lah4l"],
+          {"breakGroup":""},
+          {"optional":false},
+          {"breakGroup":""},
+
+          {"deformLimitExpansion":1.2},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+        //hub
+        //general settings
+        {"hubRadius":0.22},
+        {"hubWidth":0.18},
+        {"numRays":10},
+        {"brakeSpring":25},//define lower value for stability with no wheels
+
+
+        //hub options
+        {"hubTreadBeamSpring":2500000, "hubTreadBeamDamp":3},
+        {"hubPeripheryBeamSpring":2500000, "hubPeripheryBeamDamp":3},
+        {"hubSideBeamSpring":2500000, "hubSideBeamDamp":3},
+        {"hubNodeWeight":1.5},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.2},
+        {"hubBeamDeform":75000, "hubBeamStrength":185000},
+    ],
+},
+"G_md_series_us_hubs_R_liftaxle_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"8-Lug Lift Axle Hubs",
+        "value":100,
+    },
+    "slotType" : "G_md_series_us_hubs_R_liftaxle",
+    "slots2": [
+        ["name",                                "allowTypes",                            "denyTypes", "default",                             "description"],
+        ["G_md_series_us_brake_R_liftaxle",     ["G_md_series_us_brake_R_liftaxle"],     [],          "G_md_series_us_brake_R_liftaxle",     "Lift Axle Brakes",   {"nodeOffset2":{"x":0.0, "y":0.0, "z":0.0}}],
+        //The case() is for backwards compatibility for old configs that use "trackwidth_R" variable.
+        //To change the base track width, edit the trackoffset_R offset in the expression.
+        ["G_md_series_wheel_La_8_alt",          ["G_md_series_wheel_La_8_alt"],          [],          "G_steelwheel_12a_19_5x6_75_La",       "Lift Axle Wheels",   {"nodeOffset2":{"x":-0.035, "y":2.054, "z":0.462}}],
+        ["G_md_series_us_wheeldata_R_liftaxle", ["G_md_series_us_wheeldata_R_liftaxle"], [],          "G_md_series_us_wheeldata_R_liftaxle", "Lift Axle Spindles", {"coreSlot":true}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["md_series_hub_FR", ["wheel_LaR","wheelhub_LaR"], [], {"pos":{"x": 0.02, "y":3.80876, "z":-0.113}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+         ["md_series_hub_FL", ["wheel_LaL","wheelhub_LaL"], [], {"pos":{"x":-0.02, "y":3.80876, "z":-0.113}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+         ["md_series_hub_bolts_8_FR", ["wheel_LaR","wheelhub_LaR"], [], {"pos":{"x": 0.02, "y":3.80876, "z":-0.113}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+         ["md_series_hub_bolts_8_FL", ["wheel_LaL","wheelhub_LaL"], [], {"pos":{"x":-0.02, "y":3.80876, "z":-0.113}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeWeight":10},
+         {"group":"wheelhub_LaR"},
+         //law1 as in steer wheel 1
+         ["Law1r", -0.85, 2.003, 0.45],
+         ["Law1rr",-1.22, 2.003, 0.45],
+         {"group":"wheelhub_LaL"},
+         ["Law1l",  0.85, 2.003, 0.45],
+         ["Law1ll", 1.22, 2.003, 0.45],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"deformLimitExpansion":""},
+
+          //wheel to axle
+          {"deformLimitExpansion":1.2},
+          {"optional":true},
+          {"beamSpring":25001000,"beamDamp":250},
+          {"beamDeform":175000,"beamStrength":1250000},
+          //Lift Axle hub
+          {"breakGroup":"wheel_LaR"},
+          //["Law1r","Lah2r"],
+          //["Law1rr","Lah2r"],
+          ["Law1r","La6r"],
+          ["Law1rr","La6r"],
+          ["Law1r","La4r", {"name":"axle_LaR"}],
+          ["Law1rr","La4r"],
+          ["Law1r","La5r"],
+          ["Law1rr","La5r"],
+          ["Law1r","Lah3r"],
+          ["Law1rr","Lah3r"],
+          ["Law1r","Lah4r"],
+          ["Law1rr","Lah4r"],
+          {"breakGroup":"wheel_LaL"},
+          //["Law1l","Lah2l"],
+          //["Law1ll","Lah2l"],
+          ["Law1l","La6l"],
+          ["Law1ll","La6l"],
+          ["Law1l","La4l", {"name":"axle_LaL"}],
+          ["Law1ll","La4l"],
+          ["Law1l","La5l"],
+          ["Law1ll","La5l"],
+          ["Law1l","Lah3l"],
+          ["Law1ll","Lah3l"],
+          ["Law1l","Lah4l"],
+          ["Law1ll","Lah4l"],
+          {"breakGroup":""},
+          {"optional":false},
+          {"breakGroup":""},
+
+          {"deformLimitExpansion":1.2},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+        //hub
+        //general settings
+        {"hubRadius":0.22},
+        {"hubWidth":0.18},
+        {"numRays":10},
+        {"brakeSpring":25},//define lower value for stability with no wheels
+
+
+        //hub options
+        {"hubTreadBeamSpring":2500000, "hubTreadBeamDamp":3},
+        {"hubPeripheryBeamSpring":2500000, "hubPeripheryBeamDamp":3},
+        {"hubSideBeamSpring":2500000, "hubSideBeamDamp":3},
+        {"hubNodeWeight":1.5},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.2},
+        {"hubBeamDeform":75000, "hubBeamStrength":185000},
+    ],
+},
+"G_md_series_us_wheeldata_R_liftaxle": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Lift Axle Spindles",
+        "value":0,
+    },
+    "slotType" : "G_md_series_us_wheeldata_R_liftaxle",
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //rear
+        {"selfCollision":true},
+        {"collision":true},
+        {"axleBeams":["axle_LaR"]},
+        ["LaR", "wheel_LaR", "tire_LaR", "Law1rr", "Law1r", 9999, "La4r", 1, {"torqueCoupling:":"Lah3r", "torqueArm:":"Lah4r", "steerAxisUp:":"La5r","steerAxisDown:":"La4r","speedo":false}],
+        {"axleBeams":["axle_LaL"]},
+        ["LaL", "wheel_LaL", "tire_LaL", "Law1ll", "Law1l", 9999, "La4l", -1, {"torqueCoupling:":"Lah3l", "torqueArm:":"Lah4l", "steerAxisUp:":"La5l","steerAxisDown:":"La4l","speedo":false}],
+        {"brakeTorque":0},
+        {"parkingTorque":0},
+        {"triangleCollision":true},
+        {"selfCollision":true},
+        {"axleBeams":[]},{"disableMeshBreaking":false,"disableTriangleBreaking":false},
+        {"enableHubcaps":false},
+        {"enableTireLbeams":false},
+        {"enableTreadReinfBeams":false},
+        {"enableTireReinfBeams":false},
+        {"enableTreadReinfBeams":false},
+        {"enableTirePeripheryReinfBeams":false},
+        {"loadSensitivitySlope":""},
+        {"noLoadCoef":""},
+        {"fullLoadCoef":""},
+        {"frictionCoef":""},
+        {"slidingFrictionCoef":""},
+        {"softnessCoef":0.5},
+        {"treadCoef":1.0},
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["shaft", "wheelaxleLaL", "differential_La", 1, {"connectedWheel":"LaL", "breakTriggerBeam":"axle_LaL", "uiName":"Lift Axle Left Axle", "friction":25.6, "dynamicFriction": 0.014}],
+        ["shaft", "wheelaxleLaR", "differential_La", 2, {"connectedWheel":"LaR", "breakTriggerBeam":"axle_LaR", "uiName":"Lift Axle Right Axle", "friction":25.6, "dynamicFriction": 0.014}],
+    ],
+},
+}

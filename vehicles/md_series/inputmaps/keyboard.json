@@ -1,0 +1,22 @@
+{
+  "devicetype":"keyboard",
+  "guid":"{6F1D2B61-D5A0-11CF-BFC7-444553540000}",
+  "name":"Keyboard",
+  "version":1,
+  "vidpid":"6F1D2B61",
+  "bindings":[
+    //suspension
+    {"control":"alt w", "action":"G_toggleCenterDiff"},
+    {"control":"0", "action":"G_liftAxle_toggle"},
+    {"control":"-", "action":"G_liftAxle_pressure_up"},
+    {"control":"=", "action":"G_liftAxle_pressure_down"},
+	//rollback
+    {"control":"i", "action":"G_tiltUp"},
+    {"control":"k", "action":"G_tiltDown"},
+    {"control":"shift i", "action":"G_extend"},
+    {"control":"shift k", "action":"G_retract"},
+    {"control":"alt i", "action":"G_extendFeet"},
+    {"control":"alt k", "action":"G_retractFeet"},
+  ]
+
+}

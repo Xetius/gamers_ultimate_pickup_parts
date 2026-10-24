@@ -1,0 +1,110 @@
+{
+  "tankertrailer.skin_md_series_tanker.spearleaf": {
+    "name": "tankertrailer.skin_md_series_tanker.spearleaf",
+    "mapTo": "tankertrailer.skin_md_series_tanker.spearleaf",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/tanker/tankertrailer_ao.data.png",
+        "baseColorMap": "/vehicles/tanker/tankertrailer_b.color.png",
+        "clearCoatFactor": 0.588,
+        "clearCoatMap": "/vehicles/md_series/tanker/md_series_tanker_upfit_spearleaf_p.color.png",
+        "clearCoatMapUseUV": null,
+        "clearCoatRoughnessFactor": 0,
+        "colorPaletteMap": "/vehicles/md_series/tanker/md_series_tanker_upfit_spearleaf_p.color.png",
+        "colorPaletteMapUseUV": 1,
+        "diffuseMapUseUV": null,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/tanker/tankertrailer_m.data.png",
+        "normalMap": "vehicles/tanker/tankertrailer_n.dds",
+        "opacityMapUseUV": null,
+        "roughnessFactor": null,
+        "roughnessMap": "/vehicles/tanker/tankertrailer_r.data.png"
+      },
+      {
+        "baseColorMap": "/vehicles/md_series/tanker/md_series_tanker_upfit_spearleaf_b.color.png",
+        "clearCoatFactor": 1,
+        "clearCoatMapUseUV": 1,
+        "clearCoatRoughnessFactor": null,
+        "colorPaletteMapUseUV": null,
+        "diffuseMapUseUV": 1,
+        "metallicFactor": null,
+        "normalMap": "vehicles/tanker/tankertrailer_n.dds",
+        "opacityMap": "/vehicles/md_series/tanker/md_series_tanker_upfit_spearleaf_o.data.png",
+        "opacityMapUseUV": 1,
+        "roughnessFactor": 0
+      },
+      {
+        "clearCoatFactor": null,
+        "clearCoatMapUseUV": null,
+        "clearCoatRoughnessFactor": null,
+        "colorPaletteMapUseUV": null,
+        "diffuseMapUseUV": null,
+        "metallicFactor": null,
+        "opacityMapUseUV": null,
+        "roughnessFactor": null
+      },
+      {
+        "clearCoatFactor": null,
+        "clearCoatMapUseUV": null,
+        "clearCoatRoughnessFactor": null,
+        "colorPaletteMapUseUV": null,
+        "diffuseMapUseUV": null,
+        "metallicFactor": null,
+        "opacityMapUseUV": null,
+        "roughnessFactor": null
+      }
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "tankertrailer.skin_md_series_tanker.twotone": {
+    "name": "tankertrailer.skin_md_series_tanker.twotone",
+    "mapTo": "tankertrailer.skin_md_series_tanker.twotone",
+    "class": "material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/tanker/tankertrailer_ao.data.png",
+        "baseColorMap": "/vehicles/tanker/tankertrailer_b.color.png",
+        "clearCoatFactor": 0.633000016,
+        "clearCoatMap": "/vehicles/md_series/tanker/md_series_tanker_upfit_p.color.png",
+        "clearCoatMapUseUV": 1,
+        "clearCoatRoughnessFactor": 0,
+        "colorPaletteMap": "/vehicles/md_series/tanker/md_series_tanker_upfit_p.color.png",
+        "colorPaletteMapUseUV": 1,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/tanker/tankertrailer_m.data.png",
+        "normalMap": "vehicles/tanker/tankertrailer_n.dds",
+        "roughnessMap": "/vehicles/tanker/tankertrailer_r.data.png"
+      },
+      {
+        "clearCoatFactor": null,
+        "clearCoatMapUseUV": null,
+        "clearCoatRoughnessFactor": null,
+        "colorPaletteMapUseUV": null,
+        "metallicFactor": null
+      },
+      {
+        "clearCoatFactor": null,
+        "clearCoatMapUseUV": null,
+        "clearCoatRoughnessFactor": null,
+        "colorPaletteMapUseUV": null,
+        "metallicFactor": null
+      },
+      {
+        "clearCoatFactor": null,
+        "clearCoatMapUseUV": null,
+        "clearCoatRoughnessFactor": null,
+        "colorPaletteMapUseUV": null,
+        "metallicFactor": null
+      }
+    ],
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "pickup.skin.police_769": {
+    "name": "pickup.skin.police_769",
+    "mapTo": "pickup.skin.police_769",
+    "class": "material",
+    "persistentId": "ac5d18d7-ffd6-4bf3-9b8a-2aa94207dcbd",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/common/pickup/pickup_main_ao.data.png",
+        "baseColorMap": "/vehicles/common/pickup/pickup_main_b.color.png",
+        "clearCoatFactor": null,
+        "clearCoatRoughnessFactor": null,
+        "colorPaletteMapUseUV": null,
+        "diffuseMapUseUV": null,
+        "instanceDiffuse": null,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/common/pickup/pickup_main_m.data.png",
+        "metallicMapUseUV": null,
+        "normalMap": "vehicles/common/pickup/pickup_n.dds",
+        "roughnessMap": "/vehicles/common/pickup/pickup_main_r.data.png",
+        "roughnessMapUseUV": null
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/common/pickup/pickup_main_ao.data.png",
+        "baseColorMap": "/vehicles/pickup/new parts/skins/G_pickup_clear_d.color.png",
+        "clearCoatFactor": 1,
+        "clearCoatMap": "/vehicles/common/pickup/pickup_main_cc.data.png",
+        "clearCoatRoughnessFactor": 0.0599999987,
+        "colorPaletteMap": "/vehicles/pickup/new parts/skins/G_pickup_police_769_cp.data.png",
+        "colorPaletteMapUseUV": 1,
+        "diffuseMapUseUV": 1,
+        "instanceDiffuse": true,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/pickup/new parts/skins/G_pickup_clear_m.data.png",
+        "metallicMapUseUV": 1,
+        "normalMap": "/vehicles/common/pickup/pickup_n.dds",
+        "opacityMap": "/vehicles/pickup/pickup_skin_o.data.png",
+        "roughnessMap": "/vehicles/pickup/new parts/skins/G_pickup_clear_r.data.png",
+        "roughnessMapUseUV": 1
+      },
+      {
+        "clearCoatFactor": null,
+        "clearCoatRoughnessFactor": null,
+        "colorPaletteMapUseUV": null,
+        "diffuseMapUseUV": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null,
+        "metallicMapUseUV": null,
+        "roughnessMapUseUV": null
+      },
+      {
+        "clearCoatFactor": null,
+        "clearCoatRoughnessFactor": null,
+        "colorPaletteMapUseUV": null,
+        "diffuseMapUseUV": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null,
+        "metallicMapUseUV": null,
+        "roughnessMapUseUV": null
+      }
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  }
+}

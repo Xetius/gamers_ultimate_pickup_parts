@@ -1,0 +1,702 @@
+{
+"G_md_series_aux_toolbox_L_short": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Left Short Toolbox",
+        "value":400,
+    },
+    "slotType" : "G_md_series_aux_1L",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_aux_toolbox_L_small", ["md_series_aux_toolbox_L"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0}}],
+         ["G_md_series_aux_toolbox_L_brackets_small", ["md_series_aux_toolbox_L"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0}}],
+         ["G_md_series_aux_toolbox_L_lid_small", ["md_series_aux_toolbox_L_lid"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0}}],
+         ["G_md_series_aux_toolbox_L_handle", ["md_series_aux_toolbox_L_lid"], [],{"pos":{"x":0.0, "y":0.0, "z":0.2}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"G_auxToolboxLCoupler"}],
+    ]
+    "G_auxToolboxLCoupler":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["auxb8lll",  "auxb4lll",     40000,                     0.01,                   0.005,                      0.2,                 0.1,                   "aux_toolbox_L_latch", {"forceCid1":"auxb8lll", "forceCid2":"auxb4lll"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["auxb8lll"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Door>vintage_09_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Door>vintage_09_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 24,
+        "openForceDuration": 0.5,
+        "closeForceMagnitude": 40,
+        "closeForceDuration": 1.6
+    }
+    "triggers2":[
+        ["id",  "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["G_aux_Toolbox_L", "auxb4lll","auxb2lll","auxb3lll", "box", {"x":0.06, "y":0.03, "z":0.09}, {"x":-0, "y":0, "z":-0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":-0.395, "y":0.04, "z":0.001}],
+    ],
+    "actionsEnabled": [
+        ["id"],
+        ["G_aux_Toolbox_L"],
+    ],
+    "triggerEventLinks2":[
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["G_aux_Toolbox_L", "action0", "G_aux_Toolbox_L"],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         {"nodeWeight":1.6},
+         //toolbox
+         {"group":"md_series_aux_toolbox_L"},
+         ["auxb1l",  0.59,  0.59, 2.18],
+         ["auxb2l",  0.59,  1.26, 2.18],
+         ["auxb1ll", 1.12,  0.59, 2.18],
+         ["auxb2ll", 1.12,  1.26, 2.18],
+
+         ["auxb3l",  0.59,  0.59, 1.93],
+         ["auxb4l",  0.59,  1.26, 1.93],
+         ["auxb3ll", 1.12,  0.59, 1.93],
+         ["auxb4ll", 1.12,  1.26, 1.93],
+
+         ["auxb5l",  0.59,  0.59, 1.53],
+         ["auxb6l",  0.59,  1.26, 1.53],
+         ["auxb5ll", 1.12,  0.59, 1.53],
+         ["auxb6ll", 1.12,  1.26, 1.53],
+
+         ["auxb7l",  0.59,  0.59, 1.06],
+         ["auxb8l",  0.59,  1.26, 1.06],
+         ["auxb7ll", 1.12,  0.59, 1.06],
+         ["auxb8ll", 1.12,  1.26, 1.06],
+
+         //lid
+         {"group":"md_series_aux_toolbox_L_lid"},
+         ["auxb1lll", 1.15,  0.59, 2.18],
+         ["auxb2lll", 1.15,  1.26, 2.18],
+         ["auxb3lll", 1.15,  0.59, 1.62],
+         ["auxb4lll", 1.15,  1.26, 1.62],
+         ["auxb5lll", 1.15,  0.59, 1.06],
+         ["auxb6lll", 1.15,  1.26, 1.06],
+         //rigid
+         {"group":""},
+         ["auxb7lll", 0.90,  0.92, 1.62,{"selfCollision":false,"collision":false}],
+         //latch
+         ["auxb8lll", 1.15,  1.26, 1.62,{"selfCollision":false,"collision":false}],
+         {"group":""},
+
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          //exhaust frame
+          {"beamSpring":200100,"beamDamp":75},
+          {"beamDeform":5200,"beamStrength":"FLT_MAX"},
+
+
+          //main shape
+          ["auxb1l", "auxb1ll"],
+          ["auxb2l", "auxb2ll"],
+          ["auxb3l", "auxb3ll"],
+          ["auxb4l", "auxb4ll"],
+          ["auxb5l", "auxb5ll"],
+          ["auxb6l", "auxb6ll"],
+          ["auxb7l", "auxb7ll"],
+          ["auxb8l", "auxb8ll"],
+
+          ["auxb1l", "auxb2l"],
+          ["auxb1ll", "auxb2ll"],
+          ["auxb3l", "auxb4l"],
+          ["auxb3ll", "auxb4ll"],
+          ["auxb5l", "auxb6l"],
+          ["auxb5ll", "auxb6ll"],
+          ["auxb7l", "auxb8l"],
+          ["auxb7ll", "auxb8ll"],
+
+          ["auxb1l", "auxb3l"],
+          ["auxb1ll", "auxb3ll"],
+          ["auxb2l", "auxb4l"],
+          ["auxb2ll", "auxb4ll"],
+          ["auxb3l", "auxb5l"],
+          ["auxb3ll", "auxb5ll"],
+          ["auxb4l", "auxb6l"],
+          ["auxb4ll", "auxb6ll"],
+          ["auxb5l", "auxb7l"],
+          ["auxb5ll", "auxb7ll"],
+          ["auxb6l", "auxb8l"],
+          ["auxb6ll", "auxb8ll"],
+
+
+          //crossing
+          ["auxb1l", "auxb2ll"],
+          ["auxb1ll", "auxb2l"],
+          ["auxb3l", "auxb4ll"],
+          ["auxb3ll", "auxb4l"],
+          ["auxb5l", "auxb6ll"],
+          ["auxb5ll", "auxb6l"],
+          ["auxb7l", "auxb8ll"],
+          ["auxb7ll", "auxb8l"],
+
+          ["auxb1l", "auxb3ll"],
+          ["auxb1ll", "auxb3l"],
+          ["auxb2l", "auxb4ll"],
+          ["auxb2ll", "auxb4l"],
+          ["auxb3l", "auxb5ll"],
+          ["auxb3ll", "auxb5l"],
+          ["auxb4l", "auxb6ll"],
+          ["auxb4ll", "auxb6l"],
+          ["auxb5l", "auxb7ll"],
+          ["auxb5ll", "auxb7l"],
+          ["auxb6l", "auxb8ll"],
+          ["auxb6ll", "auxb8l"],
+
+          ["auxb1l", "auxb4l"],
+          ["auxb2l", "auxb3l"],
+          ["auxb3l", "auxb6l"],
+          ["auxb4l", "auxb5l"],
+          ["auxb5l", "auxb8l"],
+          ["auxb6l", "auxb7l"],
+
+          ["auxb1ll", "auxb4ll"],
+          ["auxb2ll", "auxb3ll"],
+          ["auxb3ll", "auxb6ll"],
+          ["auxb4ll", "auxb5ll"],
+          ["auxb5ll", "auxb8ll"],
+          ["auxb6ll", "auxb7ll"],
+          //corssing big
+          ["auxb1l", "auxb7ll"],
+          ["auxb1ll", "auxb7l"],
+          ["auxb2l", "auxb8ll"],
+          ["auxb2ll", "auxb8l"],
+
+          ["auxb1l", "auxb8l"],
+          ["auxb2l", "auxb7l"],
+          ["auxb1ll", "auxb8ll"],
+          ["auxb2ll", "auxb7ll"],
+
+          ["auxb1l", "auxb8ll"],
+          ["auxb2l", "auxb7ll"],
+          ["auxb1ll", "auxb8l"],
+          ["auxb2ll", "auxb7l"],
+
+          //latch
+          ["auxb8lll", "auxb3ll"],
+          ["auxb8lll", "auxb4ll"],
+          ["auxb8lll", "auxb5ll"],
+          ["auxb8lll", "auxb6ll"],
+          ["auxb8lll", "auxb4l"],
+          ["auxb8lll", "auxb6l"],
+
+          //main shape lid
+          ["auxb1lll", "auxb2lll"],
+          ["auxb3lll", "auxb4lll"],
+          ["auxb5lll", "auxb6lll"],
+          ["auxb1lll", "auxb3lll"],
+          ["auxb2lll", "auxb4lll"],
+          ["auxb3lll", "auxb5lll"],
+          ["auxb4lll", "auxb6lll"],
+
+          ["auxb1lll", "auxb4lll"],
+          ["auxb3lll", "auxb6lll"],
+          ["auxb2lll", "auxb3lll"],
+          ["auxb4lll", "auxb5lll"],
+
+          //lid rigifier
+          {"beamSpring":2801000,"beamDamp":200},
+          {"beamDeform":14000,"beamStrength":"FLT_MAX"},
+          ["auxb7lll", "auxb1lll"],
+          ["auxb7lll", "auxb2lll"],
+          ["auxb7lll", "auxb3lll"],
+          ["auxb7lll", "auxb4lll"],
+          ["auxb7lll", "auxb5lll"],
+          ["auxb7lll", "auxb6lll"],
+
+          //attach to frame
+          {"beamSpring":480100,"beamDamp":50},
+          {"beamDeform":4000,"beamStrength":526000},
+          {"breakGroup":"aux_toolbox_L_1"},
+          ["auxb1l", "auxf1l"],
+          ["auxb1l", "auxf2l"],
+          ["auxb1l", "auxf3l"],
+          ["auxb3l", "auxf1l"],
+          ["auxb3l", "auxf3l"],
+          ["auxb3l", "auxf4l"],
+          ["auxb3l", "auxf5l"],
+          ["auxb5l", "auxf3l"],
+          ["auxb5l", "auxf5l"],
+          ["auxb5l", "auxf6l"],
+
+          ["auxb4l", "auxf2l"],
+          ["auxb4l", "auxf3l"],
+          ["auxb4l", "auxf4l"],
+          ["auxb4l", "auxf6l"],
+          ["auxb4l", "auxf3r"],
+          ["auxb4l", "auxf4r"],
+          {"breakGroup":"aux_toolbox_L_2"},
+          ["auxb7l", "ff14l"],
+          ["auxb7l", "ff4l"],
+          ["auxb7l", "mf11l"],
+          ["auxb8l", "mf11l"],
+          ["auxb8l", "mf1l"],
+          ["auxb8l", "ff14l"],
+
+          ["auxb5l", "ff4l"],
+          ["auxb5l", "ff14l"],
+          ["auxb5l", "mf1l"],
+          ["auxb6l", "mf1l"],
+          ["auxb6l", "mf11l"],
+          ["auxb6l", "ff4l"],
+
+          {"breakGroup":"aux_toolbox_L_lid"},
+          ["auxb1lll", "auxb1l"],
+          ["auxb1lll", "auxb1ll"],
+          ["auxb1lll", "auxb2ll"],
+          ["auxb1lll", "auxb3ll"],
+          ["auxb5lll", "auxb7l"],
+          ["auxb5lll", "auxb7ll"],
+          ["auxb5lll", "auxb8ll"],
+          ["auxb5lll", "auxb5ll"],
+          {"breakGroup":""},
+
+
+        //Latch Stuff
+        //damping
+        {"beamSpring":1,"beamDamp":3},
+        {"beamDeform":15000,"beamStrength":90000},
+        ["auxb2lll", "auxb2l", {"breakGroup":"aux_toolbox_L_1", "breakGroupType":1}],
+        ["auxb6lll", "auxb8l", {"breakGroup":"aux_toolbox_L_2", "breakGroupType":1}],
+        ["auxb2lll", "auxb4l", {"breakGroup":"aux_toolbox_L_1", "breakGroupType":1}],
+        ["auxb6lll", "auxb6l", {"breakGroup":"aux_toolbox_L_2", "breakGroupType":1}],
+
+        //pop open
+        {"beamPrecompression":1.003, "beamType":"|SUPPORT", "beamLongBound":5},
+        {"beamSpring":50000,"beamDamp":500},
+        {"beamDeform":40000,"beamStrength":10000},
+        {"breakGroup":"aux_toolbox_L_1", "breakGroupType":1},
+        ["auxb4lll", "auxb6l"],
+
+        //detent
+        {"beamPrecompression":38, "beamType":"|BOUNDED", "beamLongBound":0.02, "beamShortBound":0.02},
+        {"beamSpring":500,"beamDamp":200, "beamStrength":8000},
+        {"beamLimitSpring":0, "beamLimitDamp":0},
+        ["auxb2lll", "auxb2ll", {"boundZone":0.01}],
+        ["auxb6lll", "auxb8ll", {"boundZone":0.01}],
+        {"breakGroup":"", "breakGroupType":0},
+
+        //limiter
+        {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":36.3, "beamShortBound":1},
+        {"beamSpring":0,"beamDamp":0},
+        {"beamLimitSpring":2001,"beamLimitDamp":100},
+        {"beamDeform":15000,"beamStrength":90000},
+        ["auxb2lll", "auxb2ll", {"breakGroup":"aux_toolbox_L_1", "breakGroupType":1}],
+        ["auxb6lll", "auxb8ll", {"breakGroup":"aux_toolbox_L_2", "breakGroupType":1}],
+
+        //support beams
+        {"beamType":"|SUPPORT","beamLongBound":60},
+        {"beamSpring":2001000,"beamDamp":150},
+        {"beamDeform":7000,"beamStrength":150000},
+        {"beamPrecompression":0.99},
+        {"breakGroup":"aux_toolbox_L_supportBeams"},
+        ["auxb2lll", "auxb2ll"],
+        ["auxb2lll", "auxb4ll"],
+        ["auxb4lll", "auxb4ll"],
+        ["auxb4lll", "auxb6ll"],
+        ["auxb6lll", "auxb6ll"],
+        ["auxb6lll", "auxb8ll"],
+        {"breakGroup":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+          ["id1:","id2:","id3:"],
+          {"triangleType":"NORMALTYPE"},
+          //horizontal
+          ["auxb1l", "auxb1ll", "auxb2l"],
+          ["auxb2l", "auxb1ll", "auxb2ll"],
+          ["auxb3l", "auxb3ll", "auxb4l"],
+          ["auxb4l", "auxb3ll", "auxb4ll"],
+          ["auxb5l", "auxb5ll", "auxb6l"],
+          ["auxb6l", "auxb5ll", "auxb6ll"],
+          ["auxb7l", "auxb7ll", "auxb8l"],
+          ["auxb8l", "auxb7ll", "auxb8ll"],
+          //front wall
+          ["auxb1l", "auxb3ll", "auxb1ll"],
+          ["auxb1l", "auxb3l", "auxb3ll"],
+          ["auxb3l", "auxb5ll", "auxb3ll"],
+          ["auxb3l", "auxb5l", "auxb5ll"],
+          ["auxb5l", "auxb7ll", "auxb5ll"],
+          ["auxb5l", "auxb7l", "auxb7ll"],
+          //rear wall
+          ["auxb2l", "auxb2ll", "auxb4ll"],
+          ["auxb2l", "auxb4ll", "auxb4l"],
+          ["auxb4l", "auxb4ll", "auxb6ll"],
+          ["auxb4l", "auxb6ll", "auxb6l"],
+          ["auxb6l", "auxb6ll", "auxb8ll"],
+          ["auxb6l", "auxb8ll", "auxb8l"],
+          //inner wall
+          ["auxb1l", "auxb2l", "auxb4l"],
+          ["auxb1l", "auxb4l", "auxb3l"],
+          ["auxb3l", "auxb4l", "auxb6l"],
+          ["auxb3l", "auxb6l", "auxb5l"],
+          ["auxb5l", "auxb6l", "auxb8l"],
+          ["auxb5l", "auxb8l", "auxb7l"],
+          //lid
+          ["auxb1lll", "auxb4lll", "auxb2lll"],
+          ["auxb1lll", "auxb3lll", "auxb4lll"],
+          ["auxb3lll", "auxb6lll", "auxb4lll"],
+          ["auxb3lll", "auxb5lll", "auxb6lll"],
+          ],
+},
+"G_md_series_aux_toolbox_R_short": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Right Short Toolbox",
+        "value":400,
+    },
+    "slotType" : "G_md_series_aux_1R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_aux_toolbox_R_small", ["md_series_aux_toolbox_R"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0}}],
+         ["G_md_series_aux_toolbox_R_brackets_small", ["md_series_aux_toolbox_R"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0}}],
+         ["G_md_series_aux_toolbox_R_lid_small", ["md_series_aux_toolbox_R_lid"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0}}],
+         ["G_md_series_aux_toolbox_R_handle", ["md_series_aux_toolbox_R_lid"], [],{"pos":{"x":0.0, "y":0.0, "z":0.2}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"G_auxToolboxRCoupler"}],
+    ]
+    "G_auxToolboxRCoupler":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["auxb8rrr",  "auxb4rrr",     40000,                     0.01,                   0.005,                      0.2,                 0.1,                   "aux_toolbox_R_latch", {"forceCid1":"auxb8rrr", "forceCid2":"auxb4rrr"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["auxb8rrr"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Door>vintage_09_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Door>vintage_09_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 24,
+        "openForceDuration": 0.5,
+        "closeForceMagnitude": 40,
+        "closeForceDuration": 1.6
+    }
+    "triggers2":[
+        ["id",  "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["G_aux_Toolbox_R", "auxb4rrr","auxb2rrr","auxb3rrr", "box", {"x":0.06, "y":0.03, "z":0.09}, {"x":-0, "y":0, "z":-0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":-0.395, "y":0.04, "z":-0.031}],
+    ],
+    "actionsEnabled": [
+        ["id"],
+        ["G_aux_Toolbox_R"],
+    ],
+    "triggerEventLinks2":[
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["G_aux_Toolbox_R", "action0", "G_aux_Toolbox_R"],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         {"nodeWeight":1.6},
+         //toolbox
+         {"group":"md_series_aux_toolbox_R"},
+         ["auxb1r",  -0.59,  0.59, 2.18],
+         ["auxb2r",  -0.59,  1.26, 2.18],
+         ["auxb1rr", -1.12,  0.59, 2.18],
+         ["auxb2rr", -1.12,  1.26, 2.18],
+
+         ["auxb3r",  -0.59,  0.59, 1.93],
+         ["auxb4r",  -0.59,  1.26, 1.93],
+         ["auxb3rr", -1.12,  0.59, 1.93],
+         ["auxb4rr", -1.12,  1.26, 1.93],
+
+         ["auxb5r",  -0.59,  0.59, 1.53],
+         ["auxb6r",  -0.59,  1.26, 1.53],
+         ["auxb5rr", -1.12,  0.59, 1.53],
+         ["auxb6rr", -1.12,  1.26, 1.53],
+
+         ["auxb7r",  -0.59,  0.59, 1.06],
+         ["auxb8r",  -0.59,  1.26, 1.06],
+         ["auxb7rr", -1.12,  0.59, 1.06],
+         ["auxb8rr", -1.12,  1.26, 1.06],
+
+         //lid
+         {"group":"md_series_aux_toolbox_R_lid"},
+         ["auxb1rrr", -1.15,  0.59, 2.18],
+         ["auxb2rrr", -1.15,  1.26, 2.18],
+         ["auxb3rrr", -1.15,  0.59, 1.62],
+         ["auxb4rrr", -1.15,  1.26, 1.62],
+         ["auxb5rrr", -1.15,  0.59, 1.06],
+         ["auxb6rrr", -1.15,  1.26, 1.06],
+         //rigid
+         {"group":""},
+         ["auxb7rrr", -0.90,  0.92, 1.62,{"selfCollision":false,"collision":false}],
+         //latch
+         ["auxb8rrr", -1.15,  1.26, 1.62,{"selfCollision":false,"collision":false}],
+         {"group":""},
+
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          //exhaust frame
+          {"beamSpring":200100,"beamDamp":75},
+          {"beamDeform":5200,"beamStrength":"FLT_MAX"},
+
+
+          //main shape
+          ["auxb1r", "auxb1rr"],
+          ["auxb2r", "auxb2rr"],
+          ["auxb3r", "auxb3rr"],
+          ["auxb4r", "auxb4rr"],
+          ["auxb5r", "auxb5rr"],
+          ["auxb6r", "auxb6rr"],
+          ["auxb7r", "auxb7rr"],
+          ["auxb8r", "auxb8rr"],
+
+          ["auxb1r", "auxb2r"],
+          ["auxb1rr", "auxb2rr"],
+          ["auxb3r", "auxb4r"],
+          ["auxb3rr", "auxb4rr"],
+          ["auxb5r", "auxb6r"],
+          ["auxb5rr", "auxb6rr"],
+          ["auxb7r", "auxb8r"],
+          ["auxb7rr", "auxb8rr"],
+
+          ["auxb1r", "auxb3r"],
+          ["auxb1rr", "auxb3rr"],
+          ["auxb2r", "auxb4r"],
+          ["auxb2rr", "auxb4rr"],
+          ["auxb3r", "auxb5r"],
+          ["auxb3rr", "auxb5rr"],
+          ["auxb4r", "auxb6r"],
+          ["auxb4rr", "auxb6rr"],
+          ["auxb5r", "auxb7r"],
+          ["auxb5rr", "auxb7rr"],
+          ["auxb6r", "auxb8r"],
+          ["auxb6rr", "auxb8rr"],
+
+
+          //crossing
+          ["auxb1r", "auxb2rr"],
+          ["auxb1rr", "auxb2r"],
+          ["auxb3r", "auxb4rr"],
+          ["auxb3rr", "auxb4r"],
+          ["auxb5r", "auxb6rr"],
+          ["auxb5rr", "auxb6r"],
+          ["auxb7r", "auxb8rr"],
+          ["auxb7rr", "auxb8r"],
+
+          ["auxb1r", "auxb3rr"],
+          ["auxb1rr", "auxb3r"],
+          ["auxb2r", "auxb4rr"],
+          ["auxb2rr", "auxb4r"],
+          ["auxb3r", "auxb5rr"],
+          ["auxb3rr", "auxb5r"],
+          ["auxb4r", "auxb6rr"],
+          ["auxb4rr", "auxb6r"],
+          ["auxb5r", "auxb7rr"],
+          ["auxb5rr", "auxb7r"],
+          ["auxb6r", "auxb8rr"],
+          ["auxb6rr", "auxb8r"],
+
+          ["auxb1r", "auxb4r"],
+          ["auxb2r", "auxb3r"],
+          ["auxb3r", "auxb6r"],
+          ["auxb4r", "auxb5r"],
+          ["auxb5r", "auxb8r"],
+          ["auxb6r", "auxb7r"],
+
+          ["auxb1rr", "auxb4rr"],
+          ["auxb2rr", "auxb3rr"],
+          ["auxb3rr", "auxb6rr"],
+          ["auxb4rr", "auxb5rr"],
+          ["auxb5rr", "auxb8rr"],
+          ["auxb6rr", "auxb7rr"],
+          //corssing big
+          ["auxb1r", "auxb7rr"],
+          ["auxb1rr", "auxb7r"],
+          ["auxb2r", "auxb8rr"],
+          ["auxb2rr", "auxb8r"],
+
+          ["auxb1r", "auxb8r"],
+          ["auxb2r", "auxb7r"],
+          ["auxb1rr", "auxb8rr"],
+          ["auxb2rr", "auxb7rr"],
+
+          ["auxb1r", "auxb8rr"],
+          ["auxb2r", "auxb7rr"],
+          ["auxb1rr", "auxb8r"],
+          ["auxb2rr", "auxb7r"],
+
+          //ratch
+          ["auxb8rrr", "auxb3rr"],
+          ["auxb8rrr", "auxb4rr"],
+          ["auxb8rrr", "auxb5rr"],
+          ["auxb8rrr", "auxb6rr"],
+          ["auxb8rrr", "auxb4r"],
+          ["auxb8rrr", "auxb6r"],
+
+          //main shape lid
+          ["auxb1rrr", "auxb2rrr"],
+          ["auxb3rrr", "auxb4rrr"],
+          ["auxb5rrr", "auxb6rrr"],
+          ["auxb1rrr", "auxb3rrr"],
+          ["auxb2rrr", "auxb4rrr"],
+          ["auxb3rrr", "auxb5rrr"],
+          ["auxb4rrr", "auxb6rrr"],
+
+          ["auxb1rrr", "auxb4rrr"],
+          ["auxb3rrr", "auxb6rrr"],
+          ["auxb2rrr", "auxb3rrr"],
+          ["auxb4rrr", "auxb5rrr"],
+
+          //lid rigifier
+          {"beamSpring":2801000,"beamDamp":200},
+          {"beamDeform":14000,"beamStrength":"FLT_MAX"},
+          ["auxb7rrr", "auxb1rrr"],
+          ["auxb7rrr", "auxb2rrr"],
+          ["auxb7rrr", "auxb3rrr"],
+          ["auxb7rrr", "auxb4rrr"],
+          ["auxb7rrr", "auxb5rrr"],
+          ["auxb7rrr", "auxb6rrr"],
+
+          //attach to frame
+          {"beamSpring":480100,"beamDamp":50},
+          {"beamDeform":4000,"beamStrength":526000},
+          {"breakGroup":"aux_toolbox_R_1"},
+          ["auxb1r", "auxf1r"],
+          ["auxb1r", "auxf2r"],
+          ["auxb1r", "auxf3r"],
+          ["auxb3r", "auxf1r"],
+          ["auxb3r", "auxf3r"],
+          ["auxb3r", "auxf4r"],
+          ["auxb3r", "auxf5r"],
+          ["auxb5r", "auxf3r"],
+          ["auxb5r", "auxf5r"],
+          ["auxb5r", "auxf6r"],
+
+          ["auxb4r", "auxf2r"],
+          ["auxb4r", "auxf3r"],
+          ["auxb4r", "auxf4r"],
+          ["auxb4r", "auxf6r"],
+          ["auxb4r", "auxf3l"],
+          ["auxb4r", "auxf4l"],
+          {"breakGroup":"aux_toolbox_R_2"},
+          ["auxb7r", "ff14r"],
+          ["auxb7r", "ff4r"],
+          ["auxb7r", "mf11r"],
+          ["auxb8r", "mf11r"],
+          ["auxb8r", "mf1r"],
+          ["auxb8r", "ff14r"],
+
+          ["auxb5r", "ff4r"],
+          ["auxb5r", "ff14r"],
+          ["auxb5r", "mf1r"],
+          ["auxb6r", "mf1r"],
+          ["auxb6r", "mf11r"],
+          ["auxb6r", "ff4r"],
+
+          {"breakGroup":"aux_toolbox_R_lid"},
+          ["auxb1rrr", "auxb1r"],
+          ["auxb1rrr", "auxb1rr"],
+          ["auxb1rrr", "auxb2rr"],
+          ["auxb1rrr", "auxb3rr"],
+          ["auxb5rrr", "auxb7r"],
+          ["auxb5rrr", "auxb7rr"],
+          ["auxb5rrr", "auxb8rr"],
+          ["auxb5rrr", "auxb5rr"],
+          {"breakGroup":""},
+
+
+        //Latch Stuff
+        //damping
+        {"beamSpring":1,"beamDamp":3},
+        {"beamDeform":15000,"beamStrength":90000},
+        ["auxb2rrr", "auxb2r", {"breakGroup":"aux_toolbox_R_1", "breakGroupType":1}],
+        ["auxb6rrr", "auxb8r", {"breakGroup":"aux_toolbox_R_2", "breakGroupType":1}],
+        ["auxb2rrr", "auxb4r", {"breakGroup":"aux_toolbox_R_1", "breakGroupType":1}],
+        ["auxb6rrr", "auxb6r", {"breakGroup":"aux_toolbox_R_2", "breakGroupType":1}],
+
+        //pop open
+        {"beamPrecompression":1.003, "beamType":"|SUPPORT", "beamLongBound":5},
+        {"beamSpring":50000,"beamDamp":500},
+        {"beamDeform":40000,"beamStrength":10000},
+        {"breakGroup":"aux_toolbox_R_1", "breakGroupType":1},
+        ["auxb4rrr", "auxb6r"],
+
+        //detent
+        {"beamPrecompression":38, "beamType":"|BOUNDED", "beamLongBound":0.02, "beamShortBound":0.02},
+        {"beamSpring":500,"beamDamp":200, "beamStrength":8000},
+        {"beamLimitSpring":0, "beamLimitDamp":0},
+        ["auxb2rrr", "auxb2rr", {"boundZone":0.01}],
+        ["auxb6rrr", "auxb8rr", {"boundZone":0.01}],
+        {"breakGroup":"", "breakGroupType":0},
+
+        //limiter
+        {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":36.3, "beamShortBound":1},
+        {"beamSpring":0,"beamDamp":0},
+        {"beamLimitSpring":2001,"beamLimitDamp":100},
+        {"beamDeform":15000,"beamStrength":90000},
+        ["auxb2rrr", "auxb2rr", {"breakGroup":"aux_toolbox_R_1", "breakGroupType":1}],
+        ["auxb6rrr", "auxb8rr", {"breakGroup":"aux_toolbox_R_2", "breakGroupType":1}],
+
+        //support beams
+        {"beamType":"|SUPPORT","beamLongBound":60},
+        {"beamSpring":2001000,"beamDamp":150},
+        {"beamDeform":7000,"beamStrength":150000},
+        {"beamPrecompression":0.99},
+        {"breakGroup":"aux_toolbox_R_supportBeams"},
+        ["auxb2rrr", "auxb2rr"],
+        ["auxb2rrr", "auxb4rr"],
+        ["auxb4rrr", "auxb4rr"],
+        ["auxb4rrr", "auxb6rr"],
+        ["auxb6rrr", "auxb6rr"],
+        ["auxb6rrr", "auxb8rr"],
+        {"breakGroup":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+          ["id1:","id2:","id3:"],
+          {"triangleType":"NORMALTYPE"},
+          //horizontal
+          ["auxb1r", "auxb2r", "auxb1rr"],
+          ["auxb2r", "auxb2rr", "auxb1rr"],
+          ["auxb3r", "auxb4r", "auxb3rr"],
+          ["auxb4r", "auxb4rr", "auxb3rr"],
+          ["auxb5r", "auxb6r", "auxb5rr"],
+          ["auxb6r", "auxb6rr", "auxb5rr"],
+          ["auxb7r", "auxb8r", "auxb7rr"],
+          ["auxb8r", "auxb8rr", "auxb7rr"],
+          //front wall
+          ["auxb1r", "auxb1rr", "auxb3rr"],
+          ["auxb1r", "auxb3rr", "auxb3r"],
+          ["auxb3r", "auxb3rr", "auxb5rr"],
+          ["auxb3r", "auxb5rr", "auxb5r"],
+          ["auxb5r", "auxb5rr", "auxb7rr"],
+          ["auxb5r", "auxb7rr", "auxb7r"],
+          //rear wall
+          ["auxb2r", "auxb4rr", "auxb2rr"],
+          ["auxb2r", "auxb4r", "auxb4rr"],
+          ["auxb4r", "auxb6rr", "auxb4rr"],
+          ["auxb4r", "auxb6r", "auxb6rr"],
+          ["auxb6r", "auxb8rr", "auxb6rr"],
+          ["auxb6r", "auxb8r", "auxb8rr"],
+          //inner wall
+          ["auxb1r", "auxb4r", "auxb2r"],
+          ["auxb1r", "auxb3r", "auxb4r"],
+          ["auxb3r", "auxb6r", "auxb4r"],
+          ["auxb3r", "auxb5r", "auxb6r"],
+          ["auxb5r", "auxb8r", "auxb6r"],
+          ["auxb5r", "auxb7r", "auxb8r"],
+          //lid
+          ["auxb1rrr", "auxb2rrr", "auxb4rrr"],
+          ["auxb1rrr", "auxb4rrr", "auxb3rrr"],
+          ["auxb3rrr", "auxb4rrr", "auxb6rrr"],
+          ["auxb3rrr", "auxb6rrr", "auxb5rrr"],
+          ],
+},
+}

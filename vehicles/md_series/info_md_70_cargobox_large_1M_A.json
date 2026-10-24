@@ -1,0 +1,41 @@
+{
+  "Body Style":"Box truck",
+  "BoundingBox":[
+    [
+      -0.8854,
+      -1.136,
+      -0.7234
+    ],
+    [
+      1.7534,
+      5.0361,
+      1.632
+    ]
+  ],
+  "Commercial Class":"Class 7 Truck",
+  "Config Type":"Custom",
+  "Configuration":"MD70 Cargo Box 1 Million Downloads Special (A)",
+  "Description":"Late model single cab box truck with a special livery, thanking everyone for all the great feedback over now multiple years! You really do just become a modder by accident, come give it a try yourself and see where it takes you",
+  "Drivetrain":"RWD",
+  "Fuel Type":"Diesel",
+  "Induction Type":"Turbo",
+  "Off-Road Score":34,
+  "Population":4000,
+  "Power":312,
+  "PowerPeakRPM":2400,
+  "Propulsion":"ICE",
+  "Top Speed":32.65652803,
+  "Torque":948,
+  "TorquePeakRPM":"1150 - 1900",
+  "Transmission":"Automatic",
+  "Value":101000,
+  "Weight":8951,
+  "Weight/Power":27.83163265,
+  "Years":{
+    "max":1998,
+    "min":1992
+  },
+  "defaultPaintName1":"Carbon Gray",
+  "defaultPaintName2":"Carbon Gray",
+  "defaultPaintName3":"Lead"
+}

@@ -1,0 +1,819 @@
+{
+"G_van_rollback_lights_aux": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Long Deck Halogen Lights",
+        "value":1500,
+    },
+    "slotType" : "van_rollback_lights",
+    "slots2": [
+         ["name",                  "allowTypes",                   "denyTypes", "default",         "description"],
+         ["rollback_flasher_FFR1", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Flasher FFR1",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "FFR_filament",
+           "$nodeRef": "cf16rr", "$nodeX": "cf15rr", "$nodeY": "cf6rr",
+           "$deformGroup": "rollback_flasher_FFR",
+           "$posX": -1.200, "$posY": -0.557, "$posZ": 0.845,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 180,
+           "$lightRange":1, //reduce range to prevent leaking in the interior
+         }
+         }],
+         ["rollback_flasher_FFL1", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Flasher FFL1",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "FFL_filament",
+           "$nodeRef": "cf16ll", "$nodeX": "cf15ll", "$nodeY": "cf6ll",
+           "$deformGroup": "rollback_flasher_FFL",
+           "$posX": 1.200, "$posY": -0.557, "$posZ": 0.845,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 180,
+           "$lightRange":1, //reduce range to prevent leaking in the interior
+         }
+         }],
+         ["rollback_flasher_FFR2", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Flasher FFR2",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "FFR_filament",
+           "$nodeRef": "cf16rr", "$nodeX": "cf15rr", "$nodeY": "cf6rr",
+           "$deformGroup": "rollback_flasher_FFR",
+           "$posX": -1.255, "$posY": -0.490, "$posZ": 0.845,
+           "$rotX": 0, "$rotY": 0, "$rotZ": -90
+         }
+         }],
+         ["rollback_flasher_FFL2", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Flasher FFL2",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "FFL_filament",
+           "$nodeRef": "cf16ll", "$nodeX": "cf15ll", "$nodeY": "cf6ll",
+           "$deformGroup": "rollback_flasher_FFL",
+           "$posX": 1.255, "$posY": -0.490, "$posZ": 0.845,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 90
+         }
+         }],
+         ["rollback_flasher_FR", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Flasher FR",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "FR_filament",
+           "$nodeRef": "cf14rr", "$nodeX": "ci5rr", "$nodeY": "cf4rr",
+           "$deformGroup": "rollback_flasher_FR",
+           "$posX": -1.255, "$posY": 1.210, "$posZ": 0.845,
+           "$rotX": 0, "$rotY": 0, "$rotZ": -90
+         }
+         }],
+         ["rollback_flasher_FL", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Flasher FL",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "FL_filament",
+           "$nodeRef": "cf14ll", "$nodeX": "ci5ll", "$nodeY": "cf4ll",
+           "$deformGroup": "rollback_flasher_FL",
+           "$posX": 1.255, "$posY": 1.210, "$posZ": 0.845,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 90
+         }
+         }],
+         ["rollback_flasher_RR", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Flasher RR",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "RR_filament",
+           "$nodeRef": "cf13rr", "$nodeX": "ci3rr", "$nodeY": "cf3rr",
+           "$deformGroup": "rollback_flasher_RR",
+           "$posX": -1.255, "$posY": 3.010, "$posZ": 0.845,
+           "$rotX": 0, "$rotY": 0, "$rotZ": -90
+         }
+         }],
+         ["rollback_flasher_RL", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Flasher RL",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "RL_filament",
+           "$nodeRef": "cf13ll", "$nodeX": "ci3ll", "$nodeY": "cf3ll",
+           "$deformGroup": "rollback_flasher_RL",
+           "$posX": 1.255, "$posY": 3.010, "$posZ": 0.845,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 90
+         }
+         }],
+         ["rollback_flasher_RRR", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Flasher RRR",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "RRR_filament",
+           "$nodeRef": "cf12rr", "$nodeX": "cf11rr", "$nodeY": "cf2rr",
+           "$deformGroup": "rollback_flasher_RRR",
+           "$posX": -1.255, "$posY": 4.710, "$posZ": 0.845,
+           "$rotX": 0, "$rotY": 0, "$rotZ": -90
+         }
+         }],
+         ["rollback_flasher_RRL", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Flasher RRL",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "RRL_filament",
+           "$nodeRef": "cf12ll", "$nodeX": "cf11ll", "$nodeY": "cf2ll",
+           "$deformGroup": "rollback_flasher_RRL",
+           "$posX": 1.255, "$posY": 4.710, "$posZ": 0.845,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 90
+         }
+         }],
+         ["rollback_taillight_RR", ["incandescent_red_21W"], [], "incandescent_red_21W", "Right Outer Taillight",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "lowhighBrakeSignal_R_filament",
+           "$nodeRef": "tf14r", "$nodeX": "tf14rr", "$nodeY": "tf4r",
+           "$deformGroup": "tiltbed_lights_R_break",
+           "$posX": -0.940, "$posY": 5.123, "$posZ": 0.663,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 0
+         }
+         }],
+         ["rollback_taillight_LL", ["incandescent_red_21W"], [], "incandescent_red_21W", "Left Outer Taillight",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "lowhighBrakeSignal_L_filament",
+           "$nodeRef": "tf14l", "$nodeX": "tf14ll", "$nodeY": "tf4l",
+           "$deformGroup": "tiltbed_lights_LR_break",
+           "$posX": 0.940, "$posY": 5.123, "$posZ": 0.663,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 0
+         }
+         }],
+         ["rollback_taillight_R", ["incandescent_red_21W"], [], "incandescent_red_21W", "Right Inner Taillight",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "lowhighBrakeSignal_R_filament",
+           "$nodeRef": "tf14r", "$nodeX": "tf14rr", "$nodeY": "tf4r",
+           "$deformGroup": "tiltbed_lights_R_break",
+           "$posX": -0.800, "$posY": 5.123, "$posZ": 0.663,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 0
+         }
+         }],
+         ["rollback_taillight_L", ["incandescent_red_21W"], [], "incandescent_red_21W", "Left Inner Taillight",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "lowhighBrakeSignal_L_filament",
+           "$nodeRef": "tf14l", "$nodeX": "tf14ll", "$nodeY": "tf4l",
+           "$deformGroup": "tiltbed_lights_L_break",
+           "$posX": 0.800, "$posY": 5.123, "$posZ": 0.663,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 0
+         }
+         }],
+         ["rollback_reverse_R", ["incandescent_white_21W"], [], "incandescent_white_21W", "Right Reverse Light",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "reverselight_filament",
+           "$nodeRef": "tf14r", "$nodeX": "tf14rr", "$nodeY": "tf4r",
+           "$deformGroup": "tiltbed_lights_R_break",
+           "$posX": -0.660, "$posY": 5.123, "$posZ": 0.663,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 0
+         }
+         }],
+         ["rollback_reverse_L", ["incandescent_white_21W"], [], "incandescent_white_21W", "Left Reverse Light",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "reverselight_filament",
+           "$nodeRef": "tf14l", "$nodeX": "tf14ll", "$nodeY": "tf4l",
+           "$deformGroup": "tiltbed_lights_L_break",
+           "$posX": 0.660, "$posY": 5.123, "$posZ": 0.663,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 0
+         }
+         }],
+         ["rollback_id_R", ["incandescent_red_5W"], [], "incandescent_red_5W", "Right Identification Light",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "lowhighbeam_filament",
+           "$nodeRef": "tf14r", "$nodeX": "tf14l", "$nodeY": "tf4r",
+           "$deformGroup": "tiltbed_lights_M_break",
+           "$posX": -0.275, "$posY": 5.115, "$posZ": 0.653,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 0
+         }
+         }],
+         ["rollback_id_L", ["incandescent_red_5W"], [], "incandescent_red_5W", "Left Identification Light",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "lowhighbeam_filament",
+           "$nodeRef": "tf14r", "$nodeX": "tf14l", "$nodeY": "tf4r",
+           "$deformGroup": "tiltbed_lights_M_break",
+           "$posX": 0.275, "$posY": 5.115, "$posZ": 0.653,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 0
+         }
+         }],
+         ["rollback_id_M", ["incandescent_red_5W"], [], "incandescent_red_5W", "Middle Identification Light",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "lowhighbeam_filament",
+           "$nodeRef": "tf14r", "$nodeX": "tf14l", "$nodeY": "tf4r",
+           "$deformGroup": "tiltbed_lights_M_break",
+           "$posX": 0.000, "$posY": 5.115, "$posZ": 0.653,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 0
+         }
+         }],
+    ],
+    "controller": [
+        ["fileName"],
+        ["lightbar", {
+            "name": "bodyLights",
+            "defaultModeIndex": 1,
+            "modes": [
+                ["name", "config"],
+                ["Chase", [
+                    ["electric", "value", "duration"],
+
+                        //Sides
+                        ["FFR", 1, 0.1],
+                        ["FFR", 0, 0.1],
+                        ["FFR", 1, 0.1],
+                        ["FFR", 0, 0.5],
+
+                        ["FR", 0, 0.5],
+                        ["FR", 1, 0.1],
+                        ["FR", 0, 0.1],
+                        ["FR", 1, 0.1],
+
+                        ["RR", 1, 0.1],
+                        ["RR", 0, 0.1],
+                        ["RR", 1, 0.1],
+                        ["RR", 0, 0.5],
+
+                        ["RRR", 0, 0.5],
+                        ["RRR", 1, 0.1],
+                        ["RRR", 0, 0.1],
+                        ["RRR", 1, 0.1],
+
+                        ["FL", 1, 0.1],
+                        ["FL", 0, 0.1],
+                        ["FL", 1, 0.1],
+                        ["FL", 0, 0.5],
+
+                        ["FFL", 0, 0.5],
+                        ["FFL", 1, 0.1],
+                        ["FFL", 0, 0.1],
+                        ["FFL", 1, 0.1],
+
+                        ["RRL", 1, 0.1],
+                        ["RRL", 0, 0.1],
+                        ["RRL", 1, 0.1],
+                        ["RRL", 0, 0.5],
+
+                        ["RL", 0, 0.5],
+                        ["RL", 1, 0.1],
+                        ["RL", 0, 0.1],
+                        ["RL", 1, 0.1],
+                    ],
+                ],
+            ],
+        }],
+    ],
+    "components": {
+        "electrics": {
+            "customValues": [
+                ["electricsName", "electricsFunction","electricsDefault"],
+                ["FFR_filament","(electrics.FFR * 0.75 + electrics.lowhighbeam * 0.25) * electrics.electricalLoadCoef",0],
+                ["FFL_filament","(electrics.FFL * 0.75 + electrics.lowhighbeam * 0.25) * electrics.electricalLoadCoef",0],
+                ["FR_filament", "(electrics.FR  * 0.75 + electrics.lowhighbeam * 0.25) * electrics.electricalLoadCoef",0],
+                ["FL_filament", "(electrics.FL  * 0.75 + electrics.lowhighbeam * 0.25) * electrics.electricalLoadCoef",0],
+                ["RR_filament", "(electrics.RR  * 0.75 + electrics.lowhighbeam * 0.25) * electrics.electricalLoadCoef",0],
+                ["RL_filament", "(electrics.RL  * 0.75 + electrics.lowhighbeam * 0.25) * electrics.electricalLoadCoef",0],
+                ["RRR_filament","(electrics.RRR * 0.75 + electrics.lowhighbeam * 0.25) * electrics.electricalLoadCoef",0],
+                ["RRL_filament","(electrics.RRL * 0.75 + electrics.lowhighbeam * 0.25) * electrics.electricalLoadCoef",0],
+                ["rollback_taillight_R", "(electrics.FR * 0.50 + electrics.brakelight_signal_R * 0.25 + electrics.lowhighbeam * 0.25) * electrics.electricalLoadCoef",0],
+                ["rollback_taillight_L", "(electrics.FL * 0.50 + electrics.brakelight_signal_L * 0.25 + electrics.lowhighbeam * 0.25) * electrics.electricalLoadCoef",0],
+            ],
+            "smoothers": [
+                ["electricsName", "smootherType", "params"],
+                ["FFR_filament","temporalNonLinear", [10,10]],
+                ["FFL_filament","temporalNonLinear", [10,10]],
+                ["FR_filament", "temporalNonLinear", [10,10]],
+                ["FL_filament", "temporalNonLinear", [10,10]],
+                ["RR_filament", "temporalNonLinear", [10,10]],
+                ["RL_filament", "temporalNonLinear", [10,10]],
+                ["RRR_filament","temporalNonLinear", [10,10]],
+                ["RRL_filament","temporalNonLinear", [10,10]],
+                ["rollback_taillight_R", "temporalNonLinear", [10,10]],
+                ["rollback_taillight_L", "temporalNonLinear", [10,10]],
+            ],
+        },
+    },
+    "glowMap":{
+        "rollback_taillight_L":      {"simpleFunction":"rollback_taillight_L", "off":"halogen_utility_lights",    "on":"halogen_utility_lights_on",     "materialEmissiveScaling":{"on_max":1.00}},
+        "rollback_taillight_R":      {"simpleFunction":"rollback_taillight_R", "off":"halogen_utility_lights",    "on":"halogen_utility_lights_on",     "materialEmissiveScaling":{"on_max":1.00}},
+        "rollback_glass_taillight_L":{"simpleFunction":"rollback_taillight_L", "off":"halogen_utility_lightglass","on":"halogen_utility_lightglass_on", "materialEmissiveScaling":{"on_max":1.00}},
+        "rollback_glass_taillight_R":{"simpleFunction":"rollback_taillight_R", "off":"halogen_utility_lightglass","on":"halogen_utility_lightglass_on", "materialEmissiveScaling":{"on_max":1.00}},
+        "rollback_reverse":          {"simpleFunction":"reverselight_filament","off":"halogen_utility_lights",    "on":"halogen_utility_lights_on",     "materialEmissiveScaling":{"on_max":1.00}},
+        "rollback_glass_reverse":    {"simpleFunction":"reverselight_filament","off":"halogen_utility_lightglass","on":"halogen_utility_lightglass_on", "materialEmissiveScaling":{"on_max":1.00}},
+        "rollback_aux1":             {"simpleFunction":"lowhighbeam_filament", "off":"halogen_utility_lights",    "on":"halogen_utility_lights_on",     "materialEmissiveScaling":{"on_max":1.00}},
+        "rollback_glass_aux1":       {"simpleFunction":"lowhighbeam_filament", "off":"halogen_utility_lightglass","on":"halogen_utility_lightglass_on", "materialEmissiveScaling":{"on_max":1.00}},
+
+        "utility_flasher_FFR": {"simpleFunction":"FFR_filament", "off":"halogen_utility_lights", "on":"halogen_utility_lights_on", "materialEmissiveScaling":{"on_max":1.00}},
+        "utility_flasher_FR":  {"simpleFunction":"FR_filament",  "off":"halogen_utility_lights", "on":"halogen_utility_lights_on", "materialEmissiveScaling":{"on_max":1.00}},
+        "utility_flasher_FL":  {"simpleFunction":"FL_filament",  "off":"halogen_utility_lights", "on":"halogen_utility_lights_on", "materialEmissiveScaling":{"on_max":1.00}},
+        "utility_flasher_FFL": {"simpleFunction":"FFL_filament", "off":"halogen_utility_lights", "on":"halogen_utility_lights_on", "materialEmissiveScaling":{"on_max":1.00}},
+        "utility_flasher_RRR": {"simpleFunction":"RRR_filament", "off":"halogen_utility_lights", "on":"halogen_utility_lights_on", "materialEmissiveScaling":{"on_max":1.00}},
+        "utility_flasher_RR":  {"simpleFunction":"RR_filament",  "off":"halogen_utility_lights", "on":"halogen_utility_lights_on", "materialEmissiveScaling":{"on_max":1.00}},
+        "utility_flasher_RL":  {"simpleFunction":"RL_filament",  "off":"halogen_utility_lights", "on":"halogen_utility_lights_on", "materialEmissiveScaling":{"on_max":1.00}},
+        "utility_flasher_RRL": {"simpleFunction":"RRL_filament", "off":"halogen_utility_lights", "on":"halogen_utility_lights_on", "materialEmissiveScaling":{"on_max":1.00}},
+
+        "utility_flasher_glass_FFR": {"simpleFunction":"FFR_filament", "off":"halogen_utility_lightglass", "on":"halogen_utility_lightglass_on", "materialEmissiveScaling":{"on_max":1.00}},
+        "utility_flasher_glass_FR":  {"simpleFunction":"FR_filament",  "off":"halogen_utility_lightglass", "on":"halogen_utility_lightglass_on", "materialEmissiveScaling":{"on_max":1.00}},
+        "utility_flasher_glass_FL":  {"simpleFunction":"FL_filament",  "off":"halogen_utility_lightglass", "on":"halogen_utility_lightglass_on", "materialEmissiveScaling":{"on_max":1.00}},
+        "utility_flasher_glass_FFL": {"simpleFunction":"FFL_filament", "off":"halogen_utility_lightglass", "on":"halogen_utility_lightglass_on", "materialEmissiveScaling":{"on_max":1.00}},
+        "utility_flasher_glass_RRR": {"simpleFunction":"RRR_filament", "off":"halogen_utility_lightglass", "on":"halogen_utility_lightglass_on", "materialEmissiveScaling":{"on_max":1.00}},
+        "utility_flasher_glass_RR":  {"simpleFunction":"RR_filament",  "off":"halogen_utility_lightglass", "on":"halogen_utility_lightglass_on", "materialEmissiveScaling":{"on_max":1.00}},
+        "utility_flasher_glass_RL":  {"simpleFunction":"RL_filament",  "off":"halogen_utility_lightglass", "on":"halogen_utility_lightglass_on", "materialEmissiveScaling":{"on_max":1.00}},
+        "utility_flasher_glass_RRL": {"simpleFunction":"RRL_filament", "off":"halogen_utility_lightglass", "on":"halogen_utility_lightglass_on", "materialEmissiveScaling":{"on_max":1.00}},
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        {"deformGroup":"rollback_flasher_FFR", "deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        ["halogen_utility_smallsquare_amber", ["rollback_deck"],[],{"materialOverride":[["halogen_utility_lights","utility_flasher_FFR"]],"pos":{"x":-1.200, "y":-0.557, "z":0.845}, "rot":{"x":0, "y":0, "z":  0},"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+        {"deformGroup":"rollback_flasher_FFR", "deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        ["halogen_utility_rectangle_amber", ["rollback_deck"],[],{"materialOverride":[["halogen_utility_lights","utility_flasher_FFR"]],"pos":{"x":-1.255, "y":-0.490, "z":0.845}, "rot":{"x":0, "y":0, "z":-90},"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+        {"deformGroup":"rollback_flasher_FR", "deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        ["halogen_utility_rectangle_amber", ["rollback_deck"],[],{"materialOverride":[["halogen_utility_lights","utility_flasher_FR"]], "pos":{"x":-1.255, "y":1.210, "z":0.845}, "rot":{"x":0, "y":0, "z":-90},"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+        {"deformGroup":"rollback_flasher_RR", "deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        ["halogen_utility_rectangle_amber", ["rollback_deck"],[],{"materialOverride":[["halogen_utility_lights","utility_flasher_RR"]], "pos":{"x":-1.255, "y":3.010, "z":0.845}, "rot":{"x":0, "y":0, "z":-90},"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+        {"deformGroup":"rollback_flasher_RRR", "deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        ["halogen_utility_rectangle_amber", ["rollback_deck"],[],{"materialOverride":[["halogen_utility_lights","utility_flasher_RRR"]],"pos":{"x":-1.255, "y":4.710, "z":0.845}, "rot":{"x":0, "y":0, "z":-90},"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+
+        {"deformGroup":"rollback_flasher_FFR", "deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_smallsquare_amber_glass", ["rollback_deck"],[],{"materialOverride":[["halogen_utility_lightglass","utility_flasher_glass_FFR"]],"pos":{"x":-1.200, "y":-0.557, "z":0.845}, "rot":{"x":0, "y":0, "z":  0}}],
+        {"deformGroup":"rollback_flasher_FFR", "deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_rectangle_amber_glass", ["rollback_deck"],[],{"materialOverride":[["halogen_utility_lightglass","utility_flasher_glass_FFR"]],"pos":{"x":-1.255, "y":-0.490, "z":0.845}, "rot":{"x":0, "y":0, "z":-90}}],
+        {"deformGroup":"rollback_flasher_FR", "deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_rectangle_amber_glass", ["rollback_deck"],[],{"materialOverride":[["halogen_utility_lightglass","utility_flasher_glass_FR"]], "pos":{"x":-1.255, "y":1.210, "z":0.845}, "rot":{"x":0, "y":0, "z":-90}}],
+        {"deformGroup":"rollback_flasher_RR", "deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_rectangle_amber_glass", ["rollback_deck"],[],{"materialOverride":[["halogen_utility_lightglass","utility_flasher_glass_RR"]], "pos":{"x":-1.255, "y":3.010, "z":0.845}, "rot":{"x":0, "y":0, "z":-90}}],
+        {"deformGroup":"rollback_flasher_RRR", "deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_rectangle_amber_glass", ["rollback_deck"],[],{"materialOverride":[["halogen_utility_lightglass","utility_flasher_glass_RRR"]],"pos":{"x":-1.255, "y":4.710, "z":0.845}, "rot":{"x":0, "y":0, "z":-90}}],
+
+        {"deformGroup":"rollback_flasher_FFL", "deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        ["halogen_utility_smallsquare_amber", ["rollback_deck"],[],{"materialOverride":[["halogen_utility_lights","utility_flasher_FFL"]],"pos":{"x":1.200, "y":-0.557, "z":0.845}, "rot":{"x":0, "y":0, "z": 0},"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+        {"deformGroup":"rollback_flasher_FFL", "deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        ["halogen_utility_rectangle_amber", ["rollback_deck"],[],{"materialOverride":[["halogen_utility_lights","utility_flasher_FFL"]],"pos":{"x":1.255, "y":-0.490, "z":0.845}, "rot":{"x":0, "y":0, "z":90},"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+        {"deformGroup":"rollback_flasher_FL", "deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        ["halogen_utility_rectangle_amber", ["rollback_deck"],[],{"materialOverride":[["halogen_utility_lights","utility_flasher_FL"]], "pos":{"x":1.255, "y":1.210, "z":0.845}, "rot":{"x":0, "y":0, "z":90},"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+        {"deformGroup":"rollback_flasher_RL", "deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        ["halogen_utility_rectangle_amber", ["rollback_deck"],[],{"materialOverride":[["halogen_utility_lights","utility_flasher_RL"]], "pos":{"x":1.255, "y":3.010, "z":0.845}, "rot":{"x":0, "y":0, "z":90},"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+        {"deformGroup":"rollback_flasher_RRL", "deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        ["halogen_utility_rectangle_amber", ["rollback_deck"],[],{"materialOverride":[["halogen_utility_lights","utility_flasher_RRL"]],"pos":{"x":1.255, "y":4.710, "z":0.845}, "rot":{"x":0, "y":0, "z":90},"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+
+        {"deformGroup":"rollback_flasher_FFL", "deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_smallsquare_amber_glass", ["rollback_deck"],[],{"materialOverride":[["halogen_utility_lightglass","utility_flasher_glass_FFL"]],"pos":{"x":1.200, "y":-0.557, "z":0.845}, "rot":{"x":0, "y":0, "z":  0}}],
+        {"deformGroup":"rollback_flasher_FFL", "deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_rectangle_amber_glass", ["rollback_deck"],[],{"materialOverride":[["halogen_utility_lightglass","utility_flasher_glass_FFL"]],"pos":{"x":1.255, "y":-0.490, "z":0.845}, "rot":{"x":0, "y":0, "z":90}}],
+        {"deformGroup":"rollback_flasher_FL", "deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_rectangle_amber_glass", ["rollback_deck"],[],{"materialOverride":[["halogen_utility_lightglass","utility_flasher_glass_FL"]], "pos":{"x":1.255, "y":1.210, "z":0.845}, "rot":{"x":0, "y":0, "z":90}}],
+        {"deformGroup":"rollback_flasher_RL", "deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_rectangle_amber_glass", ["rollback_deck"],[],{"materialOverride":[["halogen_utility_lightglass","utility_flasher_glass_RL"]], "pos":{"x":1.255, "y":3.010, "z":0.845}, "rot":{"x":0, "y":0, "z":90}}],
+        {"deformGroup":"rollback_flasher_RRL", "deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_rectangle_amber_glass", ["rollback_deck"],[],{"materialOverride":[["halogen_utility_lightglass","utility_flasher_glass_RRL"]],"pos":{"x":1.255, "y":4.710, "z":0.845}, "rot":{"x":0, "y":0, "z":90}}],
+
+        {"deformGroup":"tiltbed_lights_R_break","deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        {"materialOverride":[
+          ["halogen_utility_lights", "rollback_taillight_R"],
+        ]},
+        ["halogen_utility_square_red", ["tiltframe"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.5, "pos":{"x":-0.800, "y":5.133, "z":0.663}, "rot":{"x":0, "y":90, "z":180}, "scale":{"x":0.9,"y":0.9,"z":0.9}}],
+        ["halogen_utility_square_red", ["tiltframe"],[],{"pos":{"x":-0.940, "y":5.133, "z":0.663}, "rot":{"x":0, "y":90, "z":180}, "scale":{"x":0.9,"y":0.9,"z":0.9}}],
+        {"materialOverride":[
+          ["halogen_utility_lights", "rollback_reverse"],
+        ]},
+        ["halogen_utility_square_white",     ["tiltframe"],[],{"pos":{"x":-0.660, "y":5.133, "z":0.663}, "rot":{"x":0, "y":90, "z":180}, "scale":{"x":0.9,"y":0.9,"z":0.9}}],
+        {"deformGroup":"tiltbed_lights_L_break","deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        {"materialOverride":[
+          ["halogen_utility_lights", "rollback_taillight_L"],
+        ]},
+        ["halogen_utility_square_red", ["tiltframe"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound4", "deformVolume":0.5, "pos":{"x": 0.800, "y":5.133, "z":0.663}, "rot":{"x":0, "y":90, "z":180}, "scale":{"x":0.9,"y":0.9,"z":0.9}}],
+        ["halogen_utility_square_red", ["tiltframe"],[],{"pos":{"x": 0.940, "y":5.133, "z":0.663}, "rot":{"x":0, "y":90, "z":180}, "scale":{"x":0.9,"y":0.9,"z":0.9}}],
+        {"materialOverride":[
+          ["halogen_utility_lights", "rollback_reverse"],
+        ]},
+        ["halogen_utility_square_white",     ["tiltframe"],[],{"pos":{"x": 0.660, "y":5.133, "z":0.663}, "rot":{"x":0, "y":90, "z":180}, "scale":{"x":0.9,"y":0.9,"z":0.9}}],
+        {"deformGroup":"tiltbed_lights_R_break","deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        {"materialOverride":[
+          ["halogen_utility_lightglass", "rollback_glass_taillight_R"],
+         ]},
+        ["halogen_utility_square_red_glass", ["tiltframe"],[],{"pos":{"x":-0.800, "y":5.133, "z":0.663}, "rot":{"x":0, "y":90, "z":180}, "scale":{"x":0.9,"y":0.9,"z":0.9}}],
+        ["halogen_utility_square_red_glass", ["tiltframe"],[],{"pos":{"x":-0.940, "y":5.133, "z":0.663}, "rot":{"x":0, "y":90, "z":180}, "scale":{"x":0.9,"y":0.9,"z":0.9}}],
+        {"materialOverride":[
+          ["halogen_utility_lightglass", "rollback_glass_reverse"],
+         ]},
+        ["halogen_utility_square_white_glass",   ["tiltframe"],[],{"pos":{"x":-0.660, "y":5.133, "z":0.663}, "rot":{"x":0, "y":90, "z":180}, "scale":{"x":0.9,"y":0.9,"z":0.9}}],
+        {"deformGroup":"tiltbed_lights_L_break","deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        {"materialOverride":[
+          ["halogen_utility_lightglass", "rollback_glass_taillight_L"],
+         ]},
+        ["halogen_utility_square_red_glass", ["tiltframe"],[],{"pos":{"x": 0.800, "y":5.133, "z":0.663}, "rot":{"x":0, "y":90, "z":180}, "scale":{"x":0.9,"y":0.9,"z":0.9}}],
+        ["halogen_utility_square_red_glass", ["tiltframe"],[],{"pos":{"x": 0.940, "y":5.133, "z":0.663}, "rot":{"x":0, "y":90, "z":180}, "scale":{"x":0.9,"y":0.9,"z":0.9}}],
+        {"materialOverride":[
+          ["halogen_utility_lightglass", "rollback_glass_reverse"],
+         ]},
+        ["halogen_utility_square_white_glass",   ["tiltframe"],[],{"pos":{"x": 0.660, "y":5.133, "z":0.663}, "rot":{"x":0, "y":90, "z":180}, "scale":{"x":0.9,"y":0.9,"z":0.9}}],
+
+        {"deformGroup":"tiltbed_lights_M_break","deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        {"materialOverride":[
+          ["halogen_utility_lights", "rollback_aux1"],
+          ["halogen_utility_lightglass", "rollback_glass_aux1"],
+        ]},
+        ["halogen_utility_rectangle_red", ["tiltframe"],[],{"pos":{"x":-0.275, "y":5.115, "z":0.653}, "rot":{"x":0, "y":0, "z":180}}],
+        ["halogen_utility_rectangle_red", ["tiltframe"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound4", "deformVolume":0.5, "pos":{"x": 0.000, "y":5.115, "z":0.653}, "rot":{"x":0, "y":0, "z":180}}],
+        ["halogen_utility_rectangle_red", ["tiltframe"],[],{"pos":{"x": 0.275, "y":5.115, "z":0.653}, "rot":{"x":0, "y":0, "z":180}}],
+        {"deformGroup":"tiltbed_lights_M_break","deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_rectangle_red_glass", ["tiltframe"],[],{"pos":{"x":-0.275, "y":5.115, "z":0.653}, "rot":{"x":0, "y":0, "z":180}}],
+        ["halogen_utility_rectangle_red_glass", ["tiltframe"],[],{"pos":{"x": 0.000, "y":5.115, "z":0.653}, "rot":{"x":0, "y":0, "z":180}}],
+        ["halogen_utility_rectangle_red_glass", ["tiltframe"],[],{"pos":{"x": 0.275, "y":5.115, "z":0.653}, "rot":{"x":0, "y":0, "z":180}}],
+        {"deformGroup":""},
+        {"materialOverride":[
+          ["halogen_utility_lights", "halogen_utility_lights"],
+          ["halogen_utility_lightglass", "halogen_utility_lightglass"],
+        ]},
+    ],
+},
+"G_van_rollback_lights_LED_aux": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Long Deck LED Lights",
+        "value":2000,
+    },
+    "slotType" : "van_rollback_lights",
+    "slots2": [
+         ["name",                  "allowTypes",                   "denyTypes", "default",         "description"],
+         ["rollback_flasher_FFR1b", ["generic_oval_led_amber_5W"], [], "generic_oval_led_amber_5W", "Flasher FFR1",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "FFR",
+           "$nodeRef": "cf16rr", "$nodeX": "cf15rr", "$nodeY": "cf6rr",
+           "$deformGroup": "rollback_flasher_FFR",
+           "$posX": -1.200, "$posY": -0.557, "$posZ": 0.845,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 180,
+           "$lightRange":1, //reduce range to prevent leaking in the interior
+         }
+         }],
+         ["rollback_flasher_FFL1b", ["generic_oval_led_amber_5W"], [], "generic_oval_led_amber_5W", "Flasher FFL1",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "FFL",
+           "$nodeRef": "cf16ll", "$nodeX": "cf15ll", "$nodeY": "cf6ll",
+           "$deformGroup": "rollback_flasher_FFL",
+           "$posX": 1.200, "$posY": -0.557, "$posZ": 0.845,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 180,
+           "$lightRange":1, //reduce range to prevent leaking in the interior
+         }
+         }],
+         ["rollback_flasher_FFR2b", ["generic_oval_led_amber_5W"], [], "generic_oval_led_amber_5W", "Flasher FFR2",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "FFR",
+           "$nodeRef": "cf16rr", "$nodeX": "cf15rr", "$nodeY": "cf6rr",
+           "$deformGroup": "rollback_flasher_FFR",
+           "$posX": -1.255, "$posY": -0.490, "$posZ": 0.845,
+           "$rotX": 0, "$rotY": 0, "$rotZ": -90
+         }
+         }],
+         ["rollback_flasher_FFL2b", ["generic_oval_led_amber_5W"], [], "generic_oval_led_amber_5W", "Flasher FFL2",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "FFL",
+           "$nodeRef": "cf16ll", "$nodeX": "cf15ll", "$nodeY": "cf6ll",
+           "$deformGroup": "rollback_flasher_FFL",
+           "$posX": 1.255, "$posY": -0.490, "$posZ": 0.845,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 90
+         }
+         }],
+         ["rollback_flasher_FRb", ["generic_oval_led_amber_5W"], [], "generic_oval_led_amber_5W", "Flasher FR",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "FR",
+           "$nodeRef": "cf14rr", "$nodeX": "ci5rr", "$nodeY": "cf4rr",
+           "$deformGroup": "rollback_flasher_FR",
+           "$posX": -1.255, "$posY": 1.210, "$posZ": 0.845,
+           "$rotX": 0, "$rotY": 0, "$rotZ": -90
+         }
+         }],
+         ["rollback_flasher_FLb", ["generic_oval_led_amber_5W"], [], "generic_oval_led_amber_5W", "Flasher FL",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "FL",
+           "$nodeRef": "cf14ll", "$nodeX": "ci5ll", "$nodeY": "cf4ll",
+           "$deformGroup": "rollback_flasher_FL",
+           "$posX": 1.255, "$posY": 1.210, "$posZ": 0.845,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 90
+         }
+         }],
+         ["rollback_flasher_RRb", ["generic_oval_led_amber_5W"], [], "generic_oval_led_amber_5W", "Flasher RR",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "RR",
+           "$nodeRef": "cf13rr", "$nodeX": "ci3rr", "$nodeY": "cf3rr",
+           "$deformGroup": "rollback_flasher_RR",
+           "$posX": -1.255, "$posY": 3.010, "$posZ": 0.845,
+           "$rotX": 0, "$rotY": 0, "$rotZ": -90
+         }
+         }],
+         ["rollback_flasher_RLb", ["generic_oval_led_amber_5W"], [], "generic_oval_led_amber_5W", "Flasher RL",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "RL",
+           "$nodeRef": "cf13ll", "$nodeX": "ci3ll", "$nodeY": "cf3ll",
+           "$deformGroup": "rollback_flasher_RL",
+           "$posX": 1.255, "$posY": 3.010, "$posZ": 0.845,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 90
+         }
+         }],
+         ["rollback_flasher_RRRb", ["generic_oval_led_amber_5W"], [], "generic_oval_led_amber_5W", "Flasher RRR",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "RRR",
+           "$nodeRef": "cf12rr", "$nodeX": "cf11rr", "$nodeY": "cf2rr",
+           "$deformGroup": "rollback_flasher_RRR",
+           "$posX": -1.255, "$posY": 4.710, "$posZ": 0.845,
+           "$rotX": 0, "$rotY": 0, "$rotZ": -90
+         }
+         }],
+         ["rollback_flasher_RRLb", ["generic_oval_led_amber_5W"], [], "generic_oval_led_amber_5W", "Flasher RRL",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "RRL",
+           "$nodeRef": "cf12ll", "$nodeX": "cf11ll", "$nodeY": "cf2ll",
+           "$deformGroup": "rollback_flasher_RRL",
+           "$posX": 1.255, "$posY": 4.710, "$posZ": 0.845,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 90
+         }
+         }],
+         ["rollback_taillight_RRb", ["generic_4inch_led_red_5W"], [], "generic_4inch_led_red_5W", "Right Outer Taillight",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "lowhighBrakeSignal_R_filament",
+           "$nodeRef": "tf14r", "$nodeX": "tf14rr", "$nodeY": "tf4r",
+           "$deformGroup": "tiltbed_lights_R_break",
+           "$posX": -0.940, "$posY": 5.123, "$posZ": 0.663,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 0
+         }
+         }],
+         ["rollback_taillight_LLb", ["generic_4inch_led_red_5W"], [], "generic_4inch_led_red_5W", "Left Outer Taillight",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "lowhighBrakeSignal_L_filament",
+           "$nodeRef": "tf14l", "$nodeX": "tf14ll", "$nodeY": "tf4l",
+           "$deformGroup": "tiltbed_lights_LR_break",
+           "$posX": 0.940, "$posY": 5.123, "$posZ": 0.663,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 0
+         }
+         }],
+         ["rollback_taillight_Rb", ["generic_4inch_led_red_5W"], [], "generic_4inch_led_red_5W", "Right Inner Taillight",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "lowhighBrakeSignal_R_filament",
+           "$nodeRef": "tf14r", "$nodeX": "tf14rr", "$nodeY": "tf4r",
+           "$deformGroup": "tiltbed_lights_R_break",
+           "$posX": -0.800, "$posY": 5.123, "$posZ": 0.663,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 0
+         }
+         }],
+         ["rollback_taillight_Lb", ["generic_4inch_led_red_5W"], [], "generic_4inch_led_red_5W", "Left Inner Taillight",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "lowhighBrakeSignal_L_filament",
+           "$nodeRef": "tf14l", "$nodeX": "tf14ll", "$nodeY": "tf4l",
+           "$deformGroup": "tiltbed_lights_L_break",
+           "$posX": 0.800, "$posY": 5.123, "$posZ": 0.663,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 0
+         }
+         }],
+         ["rollback_reverse_Rb", ["generic_4inch_led_white_5W"], [], "generic_4inch_led_white_5W", "Right Reverse Light",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "reverse",
+           "$nodeRef": "tf14r", "$nodeX": "tf14rr", "$nodeY": "tf4r",
+           "$deformGroup": "tiltbed_lights_R_break",
+           "$posX": -0.660, "$posY": 5.123, "$posZ": 0.663,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 0
+         }
+         }],
+         ["rollback_reverse_Lb", ["generic_4inch_led_white_5W"], [], "generic_4inch_led_white_5W", "Left Reverse Light",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "reverse",
+           "$nodeRef": "tf14l", "$nodeX": "tf14ll", "$nodeY": "tf4l",
+           "$deformGroup": "tiltbed_lights_L_break",
+           "$posX": 0.660, "$posY": 5.123, "$posZ": 0.663,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 0
+         }
+         }],
+         ["rollback_id_Rb", ["generic_oval_led_red_5W"], [], "generic_oval_led_red_5W", "Right Identification Light",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "lowhighbeam",
+           "$nodeRef": "tf14r", "$nodeX": "tf14l", "$nodeY": "tf4r",
+           "$deformGroup": "tiltbed_lights_M_break",
+           "$posX": -0.275, "$posY": 5.115, "$posZ": 0.663,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 0
+         }
+         }],
+         ["rollback_id_Lb", ["generic_oval_led_red_5W"], [], "generic_oval_led_red_5W", "Left Identification Light",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "lowhighbeam",
+           "$nodeRef": "tf14r", "$nodeX": "tf14l", "$nodeY": "tf4r",
+           "$deformGroup": "tiltbed_lights_M_break",
+           "$posX": 0.275, "$posY": 5.115, "$posZ": 0.663,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 0
+         }
+         }],
+         ["rollback_id_Mb", ["generic_oval_led_red_5W"], [], "generic_oval_led_red_5W", "Middle Identification Light",
+         {
+         "coreSlot":true,
+         "variables":{
+           "$electric": "lowhighbeam",
+           "$nodeRef": "tf14r", "$nodeX": "tf14l", "$nodeY": "tf4r",
+           "$deformGroup": "tiltbed_lights_M_break",
+           "$posX": 0.000, "$posY": 5.115, "$posZ": 0.663,
+           "$rotX": 0, "$rotY": 0, "$rotZ": 0
+         }
+         }],
+    ],
+    "controller": [
+        ["fileName"],
+        ["lightbar", {
+            "name": "bodyLights",
+            "defaultModeIndex": 1,
+            "modes": [
+                ["name", "config"],
+                ["Chase", [
+                    ["electric", "value", "duration"],
+
+                        //Sides
+                        ["FFR", 1, 0.1],
+                        ["FFR", 0, 0.1],
+                        ["FFR", 1, 0.1],
+                        ["FFR", 0, 0.5],
+
+                        ["FR", 0, 0.5],
+                        ["FR", 1, 0.1],
+                        ["FR", 0, 0.1],
+                        ["FR", 1, 0.1],
+
+                        ["RR", 1, 0.1],
+                        ["RR", 0, 0.1],
+                        ["RR", 1, 0.1],
+                        ["RR", 0, 0.5],
+
+                        ["RRR", 0, 0.5],
+                        ["RRR", 1, 0.1],
+                        ["RRR", 0, 0.1],
+                        ["RRR", 1, 0.1],
+
+                        ["FL", 1, 0.1],
+                        ["FL", 0, 0.1],
+                        ["FL", 1, 0.1],
+                        ["FL", 0, 0.5],
+
+                        ["FFL", 0, 0.5],
+                        ["FFL", 1, 0.1],
+                        ["FFL", 0, 0.1],
+                        ["FFL", 1, 0.1],
+
+                        ["RRL", 1, 0.1],
+                        ["RRL", 0, 0.1],
+                        ["RRL", 1, 0.1],
+                        ["RRL", 0, 0.5],
+
+                        ["RL", 0, 0.5],
+                        ["RL", 1, 0.1],
+                        ["RL", 0, 0.1],
+                        ["RL", 1, 0.1],
+                    ],
+                ],
+            ],
+        }],
+    ],
+    "glowMap":{
+        "off_road_lights_taillight_L":      {"simpleFunction":{"FL":0.25,"brakelight_signal_L":0.75,"lowhighbeam":0.25},"off":"off_road_lights",      "on":"off_road_lights_on",       "on_intense":"off_road_lights_on_intense"},
+        "off_road_lights_taillight_R":      {"simpleFunction":{"FR":0.25,"brakelight_signal_R":0.75,"lowhighbeam":0.25},"off":"off_road_lights",      "on":"off_road_lights_on",       "on_intense":"off_road_lights_on_intense"},
+        "off_road_lights_glass_taillight_L":{"simpleFunction":{"FL":0.25,"brakelight_signal_L":0.75,"lowhighbeam":0.25},"off":"off_road_lights_glass","on":"off_road_lights_glass_on", "on_intense":"off_road_lights_glass_on_intense"},
+        "off_road_lights_glass_taillight_R":{"simpleFunction":{"FR":0.25,"brakelight_signal_R":0.75,"lowhighbeam":0.25},"off":"off_road_lights_glass","on":"off_road_lights_glass_on", "on_intense":"off_road_lights_glass_on_intense"},
+        "off_road_lights_reverse":          {"simpleFunction":{"reverse":1},                                            "off":"off_road_lights",      "on":"off_road_lights_on",       "on_intense":"off_road_lights_on_intense"},
+        "off_road_lights_glass_reverse":    {"simpleFunction":{"reverse":1},                                            "off":"off_road_lights_glass","on":"off_road_lights_glass_on","on_intense":"off_road_lights_glass_on_intense"},
+        "off_road_lights_aux1":             {"simpleFunction":{"lowhighbeam":0.49},                                     "off":"off_road_lights",      "on":"off_road_lights_on",       "on_intense":"off_road_lights_on_intense"},
+        "off_road_lights_glass_aux1":       {"simpleFunction":{"lowhighbeam":0.49},                                     "off":"off_road_lights_glass","on":"off_road_lights_glass_on", "on_intense":"off_road_lights_glass_on_intense"},
+
+        "utility_flasher_FFR": {"simpleFunction":{"FFR":0.49,"lowhighbeam":0.49}, "off":"off_road_lights", "on":"off_road_lights_on", "on_intense":"off_road_lights_on_intense"},
+        "utility_flasher_FR":  {"simpleFunction":{"FR":0.49,"lowhighbeam":0.49},  "off":"off_road_lights", "on":"off_road_lights_on", "on_intense":"off_road_lights_on_intense"},
+        "utility_flasher_FL":  {"simpleFunction":{"FL":0.49,"lowhighbeam":0.49},  "off":"off_road_lights", "on":"off_road_lights_on", "on_intense":"off_road_lights_on_intense"},
+        "utility_flasher_FFL": {"simpleFunction":{"FFL":0.49,"lowhighbeam":0.49}, "off":"off_road_lights", "on":"off_road_lights_on", "on_intense":"off_road_lights_on_intense"},
+        "utility_flasher_RRR": {"simpleFunction":{"RRR":0.49,"lowhighbeam":0.49}, "off":"off_road_lights", "on":"off_road_lights_on", "on_intense":"off_road_lights_on_intense"},
+        "utility_flasher_RR":  {"simpleFunction":{"RR":0.49,"lowhighbeam":0.49},  "off":"off_road_lights", "on":"off_road_lights_on", "on_intense":"off_road_lights_on_intense"},
+        "utility_flasher_RL":  {"simpleFunction":{"RL":0.49,"lowhighbeam":0.49},  "off":"off_road_lights", "on":"off_road_lights_on", "on_intense":"off_road_lights_on_intense"},
+        "utility_flasher_RRL": {"simpleFunction":{"RRL":0.49,"lowhighbeam":0.49}, "off":"off_road_lights", "on":"off_road_lights_on", "on_intense":"off_road_lights_on_intense"},
+        "utility_flasher_glass_FFR": {"simpleFunction":{"FFR":0.49,"lowhighbeam":0.49}, "off":"off_road_lights_glass", "on":"off_road_lights_glass_on_amber", "on_intense":"off_road_lights_glass_on_intense_amber"},
+        "utility_flasher_glass_FR":  {"simpleFunction":{"FR":0.49,"lowhighbeam":0.49},  "off":"off_road_lights_glass", "on":"off_road_lights_glass_on_amber", "on_intense":"off_road_lights_glass_on_intense_amber"},
+        "utility_flasher_glass_FL":  {"simpleFunction":{"FL":0.49,"lowhighbeam":0.49},  "off":"off_road_lights_glass", "on":"off_road_lights_glass_on_amber", "on_intense":"off_road_lights_glass_on_intense_amber"},
+        "utility_flasher_glass_FFL": {"simpleFunction":{"FFL":0.49,"lowhighbeam":0.49}, "off":"off_road_lights_glass", "on":"off_road_lights_glass_on_amber", "on_intense":"off_road_lights_glass_on_intense_amber"},
+        "utility_flasher_glass_RRR": {"simpleFunction":{"RRR":0.49,"lowhighbeam":0.49}, "off":"off_road_lights_glass", "on":"off_road_lights_glass_on_amber", "on_intense":"off_road_lights_glass_on_intense_amber"},
+        "utility_flasher_glass_RR":  {"simpleFunction":{"RR":0.49,"lowhighbeam":0.49},  "off":"off_road_lights_glass", "on":"off_road_lights_glass_on_amber", "on_intense":"off_road_lights_glass_on_intense_amber"},
+        "utility_flasher_glass_RL":  {"simpleFunction":{"RL":0.49,"lowhighbeam":0.49},  "off":"off_road_lights_glass", "on":"off_road_lights_glass_on_amber", "on_intense":"off_road_lights_glass_on_intense_amber"},
+        "utility_flasher_glass_RRL": {"simpleFunction":{"RRL":0.49,"lowhighbeam":0.49}, "off":"off_road_lights_glass", "on":"off_road_lights_glass_on_amber", "on_intense":"off_road_lights_glass_on_intense_amber"},
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        {"deformGroup":"rollback_flasher_FFR", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["oval_led_aux1", ["rollback_deck"],[],{"materialOverride":[["off_road_lights_aux1","utility_flasher_FFR"]],"pos":{"x":-1.200, "y":-0.557, "z":0.845}, "rot":{"x":0, "y":0, "z":  0},"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+        {"deformGroup":"rollback_flasher_FFR", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["oval_led_aux1", ["rollback_deck"],[],{"materialOverride":[["off_road_lights_aux1","utility_flasher_FFR"]],"pos":{"x":-1.255, "y":-0.490, "z":0.845}, "rot":{"x":0, "y":0, "z":-90},"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+        {"deformGroup":"rollback_flasher_FR", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["oval_led_aux1", ["rollback_deck"],[],{"materialOverride":[["off_road_lights_aux1","utility_flasher_FR"]], "pos":{"x":-1.255, "y":1.210, "z":0.845}, "rot":{"x":0, "y":0, "z":-90},"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+        {"deformGroup":"rollback_flasher_RR", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["oval_led_aux1", ["rollback_deck"],[],{"materialOverride":[["off_road_lights_aux1","utility_flasher_RR"]], "pos":{"x":-1.255, "y":3.010, "z":0.845}, "rot":{"x":0, "y":0, "z":-90},"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+        {"deformGroup":"rollback_flasher_RRR", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["oval_led_aux1", ["rollback_deck"],[],{"materialOverride":[["off_road_lights_aux1","utility_flasher_RRR"]],"pos":{"x":-1.255, "y":4.710, "z":0.845}, "rot":{"x":0, "y":0, "z":-90},"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+
+        {"deformGroup":"rollback_flasher_FFR", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["oval_led_glass_orange_aux1", ["rollback_deck"],[],{"materialOverride":[["off_road_lights_glass_orange_aux1","utility_flasher_glass_FFR"]],"pos":{"x":-1.200, "y":-0.557, "z":0.845}, "rot":{"x":0, "y":0, "z":  0}}],
+        {"deformGroup":"rollback_flasher_FFR", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["oval_led_glass_orange_aux1", ["rollback_deck"],[],{"materialOverride":[["off_road_lights_glass_orange_aux1","utility_flasher_glass_FFR"]],"pos":{"x":-1.255, "y":-0.490, "z":0.845}, "rot":{"x":0, "y":0, "z":-90}}],
+        {"deformGroup":"rollback_flasher_FR", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["oval_led_glass_orange_aux1", ["rollback_deck"],[],{"materialOverride":[["off_road_lights_glass_orange_aux1","utility_flasher_glass_FR"]], "pos":{"x":-1.255, "y":1.210, "z":0.845}, "rot":{"x":0, "y":0, "z":-90}}],
+        {"deformGroup":"rollback_flasher_RR", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["oval_led_glass_orange_aux1", ["rollback_deck"],[],{"materialOverride":[["off_road_lights_glass_orange_aux1","utility_flasher_glass_RR"]], "pos":{"x":-1.255, "y":3.010, "z":0.845}, "rot":{"x":0, "y":0, "z":-90}}],
+        {"deformGroup":"rollback_flasher_RRR", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["oval_led_glass_orange_aux1", ["rollback_deck"],[],{"materialOverride":[["off_road_lights_glass_orange_aux1","utility_flasher_glass_RRR"]],"pos":{"x":-1.255, "y":4.710, "z":0.845}, "rot":{"x":0, "y":0, "z":-90}}],
+
+        {"deformGroup":"rollback_flasher_FFL", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["oval_led_aux1", ["rollback_deck"],[],{"materialOverride":[["off_road_lights_aux1","utility_flasher_FFL"]],"pos":{"x":1.200, "y":-0.557, "z":0.845}, "rot":{"x":0, "y":0, "z": 0},"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+        {"deformGroup":"rollback_flasher_FFL", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["oval_led_aux1", ["rollback_deck"],[],{"materialOverride":[["off_road_lights_aux1","utility_flasher_FFL"]],"pos":{"x":1.255, "y":-0.490, "z":0.845}, "rot":{"x":0, "y":0, "z":90},"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+        {"deformGroup":"rollback_flasher_FL", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["oval_led_aux1", ["rollback_deck"],[],{"materialOverride":[["off_road_lights_aux1","utility_flasher_FL"]], "pos":{"x":1.255, "y":1.210, "z":0.845}, "rot":{"x":0, "y":0, "z":90},"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+        {"deformGroup":"rollback_flasher_RL", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["oval_led_aux1", ["rollback_deck"],[],{"materialOverride":[["off_road_lights_aux1","utility_flasher_RL"]], "pos":{"x":1.255, "y":3.010, "z":0.845}, "rot":{"x":0, "y":0, "z":90},"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+        {"deformGroup":"rollback_flasher_RRL", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["oval_led_aux1", ["rollback_deck"],[],{"materialOverride":[["off_road_lights_aux1","utility_flasher_RRL"]],"pos":{"x":1.255, "y":4.710, "z":0.845}, "rot":{"x":0, "y":0, "z":90},"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+
+        {"deformGroup":"rollback_flasher_FFL", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["oval_led_glass_orange_aux1", ["rollback_deck"],[],{"materialOverride":[["off_road_lights_glass_orange_aux1","utility_flasher_glass_FFL"]],"pos":{"x":1.200, "y":-0.557, "z":0.845}, "rot":{"x":0, "y":0, "z":  0}}],
+        {"deformGroup":"rollback_flasher_FFL", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["oval_led_glass_orange_aux1", ["rollback_deck"],[],{"materialOverride":[["off_road_lights_glass_orange_aux1","utility_flasher_glass_FFL"]],"pos":{"x":1.255, "y":-0.490, "z":0.845}, "rot":{"x":0, "y":0, "z":90}}],
+        {"deformGroup":"rollback_flasher_FL", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["oval_led_glass_orange_aux1", ["rollback_deck"],[],{"materialOverride":[["off_road_lights_glass_orange_aux1","utility_flasher_glass_FL"]], "pos":{"x":1.255, "y":1.210, "z":0.845}, "rot":{"x":0, "y":0, "z":90}}],
+        {"deformGroup":"rollback_flasher_RL", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["oval_led_glass_orange_aux1", ["rollback_deck"],[],{"materialOverride":[["off_road_lights_glass_orange_aux1","utility_flasher_glass_RL"]], "pos":{"x":1.255, "y":3.010, "z":0.845}, "rot":{"x":0, "y":0, "z":90}}],
+        {"deformGroup":"rollback_flasher_RRL", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["oval_led_glass_orange_aux1", ["rollback_deck"],[],{"materialOverride":[["off_road_lights_glass_orange_aux1","utility_flasher_glass_RRL"]],"pos":{"x":1.255, "y":4.710, "z":0.845}, "rot":{"x":0, "y":0, "z":90}}],
+
+        {"deformGroup":"tiltbed_lights_R_break","deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["round_led_4inch_taillight_R", ["tiltframe"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.5, "pos":{"x":-0.800, "y":5.123, "z":0.663}, "rot":{"x":0, "y":0, "z":180}}],
+        ["round_led_4inch_taillight_R", ["tiltframe"],[],{"pos":{"x":-0.940, "y":5.123, "z":0.663}, "rot":{"x":0, "y":0, "z":180}}],
+        ["round_led_4inch_reverse",     ["tiltframe"],[],{"pos":{"x":-0.660, "y":5.123, "z":0.663}, "rot":{"x":0, "y":0, "z":180}}],
+        {"deformGroup":"tiltbed_lights_L_break","deformMaterialBase":"generic_halogen", "deformMaterialDamaged":"generic_halogen"},
+        ["round_led_4inch_taillight_L", ["tiltframe"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound4", "deformVolume":0.5, "pos":{"x": 0.800, "y":5.123, "z":0.663}, "rot":{"x":0, "y":0, "z":180}}],
+        ["round_led_4inch_taillight_L", ["tiltframe"],[],{"pos":{"x": 0.940, "y":5.123, "z":0.663}, "rot":{"x":0, "y":0, "z":180}}],
+        ["round_led_4inch_reverse",     ["tiltframe"],[],{"pos":{"x": 0.660, "y":5.123, "z":0.663}, "rot":{"x":0, "y":0, "z":180}}],
+        {"deformGroup":"tiltbed_lights_R_break","deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["round_led_4inch_glass_red_taillight_R", ["tiltframe"],[],{"pos":{"x":-0.800, "y":5.123, "z":0.663}, "rot":{"x":0, "y":0, "z":180}}],
+        ["round_led_4inch_glass_red_taillight_R", ["tiltframe"],[],{"pos":{"x":-0.940, "y":5.123, "z":0.663}, "rot":{"x":0, "y":0, "z":180}}],
+        ["round_led_4inch_glass_clear_reverse",   ["tiltframe"],[],{"pos":{"x":-0.660, "y":5.123, "z":0.663}, "rot":{"x":0, "y":0, "z":180}}],
+        {"deformGroup":"tiltbed_lights_L_break","deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["round_led_4inch_glass_red_taillight_L", ["tiltframe"],[],{"pos":{"x": 0.800, "y":5.123, "z":0.663}, "rot":{"x":0, "y":0, "z":180}}],
+        ["round_led_4inch_glass_red_taillight_L", ["tiltframe"],[],{"pos":{"x": 0.940, "y":5.123, "z":0.663}, "rot":{"x":0, "y":0, "z":180}}],
+        ["round_led_4inch_glass_clear_reverse",   ["tiltframe"],[],{"pos":{"x": 0.660, "y":5.123, "z":0.663}, "rot":{"x":0, "y":0, "z":180}}],
+
+        {"deformGroup":"tiltbed_lights_M_break","deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["oval_led_aux1", ["tiltframe"],[],{"pos":{"x":-0.275, "y":5.115, "z":0.663}, "rot":{"x":0, "y":0, "z":180}}],
+        ["oval_led_aux1", ["tiltframe"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound4", "deformVolume":0.5, "pos":{"x": 0.000, "y":5.115, "z":0.663}, "rot":{"x":0, "y":0, "z":180}}],
+        ["oval_led_aux1", ["tiltframe"],[],{"pos":{"x": 0.275, "y":5.115, "z":0.663}, "rot":{"x":0, "y":0, "z":180}}],
+        {"deformGroup":"tiltbed_lights_M_break","deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["oval_led_glass_aux1", ["tiltframe"],[],{"pos":{"x":-0.275, "y":5.115, "z":0.663}, "rot":{"x":0, "y":0, "z":180}}],
+        ["oval_led_glass_aux1", ["tiltframe"],[],{"pos":{"x": 0.000, "y":5.115, "z":0.663}, "rot":{"x":0, "y":0, "z":180}}],
+        ["oval_led_glass_aux1", ["tiltframe"],[],{"pos":{"x": 0.275, "y":5.115, "z":0.663}, "rot":{"x":0, "y":0, "z":180}}],
+        {"deformGroup":""},
+    ],
+},
+}

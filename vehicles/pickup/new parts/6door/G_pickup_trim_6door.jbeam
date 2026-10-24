@@ -1,0 +1,22 @@
+{
+"G_pickup_trim_6door": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Trim",
+        "value":150,
+    },
+    "slotType" : "G_pickup_trim_6door",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pickup_trim_body", ["pickup_body"],[]{"pos":{"x":0,"y":1.7987,"z":0}}],
+         ["pickup_trim_fender_R", ["pickup_fender_R"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["pickup_trim_fender_L", ["pickup_fender_L"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["pickup_trim_door_R", ["pickup_door_FR"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["pickup_trim_door_L", ["pickup_door_FL"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["pickup_trim_door_RR_crew", ["pickup_door_RR"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["pickup_trim_door_RL_crew", ["pickup_door_RL"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_pickup_trim_door_RR_6door", ["G_pickup_door_RR_6door"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_pickup_trim_door_RL_6door", ["G_pickup_door_RL_6door"],[]{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+},
+}

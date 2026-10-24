@@ -1,0 +1,41 @@
+{
+  "Body Style":"Dump Truck",
+  "BoundingBox":[
+    [
+      -0.8854,
+      -1.136,
+      -0.7234
+    ],
+    [
+      1.7534,
+      5.0361,
+      1.632
+    ]
+  ],
+  "Commercial Class":"Class 7 Truck",
+  "Config Type":"Custom",
+  "Configuration":"MD70 Dump Bed Upfit 4WD (A)",
+  "Description":"Late model single cab dump truck with 4WD and front super singles, using the newly developed 7-speed automatic transmission",
+  "Drivetrain":"4WD",
+  "Fuel Type":"Diesel",
+  "Induction Type":"Turbo",
+  "Off-Road Score":34,
+  "Population":4000,
+  "Power":312,
+  "PowerPeakRPM":2400,
+  "Propulsion":"ICE",
+  "Top Speed":32.65652803,
+  "Torque":948,
+  "TorquePeakRPM":"1150 - 1900",
+  "Transmission":"Automatic",
+  "Value":145000,
+  "Weight":7885,
+  "Weight/Power":27.83163265,
+  "Years":{
+    "max":1998,
+    "min":1992
+  },
+  "defaultPaintName1":"Tropical Blue",
+  "defaultPaintName2":"Lead",
+  "defaultPaintName3":"Lead"
+}

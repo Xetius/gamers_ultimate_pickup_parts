@@ -1,0 +1,23 @@
+{
+"G_pickup_gps_D55": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"BeamNavigator (D55)",
+        "value":250,
+    },
+    "slotType" : "gps",
+    "controller": [
+        ["fileName"],
+        ["beamNavigator"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["suctionmount", ["gps"], [],{"pos":{"x":0,"y":"$=0.0-($components.frame_F and $components.frame_F.offset_Y or 0)","z":0}}],
+         ["gpsholder", ["gps"], [],{"pos":{"x":0,"y":"$=0.0-($components.frame_F and $components.frame_F.offset_Y or 0)","z":0}}],
+         ["gps", ["gps"], [],{"pos":{"x":0,"y":"$=0.0-($components.frame_F and $components.frame_F.offset_Y or 0)","z":0}}],
+    ],
+    "glowMap":{
+        "screen_gps":{"simpleFunction":{"ignitionLevel":0.5}, "off":"screen_off","on":"beamnav_naviscreen_accessory", "on_intense":"screen_gps"},
+    },
+},
+}

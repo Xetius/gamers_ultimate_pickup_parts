@@ -1,0 +1,299 @@
+{
+"G_steelwheel_12a_19_5x6_75_R_2": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"19.5x6.75 Steel Rear Rear Wheels (White)",
+        "value":800,
+    },
+    "slotType" : "G_md_series_wheel_R_2_8",
+    "slots2": [
+        ["name",                        "allowTypes",                    "denyTypes", "default",                 "description"],
+        ["G_md_series_tire_R_2_19_5", ["G_md_series_tire_R_2_19_5"], [],          "G_md_series_tire_R_2_19_5", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //inner
+         ["steelwheel_12a_19.5x6.75_bare", ["wheel_R2R","wheelhub_R2R"],   [], {"pos":{"x":-0.715, "y":0.00, "z":0.00}, "rot":{"x": 17, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["steelwheel_12a_19.5x6.75_bare", ["wheel_R2L","wheelhub_R2L"],   [], {"pos":{"x": 0.715, "y":0.00, "z":0.00}, "rot":{"x":-17, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+         //outer
+         ["steelwheel_12a_19.5x6.75_bare", ["wheel_R2RR","wheelhub_R2RR"], [], {"pos":{"x":-0.996, "y":0.00, "z":0.00}, "rot":{"x": 19, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+         ["steelwheel_12a_19.5x6.75_bare", ["wheel_R2LL","wheelhub_R2LL"], [], {"pos":{"x": 0.996, "y":0.00, "z":0.00}, "rot":{"x":-19, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["steelwheel_12a_19.5x6.75_8lug", ["wheel_R2RR","wheelhub_R2RR"], [], {"pos":{"x":-0.722, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["steelwheel_12a_19.5x6.75_8lug", ["wheel_R2LL","wheelhub_R2LL"], [], {"pos":{"x": 0.722, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+         ["id",    "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"group":"wheelhub_R2RR"},
+         {"nodeWeight":30},
+         //rear hub 1
+         ["dw2r", -0.53,   0.00,   0.00,   {"staticCollision":false}],
+         ["dw2rr",-1.10,   0.00,   0.00],
+         {"group":"wheelhub_R2LL"},
+         ["dw2l",  0.53,   0.00,   0.00,   {"staticCollision":false}],
+         ["dw2ll", 1.10,   0.00,   0.00],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamDeform":150000,"beamStrength":"FLT_MAX"},
+          {"beamSpring":10001000,"beamDamp":150},
+          //wheel axis beams
+          ["dw2r", "dw2rr"],
+          ["dw2l", "dw2ll"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "components": {
+        "dualyOffsets_RR": {
+           "offsetInner": -0.18
+           "offsetOuter": 0.10
+        },
+    },
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            {"enableTireLbeams":true,"disableMeshBreaking":false,"disableHubMeshBreaking":false},
+
+            //general settings
+            {"hubRadius":0.262},
+            //{"wheelOffset":-0.1},
+            {"hubWidth":0.205},
+            {"numRays":12},
+            {"brakeSpring":150},//define higher value than hubs
+
+            //hub options
+            {"hubTreadBeamSpring":2201000, "hubTreadBeamDamp":60},
+            {"hubPeripheryBeamSpring":2201000, "hubPeripheryBeamDamp":60},
+            {"hubSideBeamSpring":4501000, "hubSideBeamDamp":60},
+            {"hubBeamDeform":110000, "hubBeamStrength":420000},
+            {"hubNodeWeight":1.4},
+            {"hubNodeMaterial":"|NM_METAL","hasTire":false},
+            {"hubFrictionCoef":0.5},
+    ],
+},
+"G_steelwheel_12a_19_5x6_75_R_2_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"19.5x6.75 Steel Rear Rear Wheels (Colored)",
+        "value":800,
+    },
+    "slotType" : "G_md_series_wheel_R_2_8",
+    "slots2": [
+        ["name",                        "allowTypes",                    "denyTypes", "default",                 "description"],
+        ["G_md_series_tire_R_2_19_5", ["G_md_series_tire_R_2_19_5"], [],          "G_md_series_tire_R_2_19_5", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //inner
+         ["steelwheel_12a_19.5x6.75", ["wheel_R2R","wheelhub_R2R"],   [], {"pos":{"x":-0.715, "y":0.00, "z":0.00}, "rot":{"x": 17, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["steelwheel_12a_19.5x6.75", ["wheel_R2L","wheelhub_R2L"],   [], {"pos":{"x": 0.715, "y":0.00, "z":0.00}, "rot":{"x":-17, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+         //outer
+         ["steelwheel_12a_19.5x6.75", ["wheel_R2RR","wheelhub_R2RR"], [], {"pos":{"x":-0.996, "y":0.00, "z":0.00}, "rot":{"x": 19, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+         ["steelwheel_12a_19.5x6.75", ["wheel_R2LL","wheelhub_R2LL"], [], {"pos":{"x": 0.996, "y":0.00, "z":0.00}, "rot":{"x":-19, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["steelwheel_12a_19.5x6.75_8lug", ["wheel_R2RR","wheelhub_R2RR"], [], {"pos":{"x":-0.722, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["steelwheel_12a_19.5x6.75_8lug", ["wheel_R2LL","wheelhub_R2LL"], [], {"pos":{"x": 0.722, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+         ["id",    "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"group":"wheelhub_R2RR"},
+         {"nodeWeight":30},
+         //rear hub 1
+         ["dw2r", -0.53,   0.00,   0.00,   {"staticCollision":false}],
+         ["dw2rr",-1.10,   0.00,   0.00],
+         {"group":"wheelhub_R2LL"},
+         ["dw2l",  0.53,   0.00,   0.00,   {"staticCollision":false}],
+         ["dw2ll", 1.10,   0.00,   0.00],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamDeform":150000,"beamStrength":"FLT_MAX"},
+          {"beamSpring":10001000,"beamDamp":150},
+          //wheel axis beams
+          ["dw2r", "dw2rr"],
+          ["dw2l", "dw2ll"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "components": {
+        "dualyOffsets_RR": {
+           "offsetInner": -0.18
+           "offsetOuter": 0.10
+        },
+    },
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            {"enableTireLbeams":true,"disableMeshBreaking":false,"disableHubMeshBreaking":false},
+
+            //general settings
+            {"hubRadius":0.262},
+            //{"wheelOffset":-0.1},
+            {"hubWidth":0.205},
+            {"numRays":12},
+            {"brakeSpring":150},//define higher value than hubs
+
+            //hub options
+            {"hubTreadBeamSpring":2201000, "hubTreadBeamDamp":60},
+            {"hubPeripheryBeamSpring":2201000, "hubPeripheryBeamDamp":60},
+            {"hubSideBeamSpring":4501000, "hubSideBeamDamp":60},
+            {"hubBeamDeform":110000, "hubBeamStrength":420000},
+            {"hubNodeWeight":1.4},
+            {"hubNodeMaterial":"|NM_METAL","hasTire":false},
+            {"hubFrictionCoef":0.5},
+    ],
+},
+"G_steelwheel_06a_19_5x9_R_2": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"19.5x9 Aluminium Rear Rear Wheels",
+        "value":800,
+    },
+    "slotType" : "G_md_series_wheel_R_2_8",
+    "slots2": [
+        ["name",                        "allowTypes",                    "denyTypes", "default",                 "description"],
+        ["G_md_series_tire_R_2_19_5", ["G_md_series_tire_R_2_19_5"], [],          "G_md_series_tire_R_2_19_5", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //inner
+         ["steelwheel_06a_19.5x6.75_bare", ["wheel_R2R","wheelhub_R2R"],   [], {"pos":{"x":-0.715, "y":0.00, "z":0.00}, "rot":{"x": 17, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["steelwheel_06a_19.5x6.75_bare", ["wheel_R2L","wheelhub_R2L"],   [], {"pos":{"x": 0.715, "y":0.00, "z":0.00}, "rot":{"x":-17, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+         //outer
+         ["steelwheel_06a_19.5x6.75_bare", ["wheel_R2RR","wheelhub_R2RR"], [], {"pos":{"x":-0.996, "y":0.00, "z":0.00}, "rot":{"x": 19, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+         ["steelwheel_06a_19.5x6.75_bare", ["wheel_R2LL","wheelhub_R2LL"], [], {"pos":{"x": 0.996, "y":0.00, "z":0.00}, "rot":{"x":-19, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["steelwheel_06a_19.5x6.75_8lug", ["wheel_R2RR","wheelhub_R2RR"], [], {"pos":{"x":-0.722, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["steelwheel_06a_19.5x6.75_8lug", ["wheel_R2LL","wheelhub_R2LL"], [], {"pos":{"x": 0.722, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+         ["id",    "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"group":"wheelhub_R2RR"},
+         {"nodeWeight":30},
+         //rear hub 1
+         ["dw2r", -0.53,   0.00,   0.00,   {"staticCollision":false}],
+         ["dw2rr",-1.10,   0.00,   0.00],
+         {"group":"wheelhub_R2LL"},
+         ["dw2l",  0.53,   0.00,   0.00,   {"staticCollision":false}],
+         ["dw2ll", 1.10,   0.00,   0.00],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamDeform":150000,"beamStrength":"FLT_MAX"},
+          {"beamSpring":8001000,"beamDamp":150},
+          //wheel axis beams
+          ["dw2r", "dw2rr"],
+          ["dw2l", "dw2ll"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "components": {
+        "dualyOffsets_RR": {
+           "offsetInner": -0.18
+           "offsetOuter": 0.10
+        },
+    },
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            {"enableTireLbeams":true,"disableMeshBreaking":false,"disableHubMeshBreaking":false},
+
+            //general settings
+            {"hubRadius":0.262},
+            //{"wheelOffset":-0.1},
+            {"hubWidth":0.21},
+            {"numRays":12},
+            {"brakeSpring":150},//define higher value than hubs
+
+            //hub options
+            {"hubTreadBeamSpring":2501000, "hubTreadBeamDamp":50},
+            {"hubPeripheryBeamSpring":2501000, "hubPeripheryBeamDamp":50},
+            {"hubSideBeamSpring":4501000, "hubSideBeamDamp":50},
+            {"hubBeamDeform":110000, "hubBeamStrength":420000},
+            {"hubNodeWeight":1.25},
+            {"hubNodeMaterial":"|NM_METAL","hasTire":false},
+            {"hubFrictionCoef":0.5},
+    ],
+},
+"G_steelwheel_06a_19_5x9_R_2_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"19.5x9 Aluminum Rear Rear Wheels (Polished)",
+        "value":1200,
+    },
+    "slotType" : "G_md_series_wheel_R_2_8",
+    "slots2": [
+        ["name",                        "allowTypes",                    "denyTypes", "default",                 "description"],
+        ["G_md_series_tire_R_2_19_5", ["G_md_series_tire_R_2_19_5"], [],          "G_md_series_tire_R_2_19_5", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //inner
+         ["steelwheel_06a_19.5x6.75", ["wheel_R2R","wheelhub_R2R"],   [], {"pos":{"x":-0.715, "y":0.00, "z":0.00}, "rot":{"x": 17, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["steelwheel_06a_19.5x6.75", ["wheel_R2L","wheelhub_R2L"],   [], {"pos":{"x": 0.715, "y":0.00, "z":0.00}, "rot":{"x":-17, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+         //outer
+         ["steelwheel_06a_19.5x6.75", ["wheel_R2RR","wheelhub_R2RR"], [], {"pos":{"x":-0.996, "y":0.00, "z":0.00}, "rot":{"x": 19, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+         ["steelwheel_06a_19.5x6.75", ["wheel_R2LL","wheelhub_R2LL"], [], {"pos":{"x": 0.996, "y":0.00, "z":0.00}, "rot":{"x":-19, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["steelwheel_06a_19.5x6.75_8lug", ["wheel_R2RR","wheelhub_R2RR"], [], {"pos":{"x":-0.722, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["steelwheel_06a_19.5x6.75_8lug", ["wheel_R2LL","wheelhub_R2LL"], [], {"pos":{"x": 0.722, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+         ["id",    "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"group":"wheelhub_R2R_1"},
+         {"nodeWeight":30},
+         //rear hub 1
+         ["dw2r", -0.53,   0.00,   0.00,   {"staticCollision":false}],
+         ["dw2rr",-1.10,   0.00,   0.00],
+         {"group":"wheelhub_R2LL"},
+         ["dw2l",  0.53,   0.00,   0.00,   {"staticCollision":false}],
+         ["dw2ll", 1.10,   0.00,   0.00],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamDeform":150000,"beamStrength":"FLT_MAX"},
+          {"beamSpring":10001000,"beamDamp":150},
+          //wheel axis beams
+          ["dw2r", "dw2rr"],
+          ["dw2l", "dw2ll"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "components": {
+        "dualyOffsets_RR": {
+           "offsetInner": -0.18
+           "offsetOuter": 0.10
+        },
+    },
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            {"enableTireLbeams":true,"disableMeshBreaking":false,"disableHubMeshBreaking":false},
+
+            //general settings
+            {"hubRadius":0.262},
+            //{"wheelOffset":-0.1},
+            {"hubWidth":0.21},
+            {"numRays":12},
+            {"brakeSpring":150},//define higher value than hubs
+
+            //hub options
+            {"hubTreadBeamSpring":2001000, "hubTreadBeamDamp":50},
+            {"hubPeripheryBeamSpring":2001000, "hubPeripheryBeamDamp":50},
+            {"hubSideBeamSpring":4001000, "hubSideBeamDamp":50},
+            {"hubBeamDeform":150000, "hubBeamStrength":440000},
+            {"hubNodeWeight":1.25},
+            {"hubNodeMaterial":"|NM_METAL","hasTire":false},
+            {"hubFrictionCoef":0.5},
+    ],
+},
+
+}

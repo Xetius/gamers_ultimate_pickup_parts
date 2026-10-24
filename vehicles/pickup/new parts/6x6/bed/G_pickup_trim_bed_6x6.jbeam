@@ -1,0 +1,28 @@
+{
+"G_pickup_trim_bed_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Bed Trim",
+        "value":125,
+    },
+    "slotType" : "G_pickup_trim_bed_6x6",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_trim_bed_6x6", ["pickup_bed"],[]{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+},
+"G_pickup_trim_bed_6x6_cut": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Bed Trim",
+        "value":125,
+    },
+    "slotType" : "G_pickup_trim_bed_6x6_cut",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_trim_bed_6x6_cut", ["pickup_bed"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_pickup_trim_fenderflare_6x6_RR", ["pickup_fenderflare_RR_dually"],[]{"pos":{"x":0,"y":-0.35,"z":0}}],
+         ["G_pickup_trim_fenderflare_6x6_RL", ["pickup_fenderflare_RL_dually"],[]{"pos":{"x":0,"y":-0.35,"z":0}}],
+    ],
+},
+}

@@ -1,0 +1,41 @@
+{
+  "Body Style":"Pickup",
+  "BoundingBox":[
+    [
+      -0.8854,
+      -1.136,
+      -0.7234
+    ],
+    [
+      1.7534,
+      5.0361,
+      1.632
+    ]
+  ],
+  "Commercial Class":"Class 6 Truck",
+  "Config Type":"Custom",
+  "Configuration":"MD60 Drag (M)",
+  "Description":"Early model single cab dragster with a highly built engine and only some weight savings",
+  "Drivetrain":"RWD",
+  "Fuel Type":"Diesel",
+  "Induction Type":"Turbo + N2O",
+  "Off-Road Score":34,
+  "Population":4000,
+  "Power":1865,
+  "PowerPeakRPM":2400,
+  "Propulsion":"ICE",
+  "Top Speed":32.65652803,
+  "Torque":4073,
+  "TorquePeakRPM":"1150 - 1900",
+  "Transmission":"Manual",
+  "Value":250000,
+  "Weight":4786,
+  "Weight/Power":27.83163265,
+  "Years":{
+    "max":1992,
+    "min":1986
+  },
+  "defaultPaintName1":"Ambitious Yellow",
+  "defaultPaintName2":"Cream",
+  "defaultPaintName3":"Lead"
+}

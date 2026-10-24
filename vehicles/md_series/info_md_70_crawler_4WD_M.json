@@ -1,0 +1,41 @@
+{
+  "Body Style":"Pickup",
+  "BoundingBox":[
+    [
+      -0.8854,
+      -1.136,
+      -0.7234
+    ],
+    [
+      1.7534,
+      5.0361,
+      1.632
+    ]
+  ],
+  "Commercial Class":"Class 7 Truck",
+  "Config Type":"Custom",
+  "Configuration":"MD70 Crawler 4WD (M)",
+  "Description":"Early model single cab bare frame truck with extreme gear reduction ontop of already crazy torque numbers, high ground clearance and massive 44 inch tires, made for climbing the biggest of rocks! Though it's size comes with downsides",
+  "Drivetrain":"4WD",
+  "Fuel Type":"Diesel",
+  "Induction Type":"Turbo",
+  "Off-Road Score":34,
+  "Population":4000,
+  "Power":464,
+  "PowerPeakRPM":2400,
+  "Propulsion":"ICE",
+  "Top Speed":32.65652803,
+  "Torque":1272,
+  "TorquePeakRPM":"1150 - 1900",
+  "Transmission":"Manual",
+  "Value":175000,
+  "Weight":5434,
+  "Weight/Power":27.83163265,
+  "Years":{
+    "max":1992,
+    "min":1986
+  },
+  "defaultPaintName1":"Cactus Green",
+  "defaultPaintName2":"Cactus Green",
+  "defaultPaintName3":"Lead"
+}

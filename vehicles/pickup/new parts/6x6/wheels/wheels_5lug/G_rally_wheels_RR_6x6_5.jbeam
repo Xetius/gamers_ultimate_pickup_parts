@@ -1,0 +1,2224 @@
+{
+"G_wheel_27a_15x7_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x7 Clockwise Gravel-A Rear Rear Wheels",
+        "value":750,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x7","tire_RR_6x6_205_65_15_rally", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["wheel_27a_15x7",   ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.115, "y":1, "z":1}}],
+        ["wheel_27a_15x7",   ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.115, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheels
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":4.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1rr", -0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1ll", 0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.04},
+        {"hubWidth":0.185},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":945900, "hubTreadBeamDamp":6},
+        {"hubPeripheryBeamSpring":945900, "hubPeripheryBeamDamp":6},
+        {"hubSideBeamSpring":1401000, "hubSideBeamDamp":6},
+        {"hubNodeWeight":0.42},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":56500, "hubBeamStrength":95000},
+    ],
+},
+"G_wheel_27a_15x6_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x6 Clockwise Gravel-A Rear Rear Wheels",
+        "value":700,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x6_altb","tire_RR_6x6_175_70_15_altb_rally", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         ["wheel_27a_15x6", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.1, "y":1, "z":1}}],
+         ["wheel_27a_15x6", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheels
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":5.0},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1rr", -0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1ll", 0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.05},
+        {"hubWidth":0.175},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":945900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":945900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1401000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.38},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_wheel_26a_15x6_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x6 Dreid C50 Rear Rear Wheels (White)",
+        "value":700,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x6_altb","tire_RR_6x6_175_70_15_altb_rally", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         ["wheel_26a_15x6", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.10, "y":1, "z":1}}],
+         ["wheel_26a_15x6", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.10, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheels
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":5.0},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1rr", -0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1ll", 0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.05},
+        {"hubWidth":0.175},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":945900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":945900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1401000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.38},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_wheel_26b_15x6_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x6 Dreid C50 Rear Rear Wheels (Colorable)",
+        "value":850,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x6_altb","tire_RR_6x6_175_70_15_altb_rally", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         ["wheel_26b_15x6", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.10, "y":1, "z":1}}],
+         ["wheel_26b_15x6", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.10, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheels
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":5.0},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1rr", -0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1ll", 0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.05},
+        {"hubWidth":0.175},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":945900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":945900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1401000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.38},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_wheel_26a_15x7_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x7 Dreid C50 Rear Rear Wheels (White)",
+        "value":700,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x7","tire_RR_6x6_205_50_15_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["wheel_26a_15x7",   ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.12, "y":1, "z":1}}],
+        ["wheel_26a_15x7",   ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.12, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheels
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":4.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1rr", -0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1ll", 0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.04},
+        {"hubWidth":0.185},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":945900, "hubTreadBeamDamp":6},
+        {"hubPeripheryBeamSpring":945900, "hubPeripheryBeamDamp":6},
+        {"hubSideBeamSpring":1401000, "hubSideBeamDamp":6},
+        {"hubNodeWeight":0.42},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":56500, "hubBeamStrength":95000},
+    ],
+},
+"G_wheel_26b_15x7_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x7 Dreid C50 Rear Rear Wheels (Colorable)",
+        "value":700,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x7","tire_RR_6x6_205_50_15_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["wheel_26b_15x7",   ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.12, "y":1, "z":1}}],
+        ["wheel_26b_15x7",   ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.12, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheels
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":4.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1rr", -0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1ll", 0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.04},
+        {"hubWidth":0.185},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":945900, "hubTreadBeamDamp":6},
+        {"hubPeripheryBeamSpring":945900, "hubPeripheryBeamDamp":6},
+        {"hubSideBeamSpring":1401000, "hubSideBeamDamp":6},
+        {"hubNodeWeight":0.42},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":56500, "hubBeamStrength":95000},
+    ],
+},
+"G_wheel_17a_15x6_RR_6x6_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x6 Dreid RallyPro Rear Rear Wheels (White)",
+        "value":700,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x6_altb","tire_RR_6x6_175_70_15_altb_rally", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         ["wheel_17a_15x6_alt", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.12, "y":1, "z":1}}],
+         ["wheel_17a_15x6_alt", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.12, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheels
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":5.0},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1rr", -0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1ll", 0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.05},
+        {"hubWidth":0.175},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":945900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":945900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1401000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.38},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_wheel_17b_15x6_RR_6x6_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x6 Dreid RallyPro Rear Rear Wheels (Gold)",
+        "value":700,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x6_altb","tire_RR_6x6_175_70_15_altb_rally", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         ["wheel_17b_15x6_alt", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.05, "y":1, "z":1}}],
+         ["wheel_17b_15x6_alt", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.05, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheels
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":5.0},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1rr", -0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1ll", 0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.05},
+        {"hubWidth":0.175},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":945900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":945900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1401000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.38},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_wheel_17c_15x6_RR_6x6_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x6 Dreid RallyPro Rear Rear Wheels (Black)",
+        "value":700,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x6_altb","tire_RR_6x6_175_70_15_altb_rally", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         ["wheel_17c_15x6_alt", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.12, "y":1, "z":1}}],
+         ["wheel_17c_15x6_alt", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.12, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheels
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":5.0},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1rr", -0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1ll", 0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.05},
+        {"hubWidth":0.175},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":945900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":945900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1401000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.38},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_wheel_17d_15x6_RR_6x6_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x6 Dreid RallyPro Rear Rear Wheels (Colorable)",
+        "value":850,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x6_altb","tire_RR_6x6_175_70_15_altb_rally", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         ["wheel_17d_15x6_alt", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.12, "y":1, "z":1}}],
+         ["wheel_17d_15x6_alt", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.12, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheels
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":5.0},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1rr", -0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1ll", 0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.05},
+        {"hubWidth":0.175},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":945900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":945900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1401000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.38},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_wheel_17a_15x7_RR_6x6_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x7 Dreid RallyPro Rear Rear Wheels (White)",
+        "value":700,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x7","tire_RR_6x6_205_50_15_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["wheel_17a_15x7_alt",   ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.12, "y":1, "z":1}}],
+        ["wheel_17a_15x7_alt",   ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.12, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheels
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":4.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1rr", -0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1ll", 0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.04},
+        {"hubWidth":0.185},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":945900, "hubTreadBeamDamp":6},
+        {"hubPeripheryBeamSpring":945900, "hubPeripheryBeamDamp":6},
+        {"hubSideBeamSpring":1401000, "hubSideBeamDamp":6},
+        {"hubNodeWeight":0.42},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":56500, "hubBeamStrength":95000},
+    ],
+},
+"G_wheel_17b_15x7_RR_6x6_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x7 Dreid RallyPro Rear Rear Wheels (Gold)",
+        "value":700,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x7","tire_RR_6x6_205_50_15_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["wheel_17b_15x7_alt",   ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.12, "y":1, "z":1}}],
+        ["wheel_17b_15x7_alt",   ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.12, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheels
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":4.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1rr", -0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1ll", 0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.04},
+        {"hubWidth":0.185},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":945900, "hubTreadBeamDamp":6},
+        {"hubPeripheryBeamSpring":945900, "hubPeripheryBeamDamp":6},
+        {"hubSideBeamSpring":1401000, "hubSideBeamDamp":6},
+        {"hubNodeWeight":0.42},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":56500, "hubBeamStrength":95000},
+    ],
+},
+"G_wheel_17c_15x7_RR_6x6_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x7 Dreid RallyPro Rear Rear Wheels (Black)",
+        "value":700,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x7","tire_RR_6x6_205_50_15_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["wheel_17c_15x7_alt",   ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.12, "y":1, "z":1}}],
+        ["wheel_17c_15x7_alt",   ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.12, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheels
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":4.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1rr", -0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1ll", 0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.04},
+        {"hubWidth":0.185},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":945900, "hubTreadBeamDamp":6},
+        {"hubPeripheryBeamSpring":945900, "hubPeripheryBeamDamp":6},
+        {"hubSideBeamSpring":1401000, "hubSideBeamDamp":6},
+        {"hubNodeWeight":0.42},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":56500, "hubBeamStrength":95000},
+    ],
+},
+"G_wheel_17d_15x7_RR_6x6_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x7 Dreid RallyPro Rear Rear Wheels (Colorable)",
+        "value":850,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x7","tire_RR_6x6_205_50_15_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["wheel_17d_15x7_alt",   ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.12, "y":1, "z":1}}],
+        ["wheel_17d_15x7_alt",   ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.12, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheels
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":4.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1rr", -0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1ll", 0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.04},
+        {"hubWidth":0.185},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":945900, "hubTreadBeamDamp":6},
+        {"hubPeripheryBeamSpring":945900, "hubPeripheryBeamDamp":6},
+        {"hubSideBeamSpring":1401000, "hubSideBeamDamp":6},
+        {"hubNodeWeight":0.42},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":56500, "hubBeamStrength":95000},
+    ],
+},
+"G_wheel_17a_15x8_RR_6x6_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x8 Dreid RallyPro Rear Rear Wheels (White)",
+        "value":750,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x8_altb","tire_RR_6x6_225_50_15_altb_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["wheel_17a_15x8_alt", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.48, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["wheel_17a_15x8_alt", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.48, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheels
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":5.0},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1rr", -0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1ll", 0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.04},
+        {"hubWidth":0.225},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":945900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":945900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1401000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.40},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":56500, "hubBeamStrength":95000},
+    ],
+},
+"G_wheel_17a_16x8_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"16x8 Dreid RallyPro Rear Rear Wheels (White)",
+        "value":800,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_16x8","tire_RR_6x6_225_50_16_race", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["wheel_17a_16x8", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["wheel_17a_16x8", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0, 0],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, 0, 0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.215},
+        {"wheelOffset":-0.015},
+        {"hubWidth":0.225},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1035900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1035900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1651000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.45},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":56500, "hubBeamStrength":95000},
+    ],
+},
+"G_wheel_17b_15x8_RR_6x6_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x8 Dreid RallyPro Rear Rear Wheels (Gold)",
+        "value":750,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x8_altb","tire_RR_6x6_225_50_15_altb_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["wheel_17b_15x8_alt", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.48, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.1, "y":1, "z":1}}],
+        ["wheel_17b_15x8_alt", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.48, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheels
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":5.0},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1rr", -0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1ll", 0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.04},
+        {"hubWidth":0.225},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":945900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":945900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1401000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.40},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":56500, "hubBeamStrength":95000},
+    ],
+},
+"G_wheel_17b_16x8_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"16x8 Dreid RallyPro Rear Rear Wheels (Gold)",
+        "value":800,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_16x8","tire_RR_6x6_225_50_16_race", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["wheel_17b_16x8", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.1, "y":1, "z":1}}],
+        ["wheel_17b_16x8", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0, 0],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, 0, 0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.215},
+        {"wheelOffset":-0.015},
+        {"hubWidth":0.225},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1035900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1035900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1651000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.45},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":56500, "hubBeamStrength":95000},
+    ],
+},
+"G_wheel_17c_15x8_RR_6x6_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x8 Dreid RallyPro Rear Rear Wheels (Black)",
+        "value":750,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x8_altb","tire_RR_6x6_225_50_15_altb_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["wheel_17c_15x8_alt", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.48, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.1, "y":1, "z":1}}],
+        ["wheel_17c_15x8_alt", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.48, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheels
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":5.0},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1rr", -0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1ll", 0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.04},
+        {"hubWidth":0.225},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":945900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":945900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1401000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.40},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":56500, "hubBeamStrength":95000},
+    ],
+},
+"G_wheel_17c_16x8_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"16x8 Dreid RallyPro Rear Rear Wheels (Black)",
+        "value":800,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_16x8","tire_RR_6x6_225_50_16_race", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["wheel_17c_16x8", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.1, "y":1, "z":1}}],
+        ["wheel_17c_16x8", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0, 0],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, 0, 0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.215},
+        {"wheelOffset":-0.015},
+        {"hubWidth":0.225},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1035900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1035900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1651000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.45},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":56500, "hubBeamStrength":95000},
+    ],
+},
+"G_wheel_17d_15x8_RR_6x6_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x8 Dreid RallyPro Rear Rear Wheels (Colorable)",
+        "value":900,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x8_altb","tire_RR_6x6_225_50_15_altb_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["wheel_17d_15x8_alt", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.48, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.1, "y":1, "z":1}}],
+        ["wheel_17d_15x8_alt", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.48, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheels
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":5.0},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1rr", -0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.31, 0.0, 0.0, {"staticCollision":false}],
+        ["rwg1ll", 0.57, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.04},
+        {"hubWidth":0.225},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":945900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":945900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1401000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.40},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":56500, "hubBeamStrength":95000},
+    ],
+},
+"G_wheel_17d_16x8_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"16x8 Dreid RallyPro Rear Rear Wheels (Colorable)",
+        "value":950,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_16x8","tire_RR_6x6_225_50_16_race", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["wheel_17d_16x8", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.1, "y":1, "z":1}}],
+        ["wheel_17d_16x8", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0, 0],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, 0, 0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.215},
+        {"wheelOffset":-0.015},
+        {"hubWidth":0.225},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1035900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1035900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1651000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.45},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":56500, "hubBeamStrength":95000},
+    ],
+},
+"G_wheel_26a_16x8_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"16x8 Dreid C50-S Rear Rear Wheels (White)",
+        "value":950,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_16x8","tire_RR_6x6_225_50_16_race", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["wheel_26a_16x8", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.1, "y":1, "z":1}}],
+        ["wheel_26a_16x8", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0, 0],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, 0, 0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.215},
+        {"wheelOffset":-0.015},
+        {"hubWidth":0.225},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1035900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1035900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1651000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.45},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":56500, "hubBeamStrength":95000},
+    ],
+},
+"G_wheel_26b_16x8_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"16x8 Dreid C50-S Rear Rear Wheels (Colorable)",
+        "value":950,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_16x8","tire_RR_6x6_225_50_16_race", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["wheel_26b_16x8", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.1, "y":1, "z":1}}],
+        ["wheel_26b_16x8", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0, 0],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, 0, 0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.215},
+        {"wheelOffset":-0.015},
+        {"hubWidth":0.225},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1035900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1035900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1651000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.45},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":56500, "hubBeamStrength":95000},
+    ],
+},
+"G_wheel_26b_17x8_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"17x8 Dreid C50-S Rear Rear Wheels (Colorable)",
+        "value":1000,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_17x8","tire_RR_6x6_225_40_17_race", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["wheel_26b_17x8", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.50, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.06, "y":1.016, "z":1.016}}],
+        ["wheel_26b_17x8", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.50, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.06, "y":1.016, "z":1.016}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0, 0],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, 0, 0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.235},
+        {"wheelOffset":-0.035},
+        {"hubWidth":0.225},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":990900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":990900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.42},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_wheel_26a_17x8_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"17x8 Dreid C50-S Rear Rear Wheels (White)",
+        "value":850,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_17x8","tire_RR_6x6_225_40_17_race", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["wheel_26a_17x8", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.50, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.06, "y":1.016, "z":1.016}}],
+        ["wheel_26a_17x8", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.50, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.06, "y":1.016, "z":1.016}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0, 0],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, 0, 0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.235},
+        {"wheelOffset":-0.035},
+        {"hubWidth":0.225},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":990900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":990900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.42},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_wheel_dreid_c70_18x9_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"18x9 Dreid C70-2 Rear Rear Wheels (Colorable)",
+        "value":1050,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_18x9","tire_RR_6x6_245_40_18_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["wheel_dreid_c70_18x9", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.512, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.02, "y":0.96, "z":0.96}}],
+        ["wheel_dreid_c70_18x9", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.512, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.02, "y":0.96, "z":0.96}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":3501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.245},
+        {"wheelOffset":-0.045},
+        {"hubWidth":0.25},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":990900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":990900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.43},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_wheel_dreid_c70_18x10_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"18x10 Dreid C70-2 Rear Rear Wheels (Colorable)",
+        "value":1550,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_18x10_alt","tire_RR_6x6_275_40_18_alt_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["wheel_dreid_c70_18x11", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.517, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.92, "y":0.96, "z":0.96}}],
+        ["wheel_dreid_c70_18x11", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.517, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":0.92, "y":0.96, "z":0.96}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0, 0],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, 0, 0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":3501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.245},
+        {"wheelOffset":-0.055},
+        {"hubWidth":0.280},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1751000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.56},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_wheel_dreid_c70_18x11_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"18x11 Dreid C70-2 Rear Rear Wheels (Colorable)",
+        "value":1850,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_18x11","tire_RR_6x6_295_30_18_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["wheel_dreid_c70_18x11", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.467, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.99, "y":0.96, "z":0.96}}],
+        ["wheel_dreid_c70_18x11", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.467, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":0.99, "y":0.96, "z":0.96}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":3501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.245},
+        {"wheelOffset":-0.005},
+        {"hubWidth":0.300},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":990900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":990900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1601000, "hubSideBeamDamp":10},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+        {"hubNodeWeight":0.46},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_wheel_dreid_c70_19x9_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"19x9 Dreid C70-2 Rear Rear Wheels (Colorable)",
+        "value":1150,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_19x9","tire_RR_6x6_245_35_19_sport", "Front Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["wheel_dreid_c70_19x9", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.511, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.02, "y":0.96, "z":0.96}}],
+         ["wheel_dreid_c70_19x9", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.511, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.02, "y":0.96, "z":0.96}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //front wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":3501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+        //general settings
+        {"hubRadius":0.255},
+        {"wheelOffset":-0.045},
+        {"hubWidth":0.25},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1551000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.48},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_wheel_dreid_c70_19x10_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"19x10 Dreid C70-2 Rear Rear Wheels (Colorable)",
+        "value":1350,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_19x10","tire_RR_6x6_265_35_19_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["wheel_dreid_c70_19x11", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.497, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.915, "y":0.96, "z":0.96}}],
+         ["wheel_dreid_c70_19x11", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.497, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":0.915, "y":0.96, "z":0.96}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":3501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.255},
+        {"wheelOffset":-0.035},
+        {"hubWidth":0.280},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1035900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1035900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1651000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.48},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_wheel_dreid_c70_19x11_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"19x11 Dreid C70-2 Rear Rear Wheels (Colorable)",
+        "value":1550,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_19x11","tire_RR_6x6_295_25_19_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["wheel_dreid_c70_19x11", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.473, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.01, "y":0.96, "z":0.96}}],
+         ["wheel_dreid_c70_19x11", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.473, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.01, "y":0.96, "z":0.96}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //front wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":3501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+        //general settings
+        {"hubRadius":0.255},
+        {"wheelOffset":-0.01},
+        {"hubWidth":0.3},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1551000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.48},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+"G_wheel_dreid_c70_19x12_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"19x12 Dreid C70-2-D Rear Rear Wheels (Colorable)",
+        "value":1750,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_19x12","tire_RR_6x6_345_35_19_race", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["wheel_dreid_c70_19x12", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.473, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.01, "y":0.96, "z":0.96}}],
+         ["wheel_dreid_c70_19x12", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.473, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.01, "y":0.96, "z":0.96}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //front wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":3501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+        //general settings
+        {"hubRadius":0.255},
+        {"wheelOffset":-0.0225},
+        {"hubWidth":0.325},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1551000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.48},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+    ],
+},
+}

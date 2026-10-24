@@ -1,0 +1,72 @@
+{
+"G_pickup_tiltdeck_hydraulicPump_heavy": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Hydraulic Pump",
+        "value":1200,
+    },
+    "slotType" : "G_pickup_tiltdeck_hydraulicPump",
+    "controller": [
+        ["fileName"],
+        ["hydraulics/electricHydraulics", {"name":"rampControl", "controlElectricsName":["jack"], "motorThrottleElectricsName":"pumpThrottle"}],
+    ]
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["electricMotor", "hydraulicsMotor", "dummy", 0, {"electricsThrottleName":"pumpThrottle"}],
+        ["hydraulicPump", "pump1", "hydraulicsMotor", 1],
+    ],
+    "pump1": {
+        "pumpType":"fixedDisplacement",
+        "pumpMaxDisplacement":0.00000222,
+        "pumpWorkingPressure": 44000000,
+        "gearRatio":1.0,
+        "isConnected":true,
+        "accumulatorMaxVolume":0.000006,
+        "initialAccumulatorOilVolume": 0.000004,
+        "initialAccumulatorPressure":0,
+        "reliefOpeningPressure":32000000,
+        "reliefPressureRange": 500000,
+        "showDebugGraph":false
+
+        "pumpLoopEvent":"event:>Vehicle>Hydraulics>Pump_Small_01",
+        "pumpLoopVolumeFlowCoefMinFlow": 0.000005,
+        "pumpLoopVolumeFlowCoefMaxFlow": 0.00001,
+        "pumpLoopVolumeMinPressure": 1000000,
+        "pumpLoopVolumeMaxPressure": 30000000,
+        "pumpLoopVolumeMin": 0.6,
+        "pumpLoopVolumeMax": 1,
+        "pumpLoopPitchMinFlow": 0.00005,
+        "pumpLoopPitchMaxFlow": 0.00015,
+        "pumpLoopVolumeSmoothingInRate":2
+        "pumpLoopVolumeSmoothingStartAccel":300
+        "pumpLoopVolumeSmoothingStopAccel":300
+        "pumpLoopVolumeSmoothingOutRate":10
+        "pumpLoopPitchSmoothingInRate":50
+        "pumpLoopPitchSmoothingStartAccel":30
+        "pumpLoopPitchSmoothingStopAccel":30
+        "pumpLoopPitchSmoothingOutRate":50
+    }
+
+    "hydraulicsMotor":{
+        "torque":[
+            ["rpm", "torque"],
+            [0,    12.05],
+            [500,  12.03],
+            [1000, 12.02],
+            [1500, 12.03],
+            [2000, 11.92],
+            [2600, 11.0],
+            [3000, 6.4],
+            //[3500, 2.0],
+            [3700, 0.4],
+           // [4000, 0.1],
+        ],
+        "isAffectedByIgnitionLevel": false
+        "maxRPM":3700,
+        "inertia":0.0005,
+        "friction":0.5,
+        "dynamicFriction":0.0003,
+        "electricalEfficiency":0.95,
+    },
+},
+}

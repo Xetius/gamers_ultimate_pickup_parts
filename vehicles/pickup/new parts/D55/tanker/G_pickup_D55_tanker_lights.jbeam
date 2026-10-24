@@ -1,0 +1,361 @@
+{
+"G_pickup_D55_tanker_lights": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Clearance Lights",
+        "value":500,
+    },
+    "slotType" : "G_pickup_D55_tanker_lights",
+    "slots2": [
+        ["name", "allowTypes", "denyTypes", "default", "description"],
+        ["G_pickup_D55_tanker_ID_L_bulb", ["generic_2inch_led_red_1W"], [], "generic_2inch_led_red_1W", "ID (L)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "tnk41l", "$nodeX": "tnk41r", "$nodeY": "tnk42l",
+          "$deformGroup": "rearlights_break",
+          "$posX": 0.30, "$posY": 3.295, "$posZ": 2.15,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["G_pickup_D55_tanker_ID_C_bulb", ["generic_2inch_led_red_1W"], [], "generic_2inch_led_red_1W", "ID (C)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "tnk41l", "$nodeX": "tnk41r", "$nodeY": "tnk42l",
+          "$deformGroup": "rearlights_break",
+          "$posX": 0.00, "$posY": 3.295, "$posZ": 2.15,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["G_pickup_D55_tanker_ID_R_bulb", ["generic_2inch_led_red_1W"], [], "generic_2inch_led_red_1W", "ID (R)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "tnk41l", "$nodeX": "tnk41r", "$nodeY": "tnk42l",
+          "$deformGroup": "rearlights_break",
+          "$posX": -0.30, "$posY": 3.295, "$posZ": 2.15,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["G_pickup_D55_tanker_side_L_rear_bulb", ["generic_2inch_led_red_1W"], [], "generic_2inch_led_red_1W", "Side L rear",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "tnk41l", "$nodeX": "tnk31l", "$nodeY": "tnk42l",
+          "$deformGroup": "rearlights_break",
+          "$posX": 0.434, "$posY": 3.15, "$posZ": 2.12,
+          "$rotX": 0, "$rotY": -20, "$rotZ": -270
+        }
+        }],
+        ["G_pickup_D55_tanker_side_R_rear_bulb", ["generic_2inch_led_red_1W"], [], "generic_2inch_led_red_1W", "Side R rear",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "tnk41r", "$nodeX": "tnk31r", "$nodeY": "tnk42r",
+          "$deformGroup": "rearlights_break",
+          "$posX": -0.434, "$posY": 3.15, "$posZ": 2.12,
+          "$rotX": 0, "$rotY": 20, "$rotZ": -90
+        }
+        }],
+        ["G_pickup_D55_tanker_side_L_front_bulb", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Side L front",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "tnk47l", "$nodeX": "tnk37l", "$nodeY": "tnk42l",
+          "$deformGroup": "frontlights_break",
+          "$posX": 0.434, "$posY": 0.65, "$posZ": 2.12,
+          "$rotX": 0, "$rotY": -20, "$rotZ": -270
+        }
+        }],
+        ["G_pickup_D55_tanker_side_R_front_bulb", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Side R front",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "tnk47r", "$nodeX": "tnk37r", "$nodeY": "tnk42r",
+          "$deformGroup": "frontlights_break",
+          "$posX": -0.434, "$posY": 0.65, "$posZ": 2.12,
+          "$rotX": 0, "$rotY": 20, "$rotZ": -90
+        }
+        }],
+        ["G_pickup_D55_tanker_bottom_L_rear_bulb", ["generic_2inch_led_red_1W"], [], "generic_2inch_led_red_1W", "Bottom L rear",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "tnk11ll", "$nodeX": "tnk1l", "$nodeY": "tnk12l",
+          "$deformGroup": "rearlights2L_break",
+          "$posX": 1.205, "$posY": 3.26, "$posZ": 1.18,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 90
+        }
+        }],
+        ["G_pickup_D55_tanker_bottom_R_rear_bulb", ["generic_2inch_led_red_1W"], [], "generic_2inch_led_red_1W", "Bottom R rear",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "tnk11rr", "$nodeX": "tnk1r", "$nodeY": "tnk12r",
+          "$deformGroup": "rearlights2R_break",
+          "$posX": -1.205, "$posY": 3.26, "$posZ": 1.18,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_pickup_D55_tanker_bottom_L_front_bulb", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Bottom L front",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "tnk17ll", "$nodeX": "tnk7l", "$nodeY": "tnk12l",
+          "$deformGroup": "frontlights2L_break",
+          "$posX": 1.205, "$posY": 0.56, "$posZ": 1.18,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 90
+        }
+        }],
+        ["G_pickup_D55_tanker_bottom_R_front_bulb", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Bottom R front",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "tnk17rr", "$nodeX": "tnk7r", "$nodeY": "tnk12r",
+          "$deformGroup": "frontlights2R_break",
+          "$posX": -1.205, "$posY": 0.56, "$posZ": 1.18,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+
+         ["G_pickup_D55_tanker_upfit_clearance_mounts", ["tanker", "tanker_lights"],[],{"pos":{"x": 0.0, "y":-0.35, "z":0.0}}],
+
+         //ID lights
+         {"deformGroup":"rearlights_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+         ["oval_led_aux1", ["tanker"],[],{"pos":{"x": 0.30, "y":3.295, "z":2.15},  "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["oval_led_aux1", ["tanker"],[],{"pos":{"x": 0.00, "y":3.295, "z":2.15},  "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["oval_led_aux1", ["tanker"],[],{"pos":{"x":-0.30, "y":3.295, "z":2.15},  "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         {"deformGroup":"rearlights_break", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+         ["oval_led_glass_aux1", ["tanker"],[],{"pos":{"x": 0.30, "y":3.295, "z":2.15}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["oval_led_glass_aux1", ["tanker"],[],{"pos":{"x": 0.00, "y":3.295, "z":2.15}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["oval_led_glass_aux1", ["tanker"],[],{"pos":{"x":-0.30, "y":3.295, "z":2.15}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+
+         //side lights
+         {"deformGroup":"rearlights_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+         ["round_led_2inch_aux1", ["tanker"],[],{"pos":{"x":0.434, "y":3.15, "z":2.12}, "rot":{"x":0, "y":-22, "z":90}, "scale":{"x":1, "y":1, "z":1}}],
+         {"deformGroup":"frontlights_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+         ["round_led_2inch_aux2", ["tanker"],[],{"pos":{"x":0.434, "y":0.65, "z":2.12}, "rot":{"x":0, "y":-22, "z":90}, "scale":{"x":1, "y":1, "z":1}}],
+
+         {"deformGroup":"rearlights_break", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+         ["round_led_2inch_glass_red_aux1",  ["tanker"],[],{"pos":{"x":0.434, "y":3.15, "z":2.12}, "rot":{"x":0, "y":-22, "z":90}, "scale":{"x":1, "y":1, "z":1}}],
+         {"deformGroup":"frontlights_break", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+         ["round_led_2inch_glass_amber_aux2",["tanker"],[],{"pos":{"x":0.434, "y":0.65, "z":2.12}, "rot":{"x":0, "y":-22, "z":90}, "scale":{"x":1, "y":1, "z":1}}],
+
+         {"deformGroup":"rearlights_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+         ["round_led_2inch_aux1", ["tanker"],[],{"pos":{"x":-0.434, "y":3.15, "z":2.12}, "rot":{"x":0, "y":22, "z":-90}, "scale":{"x":1, "y":1, "z":1}}],
+         {"deformGroup":"frontlights_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+         ["round_led_2inch_aux2", ["tanker"],[],{"pos":{"x":-0.434, "y":0.65, "z":2.12}, "rot":{"x":0, "y":22, "z":-90}, "scale":{"x":1, "y":1, "z":1}}],
+
+         {"deformGroup":"rearlights_break", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+         ["round_led_2inch_glass_red_aux1",  ["tanker"],[],{"pos":{"x":-0.434, "y":3.15, "z":2.12}, "rot":{"x":0, "y":22, "z":-90}, "scale":{"x":1, "y":1, "z":1}}],
+         {"deformGroup":"frontlights_break", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+         ["round_led_2inch_glass_amber_aux2",["tanker"],[],{"pos":{"x":-0.434, "y":0.65, "z":2.12}, "rot":{"x":0, "y":22, "z":-90}, "scale":{"x":1, "y":1, "z":1}}],
+
+         //width indicators
+         {"deformGroup":"rearlights2L_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+         ["round_led_2inch_aux1", ["tanker", "tanker_lights"],[],{"pos":{"x":1.205, "y":3.26, "z":1.21}, "rot":{"x":0, "y":0, "z":90}, "scale":{"x":1, "y":1, "z":1}}],
+         {"deformGroup":"frontlights2L_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+         ["round_led_2inch_aux2", ["tanker", "tanker_lights"],[],{"pos":{"x":1.205, "y":0.56, "z":1.21}, "rot":{"x":0, "y":0, "z":90}, "scale":{"x":1, "y":1, "z":1}}],
+
+         {"deformGroup":"rearlights2L_break", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+         ["round_led_2inch_glass_red_aux1",  ["tanker", "tanker_lights"],[],{"pos":{"x":1.205, "y":3.26, "z":1.21}, "rot":{"x":0, "y":0, "z":90}, "scale":{"x":1, "y":1, "z":1}}],
+         {"deformGroup":"frontlights2L_break", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+         ["round_led_2inch_glass_amber_aux2",["tanker", "tanker_lights"],[],{"pos":{"x":1.205, "y":0.56, "z":1.21}, "rot":{"x":0, "y":0, "z":90}, "scale":{"x":1, "y":1, "z":1}}],
+
+         {"deformGroup":"rearlights2R_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+         ["round_led_2inch_aux1", ["tanker", "tanker_lights"],[],{"pos":{"x":-1.205, "y":3.26, "z":1.21}, "rot":{"x":0, "y":0, "z":-90}, "scale":{"x":1, "y":1, "z":1}}],
+         {"deformGroup":"frontlights2R_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+         ["round_led_2inch_aux2", ["tanker", "tanker_lights"],[],{"pos":{"x":-1.205, "y":0.56, "z":1.21}, "rot":{"x":0, "y":0, "z":-90}, "scale":{"x":1, "y":1, "z":1}}],
+
+         {"deformGroup":"rearlights2R_break", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+         ["round_led_2inch_glass_red_aux1",  ["tanker", "tanker_lights"],[],{"pos":{"x":-1.205, "y":3.26, "z":1.21}, "rot":{"x":0, "y":0, "z":-90}, "scale":{"x":1, "y":1, "z":1}}],
+         {"deformGroup":"frontlights2R_break", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+         ["round_led_2inch_glass_amber_aux2",["tanker", "tanker_lights"],[],{"pos":{"x":-1.205, "y":0.56, "z":1.21}, "rot":{"x":0, "y":0, "z":-90}, "scale":{"x":1, "y":1, "z":1}}],
+
+         {"deformGroup":""},
+    ],
+    "nodes": [
+        ["id",      "posX", "posY", "posZ"],
+        {"frictionCoef":0.5},
+        {"collision":true},
+        {"selfCollision":true},
+        {"nodeMaterial":"|NM_METAL"},
+
+        //sticking out parts
+        {"group":"tanker_lights"},
+        {"nodeWeight":1.855},
+        ["tnk11rr",-1.205,  3.26,   1.21],
+        ["tnk11ll", 1.205,  3.26,   1.21],
+        ["tnk17rr",-1.205,  0.56,   1.21],
+        ["tnk17ll", 1.205,  0.56,   1.21],
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:",    "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":1400100,"beamDamp":150},
+        {"beamDeform":6200,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":1.01},
+
+        ["tnk11rr", "tnk11ll"],
+        ["tnk17rr", "tnk17ll"],
+
+        {"deformGroup":"frontlights2R_break", "deformationTriggerRatio":0.005},
+        ["tnk17rr", "tnk17r"],
+        ["tnk17rr", "tnk7r"],
+        ["tnk17rr", "tnk12r"],
+        ["tnk17rr", "tnk2r"],
+
+        {"deformGroup":"frontlights2L_break", "deformationTriggerRatio":0.005},
+        ["tnk17ll", "tnk17l"],
+        ["tnk17ll", "tnk7l"],
+        ["tnk17ll", "tnk12l"],
+        ["tnk17ll", "tnk2l"],
+
+        {"deformGroup":"rearlights2R_break", "deformationTriggerRatio":0.005},
+        ["tnk11rr", "tnk11r"],
+        ["tnk11rr", "tnk1r"],
+        ["tnk11rr", "tnk12r"],
+        ["tnk11rr", "tnk2r"],
+
+        {"deformGroup":"rearlights2L_break", "deformationTriggerRatio":0.005},
+        ["tnk11ll", "tnk11l"],
+        ["tnk11ll", "tnk1l"],
+        ["tnk11ll", "tnk12l"],
+        ["tnk11ll", "tnk2l"],
+
+        {"deformGroup":"", "deformationTriggerRatio":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+        ["id1:",    "id2:",   "id3:"],
+        {"groundModel":"metal"},
+        {"dragCoef":1},
+        {"group":"tanker_lights"},
+
+        ["tnk17rr", "tnk7r",  "tnk17r"],
+        ["tnk17ll", "tnk17l", "tnk7l"],
+        ["tnk11rr", "tnk11r", "tnk1r"],
+        ["tnk11ll", "tnk1l",  "tnk11l"],
+    ],
+},
+"G_pickup_D55_tanker_taillights": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Tail Lights",
+        "value":500,
+    },
+    "slotType" : "G_pickup_D55_tanker_taillights",
+    "slots2": [
+        ["name", "allowTypes", "denyTypes", "default", "description"],
+        ["G_pickup_D55_tanker_taillight_R_outer_bulb", ["generic_4inch_led_red_5W"], [], "generic_4inch_led_red_5W", "4\" Red tail (R outer)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighBrakeSignal_R_filament",
+          "$nodeRef": "tb2rr", "$nodeX": "tb2r", "$nodeY": "tb3rr",
+          "$deformGroup": "taillight_R_break",
+          "$shadowEnable": 1,
+          "$posX": -1.13, "$posY": 3.845, "$posZ": 0.55,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["G_pickup_D55_tanker_taillight_R_inner_bulb", ["generic_4inch_led_red_5W"], [], "generic_4inch_led_red_5W", "4\" Red tail (R inner)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighBrakeSignal_R_filament",
+          "$nodeRef": "tb2ll", "$nodeX": "tb2l", "$nodeY": "tb3ll",
+          "$deformGroup": "taillight_R_break",
+          "$shadowEnable": 1,
+          "$posX": -0.92, "$posY": 3.845, "$posZ": 0.55,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["G_pickup_D55_tanker_reverse_R_bulb", ["generic_4inch_led_white_5W"], [], "generic_4inch_led_white_5W", "4\" White reverse (R)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "reverse",
+          "$nodeRef": "tb2rr", "$nodeX": "tb2r", "$nodeY": "tb3rr",
+          "$deformGroup": "taillight_R_break",
+          "$shadowEnable": 1,
+          "$posX": -0.71, "$posY": 3.845, "$posZ": 0.55,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["G_pickup_D55_tanker_taillight_L_outer_bulb", ["generic_4inch_led_red_5W"], [], "generic_4inch_led_red_5W", "4\" Red tail (L outer)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighBrakeSignal_L_filament",
+          "$nodeRef": "tb2ll", "$nodeX": "tb2l", "$nodeY": "tb3ll",
+          "$deformGroup": "taillight_L_break",
+          "$shadowEnable": 1,
+          "$posX": 1.13, "$posY": 3.845, "$posZ": 0.55,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["G_pickup_D55_tanker_taillight_L_inner_bulb", ["generic_4inch_led_red_5W"], [], "generic_4inch_led_red_5W", "4\" Red tail (L inner)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighBrakeSignal_L_filament",
+          "$nodeRef": "tb2rr", "$nodeX": "tb2r", "$nodeY": "tb3rr",
+          "$deformGroup": "taillight_L_break",
+          "$shadowEnable": 1,
+          "$posX": 0.92, "$posY": 3.845, "$posZ": 0.55,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["G_pickup_D55_tanker_reverse_L_bulb", ["generic_4inch_led_white_5W"], [], "generic_4inch_led_white_5W", "4\" White reverse (L)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "reverse",
+          "$nodeRef": "tb2ll", "$nodeX": "tb2l", "$nodeY": "tb3ll",
+          "$deformGroup": "taillight_L_break",
+          "$shadowEnable": 1,
+          "$posX": 0.71, "$posY": 3.845, "$posZ": 0.55,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }]
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         {"deformGroup":"taillight_L_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+         ["round_led_4inch_taillight_L", ["pickup_tanker_bumper"],[],{"pos":{"x":1.13, "y":3.845, "z":0.55}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["round_led_4inch_taillight_L", ["pickup_tanker_bumper"],[],  {"pos":{"x":0.92, "y":3.845, "z":0.55}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["round_led_4inch_reverse", ["pickup_tanker_bumper"],[],  {"pos":{"x":0.71, "y":3.845, "z":0.55}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         {"deformGroup":"taillight_L_break", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+         ["round_led_4inch_glass_red_taillight_L", ["pickup_tanker_bumper"],[],{"pos":{"x":1.13, "y":3.845, "z":0.55}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["round_led_4inch_glass_red_taillight_L", ["pickup_tanker_bumper"],[],  {"pos":{"x":0.92, "y":3.845, "z":0.55}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["round_led_4inch_glass_clear_reverse", ["pickup_tanker_bumper"],[],  {"pos":{"x":0.71, "y":3.845, "z":0.55}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         {"deformGroup":"taillight_R_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+         ["round_led_4inch_taillight_R", ["pickup_tanker_bumper"],[],{"pos":{"x":-1.13, "y":3.845, "z":0.55}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["round_led_4inch_taillight_R", ["pickup_tanker_bumper"],[],  {"pos":{"x":-0.92, "y":3.845, "z":0.55}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["round_led_4inch_reverse", ["pickup_tanker_bumper"],[],  {"pos":{"x":-0.71, "y":3.845, "z":0.55}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         {"deformGroup":"taillight_R_break", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+         ["round_led_4inch_glass_red_taillight_R", ["pickup_tanker_bumper"],[],{"pos":{"x":-1.13, "y":3.845, "z":0.55}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["round_led_4inch_glass_red_taillight_R", ["pickup_tanker_bumper"],[],  {"pos":{"x":-0.92, "y":3.845, "z":0.55}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["round_led_4inch_glass_clear_reverse", ["pickup_tanker_bumper"],[],  {"pos":{"x":-0.71, "y":3.845, "z":0.55}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         {"deformGroup":""},
+    ],
+},
+
+}

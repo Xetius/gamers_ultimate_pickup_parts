@@ -1,0 +1,115 @@
+{
+"G_md_series_windshield_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Windshield Without Mirror",
+        "value":220,
+    },
+    "slotType" : "md_series_windshield",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //glass
+         {"deformGroup":"windshield_break", "deformMaterialBase":"pickup_glass", "deformMaterialDamaged":"pickup_windshield_dmg"},
+         ["md_series_windshield", ["md_series_windshield_alt"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>impact_glass_windscreen_01", "deformVolume":0.7}],
+         {"deformGroup":"windshield_break", "deformMaterialBase":"pickup_glass_int", "deformMaterialDamaged":"pickup_glass_int"},
+         ["md_series_windshield_int", ["md_series_windshield_alt"]],
+
+         {"deformGroup":"windshield_break", "deformMaterialBase":"glass_invisible", "deformMaterialDamaged":"glass_mirror"},
+         ["md_series_windshield_dmg", ["md_series_windshield_alt"]],
+
+         {"deformGroup":""},
+         ["md_series_wipers", ["md_series_body"]],
+    ],
+    "sounds": {
+        "$+cabinFilterCoef": 0.12
+    },
+    "nodes": [
+         ["id",    "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_GLASS"},
+         {"nodeWeight":1.88},
+         {"group":["md_series_windshield","gps"]},
+         ["wi1",   0.0,   -0.67,   1.91],
+         {"group":""},
+         {"nodeMaterial":"|NM_METAL"},
+
+         //add weight
+
+         //roof
+         {"group":"md_series_body"},
+         {"nodeWeight":2.8},
+         ["rf1r", -0.675, -0.33,   2.15,   {"group":["md_series_body","md_series_windshield_alt","gps"]}],
+         ["rf1",   0.000, -0.36,   2.18,   {"group":["md_series_body","md_series_windshield_alt","gps"]}],
+         ["rf1l",  0.675, -0.33,   2.15,   {"group":["md_series_body","md_series_windshield_alt","gps"]}],
+         {"nodeWeight":1.5},
+         ["rfc1r",-0.35,  -0.345,  2.165,  {"group":["md_series_body","md_series_windshield_alt","gps"]}],
+         ["rfc1l", 0.35,  -0.345,  2.165,  {"group":["md_series_body","md_series_windshield_alt","gps"]}],
+
+         //a-pillar
+         {"nodeWeight":2.256},
+         ["p1r",  -0.63,  -0.62,   1.9,    {"group":["md_series_body","md_series_windshield_alt","gps"]}],
+         ["p1l",   0.63,  -0.62,   1.9,    {"group":["md_series_body","md_series_windshield_alt","gps"]}],
+         ["p2r",  -0.78,  -0.6,    1.9,    {"group":["md_series_body","md_series_windshield_alt","gps"]}],
+         ["p2l",   0.78,  -0.6,    1.9,    {"group":["md_series_body","md_series_windshield_alt","gps"]}],
+
+         //firewall
+         {"nodeWeight":5.828},
+         ["b6rr", -0.88,  -0.87,   1.70,   {"group":["md_series_body","md_series_windshield_alt","gps","md_series_snorkel"]}],
+         ["b6r",  -0.35,  -0.95,   1.72,   {"group":["md_series_body","md_series_windshield_alt","gps"]}],
+         ["b6l",   0.35,  -0.95,   1.72,   {"group":["md_series_body","md_series_windshield_alt","gps"]}],
+         ["b6ll",  0.88,  -0.87,   1.70,   {"group":["md_series_body","md_series_windshield_alt","gps"]}],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":1895830,"beamDamp":244.4},
+          {"disableMeshBreaking":true,"disableTriangleBreaking":true},
+          {"deformGroup":"windshield_break", "deformationTriggerRatio":0.03},
+          {"beamDeform":7000,"beamStrength":"FLT_MAX"},
+          //windshield
+          {"deformLimitExpansion":""},
+          ["wi1",  "rf1"],
+          ["p1r",  "wi1"],
+          ["p1l",  "wi1"],
+          ["wi1",  "b6r"],
+          ["wi1",  "b6l"],
+          ["wi1",  "rf2"],
+          ["rf1r", "wi1"],
+          ["rf1l", "wi1"],
+
+          ["wi1",  "b6rr"],
+          ["wi1",  "b6ll"],
+
+          {"beamDeform":7000,"beamStrength":14952},
+          ["p1r",  "p1l"],
+          ["rf1r", "b6r"],
+          ["rf1l", "b6l"],
+
+          ["rf1",  "b6r"],
+          ["rf1",  "b6l"],
+          {"breakGroup":""},
+          {"disableMeshBreaking":false,"disableTriangleBreaking":false},
+          {"deformGroup":""},
+          {"deformLimitExpansion":1.2},
+    ],
+    "triangles": [
+            ["id1:",  "id2:",  "id3:"],
+            //windshield
+            {"dragCoef":3},
+            {"group":"md_series_fronttop"},
+            ["rfc1r", "p1r",   "b6r"],
+            ["b6r",   "wi1",   "rfc1r"],
+            ["wi1",   "b6r",   "b6l"],
+            ["b6l",   "p1l",   "rfc1l"],
+            ["rfc1l", "wi1",   "b6l"],
+            ["wi1",   "rfc1l", "rf1"],
+            ["rf1",   "rfc1r", "wi1"],
+            {"optional":false},
+            {"breakGroup":""},
+    ],
+
+},
+}

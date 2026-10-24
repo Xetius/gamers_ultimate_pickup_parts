@@ -1,0 +1,41 @@
+{
+  "Body Style":"Flatbed Truck",
+  "BoundingBox":[
+    [
+      -0.8854,
+      -1.136,
+      -0.7234
+    ],
+    [
+      1.7534,
+      5.0361,
+      1.632
+    ]
+  ],
+  "Commercial Class":"Class 6 Truck",
+  "Config Type":"Custom",
+  "Configuration":"MD60 Flatbed (A)",
+  "Description":"Late model extended cab truck equipped with a flatbed upfit, using the newly developed 7-speed automatic transmission",
+  "Drivetrain":"RWD",
+  "Fuel Type":"Diesel",
+  "Induction Type":"Turbo",
+  "Off-Road Score":34,
+  "Population":4000,
+  "Power":255,
+  "PowerPeakRPM":2400,
+  "Propulsion":"ICE",
+  "Top Speed":32.65652803,
+  "Torque":810,
+  "TorquePeakRPM":"1150 - 1900",
+  "Transmission":"Automatic",
+  "Value":85500,
+  "Weight":6787,
+  "Weight/Power":27.83163265,
+  "Years":{
+    "max":1998,
+    "min":1992
+  },
+  "defaultPaintName1":"Ambitious Orange",
+  "defaultPaintName2":"Carbon Gray",
+  "defaultPaintName3":"Ambitious Orange"
+}

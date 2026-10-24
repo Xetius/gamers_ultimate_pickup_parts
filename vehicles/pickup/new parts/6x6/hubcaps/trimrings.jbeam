@@ -1,0 +1,74 @@
+{
+  "trimring_01a_15x7_RR_6x6": {
+      "information":{
+            "authors":"Gamer!",
+            "name":"Deep Chrome Trim Rings",
+            "value":60,
+      },
+      "slotType" : "trimring_RR_6x6_15x7",
+      "flexbodies": [
+             ["mesh", "[group]:", "nonFlexMaterials"],
+             //wheels
+             ["trimring_01a_15x7", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.506, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+             ["trimring_01a_15x7", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.506, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":1, "z":1}}],
+      ],
+},
+  "trimring_02a_15x7_RR_6x6": {
+      "information":{
+            "authors":"Gamer!",
+            "name":"Chrome Trim Rings",
+            "value":40,
+      },
+      "slotType" : "trimring_RR_6x6_15x7",
+      "flexbodies": [
+             ["mesh", "[group]:", "nonFlexMaterials"],
+             //wheels
+             ["trimring_02a_15x7", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.506, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+             ["trimring_02a_15x7", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.506, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":1, "z":1}}],
+      ],
+},
+  "trimring_01a_15x9_RR_6x6": {
+      "information":{
+            "authors":"Gamer!",
+            "name":"Deep Chrome Trim Rings",
+            "value":65,
+      },
+      "slotType" : "trimring_RR_6x6_15x9",
+      "flexbodies": [
+             ["mesh", "[group]:", "nonFlexMaterials"],
+             //wheels
+             ["trimring_01a_15x9", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.553, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1.01, "z":1.01}}],
+             ["trimring_01a_15x9", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.553, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1.01, "z":1.01}}],
+      ],
+},
+  "trimring_02a_15x9_RR_6x6": {
+      "information":{
+            "authors":"Gamer!",
+            "name":"Chrome Trim Rings",
+            "value":45,
+      },
+      "slotType" : "trimring_RR_6x6_15x9",
+      "flexbodies": [
+             ["mesh", "[group]:", "nonFlexMaterials"],
+             //wheels
+             ["trimring_02a_15x9", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.553, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1.01, "z":1.01}}],
+             ["trimring_02a_15x9", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.553, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1.01, "z":1.01}}],
+      ],
+
+},
+  "trimring_02a_16x7_RR_6x6": {
+      "information":{
+            "authors":"Gamer!",
+            "name":"Chrome Trim Rings",
+            "value":45,
+      },
+      "slotType" : "trimring_RR_6x6_16x7",
+      "flexbodies": [
+             ["mesh", "[group]:", "nonFlexMaterials"],
+             //wheels
+             ["trimring_02a_15x9", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.53, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1.065, "z":1.065}}],
+             ["trimring_02a_15x9", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.53, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1.065, "z":1.065}}],
+      ],
+
+},
+}

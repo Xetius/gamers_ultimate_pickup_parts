@@ -1,0 +1,49 @@
+{
+  "0-100 km/h":12.7,
+  "0-100 mph":65.7,
+  "0-60 mph":11.9,
+  "100-0 km/h":58.6,
+  "60-0 mph":183.9,
+  "60-100 mph":53.8,
+  "Body Style":"SUV",
+  "BoundingBox":[
+    [
+      -0.55,
+      -1.57,
+      -0.4183
+    ],
+    [
+      1.65,
+      3.625,
+      1.62
+    ]
+  ],
+  "Braking G":0.67,
+  "Config Type":"Custom",
+  "Configuration":"Diesel V8 4wd Goliath LXT (A)",
+  "Description":"It's nickname is the lifted Karen",
+  "Drivetrain":"4WD",
+  "Fuel Type":"Diesel",
+  "Induction Type":"Turbo",
+  "Off-Road Score":50,
+  "Performance Class":"6",
+  "Population":500,
+  "Power":367,
+  "PowerPeakRPM":"4450 - 5150",
+  "Propulsion":"ICE",
+  "Top Speed":46.0070282,
+  "Torque":885,
+  "TorquePeakRPM":"2550 - 3400",
+  "Transmission":"Automatic",
+  "Value":128000,
+  "Weight":3454,
+  "Weight/Power":11.79372197,
+  "Years":{
+    "max":2005,
+    "min":1999
+  },
+  "defaultPaintName1":"Blueberry",
+  "defaultPaintName2":"Overcast Blue",
+  "defaultPaintName3":"Blueberry",
+  "vehicleSelectorSubGroup":"vehiclesData.roamer.4wd_lxt_facelift.vehicleSelectorSubGroup"
+}

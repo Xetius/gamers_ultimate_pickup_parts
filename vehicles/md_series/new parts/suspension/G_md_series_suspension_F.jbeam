@@ -1,0 +1,169 @@
+{
+"G_md_series_spring_F_offroad": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Offroad Front Leaf Springs",
+        "value":1400,
+    },
+    "slotType" : "md_series_spring_F",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["md_series_leaf_single_F", ["md_series_shackle_F","md_series_leaf_F","md_series_leaftop_F"]],
+         ["md_series_shackle_F", ["md_series_shackle_F","md_series_leaftop_R"]],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$springheight_F", "range", "+m", "Suspension", 0, -0.04, 0.16, "Spring Height", "Raise or lower the suspension height", {"stepDis":0.005, "subCategory":"Front"}],
+        ["$springrate_F", "range", "N/m", "Suspension", 250000, 50000, 800000, "Spring Rate", "Adjust suspension hardness", {"stepDis":5000, "subCategory":"Front"}],
+    ],
+    "rails": {
+          "leaf2l":{"links:":["fa2l", "fl4l"], "looped":false, "capped":true},
+          "leaf2r":{"links:":["fa2r", "fl4r"], "looped":false, "capped":true},
+    },
+    "slidenodes": [
+         ["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
+         ["fa8l", "leaf2l", true, true, 0, 25001000, "FLT_MAX", "FLT_MAX"],
+         ["fa8r", "leaf2r", true, true, 0, 25001000, "FLT_MAX", "FLT_MAX"],
+    ],
+    "nodes": [
+         ["id",     "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":30.0},
+         {"group":"md_series_shackle_F"},
+         //front leaf shackle nodes
+         ["fl1r",  -0.50,  -0.877,  0.604],
+         ["fl1l",   0.50,  -0.877,  0.604],
+         {"nodeWeight":15.0},
+         ["fl11r", -0.40,  -0.877,  0.705],
+         ["fl11l",  0.40,  -0.877,  0.705],
+         ["fl11rr",-0.50,  -0.877,  0.705],
+         ["fl11ll", 0.50,  -0.877,  0.705],
+         {"collision":false},
+         {"group":""},
+         {"nodeWeight":5.0},
+         ["fl4r",  -0.50,  -1.3199, 0.8129],
+         ["fl4l",   0.50,  -1.3199, 0.8129],
+         {"nodeWeight":30},
+         {"group":"md_series_leaftop_F"},
+         {"selfCollision":false},
+         ["fl2r",  -0.50,  -2.00,   0.606],
+         ["fl2l",   0.50,  -2.00,   0.606],
+         {"selfCollision":true},
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:",   "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamSpring":110001000,"beamDamp":500},
+          {"beamDeform":450000,"beamStrength":"FLT_MAX"},
+          //leaf spring top (leaf anti stretch)
+          ["fa8l",   "fl1l"],
+          ["fa7l",   "fl2l"],
+          ["fa8r",   "fl1r"],
+          ["fa7r",   "fl2r"],
+
+          //front leaf shackles
+          {"beamSpring":20001000,"beamDamp":500},
+          {"beamDeform":250000,"beamStrength":600000},
+          ["ff14l",  "fl11l"],
+          ["ff14r",  "fl11l"],
+          ["ff14r",  "fl11r"],
+          ["ff14l",  "fl11r"],
+          ["ff13l",  "fl11l"],
+          ["ff3l",   "fl11l"],
+          ["ff13r",  "fl11r"],
+          ["ff3r",   "fl11r"],
+
+          ["ff14l",  "fl11ll"],
+          ["ff14r",  "fl11rr"],
+          ["ff13l",  "fl11ll"],
+          ["ff3l",   "fl11ll"],
+          ["ff13r",  "fl11rr"],
+          ["ff3r",   "fl11rr"],
+
+          ["fl11l",  "fl1l"],
+          ["fl11l",  "fl1r"],
+          ["fl11r",  "fl1r"],
+          ["fl11r",  "fl1l"],
+          ["fl1r",   "fl1l"],
+
+          ["fl11ll", "fl1l"],
+          ["fl11ll", "fl1r"],
+          ["fl11rr", "fl1r"],
+          ["fl11rr", "fl1l"],
+          ["fl11ll", "fl11l"],
+          ["fl11rr", "fl11r"],
+
+
+          {"beamSpring":30001000,"beamDamp":500},
+          //anti wrap nodes
+          ["fl4l",   "fl1l"],
+          ["fl4l",   "fl2l"],
+          ["fl4r",   "fl1r"],
+          ["fl4r",   "fl2r"],
+
+          //leaf spring
+          {"beamType":"|LBEAM"},
+          {"beamSpring":"$springrate_F","beamDamp":2500},
+          {"beamPrecompression":"$=$springheight_F+1.08"},
+          ["fa1r",   "fl2r",   {"id3:":"fa7r","beamPrecompressionTime":0.1}],
+          ["fa1l",   "fl2l",   {"id3:":"fa7l","beamPrecompressionTime":0.1}],
+          ["fa2r",   "fl1r",   {"id3:":"fa8r","beamPrecompressionTime":0.1}],
+          ["fa2l",   "fl1l",   {"id3:":"fa8l","beamPrecompressionTime":0.1}],
+          {"beamPrecompression":1},
+
+          //suspension audio hook beams
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamDeform":120000,"beamStrength":250000},
+          {"beamSpring":1000,"beamDamp":0},
+          ["fa1l",   "ff13l",  {"soundFile":"event:>Vehicle>Suspension>semi_01>leaf_compress_01","colorFactor":1.00,"attackFactor":8,"volumeFactor":6,"decayFactor":12,"noiseFactor":0.01,"pitchFactor":0.2,"maxStress":20}],
+          ["fa1r",   "ff13r",  {"soundFile":"event:>Vehicle>Suspension>semi_01>leaf_compress_01","colorFactor":1.00,"attackFactor":8,"volumeFactor":6,"decayFactor":12,"noiseFactor":0.01,"pitchFactor":0.2,"maxStress":20}],
+
+
+          {"beamDeform":100000,"beamStrength":250000},
+          {"beamSpring":1001000,"beamDamp":1000},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          //lateral stabilizer
+          ["fa8l",   "fl1r"],
+          ["fa7l",   "fl2r"],
+          ["fa8r",   "fl1l"],
+          ["fa7r",   "fl2l"],
+
+          //shackle limiters
+          {"beamType":"|SUPPORT", "beamLongBound":2},
+          {"beamSpring":20001000,"beamDamp":250},
+          {"beamDeform":850000,"beamStrength":"FLT_MAX"},
+          {"beamPrecompression":0.92},
+          ["fa7r",   "fl11rr"],
+          ["fa7l",   "fl11ll"],
+          ["fa7r",   "fl11r"],
+          ["fa7l",   "fl11l"],
+
+          {"beamDeform":250000,"beamStrength":"FLT_MAX"},
+          {"beamSpring":10001000,"beamDamp":250},
+          {"beamPrecompression":0.85},
+          ["ff4r",   "fl1r"],
+          ["ff4l",   "fl1l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "triangles": [
+            ["id1:",  "id2:",  "id3:"],
+            //suspension shape
+            {"triangleType":"NONCOLLIDABLE"},
+            {"dragCoef":2},
+            ["ff12r", "ff11r", "fl2r"],
+            ["fl1r",  "ff13r", "ff14r"],
+            ["fa1r",  "fl2r",  "fa7r"],
+            ["fa2r",  "fa8r",  "fl1r"],
+
+            ["ff11l", "ff12l", "fl2l"],
+            ["ff13l", "fl1l",  "ff14l"],
+            ["fl2l",  "fa1l",  "fa7l"],
+            ["fa8l",  "fa2l",  "fl1l"],
+            {"triangleType":"NORMALTYPE"},
+    ],
+},
+}

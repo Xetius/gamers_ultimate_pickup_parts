@@ -1,0 +1,230 @@
+{
+"G_md_series_us_cargobox_rearguard": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Guard",
+        "value":8000,
+    },
+    "slotType" : "G_md_series_us_cargobox_rearguard",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["G_md_series_us_cargobox_bumper", ["cargobox_rearframe"]],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"frictionCoef":0.5},
+        {"collision":true},
+        {"selfCollision":true},
+        {"nodeMaterial":"|NM_METAL"},
+        //guard
+        {"nodeWeight":14.0},
+        {"group":["md_series_upfitColide","cargobox_rearframe"]},
+        ["rg1rr",-1.175, 8.4741, 0.5942],
+        ["rg1r",-0.58, 8.4741, 0.5942],
+        ["rg1", 0.0, 8.4741, 0.5942],
+        ["rg1l",  0.58, 8.4741, 0.5942],
+        ["rg1ll", 1.175, 8.4741, 0.5942],
+
+        ["rg2rr",-1.175, 8.4741, 0.4842],
+        ["rg2r",-0.58, 8.4741, 0.4842],
+        ["rg2", 0.0, 8.4741, 0.4842],
+        ["rg2l",  0.58, 8.4741, 0.4842],
+        ["rg2ll", 1.175, 8.4741, 0.4842],
+
+        {"collision":false},
+        {"selfCollision":false},
+        ["rg3r",-0.62, 7.96, 0.9502],
+        ["rg3l", 0.62, 7.96, 0.9502],
+
+        {"collision":true},
+        {"selfCollision":true},
+        //extra segment
+        ["rg4rr",-1.175, 8.3741, 0.4842],
+        ["rg4r",-0.58, 8.3741, 0.4842],
+        ["rg4", 0.0, 8.3741, 0.4842],
+        ["rg4l",  0.58, 8.3741, 0.4842],
+        ["rg4ll", 1.175, 8.3741, 0.4842],
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //underride guard
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":14001000,"beamDamp":1000},
+        {"beamDeform":330000,"beamStrength":"FLT_MAX"},
+        ["rg1rr","rg1r"],
+        ["rg1r","rg1"],
+        ["rg1l","rg1"],
+        ["rg1ll","rg1l"],
+        ["rg2rr","rg2r"],
+        ["rg2r","rg2"],
+        ["rg2l","rg2"],
+        ["rg2ll","rg2l"],
+
+        ["rg1rr","rg2rr"],
+        ["rg1r","rg2r"],
+        ["rg1","rg2"],
+        ["rg1l","rg2l"],
+        ["rg1ll","rg2ll"],
+
+        ["rg4rr","rg4r"],
+        ["rg4r","rg4"],
+        ["rg4l","rg4"],
+        ["rg4ll","rg4l"],
+
+        ["rg1rr","rg4rr"],
+        ["rg1r","rg4r"],
+        ["rg1","rg4"],
+        ["rg1l","rg4l"],
+        ["rg1ll","rg4ll"],
+        ["rg2rr","rg4rr"],
+        ["rg2r","rg4r"],
+        ["rg2","rg4"],
+        ["rg2l","rg4l"],
+        ["rg2ll","rg4ll"],
+
+        //cross
+        {"beamDeform":125000,"beamStrength":"FLT_MAX"},
+        ["rg1rr","rg2r"],
+        ["rg1r","rg2rr"],
+        ["rg1r","rg2"],
+        ["rg1","rg2r"],
+        ["rg1l","rg2"],
+        ["rg1","rg2l"],
+        ["rg1ll","rg2l"],
+        ["rg1l","rg2ll"],
+
+        ["rg1rr","rg4r"],
+        ["rg1r","rg4rr"],
+        ["rg1r","rg4"],
+        ["rg1","rg4r"],
+        ["rg1l","rg4"],
+        ["rg1","rg4l"],
+        ["rg1ll","rg4l"],
+        ["rg1l","rg4ll"],
+
+        ["rg2rr","rg4r"],
+        ["rg2r","rg4rr"],
+        ["rg2r","rg4"],
+        ["rg2","rg4r"],
+        ["rg2l","rg4"],
+        ["rg2","rg4l"],
+        ["rg2ll","rg4l"],
+        ["rg2l","rg4ll"],
+
+        //rigidifier
+        {"beamDeform":75000,"beamStrength":"FLT_MAX"},
+        ["rg1rr","rg3r"],
+        ["rg1r","rg3r"],
+        ["rg1","rg3r"],
+        ["rg1l","rg3r"],
+
+        ["rg1ll","rg3l"],
+        ["rg1l","rg3l"],
+        ["rg1","rg3l"],
+        ["rg1r","rg3l"],
+
+        ["rg2rr","rg3r"],
+        ["rg2r","rg3r"],
+        ["rg2","rg3r"],
+        ["rg2l","rg3r"],
+
+        ["rg2ll","rg3l"],
+        ["rg2l","rg3l"],
+        ["rg2","rg3l"],
+        ["rg2r","rg3l"],
+
+        ["rg3r","rg3l"],
+
+        //attach
+        {"beamDeform":75000,"beamStrength":"FLT_MAX"},
+        ["rg3r","flo18r"],
+        ["rg3l","flo18l"],
+        ["rg3r","flo18l"],
+        ["rg3l","flo18r"],
+        ["rg3r","flo17r"],
+        ["rg3l","flo17l"],
+        ["rg3r","flo17l"],
+        ["rg3l","flo17r"],
+
+        {"beamDeform":65000,"beamStrength":"FLT_MAX"},
+        ["rg3r","flo8r"],
+        ["rg3l","flo8l"],
+        ["rg3r","flo8l"],
+        ["rg3l","flo8r"],
+        ["rg3r","flo7r"],
+        ["rg3l","flo7l"],
+        ["rg3r","flo7l"],
+        ["rg3l","flo7r"],
+
+        ["rg1rr","fra1r"],
+        ["rg1r","fra1r"],
+        ["rg1","fra1r"],
+        ["rg1ll","fra1l"],
+        ["rg1l","fra1l"],
+        ["rg1","fra1l"],
+
+        ["fra1rr","rg1r"],
+        ["fra1","rg1r"],
+        ["fra1ll","rg1l"],
+        ["fra1","rg1l"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"groundModel":"asphalt"},
+        {"dragCoef":10},
+        //back
+
+        ["rg1ll","rg2ll","rg2l"],
+        ["rg1ll","rg2l","rg1l"],
+        ["rg1l","rg2l","rg2"],
+        ["rg1l","rg2","rg1"],
+
+        ["rg1rr","rg2r","rg2rr"],
+        ["rg1rr","rg1r","rg2r"],
+        ["rg1r","rg2","rg2r"],
+        ["rg1r","rg1","rg2"],
+
+        ["rg2ll","rg4ll","rg4l"],
+        ["rg2ll","rg4l","rg2l"],
+        ["rg2l","rg4l","rg4"],
+        ["rg2l","rg4","rg2"],
+
+        ["rg2rr","rg4r","rg4rr"],
+        ["rg2rr","rg2r","rg4r"],
+        ["rg2r","rg4","rg4r"],
+        ["rg2r","rg2","rg4"],
+
+        ["rg1ll","rg4ll","rg2ll"],
+        ["rg1rr","rg2rr","rg4rr"],
+
+        //gap fill
+        ["fra1ll","rg1ll","rg1l"],
+        ["fra1ll","rg1l","fra1l"],
+        ["fra1l","rg1l","rg1"],
+        ["fra1l","rg1","fra1"],
+
+        ["fra1rr","rg1r","rg1rr"],
+        ["fra1r","rg1r","fra1rr"],
+        ["fra1r","rg1","rg1r"],
+        ["fra1","rg1","fra1r"],
+
+        //guard to frame
+        ["rg4","flo18l","flo18r"],
+        ["rg4","rg4l","flo18l"],
+        ["rg4","flo18r","rg4r"],
+
+        ["rg4r","flo18r","flo18rr"],
+        ["rg4r","flo18rr","rg4rr"],
+        ["rg4l","flo18ll","flo18l"],
+        ["rg4l","rg4ll","flo18ll"],
+
+        ["rg4rr","flo18rr","fra1rr"],
+        ["rg4rr","fra1rr","rg1rr"],
+        ["rg4ll","rg1ll","fra1ll"],
+        ["rg4ll","fra1ll","flo18ll"],
+        {"group":""},
+    ],
+},
+}

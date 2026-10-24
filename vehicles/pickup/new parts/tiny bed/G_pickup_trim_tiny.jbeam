@@ -1,0 +1,14 @@
+{
+"G_pickup_trim_bed_tiny": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Bed Trim",
+        "value":100,
+    },
+    "slotType" : "G_pickup_trim_bed_tiny",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_trim_bed_tiny", ["pickup_bed"],[]{"pos":{"x":0,"y":1.1,"z":0}}],
+    ],
+},
+}

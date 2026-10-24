@@ -1,0 +1,296 @@
+{
+"G_pickup_exhaust_D55_single": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Exhaust (Diesel)",
+        "value":400,
+    },
+    "slotType" : ["G_pickup_muffler_6x6", "G_pickup_muffler_6x6_ext", "G_pickup_muffler_6x6_crew", "G_pickup_muffler_6x6_6door", "G_pickup_muffler_D55", "G_pickup_muffler_D55_ext", "G_pickup_muffler_D55_crew", "G_pickup_muffler_D55_6door"],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_D55_muffler_R", ["pickup_exhaust_R"], [], {"pos": {"x":0, "y":0, "z":0.1}}],
+         ["G_pickup_D55_exhaust_muffler_tip_R", ["pickup_exhaust_R"], [], {"pos": {"x":0, "y":0, "z":0.1}}],
+         ["pickup_exhaust_v8_race_R", ["pickup_exhaust_R"]],
+    ],
+    "soundConfigExhaust": {
+        "$+lowShelfGain":10,
+        "$+highShelfGain":-6,
+        "$+eqFundamentalGain":12,
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"selfCollision":true},
+         //--EXHAUST--
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":1.2},
+         {"group":"pickup_exhaust_R"},
+         //copy from exhaust
+         {"selfCollision":false},
+         ["exs2r",-0.3,-0.368,0.65],
+         ["exs3r",-0.4,-0.368,0.44],
+         ["exs4r",-0.23,-0.262,0.44, {"afterFireAudioCoef":1.0, "afterFireVisualCoef":1.0, "afterFireVolumeCoef":1.0, "afterFireMufflingCoef":1.0, "exhaustAudioMufflingCoef":1.0, "exhaustAudioGainChange":0}],
+         {"selfCollision":true},
+
+         ["exs5r",-0.35,0.47,0.34],
+         ["exs6r",-0.24,0.46,0.45, {"selfCollision":false}],
+         ["exs7r",-0.18,0.47,0.34],
+         ["exs8r",-0.29,0.60,0.34, {"afterFireAudioCoef":0.5, "afterFireVisualCoef":0.0, "afterFireVolumeCoef":0.5, "afterFireMufflingCoef":0.3, "exhaustAudioMufflingCoef":0.3, "exhaustAudioGainChange":-0}],
+         {"group":""},
+    ],
+    "beams":[
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+
+          //path
+          {"beamSpring":1044270,"beamDamp":173.9},
+          {"beamDeform":33000,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":1.2},
+          //right
+          ["exs4r", "exs6r", {"isExhaust":"mainEngine"}],
+          ["exs6r", "exs8r", {"isExhaust":"mainEngine"}],
+          //rigidifier
+          {"beamSpring":817330,"beamDamp":173.9},
+          {"beamDeform":17000,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":""},
+          //right
+          ["exs3r", "exs5r"],
+          ["exs5r", "exs7r"],
+          ["exs7r", "exs8r"],
+          ["exs7r", "exs3r"],
+          ["exs4r", "exs7r"],
+          ["exs6r", "exs7r"],
+          ["exs6r", "exs5r"],
+          ["exs6r", "exs3r"],
+          ["exs6r", "exs2r"],
+          ["exs4r", "exs5r"],
+          ["exs8r", "exs5r"],
+          ["exs5r", "exs2r"],
+          ["exs2r", "exs7r"],
+          {"optional":true}
+          ["exs2r", "exs4r"],
+          ["exs2r", "exs3r"],
+          ["exs3r", "exs4r"],
+          {"optional":false}
+
+          //attach
+          {"beamSpring":2837320,"beamDamp":130.43},
+          {"beamDeform":7500,"beamStrength":65000},
+          {"breakGroup":"exhaust_mid_R"},
+          ["exs5r", "f6r"],
+          ["exs5r", "f5r"],
+          ["exs5r", "f16"],
+          ["exs5r", "f15r"],
+
+          ["exs7r", "f6r"],
+          ["exs7r", "f5r"],
+          ["exs7r", "f16"],
+          ["exs7r", "f15r"],
+          {"breakGroup":""},
+
+          //limiters
+          {"beamPrecompression":0.95, "beamType":"|SUPPORT", "beamLongBound":15},
+          {"beamSpring":408665,"beamDamp":122.6},
+          {"beamDeform":9000,"beamStrength":65000},
+          ["exs5r", "rf1r"],
+          ["exs6r", "rf1r"],
+          ["exs7r", "rf1r"],
+
+          ["exs5r", "rf2r"],
+          ["exs6r", "rf2r"],
+          ["exs7r", "rf2r"],
+          {"deformLimitExpansion":1.2},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "triangles":[
+        ["id1:", "id2:", "id3:"],
+        {"groundModel":"metal"},
+        {"dragCoef":3},
+        {"triangleType":"NONCOLLIDABLE"},
+        {"group":"pickup_exhaust"},
+        ["exs5r", "exs8r", "exs7r"],
+        ["exs4r", "exs5r", "exs7r"],
+        ["exs3r", "exs5r", "exs4r"],
+        {"triangleType":"NORMALTYPE"},
+        ],
+},
+
+"G_pickup_exhaust_D55_dual": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Exhaust (Gas)",
+        "value":800,
+    },
+    "slotType" : ["G_pickup_muffler_6x6", "G_pickup_muffler_6x6_ext", "G_pickup_muffler_6x6_crew", "G_pickup_muffler_6x6_6door", "G_pickup_muffler_D55", "G_pickup_muffler_D55_ext", "G_pickup_muffler_D55_crew", "G_pickup_muffler_D55_6door"],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_D55_muffler_R", ["pickup_exhaust_R"], [], {"pos": {"x":0, "y":0, "z":0.1}}],
+         ["G_pickup_D55_exhaust_muffler_tip_R", ["pickup_exhaust_R"], [], {"pos": {"x":0, "y":0, "z":0.1}}],
+         ["G_pickup_D55_muffler_L", ["pickup_exhaust_L"], [], {"pos": {"x":0, "y":0, "z":0.1}}],
+         ["G_pickup_D55_exhaust_muffler_tip_L", ["pickup_exhaust_L"], [], {"pos": {"x":0, "y":0, "z":0.1}}],
+         ["pickup_exhaust_v8_race_R", ["pickup_exhaust_R"]],
+         ["pickup_exhaust_v8_race_L", ["pickup_exhaust_L"]],
+    ],
+    "soundConfigExhaust": {
+        "$+eqLowGain":2,
+        //"$+lowShelfGain":2,
+        "$+highShelfGain":-4,
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"selfCollision":true},
+         //--EXHAUST--
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":1.2},
+         {"group":"pickup_exhaust_R"},
+         //copy from exhaust
+         {"selfCollision":false},
+         ["exs2r",-0.3,-0.368,0.65],
+         ["exs3r",-0.4,-0.368,0.44],
+         ["exs4r",-0.23,-0.262,0.44, {"afterFireAudioCoef":1.0, "afterFireVisualCoef":1.0, "afterFireVolumeCoef":1.0, "afterFireMufflingCoef":1.0, "exhaustAudioMufflingCoef":1.0, "exhaustAudioGainChange":0}],
+         {"selfCollision":true},
+
+         ["exs5r",-0.35,0.47,0.34],
+         ["exs6r",-0.24,0.46,0.45, {"selfCollision":false}],
+         ["exs7r",-0.18,0.47,0.34],
+         ["exs8r",-0.29,0.60,0.34, {"afterFireAudioCoef":0.5, "afterFireVisualCoef":0.0, "afterFireVolumeCoef":0.5, "afterFireMufflingCoef":0.3, "exhaustAudioMufflingCoef":0.3, "exhaustAudioGainChange":-0}],
+
+         {"group":"pickup_exhaust_L"},
+         //copy from exhaust
+         {"selfCollision":false},
+         ["exs2l",0.3,-0.368,0.65],
+         ["exs3l",0.4,-0.368,0.44],
+         ["exs4l",0.23,-0.262,0.44, {"afterFireAudioCoef":1.0, "afterFireVisualCoef":1.0, "afterFireVolumeCoef":1.0, "afterFireMufflingCoef":1.0, "exhaustAudioMufflingCoef":1.0, "exhaustAudioGainChange":0}],
+         {"selfCollision":true},
+
+         ["exs5l",0.35,0.47,0.34],
+         ["exs6l",0.24,0.46,0.45, {"selfCollision":false}],
+         ["exs7l",0.18,0.47,0.34],
+         ["exs8l",0.29,0.60,0.34, {"afterFireAudioCoef":0.5, "afterFireVisualCoef":0.0, "afterFireVolumeCoef":0.5, "afterFireMufflingCoef":0.3, "exhaustAudioMufflingCoef":0.3, "exhaustAudioGainChange":-0}],
+         {"group":""},
+    ],
+    "beams":[
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+
+          //path
+          {"beamSpring":1044270,"beamDamp":173.9},
+          {"beamDeform":33000,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":1.2},
+          //right
+          ["exs4r", "exs6r", {"isExhaust":"mainEngine"}],
+          ["exs6r", "exs8r", {"isExhaust":"mainEngine"}],
+          //left
+          ["exs4l", "exs6l", {"isExhaust":"mainEngine"}],
+          ["exs6l", "exs8l", {"isExhaust":"mainEngine"}],
+          //rigidifier
+          {"beamSpring":817330,"beamDamp":173.9},
+          {"beamDeform":17000,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":""},
+          //right
+          ["exs3r", "exs5r"],
+          ["exs5r", "exs7r"],
+          ["exs7r", "exs8r"],
+          ["exs7r", "exs3r"],
+          ["exs4r", "exs7r"],
+          ["exs6r", "exs7r"],
+          ["exs6r", "exs5r"],
+          ["exs6r", "exs3r"],
+          ["exs6r", "exs2r"],
+          ["exs4r", "exs5r"],
+          ["exs8r", "exs5r"],
+          ["exs5r", "exs2r"],
+          ["exs2r", "exs7r"],
+          {"optional":true}
+          ["exs2r", "exs4r"],
+          ["exs2r", "exs3r"],
+          ["exs3r", "exs4r"],
+          {"optional":false}
+          //left
+          ["exs3l", "exs5l"],
+          ["exs5l", "exs7l"],
+          ["exs7l", "exs8l"],
+          ["exs7l", "exs3l"],
+          ["exs4l", "exs7l"],
+          ["exs6l", "exs7l"],
+          ["exs6l", "exs5l"],
+          ["exs6l", "exs3l"],
+          ["exs6l", "exs2l"],
+          ["exs4l", "exs5l"],
+          ["exs8l", "exs5l"],
+          ["exs5l", "exs2l"],
+          ["exs2l", "exs7l"],
+          {"optional":true}
+          ["exs2l", "exs4l"],
+          ["exs2l", "exs3l"],
+          ["exs3l", "exs4l"],
+          {"optional":false}
+
+          //attach
+          {"beamSpring":2837320,"beamDamp":130.43},
+          {"beamDeform":7500,"beamStrength":65000},
+          {"breakGroup":"exhaust_mid_R"},
+          //["exs5r", "f6r"],
+          ["exs5r", "f6"],
+          ["exs5r", "f16"],
+          ["exs5r", "f16r"],
+
+          //["exs7r", "f6r"],
+          ["exs7r", "f6"],
+          ["exs7r", "f16"],
+          ["exs7r", "f16r"],
+          {"breakGroup":"exhaust_mid_L"},
+          //["exs5l", "f6l"],
+          ["exs5l", "f6"],
+          ["exs5l", "f16"],
+          ["exs5l", "f16l"],
+
+          //["exs7l", "f6l"],
+          ["exs7l", "f6"],
+          ["exs7l", "f16"],
+          ["exs7l", "f16l"],
+          {"breakGroup":""},
+
+          //limiters
+          {"beamPrecompression":0.95, "beamType":"|SUPPORT", "beamLongBound":15},
+          {"beamSpring":408665,"beamDamp":122.6},
+          {"beamDeform":9000,"beamStrength":65000},
+          ["exs5r", "rf1r"],
+          ["exs6r", "rf1r"],
+          ["exs7r", "rf1r"],
+
+          ["exs5r", "rf2r"],
+          ["exs6r", "rf2r"],
+          ["exs7r", "rf2r"],
+
+          ["exs5l", "rf1l"],
+          ["exs6l", "rf1l"],
+          ["exs7l", "rf1l"],
+
+          ["exs5l", "rf2l"],
+          ["exs6l", "rf2l"],
+          ["exs7l", "rf2l"],
+          {"deformLimitExpansion":1.2},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "triangles":[
+        ["id1:", "id2:", "id3:"],
+        {"groundModel":"metal"},
+        {"dragCoef":3},
+        {"triangleType":"NONCOLLIDABLE"},
+        {"group":"pickup_exhaust"},
+        ["exs5r", "exs8r", "exs7r"],
+        ["exs4r", "exs5r", "exs7r"],
+        ["exs3r", "exs5r", "exs4r"],
+
+        ["exs8l", "exs5l", "exs7l"],
+        ["exs5l", "exs4l", "exs7l"],
+        ["exs5l", "exs3l", "exs4l"],
+        {"triangleType":"NORMALTYPE"},
+        ],
+},
+
+}

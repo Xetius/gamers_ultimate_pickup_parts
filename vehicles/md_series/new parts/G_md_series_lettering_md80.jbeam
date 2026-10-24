@@ -1,0 +1,15 @@
+{
+"G_md_series_cab_lettering_md80": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"MD80 Lettering",
+        "value":50,
+    },
+    "slotType" : "md_series_cab_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_badge_md80_L", ["md_series_body"], [],{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_md_series_badge_md80_R", ["md_series_body"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+},
+}

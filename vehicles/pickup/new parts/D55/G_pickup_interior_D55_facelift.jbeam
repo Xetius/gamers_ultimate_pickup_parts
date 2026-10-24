@@ -1,0 +1,1095 @@
+{
+"G_pickup_interior_D55_facelift": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Late Dashboard",
+        "value":2000,
+    },
+    "slotType" : "pickup_interior",
+    "slots2": [
+        ["name",                                    "allowTypes",                                "denyTypes", "default",                                "description"],
+        ["pickup_sunvisors",                        ["pickup_sunvisors"],                        [],          "pickup_sunvisors_facelift",              "Sunvisors"],
+        ["G_pickup_D55_facelift_shifter",           ["G_pickup_D55_facelift_shifter"],           [],          "G_pickup_D55_facelift_shifter_A",        "Shifter"],
+        ["pickup_shifter_T",                        ["pickup_shifter_T"],                        [],          "",                                       "Range Selector"],
+        ["pickup_steer",                            ["pickup_steer"],                            [],          "pickup_facelift_steer",                  "Steering Wheel"],
+        ["pickup_interior_accessory_late",          ["pickup_interior_accessory_late"],          [],          "",                                       "Interior Accessories"],
+        ["G_pickup_D55_dash_gauge_M_facelift",      ["G_pickup_D55_dash_gauge_M_facelift"],      [],          "G_pickup_D55_dash_gauge_M_air_facelift", "Air Pressure Gauge"],
+        ["G_pickup_D55_airbrakeContols_facelift",   ["G_pickup_D55_airbrakeContols_facelift"],   [],          "G_pickup_D55_airbrakeContols_facelift",  "Airbrake Controls", {"coreSlot":true}],
+        ["G_pickup_D55_pto",                        ["G_pickup_D55_pto"],                        [],          "",                                       "PTO Controls"],
+        ["G_pickup_D55_fifthwheel_switch_facelift", ["G_pickup_D55_fifthwheel_switch_facelift"], [],          "",                                       "Fifth Wheel Switch"],
+    ],
+    "camerasInternal":[
+        ["type", "x", "y", "z", "fov", "id1:", "id2:", "id3:", "id4:", "id5:", "id6:"],
+        {"nodeWeight":2.35},
+        {"beamSpring":846, "beamDamp":94},
+        {"selfCollision":true},
+        {"collision":true},
+        //dash cam
+        ["dash", 0.462, 0.1, 1.53, 55, "b1rr","b1ll","b3rr","b3ll","b6rr","b6ll", {"beamDeform":2800560,"beamStrength":"FLT_MAX"}],
+    ],
+    "soundscape": [
+        ["name", "src"],
+        //indicator7
+        {"node:":"int_strw"},
+        ["indicatorStart", "event:>Vehicle>Interior>Indicator>POL_On"],
+        ["indicatorStop", "event:>Vehicle>Interior>Indicator>POL_Off"],
+        ["indLoop1", "event:>Vehicle>Interior>Indicator>FIPA_Click"],
+        ["indLoop2", "event:>Vehicle>Interior>Indicator>FIPA_Clack"],
+        //lights3
+        ["LightOn", "event:>Vehicle>Interior>Light>AU5_Light_On"],
+        ["LightOff", "event:>Vehicle>Interior>Light>AU5_Light_Off"],
+        //handbrake2
+        {"node:":"int_pbrk"},
+        ["handbrakeDisengaged","event:>Vehicle>Interior>Handbrake_Pedal>Pedal_04_Unlock"],
+        ["handbrakeEngaging","event:>Vehicle>Interior>Handbrake_Pedal>Pedal_04_Lock"],
+        //affects horn location because horn soundscape is loaded after
+        {"node:":"b6l"},
+    ],
+    "props": [
+        ["func",         "mesh",                 "idRef:","idX:","idY:", "baseRotation",           "rotation",                  "translation",           "min", "max", "offset", "multiplier"],
+        //speedometer
+        ["wheelspeed",   "pickup_facelift_needle_speedo", "dshl","dsh","int_strw",       {"x":160 "y":180, "z":0}, {"x":0, "y":0, "z":-4.15},   {"x":0, "y":0, "z":0},   0, 52, -26.1, 1, {"baseTranslationGlobal":{"x":0.389311,"y":-0.704284,"z":1.21965}}],
+        //tachometer
+        ["rpm",          "pickup_facelift_needle_tacho",  "dshl","dsh","int_strw",       {"x":160 "y":180, "z":0}, {"x":0, "y":0, "z":-0.0335}, {"x":0, "y":0, "z":0},   0, 6000, -4000, 1, {"baseTranslationGlobal":{"x":0.518752,"y":-0.704284,"z":1.21965}}],
+        //fuel gauge
+        ["fuel",         "pickup_facelift_needle_fuel",   "dshl","dsh","int_strw",       {"x":160 "y":180, "z":0}, {"x":0, "y":0, "z":-70},     {"x":0, "y":0, "z":0},   0, 1, -1, 1, {"baseTranslationGlobal":{"x":0.47669,"y":-0.698762,"z":1.18674}}],
+        //water temp
+        ["watertemp",    "pickup_facelift_needle_temp",   "dshl","dsh","int_strw",     {"x":160 "y":180, "z":0}, {"x":0, "y":0, "z":-1},      {"x":0, "y":0, "z":0},   60, 120, -90, 1, {"baseTranslationGlobal":{"x":0.454347,"y":-0.71322,"z":1.26711}}],
+        //pedals
+        ["brake",        "pickup_facelift_brakepedal",         "b1l","b1r","b5l",    {"x":154, "y":180, "z":0},   {"x":-25, "y":0, "z":0},     {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1, {"baseTranslationGlobal":{"x":0.450401,"y":-0.926146,"z":0.861946}}],
+        ["throttle",     "pickup_facelift_gaspedal",           "b1l","b1r","b5l",    {"x":154, "y":180, "z":0},   {"x":-23, "y":0, "z":0},     {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1, {"baseTranslationGlobal":{"x":0.300421,"y":-0.926057,"z":0.859521}}],
+        //["parkingbrake", "pickup_facelift_parkingbrake",  "b1l","b1r","b5l",    {"x":165, "y":180, "z":0},   {"x":-25, "y":0, "z":0},     {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+        //turn signal stalk
+        ["turnsignal",   "pickup_signalstalk",   "dshl","dsh","int_strw",      {"x":-105 "y":180, "z":0}, {"x":0, "y":-15, "z":-2},     {"x":0, "y":0, "z":0},   -1, 1, -1, 1, {"baseTranslation":{"x":-0.05,"y":0.045,"z":0.02}}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //interior
+         ["pickup_facelift_dash", ["pickup_dash"]],
+         //["pickup_facelift_expletivehandle", ["pickup_body"]],
+         ["pickup_facelift_gauges", ["pickup_dash"]],
+         ["pickup_facelift_decals_gauges", ["pickup_dash"]],
+         ["pickup_facelift_intmirror", ["pickup_windshield"]],
+         ["pickup_facelift_buttons_front",     ["pickup_dash"], [], {"disable":"$=$components.locker_F ~= true",  "pos":{"x":0.091, "y":-0.0655, "z":-0.114}, "rot":{"x":-3, "y":0, "z":0}}],
+         ["pickup_facelift_locker_button_rear",["pickup_dash"], [], {"disable":"$=$components.locker_R ~= true",  "pos":{"x":0.129, "y":-0.0635, "z":-0.078}, "rot":{"x":-3, "y":0, "z":0}}],
+         ["G_pickup_facelift_locker_button_int",["pickup_dash"], [], {"disable":"$=$components.locker_I ~= true", "pos":{"x":0.167, "y":-0.0635, "z":-0.078}, "rot":{"x":-3, "y":0, "z":0}}],
+         ["G_pickup_intcarpet_D55", ["pickup_body"]],
+        ],
+    "mirrors": [
+        ["mesh", "idRef:", "id1:", "id2:"],
+        ["pickup_facelift_intmirror","rf1","rfc1r","rf2",{"refBaseTranslation":{"x":0.0,"y":-0.090,"z":-0.140},"baseRotationGlobal":{"x":0,"y":0,"z":19}, "optional":true}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["gauges/analogOdometer", {"name":"analogOdometer" }],
+    ],
+    "analogOdometer": {
+        "configuration": {
+            "materialName": "@generic_gauges_odo",
+            "htmlPath": "local://local/vehicles/common/analogOdo.html",
+            "displayWidth":512,
+            "displayHeight":32,
+            "odometerDigits":7,
+            "odometerHasDecimalSeparator":true,
+            "tripHasDecimalSeparator":true,
+            "unit":"imperial",
+            "floatStyle":{"color":"black"},
+            "bodyStyle":{
+                "background": "url('/vehicles/common/odometer_analog_b.cef_color.png')",
+                "font-family": "OpenSans",
+                "font-size": "28px",
+                "color": "white",
+                "letter-spacing": "15.5px",
+                "margin": "-4.5px 10.5px",
+                "transform": "scaleX(1.26)",
+                "transform-origin": "left",
+            },
+            "tripDivStyle":{
+                "margin-left": "-3px",
+                "position": "fixed",
+                "letter-spacing": "32px"
+            }
+        },
+    },
+   "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"collision":true},
+         {"selfCollision":true},
+
+         //dash nodes
+         {"group":["pickup_dash", "pickup_dash_roamer"]},
+         {"nodeWeight":0.752},
+         ["dshr",-0.455, -0.626, 1.090],
+         ["dsh",  0.000, -0.626, 1.090],
+         ["dshl", 0.455, -0.626, 1.090],
+         {"collision":false},
+         {"selfCollision":false},
+         ["int_strw", 0.455, -0.475, 1.172],
+         {"nodeWeight":0.2},
+         //flexbody node
+         ["dsh2",  0.000, -0.716, 1.290],
+         {"group":""},
+         ["int_pbrk", 0.66, -0.93, 0.86],
+         {"group":""},
+    ],
+    "triggers2":[
+        ["id", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["hood_int",   "dshl","dsh","b1ll",    "box",{"x":0.04,"y":0.04,"z":0.04},{"x":25,"y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0},{"x":-0.230, "y": 0.220, "z":-0.100}],
+        ["headlights", "dshl","dsh","int_strw","sphere", 0.025,                   {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0},{"x":-0.235, "y":-0.025, "z": 0.020}],
+        ["cruise",     "dshl","dsh","int_strw","box",{"x":0.03,"y":0.03,"z":0.02},{"x":30,"y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0},{"x": 0.240, "y": 0.025, "z": 0.135}],
+        ["sw_ignition","dshl","dsh","int_strw","sphere", 0.025,                   {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0},{"x": 0.070, "y": 0.058, "z": 0.011}],
+        ["front_lock", "dshl","dsh","int_strw","box",{"x":0.03,"y":0.03,"z":0.02},{"x":30,"y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0},{"x": 0.150, "y":-0.035, "z": 0.033}, {"disable":"$=$components.locker_F ~= true"}],
+        ["rear_lock",  "dshl","dsh","int_strw","box",{"x":0.03,"y":0.03,"z":0.02},{"x":30,"y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0},{"x": 0.112, "y":-0.035, "z": 0.033}, {"disable":"$=$components.locker_R ~= true"}],
+        ["int_lock",   "dshl","dsh","int_strw","box",{"x":0.03,"y":0.03,"z":0.02},{"x":30,"y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0},{"x": 0.074, "y":-0.035, "z": 0.033}, {"disable":"$=$components.locker_I ~= true"}],
+    ],
+    "actionsEnabled": [
+        ["id"],
+        ["hoodRelease"],
+        ["basicCruiseCointrol"],
+        ["toggleFrontDiff",     {"disable":"$=$components.locker_F ~= true"}],
+        ["lockFrontDiff",       {"disable":"$=$components.locker_F ~= true"}],
+        ["unlockFrontDiff",     {"disable":"$=$components.locker_F ~= true"}],
+        ["setFrontDiffModeAxis",{"disable":"$=$components.locker_F ~= true"}],
+        ["toggleRearDiff",      {"disable":"$=$components.locker_R ~= true"}],
+        ["lockRearDiff",        {"disable":"$=$components.locker_R ~= true"}],
+        ["unlockRearDiff",      {"disable":"$=$components.locker_R ~= true"}],
+        ["setRearDiffModeAxis", {"disable":"$=$components.locker_R ~= true"}],
+    ],
+    "triggerEventLinks2":[
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["hood_int",   "action0", "hoodRelease"],
+        ["headlights", "action0", "common:toggle_headlights"],
+        ["cruise",     "action0", "basicCruiseCointrol"],
+        ["sw_ignition","action0", "common:activateStarterMotor"],
+        ["sw_ignition","action2", "common:setIgnitionLevel3Momentary"],
+        ["int_lock",   "action0", "toggleInteraxleDiff", {"disable":"$=$components.locker_I ~= true"}],
+        ["rear_lock",  "action0", "toggleRearDiff", {"disable":"$=$components.locker_R ~= true"}],
+        ["front_lock", "action0", "toggleFrontDiff",{"disable":"$=$components.locker_F ~= true"}],
+    ],
+    "torsionbars":[
+       ["id1:", "id2:", "id3:", "id4:"],
+        //rigify the column
+        {"spring":20000, "damp":1, "deform":18000, "strength":28000},
+        ["int_strw", "dshl", "dsh", "b5l"],
+
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          //dash board
+          {"beamSpring":869146.6,"beamDamp":142.73},
+          {"beamDeform":12400,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":""},
+          ["dshr","b5r"],
+          ["dshl","b5l"],
+          ["dshr","b6r"],
+          ["dshl","b6l"],
+          ["dshr","b1r"],
+          ["dshl","b1l"],
+          ["dshr","b5rr"],
+          ["dshl","b5ll"],
+          ["dshr","b6rr"],
+          ["dshl","b6ll"],
+          ["dshl","dshr"],
+          ["dsh","b5r"],
+          ["dsh","b5l"],
+          ["dsh","b6r"],
+          ["dsh","b6l"],
+          ["dsh","b1r"],
+          ["dsh","b1l"],
+          ["dshl","dsh"],
+          ["dshr","dsh"],
+          ["dsh","int_strw"],
+          ["dshl","int_strw"],
+          {"beamSpring":169146.6,"beamDamp":42.73},
+          ["dsh2","b5r"],
+          ["dsh2","b5l"],
+          ["dsh2","b6r"],
+          ["dsh2","b6l"],
+          ["dsh2","b1r"],
+          ["dsh2","b1l"],
+          ["dshl","dsh2"],
+          ["dshr","dsh2"],
+          {"beamSpring":160100,"beamDamp":142.73},
+          {"beamDeform":70300,"beamStrength":"FLT_MAX"},
+          ["int_pbrk","dshl"],
+          ["int_pbrk","b5ll"],
+          ["int_pbrk","b5l"],
+          ["int_pbrk","b1lll"],
+          //--BLEED DEFORM LIMIT TO OTHER PARTS--
+          {"deformLimitExpansion":1.2},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //sides
+            {"dragCoef":0},
+            {"group":"pickup_dash"},
+            ["dshl", "b6ll", "b5ll"],
+            ["b6ll", "dshl", "b6l"],
+            ["b6l", "dshl", "dsh"],
+            ["dsh", "b6r", "b6l"],
+            ["dsh", "dshr", "b6r"],
+            ["b6r", "dshr", "b6rr"],
+            ["dshr", "b5rr", "b6rr"],
+            ["dshl", "b5ll", "b5l"],
+            ["b5l", "dsh", "dshl"],
+            ["b5l", "b5r", "dsh"],
+            ["dsh", "b5r", "dshr"],
+            ["dshr", "b5r", "b5rr"],
+    ],
+},
+"G_pickup_interior_D55_alt_facelift": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Late Dashboard with Console",
+        "value":3000,
+    },
+    "slotType" : "pickup_interior",
+    "slots2": [
+        ["name",                                    "allowTypes",                                "denyTypes", "default",                                "description"],
+        ["pickup_sunvisors",                        ["pickup_sunvisors"],                        [],          "pickup_sunvisors_facelift",              "Sunvisors"],
+        ["pickup_steer",                            ["pickup_steer"],                            [],          "roamer_steer",                           "Steering Wheel"],
+        ["G_pickup_D55_facelift_shifter_alt",       ["G_pickup_D55_facelift_shifter_alt"],       [],          "G_pickup_D55_facelift_shifter_A_alt",    "Shifter"],
+        ["pickup_facelift_shifter_T_alt",           ["pickup_facelift_shifter_T_alt"],           [],          "pickup_facelift_ashtray_alt",            "Low Range Selector"],
+        ["G_pickup_D55_dash_gauge_M_facelift",      ["G_pickup_D55_dash_gauge_M_facelift"],      [],          "G_pickup_D55_dash_gauge_M_air_facelift", "Air Pressure Gauge"],
+        ["G_pickup_D55_airbrakeContols_facelift",   ["G_pickup_D55_airbrakeContols_facelift"],   [],          "G_pickup_D55_airbrakeContols_facelift",  "Airbrake Controls", {"coreSlot":true}],
+        ["G_pickup_D55_pto_facelift",               ["G_pickup_D55_pto_facelift"],               [],          "",                                       "PTO Controls"],
+        ["G_pickup_D55_fifthwheel_switch_facelift", ["G_pickup_D55_fifthwheel_switch_facelift"], [],          "",                                       "Fifth Wheel Switch"],
+    ],
+    "controller": [
+        ["fileName"],
+        ["gauges/analogOdometer", {"name":"analogOdometer" }],
+    ],
+    "analogOdometer": {
+        "configuration": {
+            "materialName": "@generic_gauges_odo",
+            "htmlPath": "local://local/vehicles/common/analogOdo.html",
+            "displayWidth":512,
+            "displayHeight":32,
+            "odometerDigits":7,
+            "odometerHasDecimalSeparator":true,
+            "tripHasDecimalSeparator":true,
+            "unit":"imperial",
+            "floatStyle":{"color":"black"},
+            "bodyStyle":{
+                "background": "url('/vehicles/common/odometer_analog_b.cef_color.png')",
+                "font-family": "OpenSans",
+                "font-size": "28px",
+                "color": "white",
+                "letter-spacing": "15.5px",
+                "margin": "-4.5px 10.5px",
+                "transform": "scaleX(1.26)",
+                "transform-origin": "left",
+            },
+            "tripDivStyle":{
+                "margin-left": "-3px",
+                "position": "fixed",
+                "letter-spacing": "32px"
+            }
+        },
+    },
+    "camerasInternal":[
+        ["type", "x", "y", "z", "fov", "id1:", "id2:", "id3:", "id4:", "id5:", "id6:"],
+        {"nodeWeight":2.35},
+        {"beamSpring":846, "beamDamp":94},
+        {"selfCollision":true},
+        {"collision":true},
+        //dash cam
+        ["dash", 0.462, 0.1, 1.53, 55, "b1rr","b1ll","b3rr","b3ll","b6rr","b6ll", {"beamDeform":2800560,"beamStrength":"FLT_MAX"}],
+    ],
+    "soundscape": [
+        ["name", "src"],
+        //indicator7
+        {"node:":"int_strw"},
+        ["indicatorStart", "event:>Vehicle>Interior>Indicator>POL_On"],
+        ["indicatorStop", "event:>Vehicle>Interior>Indicator>POL_Off"],
+        ["indLoop1", "event:>Vehicle>Interior>Indicator>FIPA_Click"],
+        ["indLoop2", "event:>Vehicle>Interior>Indicator>FIPA_Clack"],
+        //lights3
+        ["LightOn", "event:>Vehicle>Interior>Light>AU5_Light_On"],
+        ["LightOff", "event:>Vehicle>Interior>Light>AU5_Light_Off"],
+        //handbrake2
+        {"node:":"int_pbrk"},
+        ["handbrakeDisengaged","event:>Vehicle>Interior>Handbrake_Pedal>Pedal_04_Unlock"],
+        ["handbrakeEngaging","event:>Vehicle>Interior>Handbrake_Pedal>Pedal_04_Lock"],
+        //affects horn location because horn soundscape is loaded after
+        {"node:":"b6l"},
+    ],
+    "props": [
+        ["func",         "mesh",                 "idRef:","idX:","idY:", "baseRotation",           "rotation",                  "translation",           "min", "max", "offset", "multiplier"],
+        //speedometer
+        ["wheelspeed",   "pickup_facelift_needle_speedo", "dshl","dsh","int_strw",       {"x":160 "y":180, "z":0}, {"x":0, "y":0, "z":-4.15},   {"x":0, "y":0, "z":0},   0, 52, -26.1, 1, {"baseTranslationGlobal":{"x":0.389311,"y":-0.704284,"z":1.21965}}],
+        //tachometer
+        ["rpm",          "pickup_facelift_needle_tacho",  "dshl","dsh","int_strw",       {"x":160 "y":180, "z":0}, {"x":0, "y":0, "z":-0.0335}, {"x":0, "y":0, "z":0},   0, 6000, -4000, 1, {"baseTranslationGlobal":{"x":0.518752,"y":-0.704284,"z":1.21965}}],
+        //fuel gauge
+        ["fuel",         "pickup_facelift_needle_fuel",   "dshl","dsh","int_strw",       {"x":160 "y":180, "z":0}, {"x":0, "y":0, "z":-70},     {"x":0, "y":0, "z":0},   0, 1, -1, 1, {"baseTranslationGlobal":{"x":0.47669,"y":-0.698762,"z":1.18674}}],
+        //water temp
+        ["watertemp",    "pickup_facelift_needle_temp",   "dshl","dsh","int_strw",     {"x":160 "y":180, "z":0}, {"x":0, "y":0, "z":-1},      {"x":0, "y":0, "z":0},   60, 120, -90, 1, {"baseTranslationGlobal":{"x":0.454347,"y":-0.71322,"z":1.26711}}],
+        //pedals
+        ["brake",        "pickup_facelift_brakepedal",         "b1l","b1r","b5l",    {"x":154, "y":180, "z":0},   {"x":-25, "y":0, "z":0},     {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1, {"baseTranslationGlobal":{"x":0.450401,"y":-0.926146,"z":0.861946}}],
+        ["throttle",     "pickup_facelift_gaspedal",           "b1l","b1r","b5l",    {"x":154, "y":180, "z":0},   {"x":-23, "y":0, "z":0},     {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1, {"baseTranslationGlobal":{"x":0.300421,"y":-0.926057,"z":0.859521}}],
+        //["parkingbrake", "pickup_facelift_parkingbrake",  "b1l","b1r","b5l",    {"x":165, "y":180, "z":0},   {"x":-25, "y":0, "z":0},     {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+        //turn signal stalk
+        ["turnsignal",   "pickup_signalstalk",   "dshl","dsh","int_strw",      {"x":-105 "y":180, "z":0}, {"x":0, "y":-15, "z":-2},     {"x":0, "y":0, "z":0},   -1, 1, -1, 1, {"baseTranslation":{"x":-0.05,"y":0.045,"z":0.02}}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //interior
+         ["pickup_facelift_dash", ["pickup_dash"]],
+         ["pickup_facelift_expletivehandle", ["pickup_body"]],
+         ["pickup_facelift_gauges", ["pickup_dash"]],
+         ["pickup_facelift_decals_gauges", ["pickup_dash"]],
+         ["pickup_facelift_console", ["pickup_floor", "pickup_dash"]],
+         ["pickup_facelift_intmirror", ["pickup_windshield"]],
+         ["pickup_facelift_buttons_front",     ["pickup_dash"], [], {"disable":"$=$components.locker_F ~= true",  "pos":{"x":0.091, "y":-0.0655, "z":-0.114}, "rot":{"x":-3, "y":0, "z":0}}],
+         ["pickup_facelift_locker_button_rear",["pickup_dash"], [], {"disable":"$=$components.locker_R ~= true",  "pos":{"x":0.129, "y":-0.0635, "z":-0.078}, "rot":{"x":-3, "y":0, "z":0}}],
+         ["G_pickup_facelift_locker_button_int",["pickup_dash"], [], {"disable":"$=$components.locker_I ~= true", "pos":{"x":0.167, "y":-0.0635, "z":-0.078}, "rot":{"x":-3, "y":0, "z":0}}],
+         ["G_pickup_intcarpet_D55", ["pickup_body"]],
+        ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"collision":true},
+         {"selfCollision":true},
+
+         //dash nodes
+         {"group":["pickup_dash", "pickup_dash_roamer"]},
+         {"nodeWeight":0.752},
+         ["dshr",-0.455, -0.626, 1.090],
+         ["dsh",  0.000, -0.626, 1.090],
+         ["dshl", 0.455, -0.626, 1.090],
+         {"collision":false},
+         {"selfCollision":false},
+         ["int_strw", 0.455, -0.475, 1.172],
+         {"nodeWeight":0.2},
+         //flexbody node
+         ["dsh2",  0.000, -0.716, 1.290],
+         {"group":""},
+         ["int_pbrk", 0.66, -0.93, 0.86],
+         {"group":""},
+    ],
+    "triggers2":[
+        ["id", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["hood_int",   "dshl","dsh","b1ll",    "box",{"x":0.04,"y":0.04,"z":0.04},{"x":25,"y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0},{"x":-0.230, "y": 0.220, "z":-0.100}],
+        ["headlights", "dshl","dsh","int_strw","sphere", 0.025,                   {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0},{"x":-0.235, "y":-0.025, "z": 0.020}],
+        ["cruise",     "dshl","dsh","int_strw","box",{"x":0.03,"y":0.03,"z":0.02},{"x":30,"y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0},{"x": 0.240, "y": 0.025, "z": 0.135}],
+        ["sw_ignition","dshl","dsh","int_strw","sphere", 0.025,                   {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0},{"x": 0.070, "y": 0.058, "z": 0.011}],
+        ["front_lock", "dshl","dsh","int_strw","box",{"x":0.03,"y":0.03,"z":0.02},{"x":30,"y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0},{"x": 0.150, "y":-0.035, "z": 0.033}, {"disable":"$=$components.locker_F ~= true"}],
+        ["rear_lock",  "dshl","dsh","int_strw","box",{"x":0.03,"y":0.03,"z":0.02},{"x":30,"y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0},{"x": 0.112, "y":-0.035, "z": 0.033}, {"disable":"$=$components.locker_R ~= true"}],
+        ["int_lock",   "dshl","dsh","int_strw","box",{"x":0.03,"y":0.03,"z":0.02},{"x":30,"y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0},{"x": 0.074, "y":-0.035, "z": 0.033}, {"disable":"$=$components.locker_I ~= true"}],
+    ],
+    "actionsEnabled": [
+        ["id"],
+        ["hoodRelease"],
+        ["basicCruiseCointrol"],
+        ["toggleFrontDiff",     {"disable":"$=$components.locker_F ~= true"}],
+        ["lockFrontDiff",       {"disable":"$=$components.locker_F ~= true"}],
+        ["unlockFrontDiff",     {"disable":"$=$components.locker_F ~= true"}],
+        ["setFrontDiffModeAxis",{"disable":"$=$components.locker_F ~= true"}],
+        ["toggleRearDiff",      {"disable":"$=$components.locker_R ~= true"}],
+        ["lockRearDiff",        {"disable":"$=$components.locker_R ~= true"}],
+        ["unlockRearDiff",      {"disable":"$=$components.locker_R ~= true"}],
+        ["setRearDiffModeAxis", {"disable":"$=$components.locker_R ~= true"}],
+    ],
+    "triggerEventLinks2":[
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["hood_int",   "action0", "hoodRelease"],
+        ["headlights", "action0", "common:toggle_headlights"],
+        ["cruise",     "action0", "basicCruiseCointrol"],
+        ["sw_ignition","action0", "common:activateStarterMotor"],
+        ["sw_ignition","action2", "common:setIgnitionLevel3Momentary"],
+        ["int_lock",   "action0", "toggleInteraxleDiff", {"disable":"$=$components.locker_I ~= true"}],
+        ["rear_lock",  "action0", "toggleRearDiff", {"disable":"$=$components.locker_R ~= true"}],
+        ["front_lock", "action0", "toggleFrontDiff",{"disable":"$=$components.locker_F ~= true"}],
+    ],
+    "torsionbars":[
+       ["id1:", "id2:", "id3:", "id4:"],
+        //rigify the column
+        {"spring":20000, "damp":1, "deform":18000, "strength":28000},
+        ["int_strw", "dshl", "dsh", "b5l"],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //dash board
+          {"beamSpring":869146.6,"beamDamp":142.73},
+          {"beamDeform":12400,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":""},
+          ["dshr","b5r"],
+          ["dshl","b5l"],
+          ["dshr","b6r"],
+          ["dshl","b6l"],
+          ["dshr","b1r"],
+          ["dshl","b1l"],
+          ["dshr","b5rr"],
+          ["dshl","b5ll"],
+          ["dshr","b6rr"],
+          ["dshl","b6ll"],
+          ["dshl","dshr"],
+          ["dsh","b5r"],
+          ["dsh","b5l"],
+          ["dsh","b6r"],
+          ["dsh","b6l"],
+          ["dsh","b1r"],
+          ["dsh","b1l"],
+          ["dshl","dsh"],
+          ["dshr","dsh"],
+          ["dsh","int_strw"],
+          ["dshl","int_strw"],
+          {"beamSpring":169146.6,"beamDamp":42.73},
+          ["dsh2","b5r"],
+          ["dsh2","b5l"],
+          ["dsh2","b6r"],
+          ["dsh2","b6l"],
+          ["dsh2","b1r"],
+          ["dsh2","b1l"],
+          ["dshl","dsh2"],
+          ["dshr","dsh2"],
+          {"beamSpring":160100,"beamDamp":142.73},
+          {"beamDeform":70300,"beamStrength":"FLT_MAX"},
+          ["int_pbrk","dshl"],
+          ["int_pbrk","b5ll"],
+          ["int_pbrk","b5l"],
+          ["int_pbrk","b1lll"],
+          //--BLEED DEFORM LIMIT TO OTHER PARTS--
+          {"deformLimitExpansion":1.2},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //sides
+            {"dragCoef":0},
+            {"group":"pickup_dash"},
+            ["dshl", "b6ll", "b5ll"],
+            ["b6ll", "dshl", "b6l"],
+            ["b6l", "dshl", "dsh"],
+            ["dsh", "b6r", "b6l"],
+            ["dsh", "dshr", "b6r"],
+            ["b6r", "dshr", "b6rr"],
+            ["dshr", "b5rr", "b6rr"],
+            ["dshl", "b5ll", "b5l"],
+            ["b5l", "dsh", "dshl"],
+            ["b5l", "b5r", "dsh"],
+            ["dsh", "b5r", "dshr"],
+            ["dshr", "b5r", "b5rr"],
+    ],
+},
+"G_pickup_D55_dash_gauge_M_air_facelift": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Air Gauge",
+        "value":10,
+    },
+    "slotType" : "G_pickup_D55_dash_gauge_M_facelift",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_D55_dash_vent_gauge_facelift", ["pickup_dash"],[],{"pos":{"x":0.0, "y":0.0, "z":0.0}}],
+    ],
+    "props": [
+        ["func",                        "mesh",                                "idRef:","idX:","idY:", "baseRotation",             "rotation",                 "translation",       "min", "max", "offset", "multiplier"],
+        ["mainAirTank_pressureRelative","G_pickup_D55_air_gauge_needle_a_dash_facelift", "dsh", "dshl", "dsh2", {"x":-116, "y":0, "z":0},   {"x":0, "y":0, "z":-0.264}, {"x":0, "y":0, "z":0}, 0, 1834, -517, 0.001, {"baseTranslationGlobal":{"x":0.220092, "y":-0.654712, "z":1.18053}}],
+        ["mainAirTank_pressureRelative","G_pickup_D55_air_gauge_needle_b_dash_facelift", "dsh", "dshl", "dsh2", {"x":-116, "y":0, "z":0},   {"x":0, "y":0, "z":-0.264}, {"x":0, "y":0, "z":0}, 0, 1834, -517, 0.001, {"baseTranslationGlobal":{"x":0.220092, "y":-0.654712, "z":1.18053}}],
+    ],
+},
+"G_pickup_D55_parkbrake_regular_facelift": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Regular Parking Brake",
+        "value":80,
+    },
+    "slotType" : "G_pickup_D55_airbrakeContols_facelift",
+    "props": [
+        ["func",         "mesh",                      "idRef:","idX:","idY:",        "baseRotation",              "rotation",                  "translation",           "min", "max", "offset", "multiplier"],
+        ["parkingbrake", "pickup_facelift_parkingbrake",  "b1l","b1r","b5l",    {"x":165, "y":180, "z":0},   {"x":-25, "y":0, "z":0},     {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1,        {"baseTranslationGlobal":{"x":0.73, "y":-0.928561,"z":0.933779}}],
+    ],
+},
+"G_pickup_D55_airbrakeContols_facelift": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Airbrake Controls",
+        "value":1000,
+    },
+    "slotType" : "G_pickup_D55_airbrakeContols_facelift",
+    "controller": [
+        ["fileName"],
+        ["pneumatics/lowAirPressureWarning", {"airTooLowPressure":410000, "airOkPressure":420000, "lowAirWarningSoundEvent":"event:>Vehicle>Interior>Low_Pressure_Alarm_01", "lowAirWarningSoundNode":"dshl"}],
+    ],
+    "props": [
+        ["func",                            "mesh",                          "idRef:","idX:","idY:", "baseRotation",                      "rotation",           "translation",           "min", "max", "offset", "multiplier"],
+        //parking brake button
+        ["parkingbrake",                    "G_pickup_D55_parking_brake_switch_facelift", "dshl","dsh","dsh2",    {"x":155.772, "y":180.000, "z":0}, {"x":0, "y":0, "z":0},  {"x":0.013, "y":-0.014, "z":-0.009},  -1, 1, -0.4, 1, {"baseTranslationGlobal":{"x":0.363772, "y":-0.661578, "z":1.06652}}],
+        //trailer air release                                                                                                                                                    -0.014      -0.009
+        ["mainAirTank_pressureConsumerCoef","G_pickup_D55_trailer_brake_switch_facelift", "dshl","dsh","dsh2",    {"x":155.772, "y":180.000, "z":0}, {"x":0, "y":0, "z":0},  {"x":0.013, "y":-0.014, "z":-0.009},   -1, 1, 0.0, 1,  {"baseTranslationGlobal":{"x":0.27572, "y":-0.667109, "z":1.06554}}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //interior
+         ["G_pickup_D55_parking_brake_base_facelift", ["pickup_dash"]],
+         ["G_pickup_D55_trailer_brake_base_facelift", ["pickup_dash"]],
+    ],
+    "triggers2":[
+        ["id", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["parkingBrake","dshl","dsh","dsh2", "sphere", 0.035, {"x":0, "y":0, "z":90}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.165, "y":-0.082, "z":-0.009}, {"deformGroup":""}],
+        ["trailerAir",  "dshl","dsh","dsh2", "sphere", 0.035, {"x":0, "y":0, "z":90}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.257 "y":-0.086, "z":-0.010}, {"deformGroup":""}],
+    ],
+    "triggerEventLinks2": [
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["parkingBrake", "action0", "common:parkingbrake"],
+        ["trailerAir", "action0", "toggleTrailerAirSupply"],
+    ],
+    "actionsEnabled": [
+        ["id"],
+        ["toggleTrailerAirSupply"],
+    ],
+},
+"G_pickup_D55_pto_facelift": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"PTO Controls",
+        "value":50,
+    },
+    "slotType" : "G_pickup_D55_pto_facelift",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //interior
+        ["G_pickup_D55_PTO_stand_facelift_console", ["pickup_body"],[],{"pos":{"x":0.0, "y":-0.073, "z":0.0}}],
+        ["G_pickup_D55_PTO_panel", ["pickup_body"],[],{"pos":{"x":0.125, "y":0.077, "z":0.0}}],
+    ],
+    "props": [
+        ["func",         "mesh",                 "idRef:","idX:","idY:", "baseRotation",           "rotation",                  "translation",           "min", "max", "offset", "multiplier"],
+        //PTO Stick
+        ["hydraulicPTOControl",        "G_pickup_D55_PTO_switch",         "b1l","b1r","b2l",    {"x":-90, "y":0, "z":0},   {"x":-30, "y":0, "z":0},     {"x":0.0, "y":0, "z":0}, -1, 1, 0, 1, {"baseTranslationGlobal":{"x":-0.037928, "y":-0.533275, "z":0.84885}}],
+    ],
+    "triggers2": [
+        ["id", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["PTO_out", "b1l","b1r","b2l", "box", {"x":-0.05, "y":0.05, "z":0.07}, {"x":0, "y":90, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.423, "y":0.347, "z":0.32}, {"deformGroup":""}],
+        ["PTO_in",  "b1l","b1r","b2l", "box", {"x": 0.05, "y":0.05, "z":0.07}, {"x":0, "y":90, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.423, "y":0.347, "z":0.32}, {"deformGroup":""}],
+    ],
+    "actionsEnabled": [
+        ["id"],
+        ["PTOMinus"],
+        ["PTOPlus"],
+    ],
+    "triggerEventLinks2": [
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["PTO_in", "action0", "PTOMinus"],
+        ["PTO_out",  "action0", "PTOPlus"],
+    ],
+},
+"G_pickup_D55_fifthwheel_switch_facelift": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Fifth Wheel Switch",
+        "value":10,
+    },
+    "slotType" : "G_pickup_D55_fifthwheel_switch_facelift",
+    "triggers2":[
+        ["id",          ,"idRef:","idX:", "idY:",            "type","size",                         "baseRotation",         "rotation",            "translation",         "baseTranslation"],
+        ["sliderLatch", "dsh",  "dshl", "dsh2",  "sphere", 0.015,                       {"x":0, "y":0, "z":90}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.620, "y":0.020, "z":-0.025}, {"nodeMove":{"x":0.0, "y":0.0, "z":0.0}, "deformGroup":""}],
+    ],
+    "triggerEventLinks2":[
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["sliderLatch",        "action0", "fifthwheelSliderLock"]
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_D55_switch_5thwheel_base_facelift", ["pickup_dash"], [],{"pos":{"x":-0.008, "y":0, "z":0.0}}],
+    ],
+    "props": [
+        ["func",                      "mesh",                                  "idRef:","idX:","idY:",  "baseRotation",             "rotation",             "translation",         "min", "max", "offset", "multiplier"],
+        ["sliderLatch_notAttached",   "G_pickup_D55_switch_5thwheel_facelift", "dshl","dsh","dsh2", {"x":20, "y":180, "z":0}, {"x":90, "y":0, "z":0},  {"x":0, "y":0, "z":0},  0, 1, 0, 1, {"baseTranslationGlobal":{"x":0.619306, "y":-0.65879, "z":1.10343}}],
+    ],
+},
+"G_pickup_D55_facelift_shifter_A": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Automatic Column Shifter",
+        "value":40,
+    },
+    "slotType" : "G_pickup_D55_facelift_shifter",
+    "controller": [
+        ["fileName"],
+        ["propAnimation/singleAxisLever", {"name":"singleAxisLever"}],
+
+    ]
+    "singleAxisLever": {
+        "gearCoordinates": [
+            ["gearIndex",   "value"]
+            [1,            0.0]
+            [2,             0.2]
+            [3,             0.4]
+            [4,             0.6]
+            [5,             0.8]
+            [6,             1]
+        ]
+        "shiftSoundNode:":["dshl"]
+        "shiftSoundEventSingleAxisLever": "event:>Vehicle>Interior>Gearshift>automatic_lever_02",
+        "shiftSoundVolumeSingleAxisLever": 0.5,
+    },
+    "props": [
+        ["func",   "mesh",               "idRef:","idX:","idY:", "baseRotation",           "rotation",              "translation",            "min", "max", "offset", "multiplier"],
+        //automatic transmission
+        ["gearModeIndex", "pickup_facelift_needle_gear", "dshl","dsh","int_strw",       {"x":160 "y":180, "z":0}, {"x":0, "y":0, "z":0},   {"x":0.16, "y":0, "z":0}, 0, 1, 0, 1, {"baseTranslationGlobal":{"x":0.450345,"y":-0.693448,"z":1.15855}}],
+        //shifter
+        ["gearModeIndex", "pickup_facelift_shifter_A",   "dshl","dsh","int_strw",      {"x":160 "y":180, "z":0}, {"x":0, "y":0, "z":-25}, {"x":0, "y":0, "z":0},    0, 1, -0.5, 1, {"baseTranslationGlobal":{"x":0.416474,"y":-0.625028,"z":1.10558}}],
+    ],
+},
+"G_pickup_D55_facelift_shifter_M": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"5-Speed Manual Floor Shifter",
+        "value":50,
+    },
+    "slotType" : "G_pickup_D55_facelift_shifter",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //cover up the auto shifter numbering
+         ["pickup_facelift_gauges_cover_M", ["pickup_body", "pickup_dash"]],
+         ["pickup_shifter_M", ["pickup_floor","pickup_shifterboot_M","pickup_shifterknob_M","pickup_shifterbase_M"]],
+    ],
+    "props": [
+        ["func",   "mesh",             "idRef:","idX:","idY:", "baseRotation",         "rotation",            "translation",         "min", "max", "offset", "multiplier"],
+        //shifter
+        ["clutch", "pickup_facelift_clutchpedal"   , "b1l","b1r","b5l",    {"x":154, "y":180, "z":0},   {"x":-25, "y":0, "z":0},     {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1, {"baseTranslationGlobal":{"x":0.600381,"y":-0.926236,"z":0.86437}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["propAnimation/hPattern", {"name":"hPattern"}],
+
+    ]
+    "hPattern": {
+        "gearCoordinates": [
+            ["gearIndex",   "x",      "y"]
+            [-1,            0.5,        -1]
+            [0,             0.0,        0]
+            [1,            -0.5,        1]
+            [2,            -0.5,       -1]
+            [3,             0.0,        1]
+            [4,             0.0,       -1]
+            [5,             0.5,        1]
+        ]
+        "shiftSoundNode:":["sh_b3"]
+        "shiftSoundEventHPatternGearIn": "event:>Vehicle>Interior>Gearshift>manual_modern_10_in",
+        "shiftSoundEventHPatternGearOut": "event:>Vehicle>Interior>Gearshift>manual_modern_10_out",
+        "shiftSoundVolumeHPatternGearIn": 0.5,
+        "shiftSoundVolumeHPatternGearOut": 0.5,
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"collision":true},
+         {"selfCollision":false},
+         //--SHIFTER---  has to be jbeamed to allow for realistic movement
+         {"group":"pickup_shifterbase_M"},
+         {"nodeWeight":0.45}
+         ["sh_b1l",  0.076, -0.870, 0.688],
+         ["sh_b1r", -0.076, -0.870, 0.688],
+         ["sh_b2l",  0.076, -0.702, 0.632],
+         ["sh_b2r", -0.076, -0.702, 0.632],
+
+         ["sh_b3", 0.00, -0.80, 0.607],
+         {"selfCollision":true},
+         {"group":["pickup_shifterboot_M","pickup_shifterknob_M"]},
+         {"nodeWeight":1.5}
+         ["sh_l3", 0.00, -0.665, 0.86],
+
+         {"selfCollision":false},
+         {"nodeWeight":0.30}
+         {"group":["pickup_shifterboot_M","pickup_shifterknob_M"]},
+         ["sh_l1l",  0.032, -0.799 0.749],
+         ["sh_l1r", -0.032, -0.799 0.749],
+         ["sh_l2l",  0.032, -0.723, 0.723],
+         ["sh_l2r", -0.032, -0.723, 0.723],
+         {"selfCollision":false},
+         {"collision":true},
+         {"group":""},
+    ],
+    "beams":[
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //main shape
+        {"beamSpring":401000,"beamDamp":55},
+        {"beamDeform":259000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":1.1},
+        ["sh_b1l", "sh_b1r"],
+        ["sh_b1l", "sh_b2l"],
+        ["sh_b1l", "sh_b2r"],
+        ["sh_b1r", "sh_b2l"],
+        ["sh_b1r", "sh_b2r"],
+        ["sh_b2l", "sh_b2r"],
+
+        ["sh_b1l", "sh_b3"],
+        ["sh_b1r", "sh_b3"],
+        ["sh_b2l", "sh_b3"],
+        ["sh_b2r", "sh_b3"],
+
+        //lever
+        {"beamSpring":121000,"beamDamp":35},
+        ["sh_l3", "sh_l1l"],
+        ["sh_l3", "sh_l1r"],
+        ["sh_l3", "sh_l2l"],
+        ["sh_l3", "sh_l2r"],
+
+        ["sh_l1l", "sh_l1r"],
+        ["sh_l1l", "sh_l2l"],
+        ["sh_l1l", "sh_l2r"],
+
+        ["sh_l1r", "sh_l2l"],
+        ["sh_l1r", "sh_l2r"],
+        ["sh_l2l", "sh_l2r"],
+        //hinge
+        {"beamSpring":121000,"beamDamp":25},
+        ["sh_b3", "sh_l3"],
+        ["sh_b3", "sh_l1l"],
+        ["sh_b3", "sh_l1r"],
+        ["sh_b3", "sh_l2l"],
+        ["sh_b3", "sh_l2r"],
+
+        //stabilize the shifter
+        {"beamSpring":0,"beamDamp":175},
+        ["sh_b1l", "sh_l3"],
+        ["sh_b1r", "sh_l3"],
+        ["sh_b2l", "sh_l3"],
+        ["sh_b2r", "sh_l3"],
+        {"breakGroup":""},
+        //attach to body
+        {"beamSpring":300000,"beamDamp":70},
+        {"beamDeform":1400,"beamStrength":"FLT_MAX"},
+        ["sh_b1l", "b5r"],
+        ["sh_b1r", "b5r"],
+        ["sh_b2l", "b5r"],
+        ["sh_b2r", "b5r"],
+        ["sh_b3",  "b5r"],
+
+        ["sh_b1l", "b5l"],
+        ["sh_b1r", "b5l"],
+        ["sh_b2l", "b5l"],
+        ["sh_b2r", "b5l"],
+        ["sh_b3",  "b5l"],
+
+        ["sh_b1l", "dsh",{"beamDeform":12400}],
+        ["sh_b1r", "dsh",{"beamDeform":12400}],
+        ["sh_b2l", "dsh",{"beamDeform":12400}],
+        ["sh_b2r", "dsh",{"beamDeform":12400}],
+        ["sh_b3",  "dsh",{"beamDeform":12400}],
+
+        ["sh_b1l", "b1r"],
+        ["sh_b1r", "b1r"],
+        ["sh_b2l", "b1r"],
+        ["sh_b2r", "b1r"],
+        ["sh_b3",  "b1r"],
+
+        ["sh_b1l", "b1l"],
+        ["sh_b1r", "b1l"],
+        ["sh_b2l", "b1l"],
+        ["sh_b2r", "b1l"],
+        ["sh_b3",  "b1l"],
+        //support beams
+        {"beamType":"|SUPPORT","beamPrecompression":0.895,"beamLongBound":2},
+        {"beamSpring":201000,"beamDamp":50},
+        {"beamDeform":16000,"beamStrength":"FLT_MAX"},
+        ["sh_l1r", "sh_b2l"],
+        ["sh_l2r", "sh_b1l"],
+        ["sh_l2l", "sh_b1r"],
+        ["sh_l1l", "sh_b2r"],
+        {"beamPrecompression":0.905}
+        ["sh_l3", "sh_b1l"],
+        ["sh_l3", "sh_b1r"],
+        ["sh_l3", "sh_b2l"],
+        ["sh_l3", "sh_b2r"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "torsionHydros": [
+        ["id1:","id2:","id3:","id4:"],
+        {"spring":200, "damp":1, "deform":"FLT_MAX", "strength":1000},
+        ["sh_b2l","sh_b1l","sh_b1r","sh_l3",  {"inputSource":"hPatternAxisY","factor":-0.15}],
+        ["sh_b1r","sh_b1l","sh_b2l","sh_l3",  {"inputSource":"hPatternAxisX","factor":-0.15}],
+        ["sh_b1r","sh_b2r","sh_b2l","sh_l3",  {"inputSource":"hPatternAxisY","factor":0.15}],
+        ["sh_b2l","sh_b2r","sh_b1r","sh_l3",  {"inputSource":"hPatternAxisX","factor":0.15}],
+    ],
+    "torsionbars": [
+        ["id1:", "id2:", "id3:", "id4:"],
+        {"spring":100, "damp":0.2, "deform":30000, "strength":1000},
+        ["sh_b1r", "sh_b3", "sh_l3", "sh_l1r"],
+        ["sh_b2r", "sh_b3", "sh_l3", "sh_l2r"],
+        ["sh_b2l", "sh_b3", "sh_l3", "sh_l2l"],
+        ["sh_b1l", "sh_b3", "sh_l3", "sh_l1l"],
+
+    ],
+},
+"G_pickup_D55_facelift_shifter_M_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"5-Speed Manual Shifter",
+        "value":50,
+    },
+    "slotType" : "G_pickup_D55_facelift_shifter_alt",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //cover up the auto shifter numbering
+         ["pickup_facelift_gauges_cover_M", ["pickup_body", "pickup_dash"]],
+         ["pickup_facelift_shifter_M", ["pickup_floor","pickup_shifterboot_M","pickup_shifterknob_M","pickup_shifterbase_M"]],
+    ],
+    "props": [
+        ["func",   "mesh",             "idRef:","idX:","idY:", "baseRotation",         "rotation",            "translation",         "min", "max", "offset", "multiplier"],
+        //shifter
+        ["clutch", "pickup_facelift_clutchpedal"   , "b1l","b1r","b5l",    {"x":154, "y":180, "z":0},   {"x":-25, "y":0, "z":0},     {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1, {"baseTranslationGlobal":{"x":0.600381,"y":-0.926236,"z":0.86437}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["propAnimation/hPattern", {"name":"hPattern"}],
+
+    ]
+    "hPattern": {
+        "gearCoordinates": [
+            ["gearIndex",   "x",      "y"]
+            [-1,            0.5,        -1]
+            [0,             0.0,        0]
+            [1,            -0.5,        1]
+            [2,            -0.5,       -1]
+            [3,             0.0,        1]
+            [4,             0.0,       -1]
+            [5,             0.5,        1]
+        ]
+        "shiftSoundNode:":["sh_b3"]
+        "shiftSoundEventHPatternGearIn": "event:>Vehicle>Interior>Gearshift>manual_modern_10_in",
+        "shiftSoundEventHPatternGearOut": "event:>Vehicle>Interior>Gearshift>manual_modern_10_out",
+        "shiftSoundVolumeHPatternGearIn": 0.5,
+        "shiftSoundVolumeHPatternGearOut": 0.5,
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"collision":true},
+         {"selfCollision":false},
+         //--SHIFTER---  has to be jbeamed to allow for realistic movement
+         {"group":"pickup_shifterbase_M"},
+         {"nodeWeight":0.45}
+         ["sh_b1l",  0.026, -0.617, 0.798],
+         ["sh_b1r", -0.084, -0.617, 0.798],
+         ["sh_b2l",  0.026, -0.494, 0.776],
+         ["sh_b2r", -0.084, -0.494, 0.776],
+
+         ["sh_b3", -0.029, -0.565, 0.734],
+         {"selfCollision":true},
+         {"group":["pickup_shifterboot_M","pickup_shifterknob_M"]},
+         {"nodeWeight":1.5}
+         ["sh_l3", 0.035, -0.478, 1.03],
+
+         {"selfCollision":false},
+         {"nodeWeight":0.30}
+         {"group":["pickup_shifterboot_M","pickup_shifterknob_M"]},
+         ["sh_l1l",  0.000, -0.577, 0.858],
+         ["sh_l1r", -0.058, -0.577, 0.858],
+         ["sh_l2l",  0.000, -0.511, 0.846],
+         ["sh_l2r", -0.058, -0.511, 0.846],
+         {"selfCollision":false},
+         {"collision":true},
+         {"group":""},
+    ],
+    "beams":[
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //main shape
+        {"beamSpring":401000,"beamDamp":55},
+        {"beamDeform":259000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":1.1},
+        ["sh_b1l", "sh_b1r"],
+        ["sh_b1l", "sh_b2l"],
+        ["sh_b1l", "sh_b2r"],
+        ["sh_b1r", "sh_b2l"],
+        ["sh_b1r", "sh_b2r"],
+        ["sh_b2l", "sh_b2r"],
+
+        ["sh_b1l", "sh_b3"],
+        ["sh_b1r", "sh_b3"],
+        ["sh_b2l", "sh_b3"],
+        ["sh_b2r", "sh_b3"],
+
+        //lever
+        {"beamSpring":121000,"beamDamp":35},
+        ["sh_l3", "sh_l1l"],
+        ["sh_l3", "sh_l1r"],
+        ["sh_l3", "sh_l2l"],
+        ["sh_l3", "sh_l2r"],
+
+        ["sh_l1l", "sh_l1r"],
+        ["sh_l1l", "sh_l2l"],
+        ["sh_l1l", "sh_l2r"],
+
+        ["sh_l1r", "sh_l2l"],
+        ["sh_l1r", "sh_l2r"],
+        ["sh_l2l", "sh_l2r"],
+        //hinge
+        {"beamSpring":121000,"beamDamp":25},
+        ["sh_b3", "sh_l3"],
+        ["sh_b3", "sh_l1l"],
+        ["sh_b3", "sh_l1r"],
+        ["sh_b3", "sh_l2l"],
+        ["sh_b3", "sh_l2r"],
+
+        //stabilize the shifter
+        {"beamSpring":0,"beamDamp":175},
+        ["sh_b1l", "sh_l3"],
+        ["sh_b1r", "sh_l3"],
+        ["sh_b2l", "sh_l3"],
+        ["sh_b2r", "sh_l3"],
+        {"breakGroup":""},
+        //attach to body
+        {"beamSpring":300000,"beamDamp":70},
+        {"beamDeform":1400,"beamStrength":"FLT_MAX"},
+        ["sh_b1l", "b5r"],
+        ["sh_b1r", "b5r"],
+        ["sh_b2l", "b5r"],
+        ["sh_b2r", "b5r"],
+        ["sh_b3",  "b5r"],
+
+        ["sh_b1l", "b5l"],
+        ["sh_b1r", "b5l"],
+        ["sh_b2l", "b5l"],
+        ["sh_b2r", "b5l"],
+        ["sh_b3",  "b5l"],
+
+        ["sh_b1l", "dsh",{"beamDeform":12400}],
+        ["sh_b1r", "dsh",{"beamDeform":12400}],
+        ["sh_b2l", "dsh",{"beamDeform":12400}],
+        ["sh_b2r", "dsh",{"beamDeform":12400}],
+        ["sh_b3",  "dsh",{"beamDeform":12400}],
+
+        ["sh_b1l", "b1r"],
+        ["sh_b1r", "b1r"],
+        ["sh_b2l", "b1r"],
+        ["sh_b2r", "b1r"],
+        ["sh_b3",  "b1r"],
+
+        ["sh_b1l", "b1l"],
+        ["sh_b1r", "b1l"],
+        ["sh_b2l", "b1l"],
+        ["sh_b2r", "b1l"],
+        ["sh_b3",  "b1l"],
+        //support beams
+        {"beamType":"|SUPPORT","beamPrecompression":0.90,"beamLongBound":2},
+        {"beamSpring":201000,"beamDamp":50},
+        {"beamDeform":16000,"beamStrength":"FLT_MAX"},
+        ["sh_l1r", "sh_b2l"],
+        ["sh_l2r", "sh_b1l"],
+        ["sh_l2l", "sh_b1r"],
+        ["sh_l1l", "sh_b2r"],
+        {"beamPrecompression":0.93}
+        ["sh_l3", "sh_b1l"],
+        ["sh_l3", "sh_b2l"],
+        {"beamPrecompression":0.95}
+        ["sh_l3", "sh_b1r"],
+        ["sh_l3", "sh_b2r"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "torsionHydros": [
+        ["id1:","id2:","id3:","id4:"],
+        {"spring":200, "damp":1, "deform":"FLT_MAX", "strength":1000},
+        ["sh_b2l","sh_b1l","sh_b1r","sh_l3",  {"inputSource":"hPatternAxisY","factor":-0.20}],
+        ["sh_b1r","sh_b1l","sh_b2l","sh_l3",  {"inputSource":"hPatternAxisX","factor":-0.15}],
+        ["sh_b1r","sh_b2r","sh_b2l","sh_l3",  {"inputSource":"hPatternAxisY","factor":0.20}],
+        ["sh_b2l","sh_b2r","sh_b1r","sh_l3",  {"inputSource":"hPatternAxisX","factor":0.15}],
+    ],
+    "torsionbars": [
+        ["id1:", "id2:", "id3:", "id4:"],
+        {"spring":100, "damp":0.2, "deform":30000, "strength":1000},
+        ["sh_b1r", "sh_b3", "sh_l3", "sh_l1r"],
+        ["sh_b2r", "sh_b3", "sh_l3", "sh_l2r"],
+        ["sh_b2l", "sh_b3", "sh_l3", "sh_l2l"],
+        ["sh_b1l", "sh_b3", "sh_l3", "sh_l1l"],
+
+    ],
+},
+"G_pickup_D55_facelift_shifter_A_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Automatic Shifter",
+        "value":40,
+    },
+    "slotType" : "G_pickup_D55_facelift_shifter_alt",
+    "controller": [
+        ["fileName"],
+        ["propAnimation/singleAxisLever", {"name":"singleAxisLever"}],
+
+    ]
+    "singleAxisLever": {
+        "gearCoordinates": [
+            ["gearIndex",   "value"]
+            [1,            0.0]
+            [2,             0.2]
+            [3,             0.4]
+            [4,             0.6]
+            [5,             0.8]
+            [6,             1]
+        ]
+        "shiftSoundNode:":["dsh"]
+        "shiftSoundEventSingleAxisLever": "event:>Vehicle>Interior>Gearshift>automatic_lever_02",
+        "shiftSoundVolumeSingleAxisLever": 0.5,
+    },
+    "props": [
+        ["func",   "mesh",               "idRef:","idX:","idY:", "baseRotation",           "rotation",              "translation",            "min", "max", "offset", "multiplier"],
+        //automatic transmission
+        ["gearModeIndex", "pickup_facelift_needle_gear", "dshl","dsh","int_strw",       {"x":160 "y":180, "z":0}, {"x":0, "y":0, "z":0},   {"x":0.16, "y":0, "z":0}, 0, 1, 0, 1, {"baseTranslationGlobal":{"x":0.450345,"y":-0.693448,"z":1.15855}}],
+        //shifter
+        ["gearModeIndex", "pickup_facelift_shifter_A",   "dshl","dsh","int_strw",      {"x":160 "y":180, "z":0}, {"x":0, "y":0, "z":-25}, {"x":0, "y":0, "z":0},    0, 1, -0.5, 1, {"baseTranslationGlobal":{"x":0.416474,"y":-0.625028,"z":1.10558}}],
+    ],
+},
+
+"G_pickup_sunvisors_facelift_D55": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Late Sunvisors",
+        "value":180,
+    },
+    "slotType" : "pickup_sunvisors",
+    "props": [
+        ["func",         "mesh",                 "idRef:","idX:","idY:", "baseRotation",           "rotation",                  "translation",           "min", "max", "offset", "multiplier"],
+        ["sunvisor_L_movement","pickup_facelift_sunvisor_L","rf1","rf1l","rf2",{"x":0,"y":0,"z":0},{"x":-170,"y":0,"z":0},{"x":0,"y":0,"z":0},0,1,0,1,{"baseRotationGlobal":{"x":-0.53,"y":-2.01,"z":-3.21}, "baseTranslationGlobal":{"x": 0.547336,"y":-0.320701,"z":1.63921}}],
+        ["sunvisor_R_movement","pickup_facelift_sunvisor_R","rf1","rf1r","rf2",{"x":0,"y":0,"z":0},{"x":-170,"y":0,"z":0},{"x":0,"y":0,"z":0},0,1,0,1,{"baseRotationGlobal":{"x": 0.53,"y": 2.01,"z": 3.21}, "baseTranslationGlobal":{"x":-0.547336,"y":-0.320701,"z":1.63921}}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pickup_sunvisor_mounts", ["pickup_body"]],
+    ],
+    "components": {
+        "electrics": {
+            "customValues": [
+                ["electricsName", "electricsFunction","electricsDefault"],
+                ["sunvisor_L","",0],
+                ["sunvisor_R","",0],
+                ["sunvisor_L_movement","min(1, max(0, electrics.sunvisor_L_movement + electrics.sunvisor_L * dt))",0],
+                ["sunvisor_R_movement","min(1, max(0, electrics.sunvisor_R_movement + electrics.sunvisor_R * dt))",0],
+            ]
+        }
+    },
+    "triggers2":[
+        ["id", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["sunvisor_L_close", "rf1","rf1l","rf2", "box", {"x":0.10, "y":0.04, "z":0.04}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.30, "y":-0.00, "z": 0.08}],
+        ["sunvisor_R_close", "rf1","rf1r","rf2", "box", {"x":0.10, "y":0.04, "z":0.04}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.30, "y":-0.00, "z":-0.12}],
+        ["sunvisor_L_open",  "rf1","rf1l","rf2", "box", {"x":0.10, "y":0.04, "z":0.04}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.42, "y":-0.00, "z": 0.08}],
+        ["sunvisor_R_open",  "rf1","rf1r","rf2", "box", {"x":0.10, "y":0.04, "z":0.04}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.42, "y":-0.00, "z":-0.12}],
+    ],
+    "actionsEnabled": [
+        ["id"],
+        ["sunvisor_L_open"],
+        ["sunvisor_R_open"],
+        ["sunvisor_L_close"],
+        ["sunvisor_R_close"],
+    ],
+    "triggerEventLinks2":[
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["sunvisor_L_open", "action0", "sunvisor_L_open"],
+        ["sunvisor_R_open", "action0", "sunvisor_R_open"],
+        ["sunvisor_L_close","action0", "sunvisor_L_close"],
+        ["sunvisor_R_close","action0", "sunvisor_R_close"],
+    ],
+},
+}

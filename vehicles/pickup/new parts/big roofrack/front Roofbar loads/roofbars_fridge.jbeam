@@ -1,0 +1,681 @@
+{
+    "G_pickup_big_roofrack_front_fridge_body_single": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Fridge"
+
+    },
+    "slotType" : "G_pickup_big_roofrack_top_front_load",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["fridge_body", ["fridge"],[],{"pos":{"x":0, "y":-0.72, "z":0.315}, "rot":{"x":-90, "y":90, "z":-90}}],
+        ["fridge_shelf_1", ["shelf_1"],[],{"pos":{"x":0, "y":-0.72, "z":0.315}, "rot":{"x":-90, "y":90, "z":-90}}],
+        ["fridge_shelf_2", ["shelf_2"],[],{"pos":{"x":0, "y":-0.72, "z":0.315}, "rot":{"x":-90, "y":90, "z":-90}}],
+        ["fridge_shelf_3", ["shelf_3"],[],{"pos":{"x":0, "y":-0.72, "z":0.315}, "rot":{"x":-90, "y":90, "z":-90}}],
+        ["fridge_drawer", ["drawer"],[],{"pos":{"x":0, "y":-0.72, "z":0.315}, "rot":{"x":-90, "y":90, "z":-90}}],
+        ["fridge_door_lower", ["fridge door"],[],{"pos":{"x":0, "y":-0.72, "z":0.315}, "rot":{"x":-90, "y":90, "z":-90}}],
+        ["fridge_door_upper", ["freezer door"],[],{"pos":{"x":0, "y":-0.72, "z":0.315}, "rot":{"x":-90, "y":90, "z":-90}}],
+
+        {"deformGroup":"fridge_frontStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["fridge", "roofbar_F"],[],{"pos":{"x":0.0, "y":-0.45, "z":0.0315}, "scale":{"x":0.68,"y":0.5,"z":0.585}}],
+        {"deformGroup":"fridge_rearStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["fridge", "roofbar_R"],[],{"pos":{"x":0.0, "y":0.45, "z":0.0315}, "scale":{"x":0.68,"y":0.5,"z":0.585}}],
+        {"deformGroup":""},
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"frictionCoef":1.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"collision":true},
+        {"selfCollision":true},
+        {"group":"fridge"},
+        //node layer1
+        //{"fixed":true},
+        {"nodeWeight":6},
+        ["frigba1l", 0.33, -0.73, 0.582],
+        ["frigba1r", -0.33, -0.73, 0.582],
+        ["frigba2l", 0.33, -0.73, 0.022],
+        ["frigba2r", -0.33, -0.73, 0.022],
+        //{"fixed":false},
+         {"nodeWeight":4.375},
+        //node layer2
+        ["frigba3l", 0.33, 0.25, 0.582],
+        ["frigba3r", -0.33, 0.25, 0.582],
+        ["frigba4l", 0.33, 0.25, 0.022],
+        ["frigba4r", -0.33, 0.25, 0.022],
+        //node layer3
+        ["frigba5l", 0.33, 0.725, 0.582],
+        ["frigba5r", -0.33, 0.72, 0.582],
+        ["frigba6l", 0.33, 0.72, 0.022],
+        ["frigba6r", -0.33, 0.72, 0.022],
+        //rail nodes
+        {"group":""}
+        {"collision":true},
+        {"selfCollision":false},
+        {"nodeWeight":0.7},
+        //lower shelf and drawer rails
+        ["frigra1l", 0.30, -0.41, 0.522],
+        ["frigra1r", -0.30, -0.41, 0.522],
+        ["frigra2l", 0.30, -0.41, 0.022],
+        ["frigra2r", -0.30, -0.41, 0.022],
+        //upper shelf rails
+        ["frigra3l", 0.30, -0.08, 0.522],
+        ["frigra3r", -0.30, -0.08, 0.522],
+        ["frigra4l", 0.30, -0.08, 0.022],
+        ["frigra4r", -0.30, -0.08, 0.022],
+        //freezer shelf rails
+        ["frigra5l", 0.30, 0.49, 0.522],
+        ["frigra5r", -0.30, 0.49, 0.522],
+        ["frigra6l", 0.30, 0.49, 0.022],
+        ["frigra6r", -0.30, 0.49, 0.022],
+        //drawer rail
+        ["frigdarp1l", 0.30, -0.62, 0.482],
+        ["frigdarp1r", -0.30, -0.62, 0.482],
+        {"collision":true},
+        {"selfCollision":true},
+        ["frigdarp2l", 0.30, -0.62, 0.202],
+        ["frigdarp2r", -0.30, -0.62, 0.202],
+        //shelf nodes
+        //shelf 1
+        {"group":"shelf_1"}
+        ["frigsa1l", 0.30, -0.41, 0.522],
+        ["frigsa1r", -0.30, -0.41, 0.522],
+        ["frigsa2l", 0.30, -0.41, 0.042],
+        ["frigsa2r", -0.30, -0.41, 0.042],
+        //upper shelf
+        {"group":"shelf_2"}
+        ["frigsa3l", 0.30, -0.08, 0.552],
+        ["frigsa3r", -0.30, -0.08, 0.552],
+        ["frigsa4l", 0.30, -0.08, 0.042],
+        ["frigsa4r", -0.30, -0.08, 0.042],
+        //freezer shelf
+        {"group":"shelf_3"}
+        ["frigsa5l", 0.30, 0.49, 0.552],
+        ["frigsa5r", -0.30, 0.49, 0.552],
+        ["frigsa6l", 0.30, 0.49, 0.042],
+        ["frigsa6r", -0.30, 0.49, 0.042],
+        //drawer
+        {"nodeWeight":0.35},
+        {"group":"drawer"}
+        ["frigdar1l", 0.30, -0.62, 0.487],
+        ["frigdar1r", -0.30, -0.62, 0.487],
+        ["frigdar2l", 0.30, -0.62, 0.222],
+        ["frigdar2r", -0.30, -0.62, 0.222],
+
+        ["frigdar3l", 0.30, -0.44, 0.487],
+        ["frigdar3r", -0.30, -0.44, 0.487],
+        ["frigdar4l", 0.30, -0.44, 0.157],
+        ["frigdar4r", -0.30, -0.44, 0.157],
+
+        {"nodeWeight":4},
+        //doors
+        {"group":"fridge door"}
+        ["frigda1l", 0.32, -0.66, 0.602],
+        ["frigda1r", -0.32, -0.66, 0.602],
+        ["frigda2l", 0.32, 0.24, 0.602],
+        ["frigda2r", -0.32, 0.24, 0.602],
+        {"group":"freezer door"}
+        ["frigda3l", 0.32, 0.28, 0.602],
+        ["frigda3r", -0.32, 0.28, 0.602],
+        ["frigda4l", 0.32, 0.72, 0.602],
+        ["frigda4r", -0.32, 0.72, 0.602],
+        //door rigifiers
+        {"group":""}
+        {"collision":false},
+        {"selfCollision":false},
+        ["frigda3", 0.00, 0.447, 0.348],
+        ["frigda1", 0.00, -0.24, 0.236],
+        {"collision":true},
+        {"selfCollision":true},
+        {"group":""}
+    ],
+    "rails": {
+
+        "shelf_rail_1l":{"links:":["frigra2l","frigra1l"], "broken:":[], "looped":false, "capped":false},
+        "shelf_rail_2l":{"links:":["frigra4l","frigra3l"], "broken:":[], "looped":false, "capped":false},
+        "shelf_rail_3l":{"links:":["frigra6l","frigra5l"], "broken:":[], "looped":false, "capped":false},
+        "shelf_rail_1ll":{"links:":["frigsa2l","frigsa1l"], "broken:":[], "looped":false, "capped":false},
+        "shelf_rail_2ll":{"links:":["frigsa4l","frigsa3l"], "broken:":[], "looped":false, "capped":false},
+        "shelf_rail_3ll":{"links:":["frigsa6l","frigsa5l"], "broken:":[], "looped":false, "capped":false},
+        "drawer_rail_l":{"links:":["frigdarp1l","frigdarp2l"], "broken:":[], "looped":false, "capped":false},
+        "drawer_rail_ll":{"links:":["frigdar1l","frigdar2l"], "broken:":[], "looped":false, "capped":false},
+
+
+        "shelf_rail_1r":{"links:":["frigra1r", "frigra2r"], "broken:":[], "looped":false, "capped":false},
+        "shelf_rail_2r":{"links:":["frigra3r", "frigra4r"], "broken:":[], "looped":false, "capped":false},
+        "shelf_rail_3r":{"links:":["frigra5r", "frigra6r"], "broken:":[], "looped":false, "capped":false},
+        "shelf_rail_1rr":{"links:":["frigsa1r", "frigsa2r"], "broken:":[], "looped":false, "capped":false},
+        "shelf_rail_2rr":{"links:":["frigsa3r", "frigsa4r"], "broken:":[], "looped":false, "capped":false},
+        "shelf_rail_3rr":{"links:":["frigsa5r", "frigsa6r"], "broken:":[], "looped":false, "capped":false},
+        "drawer_rail_r":{"links:":["frigdarp1r","frigdarp2r"], "broken:":[], "looped":false, "capped":false},
+        "drawer_rail_rr":{"links:":["frigdar1r","frigdar2r"], "broken:":[], "looped":false, "capped":false},
+        }
+    "slidenodes": [
+        ["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
+
+        ["frigsa2r", "shelf_rail_1r", true, true, 0.0, 20100, 220000, 220],
+        ["frigsa2l", "shelf_rail_1l", true, true, 0.0, 20100, 220000, 220],
+
+
+        ["frigsa4r", "shelf_rail_2r", true, true, 0.0, 201000, 220000, 220],
+        ["frigsa4l", "shelf_rail_2l", true, true, 0.0, 201000, 220000, 220],
+
+
+        ["frigsa6r", "shelf_rail_3r", true, true, 0.0, 201000, 220000, 220],
+        ["frigsa6l", "shelf_rail_3l", true, true, 0.0, 201000, 220000, 220],
+        //shelf rails
+        ["frigra1r", "shelf_rail_1rr", true, true, 0.0, 20100, 220000, 220],
+        ["frigra1l", "shelf_rail_1ll", true, true, 0.0, 20100, 220000, 220],
+
+
+        ["frigra3r", "shelf_rail_2rr", true, true, 0.0, 201000, 220000, 220],
+        ["frigra3l", "shelf_rail_2ll", true, true, 0.0, 201000, 220000, 220],
+
+
+        ["frigra5r", "shelf_rail_3rr", true, true, 0.0, 201000, 220000, 220],
+        ["frigra5l", "shelf_rail_3ll", true, true, 0.0, 201000, 220000, 220],
+
+
+        ["frigdarp1r", "drawer_rail_rr", true, true, 0.0, 20100, 220000, 220],
+        ["frigdarp1l", "drawer_rail_ll", true, true, 0.0, 20100, 220000, 220],
+        ["frigdar2r", "drawer_rail_r", true, true, 0.0, 20100, 220000, 220],
+        ["frigdar2l", "drawer_rail_l", true, true, 0.0, 20100, 220000, 220],
+        ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+       {"beamSpring":300000,"beamDamp":50},
+        {"beamDeform":1500,"beamStrength":72000},
+        {"deformLimit":2.0},
+        {"deformLimitExpansion":1.1},
+        //segment 1
+        //fridge body main shape
+        ["frigba1l","frigba1r"],
+        ["frigba2l","frigba2r"],
+        ["frigba3l","frigba3r"],
+        ["frigba4l","frigba4r"],
+
+        ["frigba1l","frigba2l"],
+        ["frigba1r","frigba2r"],
+        ["frigba3l","frigba4l"],
+        ["frigba3r","frigba4r"],
+        {"deformLimit":2.1},
+        ["frigba1l","frigba3l"],
+        ["frigba1r","frigba3r"],
+        ["frigba2l","frigba4l"],
+        ["frigba2r","frigba4r"],
+        //segment 2
+        {"deformLimit":2.0},
+        ["frigba5l","frigba5r"],
+        ["frigba6l","frigba6r"],
+
+        ["frigba5l","frigba6l"],
+        ["frigba5r","frigba6r"],
+        {"deformLimit":1.7},
+        ["frigba3l","frigba5l"],
+        ["frigba3r","frigba5r"],
+        ["frigba4l","frigba6l"],
+        ["frigba4r","frigba6r"],
+        {"deformLimit":3.3},
+        {"beamSpring":400000,"beamDamp":50},
+        {"beamDeform":2000,"beamStrength":58000},
+        //front and back vertical surface crossing
+        ["frigba1l","frigba3r"],
+        ["frigba2l","frigba4r"],
+        ["frigba1r","frigba3l"],
+        ["frigba2r","frigba4l"],
+
+        ["frigba3l","frigba5r"],
+        ["frigba4l","frigba6r"],
+        ["frigba3r","frigba5l"],
+        ["frigba4r","frigba6l"],
+        //left vertical surface crossing
+        ["frigba1l", "frigba4l"],
+        ["frigba2l", "frigba3l"],
+
+        ["frigba3l", "frigba6l"],
+        ["frigba4l", "frigba5l"],
+        //right vertical surface crossing
+        ["frigba4r", "frigba1r"],
+        ["frigba3r", "frigba2r"],
+
+        ["frigba6r", "frigba3r"],
+        ["frigba5r", "frigba4r"],
+        //inner structure vertical - left/right/front/back crossing
+        ["frigba4r", "frigba1l"],
+        ["frigba3l", "frigba2r"],
+        ["frigba3r", "frigba2l"],
+        ["frigba4l", "frigba1r"],
+
+        ["frigba6r", "frigba3l"],
+        ["frigba5l", "frigba4r"],
+        ["frigba5r", "frigba4l"],
+        ["frigba6l", "frigba3r"],
+        //bottom and top surface crossing
+        {"deformLimit":2.0},
+        ["frigba3l", "frigba4r"],
+        ["frigba3r", "frigba4l"],
+        ["frigba2l", "frigba1r"],
+        ["frigba1l", "frigba2r"],
+
+        ["frigba5l", "frigba6r"],
+        ["frigba5r", "frigba6l"],
+        {"beamSpring":300000,"beamDamp":50},
+        {"beamDeform":1000,"beamStrength":53000},
+        //shelf rails
+        //rails structure
+        ["frigra1l", "frigra2l"],
+        ["frigra2r", "frigra1r"],
+        ["frigra2r", "frigra2l"],
+        ["frigra1r", "frigra1l"],
+        ["frigra1l", "frigra2r"],
+        ["frigra1r", "frigra2l"],
+
+        ["frigra3l", "frigra4l"],
+        ["frigra4r", "frigra3r"],
+        ["frigra4r", "frigra4l"],
+        ["frigra3r", "frigra3l"],
+        ["frigra3l", "frigra4r"],
+        ["frigra3r", "frigra4l"],
+
+        ["frigra5l", "frigra6l"],
+        ["frigra6r", "frigra5r"],
+        ["frigra6r", "frigra6l"],
+        ["frigra5r", "frigra5l"],
+        ["frigra5l", "frigra6r"],
+        ["frigra5r", "frigra6l"],
+        //rails to rest of the body
+        //vertical
+        ["frigra2l", "frigba2l"],
+        ["frigra1l", "frigba1l"],
+        ["frigra1r", "frigba1r"],
+        ["frigra2r", "frigba2r"],
+        ["frigra2r", "frigba4r"],
+        ["frigra1r", "frigba3r"],
+        ["frigra1l", "frigba3l"],
+        ["frigra2l", "frigba4l"],
+
+        ["frigra4l", "frigba2l"],
+        ["frigra3l", "frigba1l"],
+        ["frigra3r", "frigba1r"],
+        ["frigra4r", "frigba2r"],
+        ["frigra4r", "frigba4r"],
+        ["frigra3r", "frigba3r"],
+        ["frigra3l", "frigba3l"],
+        ["frigra4l", "frigba4l"],
+
+        ["frigra6l", "frigba6l"],
+        ["frigra5l", "frigba5l"],
+        ["frigra5r", "frigba5r"],
+        ["frigra6r", "frigba6r"],
+        ["frigra6r", "frigba4r"],
+        ["frigra5r", "frigba3r"],
+        ["frigra5l", "frigba3l"],
+        ["frigra6l", "frigba4l"],
+        //crosses
+        ["frigra1l", "frigba2l"],
+        ["frigra2l", "frigba1l"],
+        ["frigra2l", "frigba2r"],
+        ["frigra2r", "frigba2l"],
+        ["frigra2r", "frigba1r"],
+        ["frigra1r", "frigba2r"],
+        ["frigra1r", "frigba1l"],
+        ["frigra1l", "frigba1r"],
+        ["frigra1l", "frigba3r"],
+        ["frigba3l", "frigra1r"],
+        ["frigba3l", "frigra2l"],
+        ["frigba4l", "frigra1l"],
+        ["frigba4l", "frigra2r"],
+        ["frigba4r", "frigra1r"],
+        ["frigba3r", "frigra2r"],
+
+        ["frigra3l", "frigba2l"],
+        ["frigra4l", "frigba1l"],
+        ["frigra4l", "frigba2r"],
+        ["frigra4r", "frigba2l"],
+        ["frigra4r", "frigba1r"],
+        ["frigra3r", "frigba2r"],
+        ["frigra3r", "frigba1l"],
+        ["frigra3l", "frigba1r"],
+        ["frigra3l", "frigba3r"],
+        ["frigba3l", "frigra3r"],
+        ["frigba3l", "frigra4l"],
+        ["frigba4l", "frigra3l"],
+        ["frigba4l", "frigra4r"],
+        ["frigba4r", "frigra3r"],
+        ["frigba3r", "frigra4r"],
+
+        ["frigra5l", "frigba6l"],
+        ["frigra6l", "frigba5l"],
+        ["frigra6l", "frigba6r"],
+        ["frigra6r", "frigba6l"],
+        ["frigra6r", "frigba5r"],
+        ["frigra5r", "frigba6r"],
+        ["frigra5r", "frigba5l"],
+        ["frigra5l", "frigba5r"],
+        ["frigra5l", "frigba3r"],
+        ["frigba3l", "frigra5r"],
+        ["frigba3l", "frigra6l"],
+        ["frigba4l", "frigra5l"],
+        ["frigba4l", "frigra6r"],
+        ["frigba4r", "frigra6l"],
+        ["frigba4r", "frigra5r"],
+        ["frigba3r", "frigra6r"],
+        //inner crosses
+        ["frigra1r", "frigba2l"],
+        ["frigra2l", "frigba1r"],
+        ["frigra2r", "frigba1l"],
+        ["frigra1l", "frigba2r"],
+
+        ["frigra3r", "frigba2l"],
+        ["frigra4l", "frigba1r"],
+        ["frigra4r", "frigba1l"],
+        ["frigra3l", "frigba2r"],
+
+        ["frigra5r", "frigba6l"],
+        ["frigra6l", "frigba5r"],
+        ["frigra6r", "frigba5l"],
+        ["frigra5l", "frigba6r"],
+
+        //shelves
+        //lower
+        ["frigsa1r", "frigsa1l"],
+        ["frigsa1l", "frigsa2l"],
+        ["frigsa2l", "frigsa2r"],
+        ["frigsa2r", "frigsa1r"],
+        ["frigsa2r", "frigsa1l"],
+        ["frigsa2l", "frigsa1r"],
+
+        //mid
+        ["frigsa3r", "frigsa3l"],
+        ["frigsa3l", "frigsa4l"],
+        ["frigsa4l", "frigsa4r"],
+        ["frigsa4r", "frigsa3r"],
+        ["frigsa3r", "frigsa4l"],
+        ["frigsa3l", "frigsa4r"],
+
+        //freezer
+        ["frigsa5r", "frigsa5l"],
+        ["frigsa5l", "frigsa6l"],
+        ["frigsa6l", "frigsa6r"],
+        ["frigsa6r", "frigsa5r"],
+        ["frigsa5r", "frigsa6l"],
+        ["frigsa5l", "frigsa6r"],
+        {"beamPrecompression":1, "beamType":"|ANISOTROPIC", "beamLongBound":1.2},
+        {"beamSpring":101000,"beamDamp":290},
+        {"beamDeform":8000,"beamStrength":"FLT_MAX"},
+        {"springExpansion":0,"dampExpansion":100,"transitionZone":0.02},
+        //shelves damp
+        ["frigsa2r", "frigra2r"],
+        ["frigsa2l", "frigra2l"],
+
+        ["frigsa4r", "frigra4r"],
+        ["frigsa4l", "frigra4l"],
+
+        ["frigsa6r", "frigra6r"],
+        ["frigsa6l", "frigra6l"],
+        //drawer damp
+        ["frigdar2r", "frigdarp2r"],
+        ["frigdar2l", "frigdarp2l"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0,"boundZone":"","transitionZone":""}
+        //drawer
+        //main shape
+        {"beamSpring":100000,"beamDamp":50},
+        {"beamDeform":50000,"beamStrength":3000},
+        ["frigdar1l", "frigdar1r"],
+        ["frigdar3l", "frigdar3r"],
+        ["frigdar2l", "frigdar2r"],
+        ["frigdar4l", "frigdar4r"],
+        ["frigdar1l", "frigdar2l"],
+        ["frigdar3l", "frigdar4l"],
+        ["frigdar3r", "frigdar4r"],
+        ["frigdar1r", "frigdar2r"],
+        ["frigdar1l", "frigdar3l"],
+        ["frigdar2l", "frigdar4l"],
+        ["frigdar2r", "frigdar4r"],
+        ["frigdar1r", "frigdar3r"],
+        //cross
+        {"beamDeform":30000,"beamStrength":4000},
+        ["frigdar1l", "frigdar2r"],
+        ["frigdar1r", "frigdar2l"],
+        ["frigdar4l", "frigdar3r"],
+        ["frigdar3l", "frigdar4r"],
+        ["frigdar2l", "frigdar4r"],
+        ["frigdar2r", "frigdar4l"],
+        ["frigdar3l", "frigdar1r"],
+        ["frigdar3r", "frigdar1l"],
+        ["frigdar2r", "frigdar3r"],
+        ["frigdar1r", "frigdar4r"],
+        ["frigdar2l", "frigdar3l"],
+        ["frigdar1l", "frigdar4l"],
+
+        //inner cross
+        ["frigdar3l", "frigdar2r"],
+        ["frigdar4r", "frigdar1l"],
+        ["frigdar4l", "frigdar1r"],
+        ["frigdar3r", "frigdar2l"],
+        //drawer pocket
+        ["frigdarp1l", "frigdarp2l"],
+        ["frigdarp2l", "frigdarp2r"],
+        ["frigdarp2r", "frigdarp1r"],
+        ["frigdarp1r", "frigdarp1l"],
+        ["frigdarp1l", "frigdarp2r"],
+        ["frigdarp1r", "frigdarp2l"],
+        //attach
+        {"beamDeform":10000,"beamStrength":18000},
+        ["frigdarp1l", "frigra1l"],
+        ["frigdarp2l", "frigra2l"],
+        ["frigdarp2r", "frigra2r"],
+        ["frigdarp1r", "frigra1r"],
+        ["frigdarp1r", "frigra2r"],
+        ["frigdarp2r", "frigra1r"],
+        ["frigdarp1r", "frigra1l"],
+        ["frigdarp1l", "frigra1r"],
+        ["frigdarp1l", "frigra2l"],
+        ["frigdarp2l", "frigra1l"],
+        {"beamSpring":100000,"beamDamp":150},
+        {"beamDeform":100000,"beamStrength":18000},
+        //fridge door main shape
+        ["frigda1r", "frigda1l"],
+        ["frigda1l", "frigda2l"],
+        ["frigda2l", "frigda2r"],
+        ["frigda2r", "frigda1r"],
+        ["frigda1r", "frigda2l"],
+        ["frigda2r", "frigda1l"],
+        //rigifier
+        ["frigda2l", "frigda1"],
+        ["frigda1", "frigda2r"],
+        ["frigda1r", "frigda1"],
+        ["frigda1l", "frigda1"],
+        //freezer door
+        ["frigda3r", "frigda3l"],
+        ["frigda3l", "frigda4l"],
+        ["frigda4l", "frigda4r"],
+        ["frigda4r", "frigda3r"],
+        ["frigda3r", "frigda4l"],
+        ["frigda3l", "frigda4r"],
+        //rigifier
+        ["frigda4r", "frigda3"],
+        ["frigda4l", "frigda3"],
+        ["frigda3l", "frigda3"],
+        ["frigda3r", "frigda3"],
+        //hinges
+        {"beamSpring":750000,"beamDamp":150},
+        {"beamDeform":4000,"beamStrength":4000},
+        {"breakGroup":"fridge_doorhinge"},
+        ["frigda1l", "frigba1l"],
+        ["frigda1l", "frigba2l"],
+        ["frigda1l", "frigba2r"],
+        ["frigda1l", "frigba4l"],
+        ["frigda2l", "frigba3l"],
+        ["frigda2l", "frigba3r"],
+        ["frigda2l", "frigba1l"],
+        ["frigda2l", "frigba4l"],
+        ["frigda2l", "frigba6l"],
+
+        {"breakGroup":"freezer_doorhinge"},
+        ["frigda3l", "frigba4r"],
+        ["frigda3l", "frigba5l"],
+        ["frigda3l", "frigba4l"],
+        ["frigda3l", "frigba6r"],
+        ["frigda4l", "frigba5l"],
+        ["frigda4l", "frigba5r"],
+        ["frigda4l", "frigba6l"],
+        ["frigda4l", "frigba6r"],
+        ["frigda4l", "frigba3l"],
+
+
+        //closed limiter
+        {"beamLimitSpring":250000,"beamLimitDamp":15000},
+        {"beamType":"|BOUNDED","beamLongBound":3,"beamShortBound":0.1},
+        {"beamPrecompression":1.12,"beamSpring":0,"beamDamp":3},
+
+        {"breakGroup":"freezer_doorhinge"},
+        ["frigda4r", "frigba6r"],
+        ["frigda3r", "frigba4r"],
+        {"breakGroup":"fridge_doorhinge"},
+        ["frigda2r", "frigba4r"],
+        ["frigda1r", "frigba2r"],
+
+        //doors magnet imitation
+        {"beamLimitSpring":0,"beamLimitDamp":5},
+        {"beamLongBound":0.1,"beamShortBound":1},
+        {"beamPrecompression":0.9,"beamSpring":150,"beamDamp":55},
+        {"breakGroup":"freezer_doorhinge"},
+        ["frigda4r", "frigba4r"{"boundZone":0.05},],
+        ["frigda3r", "frigba6r"{"boundZone":0.05},],
+        {"breakGroup":"fridge_doorhinge"},
+        ["frigda2r", "frigba2r"{"boundZone":0.05},],
+        ["frigda1r", "frigba4r"{"boundZone":0.05},],
+
+        //opening limiter
+        {"beamLimitSpring":250000,"beamLimitDamp":15000},
+        {"beamLongBound":3,"beamShortBound":0.2},
+        {"beamPrecompression":1,"beamSpring":0,"beamDamp":3},
+        {"breakGroup":"freezer_doorhinge"},
+        ["frigda4r", "frigba6l"],
+        ["frigda3r", "frigba4l"],
+        {"breakGroup":"fridge_doorhinge"},
+        ["frigda2r", "frigba4l"],
+        ["frigda1r", "frigba2l"],
+
+        {"breakGroup":""},
+
+        //attach straps
+        {"beamPrecompression":1, "beamType":"|ANISOTROPIC", "beamLongBound":0.05},
+        {"beamSpring":601000,"beamDamp":90},
+        {"beamDeform":780000,"beamStrength":"FLT_MAX"},
+        {"springExpansion":65000,"dampExpansion":200,"transitionZone":0.01},
+
+        {"breakGroup":"fridge_frontStrap"}
+        {"deformGroup":"fridge_frontStrap", "deformationTriggerRatio":0.5}
+        ["frigda1r", "rfb3ll"],
+        ["frigda1l", "rfb3rr"],
+        ["frigba1r", "rfb3ll"],
+        ["frigba1l", "rfb3rr"],
+
+
+
+        ["frigda1r", "rfb3rr"],
+        ["frigda1l", "rfb3ll"],
+        ["frigba1r", "rfb3rr"],
+        ["frigba1l", "rfb3ll"],
+        //{"beamDeform":3000,"beamStrength":180000},
+        ["frigda1r", "rfb4rr"],
+        ["frigda1l", "rfb4ll"],
+        ["frigba1r", "rfb4rr"],
+        ["frigba1l", "rfb4ll"],
+        ["frigda1r", "rfb4ll"],
+        ["frigda1l", "rfb4rr"],
+        ["frigba1r", "rfb4ll"],
+        ["frigba1l", "rfb4rr"],
+
+        {"breakGroup":"fridge_rearStrap"}
+        {"deformGroup":"fridge_rearStrap", "deformationTriggerRatio":0.5}
+        ["frigda4r", "rfb4ll"],
+        ["frigda4l", "rfb4rr"],
+        ["frigba5r", "rfb4ll"],
+        ["frigba5l", "rfb4rr"],
+
+        ["frigda4r", "rfb4rr"],
+        ["frigda4l", "rfb4ll"],
+        ["frigba5r", "rfb4rr"],
+        ["frigba5l", "rfb4ll"],
+        //{"beamDeform":3000,"beamStrength":180000},
+        ["frigda4r", "rfb3rr"],
+        ["frigda4l", "rfb3ll"],
+        ["frigba5r", "rfb3rr"],
+        ["frigba5l", "rfb3ll"],
+
+        ["frigda4r", "rfb3ll"],
+        ["frigda4l", "rfb3rr"],
+        ["frigba5r", "rfb3ll"],
+        ["frigba5l", "rfb3rr"],
+
+
+        {"breakGroup":""}
+        {"deformGroup":""}
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0,"boundZone":"","transitionZone":""}
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":10},
+        ["frigba2l", "frigba2r", "frigba4r"],
+        ["frigba4r", "frigba4l", "frigba2l"],
+        ["frigba4r", "frigba6r", "frigba6l"],
+        ["frigba6l", "frigba4l", "frigba4r"],
+        ["frigba2r", "frigba1r", "frigba3r"],
+        ["frigba3r", "frigba4r", "frigba2r"],
+        ["frigba3r", "frigba5r", "frigba6r"],
+        ["frigba6r", "frigba4r", "frigba3r"],
+        ["frigba3l", "frigba4l", "frigba6l"],
+        ["frigba6l", "frigba5l", "frigba3l"],
+        ["frigba1l", "frigba2l", "frigba4l"],
+        ["frigba4l", "frigba3l", "frigba1l"],
+        ["frigba6l", "frigba6r", "frigba5r"],
+        ["frigba5r", "frigba5l", "frigba6l"],
+        ["frigba2l", "frigba1l", "frigba1r"],
+        ["frigba2l", "frigba1r", "frigba2r"],
+        ["frigba2l", "frigba1r", "frigba2r"],
+        ["frigba3l", "frigba4l", "frigba4r"],
+        ["frigba4r", "frigba3r", "frigba3l"],
+        {"dragCoef":10},
+        ["frigba2l", "frigba1l", "frigba1r"],
+        ["frigba2l", "frigba1r", "frigba2r"],
+        ["frigba2l", "frigba1r", "frigba2r"],
+        ["frigba3l", "frigba4l", "frigba4r"],
+        ["frigba4r", "frigba3r", "frigba3l"],
+        {"dragCoef":10},
+        //doors
+        ["frigda1r", "frigda1l", "frigda2r"],
+        ["frigda2r", "frigda1l", "frigda2l"],
+        ["frigda3r", "frigda3l", "frigda4l"],
+        ["frigda4l", "frigda4r", "frigda3r"],
+        {"dragCoef":5},
+        //shelves
+        ["frigsa1r", "frigsa1l", "frigsa2l"],
+        ["frigsa2l", "frigsa2r", "frigsa1r"],
+        ["frigsa3l", "frigsa4l", "frigsa4r"],
+        ["frigsa4r", "frigsa3r", "frigsa3l"],
+        ["frigsa5l", "frigsa6l", "frigsa6r"],
+        ["frigsa6r", "frigsa5r", "frigsa5l"],
+        //drawer
+        ["frigdar1l", "frigdar2l", "frigdar4l"],
+        ["frigdar4l", "frigdar3l", "frigdar1l"],
+        ["frigdar2l", "frigdar2r", "frigdar4r"],
+        ["frigdar4r", "frigdar4l", "frigdar2l"],
+        ["frigdar4r", "frigdar2r", "frigdar1r"],
+        ["frigdar1r", "frigdar3r", "frigdar4r"],
+        ["frigdar3r", "frigdar1r", "frigdar1l"],
+        ["frigdar1l", "frigdar3l", "frigdar3r"],
+        ["frigdar2r", "frigdar2l", "frigdar1l"],
+        ["frigdar1l", "frigdar1r", "frigdar2r"],
+        {"dragCoef":0},
+        //drawer pocket
+        ["frigdarp2r", "frigdarp2l", "frigra2r"],
+        ["frigdarp2l", "frigra2l", "frigra2r"],
+
+
+    ]
+}
+}

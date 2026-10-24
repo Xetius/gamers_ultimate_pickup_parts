@@ -1,0 +1,26 @@
+{
+"md_series_bumper_F_color_black_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Matte Black Bumper",
+        "value":0,
+    },
+    "slotType" : "md_series_bumper_F_color",
+    "flexbodies": [
+       ["mesh", "[group]:", "nonFlexMaterials"],
+       ["G_md_series_bumper_F_color", ["md_series_bumper_F"], [],{"materialOverride":[["md_series_main","us_semi_common_black"]]}],
+   ],
+},
+"md_series_bumper_F_color_chrome": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Chrome Bumper",
+        "value":0,
+    },
+    "slotType" : "md_series_bumper_F_color",
+    "flexbodies": [
+       ["mesh", "[group]:", "nonFlexMaterials"],
+       ["G_md_series_bumper_F_color", ["md_series_bumper_F"], [],{"materialOverride":[["md_series_main","us_semi_common_chrome"]]}],
+   ],
+},
+}

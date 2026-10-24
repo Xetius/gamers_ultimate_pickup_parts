@@ -1,0 +1,16 @@
+{
+  "Config Type":"Factory",
+  "Configuration":"Trailer D15 Auxiliary Flatbed",
+  "Description":"A flatbed, steel wheels, and added toolboxes. What more can a trailer need?",
+  "Population":4000,
+  "Value":40000,
+  "Weight":1284,
+  "Years":{
+    "max":2003,
+    "min":1986
+  },
+  "defaultPaintName1":"Lead",
+  "defaultPaintName2":"Lead",
+  "defaultPaintName3":"Lead",
+  "vehicleSelectorSubGroup":"Trailers"
+}

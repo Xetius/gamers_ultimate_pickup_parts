@@ -1,0 +1,244 @@
+{
+"G_md_series_transfercase_extCab_4WD_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"4WD Short Transfer Case",
+        "value":0,
+    },
+    "slotType" : "md_series_transfercase_extCab",
+    "slots2": [
+        ["name",                                    "allowTypes",                                "denyTypes", "default",                                  "description"],
+        ["md_series_driveshaft_R_extCab_4WD",       ["md_series_driveshaft_R_extCab_4WD"],       [],          "md_series_driveshaft_R_extCab_4WD",        "Rear Driveshaft"],
+        ["G_md_series_driveshaft_F_regCab_4WD_alt", ["G_md_series_driveshaft_F_regCab_4WD_alt"], [],          "G_md_series_driveshaft_F_regCab_4WD_alt", "Front Driveshaft"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_transfercase_alt", ["md_series_transfercase"], [],{"pos":{"x":0.0, "y":-0.65, "z":0.0}}],
+         ["G_md_series_transfercase_mount_alt", ["md_series_frame_mid"], [],{"pos":{"x":0.0, "y":-0.65, "z":0.0}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["driveModes", {"name":"transfercaseControl"}]
+        //["4wd", {"driveModesTransfercaseNames":["transfercaseControl"], "name":"4wdControl"}]
+    ],
+
+    "transfercaseControl":{
+        "uiName": "Transfercase"
+        "quickAccessTitle":"Transfercase"
+        "quickAccessIcon":"radial_highrangebox"
+        "quickAccessLevel":"/vehicleFeatures/"
+        "enabledModes":["2hi", "4hi", "4lo"]
+        "defaultMode": "2hi"
+        "modes": {
+            "2hi": {
+                "name": "2WD High Gear",
+                "order": 10,
+                "settings": [
+                    ["type"]
+                    ["powertrainDeviceMode", {"deviceName":"tcasRangebox", "mode":"high"}]
+                    ["powertrainDeviceMode", {"deviceName":"transfercase_F", "mode":"disconnected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFR", "mode":"disconnected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFL", "mode":"disconnected"}]
+                    ["electricsValue", {"electricsName":"transfercase_state", "value":1}]
+                    ["simpleControlButton", {"buttonId":"transfercase", "icon":"powertrain_transfercase_high-2", "uiName":"Transfercase"}]
+                    ["quickAccess", {"icon":"powertrain_transfercase_high-2"}]
+                ],
+            },
+            "4hi": {
+                "name": "4WD High Gear",
+                "order": 20,
+                "settings": [
+                    ["type"]
+                    ["powertrainDeviceMode", {"deviceName":"tcasRangebox", "mode":"high"}]
+                    ["powertrainDeviceMode", {"deviceName":"transfercase_F", "mode":"connected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFR", "mode":"connected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFL", "mode":"connected"}]
+                    ["electricsValue", {"electricsName":"transfercase_state", "value":0.33}]
+                    ["simpleControlButton", {"buttonId":"transfercase", "icon":"powertrain_transfercase_high-4", "uiName":"Transfercase"}]
+                    ["quickAccess", {"icon":"powertrain_transfercase_high-4"}]
+                ],
+            },
+            "4lo": {
+                "name": "4WD Low Gear",
+                "order": 30,
+                "settings": [
+                    ["type"]
+                    ["powertrainDeviceMode", {"deviceName":"tcasRangebox", "mode":"low"}]
+                    ["powertrainDeviceMode", {"deviceName":"transfercase_F", "mode":"connected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFR", "mode":"connected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFL", "mode":"connected"}]
+                    ["electricsValue", {"electricsName":"transfercase_state", "value":-1}]
+                    ["simpleControlButton", {"buttonId":"transfercase", "icon":"powertrain_transfercase_low-4", "uiName":"Transfercase"}]
+                    ["quickAccess", {"icon":"powertrain_transfercase_low-4"}]
+                ],
+            },
+        }
+    }
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torsionReactor", "torsionReactorGrbx", "transRangebox", 1, {}],
+        ["shaft", "tcasRangeboxShaft", "torsionReactorGrbx", 1, {"breakTriggerBeam":"driveshaft_tcas", "uiName":"Transfercase Driveshaft", "electricsName":"tcas_driveshaft", "friction":0.74, "dynamicFriction": 0.00178}],
+        ["rangeBox", "tcasRangebox", "tcasRangeboxShaft", 1, {"uiSimpleModeControl":false, "gearRatios":[1,2.2], "uiName":"Rangebox", "electricsName":"tcas_yoke"}],
+        //locked center diff
+        ["differential", "transfercase", "tcasRangebox", 1, {"diffType":"locked", "lockTorque":8000, "friction":0.44, "dynamicFriction":0.00048, "torqueLossCoef":0.012, "uiName":"Transfer Case", "defaultVirtualInertia":0.1}],
+        //disconnecting front shaft
+        ["shaft", "transfercase_F", "transfercase", 2, {"uiSimpleModeControl":false, "canDisconnect":true, "friction":0.44, "dynamicFriction":0.00048, "uiName":"Front Output Shaft"}],
+    ],
+    "torsionReactorGrbx": {
+        "torqueReactionNodes:":["tra2l","tra2r","tra3l"],
+    },
+    "props": [
+        ["func"      , "mesh"           ,             "idRef:", "idX:", "idY:",               "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        //["tcas_driveshaft", "us_semi_driveshaft_R_yoke_b", "tra1","tra2l","tra3l", {"x":0, "y":15, "z":-105}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.048, "y":0.036, "z":-0.025},"baseRotationGlobal":{"x":0, "y":0, "z":0},"optional":true}],
+        //["tcas_driveshaft", "us_semi_slipshaft_R_0_25",     "tra1","tcas5","tcas1l",  {"x":-89.282, "y":89.758, "z":-61.303}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"tcase_break","deformGroup":"tcase_break","optional":true}],
+        //["tcas_driveshaft", "us_semi_driveshaft_R_0_23",    "tcas5","tra1","tcas1l",  {"x":-89.282, "y":89.758, "z":-21.303}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"tcase_break","deformGroup":"tcase_break","optional":true}],
+        //["tcas_driveshaft", "us_semi_driveshaft_R_yoke_b",    "tcas5","tcas3l","tcas1l", {"x":0, "y":0, "z":0}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.025, "y":0.060, "z":0.05},"baseRotationGlobal":{"x":0, "y":90, "z":180},"breakGroup":"tcase_break","optional":true}],
+    ],
+    "nodes": [
+         ["id",     "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         {"nodeWeight":10},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //--Transfercase--
+         {"group":"md_series_transfercase"},
+         ["tcas1l", 0.10,  -0.47,    0.94],
+         ["tcas1r",-0.20,  -0.47,    0.94],
+         ["tcas2l", 0.10,  -0.07,    0.94],
+         ["tcas2r",-0.20,  -0.07,    0.94],
+         {"selfCollision":true},
+         ["tcas3l", 0.30,  -0.47,    0.50],
+         ["tcas3r", -0.00, -0.47,    0.50],
+         ["tcas4l", 0.30,  -0.07,    0.52],
+         ["tcas4r", -0.00, -0.07,    0.52],
+         {"nodeWeight":3},
+         ["tcas5",  0.000, -0.579,  0.785],
+         ["tcas6",  0.206, -0.010,  0.590],
+         ["tcas7",  0.206, -0.538,  0.600],
+         {"group":""},
+    ],
+    "beams":[
+          ["id1:",   "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamSpring":10001000,"beamDamp":200},
+          {"beamDeform":125000,"beamStrength":"FLT_MAX"},
+          ["tcas1l", "tcas1r"],
+          ["tcas2l", "tcas2r"],
+          ["tcas3l", "tcas3r"],
+          ["tcas4l", "tcas4r"],
+
+          ["tcas1l", "tcas2l"],
+          ["tcas1r", "tcas2r"],
+          ["tcas3l", "tcas4l"],
+          ["tcas3r", "tcas4r"],
+
+          ["tcas1l", "tcas3l"],
+          ["tcas1r", "tcas3r"],
+          ["tcas2l", "tcas4l"],
+          ["tcas2r", "tcas4r"],
+
+          ["tcas1l", "tcas4l"],
+          ["tcas1r", "tcas4r"],
+          ["tcas2l", "tcas3l"],
+          ["tcas2r", "tcas3r"],
+
+          ["tcas1r", "tcas3l"],
+          ["tcas1l", "tcas3r"],
+          ["tcas2r", "tcas4l"],
+          ["tcas2l", "tcas4r"],
+
+          ["tcas1l", "tcas2r"],
+          ["tcas1r", "tcas2l"],
+          ["tcas3l", "tcas4r"],
+          ["tcas3r", "tcas4l"],
+
+
+          ["tcas1r", "tcas4l"],
+          ["tcas1l", "tcas4r"],
+          ["tcas2r", "tcas3l"],
+          ["tcas2l", "tcas3r"],
+
+          //prop locater nodes attache
+          {"beamSpring":8001000,"beamDamp":100},
+          ["tcas5",  "tcas1r"],
+          ["tcas5",  "tcas1l"],
+          ["tcas5",  "tcas2r"],
+          ["tcas5",  "tcas2l"],
+          ["tcas5",  "tcas3r"],
+          ["tcas5",  "tcas3l"],
+
+          ["tcas6",  "tcas4r"],
+          ["tcas6",  "tcas4l"],
+          ["tcas6",  "tcas2r"],
+          ["tcas6",  "tcas2l"],
+          ["tcas6",  "tcas3r"],
+          ["tcas6",  "tcas3l"],
+          ["tcas7",  "tcas1r"],
+          ["tcas7",  "tcas1l"],
+          ["tcas7",  "tcas4r"],
+          ["tcas7",  "tcas4l"],
+          ["tcas7",  "tcas3r"],
+          ["tcas7",  "tcas3l"],
+          ["tcas7",  "tcas6"],
+          //attache
+          {"beamSpring":2001000,"beamDamp":400},
+          {"beamDeform":125000,"beamStrength":64000},
+          {"breakGroup":"tcase_break"},
+          {"deformGroup":"tcase_break"},
+          ["tcas1r", "ff5r"],
+          ["tcas1r", "mf1r"],
+          ["tcas2r", "ff5r"],
+          ["tcas2r", "mf1r"],
+          ["tcas1l", "ff5l"],
+          ["tcas1l", "mf1l"],
+          ["tcas2l", "ff5l"],
+          ["tcas2l", "mf1l"],
+          ["tcas1r", "ff15r"],
+          ["tcas1r", "mf11r"],
+          ["tcas2r", "ff15r"],
+          ["tcas2r", "mf11r"],
+          ["tcas1l", "ff15l"],
+          ["tcas1l", "mf11l"],
+          ["tcas2l", "ff15l"],
+          ["tcas2l", "mf11l"],
+
+          ["tcas3r", "ff15r"],
+          ["tcas3r", "mf11r"],
+          ["tcas4r", "ff15r"],
+          ["tcas4r", "mf11r"],
+          ["tcas3l", "ff15l"],
+          ["tcas3l", "mf11l"],
+          ["tcas4l", "ff15l"],
+          ["tcas4l", "mf11l"],
+          {"breakGroup":""},
+          {"deformGroup":""},
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.015, "beamShortBound":0.015},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3000,"beamStrength":8000},
+          {"beamLimitSpring":5001000,"beamLimitDamp":250},
+          ["tcas5",  "tra1",   {"name":"driveshaft_tcas","optional":true,"breakGroup":"tcase_break","deformGroup":"tcase_break"}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"optional":false},
+    ],
+     "triangles": [
+            ["id1:",   "id2:",   "id3:"],
+            //suspension shape
+            {"triangleType":"NONCOLLIDABLE"},
+            {"dragCoef":2},
+            {"triangleType":"NORMALTYPE"},
+            ["tcas1r", "tcas1l", "tcas2l"],
+            ["tcas2l", "tcas2r", "tcas1r"],
+            ["tcas3l", "tcas1l", "tcas1r"],
+            ["tcas1r", "tcas3r", "tcas3l"],
+            ["tcas3l", "tcas4l", "tcas1l"],
+            ["tcas1l", "tcas4l", "tcas2l"],
+            ["tcas2l", "tcas4l", "tcas4r"],
+            ["tcas4r", "tcas2r", "tcas2l"],
+            ["tcas2r", "tcas4r", "tcas3r"],
+            ["tcas3r", "tcas1r", "tcas2r"],
+            ["tcas4r", "tcas4l", "tcas3l"],
+            ["tcas3l", "tcas3r", "tcas4r"],
+            {"triangleType":"NORMALTYPE"},
+    ],
+},
+}

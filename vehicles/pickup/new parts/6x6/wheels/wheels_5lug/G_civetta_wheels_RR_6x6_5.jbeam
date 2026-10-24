@@ -1,0 +1,1156 @@
+{
+"G_super_wheel_15x8_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x8 Civetta Veloce Rear Rear Wheels",
+        "value":650,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x8_altb","tire_RR_6x6_225_50_15_altb_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         ["super_wheel_15x8", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.48, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["super_wheel_15x8", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.48, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheel
+        {"nodeWeight":5.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r",-0.33,0.0,0.0, {"staticCollision":false}],
+        ["rwg1rr",-0.60,0.0,0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l",0.33,0.0,0.0, {"staticCollision":false}],
+        ["rwg1ll",0.60,0.0,0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":78500,"beamStrength":"FLT_MAX"},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.015},
+        {"hubWidth":0.225},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":945900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":945900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.42},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":36500, "hubBeamStrength":67000},
+    ],
+},
+"G_super_wheel_15x10_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x10 Civetta Veloce Rear Rear Wheels",
+        "value":750,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x10_alt","tire_RR_6x6_285_40_15_alt_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["super_wheel_15x10", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.50, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["super_wheel_15x10", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.50, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheel
+        {"nodeWeight":5.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r",-0.33,0.0,0.0, {"staticCollision":false}],
+        ["rwg1rr",-0.60,0.0,0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l",0.33,0.0,0.0, {"staticCollision":false}],
+        ["rwg1ll",0.60,0.0,0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":78500,"beamStrength":"FLT_MAX"},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.035},
+        {"hubWidth":0.275},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":990900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":990900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1451000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.46},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":36500, "hubBeamStrength":67000},
+    ],
+},
+"G_wheel_08a_15x9_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x9 Civetta Competizione Rear Rear Wheels (Gray)",
+        "value":900,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x9_alt","tire_RR_6x6_245_50_15_alt_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         //resized
+         ["wheel_08a_15x10", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.52, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.91, "y":1, "z":1}}],
+         ["wheel_08a_15x10", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.52, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":0.91, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheel
+        {"nodeWeight":5.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r",-0.33,0.0,0.0, {"staticCollision":false}],
+        ["rwg1rr",-0.60,0.0,0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l",0.33,0.0,0.0, {"staticCollision":false}],
+        ["rwg1ll",0.60,0.0,0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":78500,"beamStrength":"FLT_MAX"},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.055},
+        {"hubWidth":0.255},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":945900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":945900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.42},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":36500, "hubBeamStrength":67000},
+    ],
+},
+"G_wheel_08b_15x9_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x9 Civetta Competizione Rear Rear Wheels (Black)",
+        "value":900,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x9_alt","tire_RR_6x6_245_50_15_alt_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         //resized
+         ["wheel_08b_15x10", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.52, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.91, "y":1, "z":1}}],
+         ["wheel_08b_15x10", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.52, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":0.91, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheel
+        {"nodeWeight":5.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r",-0.33,0.0,0.0, {"staticCollision":false}],
+        ["rwg1rr",-0.60,0.0,0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l",0.33,0.0,0.0, {"staticCollision":false}],
+        ["rwg1ll",0.60,0.0,0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":78500,"beamStrength":"FLT_MAX"},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.055},
+        {"hubWidth":0.255},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":945900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":945900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.42},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":36500, "hubBeamStrength":67000},
+    ],
+},
+"G_wheel_08c_15x9_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x9 Civetta Competizione Rear Rear Wheels (White)",
+        "value":900,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x9_alt","tire_RR_6x6_245_50_15_alt_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         //resized
+         ["wheel_08c_15x10", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.52, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.91, "y":1, "z":1}}],
+         ["wheel_08c_15x10", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.52, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":0.91, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheel
+        {"nodeWeight":5.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r",-0.33,0.0,0.0, {"staticCollision":false}],
+        ["rwg1rr",-0.60,0.0,0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l",0.33,0.0,0.0, {"staticCollision":false}],
+        ["rwg1ll",0.60,0.0,0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":78500,"beamStrength":"FLT_MAX"},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.055},
+        {"hubWidth":0.255},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":945900, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":945900, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.42},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":36500, "hubBeamStrength":67000},
+    ],
+},
+"G_wheel_08a_15x12_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x12 Civetta Competizione Rear Rear Wheels (Gray)",
+        "value":1200,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x12","tire_RR_6x6_345_35_15_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["wheel_08a_15x12", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.53, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["wheel_08a_15x12", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.53, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheel
+        {"nodeWeight":5.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r",-0.33,0.0,0.0, {"staticCollision":false}],
+        ["rwg1rr",-0.60,0.0,0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l",0.33,0.0,0.0, {"staticCollision":false}],
+        ["rwg1ll",0.60,0.0,0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":78500,"beamStrength":"FLT_MAX"},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.065},
+        {"hubWidth":0.33},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1651000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.5},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":36500, "hubBeamStrength":67000},
+    ],
+},
+"G_wheel_08b_15x12_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x12 Civetta Competizione Rear Rear Wheels (Black)",
+        "value":1200,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x12","tire_RR_6x6_345_35_15_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["wheel_08b_15x12", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.53, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["wheel_08b_15x12", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.53, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheel
+        {"nodeWeight":5.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r",-0.33,0.0,0.0, {"staticCollision":false}],
+        ["rwg1rr",-0.60,0.0,0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l",0.33,0.0,0.0, {"staticCollision":false}],
+        ["rwg1ll",0.60,0.0,0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":78500,"beamStrength":"FLT_MAX"},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.065},
+        {"hubWidth":0.33},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1651000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.5},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":36500, "hubBeamStrength":67000},
+    ],
+},
+"G_wheel_08c_15x12_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"15x12 Civetta Competizione Rear Rear Wheels (White)",
+        "value":1200,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_15x12","tire_RR_6x6_345_35_15_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["wheel_08c_15x12", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.53, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["wheel_08c_15x12", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.53, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheel
+        {"nodeWeight":5.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r",-0.33,0.0,0.0, {"staticCollision":false}],
+        ["rwg1rr",-0.60,0.0,0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l",0.33,0.0,0.0, {"staticCollision":false}],
+        ["rwg1ll",0.60,0.0,0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":78500,"beamStrength":"FLT_MAX"},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.205},
+        {"wheelOffset":-0.065},
+        {"hubWidth":0.33},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1651000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.5},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":36500, "hubBeamStrength":67000},
+    ],
+},
+"G_wheel_civetta_scintilla_20x11_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"20x11 Civetta Scintilla Rear Rear Wheels",
+        "value":1400,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_20x11","tire_RR_6x6_305_30_20_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["wheel_civetta_scintilla_20x11", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.5, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["wheel_civetta_scintilla_20x11", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.5, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0, 0],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.63, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.63, 0, 0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":3501000,"beamDamp":50},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.27},
+        {"wheelOffset":-0.02},
+        {"hubWidth":0.305},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":20},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":20},
+        {"hubSideBeamSpring":1651000, "hubSideBeamDamp":20},
+        {"hubNodeWeight":0.52},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_wheel_civetta_fuoco_20x11_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"20x11 Civetta Fuoco Rear Rear Wheels (Two Tone)",
+        "value":1400,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_20x11","tire_RR_6x6_305_30_20_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["wheel_civetta_fuoco_20x11", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.5, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["wheel_civetta_fuoco_20x11", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.5, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0, 0],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.63, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.63, 0, 0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":3501000,"beamDamp":50},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.27},
+        {"wheelOffset":-0.02},
+        {"hubWidth":0.305},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":20},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":20},
+        {"hubSideBeamSpring":1651000, "hubSideBeamDamp":20},
+        {"hubNodeWeight":0.52},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_wheel_civetta_stradale_22x12_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"22x12 Civetta Stradale Rear Rear Wheels",
+        "value":1800,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_22x12","tire_RR_6x6_295_25_22_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["wheel_civetta_stradale_22x12", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["wheel_civetta_stradale_22x12", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //front wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":3501000,"beamDamp":50},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.295},
+        {"wheelOffset":-0.025},
+        {"hubWidth":0.315},
+        {"numRays":16},
+
+        //hub options
+
+        {"hubTreadBeamSpring":1041000, "hubTreadBeamDamp":20},
+        {"hubPeripheryBeamSpring":1041000, "hubPeripheryBeamDamp":20},
+        {"hubSideBeamSpring":1731000, "hubSideBeamDamp":20},
+        {"hubNodeWeight":0.55},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_wheel_civetta_darkowl_22x12_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"22x12 Civetta Dark Owl Rear Rear Wheels",
+        "value":1800,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_22x12","tire_RR_6x6_295_25_22_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["scintilla_wheel_darkowl_22x12", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["scintilla_wheel_darkowl_22x12", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.49, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //front wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.60, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":3501000,"beamDamp":50},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.295},
+        {"wheelOffset":-0.025},
+        {"hubWidth":0.315},
+        {"numRays":16},
+
+        //hub options
+
+        {"hubTreadBeamSpring":1041000, "hubTreadBeamDamp":20},
+        {"hubPeripheryBeamSpring":1041000, "hubPeripheryBeamDamp":20},
+        {"hubSideBeamSpring":1731000, "hubSideBeamDamp":20},
+        {"hubNodeWeight":0.55},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_wheel_civetta_stradale_22x14_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"22x14 Civetta Stradale Rear Rear Wheels",
+        "value":1900,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_22x14","tire_RR_6x6_335_25_22_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["wheel_civetta_stradale_22x14", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.5, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["wheel_civetta_stradale_22x14", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.5, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0, 0],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.63, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.63, 0, 0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":3501000,"beamDamp":50},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.29},
+        {"wheelOffset":-0.02},
+        {"hubWidth":0.36},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1081000, "hubTreadBeamDamp":20},
+        {"hubPeripheryBeamSpring":1081000, "hubPeripheryBeamDamp":20},
+        {"hubSideBeamSpring":1781000, "hubSideBeamDamp":20},
+        {"hubNodeWeight":0.59},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_wheel_civetta_darkowl_22x14_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"22x14 Civetta Dark Owl Rear Rear Wheels",
+        "value":1900,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_22x14","tire_RR_6x6_335_25_22_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["scintilla_wheel_darkowl_22x14", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.5, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["scintilla_wheel_darkowl_22x14", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.5, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0, 0],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.63, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.63, 0, 0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":3501000,"beamDamp":50},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.29},
+        {"wheelOffset":-0.02},
+        {"hubWidth":0.36},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1081000, "hubTreadBeamDamp":20},
+        {"hubPeripheryBeamSpring":1081000, "hubPeripheryBeamDamp":20},
+        {"hubSideBeamSpring":1781000, "hubSideBeamDamp":20},
+        {"hubNodeWeight":0.59},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_wheel_civetta_velocita_a_20x11_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"20x11 Civetta Emozione Rear Rear Wheels (Two Tone)",
+        "value":1400,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_20x11","tire_RR_6x6_305_30_20_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["wheel_civetta_velocita_a_20x11_R", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.5, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["wheel_civetta_velocita_a_20x11_L", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.5, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0, 0],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.63, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.63, 0, 0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":3501000,"beamDamp":50},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.27},
+        {"wheelOffset":-0.02},
+        {"hubWidth":0.305},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":20},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":20},
+        {"hubSideBeamSpring":1651000, "hubSideBeamDamp":20},
+        {"hubNodeWeight":0.52},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_wheel_civetta_velocita_b_20x11_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"20x11 Civetta Emozione Rear Rear Wheels (Silver)",
+        "value":1400,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_20x11","tire_RR_6x6_305_30_20_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["wheel_civetta_velocita_b_20x11_R", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.5, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["wheel_civetta_velocita_b_20x11_L", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.5, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0, 0],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.63, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.63, 0, 0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":3501000,"beamDamp":50},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.27},
+        {"wheelOffset":-0.02},
+        {"hubWidth":0.305},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":20},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":20},
+        {"hubSideBeamSpring":1651000, "hubSideBeamDamp":20},
+        {"hubNodeWeight":0.52},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_wheel_civetta_forgiato_20x11_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"20x11 Civetta Forgiato Rear Rear Wheels (Two Tone)",
+        "value":1400,
+    },
+    "slotType" : "G_wheel_RR_6x6_5",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_20x11","tire_RR_6x6_305_30_20_sport", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["wheel_civetta_forgiato_20x11", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.5, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["wheel_civetta_forgiato_20x11", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.5, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.33, 0, 0],
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.63, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.33, 0, 0],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.63, 0, 0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":3501000,"beamDamp":50},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.27},
+        {"wheelOffset":-0.02},
+        {"hubWidth":0.305},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":20},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":20},
+        {"hubSideBeamSpring":1651000, "hubSideBeamDamp":20},
+        {"hubNodeWeight":0.52},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+}

@@ -1,0 +1,627 @@
+{
+"G_pickup_bedrack_tiny": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Bed Rack",
+        "value":350,
+    },
+    "slotType" : "G_pickup_bedextra_tiny",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_pickup_bedladder_tiny","G_pickup_bedladder_tiny","Ladder"],
+        ["G_pickup_bedpipes_tiny","G_pickup_bedpipes_tiny","Pipes"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pickup_bedrack", ["pickup_bedrack_f", "pickup_bed"],[],{"pos":{"x":0.0, "y":1.07, "z":1.20}}],
+         ["pickup_bedrack", ["pickup_bedrack_b", "pickup_bed"],[],{"pos":{"x":0.0, "y":2.48, "z":1.20}, "rot":{"x":0, "y":0, "z":180}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         {"frictionCoef":0.7},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":1.88},
+         {"group":"pickup_bedrack_b"},
+         ["bdk1_ll", 0.72, 2.48, 1.80],
+         ["bdk2_ll", 0.72, 2.37, 1.80],
+         ["bdk3_ll", 0.66, 2.41, 1.73],
+
+         ["bdk1", 0.0, 2.48, 1.80],
+         ["bdk2", 0.0, 2.37, 1.80],
+         ["bdk3", 0.0, 2.41, 1.73],
+
+         ["bdk1_rr", -0.72, 2.48, 1.80],
+         ["bdk2_rr", -0.72, 2.37, 1.80],
+         ["bdk3_rr", -0.66, 2.41, 1.73],
+
+         {"group":"pickup_bedrack_f"},
+         ["bdkf1_ll", 0.72, 1.2, 1.80],
+         ["bdkf2_ll", 0.72, 1.06, 1.80],
+         ["bdkf3_ll", 0.66, 1.12, 1.73],
+
+         ["bdkf1", 0.0, 1.2, 1.80],
+         ["bdkf2", 0.0, 1.06, 1.80],
+         ["bdkf3", 0.0, 1.12, 1.73],
+
+         ["bdkf1_rr", -0.72, 1.2, 1.80],
+         ["bdkf2_rr", -0.72, 1.06, 1.80],
+         ["bdkf3_rr", -0.66, 1.12, 1.73],
+
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":1895830,"beamDamp":150.4},
+          {"beamDeform":21000,"beamStrength":"FLT_MAX"},
+          //bed rack
+          ["bdk1_ll","bdk2_ll"],
+          ["bdk3_ll","bdk2_ll"],
+          ["bdk3_ll","bdk1_ll"],
+
+          ["bdk1","bdk2"],
+          ["bdk3","bdk2"],
+          ["bdk3","bdk1"],
+
+          //to eachother
+          ["bdk1_ll","bdk1"],
+          ["bdk2_ll","bdk2"],
+          ["bdk2_ll","bdk1"],
+          ["bdk1_ll","bdk2"],
+
+          ["bdk3_ll","bdk3"],
+          ["bdk3_ll","bdk1"],
+          ["bdk3_ll","bdk2"],
+          ["bdk3","bdk1_ll"],
+          ["bdk3","bdk2_ll"],
+
+          //right
+          ["bdk1_rr","bdk2_rr"],
+          ["bdk3_rr","bdk2_rr"],
+          ["bdk3_rr","bdk1_rr"],
+
+          //to eachother
+          ["bdk1_rr","bdk1"],
+          ["bdk2_rr","bdk2"],
+          ["bdk2_rr","bdk1"],
+          ["bdk1_rr","bdk2"],
+
+          ["bdk3_rr","bdk3"],
+          ["bdk3_rr","bdk1"],
+          ["bdk3_rr","bdk2"],
+          ["bdk3","bdk1_rr"],
+          ["bdk3","bdk2_rr"],
+
+          //to bed sidewall
+          {"beamSpring":1100800,"beamDamp":150.4},
+          {"beamDeform":10500,"beamStrength":"FLT_MAX"},
+          ["bdk1_ll","bd4ll"],
+          ["bdk1_ll","bd5ll"],
+          ["bdk2_ll","bd4ll"],
+          ["bdk2_ll","bd5ll"],
+          ["bdk3_ll","bd4ll"],
+          ["bdk3_ll","bd5ll"],
+
+          //to bed sidewall
+          ["bdk1_rr","bd4rr"],
+          ["bdk1_rr","bd5rr"],
+          ["bdk2_rr","bd4rr"],
+          ["bdk2_rr","bd5rr"],
+          ["bdk3_rr","bd4rr"],
+          ["bdk3_rr","bd5rr"],
+
+          //reinforcement
+          {"beamSpring":955829.6,"beamDamp":70.4},
+          {"beamDeform":2800,"beamStrength":"FLT_MAX"},
+          ["bdk3","bd4ll"],
+          ["bdk3","bd5ll"],
+          ["bdk3","bd4rr"],
+          ["bdk3","bd5rr"],
+
+          {"beamSpring":1895830,"beamDamp":150.4},
+          {"beamDeform":21000,"beamStrength":"FLT_MAX"},
+          //bed rack 2
+          ["bdkf1_ll","bdkf2_ll"],
+          ["bdkf3_ll","bdkf2_ll"],
+          ["bdkf3_ll","bdkf1_ll"],
+
+          ["bdkf1","bdkf2"],
+          ["bdkf3","bdkf2"],
+          ["bdkf3","bdkf1"],
+
+          //to eachother
+          ["bdkf1_ll","bdkf1"],
+          ["bdkf2_ll","bdkf2"],
+          ["bdkf2_ll","bdkf1"],
+          ["bdkf1_ll","bdkf2"],
+
+          ["bdkf3_ll","bdkf3"],
+          ["bdkf3_ll","bdkf1"],
+          ["bdkf3_ll","bdkf2"],
+          ["bdkf3","bdkf1_ll"],
+          ["bdkf3","bdkf2_ll"],
+
+          //right
+          ["bdkf1_rr","bdkf2_rr"],
+          ["bdkf3_rr","bdkf2_rr"],
+          ["bdkf3_rr","bdkf1_rr"],
+
+
+          //to eachother
+          ["bdkf1_rr","bdkf1"],
+          ["bdkf2_rr","bdkf2"],
+          ["bdkf2_rr","bdkf1"],
+          ["bdkf1_rr","bdkf2"],
+
+          ["bdkf3_rr","bdkf3"],
+          ["bdkf3_rr","bdkf1"],
+          ["bdkf3_rr","bdkf2"],
+          ["bdkf3","bdkf1_rr"],
+          ["bdkf3","bdkf2_rr"],
+
+          //to bed sidewall
+          {"beamSpring":1100800,"beamDamp":150.4},
+          {"beamDeform":10500,"beamStrength":"FLT_MAX"},
+          ["bdkf1_ll","bd3ll"],
+          ["bdkf1_ll","bd1ll"],
+          ["bdkf2_ll","bd3ll"],
+          ["bdkf2_ll","bd1ll"],
+          ["bdkf3_ll","bd3ll"],
+          ["bdkf3_ll","bd1ll"],
+
+          //to bed sidewall
+          ["bdkf1_rr","bd3rr"],
+          ["bdkf1_rr","bd1rr"],
+          ["bdkf2_rr","bd3rr"],
+          ["bdkf2_rr","bd1rr"],
+          ["bdkf3_rr","bd3rr"],
+          ["bdkf3_rr","bd1rr"],
+
+          //reinforcement
+          {"beamSpring":955829.6,"beamDamp":150.4},
+          {"beamDeform":2800,"beamStrength":"FLT_MAX"},
+          ["bdkf3","bd1ll"],
+          ["bdkf3","bd2ll"],
+          ["bdkf3","bd1rr"],
+          ["bdkf3","bd2rr"],
+
+
+
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //back left
+            {"dragCoef":43.75},
+            {"groundModel":"metal"},
+            ["bdk2_ll","bdk1_ll","bdk2"],
+            ["bdk1_ll","bdk1","bdk2"],
+
+            ["bdk2_ll","bdk3_ll","bdk1_ll"],
+
+            ["bdk1_ll","bdk3_ll","bdk3"],
+            ["bdk1_ll","bdk3","bdk1"],
+
+            ["bdk2","bdk3","bdk2_ll"],
+            ["bdk3","bdk3_ll","bdk2_ll"],
+
+            //back right
+            ["bdk1_rr","bdk2_rr","bdk2"],
+            ["bdk1","bdk1_rr","bdk2"],
+
+            ["bdk3_rr","bdk2_rr","bdk1_rr"],
+
+            ["bdk3_rr","bdk1_rr","bdk3"],
+            ["bdk3","bdk1_rr","bdk1"],
+
+            ["bdk3","bdk2","bdk2_rr"],
+            ["bdk3_rr","bdk3","bdk2_rr"],
+
+            //front left
+            ["bdkf2_ll","bdkf1_ll","bdkf2"],
+            ["bdkf1_ll","bdkf1","bdkf2"],
+
+            ["bdkf2_ll","bdkf3_ll","bdkf1_ll"],
+
+            ["bdkf1_ll","bdkf3_ll","bdkf3"],
+            ["bdkf1_ll","bdkf3","bdkf1"],
+
+            ["bdkf2","bdkf3","bdkf2_ll"],
+            ["bdkf3","bdkf3_ll","bdkf2_ll"],
+
+            //front right
+            ["bdkf1_rr","bdkf2_rr","bdkf2"],
+            ["bdkf1","bdkf1_rr","bdkf2"],
+
+            ["bdkf3_rr","bdkf2_rr","bdkf1_rr"],
+
+            ["bdkf3_rr","bdkf1_rr","bdkf3"],
+            ["bdkf3","bdkf1_rr","bdkf1"],
+
+            ["bdkf3","bdkf2","bdkf2_rr"],
+            ["bdkf3_rr","bdkf3","bdkf2_rr"],
+    ],
+},
+"G_pickup_bedladder_tiny": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Ladder",
+        "value":50,
+    },
+    "slotType" : "G_pickup_bedladder_tiny",
+    "slots": [
+        ["type", "default", "description"],
+
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pickup_ladder", ["pickup_ladder"],[],{"pos":{"x":0.24, "y":1.68, "z":1.83}, "rot":{"x":0, "y":180, "z":0}, "scale":{"x":1.0,"y":0.9,"z":1.0}}],
+         ["pickup_ladder", ["pickup_ladder"],[],{"pos":{"x":0.24, "y":1.68, "z":1.885}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0,"y":0.9,"z":1.0}}],
+         ["pickup_strap", ["pickup_ladder"],[],{"pos":{"x":0.24, "y":2.42, "z":1.857}, "rot":{"x":0, "y":0, "z":0}}],
+         ["pickup_strap", ["pickup_ladder"],[],{"pos":{"x":0.24, "y":0.87, "z":1.857}, "rot":{"x":0, "y":0, "z":0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         {"frictionCoef":0.7},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":1.41},
+         {"group":"pickup_ladder"},
+         ["lad1", 0.07, 0.75, 1.80],
+         ["lad2", 0.07, 0.75, 1.91],
+         ["lad3", 0.40, 0.75, 1.80],
+         ["lad4", 0.40, 0.75, 1.91],
+         ["lad5", 0.07, 1.69, 1.80],
+         ["lad6", 0.07, 1.69, 1.91],
+         ["lad7", 0.40, 1.69, 1.80],
+         ["lad8", 0.40, 1.69, 1.91],
+         ["lad9", 0.07, 2.63, 1.80],
+         ["lad10", 0.07, 2.63, 1.91],
+         ["lad11", 0.40, 2.63, 1.80],
+         ["lad12", 0.40, 2.63, 1.91],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":1128940,"beamDamp":188},
+          {"beamDeform":28000,"beamStrength":"FLT_MAX"},
+          //ladder
+          ["lad1","lad2"],
+          ["lad1","lad3"],
+          ["lad1","lad4"],
+          ["lad2","lad3"],
+          ["lad2","lad4"],
+          ["lad3","lad4"],
+
+          ["lad5","lad6"],
+          ["lad5","lad7"],
+          ["lad5","lad8"],
+          ["lad6","lad7"],
+          ["lad6","lad8"],
+          ["lad7","lad8"],
+
+          ["lad9","lad10"],
+          ["lad9","lad11"],
+          ["lad9","lad12"],
+          ["lad10","lad11"],
+          ["lad10","lad12"],
+          ["lad11","lad12"],
+          //length
+          ["lad1","lad5"],
+          ["lad2","lad6"],
+          ["lad3","lad7"],
+          ["lad4","lad8"],
+
+          ["lad9","lad5"],
+          ["lad10","lad6"],
+          ["lad11","lad7"],
+          ["lad12","lad8"],
+
+          {"beamDeform":10500,"beamStrength":"FLT_MAX"},
+          //cross
+          ["lad1","lad6"],
+          ["lad1","lad7"],
+          ["lad1","lad8"],
+          ["lad2","lad5"],
+          ["lad2","lad7"],
+          ["lad2","lad8"],
+          ["lad3","lad5"],
+          ["lad3","lad6"],
+          ["lad3","lad8"],
+          ["lad4","lad5"],
+          ["lad4","lad6"],
+          ["lad4","lad7"],
+
+          ["lad9","lad6"],
+          ["lad9","lad7"],
+          ["lad9","lad8"],
+          ["lad10","lad5"],
+          ["lad10","lad7"],
+          ["lad10","lad8"],
+          ["lad11","lad5"],
+          ["lad11","lad6"],
+          ["lad11","lad8"],
+          ["lad12","lad5"],
+          ["lad12","lad6"],
+          ["lad12","lad7"],
+          //reinforcement
+          {"beamSpring":1128940,"beamDamp":188},
+          {"beamDeform":21000,"beamStrength":"FLT_MAX"},
+          //attach
+          {"beamSpring":282000,"beamDamp":94},
+          {"beamDeform":4900,"beamStrength":7700},
+          //front
+          {"breakGroup":"ladder_f"},
+          ["lad1","bdkf3"],
+          ["lad1","bdkf2"],
+          ["lad1","bdkf3_ll"],
+          ["lad1","bdkf2_ll"],
+
+          ["lad2","bdkf3"],
+          ["lad2","bdkf2"],
+          ["lad2","bdkf3_ll"],
+          ["lad2","bdkf2_ll"],
+
+          ["lad3","bdkf3"],
+          ["lad3","bdkf2"],
+          ["lad3","bdkf3_ll"],
+          ["lad3","bdkf2_ll"],
+
+          ["lad4","bdkf3"],
+          ["lad4","bdkf2"],
+          ["lad4","bdkf3_ll"],
+          ["lad4","bdkf2_ll"],
+          {"breakGroup":""},
+
+          //rear
+          {"breakGroup":"ladder_b"},
+          ["lad9","bdk3"],
+          ["lad9","bdk2"],
+          ["lad9","bdk3_ll"],
+          ["lad9","bdk2_ll"],
+
+          ["lad10","bdk3"],
+          ["lad10","bdk2"],
+          ["lad10","bdk3_ll"],
+          ["lad10","bdk2_ll"],
+
+          ["lad11","bdk3"],
+          ["lad11","bdk2"],
+          ["lad11","bdk3_ll"],
+          ["lad11","bdk2_ll"],
+
+          ["lad12","bdk3"],
+          ["lad12","bdk2"],
+          ["lad12","bdk3_ll"],
+          ["lad12","bdk2_ll"],
+          {"breakGroup":""},
+
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"dragCoef":31.25},
+            {"groundModel":"metal"},
+            {"group":"pickup_ladder"},
+            ["lad4","lad8","lad6"],
+            ["lad4","lad6","lad2"],
+            ["lad8","lad12","lad10"],
+            ["lad8","lad10","lad6"],
+
+            ["lad4","lad3","lad7"],
+            ["lad4","lad7","lad8"],
+            ["lad8","lad7","lad11"],
+            ["lad8","lad11","lad12"],
+
+            ["lad2","lad6","lad5"],
+            ["lad2","lad5","lad1"],
+            ["lad6","lad10","lad9"],
+            ["lad6","lad9","lad5"],
+
+            ["lad3","lad1","lad5"],
+            ["lad3","lad5","lad7"],
+            ["lad7","lad5","lad11"],
+            ["lad11","lad5","lad9"],
+
+            //ends
+            ["lad12","lad11","lad9"],
+            ["lad12","lad9","lad10"],
+
+            ["lad2","lad1","lad3"],
+            ["lad2","lad3","lad4"],
+
+    ],
+},
+"G_pickup_bedpipes_tiny": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Pipe Stack",
+        "value":50,
+    },
+    "slotType" : "G_pickup_bedpipes_tiny",
+    "slots": [
+        ["type", "default", "description"],
+
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pickup_pipestack", ["pickup_bedpipes"],[],{"pos":{"x":-0.30, "y":1.68, "z":1.8}, "scale":{"x":1.0,"y":0.9,"z":1.0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         {"frictionCoef":0.7},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":1.41},
+         {"group":"pickup_bedpipes"},
+         ["pipe1", -0.45, 0.80, 1.815],
+         ["pipe2", -0.39, 0.80, 1.93],
+         ["pipe3", -0.18, 0.80, 1.815],
+         ["pipe4", -0.24, 0.80, 1.93],
+         ["pipe5", -0.45, 1.69, 1.815],
+         ["pipe6", -0.39, 1.69, 1.93],
+         ["pipe7", -0.18, 1.69, 1.815],
+         ["pipe8", -0.24, 1.69, 1.93],
+         ["pipe9", -0.45, 2.57, 1.815],
+         ["pipe10", -0.39, 2.57, 1.93],
+         ["pipe11", -0.18, 2.57, 1.815],
+         ["pipe12", -0.24, 2.57, 1.93],
+
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":1128940,"beamDamp":188},
+          {"beamDeform":28000,"beamStrength":"FLT_MAX"},
+          //pipes
+          ["pipe1","pipe2"],
+          ["pipe1","pipe3"],
+          ["pipe1","pipe4"],
+          ["pipe2","pipe3"],
+          ["pipe2","pipe4"],
+          ["pipe3","pipe4"],
+
+          ["pipe5","pipe6"],
+          ["pipe5","pipe7"],
+          ["pipe5","pipe8"],
+          ["pipe6","pipe7"],
+          ["pipe6","pipe8"],
+          ["pipe7","pipe8"],
+
+          ["pipe9","pipe10"],
+          ["pipe9","pipe11"],
+          ["pipe9","pipe12"],
+          ["pipe10","pipe11"],
+          ["pipe10","pipe12"],
+          ["pipe11","pipe12"],
+          //length
+          ["pipe1","pipe5"],
+          ["pipe2","pipe6"],
+          ["pipe3","pipe7"],
+          ["pipe4","pipe8"],
+
+          ["pipe9","pipe5"],
+          ["pipe10","pipe6"],
+          ["pipe11","pipe7"],
+          ["pipe12","pipe8"],
+
+          {"beamDeform":10500,"beamStrength":"FLT_MAX"},
+          //cross
+          ["pipe1","pipe6"],
+          ["pipe1","pipe7"],
+          ["pipe1","pipe8"],
+          ["pipe2","pipe5"],
+          ["pipe2","pipe7"],
+          ["pipe2","pipe8"],
+          ["pipe3","pipe5"],
+          ["pipe3","pipe6"],
+          ["pipe3","pipe8"],
+          ["pipe4","pipe5"],
+          ["pipe4","pipe6"],
+          ["pipe4","pipe7"],
+
+          ["pipe9","pipe6"],
+          ["pipe9","pipe7"],
+          ["pipe9","pipe8"],
+          ["pipe10","pipe5"],
+          ["pipe10","pipe7"],
+          ["pipe10","pipe8"],
+          ["pipe11","pipe5"],
+          ["pipe11","pipe6"],
+          ["pipe11","pipe8"],
+          ["pipe12","pipe5"],
+          ["pipe12","pipe6"],
+          ["pipe12","pipe7"],
+
+          //reinforcement
+          {"beamSpring":1128940,"beamDamp":188},
+          {"beamDeform":21000,"beamStrength":"FLT_MAX"},
+          //attach
+          {"beamSpring":282000,"beamDamp":94},
+          {"beamDeform":4900,"beamStrength":7700},
+          //front
+          {"breakGroup":"bedpipes_f"},
+          ["pipe1","bdkf3"],
+          ["pipe1","bdkf2"],
+          ["pipe1","bdkf3_rr"],
+          ["pipe1","bdkf2_rr"],
+
+          ["pipe2","bdkf3"],
+          ["pipe2","bdkf2"],
+          ["pipe2","bdkf3_rr"],
+          ["pipe2","bdkf2_rr"],
+
+          ["pipe3","bdkf3"],
+          ["pipe3","bdkf2"],
+          ["pipe3","bdkf3_rr"],
+          ["pipe3","bdkf2_rr"],
+
+          ["pipe4","bdkf3"],
+          ["pipe4","bdkf2"],
+          ["pipe4","bdkf3_rr"],
+          ["pipe4","bdkf2_rr"],
+          {"breakGroup":""},
+
+          //rear
+          {"breakGroup":"bedpipes_b"},
+          ["pipe9","bdk1"],
+          ["pipe9","bdk3"],
+          ["pipe9","bdk1_rr"],
+          ["pipe9","bdk3_rr"],
+
+          ["pipe10","bdk1"],
+          ["pipe10","bdk3"],
+          ["pipe10","bdk1_rr"],
+          ["pipe10","bdk3_rr"],
+
+          ["pipe11","bdk1"],
+          ["pipe11","bdk3"],
+          ["pipe11","bdk1_rr"],
+          ["pipe11","bdk3_rr"],
+
+          ["pipe12","bdk1"],
+          ["pipe12","bdk3"],
+          ["pipe12","bdk1_rr"],
+          ["pipe12","bdk3_rr"],
+          {"breakGroup":""},
+
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"dragCoef":31.25},
+            {"groundModel":"metal"},
+            {"group":"pickup_bedpipes"},
+            ["pipe4","pipe8","pipe6"],
+            ["pipe4","pipe6","pipe2"],
+            ["pipe8","pipe12","pipe10"],
+            ["pipe8","pipe10","pipe6"],
+
+            ["pipe4","pipe3","pipe7"],
+            ["pipe4","pipe7","pipe8"],
+            ["pipe8","pipe7","pipe11"],
+            ["pipe8","pipe11","pipe12"],
+
+            ["pipe2","pipe6","pipe5"],
+            ["pipe2","pipe5","pipe1"],
+            ["pipe6","pipe10","pipe9"],
+            ["pipe6","pipe9","pipe5"],
+
+            ["pipe3","pipe1","pipe5"],
+            ["pipe3","pipe5","pipe7"],
+            ["pipe7","pipe5","pipe11"],
+            ["pipe11","pipe5","pipe9"],
+
+            //ends
+            ["pipe12","pipe11","pipe9"],
+            ["pipe12","pipe9","pipe10"],
+
+            ["pipe2","pipe1","pipe3"],
+            ["pipe2","pipe3","pipe4"],
+
+    ],
+},
+}

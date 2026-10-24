@@ -1,0 +1,114 @@
+{
+    "pickup_fenderflare_FR_wide": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Front Right Wide Fender Flare (Body Colored)",
+        "value":220,
+    },
+    "slotType" : "pickup_fenderflare_FR",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_fenderflare_heavy_FR_wide", ["pickup_fender_R"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //--FENDER--
+         {"selfCollision":true},
+         {"collision":true},
+         {"group":["pickup_fender_R", "pickup_fender_R_flared"]},
+         {"nodeWeight":1.88},
+         ["fe1r", -0.87, -0.86, 0.39],
+         ["fe2r", -0.90, -0.97, 0.39],
+         ["fe3r", -0.97, -0.88, 0.83],
+         ["fe4r", -1.06, -1.41, 0.91],
+         ["fe5r", -1.03, -1.86, 0.73],
+         {"group":""},
+    ],
+},
+"pickup_fenderflare_FL_wide": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Front Left Wide Fender Flare (Body Colored)",
+        "value":220,
+    },
+    "slotType" : "pickup_fenderflare_FL",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_fenderflare_heavy_FL_wide", ["pickup_fender_L"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //--FENDER--
+         {"selfCollision":true},
+         {"collision":true},
+         {"group":["pickup_fender_L", "pickup_fender_L_flared"]},
+         {"nodeWeight":1.88},
+         ["fe1l", 0.87, -0.86, 0.39],
+         ["fe2l", 0.90, -0.97, 0.39],
+         ["fe3l", 0.97, -0.88, 0.83],
+         ["fe4l", 1.06, -1.41, 0.91],
+         ["fe5l", 1.03, -1.86, 0.73],
+         {"group":""},
+    ],
+},
+"pickup_fenderflare_FR_alt_wide": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Front Right Wide Fender Flare (Black)",
+        "value":180,
+    },
+    "slotType" : "pickup_fenderflare_FR",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_fenderflare_heavy_FR_alt_wide", ["pickup_fender_R"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //--FENDER--
+         {"selfCollision":true},
+         {"collision":true},
+         {"group":["pickup_fender_R", "pickup_fender_R_flared"]},
+         {"nodeWeight":1.88},
+         ["fe1r", -0.87, -0.86, 0.39],
+         ["fe2r", -0.90, -0.97, 0.39],
+         ["fe3r", -0.97, -0.88, 0.83],
+         ["fe4r", -1.06, -1.41, 0.91],
+         ["fe5l", -1.03, -1.86, 0.73],
+         {"group":""},
+    ],
+},
+"pickup_fenderflare_FL_alt_wide": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Front Left Wide Fender Flare (Black)",
+        "value":180,
+    },
+    "slotType" : "pickup_fenderflare_FL",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_fenderflare_heavy_FL_alt_wide", ["pickup_fender_L"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //--FENDER--
+         {"selfCollision":true},
+         {"collision":true},
+         {"group":["pickup_fender_L", "pickup_fender_L_flared"]},
+         {"nodeWeight":1.88},
+         ["fe1l", 0.87, -0.86, 0.39],
+         ["fe2l", 0.90, -0.97, 0.39],
+         ["fe3l", 0.97, -0.88, 0.83],
+         ["fe4l", 1.06, -1.41, 0.91],
+         ["fe5l", 1.03, -1.86, 0.73],
+         {"group":""},
+    ],
+},
+}

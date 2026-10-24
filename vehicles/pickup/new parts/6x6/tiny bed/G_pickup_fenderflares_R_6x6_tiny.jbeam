@@ -1,0 +1,80 @@
+{
+"G_pickup_fenderflares_R_6x6_tiny": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Fender Flares (Body Colored)",
+        "value":480,
+    },
+    "slotType" : "G_pickup_fenderflares_R_6x6_tiny",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_fenderflare_6x6_heavy_RR_tiny", ["pickup_bed"], [],{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_pickup_fenderflare_6x6_heavy_RL_tiny", ["pickup_bed"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+},
+"G_pickup_fenderflares_R_6x6_tiny_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Fender Flares (Black)",
+        "value":480,
+    },
+    "slotType" : "G_pickup_fenderflares_R_6x6_tiny",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_fenderflare_6x6_heavy_RR_tiny_alt", ["pickup_bed"], [],{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_pickup_fenderflare_6x6_heavy_RL_tiny_alt", ["pickup_bed"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+},
+"G_pickup_fenderflares_R_offroad_6x6_tiny": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Off-Road Rear Fender Flares (Black)",
+        "value":800,
+    },
+    "slotType" : "G_pickup_fenderflares_R_6x6_tiny",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_fenderflare_6x6_RR_tiny", ["pickup_bed"], [],{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_pickup_fenderflare_6x6_RL_tiny", ["pickup_bed"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+},
+"G_pickup_fenderflares_R_offroad_6x6_tiny_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Off-Road Rear Fender Flares (Body Colored)",
+        "value":800,
+    },
+    "slotType" : "G_pickup_fenderflares_R_6x6_tiny",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_fenderflare_6x6_RR_tiny_alt", ["pickup_bed"], [],{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_pickup_fenderflare_6x6_RL_tiny_alt", ["pickup_bed"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+},
+"G_pickup_fenderflares_R_6x6_tiny_wide": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Wide Rear Fender Flares (Body Colored)",
+        "value":880,
+    },
+    "slotType" : "G_pickup_fenderflares_R_6x6_tiny",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_fenderflare_6x6_heavy_RR_tiny_wide", ["pickup_bed"], [],{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_pickup_fenderflare_6x6_heavy_RL_tiny_wide", ["pickup_bed"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+},
+"G_pickup_fenderflares_R_6x6_tiny_alt_wide": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Wide Rear Fender Flares (Black)",
+        "value":880,
+    },
+    "slotType" : "G_pickup_fenderflares_R_6x6_tiny",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_fenderflare_6x6_heavy_RR_tiny_alt_wide", ["pickup_bed"], [],{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_pickup_fenderflare_6x6_heavy_RL_tiny_alt_wide", ["pickup_bed"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+},
+}

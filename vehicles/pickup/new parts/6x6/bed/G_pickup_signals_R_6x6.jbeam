@@ -1,0 +1,276 @@
+{
+"G_pickup_duallysignals_R_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Side Marker Lights",
+        "value":90,
+    },
+    "slotType" : "G_pickup_duallysignals_R_6x6",
+    "slots2": [
+        ["name", "allowTypes", "denyTypes", "default", "description"],
+
+        //right
+
+        ["pickup_fendersignal_FR_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Front Right Dually Turn Signal",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"signal_R_filament",
+          "$nodeRef":"rff4rr", "$nodeX":"rff4r", "$nodeY":"rff7rr",
+          "$deformGroup":"duallysignal_FR_break",
+          "$posX":-1.13, "$posY":1.28, "$posZ":0.76,
+          "$rotX":0, "$rotY":0, "$rotZ":-110,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_duallymarker_FR_bulb", ["incandescent_amber5W"], [], "incandescent_amber_5W", "Front Right Dually Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"rff4rr", "$nodeX":"rff4r", "$nodeY":"rff7rr",
+          "$deformGroup":"duallysignal_FR_break",
+          "$posX":-1.13, "$posY":1.28, "$posZ":0.76,
+          "$rotX":0, "$rotY":0, "$rotZ":-110,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_fendersignal_RR_bulb", ["incandescent_red_5W"], [], "incandescent_red_5W", "Rear Right Dually Turn Signal",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"signal_R_filament",
+          "$nodeRef":"rff6rr", "$nodeX":"rff6r", "$nodeY":"rff8rr",
+          "$deformGroup":"duallysignal_RR_break",
+          "$posX":-1.13, "$posY":3.3, "$posZ":0.76,
+          "$rotX":0, "$rotY":0, "$rotZ":-70,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_duallymarker_RR_bulb", ["incandescent_red_5W"], [], "incandescent_red_5W", "Rear Right Dually Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"rff6rr", "$nodeX":"rff6r", "$nodeY":"rff8rr",
+          "$deformGroup":"duallysignal_RR_break",
+          "$posX":-1.13, "$posY":3.3, "$posZ":0.76,
+          "$rotX":0, "$rotY":0, "$rotZ":-70,
+          "$shadowEnable":0,
+        }
+        }]
+
+        //Left
+
+        ["pickup_fendersignal_FL_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Front Left Dually Turn Signal",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"signal_L_filament",
+          "$nodeRef":"rff4ll", "$nodeX":"rff4l", "$nodeY":"rff7ll",
+          "$deformGroup":"duallysignal_FL_break",
+          "$posX":1.13, "$posY":1.28, "$posZ":0.76,
+          "$rotX":0, "$rotY":0, "$rotZ":110,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_duallymarker_FL_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Front Left Dually Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"rff4ll", "$nodeX":"rff4l", "$nodeY":"rff7ll",
+          "$deformGroup":"duallysignal_FL_break",
+          "$posX":1.13, "$posY":1.28, "$posZ":0.76,
+          "$rotX":0, "$rotY":0, "$rotZ":110,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_fendersignal_RL_bulb", ["incandescent_red_5W"], [], "incandescent_red_5W", "Rear Left Dually Turn Signal",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"signal_L_filament",
+          "$nodeRef":"rff6ll", "$nodeX":"rff6l", "$nodeY":"rff8ll",
+          "$deformGroup":"duallysignal_RL_break",
+          "$posX":1.13, "$posY":3.3, "$posZ":0.76,
+          "$rotX":0, "$rotY":0, "$rotZ":70,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_duallymarker_RL_bulb", ["incandescent_red_5W"], [], "incandescent_red_5W", "Rear Left Dually Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"rff6ll", "$nodeX":"rff6l", "$nodeY":"rff8ll",
+          "$deformGroup":"duallysignal_RL_break",
+          "$posX":1.13, "$posY":3.3, "$posZ":0.76,
+          "$rotX":0, "$rotY":0, "$rotZ":70,
+          "$shadowEnable":0,
+        }
+        }]
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         {"deformGroup":"duallysignal_FR_break", "deformMaterialBase":"pickup_lights", "deformMaterialDamaged":"pickup_lights"},
+         ["pickup_duallysignal_FR", ["pickup_fenderflare_RR_dually"], [],{"pos":{"x":0,"y":0,"z":0}, "deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound1", "deformVolume":0.2}],
+         {"deformGroup":"duallysignal_RR_break", "deformMaterialBase":"pickup_lights", "deformMaterialDamaged":"pickup_lights"},
+         ["pickup_duallysignal_RR", ["pickup_fenderflare_RR_dually"], [],{"pos":{"x":0,"y":0.9,"z":0}, "deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound4", "deformVolume":0.2}],
+
+         {"deformGroup":"duallysignal_FR_break", "deformMaterialBase":"pickup_lightglass", "deformMaterialDamaged":"pickup_lightglass_dmg"},
+         ["pickup_duallysignalglass_FR", ["pickup_fenderflare_RR_dually"], [],{"pos":{"x":0,"y":0,"z":0}, "deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound1", "deformVolume":0.2}],
+         {"deformGroup":"duallysignal_RR_break", "deformMaterialBase":"pickup_lightglass", "deformMaterialDamaged":"pickup_lightglass_dmg"},
+         ["pickup_duallysignalglass_RR", ["pickup_fenderflare_RR_dually"], [],{"pos":{"x":0,"y":0.9,"z":0}, "deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound4", "deformVolume":0.2}],
+
+
+         {"deformGroup":"duallysignal_FL_break", "deformMaterialBase":"pickup_lights", "deformMaterialDamaged":"pickup_lights"},
+         ["pickup_duallysignal_FL", ["pickup_fenderflare_RL_dually"], [],{"pos":{"x":0,"y":0,"z":0}, "deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound2", "deformVolume":0.2}],
+         {"deformGroup":"duallysignal_RL_break", "deformMaterialBase":"pickup_lights", "deformMaterialDamaged":"pickup_lights"},
+         ["pickup_duallysignal_RL", ["pickup_fenderflare_RL_dually"], [],{"pos":{"x":0,"y":0.9,"z":0}, "deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.2}],
+
+         {"deformGroup":"duallysignal_FL_break", "deformMaterialBase":"pickup_lightglass", "deformMaterialDamaged":"pickup_lightglass_dmg"},
+         ["pickup_duallysignalglass_FL", ["pickup_fenderflare_RL_dually"], [],{"pos":{"x":0,"y":0,"z":0}, "deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound2", "deformVolume":0.2}],
+         {"deformGroup":"duallysignal_RL_break", "deformMaterialBase":"pickup_lightglass", "deformMaterialDamaged":"pickup_lightglass_dmg"},
+         ["pickup_duallysignalglass_RL", ["pickup_fenderflare_RL_dually"], [],{"pos":{"x":0,"y":0.9,"z":0}, "deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.2}],
+         {"deformGroup":""},
+    ],
+},
+"G_pickup_duallysignals_R_6x6_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Early Side Marker Lights",
+        "value":80,
+    },
+    "slotType" : "G_pickup_duallysignals_R_6x6",
+    "slots2": [
+        ["name", "allowTypes", "denyTypes", "default", "description"],
+
+        //right
+
+        ["pickup_fendersignal_FR_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Front Right Dually Turn Signal",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"signal_R_filament",
+          "$nodeRef":"rff4rr", "$nodeX":"rff4r", "$nodeY":"rff7rr",
+          "$deformGroup":"duallysignal_FR_break",
+          "$posX":-1.13, "$posY":1.315, "$posZ":0.697,
+          "$rotX":0, "$rotY":0, "$rotZ":-110,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_duallymarker_FR_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Front Right Dually Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"rff4rr", "$nodeX":"rff4r", "$nodeY":"rff7rr",
+          "$deformGroup":"duallysignal_FR_break",
+          "$posX":-1.13, "$posY":1.315, "$posZ":0.697,
+          "$rotX":0, "$rotY":0, "$rotZ":-110,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_fendersignal_RR_bulb", ["incandescent_red_5W"], [], "incandescent_red_5W", "Rear Right Dually Turn Signal",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"signal_R_filament",
+          "$nodeRef":"rff6rr", "$nodeX":"rff6r", "$nodeY":"rff8rr",
+          "$deformGroup":"duallysignal_RR_break",
+          "$posX":-1.13, "$posY":3.253, "$posZ":0.697,
+          "$rotX":0, "$rotY":0, "$rotZ":-70,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_duallymarker_RR_bulb", ["incandescent_red_5W"], [], "incandescent_red_5W", "Rear Right Dually Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"rff6rr", "$nodeX":"rff6r", "$nodeY":"rff8rr",
+          "$deformGroup":"duallysignal_RR_break",
+          "$posX":-1.13, "$posY":3.253, "$posZ":0.697,
+          "$rotX":0, "$rotY":0, "$rotZ":-70,
+          "$shadowEnable":0,
+        }
+        }]
+
+        //left
+
+        ["pickup_fendersignal_FL_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Front Left Dually Turn Signal",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"signal_L_filament",
+          "$nodeRef":"rff4ll", "$nodeX":"rff4l", "$nodeY":"rff7ll",
+          "$deformGroup":"duallysignal_FL_break",
+          "$posX":1.13, "$posY":1.315, "$posZ":0.697,
+          "$rotX":0, "$rotY":0, "$rotZ":110,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_duallymarker_FL_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Front Left Dually Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"rff4ll", "$nodeX":"rff4l", "$nodeY":"rff7ll",
+          "$deformGroup":"duallysignal_FL_break",
+          "$posX":1.13, "$posY":1.315, "$posZ":0.697,
+          "$rotX":0, "$rotY":0, "$rotZ":110,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_fendersignal_RL_bulb", ["incandescent_red_5W"], [], "incandescent_red_5W", "Rear Left Dually Turn Signal",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"signal_L_filament",
+          "$nodeRef":"rff6ll", "$nodeX":"rff6l", "$nodeY":"rff8ll",
+          "$deformGroup":"duallysignal_RL_break",
+          "$posX":1.13, "$posY":3.253, "$posZ":0.697,
+          "$rotX":0, "$rotY":0, "$rotZ":70,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_duallymarker_RL_bulb", ["incandescent_red_5W"], [], "incandescent_red_5W", "Rear Left Dually Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"rff6ll", "$nodeX":"rff6l", "$nodeY":"rff8ll",
+          "$deformGroup":"duallysignal_RL_break",
+          "$posX":1.13, "$posY":3.253, "$posZ":0.697,
+          "$rotX":0, "$rotY":0, "$rotZ":70,
+          "$shadowEnable":0,
+        }
+        }]
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         {"deformGroup":"duallysignal_FR_break", "deformMaterialBase":"pickup_lights", "deformMaterialDamaged":"pickup_lights"},
+         ["pickup_duallysignal_FR_alt", ["pickup_fenderflare_RR_dually"], [],{"pos":{"x":0,"y":0,"z":0}, "deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound1", "deformVolume":0.2}],
+         {"deformGroup":"duallysignal_RR_break", "deformMaterialBase":"pickup_lights", "deformMaterialDamaged":"pickup_lights"},
+         ["pickup_duallysignal_RR_alt", ["pickup_fenderflare_RR_dually"], [],{"pos":{"x":0,"y":0.9,"z":0}, "deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound4", "deformVolume":0.2}],
+
+         {"deformGroup":"duallysignal_FR_break", "deformMaterialBase":"pickup_lightglass", "deformMaterialDamaged":"pickup_lightglass_dmg"},
+         ["pickup_duallysignalglass_FR_alt", ["pickup_fenderflare_RR_dually"], [],{"pos":{"x":0,"y":0,"z":0}, "deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound1", "deformVolume":0.2}],
+         {"deformGroup":"duallysignal_RR_break", "deformMaterialBase":"pickup_lightglass", "deformMaterialDamaged":"pickup_lightglass_dmg"},
+         ["pickup_duallysignalglass_RR_alt", ["pickup_fenderflare_RR_dually"], [],{"pos":{"x":0,"y":0.9,"z":0}, "deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound4", "deformVolume":0.2}],
+
+
+         {"deformGroup":"duallysignal_FL_break", "deformMaterialBase":"pickup_lights", "deformMaterialDamaged":"pickup_lights"},
+         ["pickup_duallysignalglass_FL_alt", ["pickup_fenderflare_RL_dually"], [],{"pos":{"x":0,"y":0,"z":0}, "deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound2", "deformVolume":0.2}],
+         {"deformGroup":"duallysignal_FL_break", "deformMaterialBase":"pickup_lightglass", "deformMaterialDamaged":"pickup_lightglass_dmg"},
+         ["pickup_duallysignal_FL_alt", ["pickup_fenderflare_RL_dually"], [],{"pos":{"x":0,"y":0.9,"z":0}, "deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound2", "deformVolume":0.2}],
+
+         {"deformGroup":"duallysignal_RL_break", "deformMaterialBase":"pickup_lights", "deformMaterialDamaged":"pickup_lights"},
+         ["pickup_duallysignal_RL_alt", ["pickup_fenderflare_RL_dually"], [],{"pos":{"x":0,"y":0,"z":0}, "deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.2}],
+         {"deformGroup":"duallysignal_RL_break", "deformMaterialBase":"pickup_lightglass", "deformMaterialDamaged":"pickup_lightglass_dmg"},
+         ["pickup_duallysignalglass_RL_alt", ["pickup_fenderflare_RL_dually"], [],{"pos":{"x":0,"y":0.9,"z":0}, "deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.2}],
+         {"deformGroup":""},
+    ],
+},
+}

@@ -1,0 +1,236 @@
+{
+"tire_RR_6x6_38_13_17_desert": {
+    "information":{
+        "authors":"GAMER!",
+        "name":"Grip-All Screamer J52 38x12.50R17 Rear Rear Tires",
+        "value":900,
+    },
+    "slotType" : "G_tire_RR_6x6_17x9_offroad",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["offroadtire_02a", ["wheel_RRR","tire_RRR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.985, "y":1, "z":1}}],
+        ["offroadtire_02a", ["wheel_RRL","tire_RRL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":0.985, "y":1, "z":1}}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$tirepressure_RR", "range", "psi", "Wheels", 30, 0, 40, "Tire Pressure", "Relative to atmospheric pressure", {"subCategory":"Rear Rear"}],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false},
+        {"hasTire":true},
+        {"enableTireReinfBeams":false},
+        {"enableTireLbeams":true},
+        {"enableTireSideReinfBeams":true},
+        {"enableTreadReinfBeams":true},
+        {"enableTirePeripheryReinfBeams":true},
+
+        //general settings
+        {"radius":0.495},
+        {"tireWidth":0.295},
+
+        //tire options
+        {"wheelSideBeamSpring":"$=$tirepressure_R*900","wheelSideBeamDamp":60},
+        {"wheelSideBeamSpringExpansion":601000,"wheelSideBeamDampExpansion":40},
+        {"wheelSideTransitionZone":0.1,"wheelSideBeamPrecompression":0.99},
+
+        {"wheelSideReinfBeamSpring":"$=$tirepressure_R*300","wheelSideReinfBeamDamp":80},
+        {"wheelSideReinfBeamSpringExpansion":201000,"wheelSideReinfBeamDampExpansion":40},
+        {"wheelSideReinfTransitionZone":0.09,"wheelSideReinfBeamPrecompression":0.99},
+
+        {"wheelReinfBeamSpring":4000,"wheelReinfBeamDamp":400},
+        {"wheelReinfBeamDampCutoffHz":250,"wheelReinfBeamPrecompression":0.99},
+
+        {"wheelTreadBeamSpring":61000,"wheelTreadBeamDamp":250},
+        {"wheelTreadBeamDampCutoffHz":500,"wheelTreadBeamPrecompression":0.99},
+
+        {"wheelTreadReinfBeamSpring":121000,"wheelTreadReinfBeamDamp":125},
+        {"wheelTreadReinfBeamDampCutoffHz":500,"wheelTreadReinfBeamPrecompression":0.99},
+
+        {"wheelPeripheryBeamSpring":41000,"wheelPeripheryBeamDamp":240},
+        {"wheelPeripheryBeamDampCutoffHz":500,"wheelPeripheryBeamPrecompression":0.99},
+
+        {"wheelPeripheryReinfBeamSpring":81000,"wheelPeripheryReinfBeamDamp":120},
+        {"wheelPeripheryReinfBeamDampCutoffHz":500,"wheelPeripheryReinfBeamPrecompression":0.99},
+
+        //general tire values
+        {"nodeWeight":0.35},
+        {"nodeMaterial":"|NM_RUBBER"},
+        {"pressurePSI":"$tirepressure_RR"},
+        {"dragCoef":15},
+
+        //groundmodel friction multipliers
+        {"frictionCoef":1.0},
+        {"slidingFrictionCoef":1.04},
+        {"stribeckExponent":1.5},
+        {"treadCoef":0.9},
+
+        //advanced friction values
+        {"noLoadCoef":1.4},
+        {"loadSensitivitySlope":0.0001},
+        {"fullLoadCoef":0.4},
+        {"softnessCoef":0.9},
+
+        //deform values
+        {"wheelSideBeamDeform":37000,"wheelSideBeamStrength":44000},
+        {"wheelTreadBeamDeform":29000,"wheelTreadBeamStrength":35000},
+        {"wheelPeripheryBeamDeform":85000,"wheelPeripheryBeamStrength":85000},
+    ],
+},
+"tire_RR_6x6_40_13_17_desert": {
+    "information":{
+        "authors":"GAMER!",
+        "name":"Grip-All Screamer J52 40x12.50R17 Rear Rear Tires",
+        "value":900,
+    },
+    "slotType" : "G_tire_RR_6x6_17x9_offroad",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["offroadtire_02a", ["wheel_RRR","tire_RRR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.985, "y":1.025, "z":1.025}}],
+        ["offroadtire_02a", ["wheel_RRL","tire_RRL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":0.985, "y":1.025, "z":1.025}}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$tirepressure_RR", "range", "psi", "Wheels", 30, 0, 40, "Tire Pressure", "Relative to atmospheric pressure", {"subCategory":"Rear Rear"}],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false},
+        {"hasTire":true},
+        {"enableTireReinfBeams":false},
+        {"enableTireLbeams":true},
+        {"enableTireSideReinfBeams":true},
+        {"enableTreadReinfBeams":true},
+        {"enableTirePeripheryReinfBeams":true},
+
+        //general settings
+        {"radius":0.508},
+        {"tireWidth":0.295},
+
+        //tire options
+        {"wheelSideBeamSpring":"$=$tirepressure_R*900","wheelSideBeamDamp":60},
+        {"wheelSideBeamSpringExpansion":601000,"wheelSideBeamDampExpansion":40},
+        {"wheelSideTransitionZone":0.1,"wheelSideBeamPrecompression":0.99},
+
+        {"wheelSideReinfBeamSpring":"$=$tirepressure_R*300","wheelSideReinfBeamDamp":80},
+        {"wheelSideReinfBeamSpringExpansion":201000,"wheelSideReinfBeamDampExpansion":40},
+        {"wheelSideReinfTransitionZone":0.09,"wheelSideReinfBeamPrecompression":0.99},
+
+        {"wheelReinfBeamSpring":4000,"wheelReinfBeamDamp":400},
+        {"wheelReinfBeamDampCutoffHz":250,"wheelReinfBeamPrecompression":0.99},
+
+        {"wheelTreadBeamSpring":61000,"wheelTreadBeamDamp":250},
+        {"wheelTreadBeamDampCutoffHz":500,"wheelTreadBeamPrecompression":0.99},
+
+        {"wheelTreadReinfBeamSpring":121000,"wheelTreadReinfBeamDamp":125},
+        {"wheelTreadReinfBeamDampCutoffHz":500,"wheelTreadReinfBeamPrecompression":0.99},
+
+        {"wheelPeripheryBeamSpring":41000,"wheelPeripheryBeamDamp":240},
+        {"wheelPeripheryBeamDampCutoffHz":500,"wheelPeripheryBeamPrecompression":0.99},
+
+        {"wheelPeripheryReinfBeamSpring":81000,"wheelPeripheryReinfBeamDamp":120},
+        {"wheelPeripheryReinfBeamDampCutoffHz":500,"wheelPeripheryReinfBeamPrecompression":0.99},
+
+        //general tire values
+        {"nodeWeight":0.60},
+        {"nodeMaterial":"|NM_RUBBER"},
+        {"pressurePSI":"$tirepressure_RR"},
+        {"dragCoef":15},
+
+        //groundmodel friction multipliers
+        {"frictionCoef":1.0},
+        {"slidingFrictionCoef":1.04},
+        {"stribeckExponent":1.5},
+        {"treadCoef":0.9},
+
+        //advanced friction values
+        {"noLoadCoef":1.41},
+        {"loadSensitivitySlope":0.000088},
+        {"fullLoadCoef":0.4},
+        {"softnessCoef":0.9},
+
+        //deform values
+        {"wheelSideBeamDeform":37000,"wheelSideBeamStrength":44000},
+        {"wheelTreadBeamDeform":29000,"wheelTreadBeamStrength":35000},
+        {"wheelPeripheryBeamDeform":85000,"wheelPeripheryBeamStrength":85000},
+    ],
+},
+"tire_RR_6x6_35_13_17_desert": {
+    "information":{
+        "authors":"GAMER!",
+        "name":"Grip-All Screamer J52 35x12.50R17 Rear Rear Tires",
+        "value":900,
+    },
+    "slotType" : "G_tire_RR_6x6_17x9_offroad",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["offroadtire_02a_18x10_35", ["wheel_RRR","tire_RRR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.02, "y":0.98, "z":0.98}}],
+        ["offroadtire_02a_18x10_35", ["wheel_RRL","tire_RRL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.02, "y":0.98, "z":0.98}}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$tirepressure_RR", "range", "psi", "Wheels", 30, 0, 40, "Tire Pressure", "Relative to atmospheric pressure", {"subCategory":"Rear Rear"}],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false},
+        {"hasTire":true},
+        {"enableTireReinfBeams":false},
+        {"enableTireLbeams":true},
+        {"enableTireSideReinfBeams":true},
+        {"enableTreadReinfBeams":true},
+        {"enableTirePeripheryReinfBeams":true},
+
+        //general settings
+        {"radius":0.43},
+        {"tireWidth":0.275},
+
+        //tire options
+        {"wheelSideBeamSpring":"$=$tirepressure_R*900","wheelSideBeamDamp":60},
+        {"wheelSideBeamSpringExpansion":601000,"wheelSideBeamDampExpansion":40},
+        {"wheelSideTransitionZone":0.1,"wheelSideBeamPrecompression":0.99},
+
+        {"wheelSideReinfBeamSpring":"$=$tirepressure_R*300","wheelSideReinfBeamDamp":80},
+        {"wheelSideReinfBeamSpringExpansion":201000,"wheelSideReinfBeamDampExpansion":40},
+        {"wheelSideReinfTransitionZone":0.09,"wheelSideReinfBeamPrecompression":0.99},
+
+        {"wheelReinfBeamSpring":4000,"wheelReinfBeamDamp":400},
+        {"wheelReinfBeamDampCutoffHz":250,"wheelReinfBeamPrecompression":0.99},
+
+        {"wheelTreadBeamSpring":61000,"wheelTreadBeamDamp":250},
+        {"wheelTreadBeamDampCutoffHz":500,"wheelTreadBeamPrecompression":0.99},
+
+        {"wheelTreadReinfBeamSpring":121000,"wheelTreadReinfBeamDamp":125},
+        {"wheelTreadReinfBeamDampCutoffHz":500,"wheelTreadReinfBeamPrecompression":0.99},
+
+        {"wheelPeripheryBeamSpring":41000,"wheelPeripheryBeamDamp":240},
+        {"wheelPeripheryBeamDampCutoffHz":500,"wheelPeripheryBeamPrecompression":0.99},
+
+        {"wheelPeripheryReinfBeamSpring":81000,"wheelPeripheryReinfBeamDamp":120},
+        {"wheelPeripheryReinfBeamDampCutoffHz":500,"wheelPeripheryReinfBeamPrecompression":0.99},
+
+        //general tire values
+        {"nodeWeight":0.3},
+        {"nodeMaterial":"|NM_RUBBER"},
+        {"pressurePSI":"$tirepressure_RR"},
+        {"dragCoef":15},
+
+        //groundmodel friction multipliers
+        {"frictionCoef":1.0},
+        {"slidingFrictionCoef":1.04},
+        {"stribeckExponent":1.5},
+        {"treadCoef":0.9},
+
+        //advanced friction values
+        {"noLoadCoef":1.39},
+        {"loadSensitivitySlope":0.00012},
+        {"fullLoadCoef":0.4},
+        {"softnessCoef":0.9},
+
+        //deform values
+        {"wheelSideBeamDeform":37000,"wheelSideBeamStrength":44000},
+        {"wheelTreadBeamDeform":29000,"wheelTreadBeamStrength":35000},
+        {"wheelPeripheryBeamDeform":85000,"wheelPeripheryBeamStrength":85000},
+    ],
+},
+}

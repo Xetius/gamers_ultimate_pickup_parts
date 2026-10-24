@@ -1,0 +1,823 @@
+{
+"G_md_series_ex_rollcage_lights": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Twin Round Lights",
+        "value":0,
+    },
+    "slotType" : "G_md_series_ex_rollcage_lights",
+    "slots2": [
+        ["name",                          "allowTypes",            "denyTypes", "default",  "description"],
+        ["md_series_roofrack_light_accessory", ["md_series_roofrack_light_accessory","md_series_roofrack_light_accessory_round"], [], "", "Lights Accessory"],
+        ["roofrack_light_round_R", ["offroadlight_round"], [],          "offroadlight_round", "Right Light",
+        {
+            "coreSlot":true,
+            "nodeMove2":{"x":-0.35,"y":-0.16,"z":2.36},
+            "variables":{
+                "$prefix":"er_r",
+                "$electric":"roofracklights",
+                "$lightMaterial":"roofracklights",
+                "$glassMaterial":"roofracklights_glass",
+                "$disableMain":  "$=$components.roofracklights.disableMain",
+                "$disableGrille":"$=$components.roofracklights.disableGrille",
+                "$disableMesh":  "$=$components.roofracklights.disableMesh",
+                "$disableCover": "$=$components.roofracklights.disableCover"
+            }
+        }],
+        ["roofrack_light_round_L", ["offroadlight_round"], [],          "offroadlight_round", "Left Light",
+        {
+            "coreSlot":true,
+            "nodeMove2":{"x":0.35,"y":-0.16,"z":2.36},
+            "variables":{
+                "$prefix":"er_l",
+                "$electric":"roofracklights",
+                "$lightMaterial":"roofracklights",
+                "$glassMaterial":"roofracklights_glass",
+                "$disableMain":  "$=$components.roofracklights.disableMain",
+                "$disableGrille":"$=$components.roofracklights.disableGrille",
+                "$disableMesh":  "$=$components.roofracklights.disableMesh",
+                "$disableCover": "$=$components.roofracklights.disableCover"
+            }
+        }],
+    ],
+    "components": {
+        "roofracklights":{
+            "disableMain":false,
+            "disableGrille":true,
+            "disableMesh":true,
+            "disableCover":true
+        },
+        "electrics": {
+            "customValues": [
+                ["electricsName", "electricsFunction","electricsDefault"],
+                ["roofracklights","electrics.fog * electrics.electricalLoadCoef",0],
+            ],
+            "smoothers": [
+                ["electricsName", "smootherType", "params"],
+                ["roofracklights","temporalNonLinear", [10,10]],
+            ],
+        },
+    },
+    "glowMap":{
+            "roofracklights":      {"simpleFunction":"roofracklights", "off":"generic_halogen",       "on":"generic_halogen_on_intense",       "materialEmissiveScaling":{"on_max":1}},
+            "roofracklights_glass":{"simpleFunction":"roofracklights", "off":"generic_halogen_glass", "on":"generic_halogen_glass_on_intense", "materialEmissiveScaling":{"on_max":1}},
+    },
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":237669.6,"beamDamp":122.2},
+          {"beamDeform":5775,"beamStrength":4984},
+          {"deformationTriggerRatio":0.05},
+
+          //left
+          {"deformGroup":"er_l"},
+          {"breakGroup":"er_l"},
+          ["er_l1", "rc5l"],
+          ["er_l1", "rc3l"],
+          ["er_l1", "rc5"],
+
+          ["er_l2", "rc5l"],
+          ["er_l2", "rc3l"],
+          ["er_l2", "rc5"],
+
+          ["er_l3", "rc5l"],
+          ["er_l3", "rc3l"],
+          ["er_l3", "rc5"],
+
+          ["er_l4", "rc5l"],
+          ["er_l4", "rc3l"],
+          ["er_l4", "rc5"],
+
+          ["er_l5", "rc5l"],
+          ["er_l5", "rc3l"],
+          ["er_l5", "rc5"],
+
+          //right
+          {"deformGroup":"er_r"},
+          {"breakGroup":"er_r"},
+          ["er_r1", "rc5r"],
+          ["er_r1", "rc3r"],
+          ["er_r1", "rc5"],
+
+          ["er_r2", "rc5r"],
+          ["er_r2", "rc3r"],
+          ["er_r2", "rc5"],
+
+          ["er_r3", "rc5r"],
+          ["er_r3", "rc3r"],
+          ["er_r3", "rc5"],
+
+          ["er_r4", "rc5r"],
+          ["er_r4", "rc3r"],
+          ["er_r4", "rc5"],
+
+          ["er_r5", "rc5r"],
+          ["er_r5", "rc3r"],
+          ["er_r5", "rc5"],
+          {"breakGroup":""},
+          {"deformGroup":"", "deformationTriggerRatio":""},
+    ],
+},
+"G_md_series_ex_rollcage_lights_round_quad": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Quad Round Lights",
+        "value":0,
+    },
+    "slotType" : "G_md_series_ex_rollcage_lights",
+    "slots2": [
+        ["name",                          "allowTypes",            "denyTypes", "default",  "description"],
+        ["md_series_roofrack_light_accessory", ["md_series_roofrack_light_accessory","md_series_roofrack_light_accessory_round"], [], "", "Lights Accessory"],
+        ["roofrack_light_round_R_inner", ["offroadlight_round"], [],          "offroadlight_round", "Inner Right Light",
+        {
+            "coreSlot":true,
+            "nodeMove2":{"x":-0.15,"y":-0.16,"z":2.36},
+            "variables":{
+                "$prefix":"er_r",
+                "$electric":"roofracklights",
+                "$lightMaterial":"roofracklights",
+                "$glassMaterial":"roofracklights_glass",
+                "$disableMain":  "$=$components.roofracklights.disableMain",
+                "$disableGrille":"$=$components.roofracklights.disableGrille",
+                "$disableMesh":  "$=$components.roofracklights.disableMesh",
+                "$disableCover": "$=$components.roofracklights.disableCover"
+            }
+        }],
+        ["roofrack_light_round_L_inner", ["offroadlight_round"], [],          "offroadlight_round", "Inner Left Light",
+        {
+            "coreSlot":true,
+            "nodeMove2":{"x":0.15,"y":-0.16,"z":2.36},
+            "variables":{
+                "$prefix":"er_l",
+                "$electric":"roofracklights",
+                "$lightMaterial":"roofracklights",
+                "$glassMaterial":"roofracklights_glass",
+                "$disableMain":  "$=$components.roofracklights.disableMain",
+                "$disableGrille":"$=$components.roofracklights.disableGrille",
+                "$disableMesh":  "$=$components.roofracklights.disableMesh",
+                "$disableCover": "$=$components.roofracklights.disableCover"
+            }
+        }],
+        ["roofrack_light_round_R_outer", ["offroadlight_round"], [],          "offroadlight_round", "Outer Right Light",
+        {
+            "coreSlot":true,
+            "nodeMove2":{"x":-0.45,"y":-0.16,"z":2.36},
+            "variables":{
+                "$prefix":"er_rr",
+                "$electric":"roofracklights",
+                "$lightMaterial":"roofracklights",
+                "$glassMaterial":"roofracklights_glass",
+                "$disableMain":  "$=$components.roofracklights.disableMain",
+                "$disableGrille":"$=$components.roofracklights.disableGrille",
+                "$disableMesh":  "$=$components.roofracklights.disableMesh",
+                "$disableCover": "$=$components.roofracklights.disableCover"
+            }
+        }],
+        ["roofrack_light_round_L_outer", ["offroadlight_round"], [],          "offroadlight_round", "Outer Left Light",
+        {
+            "coreSlot":true,
+            "nodeMove2":{"x":0.45,"y":-0.16,"z":2.36},
+            "variables":{
+                "$prefix":"er_ll",
+                "$electric":"roofracklights",
+                "$lightMaterial":"roofracklights",
+                "$glassMaterial":"roofracklights_glass",
+                "$disableMain":  "$=$components.roofracklights.disableMain",
+                "$disableGrille":"$=$components.roofracklights.disableGrille",
+                "$disableMesh":  "$=$components.roofracklights.disableMesh",
+                "$disableCover": "$=$components.roofracklights.disableCover"
+            }
+        }],
+    ],
+    "components": {
+        "roofracklights":{
+            "disableMain":false,
+            "disableGrille":true,
+            "disableMesh":true,
+            "disableCover":true
+        },
+        "electrics": {
+            "customValues": [
+                ["electricsName", "electricsFunction","electricsDefault"],
+                ["roofracklights","electrics.fog * electrics.electricalLoadCoef",0],
+            ],
+            "smoothers": [
+                ["electricsName", "smootherType", "params"],
+                ["roofracklights","temporalNonLinear", [10,10]],
+            ],
+        },
+    },
+    "glowMap":{
+            "roofracklights":      {"simpleFunction":"roofracklights", "off":"generic_halogen",       "on":"generic_halogen_on_intense",       "materialEmissiveScaling":{"on_max":1}},
+            "roofracklights_glass":{"simpleFunction":"roofracklights", "off":"generic_halogen_glass", "on":"generic_halogen_glass_on_intense", "materialEmissiveScaling":{"on_max":1}},
+    },
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":237669.6,"beamDamp":122.2},
+          {"beamDeform":5775,"beamStrength":4984},
+          {"deformationTriggerRatio":0.05},
+
+          //left
+          {"deformGroup":"er_l"},
+          {"breakGroup":"er_l"},
+          ["er_l1", "rc5l"],
+          ["er_l1", "rc3l"],
+          ["er_l1", "rc5"],
+
+          ["er_l2", "rc5l"],
+          ["er_l2", "rc3l"],
+          ["er_l2", "rc5"],
+
+          ["er_l3", "rc5l"],
+          ["er_l3", "rc3l"],
+          ["er_l3", "rc5"],
+
+          ["er_l4", "rc5l"],
+          ["er_l4", "rc3l"],
+          ["er_l4", "rc5"],
+
+          ["er_l5", "rc5l"],
+          ["er_l5", "rc3l"],
+          ["er_l5", "rc5"],
+
+          {"deformGroup":"er_ll"},
+          {"breakGroup":"er_ll"},
+          ["er_ll1", "rc5l"],
+          ["er_ll1", "rc3l"],
+          ["er_ll1", "rc5"],
+
+          ["er_ll2", "rc5l"],
+          ["er_ll2", "rc3l"],
+          ["er_ll2", "rc5"],
+
+          ["er_ll3", "rc5l"],
+          ["er_ll3", "rc3l"],
+          ["er_ll3", "rc5"],
+
+          ["er_ll4", "rc5l"],
+          ["er_ll4", "rc3l"],
+          ["er_ll4", "rc5"],
+
+          ["er_ll5", "rc5l"],
+          ["er_ll5", "rc3l"],
+          ["er_ll5", "rc5"],
+
+          //right
+          {"deformGroup":"er_r"},
+          {"breakGroup":"er_r"},
+          ["er_r1", "rc5r"],
+          ["er_r1", "rc3r"],
+          ["er_r1", "rc5"],
+
+          ["er_r2", "rc5r"],
+          ["er_r2", "rc3r"],
+          ["er_r2", "rc5"],
+
+          ["er_r3", "rc5r"],
+          ["er_r3", "rc3r"],
+          ["er_r3", "rc5"],
+
+          ["er_r4", "rc5r"],
+          ["er_r4", "rc3r"],
+          ["er_r4", "rc5"],
+
+          ["er_r5", "rc5r"],
+          ["er_r5", "rc3r"],
+          ["er_r5", "rc5"],
+
+          {"deformGroup":"er_rr"},
+          {"breakGroup":"er_rr"},
+          ["er_rr1", "rc5r"],
+          ["er_rr1", "rc3r"],
+          ["er_rr1", "rc5"],
+
+          ["er_rr2", "rc5r"],
+          ["er_rr2", "rc3r"],
+          ["er_rr2", "rc5"],
+
+          ["er_rr3", "rc5r"],
+          ["er_rr3", "rc3r"],
+          ["er_rr3", "rc5"],
+
+          ["er_rr4", "rc5r"],
+          ["er_rr4", "rc3r"],
+          ["er_rr4", "rc5"],
+
+          ["er_rr5", "rc5r"],
+          ["er_rr5", "rc3r"],
+          ["er_rr5", "rc5"],
+
+          {"breakGroup":""},
+          {"deformGroup":"", "deformationTriggerRatio":""},
+    ],
+},
+"G_md_series_ex_rollcage_lights_square": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Twin Rectangular Lights",
+        "value":0,
+    },
+    "slotType" : "G_md_series_ex_rollcage_lights",
+    "slots2": [
+        ["name",                          "allowTypes",            "denyTypes", "default",  "description"],
+        ["md_series_roofrack_light_accessory", ["md_series_roofrack_light_accessory","md_series_roofrack_light_accessory_square"], [], "", "Lights Accessory"],
+        ["roofrack_light_square_R", ["offroadlight_square"], [],          "offroadlight_square", "Right Light",
+        {
+            "coreSlot":true,
+            "nodeMove2":{"x":-0.35,"y":-0.16,"z":2.36},
+            "variables":{
+                "$prefix":"er_r",
+                "$electric":"roofracklights",
+                "$lightMaterial":"roofracklights",
+                "$glassMaterial":"roofracklights_glass",
+                "$disableMain":  "$=$components.roofracklights.disableMain",
+                "$disableGrille":"$=$components.roofracklights.disableGrille",
+                "$disableMesh":  "$=$components.roofracklights.disableMesh",
+                "$disableCover": "$=$components.roofracklights.disableCover"
+            }
+        }],
+        ["roofrack_light_square_L", ["offroadlight_square"], [],          "offroadlight_square", "Left Light",
+        {
+            "coreSlot":true,
+            "nodeMove2":{"x":0.35,"y":-0.16,"z":2.36},
+            "variables":{
+                "$prefix":"er_l",
+                "$electric":"roofracklights",
+                "$lightMaterial":"roofracklights",
+                "$glassMaterial":"roofracklights_glass",
+                "$disableMain":  "$=$components.roofracklights.disableMain",
+                "$disableGrille":"$=$components.roofracklights.disableGrille",
+                "$disableMesh":  "$=$components.roofracklights.disableMesh",
+                "$disableCover": "$=$components.roofracklights.disableCover"
+            }
+        }],
+    ],
+    "components": {
+        "roofracklights":{
+            "disableMain":false,
+            "disableGrille":true,
+            "disableMesh":true,
+            "disableCover":true
+        },
+        "electrics": {
+            "customValues": [
+                ["electricsName", "electricsFunction","electricsDefault"],
+                ["roofracklights","electrics.fog * electrics.electricalLoadCoef",0],
+            ],
+            "smoothers": [
+                ["electricsName", "smootherType", "params"],
+                ["roofracklights","temporalNonLinear", [10,10]],
+            ],
+        },
+    },
+    "glowMap":{
+            "roofracklights":      {"simpleFunction":"roofracklights", "off":"generic_halogen",       "on":"generic_halogen_on_intense",       "materialEmissiveScaling":{"on_max":1}},
+            "roofracklights_glass":{"simpleFunction":"roofracklights", "off":"generic_halogen_glass", "on":"generic_halogen_glass_on_intense", "materialEmissiveScaling":{"on_max":1}},
+    },
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":237669.6,"beamDamp":122.2},
+          {"beamDeform":5775,"beamStrength":4984},
+          {"deformationTriggerRatio":0.05},
+
+          //left
+          {"deformGroup":"er_l"},
+          {"breakGroup":"er_l"},
+          ["er_l1", "rc5l"],
+          ["er_l1", "rc3l"],
+          ["er_l1", "rc5"],
+
+          ["er_l2", "rc5l"],
+          ["er_l2", "rc3l"],
+          ["er_l2", "rc5"],
+
+          ["er_l3", "rc5l"],
+          ["er_l3", "rc3l"],
+          ["er_l3", "rc5"],
+
+          ["er_l4", "rc5l"],
+          ["er_l4", "rc3l"],
+          ["er_l4", "rc5"],
+
+          ["er_l5", "rc5l"],
+          ["er_l5", "rc3l"],
+          ["er_l5", "rc5"],
+
+          //right
+          {"deformGroup":"er_r"},
+          {"breakGroup":"er_r"},
+          ["er_r1", "rc5r"],
+          ["er_r1", "rc3r"],
+          ["er_r1", "rc5"],
+
+          ["er_r2", "rc5r"],
+          ["er_r2", "rc3r"],
+          ["er_r2", "rc5"],
+
+          ["er_r3", "rc5r"],
+          ["er_r3", "rc3r"],
+          ["er_r3", "rc5"],
+
+          ["er_r4", "rc5r"],
+          ["er_r4", "rc3r"],
+          ["er_r4", "rc5"],
+
+          ["er_r5", "rc5r"],
+          ["er_r5", "rc3r"],
+          ["er_r5", "rc5"],
+          {"breakGroup":""},
+          {"deformGroup":"", "deformationTriggerRatio":""},
+    ],
+},
+"G_md_series_ex_rollcage_lights_square_quad": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Quad Rectangular Lights",
+        "value":0,
+    },
+    "slotType" : "G_md_series_ex_rollcage_lights",
+    "slots2": [
+        ["name",                          "allowTypes",            "denyTypes", "default",  "description"],
+        ["md_series_roofrack_light_accessory", ["md_series_roofrack_light_accessory","md_series_roofrack_light_accessory_square"], [], "", "Lights Accessory"],
+        ["roofrack_light_square_R_inner", ["offroadlight_square"], [],          "offroadlight_square", "Inner Right Light",
+        {
+            "coreSlot":true,
+            "nodeMove2":{"x":-0.15,"y":-0.16,"z":2.36},
+            "variables":{
+                "$prefix":"er_r",
+                "$electric":"roofracklights",
+                "$lightMaterial":"roofracklights",
+                "$glassMaterial":"roofracklights_glass",
+                "$disableMain":  "$=$components.roofracklights.disableMain",
+                "$disableGrille":"$=$components.roofracklights.disableGrille",
+                "$disableMesh":  "$=$components.roofracklights.disableMesh",
+                "$disableCover": "$=$components.roofracklights.disableCover"
+            }
+        }],
+        ["roofrack_light_square_L_inner", ["offroadlight_square"], [],          "offroadlight_square", "Inner Left Light",
+        {
+            "coreSlot":true,
+            "nodeMove2":{"x":0.15,"y":-0.16,"z":2.36},
+            "variables":{
+                "$prefix":"er_l",
+                "$electric":"roofracklights",
+                "$lightMaterial":"roofracklights",
+                "$glassMaterial":"roofracklights_glass",
+                "$disableMain":  "$=$components.roofracklights.disableMain",
+                "$disableGrille":"$=$components.roofracklights.disableGrille",
+                "$disableMesh":  "$=$components.roofracklights.disableMesh",
+                "$disableCover": "$=$components.roofracklights.disableCover"
+            }
+        }],
+        ["roofrack_light_square_R_outer", ["offroadlight_square"], [],          "offroadlight_square", "Outer Right Light",
+        {
+            "coreSlot":true,
+            "nodeMove2":{"x":-0.45,"y":-0.16,"z":2.36},
+            "variables":{
+                "$prefix":"er_rr",
+                "$electric":"roofracklights",
+                "$lightMaterial":"roofracklights",
+                "$glassMaterial":"roofracklights_glass",
+                "$disableMain":  "$=$components.roofracklights.disableMain",
+                "$disableGrille":"$=$components.roofracklights.disableGrille",
+                "$disableMesh":  "$=$components.roofracklights.disableMesh",
+                "$disableCover": "$=$components.roofracklights.disableCover"
+            }
+        }],
+        ["roofrack_light_square_L_outer", ["offroadlight_square"], [],          "offroadlight_square", "Outer Left Light",
+        {
+            "coreSlot":true,
+            "nodeMove2":{"x":0.45,"y":-0.16,"z":2.36},
+            "variables":{
+                "$prefix":"er_ll",
+                "$electric":"roofracklights",
+                "$lightMaterial":"roofracklights",
+                "$glassMaterial":"roofracklights_glass",
+                "$disableMain":  "$=$components.roofracklights.disableMain",
+                "$disableGrille":"$=$components.roofracklights.disableGrille",
+                "$disableMesh":  "$=$components.roofracklights.disableMesh",
+                "$disableCover": "$=$components.roofracklights.disableCover"
+            }
+        }],
+    ],
+    "components": {
+        "roofracklights":{
+            "disableMain":false,
+            "disableGrille":true,
+            "disableMesh":true,
+            "disableCover":true
+        },
+        "electrics": {
+            "customValues": [
+                ["electricsName", "electricsFunction","electricsDefault"],
+                ["roofracklights","electrics.fog * electrics.electricalLoadCoef",0],
+            ],
+            "smoothers": [
+                ["electricsName", "smootherType", "params"],
+                ["roofracklights","temporalNonLinear", [10,10]],
+            ],
+        },
+    },
+    "glowMap":{
+            "roofracklights":      {"simpleFunction":"roofracklights", "off":"generic_halogen",       "on":"generic_halogen_on_intense",       "materialEmissiveScaling":{"on_max":1}},
+            "roofracklights_glass":{"simpleFunction":"roofracklights", "off":"generic_halogen_glass", "on":"generic_halogen_glass_on_intense", "materialEmissiveScaling":{"on_max":1}},
+    },
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":237669.6,"beamDamp":122.2},
+          {"beamDeform":5775,"beamStrength":4984},
+          {"deformationTriggerRatio":0.05},
+
+          //left
+          {"deformGroup":"er_l"},
+          {"breakGroup":"er_l"},
+          ["er_l1", "rc5l"],
+          ["er_l1", "rc3l"],
+          ["er_l1", "rc5"],
+
+          ["er_l2", "rc5l"],
+          ["er_l2", "rc3l"],
+          ["er_l2", "rc5"],
+
+          ["er_l3", "rc5l"],
+          ["er_l3", "rc3l"],
+          ["er_l3", "rc5"],
+
+          ["er_l4", "rc5l"],
+          ["er_l4", "rc3l"],
+          ["er_l4", "rc5"],
+
+          ["er_l5", "rc5l"],
+          ["er_l5", "rc3l"],
+          ["er_l5", "rc5"],
+
+          {"deformGroup":"er_ll"},
+          {"breakGroup":"er_ll"},
+          ["er_ll1", "rc5l"],
+          ["er_ll1", "rc3l"],
+          ["er_ll1", "rc5"],
+
+          ["er_ll2", "rc5l"],
+          ["er_ll2", "rc3l"],
+          ["er_ll2", "rc5"],
+
+          ["er_ll3", "rc5l"],
+          ["er_ll3", "rc3l"],
+          ["er_ll3", "rc5"],
+
+          ["er_ll4", "rc5l"],
+          ["er_ll4", "rc3l"],
+          ["er_ll4", "rc5"],
+
+          ["er_ll5", "rc5l"],
+          ["er_ll5", "rc3l"],
+          ["er_ll5", "rc5"],
+
+          //right
+          {"deformGroup":"er_r"},
+          {"breakGroup":"er_r"},
+          ["er_r1", "rc5r"],
+          ["er_r1", "rc3r"],
+          ["er_r1", "rc5"],
+
+          ["er_r2", "rc5r"],
+          ["er_r2", "rc3r"],
+          ["er_r2", "rc5"],
+
+          ["er_r3", "rc5r"],
+          ["er_r3", "rc3r"],
+          ["er_r3", "rc5"],
+
+          ["er_r4", "rc5r"],
+          ["er_r4", "rc3r"],
+          ["er_r4", "rc5"],
+
+          ["er_r5", "rc5r"],
+          ["er_r5", "rc3r"],
+          ["er_r5", "rc5"],
+
+          {"deformGroup":"er_rr"},
+          {"breakGroup":"er_rr"},
+          ["er_rr1", "rc5r"],
+          ["er_rr1", "rc3r"],
+          ["er_rr1", "rc5"],
+
+          ["er_rr2", "rc5r"],
+          ["er_rr2", "rc3r"],
+          ["er_rr2", "rc5"],
+
+          ["er_rr3", "rc5r"],
+          ["er_rr3", "rc3r"],
+          ["er_rr3", "rc5"],
+
+          ["er_rr4", "rc5r"],
+          ["er_rr4", "rc3r"],
+          ["er_rr4", "rc5"],
+
+          ["er_rr5", "rc5r"],
+          ["er_rr5", "rc3r"],
+          ["er_rr5", "rc5"],
+
+          {"breakGroup":""},
+          {"deformGroup":"", "deformationTriggerRatio":""},
+    ],
+},
+"md_series_roofrack_light_mixed_quad": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Quad Mixed Lights",
+        "value":0,
+    },
+    "slotType" : "G_md_series_ex_rollcage_lights",
+    "slots2": [
+        ["name",                          "allowTypes",            "denyTypes", "default",  "description"],
+        ["md_series_roofrack_light_accessory", ["md_series_roofrack_light_accessory","md_series_roofrack_light_accessory_mixed"], [], "", "Lights Accessory"],
+        ["roofrack_light_mixed_R_inner", ["offroadlight_square"], [],          "offroadlight_square", "Inner Right Light",
+        {
+            "coreSlot":true,
+            "nodeMove2":{"x":-0.15,"y":-0.16,"z":2.36},
+            "variables":{
+                "$prefix":"er_r",
+                "$electric":"roofracklights",
+                "$lightMaterial":"roofracklights",
+                "$glassMaterial":"roofracklights_glass",
+                "$disableMain":  "$=$components.roofracklights.disableMain",
+                "$disableGrille":"$=$components.roofracklights.disableGrille",
+                "$disableMesh":  "$=$components.roofracklights.disableMesh",
+                "$disableCover": "$=$components.roofracklights.disableCover"
+            }
+        }],
+        ["roofrack_light_mixed_L_inner", ["offroadlight_square"], [],          "offroadlight_square", "Inner Left Light",
+        {
+            "coreSlot":true,
+            "nodeMove2":{"x":0.15,"y":-0.16,"z":2.36},
+            "variables":{
+                "$prefix":"er_l",
+                "$electric":"roofracklights",
+                "$lightMaterial":"roofracklights",
+                "$glassMaterial":"roofracklights_glass",
+                "$disableMain":  "$=$components.roofracklights.disableMain",
+                "$disableGrille":"$=$components.roofracklights.disableGrille",
+                "$disableMesh":  "$=$components.roofracklights.disableMesh",
+                "$disableCover": "$=$components.roofracklights.disableCover"
+            }
+        }],
+        ["roofrack_light_mixed_R_outer", ["offroadlight_round"], [],          "offroadlight_round", "Outer Right Light",
+        {
+            "coreSlot":true,
+            "nodeMove2":{"x":-0.45,"y":-0.16,"z":2.36},
+            "variables":{
+                "$prefix":"er_rr",
+                "$electric":"roofracklights",
+                "$lightMaterial":"roofracklights",
+                "$glassMaterial":"roofracklights_glass",
+                "$disableMain":  "$=$components.roofracklights.disableMain",
+                "$disableGrille":"$=$components.roofracklights.disableGrille",
+                "$disableMesh":  "$=$components.roofracklights.disableMesh",
+                "$disableCover": "$=$components.roofracklights.disableCover"
+            }
+        }],
+        ["roofrack_light_mixed_L_outer", ["offroadlight_round"], [],          "offroadlight_round", "Outer Left Light",
+        {
+            "coreSlot":true,
+            "nodeMove2":{"x":0.45,"y":-0.16,"z":2.36},
+            "variables":{
+                "$prefix":"er_ll",
+                "$electric":"roofracklights",
+                "$lightMaterial":"roofracklights",
+                "$glassMaterial":"roofracklights_glass",
+                "$disableMain":  "$=$components.roofracklights.disableMain",
+                "$disableGrille":"$=$components.roofracklights.disableGrille",
+                "$disableMesh":  "$=$components.roofracklights.disableMesh",
+                "$disableCover": "$=$components.roofracklights.disableCover"
+            }
+        }],
+    ],
+    "components": {
+        "roofracklights":{
+            "disableMain":false,
+            "disableGrille":true,
+            "disableMesh":true,
+            "disableCover":true
+        },
+        "electrics": {
+            "customValues": [
+                ["electricsName", "electricsFunction","electricsDefault"],
+                ["roofracklights","electrics.fog * electrics.electricalLoadCoef",0],
+            ],
+            "smoothers": [
+                ["electricsName", "smootherType", "params"],
+                ["roofracklights","temporalNonLinear", [10,10]],
+            ],
+        },
+    },
+    "glowMap":{
+            "roofracklights":      {"simpleFunction":"roofracklights", "off":"generic_halogen",       "on":"generic_halogen_on_intense",       "materialEmissiveScaling":{"on_max":1}},
+            "roofracklights_glass":{"simpleFunction":"roofracklights", "off":"generic_halogen_glass", "on":"generic_halogen_glass_on_intense", "materialEmissiveScaling":{"on_max":1}},
+    },
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":237669.6,"beamDamp":122.2},
+          {"beamDeform":5775,"beamStrength":4984},
+          {"deformationTriggerRatio":0.05},
+
+          //left
+          {"deformGroup":"er_l"},
+          {"breakGroup":"er_l"},
+          ["er_l1", "rc5l"],
+          ["er_l1", "rc3l"],
+          ["er_l1", "rc5"],
+
+          ["er_l2", "rc5l"],
+          ["er_l2", "rc3l"],
+          ["er_l2", "rc5"],
+
+          ["er_l3", "rc5l"],
+          ["er_l3", "rc3l"],
+          ["er_l3", "rc5"],
+
+          ["er_l4", "rc5l"],
+          ["er_l4", "rc3l"],
+          ["er_l4", "rc5"],
+
+          ["er_l5", "rc5l"],
+          ["er_l5", "rc3l"],
+          ["er_l5", "rc5"],
+
+          {"deformGroup":"er_ll"},
+          {"breakGroup":"er_ll"},
+          ["er_ll1", "rc5l"],
+          ["er_ll1", "rc3l"],
+          ["er_ll1", "rc5"],
+
+          ["er_ll2", "rc5l"],
+          ["er_ll2", "rc3l"],
+          ["er_ll2", "rc5"],
+
+          ["er_ll3", "rc5l"],
+          ["er_ll3", "rc3l"],
+          ["er_ll3", "rc5"],
+
+          ["er_ll4", "rc5l"],
+          ["er_ll4", "rc3l"],
+          ["er_ll4", "rc5"],
+
+          ["er_ll5", "rc5l"],
+          ["er_ll5", "rc3l"],
+          ["er_ll5", "rc5"],
+
+          //right
+          {"deformGroup":"er_r"},
+          {"breakGroup":"er_r"},
+          ["er_r1", "rc5r"],
+          ["er_r1", "rc3r"],
+          ["er_r1", "rc5"],
+
+          ["er_r2", "rc5r"],
+          ["er_r2", "rc3r"],
+          ["er_r2", "rc5"],
+
+          ["er_r3", "rc5r"],
+          ["er_r3", "rc3r"],
+          ["er_r3", "rc5"],
+
+          ["er_r4", "rc5r"],
+          ["er_r4", "rc3r"],
+          ["er_r4", "rc5"],
+
+          ["er_r5", "rc5r"],
+          ["er_r5", "rc3r"],
+          ["er_r5", "rc5"],
+
+          {"deformGroup":"er_rr"},
+          {"breakGroup":"er_rr"},
+          ["er_rr1", "rc5r"],
+          ["er_rr1", "rc3r"],
+          ["er_rr1", "rc5"],
+
+          ["er_rr2", "rc5r"],
+          ["er_rr2", "rc3r"],
+          ["er_rr2", "rc5"],
+
+          ["er_rr3", "rc5r"],
+          ["er_rr3", "rc3r"],
+          ["er_rr3", "rc5"],
+
+          ["er_rr4", "rc5r"],
+          ["er_rr4", "rc3r"],
+          ["er_rr4", "rc5"],
+
+          ["er_rr5", "rc5r"],
+          ["er_rr5", "rc3r"],
+          ["er_rr5", "rc5"],
+
+          {"breakGroup":""},
+          {"deformGroup":"", "deformationTriggerRatio":""},
+    ],
+},
+
+}

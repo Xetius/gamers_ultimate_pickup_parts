@@ -1,0 +1,206 @@
+{
+"G_pickup_backlight_6door": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Backlight",
+        "value":150,
+    },
+    "slotType" : "G_pickup_backlight_6door",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //glass
+
+         {"deformGroup":"backlight_break", "deformMaterialBase":"pickup_glass", "deformMaterialDamaged":"pickup_glass_dmg"},
+         ["pickup_backlight", ["pickup_body"], [], {"pos":{"x":0,"y":1.8,"z":0,"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound9", "deformVolume":0.8}}],
+         {"deformGroup":"backlight_break", "deformMaterialBase":"pickup_glass_int", "deformMaterialDamaged":"pickup_glass_dmg"},
+         ["pickup_backlight_int", ["pickup_body"], [], {"pos":{"x":0,"y":1.8,"z":0}}],
+         {"deformGroup":""},
+    ],
+    "sounds": {
+        "$+cabinFilterCoef": 0.12
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //backlight
+
+         {"group":"pickup_body"},
+
+         //-ROOF--
+         {"nodeWeight":3.478},
+         ["rf4r", -0.67, 2.1457, 1.73],
+         ["rf4", 0.0, 2.1457, 1.76],
+         ["rf4l", 0.67, 2.1457, 1.73],
+
+         //--PILLARS--
+         {"nodeWeight":2.82},
+         ["cp3r", -0.82, 2.19570, 1.48],
+         ["cp3l", 0.82, 2.19570, 1.48],
+
+         //--CAB--
+         {"nodeWeight":3.008},
+         ["cb8rr",  -0.91, 2.1857, 1.20],
+         ["cb8r",   -0.35, 2.1857, 1.20],
+         ["cb8l",    0.35, 2.1857, 1.20],
+         ["cb8ll",   0.91, 2.1857, 1.20],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"disableMeshBreaking":true,"disableTriangleBreaking":true},
+          //backlight
+          {"beamSpring":1895830,"beamDamp":122.2},
+          {"deformGroup":"backlight_break", "deformationTriggerRatio":0.03},
+          {"beamDeform":14700,"beamStrength":12460},
+          {"breakGroup":"backlight"},
+          {"deformLimitExpansion":""},
+          ["rf4", "cb8l"],
+          ["rf4", "cb8r"],
+          ["cp3r", "cp3l"],
+          ["cb8l", "rf4r"],
+          ["cb8r", "rf4l"],
+          ["cb8ll", "rf4"],
+          ["cb8rr", "rf4"],
+          ["cp3l", "rf4r"],
+          ["cp3r", "rf4l"],
+          ["cp3l", "cb8rr"],
+          ["cp3r", "cb8ll"],
+          ["rf4l", "cb8rr"],
+          ["cb8ll", "rf4r"],
+          {"breakGroup":""},
+          {"disableMeshBreaking":false,"disableTriangleBreaking":false},
+          {"deformGroup":""},
+          {"deformLimitExpansion":1.2},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //rear end
+            {"dragCoef":15},
+            {"group":"pickup_rear"},
+            {"breakGroup":"backlight"},
+            ["rfc4l", "rf4l", "cp3l"],
+            ["cp3l", "cb8ll", "cb8l"],
+            ["cb8l", "rfc4l", "cp3l"],
+            ["rfc4l", "cb8l", "rf4"],
+            ["rf4", "cb8r", "rfc4r"],
+            ["rf4", "cb8l", "cb8r"],
+            ["cb8r", "rf4r", "rfc4r"],
+            ["cb8r", "cb8rr", "cp3r"],
+            ["cp3r", "rf4r", "cb8r"],
+            {"breakGroup":""},
+    ],
+},
+"G_pickup_doorglass_RR_6door": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Right Door Glass",
+        "value":50,
+    },
+    "slotType" : "G_pickup_doorglass_RR_6door",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         {"deformGroup":"G_doorglass_RR_6door_break", "deformMaterialBase":"pickup_glass", "deformMaterialDamaged":"pickup_glass_dmg"},
+         ["G_pickup_doorglass_RR_6door", ["G_pickup_door_RR_6door"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound5", "deformVolume":0.7}],
+         {"deformGroup":"G_doorglass_RR_6door_break", "deformMaterialBase":"pickup_glass_int", "deformMaterialDamaged":"pickup_glass_dmg"},
+         ["G_pickup_doorglass_RR_6door_int", ["G_pickup_door_RR_6door"]],
+         {"deformGroup":""},
+    ],
+    "sounds": {
+        "$+cabinFilterCoef": 0.04
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         //--DOOR--
+         {"collision":true},
+         {"selfCollision":true},
+         {"group":"G_pickup_door_RR_6door"},
+         {"nodeWeight":1.88},
+         ["d24ar",-0.85, 2.10, 1.47],
+         ["d25ar",-0.74, 2.09, 1.71],
+         ["d26ar",-0.74, 1.67, 1.71],
+         ["d27ar",-0.74, 1.22, 1.71],
+         ["d28ar",-0.85, 1.23, 1.47],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamPrecompression":1, "beamLongBound":1.0, "beamShortBound":1.0},
+
+          //brittle glass beams
+          {"beamSpring":2093230,"beamDamp":244.4},
+          {"beamDeform":9800,"beamStrength":9100},
+          {"disableMeshBreaking":true,"disableTriangleBreaking":true},
+          {"deformGroup":"G_doorglass_RR_6door_break", "deformationTriggerRatio":0.02},
+          {"breakGroup":"G_doorglass_RR_6door"},
+          {"deformLimitExpansion":""},
+          ["d16ar", "d26ar"],
+          ["d24ar", "d28ar"],
+          ["d27ar", "d17ar"],
+          ["d25ar", "d15ar"],
+          {"breakGroup":""},
+          {"deformGroup":""},
+          {"disableMeshBreaking":false,"disableTriangleBreaking":false},
+          {"deformLimitExpansion":1.2},
+    ],
+},
+"G_pickup_doorglass_RL_6door": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Left Door Glass",
+        "value":50,
+    },
+    "slotType" : "G_pickup_doorglass_RL_6door",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         {"deformGroup":"G_doorglass_RL_6door_break", "deformMaterialBase":"pickup_glass", "deformMaterialDamaged":"pickup_glass_dmg"},
+         ["G_pickup_doorglass_RL_6door", ["G_pickup_door_RL_6door"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound5", "deformVolume":0.7}],
+         {"deformGroup":"G_doorglass_RL_6door_break", "deformMaterialBase":"pickup_glass_int", "deformMaterialDamaged":"pickup_glass_dmg"},
+         ["G_pickup_doorglass_RL_6door_int", ["G_pickup_door_RL_6door"]],
+         {"deformGroup":""},
+    ],
+    "sounds": {
+        "$+cabinFilterCoef": 0.04
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         //--DOOR--
+         {"collision":true},
+         {"selfCollision":true},
+         {"group":"G_pickup_door_RL_6door"},
+         {"nodeWeight":1.88},
+         ["d24al", 0.85, 2.10, 1.47],
+         ["d25al", 0.74, 2.09, 1.71],
+         ["d26al", 0.74, 1.67, 1.71],
+         ["d27al", 0.74, 1.22, 1.71],
+         ["d28al", 0.85, 1.23, 1.47],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamPrecompression":1, "beamLongBound":1.0, "beamShortBound":1.0},
+          //brittle glass beams
+          {"beamSpring":2093230,"beamDamp":244.4},
+          {"beamDeform":9800,"beamStrength":9100},
+          {"disableMeshBreaking":true,"disableTriangleBreaking":true},
+          {"deformGroup":"G_doorglass_RL_6door_break", "deformationTriggerRatio":0.02},
+          {"breakGroup":"G_doorglass_RL_6door"},
+          {"deformLimitExpansion":""},
+          ["d16al", "d26al"],
+          ["d24al", "d28al"],
+          ["d27al", "d17al"],
+          ["d25al", "d15al"],
+          {"breakGroup":""},
+          {"deformGroup":""},
+          {"disableMeshBreaking":false,"disableTriangleBreaking":false},
+          {"deformLimitExpansion":1.2},
+    ],
+},
+}

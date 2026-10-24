@@ -1,0 +1,379 @@
+{
+"G_pickup_goliath_axle_RR_6x6_trailer_4link": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Trailer Goliath 3 Link Live Axle Rear Rear Suspension",
+        "value":7800,
+    },
+    "slotType" : "G_pickup_suspension_RR_6x6",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_pickup_goliath_hub_RR_6x6","G_pickup_goliath_hub_RR_6x6_8","Rear Rear Wheel Hubs", {"nodeOffset":{"x":0, "y":0.005, "z":0.025}}],
+        ["G_pickup_goliath_coilover_RR_6x6","G_pickup_goliath_coilover_RR_6x6_offroad","Rear Rear Coilovers"],
+        ["G_pickup_goliath_swaybar_RR_6x6","G_pickup_goliath_swaybar_RR_6x6_offroad","Rear Rear Sway Bar"],
+        ["G_pickup_goliath_links_RR_6x6_4link","G_pickup_goliath_links_RR_6x6_4link_offroad","Rear Rear Links", {"coreSlot":true}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$trackoffset_RR", "range", "+m", "Wheels", 0.0, -0.025, 0.1, "Wheel Offset", "Spacing of the wheel from the hub", {"stepDis":0.001,"subCategory":"Rear Rear"}],
+        ["$trackbar_RR", "range", "m", "Wheel Alignment", 0.0, -0.05, 0.15, "Track Bar Adjust", "Adjust the axle lateral position", {"stepDis":0.001,"subCategory":"Rear Rear"}],
+        ["$axlelocation_RR", "range", "m", "Wheel Alignment", 0.0, -0.0, 0.18, "Link Length Adjust", "Adjust the axle forward/rearward position", {"stepDis":0.001,"subCategory":"Rear Rear"}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //rear axle
+         ["G_pickup_goliath_axle_R_trailer", ["pickup_axle_RR", "pickup_rearrearshockbottom"],[],{"pos":{"x":0.0,"y":1.05,"z":0}}],
+         ["G_pickup_goliath_axlemounts_R_4link_RS", ["pickup_axle_RR", "pickup_rearrearshockbottom"],[],{"pos":{"x":0.0,"y":1.05,"z":0}}],
+
+         //["pickup_shocktop_R_4link", ["pickup_frame", "pickup_rearrearshocktop"]],
+         ["G_pickup_goliath_trackbarmount_R_4link", ["pickup_frame"],[],{"pos":{"x":0.0,"y":1.05,"z":0}}],
+
+         //["pickup_lowermounts_R_4link_short", ["pickup_frame_short"]],
+         ["G_pickup_goliath_uppermounts_R_4link_short", ["pickup_frame_short"],[],{"pos":{"x":0.0,"y":1.05,"z":0}}],
+
+         //["pickup_lowermounts_R_4link", ["pickup_frame_standard", "pickup_frame_ext", "pickup_frame_crew"]],
+         ["G_pickup_goliath_uppermounts_R_4link", ["pickup_frame_standard", "pickup_frame_ext", "pickup_frame_crew"],[],{"pos":{"x":0.0,"y":1.05,"z":0}}],
+
+         //["pickup_lowermounts_R_4link_longbed", ["pickup_frame_longbed", "pickup_frame_extlongbed", "pickup_frame_crewlongbed"]],
+         ["G_pickup_goliath_uppermounts_R_4link_longbed", ["pickup_frame_longbed", "pickup_frame_extlongbed", "pickup_frame_crewlongbed"],[],{"pos":{"x":0.0,"y":1.05,"z":0}}],
+
+         ["G_pickup_goliath_uppermounts_R_4link", ["pickup_frame_upfit"],[],{"pos":{"x":0.0,"y":1.05,"z":0}}],
+         //["pickup_lowermounts_R_4link_upfit", ["pickup_frame_upfit"]],
+
+         //["pickup_lowerlink_R_4link", ["pickup_lowerlinks_RR"]],
+         ["G_pickup_goliath_upperlink_R_4link", ["pickup_trackbar_RR", "pickup_upperlink_RR"],[],{"pos":{"x":0.0,"y":1.05,"z":0}}],
+         ["G_pickup_goliath_trackbar_R_4link", ["pickup_trackbar_RR"],[],{"pos":{"x":0.0,"y":1.05,"z":0}}],
+
+         ["G_pickup_framebar_6x6", ["pickup_frame"],[],{"pos":{"x":0, "y":0.19, "z":0}}],
+    ],
+    "torsionbars": [
+        ["id1:", "id2:", "id3:", "id4:"],
+        {"spring":250000, "damp":0, "deform":2500000, "strength":10000000},
+        //rigidify upper link
+        ["axg3", "axg1", "axg4r", "axgsr1"],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+
+         //DrowsySam was here
+
+         //--REAR LIVE AXLE SUSPENSION--
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":31.4},
+         {"collision":true},
+         {"group":"pickup_axle_RR"},
+         {"selfCollision":false},
+         //could be overwritten by Off-Road leaf spring, not an option here
+         ["axg2r", -0.86, 2.54, 0.65],
+         ["axg2l", 0.86, 2.54, 0.65],
+         {"selfCollision":true},
+         ["axg3r", -0.94, 2.3, 0.33],
+         ["axg3l", 0.94, 2.3, 0.33],
+         ["axg4r", -0.94, 2.71, 0.33],
+         ["axg4l", 0.94, 2.71, 0.33],
+         ["axg1", 0.0, 2.65, 0.36, {"nodeWeight":31.2}],
+         ["axg3", 0.0, 2.18, 0.39, {"nodeWeight":31.2,"selfCollision":false}],
+         ["axg2", 0.0, 2.59, 0.6, {"nodeWeight":20.7,"selfCollision":false}],
+
+         //upper link mount
+         {"selfCollision":false},
+         {"nodeWeight":14.5},
+         ["axgsr1", -0.29, 2.7, 0.61, {"group":["pickup_axle_RR","pickup_upperlink_RR"]}],
+
+         //trackbar mount
+         {"nodeWeight":10.3},
+         ["axgsr2", -0.69, 2.69, 0.5, {"group":["pickup_axle_RR","pickup_trackbar_RR"]}],
+
+         //shock/lower link mounting nodes
+         {"nodeWeight":20.7},
+         {"group":["pickup_axle_RR","pickup_rearrearshockbottom", "pickup_lowerlinks_RR"]}
+         ["axgshr", -0.77, 2.48, 0.35],
+         ["axgshl", 0.77, 2.48, 0.35],
+
+         //--REAR RUNNING GEAR
+
+         //shock mount
+         {"collision":false},
+         {"selfCollision":false},
+         {"nodeWeight":16.5},
+         {"group":"pickup_rearrearshocktop"}
+         ["rsg2r", -0.67, 2.36, 0.735],
+         ["rsg2l", 0.67, 2.36, 0.735],
+
+         //upper link mount
+         {"nodeWeight":14.5},
+         ["rxg2r", -0.30, 2.09, 0.49, {"group":"pickup_upperlink_RR"}],
+
+         //trackbar mount
+         {"nodeWeight":10.3},
+         ["rxg2l", 0.503, 2.737, 0.42, {"group":"pickup_trackbar_RR"}],
+
+         //lower link mounts
+         {"nodeWeight":20.7},
+         {"group":["pickup_lowerlinks_RR", "pickup_trackbar_RR"]}
+         ["rxg1r", -0.52, 1.13, 0.29],
+         ["rxg1l", 0.52, 1.13, 0.29],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+
+          //--REAR LIVE AXLE SUSPENSION--
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":9400940,"beamDamp":141},
+          {"beamDeform":112000,"beamStrength":2050000},
+          {"deformLimitExpansion":1.2},
+          ["axg1","axg2"],
+          ["axg1","axg3"],
+          ["axg2","axg3"],
+          ["axg2","axg2r"],
+          ["axg2","axg2l"],
+          ["axg3","axg3r"],
+          ["axg3","axg3l"],
+          ["axg1","axg4r"],
+          ["axg1","axg4l"],
+          //
+          ["axg2l","axg3l"],
+          ["axg2r","axg3r"],
+          ["axg4l","axg3l"],
+          ["axg4r","axg3r"],
+          ["axg4l","axg2l"],
+          ["axg4r","axg2r"],
+
+          //crossing
+          {"deformLimitExpansion":""},
+          ["axg2r","axg1"],
+          ["axg2l","axg1"],
+          ["axg3r","axg1"],
+          ["axg3l","axg1"],
+          ["axg3r","axg2"],
+          ["axg3l","axg2"],
+          ["axg4r","axg2"],
+          ["axg4l","axg2"],
+          ["axg2r","axg3"],
+          ["axg2l","axg3"],
+          ["axg4r","axg3"],
+          ["axg4l","axg3"],
+
+          ["axg2l","axg2r"],
+          ["axg3l","axg3r"],
+          ["axg4l","axg4r"],
+
+          //shock mounts
+          {"beamSpring":9400940,"beamDamp":141},
+          {"beamDeform":112000,"beamStrength":"FLT_MAX"},
+          ["axgshr","axg2r"],
+          ["axgshr","axg3r"],
+          ["axgshr","axg4r"],
+          ["axgshr","axg1"],
+          ["axgshr","axg2"],
+          ["axgshr","axg3"],
+          ["axgshl","axg2l"],
+          ["axgshl","axg3l"],
+          ["axgshl","axg4l"],
+          ["axgshl","axg1"],
+          ["axgshl","axg2"],
+          ["axgshl","axg3"],
+          {"beamSpring":6580940,"beamDamp":141},
+          //frame shock mount strength
+          ["rsg2r","f17l", {"beamDeform":75000}],
+          ["rsg2l","f17r", {"beamDeform":75000}],
+          ["rsg2r","f18l", {"beamDeform":75000}],
+          ["rsg2l","f18r", {"beamDeform":75000}],
+
+          //trackbar mount
+          {"beamSpring":3760940,"beamDamp":141},
+          ["axgsr2", "axg2"],
+          ["axgsr2", "axg3"],
+          ["axgsr2", "axg1"],
+          ["axgsr2", "axg4r"],
+          ["axgsr2", "axg3r"],
+          ["axgsr2", "axg2r"],
+
+          //upper link mount
+          {"beamSpring":5640940,"beamDamp":141},
+          ["axgsr1", "axg2"],
+          ["axgsr1", "axg3"],
+          ["axgsr1", "axg1"],
+          ["axgsr1", "axg4r"],
+          ["axgsr1", "axg3r"],
+          ["axgsr1", "axg2r"],
+
+          {"beamSpring":2820940,"beamDamp":141},
+          ["axgshr", "axgsr2"],
+          ["axgsr2", "axgsr1"],
+          ["axgsr1", "axgshr"],
+
+          //lower links
+          {"beamSpring":28200940,"beamDamp":940},
+          {"beamDeform":129500,"beamStrength":"FLT_MAX"},
+          //["axgshr", "rxg1r", {"dampCutoffHz":500}]
+          //["axgshl", "rxg1l", {"dampCutoffHz":500}]
+
+          //upper link
+          {"beamSpring":18800940,"beamDamp":940},
+          {"beamDeform":157500,"beamStrength":"FLT_MAX"},
+          ["axgsr1", "rxg2r", {"dampCutoffHz":500}]
+
+          //trackbar
+          {"beamDeform":129500,"beamStrength":"FLT_MAX"},
+          {"beamSpring":18800940,"beamDamp":940},
+          ["rxg2l", "axgsr2", {"precompressionRange":"$trackbar_RR","beamPrecompressionTime":0.5,"dampCutoffHz":500}],
+
+          //rear limiters
+          {"deformLimitExpansion":""},
+          {"beamPrecompression":0.55, "beamType":"|SUPPORT", "beamLongBound":6},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":52500,"beamStrength":700000},
+          {"beamLimitSpring":5001000,"beamLimitDamp":500},
+          {"optional":true},
+          ["rw1r", "f6r"],
+          ["rw1r", "f16r"],
+          ["rw1r", "f10r"],
+          ["rw1r", "f20r"],
+          ["rw1r", "f18r", {"beamPrecompression":0.2, "beamLongBound":12}],
+
+          ["rw1l", "f6l"],
+          ["rw1l", "f16l"],
+          ["rw1l", "f10l"],
+          ["rw1l", "f20l"],
+          ["rw1l", "f18l", {"beamPrecompression":0.2, "beamLongBound":12}],
+          {"optional":false},
+
+          //pinion damper
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":0,"beamDamp":3290},
+          {"beamDeform":21000,"beamStrength":35000},
+          {"breakGroup":"driveshaft"},
+          ["axg2","tra1", {"dampCutoffHz":500, "optional":true}],
+          ["axg1","tra1", {"dampCutoffHz":500, "optional":true}],
+          {"breakGroup":""},
+
+          //extension/compression limit
+          {"beamPrecompression":1, "beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":1},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":24500,"beamStrength":245000},
+          {"beamLimitSpring":2001000,"beamLimitDamp":1000},
+          //["axg4r","f18r", {"longBoundRange":0.35,"shortBoundRange":0.06,"boundZone":0.025,"beamLimitDampRebound":0,"dampCutoffHz":500}],
+          //["axg4l","f18l", {"longBoundRange":0.35,"shortBoundRange":0.06,"boundZone":0.025,"beamLimitDampRebound":0,"dampCutoffHz":500}],
+          //["axg3r","f18r", {"longBoundRange":0.35,"shortBoundRange":0.06,"boundZone":0.025,"beamLimitDampRebound":0,"dampCutoffHz":500}],
+          //["axg3l","f18l", {"longBoundRange":0.35,"shortBoundRange":0.06,"boundZone":0.025,"beamLimitDampRebound":0,"dampCutoffHz":500}],
+
+          //dampers
+          {"beamSpring":0,"beamDamp":1128},
+          {"beamLimitSpring":0,"beamLimitDamp":1200},
+          {"dampCutoffHz":500},
+          {"beamType":"|BOUNDED" "beamLongBound":2, "beamShortBound":1},
+          ["axg2r","f16r", {"breakGroup":"wheel_RRR","beamDampVelocitySplit":0.05,"beamDampFast":500,"beamDampReboundFast":500,"beamDamp":47,"beamDampRebound":50}],
+          ["axg4r","f6r", {"breakGroup":"wheel_RRL","beamDampVelocitySplit":0.05,"beamDampFast":500,"beamDampReboundFast":500,"beamDamp":47,"beamDampRebound":50}],
+          ["axg2l","f16l", {"breakGroup":"wheel_RRR","beamDampVelocitySplit":0.05,"beamDampFast":500,"beamDampReboundFast":500,"beamDamp":47,"beamDampRebound":50}],
+          ["axg4l","f6l", {"breakGroup":"wheel_RRL","beamDampVelocitySplit":0.05,"beamDampFast":500,"beamDampReboundFast":500,"beamDamp":47,"beamDampRebound":50}],
+          {"dampCutoffHz":""},
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.2},
+
+
+          //--4 LINK REAR REAR RUNNING GEAR--
+
+          //shock mounts
+          {"deformLimitExpansion":1.2},
+          {"beamSpring":6110940,"beamDamp":141},
+          {"beamDeform":165500,"beamStrength":"FLT_MAX"},
+          ["rsg2r", "f9r"],
+          ["rsg2r", "f19r"],
+          ["rsg2r", "f8r"],
+          ["rsg2r", "f18r"],
+          ["rsg2l", "f9l"],
+          ["rsg2l", "f19l"],
+          ["rsg2l", "f8l"],
+          ["rsg2l", "f18l"],
+
+          //lower link mounts
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":11280940,"beamDamp":141},
+          {"beamDeform":84000,"beamStrength":"FLT_MAX"},
+          ["rxg1r", "f23r"],
+          ["rxg1r", "f24r"],
+          ["rxg1r", "f8r"],
+          ["rxg1r", "f18r"],
+          ["rxg1r", "f17r"],
+          ["rxg1r", "f7r"],
+          ["rxg1l", "f23l"],
+          ["rxg1l", "f24l"],
+          ["rxg1l", "f8l"],
+          ["rxg1l", "f18l"],
+          ["rxg1l", "f7l"],
+          ["rxg1l", "f17l"],
+          ["rxg1l", "rx1r"],
+          ["rxg1r", "f6r"],
+          ["rxg1l", "f6l"],
+
+          {"beamSpring":4700940,"beamDamp":141},
+          {"beamDeform":84000,"beamStrength":"FLT_MAX"},
+          ["rxg1r", "f23"],
+          ["rxg1r", "f7"],
+          ["rxg1r", "f24"],
+          ["rxg1r", "f17"],
+          ["rxg1l", "f23"],
+          ["rxg1l", "f7"],
+          ["rxg1l", "f24"],
+          ["rxg1l", "f17"],
+
+          //upper link mount
+          {"beamSpring":10340940,"beamDamp":141},
+          {"beamDeform":84000,"beamStrength":"FLT_MAX"},
+          ["rxg2r", "f8r"],
+          ["rxg2r", "f18r"],
+          ["rxg2r", "f9r"],
+          ["rxg2r", "f19r"],
+          ["rxg2r", "f7r"],
+          ["rxg2r", "f17r"],
+          ["rxg2r", "f10r"],
+          ["rxg2r", "f20r"],
+          ["rxg2r", "f8", {"beamSpring":940940,"beamDamp":141}],
+          ["rxg2r", "f18", {"beamSpring":940940,"beamDamp":141}],
+
+          //trackbar mount
+          {"beamSpring":9400940,"beamDamp":141},
+          {"beamDeform":84000,"beamStrength":"FLT_MAX"},
+          ["rxg2l", "f10l"],
+          ["rxg2l", "f9l"],
+          ["rxg2l", "f19l"],
+          ["rxg2l", "f20l"],
+          ["rxg2l", "f10r"],
+          ["rxg2l", "f9r"],
+          ["rxg2l", "f19r"],
+          ["rxg2l", "f20r"],
+          {"optional":false},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //axle shape
+            {"triangleType":"NONCOLLIDABLE"},
+            {"dragCoef":0},
+            ["axg2r", "axg4r", "axg3r"],
+            ["axg2l", "axg3l", "axg4l"],
+            ["axg3l", "axgshl", "axg4l"],
+            ["axg4r", "axgshr", "axg3r"],
+            ["axgshr", "axg3", "axg3r"],
+            ["axgshl", "axg3l", "axg3"],
+            ["axg4l", "axgshl", "axg1"],
+            ["axg1", "axgshr", "axg4r"],
+            ["axg1", "axg3", "axgshr"],
+            ["axg1", "axgshl", "axg3"],
+            {"triangleType":"NORMALTYPE"},
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            //cancel out brake properties
+            {"brakeTorque":0},
+            {"parkingTorque":0},
+            {"enableBrakeThermals":false},
+            {"brakeDiameter":false},
+            {"brakeMass":false},
+            {"brakeType":false},
+            {"rotorMaterial":false},
+            {"brakeVentingCoef":false},
+    ],
+},
+}

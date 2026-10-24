@@ -1,0 +1,14 @@
+{
+"G_md_series_us_upfit_rollback_licenseplate": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"License Plate",
+        "value":0,
+    },
+    "slotType" : "G_md_series_us_upfit_rollback_licenseplate",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["licenseplate", ["tiltframe"],[],{"pos":{"x":0.4, "y":7.366, "z":0.8}, "rot":{"x":12, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+}

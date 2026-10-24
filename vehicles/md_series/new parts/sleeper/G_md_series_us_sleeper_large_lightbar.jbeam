@@ -1,0 +1,58 @@
+{
+"G_md_series_us_sleeper_large_lightbar_c": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Light Bar Mount",
+        "value":100
+    },
+    "slotType" : "G_md_series_us_wing_sleeper_large",
+    "slots": [
+        ["type", "default", "description"],
+        ["us_lightbar","us_lightbar_led", "Light Bar", {"nodeMove2":{"x":0,"y":0.81,"z":2.775}, "variables":{"$scale":1.5}}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["light_bar_mount_lo", ["md_series_sleeper"], [], {"pos":{"x": 0.0, "y": 0.84, "z":2.805}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.55, "y":2.00, "z":2.00}}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":401000,"beamDamp":60},
+          {"beamDeform":5000,"beamStrength":12000},
+          {"deformationTriggerRatio":0.05},
+          {"breakGroup":"lightbar_break"},
+          {"deformGroup":["lightbar_R","lightbar_L","lightbar_M","lightbar_break"]},
+
+          ["lightbar_2l","sp25ll"],
+          ["lightbar_2l","sp26ll"],
+          ["lightbar_4l","sp25ll"],
+          ["lightbar_4l","sp26ll"],
+          ["lightbar_4l","sp26"],
+
+          ["lightbar_1l","sp25ll"],
+          ["lightbar_1l","sp26ll"],
+          ["lightbar_1l","sp25"],
+          ["lightbar_3l","sp25ll"],
+          ["lightbar_3l","sp26ll"],
+          ["lightbar_3l","sp25"],
+
+          ["lightbar_2r","sp25rr"],
+          ["lightbar_2r","sp26rr"],
+          ["lightbar_4r","sp25rr"],
+          ["lightbar_4r","sp26rr"],
+          ["lightbar_4r","sp26"],
+
+          ["lightbar_1r","sp25rr"],
+          ["lightbar_1r","sp26rr"],
+          ["lightbar_1r","sp25"],
+          ["lightbar_3r","sp25rr"],
+          ["lightbar_3r","sp26rr"],
+          ["lightbar_3r","sp25"],
+
+          {"breakGroup":""},
+          {"deformGroup":"", "deformationTriggerRatio":""},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0}
+    ],
+},
+
+}

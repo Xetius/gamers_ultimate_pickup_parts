@@ -1,0 +1,48 @@
+{
+  "0-100 km/h":9.8,
+  "0-100 mph":34.9,
+  "0-60 mph":9.2,
+  "100-0 km/h":40.3,
+  "60-0 mph":123.7,
+  "60-100 mph":25.7,
+  "BoundingBox":[
+    [
+      -0.6,
+      -1.42,
+      -0.3099
+    ],
+    [
+      1.7,
+      3.54,
+      1.41
+    ]
+  ],
+  "Braking G":0.975,
+  "Config Type":"Custom",
+  "Configuration":"D35 Extended Cab Auxiliary Tiny Bed Arctic Explorer (A)",
+  "Description":"0% wheelspin, 100% grip and power, even in the toughest conditions. Nothing is too much for the Gavril D-Series Artic with its 6L diesel engine which can produce up to 892 Nm of torque. The smaller bed compensates for the auxiliary intermediate piece which holds a spare tire, many tools and a second fuel tank to challenge even the longest trips. The interior being a special mix of the old, sturdy dashboard and 3 modern heated seats, it's very practical yet low on cost. With the extended track width, extra lights and higher air intake, this is the perfect robust companion for your arctic off-road adventures!",
+  "Drivetrain":"4WD",
+  "Fuel Type":"Diesel",
+  "Induction Type":"Turbo",
+  "Off-Road Score":46,
+  "Performance Class":"4",
+  "Population":4000,
+  "Power":307,
+  "PowerPeakRPM":"3950 - 4600",
+  "Propulsion":"ICE",
+  "Top Speed":48.48723133,
+  "Torque":893,
+  "TorquePeakRPM":"2950 - 3650",
+  "Transmission":"Automatic",
+  "Value":185500,
+  "Weight":3358,
+  "Weight/Power":10.45685279,
+  "Years":{
+    "max":2003,
+    "min":1998
+  },
+  "defaultPaintName1":"Royal Red",
+  "defaultPaintName2":"Pearl White",
+  "defaultPaintName3":"Royal Red",
+  "vehicleSelectorSubGroup":"vehiclesData.pickup.d35_4WD_ext_longbed_A.vehicleSelectorSubGroup"
+}

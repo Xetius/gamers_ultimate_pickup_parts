@@ -1,0 +1,122 @@
+{
+  "G_midtruck_tire": {
+    "name": "G_midtruck_tire",
+    "mapTo": "G_midtruck_tire",
+    "class": "material",
+    "persistentId": "",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/midtruck/tires/midtruck_tire_ao.data.png",
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "baseColorMap": "/vehicles/midtruck/tires/midtruck_tire_b.color.png",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/midtruck/tires/midtruck_tire_m.data.png",
+        "normalMap": "vehicles/midtruck/tires/midtruck_tire_nm.normal.png",
+        "roughnessMap": "/vehicles/midtruck/tires/midtruck_tire_r.data.png"
+      },
+      {},
+      {},
+      {}
+    ],
+    "activeLayers": 1,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "G_atcrane_tire_prop": {
+    "name": "G_atcrane_tire_prop",
+    "mapTo": "G_atcrane_tire_prop",
+    "class": "Material",
+    "persistentId": "98ca09cc-bcc3-4f38-b48e-71997655cf91",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/large_tire/atcrane_tire_prop_b.color.png",
+        "metallicMap": "/vehicles/large_tire/atcrane_tire_prop_m.data.png",
+        "normalMap": "/vehicles/large_tire/atcrane_tire_prop_nm.normal.png",
+        "roughnessMap": "/vehicles/large_tire/atcrane_tire_prop_r.data.png"
+      },
+      {},
+      {},
+      {}
+    ],
+    "version": 1.5
+  },
+  "G_dumptruck_tire_prop": {
+    "name": "G_dumptruck_tire_prop",
+    "mapTo": "G_dumptruck_tire_prop",
+    "class": "Material",
+    "persistentId": "02ae180f-1797-445a-a86a-5bb5ec83e175",
+    "Stages": [
+      {
+        "baseColorMap": "/vehicles/large_tire/dumptruck_tire_prop_b.color.png",
+        "metallicMap": "/vehicles/large_tire/dumptruck_tire_prop_m.data.png",
+        "normalMap": "/vehicles/large_tire/dumptruck_tire_prop_nm.normal.png",
+        "roughnessMap": "/vehicles/large_tire/dumptruck_tire_prop_r.data.png"
+      },
+      {},
+      {},
+      {}
+    ],
+    "version": 1.5
+  },
+  "G_wl40_tire": {
+    "name": "G_wl40_tire",
+    "mapTo": "G_wl40_tire",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/common/tires/wl40_tire_ao.data.png",
+        "baseColorFactor": null,
+        "baseColorMap": "/vehicles/common/tires/wl40_tire_b.color.png",
+        "detailBaseColorMapStrength": null,
+        "detailNormalMapStrength": null,
+        "detailScale": null,
+        "normalMap": "/vehicles/common/tires/wl40_tire_nm.normal.png",
+        "roughnessMap": "/vehicles/common/tires/wl40_tire_r.data.png"
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/common/tires/wl40_tire_ao.data.png",
+        "baseColorFactor": [
+          0.398597986,
+          0.386256993,
+          0.368918985,
+          1
+        ],
+        "detailBaseColorMapStrength": 0.400000006,
+        "detailMap": "/vehicles/common/generic_mat_tex/tiled_plain_noise/tile_plain_noise_small_b.color.png",
+        "detailNormalMap": "/vehicles/common/generic_mat_tex/tiled_plain_noise/tile_plain_noise_small_nm.normal.png",
+        "detailNormalMapStrength": 0.300000012,
+        "detailScale": [
+          6,
+          6
+        ],
+        "normalMap": "/vehicles/common/tires/wl40_tire_nm.normal.png",
+        "opacityMap": "/vehicles/common/tires/wl40_tire_op.data.png"
+      },
+      {
+        "baseColorFactor": null,
+        "detailBaseColorMapStrength": null,
+        "detailNormalMapStrength": null,
+        "detailScale": null
+      },
+      {
+        "baseColorFactor": null,
+        "detailBaseColorMapStrength": null,
+        "detailNormalMapStrength": null,
+        "detailScale": null
+      }
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+}

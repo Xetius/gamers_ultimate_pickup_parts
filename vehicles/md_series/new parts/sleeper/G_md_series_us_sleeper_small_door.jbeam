@@ -1,0 +1,254 @@
+{
+"G_md_series_us_sleeper_small_door_L": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Sleeper Door",
+        "value":350,
+    },
+    "slotType" : "G_md_series_us_sleeper_small_door_L",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["G_md_series_us_sleeper_36in_door", ["md_series_conventional_sleeper_small_door_L"], [],{"pos":{"x":0.0, "y":-1.3, "z":0.0}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"sleeperDoorLCoupler"}],
+    ]
+    "sleeperDoorLCoupler":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["spdlt1l",  "spd10l",     40000,                     0.01,                   0.005,                      0.2,                 0.1,                   "sleeperDoorL_latch"]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["spd10l"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Door>vintage_09_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Door>vintage_09_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 20,
+        "openForceDuration": 0.5,
+        "closeForceMagnitude": 40,
+        "closeForceDuration": 1.6
+    }
+    "triggers2":[
+        ["id", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["G_sleeper_door_L", "spd3l","spd2l","spd6l", "box", {"x":0.1, "y":0.03, "z":0.1}, {"x":0, "y":90, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.187, "y":0.076, "z":-0.02}],
+        ["G_sleeper_door_L_int", "spd7l","spd8l","spd1l", "box", {"x":0.1, "y":0.03, "z":0.1}, {"x":-0, "y":0, "z":-0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.15, "y":0.05, "z":-0.035}],
+    ],
+    "actionsEnabled": [
+        ["id"],
+        ["sleeper_door_L"],
+    ],
+    "triggerEventLinks2":[
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["G_sleeper_door_L", "action0", "G_sleeper_door_L"],
+        ["G_sleeper_door_L_int", "action0", "G_sleeper_door_L"],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"collision":true},
+        {"selfCollision":true},
+
+        //door
+        {"nodeWeight":2.0},
+        {"group":"md_series_conventional_sleeper_small_door_L"},
+        ["spd1l",   1.1608, -0.5835,  1.1, {"selfCollision":false}],
+        ["spd2l",   1.1608, -0.2466,  1.1],
+        ["spd3l",   1.1608,  0.0747,  1.1, {"selfCollision":false}],
+
+        ["spd4l",   1.1608, -0.5835,  1.8366],
+        ["spd5l",   1.1608, -0.2466,  1.8366],
+        ["spd6l",   1.1608,  0.0747,  1.8366],
+
+        ["spd7l",   1.1608, -0.5835,  2.46],
+        ["spd8l",   1.1608, -0.2466,  2.46],
+        ["spd9l",   1.1608,  0.0747,  2.46],
+
+        //rigidifier
+        ["spd10l",0.8131, -0.0747,  1.7853, {"nodeWeight":2.5, "group":"", "collision":false, "selfCollision":false}],
+
+        //latch nodes
+        ["spdlt1l",0.8131, -0.0747,  1.7853, {"nodeWeight":2.5, "group":"", "collision":false, "selfCollision":false}],
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+        //door main shape
+        {"beamSpring":3001000,"beamDamp":150},
+        {"beamDeform":15000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":1.1},
+        ["spd4l", "spd1l"],
+        ["spd1l", "spd2l"],
+        ["spd2l", "spd5l"],
+        ["spd5l", "spd4l"],
+        ["spd4l", "spd7l"],
+        ["spd7l", "spd8l"],
+        ["spd8l", "spd9l"],
+        ["spd9l", "spd6l"],
+        ["spd6l", "spd3l"],
+        ["spd3l", "spd2l"],
+        ["spd5l", "spd6l"],
+        ["spd5l", "spd8l"],
+
+        //surficial crossing
+        {"beamDeform":5500,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":""},
+        ["spd4l", "spd2l"],
+        ["spd5l", "spd1l"],
+        ["spd7l", "spd5l"],
+        ["spd8l", "spd4l"],
+        ["spd8l", "spd6l"],
+        ["spd9l", "spd5l"],
+        ["spd5l", "spd3l"],
+        ["spd6l", "spd2l"],
+
+        //rigids
+        {"beamDeform":3000,"beamStrength":"FLT_MAX"},
+        ["spd7l", "spd1l"],
+        ["spd2l", "spd8l"],
+        ["spd9l", "spd3l"],
+
+        //rigidifier
+        {"beamDeform":3000,"beamStrength":"FLT_MAX"},
+        ["spd10l", "spd1l"],
+        ["spd10l", "spd2l"],
+        ["spd10l", "spd3l"],
+        ["spd10l", "spd4l"],
+        ["spd10l", "spd5l"],
+        ["spd10l", "spd6l"],
+        ["spd10l", "spd7l"],
+        ["spd10l", "spd8l"],
+        ["spd10l", "spd9l"],
+
+        //latch nodes
+        {"beamDeform":10000,"beamStrength":"FLT_MAX"},
+        ["spdlt1l", "sp9l"],
+        ["spdlt1l", "sp9ll"],
+        ["spdlt1l", "sp6l"],
+        ["spdlt1l", "sp6ll"],
+        ["spdlt1l", "sp12l"],
+        ["spdlt1l", "sp12ll"],
+        ["spdlt1l", "sprg1"],
+
+        //door hinge
+        {"disableTriangleBreaking":true},
+        {"beamSpring":2001000,"beamDamp":150},
+        {"beamDeform":15000,"beamStrength":90000},
+        {"breakGroup":"sleeper_doorhinge_a_L"},
+        ["spd7l", "sp10ll"],
+        ["spd7l", "sp7ll"],
+        ["spd4l", "sp10ll"],
+        ["spd7l", "sp10l"],
+        ["spd7l", "sp14ll"],
+        ["spd4l", "sp10l"],
+        ["spd7l", "sp15ll"],
+        {"breakGroup":"sleeper_doorhinge_b_L"},
+        ["spd4l", "sp4ll"],
+        ["sp7ll", "spd1l"],
+        ["spd1l", "sp4ll"],
+        ["spd1l", "sp1ll"],
+        ["spd1l", "sp2ll"],
+        ["spd1l", "sp4l"],
+        ["spd4l", "sp4l"],
+        {"breakGroup":""},
+
+        //damping
+        {"beamSpring":0,"beamDamp":10},
+        {"beamDeform":15000,"beamStrength":90000},
+        ["spd8l", "sp12ll", {"breakGroup":"sleeper_doorhinge_a_L", "breakGroupType":1}],
+        ["spd2l", "sp3ll", {"breakGroup":"sleeper_doorhinge_b_L", "breakGroupType":1}],
+        ["spd8l", "sp12", {"breakGroup":"sleeper_doorhinge_a_L", "breakGroupType":1}],
+        ["spd2l", "sp3", {"breakGroup":"sleeper_doorhinge_b_L", "breakGroupType":1}],
+
+        //pop open
+        {"beamPrecompression":1.003, "beamType":"|SUPPORT", "beamLongBound":5},
+        {"beamSpring":50000,"beamDamp":500},
+        {"beamDeform":40000,"beamStrength":10000},
+        {"breakGroup":"sleeper_doorhinge_a_L", "breakGroupType":1},
+        ["spd5l", "sp9l"],
+
+        //outer detent
+        {"beamPrecompression":2.3, "beamType":"|BOUNDED", "beamLongBound":0.02, "beamShortBound":0.02},
+        {"beamSpring":3000,"beamDamp":200, "beamStrength":8000},
+        {"beamLimitSpring":0, "beamLimitDamp":0},
+        ["spd5l", "sp9ll", {"boundZone":0.01}],
+        {"breakGroup":"", "breakGroupType":0},
+
+        //support beams
+        {"beamType":"|SUPPORT","beamLongBound":15},
+        {"beamSpring":2001000,"beamDamp":150},
+        {"beamDeform":7000,"beamStrength":150000},
+        {"beamPrecompression":0.99},
+        {"breakGroup":"door_RL_supportBeams"},
+        ["spd7l", "sp10l"],
+        ["spd4l", "sp7l"],
+        ["spd1l", "sp4l"],
+        ["spd1l", "sp1l"],
+        ["spd7l", "sp14l"],
+        ["spd8l", "sp15l"],
+        ["spd9l", "sp12l"],
+        ["spd9l", "sp16l"],
+        ["spd8l", "sp14l"],
+        ["spd8l", "sp16l"],
+        ["spd6l", "sp9l"],
+        ["spd3l", "sp6l"],
+        ["spd3l", "sp3l"],
+        ["spd2l", "sp2l"],
+        ["spd2l", "sp3l"],
+        ["spd2l", "sp1l"],
+        ["spd3l", "sp2l"],
+        ["spd1l", "sp2l"],
+        ["spd4l", "sp10ll"],
+        ["spd7l", "sp7ll"],
+        ["spd7l", "sp10ll"],
+        ["sp7ll", "spd1l"],
+        ["spd4l", "sp4ll"],
+        ["spd1l", "sp4ll"],
+        ["spd4l", "sp7ll"],
+        ["spd1l", "sp1ll"],
+        ["spd7l", "sp14ll"],
+        ["spd8l", "sp15ll"],
+        ["spd9l", "sp16ll"],
+        ["spd9l", "sp15ll"],
+        ["spd8l", "sp16ll"],
+        //["spd8l", "sp14ll"],
+        ["spd7l", "sp15ll"],
+        ["spd2l", "sp2ll"],
+        ["spd1l", "sp2ll"],
+        //["spd2l", "sp1ll"],
+        ["spd3l", "sp3ll"],
+        ["spd3l", "sp2ll"],
+        ["spd2l", "sp3ll"],
+        ["spd3l", "sp6ll"],
+        ["spd6l", "sp9ll"],
+        ["spd9l", "sp12ll"],
+        ["spd9l", "sp9ll"],
+        ["sp12ll", "spd6l"],
+        ["spd6l", "sp3ll"],
+        ["spd3l", "sp9ll"],
+        {"breakGroup":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"groundModel":"metal"},
+
+        //door
+        {"group":"md_series_conventional_door_L"},
+        {"dragCoef":15},
+        ["spd7l", "spd4l", "spd5l"],
+        ["spd5l", "spd8l", "spd7l"],
+        ["spd8l", "spd5l", "spd6l"],
+        ["spd6l", "spd9l", "spd8l"],
+        ["spd5l", "spd2l", "spd3l"],
+        ["spd3l", "spd6l", "spd5l"],
+        ["spd5l", "spd4l", "spd2l"],
+        ["spd4l", "spd1l", "spd2l"],
+    ],
+},
+}

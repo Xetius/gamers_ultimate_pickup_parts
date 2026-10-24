@@ -1,0 +1,34 @@
+{
+    "fileversion": 2,
+    "actions": {
+        //Powertrain
+        "G_toggleCenterDiff":         {"order":   1.1, "onDown":"controller.getControllerSafe('G_interaxleLockControl').nextDriveMode()", "title": "vehicle.interaction.powertrain.centerDiff.toggle.title", "desc": "vehicle.interaction.powertrain.centerDiff.toggle.desc" },
+        "G_lockCenterDiff":           {"order":   1.2, "onDown":"controller.getControllerSafe('G_interaxleLockControl').setDriveMode('locked')", "title": "vehicle.interaction.powertrain.centerDiff.setLocked.title", "desc": "vehicle.interaction.powertrain.centerDiff.setLocked.desc" },
+        "G_unlockCenterDiff":         {"order":   1.3, "onDown":"controller.getControllerSafe('G_interaxleLockControl').setDriveMode('unlocked')", "title": "vehicle.interaction.powertrain.centerDiff.setUnlocked.title", "desc": "vehicle.interaction.powertrain.centerDiff.setUnlocked.desc" },
+        "G_setCenterDiffModeAxis":    {"order":   1.4, "onChange":"controller.getControllerSafe('G_interaxleLockControl').setDriveMode(VALUE > 0.5 and 'locked' or 'unlocked')", "title": "vehicle.interaction.powertrain.centerDiff.set.title", "desc": "vehicle.interaction.powertrain.centerDiff.set.desc" },
+        //Sleeper Doors
+        "G_sleeper_door_R":      {"order":   50.1, "onDown":"controller.getControllerSafe('sleeperDoorRCoupler').toggleGroup()", "title": "vehicle.interaction.sleeperDoorR.toggle.title", "desc": "vehicle.interaction.sleeperDoorR.toggle.desc" },
+        "G_sleeper_door_L":      {"order":   50.2, "onDown":"controller.getControllerSafe('sleeperDoorLCoupler').toggleGroup()", "title": "vehicle.interaction.sleeperDoorL.toggle.title", "desc": "vehicle.interaction.sleeperDoorL.toggle.desc" },
+        "G_cabinet_door_R":      {"order":   50.3, "onDown":"controller.getControllerSafe('cabinetDoorRCoupler').toggleGroup()", "title": "vehicle.interaction.cabinetDoorR.toggle.title", "desc": "vehicle.interaction.cabinetDoorR.toggle.desc" },
+        "G_cabinet_door_L":      {"order":   50.4, "onDown":"controller.getControllerSafe('cabinetDoorLCoupler').toggleGroup()", "title": "vehicle.interaction.cabinetDoorL.toggle.title", "desc": "vehicle.interaction.cabinetDoorL.toggle.desc" },
+        //Liftaxle
+        "G_liftAxle_toggle":          {"order":  4.21,  "onDown":"controller.getControllerSafe('liftAxleControl').toggleMode()", "title": "ui.inputActions.semi.liftAxle_toggle.title", "desc": "ui.inputActions.semi.liftAxle_toggle.description" },
+        "G_liftAxle_pressure_up":     {"order":  4.22,  "onDown":"controller.getControllerSafe('liftAxleControl').setMaximumSupplyPressureChangeRate( 10000)", "onUp":"controller.getControllerSafe('liftAxleControl').setMaximumSupplyPressureChangeRate(0)", "title": "ui.inputActions.semi.liftAxle_pressure_up.title",   "desc": "ui.inputActions.semi.liftAxle_pressure_up.description" },
+        "G_liftAxle_pressure_down":   {"order":  4.23,  "onDown":"controller.getControllerSafe('liftAxleControl').setMaximumSupplyPressureChangeRate(-10000)", "onUp":"controller.getControllerSafe('liftAxleControl').setMaximumSupplyPressureChangeRate(0)", "title": "ui.inputActions.semi.liftAxle_pressure_down.title", "desc": "ui.inputActions.semi.liftAxle_pressure_down.description" },
+		//rollback
+        "G_tilt":                 {"order":  10.1, "onChange":"electrics.values.upfit_tilt = VALUE", "title": "ui.inputActions.semi.upfit_tilt.title", "desc": "ui.inputActions.semi.upfit_tilt.description", "isCentered": true },
+        "G_tiltUp":               {"order":  10.2, "onChange":"electrics.values.upfit_tilt = VALUE", "title": "ui.inputActions.semi.upfit_tiltUp.title", "desc": "ui.inputActions.semi.upfit_tiltUp.description" },
+        "G_tiltDown":             {"order":  10.3, "onChange":"electrics.values.upfit_tilt = -VALUE", "title": "ui.inputActions.semi.upfit_tiltDown.title", "desc": "ui.inputActions.semi.upfit_tiltDown.description" },
+
+        "G_extendRetract":        {"order":   11.1, "onChange":"electrics.values.upfit_extendRetract = VALUE", "title": "ui.inputActions.semi.upfit_extendRetract.title", "desc": "ui.inputActions.semi.upfit_extendRetract.description", "isCentered": true },
+        "G_extend":               {"order":   11.2, "onChange":"electrics.values.upfit_extendRetract = VALUE", "title": "ui.inputActions.semi.upfit_extend.title", "desc": "ui.inputActions.semi.upfit_extend.description" },
+        "G_retract":              {"order":   11.3, "onChange":"electrics.values.upfit_extendRetract = -VALUE", "title": "ui.inputActions.semi.upfit_retract.title", "desc": "ui.inputActions.semi.upfit_retract.description" },
+		
+        "G_extendRetractFeet":    {"order":   12.1, "onChange":"electrics.values.upfit_extendRetractFeet = VALUE", "title": "ui.inputActions.semi.upfit_extendRetractFeet.title", "desc": "ui.inputActions.semi.upfit_extendRetractFeet.description", "isCentered": true },
+        "G_extendFeet":           {"order":   12.2, "onChange":"electrics.values.upfit_extendRetractFeet = VALUE", "title": "ui.inputActions.semi.upfit_extendFeet.title", "desc": "ui.inputActions.semi.upfit_extendFeet.description" },
+        "G_retractFeet":          {"order":   12.3, "onChange":"electrics.values.upfit_extendRetractFeet = -VALUE", "title": "ui.inputActions.semi.upfit_retractFeet.title", "desc": "ui.inputActions.semi.upfit_retractFeet.description" },
+		//Auxiliary Add-On
+        "G_aux_Toolbox_R":        {"order":   69.1, "onDown":"controller.getControllerSafe('G_auxToolboxRCoupler').toggleGroup()", "title": "Toggle Right Toolbox", "desc": "vehicle.interaction.sleeperDoorR.toggle.desc" },
+        "G_aux_Toolbox_L":        {"order":   69.2, "onDown":"controller.getControllerSafe('G_auxToolboxLCoupler').toggleGroup()", "title": "Toggle Left Toolbox", "desc": "vehicle.interaction.sleeperDoorL.toggle.desc" },
+    }
+}

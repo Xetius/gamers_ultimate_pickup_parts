@@ -1,0 +1,48 @@
+{
+  "0-100 km/h":9.2,
+  "0-100 mph":27.3,
+  "0-60 mph":8.7,
+  "100-0 km/h":54.3,
+  "60-0 mph":169.5,
+  "60-100 mph":18.6,
+  "Body Style":"Pickup",
+  "BoundingBox":[
+    [
+      -0.44,
+      -1.49,
+      -0.3713
+    ],
+    [
+      1.54,
+      3.56,
+      1.41
+    ]
+  ],
+  "Braking G":0.725,
+  "Config Type":"Custom",
+  "Configuration":"D35 Derby Tank (A)",
+  "Description":"A combination of the most strong parts, combining an exterior roll cage, a big roof rack, strong suspension parts, a rear radiator, tucked in wheels, and not to forget, a heavy bumper. This machiene will win every derby with ease. In a row.",
+  "Drivetrain":"4WD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Off-Road Score":39,
+  "Performance Class":"3",
+  "Population":0,
+  "Power":248,
+  "PowerPeakRPM":"4300 - 4800",
+  "Propulsion":"ICE",
+  "Top Speed":52.55479456,
+  "Torque":453,
+  "TorquePeakRPM":"2350 - 3900",
+  "Transmission":"Automatic",
+  "Weight":2130,
+  "Weight/Power":7.802197802,
+  "Years":{
+    "max":1997,
+    "min":1992
+  },
+  "defaultPaintName1":"Sea Blue",
+  "defaultPaintName2":"Lead",
+  "defaultPaintName3":"Lead",
+  "vehicleSelectorSubGroup":"vehiclesData.pickup.d35_4WD_ext_longbed_A.vehicleSelectorSubGroup"
+}

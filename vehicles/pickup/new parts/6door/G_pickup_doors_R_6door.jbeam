@@ -1,0 +1,744 @@
+{
+"G_pickup_door_RR_6door": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Right Door",
+        "value":440,
+    },
+    "slotType" : "G_pickup_door_RR_6door",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_pickup_doorglass_RR_6door","G_pickup_doorglass_RR_6door", "Rear Right Door Glass"],
+        ["G_pickup_doorpanel_RR_6door","G_pickup_doorpanel_RR_6door", "Rear Right Door Panel"],
+        ["G_pickup_doorhandle_RR_6door","G_pickup_doorhandle_RR_6door","Rear Right Door Handle"],
+        ["G_pickup_doordetent_RR_6door","G_pickup_doordetent_RR_6door", "Rear Right Door Detent"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_door_RR_6door", ["G_pickup_door_RR_6door"]],
+         {"deformGroup":""},
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"doorRRRCoupler"}],
+    ]
+    "doorRRRCoupler":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["cb7rrr",  "d29arr",     35000,                     0.01,                   0.005,                      0.2,                 0.1,                   "doorRRR_latch"],
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["d29arr"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Door>80s_04_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Door>80s_04_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 60,
+        "openForceDuration": 0.6,
+        "closeForceMagnitude": 100,
+        "closeForceDuration": 0.6
+    }
+    "triggers":[
+        ["id", "label", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["door_RRR", "", "d17ar","d16ar","d20ar", "box", {"x":0.15, "y":0.05, "z":0.06}, {"x":-2, "y":0, "z":-0.1}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.033, "y":0.13, "z":-0.056}],
+        ["door_RRR_int", "", "d17ar","d16ar","d20ar", "box", {"x":0.12, "y":0.03, "z":0.07}, {"x":5, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.60, "y":0.03, "z":-0.117}],
+    ],
+    "triggerEventLinks":[
+        ["triggerId:triggers", "action", "targetEventId:events"],
+        ["door_RRR", "action0", "doorLatch_RRR"],
+        ["door_RRR_int", "action0", "doorLatch_RRR"],
+    ],
+    "events":[
+        ["id", "title", "desc"],
+        ["doorLatch_RRR", "Toggle Rear Right Door", "ui.inputActions.pickup.doorLatch_RRR.description", {"onUp":"controller.getControllerSafe('doorRRRCoupler').toggleGroup()"}],
+    ],
+    "sounds": {
+        "$+cabinFilterCoef": 0.03
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //--DOOR--
+         {"collision":true},
+         {"selfCollision":true},
+         {"group":"G_pickup_door_RR_6door"},
+         {"nodeWeight":1.786},
+
+         ["d15ar",-0.95, 1.24, 1.19],
+         ["d16ar",-0.95, 1.67, 1.19, {"selfCollision":false}],
+         ["d17ar",-0.95, 2.11, 1.19],
+
+         ["d20ar",-0.98, 2.11, 0.83],
+         ["d19ar",-0.98, 1.67, 0.83, {"selfCollision":false}],
+         ["d18ar",-0.98, 1.24, 0.83, {"selfCollision":false}],
+
+         ["d23ar",-0.92, 2.11, 0.45],
+         ["d22ar",-0.92, 1.67, 0.45],
+         ["d21ar",-0.92, 1.24, 0.45],
+
+         {"nodeWeight":1.128},
+         ["d24ar",-0.86, 2.10, 1.47],
+         ["d25ar",-0.74, 2.09, 1.71],
+         ["d26ar",-0.74, 1.67, 1.71],
+         ["d27ar",-0.74, 1.22, 1.71],
+         ["d28ar",-0.85, 1.23, 1.47],
+
+         //rigidifier
+         {"nodeWeight":1.88},
+         ["d29ar",-0.7, 1.67, 1.0, {"selfCollision":false, "collision":false}],
+         //latch node
+         {"group":""},
+         ["d29arr", -0.95, 2.0157, 0.84, {"selfCollision":false, "collision":false}],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--RIGHT DOOR--
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":1880940,"beamDamp":141},
+          {"beamDeform":12740,"beamStrength":"FLT_MAX"},
+          //door main shape
+          {"deformLimitExpansion":1.2},
+          ["d15ar", "d16ar"],
+          ["d16ar", "d17ar"],
+          ["d18ar", "d19ar"],
+          ["d19ar", "d20ar"],
+          ["d21ar", "d22ar"],
+          ["d22ar", "d23ar"],
+          ["d15ar", "d18ar"],
+          ["d18ar", "d21ar"],
+          ["d16ar", "d19ar"],
+          ["d19ar", "d22ar"],
+          ["d17ar", "d20ar"],
+          ["d20ar", "d23ar"],
+          {"deformGroup":"G_doorglass_RR_break_6door", "deformationTriggerRatio":0.01},
+          ["d15ar", "d28ar"],
+          ["d28ar", "d27ar"],
+          ["d27ar", "d26ar"],
+          ["d26ar", "d25ar"],
+          ["d25ar", "d24ar"],
+          ["d24ar", "d17ar"],
+          {"deformGroup":""},
+
+          //corner rigids
+          {"deformLimitExpansion":""},
+          {"beamDeform":2800,"beamStrength":"FLT_MAX"},
+          ["d15ar", "d21ar"],
+          ["d17ar", "d23ar"],
+          ["d16ar", "d22ar"],
+
+          //window frame
+          {"beamDeform":1400,"beamStrength":"FLT_MAX"},
+          {"deformGroup":"doorglass_RR_break", "deformationTriggerRatio":0.02},
+          ["d16ar", "d28ar"],
+          ["d16ar", "d24ar"],
+          ["d28ar", "d26ar"],
+          ["d24ar", "d26ar"],
+          ["d15ar", "d27ar"],
+          ["d17ar", "d25ar"],
+          ["d27ar", "d25ar"],
+          ["d24ar", "d27ar"],
+          ["d28ar", "d25ar"],
+          ["d17ar", "d26ar"],
+          ["d15ar", "d26ar"],
+          ["d25ar", "d16ar"],
+          ["d16ar", "d27ar"],
+          {"deformGroup":""},
+
+          //surficial crossing
+          {"beamDeform":4900,"beamStrength":"FLT_MAX"},
+          ["d21ar", "d19ar"],
+          ["d18ar", "d22ar"],
+          ["d18ar", "d16ar"],
+          ["d15ar", "d19ar"],
+          ["d19ar", "d17ar"],
+          ["d16ar", "d20ar"],
+          ["d22ar", "d20ar"],
+          ["d19ar", "d23ar"],
+
+          //rigidifier
+          {"beamSpring":1880940,"beamDamp":141},
+          {"beamDeform":2100,"beamStrength":"FLT_MAX"},
+          ["d29ar", "d15ar"],
+          ["d29ar", "d16ar"],
+          ["d29ar", "d17ar"],
+          ["d29ar", "d18ar"],
+          ["d29ar", "d19ar"],
+          ["d29ar", "d20ar"],
+          ["d29ar", "d21ar"],
+          ["d29ar", "d22ar"],
+          ["d29ar", "d23ar"],
+          {"deformGroup":"doorglass_RR_break", "deformationTriggerRatio":0.05},
+          ["d29ar", "d28ar"],
+          ["d29ar", "d24ar"],
+          ["d29ar", "d27ar"],
+          ["d26ar", "d29ar"],
+          ["d29ar", "d25ar"],
+          {"deformGroup":""},
+          //latch node
+          {"beamSpring":1880940,"beamDamp":141},
+          {"beamDeform":31850,"beamStrength":"FLT_MAX"},
+          ["d29arr","d17ar"],
+          ["d29arr","d20ar"],
+          ["d29arr","d19ar"],
+          ["d29arr","d25ar"],
+          //rear door hinge
+          {"beamSpring":1880940,"beamDamp":141},
+          {"beamDeform":15960,"beamStrength":43097.6},
+          {"breakGroup":"doorhinge_a_RR"},
+          ["d15ar", "p6ar"],
+          ["d15ar", "p5ar"],
+          ["d15ar", "p4ar"],
+          ["d15ar", "p3ar"],
+          {"breakGroup":"doorhinge_b_RR"},
+          ["d21ar", "b3arr"],
+          ["d21ar", "b2arr"],
+          ["d21ar", "b4arr"],
+          ["d21ar", "p4ar"],
+          ["d21ar", "p3ar"],
+          ["d21ar", "b3ar"],
+          {"breakGroup":""},
+          //--DOOR SUPPORT BEAMS--
+          {"beamPrecompression":1.0,"beamType":"|SUPPORT","beamLongBound":6},
+          {"beamSpring":1880940,"beamDamp":94},
+          {"beamDeform":5488,"beamStrength":279104},
+          ["d25ar", "rf4a"],
+          ["d23ar", "b4ar"],
+          ["b4rar", "d21ar"],
+          ["d23ar", "cb8arr"],
+          ["d17ar", "b4arr"],
+          ["d21ar", "p6ar"],
+          ["d15ar", "b3arr"],
+          ["d25ar", "rf2ar"],
+          ["d23ar", "b3arr"],
+          {"optional":true},
+          ["d17ar", "cb8ar"],
+          ["d15ar", "d8ar"],
+          ["d18ar", "d5ar", {"beamPrecompression":0.9}],
+          ["d21ar", "d2ar"],
+          {"optional":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.2},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //right door
+            {"groundModel":"metal"},
+            {"group":"G_pickup_door_RR_6door"},
+            {"dragCoef":18.75},
+            ["d25ar", "d24ar", "d26ar"],
+            ["d26ar", "d28ar", "d27ar"],
+            ["d28ar", "d16ar", "d15ar"],
+            ["d24ar", "d17ar", "d16ar"],
+            ["d16ar", "d28ar", "d26ar"],
+            ["d26ar", "d24ar", "d16ar"],
+            ["d17ar", "d19ar", "d16ar"],
+            ["d16ar", "d19ar", "d18ar"],
+            ["d18ar", "d15ar", "d16ar"],
+            ["d17ar", "d20ar", "d19ar"],
+            ["d19ar", "d21ar", "d18ar"],
+            ["d19ar", "d22ar", "d21ar"],
+            ["d19ar", "d20ar", "d22ar"],
+            ["d20ar", "d23ar", "d22ar"],
+            {"dragCoef":0},
+    ],
+},
+"G_pickup_door_RL_6door": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Left Door",
+        "value":440,
+    },
+    "slotType" : "G_pickup_door_RL_6door",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_pickup_doorglass_RL_6door","G_pickup_doorglass_RL_6door", "Rear Left Door Glass"],
+        ["G_pickup_doorpanel_RL_6door","G_pickup_doorpanel_RL_6door", "Rear Left Door Panel"],
+        ["G_pickup_doorhandle_RL_6door","G_pickup_doorhandle_RL_6door","Rear Left Door Handle"],
+        ["G_pickup_doordetent_RL_6door","G_pickup_doordetent_RL_6door", "Rear Left Door Detent"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_door_RL_6door", ["G_pickup_door_RL_6door"]],
+         {"deformGroup":""},
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"doorRRLCoupler"}],
+    ]
+    "doorRRLCoupler":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["cb7lll",  "d29all",     35000,                     0.01,                   0.005,                      0.2,                 0.1,                   "doorRRL_latch"],
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["d29all"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Door>80s_04_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Door>80s_04_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 60,
+        "openForceDuration": 0.6,
+        "closeForceMagnitude": 100,
+        "closeForceDuration": 0.6
+    }
+    "triggers":[
+        ["id", "label", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["door_RRL", "", "d17al","d16al","d20al", "box", {"x":0.15, "y":0.05, "z":0.06}, {"x":2, "y":0, "z":-0.1}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.033, "y":0.13, "z":0.007}],
+        ["door_RRL_int", "", "d17al","d16al","d20al", "box", {"x":0.12, "y":0.03, "z":0.07}, {"x":-5, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.60, "y":0.03, "z":0.087}],
+    ],
+    "triggerEventLinks":[
+        ["triggerId:triggers", "action", "targetEventId:events"],
+        ["door_RRL", "action0", "doorLatch_RRL"],
+        ["door_RRL_int", "action0", "doorLatch_RRL"],
+    ],
+    "events":[
+        ["id", "title", "desc"],
+        ["doorLatch_RRL", "Toggle Rear Left Door", "ui.inputActions.pickup.doorLatch_RRL.description", {"onUp":"controller.getControllerSafe('doorRRLCoupler').toggleGroup()"}],
+    ],
+    "sounds": {
+        "$+cabinFilterCoef": 0.03
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //--DOOR--
+         {"collision":true},
+         {"selfCollision":true},
+         {"group":"G_pickup_door_RL_6door"},
+         {"nodeWeight":1.786},
+
+         ["d15al", 0.95, 1.24, 1.19],
+         ["d16al", 0.95, 1.67, 1.19, {"selfCollision":false}],
+         ["d17al", 0.95, 2.11, 1.19],
+
+         ["d20al", 0.98, 2.11, 0.83],
+         ["d19al", 0.98, 1.67, 0.83, {"selfCollision":false}],
+         ["d18al", 0.98, 1.24, 0.83, {"selfCollision":false}],
+
+         ["d23al", 0.92, 2.11, 0.45],
+         ["d22al", 0.92, 1.67, 0.45],
+         ["d21al", 0.92, 1.24, 0.45],
+
+         {"nodeWeight":1.128},
+         ["d24al", 0.86, 2.10, 1.47],
+         ["d25al", 0.74, 2.09, 1.71],
+         ["d26al", 0.74, 1.67, 1.71],
+         ["d27al", 0.74, 1.22, 1.71],
+         ["d28al", 0.85, 1.23, 1.47],
+
+         //rigidifier
+         {"nodeWeight":1.88},
+         ["d29al", 0.7, 1.67, 1.0, {"selfCollision":false, "collision":false}],
+         //latch node
+         {"group":""},
+         ["d29all", 0.95, 2.0157, 0.84, {"selfCollision":false, "collision":false}],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--LEFT DOOR--
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":1880940,"beamDamp":141},
+          {"beamDeform":12740,"beamStrength":"FLT_MAX"},
+          //door main shape
+          {"deformLimitExpansion":1.2},
+          ["d15al", "d16al"],
+          ["d16al", "d17al"],
+          ["d18al", "d19al"],
+          ["d19al", "d20al"],
+          ["d21al", "d22al"],
+          ["d22al", "d23al"],
+          ["d15al", "d18al"],
+          ["d18al", "d21al"],
+          ["d16al", "d19al"],
+          ["d19al", "d22al"],
+          ["d17al", "d20al"],
+          ["d20al", "d23al"],
+          {"deformGroup":"G_doorglass_RL_break_6door", "deformationTriggerRatio":0.01},
+          ["d15al", "d28al"],
+          ["d28al", "d27al"],
+          ["d27al", "d26al"],
+          ["d26al", "d25al"],
+          ["d25al", "d24al"],
+          ["d24al", "d17al"],
+          {"deformGroup":""},
+
+          //corner rigids
+          {"deformLimitExpansion":""},
+          {"beamDeform":2800,"beamStrength":"FLT_MAX"},
+          ["d15al", "d21al"],
+          ["d17al", "d23al"],
+          ["d16al", "d22al"],
+
+          //window frame
+          {"beamDeform":1400,"beamStrength":"FLT_MAX"},
+          {"deformGroup":"doorglass_RL_break", "deformationTriggerRatio":0.02},
+          ["d16al", "d28al"],
+          ["d16al", "d24al"],
+          ["d28al", "d26al"],
+          ["d24al", "d26al"],
+          ["d15al", "d27al"],
+          ["d17al", "d25al"],
+          ["d27al", "d25al"],
+          ["d24al", "d27al"],
+          ["d28al", "d25al"],
+          ["d17al", "d26al"],
+          ["d15al", "d26al"],
+          ["d25al", "d16al"],
+          ["d16al", "d27al"],
+          {"deformGroup":""},
+
+          //surficial crossing
+          {"beamDeform":4900,"beamStrength":"FLT_MAX"},
+          ["d21al", "d19al"],
+          ["d18al", "d22al"],
+          ["d18al", "d16al"],
+          ["d15al", "d19al"],
+          ["d19al", "d17al"],
+          ["d16al", "d20al"],
+          ["d22al", "d20al"],
+          ["d19al", "d23al"],
+
+          //rigidifier
+          {"beamSpring":1880940,"beamDamp":141},
+          {"beamDeform":2100,"beamStrength":"FLT_MAX"},
+          ["d29al", "d15al"],
+          ["d29al", "d16al"],
+          ["d29al", "d17al"],
+          ["d29al", "d18al"],
+          ["d29al", "d19al"],
+          ["d29al", "d20al"],
+          ["d29al", "d21al"],
+          ["d29al", "d22al"],
+          ["d29al", "d23al"],
+          {"deformGroup":"doorglass_RL_break", "deformationTriggerRatio":0.05},
+          ["d29al", "d28al"],
+          ["d29al", "d24al"],
+          ["d29al", "d27al"],
+          ["d26al", "d29al"],
+          ["d29al", "d25al"],
+          {"deformGroup":""},
+          //latch node
+          {"beamSpring":1880940,"beamDamp":141},
+          {"beamDeform":31850,"beamStrength":"FLT_MAX"},
+          ["d29all","d17al"],
+          ["d29all","d20al"],
+          ["d29all","d19al"],
+          ["d29all","d25al"],
+          //rear door hinge
+          {"beamSpring":1880940,"beamDamp":141},
+          {"beamDeform":15960,"beamStrength":43097.6},
+          {"breakGroup":"doorhinge_a_RL"},
+          ["d15al", "p6al"],
+          ["d15al", "p5al"],
+          ["d15al", "p4al"],
+          ["d15al", "p3al"],
+          {"breakGroup":"doorhinge_b_RL"},
+          ["d21al", "b3all"],
+          ["d21al", "b2all"],
+          ["d21al", "b4all"],
+          ["d21al", "p4al"],
+          ["d21al", "p3al"],
+          ["d21al", "b3al"],
+          {"breakGroup":""},
+          //--DOOR SUPPORT BEAMS--
+          {"beamPrecompression":1.0,"beamType":"|SUPPORT","beamLongBound":6},
+          {"beamSpring":1880940,"beamDamp":94},
+          {"beamDeform":5488,"beamStrength":279104},
+          ["d25al", "rf4a"],
+          ["d23al", "b4al"],
+          ["b4all", "d2a1l"],
+          ["d23al", "cb8all"],
+          ["d17al", "b4all"],
+          ["d21al", "p6al"],
+          ["d15al", "b3all"],
+          ["d25al", "rf2al"],
+          ["d23al", "b3all"],
+          {"optional":true},
+          ["d17al", "cb8al"],
+          ["d15al", "d8al"],
+          ["d18al", "d5al", {"beamPrecompression":0.9}],
+          ["d21al", "d2al"],
+          {"optional":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.2},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //left door
+            {"groundModel":"metal"},
+            {"group":"G_pickup_door_RL_6door"},
+            {"dragCoef":18.75},
+            ["d24al", "d25al", "d26al"],
+            ["d28al", "d26al", "d27al"],
+            ["d16al", "d28al", "d15al"],
+            ["d17al", "d24al", "d16al"],
+            ["d28al", "d16al", "d26al"],
+            ["d24al", "d26al", "d16al"],
+            ["d19al", "d17al", "d16al"],
+            ["d19al", "d16al", "d18al"],
+            ["d15al", "d18al", "d16al"],
+            ["d20al", "d17al", "d19al"],
+            ["d21al", "d19al", "d18al"],
+            ["d22al", "d19al", "d21al"],
+            ["d20al", "d19al", "d22al"],
+            ["d23al", "d20al", "d22al"],
+            {"dragCoef":0},
+    ],
+},
+"G_pickup_doordetent_RR_6door": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Right Door Detent",
+        "value":30,
+    },
+    "slotType" : "G_pickup_doordetent_RR_6door",
+     "beams": [
+          ["id1:", "id2:"],
+          //door detent
+          {"beamLimitSpring":0,"beamLimitDamp":0},
+          {"beamType":"|BOUNDED","beamLongBound":0.2,"beamShortBound":0.1},
+          {"beamPrecompression":1.3,"beamSpring":350,"beamDamp":170,"beamStrength":8000},
+          {"breakGroup":"doorhinge_b_RRR"},
+          ["d22ar", "b4rrr",{"boundZone":0.05}],
+          {"beamPrecompression":2.0},
+          ["d22ar", "b4rrr",{"boundZone":0.05}],
+          {"beamType":"|BOUNDED","beamLongBound":1.2,"beamShortBound":0.2},
+          {"beamPrecompression":1.0,"beamSpring":0,"beamDamp":0},
+          {"beamLimitSpring":15000,"beamLimitDamp":1300},
+          {"boundZone":0.2},
+          ["d22ar", "b4rrr"],
+          {"boundZone":""},
+          {"breakGroup":""},
+          {"disableTriangleBreaking":false},
+          {"boundZone":""},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.1},
+    ],
+}
+"G_pickup_doordetent_RL_6door": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Left Door Detent",
+        "value":30,
+    },
+    "slotType" : "G_pickup_doordetent_RL_6door",
+     "beams": [
+          ["id1:", "id2:"],
+          //door detent
+          {"beamLimitSpring":0,"beamLimitDamp":0},
+          {"beamType":"|BOUNDED","beamLongBound":0.2,"beamShortBound":0.1},
+          {"beamPrecompression":1.3,"beamSpring":350,"beamDamp":170,"beamStrength":8000},
+          {"breakGroup":"doorhinge_b_RRL"},
+          ["d22al", "b4lll",{"boundZone":0.05}],
+          {"beamPrecompression":2.0},
+          ["d22al", "b4lll",{"boundZone":0.05}],
+          {"beamType":"|BOUNDED","beamLongBound":1.2,"beamShortBound":0.2},
+          {"beamPrecompression":1.0,"beamSpring":0,"beamDamp":0},
+          {"beamLimitSpring":15000,"beamLimitDamp":1300},
+          {"boundZone":0.2},
+          ["d22al", "b4lll"],
+          {"boundZone":""},
+          {"breakGroup":""},
+          {"disableTriangleBreaking":false},
+          {"boundZone":""},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.1},
+    ],
+}
+"G_pickup_doorpanel_RR_6door": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Right Door Panel",
+        "value":140,
+    },
+    "slotType" : "G_pickup_doorpanel_RR_6door",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_doorpanel_RR_6door", ["G_pickup_door_RR_6door"],[]],
+    ],
+    "triggers":[
+        ["id", "label", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["door_RRR_int", "", "d17ar","d16ar","d20ar", "box", {"x":0.12, "y":0.03, "z":0.07}, {"x":5, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.60, "y":0.03, "z":-0.117}],
+    ],
+    "sounds": {
+        "$+cabinFilterCoef": 0.03
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //rigidifier
+         {"selfCollision":false},
+         {"collision":false},
+         {"nodeWeight":5.64},
+         ["d29ar",-0.7, 1.67, 1.0, {"group":""}],
+         {"group":""},
+    ],
+},
+"G_pickup_doorpanel_RL_6door": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Left Door Panel",
+        "value":140,
+    },
+    "slotType" : "G_pickup_doorpanel_RL_6door",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_doorpanel_RL_6door", ["G_pickup_door_RL_6door"],[]],
+    ],
+    "triggers":[
+        ["id", "label", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["door_RRL_int", "", "d17al","d16al","d20al", "box", {"x":0.12, "y":0.03, "z":0.07}, {"x":-5, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.60, "y":0.03, "z":0.087}],
+    ],
+    "sounds": {
+        "$+cabinFilterCoef": 0.03
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //rigidifier
+         {"selfCollision":false},
+         {"collision":false},
+         {"nodeWeight":5.64},
+         ["d29al",0.7, 1.67, 1.0, {"group":""}],
+         {"group":""},
+    ],
+},
+"G_pickup_doorpanel_RR_6door_facelift": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Late Rear Right Door Panel",
+        "value":240,
+    },
+    "slotType" : "G_pickup_doorpanel_RR_6door",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_facelift_doorpanel_RR_6door", ["G_pickup_door_RR_6door"],[]],
+    ],
+    "triggers":[
+        ["id", "label", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["door_RRR_int", "", "d17ar","d16ar","d20ar", "box", {"x":0.16, "y":0.03, "z":0.07}, {"x":5, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.64, "y":0.06, "z":-0.13}],
+    ],
+    "sounds": {
+        "$+cabinFilterCoef": 0.03
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //rigidifier
+         {"selfCollision":false},
+         {"collision":false},
+         {"nodeWeight":6.64},
+         ["d29ar",-0.7, 1.67, 1.0, {"group":""}],
+         {"group":""},
+    ],
+},
+"G_pickup_doorpanel_RL_6door_facelift": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Late Rear Left Door Panel",
+        "value":240,
+    },
+    "slotType" : "G_pickup_doorpanel_RL_6door",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_facelift_doorpanel_RL_6door", ["G_pickup_door_RL_6door"],[]],
+    ],
+    "triggers":[
+        ["id", "label", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["door_RRL_int", "", "d17al","d16al","d20al", "box", {"x":0.16, "y":0.03, "z":0.07}, {"x":-5, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.64, "y":0.06, "z":0.1}],
+    ],
+    "sounds": {
+        "$+cabinFilterCoef": 0.03
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //rigidifier
+         {"selfCollision":false},
+         {"collision":false},
+         {"nodeWeight":6.64},
+         ["d29al",0.7, 1.67, 1.0, {"group":""}],
+         {"group":""},
+    ],
+},
+"G_pickup_doorhandle_RR_6door": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Early Rear Right Door Handle (Black)",
+        "value":20,
+    },
+    "slotType" : "G_pickup_doorhandle_RR_6door",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_doorhandle_RR_6door", ["G_pickup_door_RR_6door"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         {"deformGroup":""},
+    ],
+},
+"G_pickup_doorhandle_RL_6door": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Early Rear Left Door Handle (Black)",
+        "value":20,
+    },
+    "slotType" : "G_pickup_doorhandle_RL_6door",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_doorhandle_RL_6door", ["G_pickup_door_RL_6door"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         {"deformGroup":""},
+    ],
+},
+"G_pickup_doorhandle_RR_facelift_6door": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Late Rear Right Door Handle (Body Colored)",
+        "value":50,
+    },
+    "slotType" : "G_pickup_doorhandle_RR_6door",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_doorhandle_RR_6door_facelift", ["G_pickup_door_RR_6door"],[]{"pos":{"x":0,"y":0.903,"z":0}}],
+         {"deformGroup":""},
+    ],
+},
+"G_pickup_doorhandle_RL_facelift_6door": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Late Rear Left Door Handle (Body Colored)",
+        "value":50,
+    },
+    "slotType" : "G_pickup_doorhandle_RL_6door",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_doorhandle_RL_6door_facelift", ["G_pickup_door_RL_6door"],[]{"pos":{"x":0,"y":0.903,"z":0}}],
+         {"deformGroup":""},
+    ],
+},
+"G_pickup_doorhandle_RR_facelift_alt_6door": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Late Rear Right Door Handle (Black)",
+        "value":30,
+    },
+    "slotType" : "G_pickup_doorhandle_RR_6door",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_doorhandle_RR_6door_facelift_alt", ["G_pickup_door_RR_6door"],[]{"pos":{"x":0,"y":0.903,"z":0}}],
+         {"deformGroup":""},
+    ],
+},
+"G_pickup_doorhandle_RL_facelift_alt_6door": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Late Rear Left Door Handle (Black)",
+        "value":30,
+    },
+    "slotType" : "G_pickup_doorhandle_RL_6door",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_doorhandle_RL_6door_facelift_alt", ["G_pickup_door_RL_6door"],[]{"pos":{"x":0,"y":0.903,"z":0}}],
+         {"deformGroup":""},
+    ],
+},
+}

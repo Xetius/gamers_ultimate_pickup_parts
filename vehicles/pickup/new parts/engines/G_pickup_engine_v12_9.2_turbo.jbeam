@@ -1,0 +1,1026 @@
+{
+"G_pickup_intake_v12_turbo_prefacelift": {
+    "information":{
+        "authors":"Gamer",
+        "name":"Early Turbocharger",
+        "value":420,
+    },
+    "slotType" : "G_pickup_intake_v12",
+    "slots": [
+        ["type", "default","description"],
+        ["pickup_exhaust_v8_diesel","pickup_exhaust_v8_diesel","Exhaust"],
+    ],
+    "turbocharger": {
+        "hissLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_semi_01>turbo_hiss",
+        "whineLoopEvent":"event:>Vehicle>Forced_Induction>Turbo>Spin>turbo_spin_11",
+        "bovEnabled":false,
+        "turboSizeCoef": 0.0,
+        "bovSoundVolumeCoef": 0.0,
+        "hissVolumePerPSI": 0.1,
+        "whineVolumePer10kRPM": 0.03,
+        "whinePitchPer10kRPM": 0.06,
+        "wastegateStart":5.5,
+        "wastegateLimit":6.3,
+        "maxExhaustPower": 20000,
+        "backPressureCoef": 0.00008,
+        "frictionCoef": 100,
+        "inertia":8,
+        "damageThresholdTemperature": 750,
+        "pressurePSI":[
+            //turbineRPM, pressure(PSI)
+            [0,       0],
+            [25000,   3],
+            [50000,   5],
+            [100000,  8],
+            [150000, 12],
+            [200000, 16],
+            [250000, 20],
+        ],
+        "engineDef":[
+            //engineRPM, efficiency, exhaustFactor
+            [0,     0.01,  0.01],
+            [250,   0.62,  0.42],
+            [500,   0.75,  0.65],
+            [800,   0.78,  0.73],
+            [1100,  0.81,  0.76],
+            [1400,  0.83,  0.81],
+            [2000,  0.82,  0.82],
+            [2500,  0.81,  0.77],
+            [3000,  0.75,  0.72],
+            [3500,  0.71,  0.66],
+            [4000,  0.64,  0.60],
+            [5000,  0.61,  0.40],
+            [6000,  0.56,  0.24],
+            [7000,  0.48,  0.11],
+        ],
+    },
+    "mainEngine": {
+        //turbocharger name
+        "turbocharger":"turbocharger",
+
+        //damage deformGroups
+        "deformGroups_turbo":["mainEngine_turbo","mainEngine_intercooler"]
+    },
+    "soundConfig": {
+        "$+mainGain":1,
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["G_gavril_v12_turbocharger", ["pickup_engine", "pickup_exmanifold", "pickup_engine_intake", "pickup_airbox"], [], {"pos":{"x":0, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+        ["G_pickup_v12_intake_stock_belts", ["pickup_engine", "pickup_exmanifold", "pickup_engine_intake", "pickup_airbox"], [], {"pos":{"x":0, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         //--Stock Intake
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":3.76},
+         {"group":["pickup_engine_intake"]},
+         ["turbo", 0.0, -1.3, 1.1],
+         {"group":["pickup_airbox"]},
+         {"nodeWeight":1.88},
+         ["intake2", 0.6, -1.94, 1.04, {"selfCollision":true}],
+         {"engineGroup":""},
+         {"nodeWeight":3},
+         ["interc", 0.0, -1.84, 0.9],
+         {"group":"pickup_exmanifold"},
+         //exhaust manifold
+         ["exm1r", -0.3, -0.7, 0.43, {"nodeWeight":6, "afterFireAudioCoef":1.0, "afterFireVisualCoef":1.0, "afterFireVolumeCoef":1.0, "afterFireMufflingCoef":1.0, "exhaustAudioMufflingCoef":1.0, "exhaustAudioGainChange":0}],
+         {"selfCollision":true},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          //turbo
+          {"beamSpring":2750550,"beamDamp":125},
+          {"beamDeform":30000,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":""},
+          {"deformGroup":"mainEngine_turbo", "deformationTriggerRatio":0.001}
+          ["turbo","e1r"],
+          ["turbo","e2r"],
+          ["turbo","e3r"],
+          ["turbo","e4r"],
+          ["turbo","e1l"],
+          ["turbo","e2l"],
+          ["turbo","e3l"],
+          ["turbo","e4l"],
+
+          //intercooler
+          {"beamSpring":870369.5,"beamDamp":130.43},
+          {"beamDeform":6300,"beamStrength":"FLT_MAX"},
+          {"deformGroup":"mainEngine_intercooler","deformationTriggerRatio":0.05},
+          ["interc","e1r"],
+          ["interc","e2r"],
+          ["interc","e3r"],
+          ["interc","e4r"],
+          ["interc","e1l"],
+          ["interc","e2l"],
+          ["interc","e3l"],
+          ["interc","e4l"],
+          {"deformGroup":""}
+
+          //intake
+          {"beamSpring":1880940,"beamDamp":235},
+          {"beamDeform":105000,"beamStrength":"FLT_MAX"},
+          //{"deformGroup":"mainEngine_intake", "deformationTriggerRatio":0.01}
+
+          {"beamSpring":120940,"beamDamp":141},
+          {"beamDeform":6150,"beamStrength":"FLT_MAX"},
+          ["intake2", "e4l"],
+          ["intake2", "e3l"],
+          ["intake2", "e2l"],
+          ["intake2", "e1l"],
+          ["intake2", "e4r"],
+          {"optional":true},
+          {"beamDeform":9150,"beamStrength":9900},
+          ["intake2", "s2l"],
+          ["intake2", "s2ll"],
+          ["intake2", "s1l"],
+          ["intake2", "s1ll"],
+          {"deformGroup":""}
+          {"optional":false},
+
+          //exhaust manifold
+          {"beamSpring":11163370,"beamDamp":130.43},
+          {"beamDeform":90000,"beamStrength":"FLT_MAX"},
+          ["exm1r","e3l"],
+          ["exm1r","e3r"],
+          ["exm1r","e4l"],
+          ["exm1r","e4r"],
+          ["exm1r", "e1r"],
+          ["exm1r", "e1l"],
+          ["exm1r", "e2l"],
+          ["e2r", "exm1r", {"isExhaust":"mainEngine"}],
+
+          //mesh break beams
+          {"beamPrecompression":0.8, "beamType":"|SUPPORT","beamLongBound":0.8},
+          {"beamSpring":9400,"beamDamp":0},
+          {"beamDeform":350,"beamStrength":700},
+          ["turbo", "intake2"],
+          ["intake2", "e4l"],
+          {"deformGroup":""},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_intake_v12_turbo": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Stock Turbocharger",
+        "value":720,
+    },
+    "slotType" : "G_pickup_intake_v12",
+    "slots": [
+        ["type", "default","description"],
+        ["pickup_exhaust_v8_diesel","pickup_exhaust_v8_diesel","Exhaust"],
+    ],
+    "turbocharger": {
+        "hissLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_semi_01>turbo_hiss",
+        "whineLoopEvent":"event:>Vehicle>Forced_Induction>Turbo>Spin>turbo_spin_11",
+        "bovEnabled":false,
+        "turboSizeCoef": 0.0,
+        "bovSoundVolumeCoef": 0.0,
+        "hissVolumePerPSI": 0.1,
+        "whineVolumePer10kRPM": 0.04,
+        "whinePitchPer10kRPM": 0.06,
+        "wastegateStart":6.2,
+        "wastegateLimit":7.0,
+        "maxExhaustPower": 23000,
+        "backPressureCoef": 0.00008,
+        "frictionCoef": 100,
+        "inertia":8,
+        "damageThresholdTemperature": 750,
+        "pressurePSI":[
+            //turbineRPM, pressure(PSI)
+            [0,       0],
+            [25000,   3],
+            [50000,   5],
+            [100000,  8],
+            [150000, 12],
+            [200000, 16],
+            [250000, 20],
+        ],
+        "engineDef":[
+            //engineRPM, efficiency, exhaustFactor
+            [0,     0.01,  0.01],
+            [250,   0.62,  0.42],
+            [500,   0.75,  0.65],
+            [800,   0.78,  0.73],
+            [1100,  0.81,  0.76],
+            [1400,  0.83,  0.81],
+            [2000,  0.82,  0.82],
+            [2500,  0.81,  0.77],
+            [3000,  0.75,  0.72],
+            [3500,  0.71,  0.66],
+            [4000,  0.64,  0.60],
+            [5000,  0.58,  0.40],
+            [6000,  0.52,  0.24],
+            [7000,  0.44,  0.11],
+        ],
+    },
+    "mainEngine": {
+        //turbocharger name
+        "turbocharger":"turbocharger",
+        "torqueModIntake":[
+            ["rpm", "torque"],
+            [0,    0 ],
+            [1000, 5],
+            [1500, 14],
+            [2000, 33],
+            [2500, 40],
+            [3000, 42],
+            [4000, 40],
+            [5000, 20],
+        ],
+
+        //damage deformGroups
+        "deformGroups_turbo":["mainEngine_turbo","mainEngine_intercooler"]
+    },
+    "soundConfig": {
+        "$+mainGain":0.5,
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["G_gavril_v12_turbocharger", ["pickup_engine", "pickup_exmanifold", "pickup_engine_intake", "pickup_airbox"], [], {"pos":{"x":0, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+        ["G_pickup_v12_intake_stock_belts", ["pickup_engine", "pickup_exmanifold", "pickup_engine_intake", "pickup_airbox"], [], {"pos":{"x":0, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         //--Stock Intake
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":3.76},
+         {"group":["pickup_engine_intake"]},
+         ["turbo", 0.0, -1.3, 1.1],
+         {"group":["pickup_airbox"]},
+         {"nodeWeight":1.88},
+         ["intake2", 0.6, -1.94, 1.04, {"selfCollision":true}],
+         {"engineGroup":""},
+         {"nodeWeight":3},
+         ["interc", 0.0, -1.84, 0.9],
+         {"group":"pickup_exmanifold"},
+         //exhaust manifold
+         ["exm1r", -0.3, -0.7, 0.43, {"nodeWeight":6, "afterFireAudioCoef":1.0, "afterFireVisualCoef":1.0, "afterFireVolumeCoef":1.0, "afterFireMufflingCoef":1.0, "exhaustAudioMufflingCoef":1.0, "exhaustAudioGainChange":0}],
+         {"selfCollision":true},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          //turbo
+          {"beamSpring":2750550,"beamDamp":125},
+          {"beamDeform":30000,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":""},
+          {"deformGroup":"mainEngine_turbo", "deformationTriggerRatio":0.001}
+          ["turbo","e1r"],
+          ["turbo","e2r"],
+          ["turbo","e3r"],
+          ["turbo","e4r"],
+          ["turbo","e1l"],
+          ["turbo","e2l"],
+          ["turbo","e3l"],
+          ["turbo","e4l"],
+
+          //intercooler
+          {"beamSpring":870369.5,"beamDamp":130.43},
+          {"beamDeform":6300,"beamStrength":"FLT_MAX"},
+          {"deformGroup":"mainEngine_intercooler","deformationTriggerRatio":0.05},
+          ["interc","e1r"],
+          ["interc","e2r"],
+          ["interc","e3r"],
+          ["interc","e4r"],
+          ["interc","e1l"],
+          ["interc","e2l"],
+          ["interc","e3l"],
+          ["interc","e4l"],
+          {"deformGroup":""}
+
+          //intake
+          {"beamSpring":1880940,"beamDamp":235},
+          {"beamDeform":105000,"beamStrength":"FLT_MAX"},
+          //{"deformGroup":"mainEngine_intake", "deformationTriggerRatio":0.01}
+
+          {"beamSpring":120940,"beamDamp":141},
+          {"beamDeform":6150,"beamStrength":"FLT_MAX"},
+          ["intake2", "e4l"],
+          ["intake2", "e3l"],
+          ["intake2", "e2l"],
+          ["intake2", "e1l"],
+          ["intake2", "e4r"],
+          {"optional":true},
+          {"beamDeform":9150,"beamStrength":9900},
+          ["intake2", "s2l"],
+          ["intake2", "s2ll"],
+          ["intake2", "s1l"],
+          ["intake2", "s1ll"],
+          {"deformGroup":""}
+          {"optional":false},
+
+          //exhaust manifold
+          {"beamSpring":11163370,"beamDamp":130.43},
+          {"beamDeform":90000,"beamStrength":"FLT_MAX"},
+          ["exm1r","e3l"],
+          ["exm1r","e3r"],
+          ["exm1r","e4l"],
+          ["exm1r","e4r"],
+          ["exm1r", "e1r"],
+          ["exm1r", "e1l"],
+          ["exm1r", "e2l"],
+          ["e2r", "exm1r", {"isExhaust":"mainEngine"}],
+
+          //mesh break beams
+          {"beamPrecompression":0.8, "beamType":"|SUPPORT","beamLongBound":0.8},
+          {"beamSpring":9400,"beamDamp":0},
+          {"beamDeform":350,"beamStrength":700},
+          ["turbo", "intake2"],
+          ["intake2", "e4l"],
+          {"deformGroup":""},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_intake_v12_turbo_late": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Late Turbocharger",
+        "value":1120,
+    },
+    "slotType" : "G_pickup_intake_v12",
+    "slots": [
+        ["type", "default","description"],
+        ["pickup_exhaust_v8_diesel","pickup_exhaust_v8_diesel","Exhaust"],
+    ],
+    "turbocharger": {
+        "hissLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_semi_01>turbo_hiss",
+        "whineLoopEvent":"event:>Vehicle>Forced_Induction>Turbo>Spin>turbo_spin_11",
+        "bovEnabled":false,
+        "turboSizeCoef": 0.0,
+        "bovSoundVolumeCoef": 0.0,
+        "hissVolumePerPSI": 0.1,
+        "whineVolumePer10kRPM": 0.04,
+        "whinePitchPer10kRPM": 0.06,
+        "wastegateStart":7.6,
+        "wastegateLimit":8.3,
+        "maxExhaustPower": 33000,
+        "backPressureCoef": 0.00008,
+        "frictionCoef": 90,
+        "inertia":7.5,
+        "damageThresholdTemperature": 750,
+        "pressurePSI":[
+            //turbineRPM, pressure(PSI)
+            [0,       0],
+            [25000,   4],
+            [50000,   7],
+            [100000, 10],
+            [150000, 13],
+            [200000, 17],
+            [250000, 22],
+        ],
+        "engineDef":[
+            //engineRPM, efficiency, exhaustFactor
+            [0,     0.01,  0.01],
+            [250,   0.64,  0.42],
+            [500,   0.79,  0.65],
+            [800,   0.82,  0.73],
+            [1100,  0.86,  0.76],
+            [1400,  0.88,  0.81],
+            [2000,  0.87,  0.84],
+            [2500,  0.85,  0.77],
+            [3000,  0.80,  0.72],
+            [3500,  0.75,  0.66],
+            [4000,  0.69,  0.60],
+            [5000,  0.64,  0.40],
+            [6000,  0.59,  0.24],
+            [7000,  0.52,  0.11],
+        ],
+    },
+    "mainEngine": {
+        //turbocharger name
+        "turbocharger":"turbocharger",
+        "torqueModIntake":[
+            ["rpm", "torque"],
+            [0,    0 ],
+            [1000, 40],
+            [1500, 54],
+            [2000, 71],
+            [2500, 105],
+            [3000, 125],
+            [4000, 110],
+            [5000, 95],
+        ],
+
+        //damage deformGroups
+        "deformGroups_turbo":["mainEngine_turbo","mainEngine_intercooler"]
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["G_gavril_v12_turbocharger", ["pickup_engine", "pickup_exmanifold", "pickup_engine_intake", "pickup_airbox"], [], {"pos":{"x":0, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+        ["G_pickup_v12_intake_stock_belts", ["pickup_engine", "pickup_exmanifold", "pickup_engine_intake", "pickup_airbox"], [], {"pos":{"x":0, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         //--Stock Intake
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":3.76},
+         {"group":["pickup_engine_intake"]},
+         ["turbo", 0.0, -1.3, 1.1],
+         {"group":["pickup_airbox"]},
+         {"nodeWeight":1.88},
+         ["intake2", 0.6, -1.94, 1.04, {"selfCollision":true}],
+         {"engineGroup":""},
+         {"nodeWeight":3},
+         ["interc", 0.0, -1.84, 0.9],
+         {"group":"pickup_exmanifold"},
+         //exhaust manifold
+         ["exm1r", -0.3, -0.7, 0.43, {"nodeWeight":6, "afterFireAudioCoef":1.0, "afterFireVisualCoef":1.0, "afterFireVolumeCoef":1.0, "afterFireMufflingCoef":1.0, "exhaustAudioMufflingCoef":1.0, "exhaustAudioGainChange":0}],
+         {"selfCollision":true},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          //turbo
+          {"beamSpring":2750550,"beamDamp":125},
+          {"beamDeform":30000,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":""},
+          {"deformGroup":"mainEngine_turbo", "deformationTriggerRatio":0.001}
+          ["turbo","e1r"],
+          ["turbo","e2r"],
+          ["turbo","e3r"],
+          ["turbo","e4r"],
+          ["turbo","e1l"],
+          ["turbo","e2l"],
+          ["turbo","e3l"],
+          ["turbo","e4l"],
+
+          //intercooler
+          {"beamSpring":870369.5,"beamDamp":130.43},
+          {"beamDeform":6300,"beamStrength":"FLT_MAX"},
+          {"deformGroup":"mainEngine_intercooler","deformationTriggerRatio":0.05},
+          ["interc","e1r"],
+          ["interc","e2r"],
+          ["interc","e3r"],
+          ["interc","e4r"],
+          ["interc","e1l"],
+          ["interc","e2l"],
+          ["interc","e3l"],
+          ["interc","e4l"],
+          {"deformGroup":""}
+
+          //intake
+          {"beamSpring":1880940,"beamDamp":235},
+          {"beamDeform":105000,"beamStrength":"FLT_MAX"},
+          //{"deformGroup":"mainEngine_intake", "deformationTriggerRatio":0.01}
+
+          {"beamSpring":120940,"beamDamp":141},
+          {"beamDeform":6150,"beamStrength":"FLT_MAX"},
+          ["intake2", "e4l"],
+          ["intake2", "e3l"],
+          ["intake2", "e2l"],
+          ["intake2", "e1l"],
+          ["intake2", "e4r"],
+          {"optional":true},
+          {"beamDeform":9150,"beamStrength":9900},
+          ["intake2", "s2l"],
+          ["intake2", "s2ll"],
+          ["intake2", "s1l"],
+          ["intake2", "s1ll"],
+          {"deformGroup":""}
+          {"optional":false},
+
+          //exhaust manifold
+          {"beamSpring":11163370,"beamDamp":130.43},
+          {"beamDeform":90000,"beamStrength":"FLT_MAX"},
+          ["exm1r","e3l"],
+          ["exm1r","e3r"],
+          ["exm1r","e4l"],
+          ["exm1r","e4r"],
+          ["exm1r", "e1r"],
+          ["exm1r", "e1l"],
+          ["exm1r", "e2l"],
+          ["e2r", "exm1r", {"isExhaust":"mainEngine"}],
+
+          //mesh break beams
+          {"beamPrecompression":0.8, "beamType":"|SUPPORT","beamLongBound":0.8},
+          {"beamSpring":9400,"beamDamp":0},
+          {"beamDeform":350,"beamStrength":700},
+          ["turbo", "intake2"],
+          ["intake2", "e4l"],
+          {"deformGroup":""},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_intake_v12_turbo_stage1": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Stage 1 Turbocharger",
+        "value":4250,
+    },
+    "slotType" : "G_pickup_intake_v12",
+    "slots": [
+        ["type", "default","description"],
+        ["pickup_exhaust_v8_diesel","pickup_exhaust_v8_diesel","Exhaust"],
+    ],
+    "turbocharger": {
+        "hissLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_semi_01>turbo_hiss",
+        "whineLoopEvent":"event:>Vehicle>Forced_Induction>Turbo>Spin>turbo_spin_powerwhistle_01",
+        "bovEnabled":false,
+        "turboSizeCoef": 0.0,
+        "bovSoundVolumeCoef": 0.0,
+        "hissVolumePerPSI": 0.055,
+        "whineVolumePer10kRPM": 0.050,
+        "whinePitchPer10kRPM": 0.055,
+        "wastegateStart":14,
+        "wastegateLimit":15,
+        "maxExhaustPower": 38000,
+        "backPressureCoef": 0.00008,
+        "frictionCoef": 80,
+        "inertia":10,
+        "damageThresholdTemperature": 750,
+        "pressurePSI":[
+            //turbineRPM, pressure(PSI)
+            [0,       0],
+            [25000,   3],
+            [50000,   6],
+            [100000,  9],
+            [150000, 14],
+            [200000, 19],
+            [250000, 25],
+        ],
+        "engineDef":[
+            //engineRPM, efficiency, exhaustFactor
+            [0,     0.01,  0.01],
+            [250,   0.62,  0.42],
+            [500,   0.73,  0.65],
+            [800,   0.76,  0.73],
+            [1100,  0.79,  0.76],
+            [1400,  0.81,  0.80],
+            [2000,  0.82,  0.81],
+            [2500,  0.82,  0.82],
+            [3000,  0.79,  0.77],
+            [3500,  0.75,  0.74],
+            [4000,  0.71,  0.70],
+            [5000,  0.64,  0.60],
+            [6000,  0.56,  0.48],
+            [7000,  0.47,  0.32],
+        ],
+    },
+    "mainEngine": {
+        //turbocharger name
+        "turbocharger":"turbocharger",
+        "$+particulates":0.09,
+
+        //damage deformGroups
+        "deformGroups_turbo":["mainEngine_turbo","mainEngine_intercooler"]
+    },
+    "soundConfig": {
+        "$+mainGain":1,
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["G_gavril_v12_turbocharger", ["pickup_engine", "pickup_exmanifold", "pickup_engine_intake", "pickup_airbox"], [], {"pos":{"x":0, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+        ["G_pickup_v12_intake_stock_belts", ["pickup_engine", "pickup_exmanifold", "pickup_engine_intake", "pickup_airbox"], [], {"pos":{"x":0, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         //--Stock Intake
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":3.76},
+         {"group":["pickup_engine_intake"]},
+         ["turbo", 0.0, -1.3, 1.1],
+         {"group":["pickup_airbox"]},
+         {"nodeWeight":1.88},
+         ["intake2", 0.6, -1.94, 1.04, {"selfCollision":true}],
+         {"engineGroup":""},
+         {"nodeWeight":3},
+         ["interc", 0.0, -1.84, 0.9],
+         {"group":"pickup_exmanifold"},
+         //exhaust manifold
+         ["exm1r", -0.3, -0.7, 0.43, {"nodeWeight":6, "afterFireAudioCoef":1.0, "afterFireVisualCoef":1.0, "afterFireVolumeCoef":1.0, "afterFireMufflingCoef":1.0, "exhaustAudioMufflingCoef":1.0, "exhaustAudioGainChange":0}],
+         {"selfCollision":true},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          //turbo
+          {"beamSpring":2750550,"beamDamp":125},
+          {"beamDeform":30000,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":""},
+          {"deformGroup":"mainEngine_turbo", "deformationTriggerRatio":0.001}
+          ["turbo","e1r"],
+          ["turbo","e2r"],
+          ["turbo","e3r"],
+          ["turbo","e4r"],
+          ["turbo","e1l"],
+          ["turbo","e2l"],
+          ["turbo","e3l"],
+          ["turbo","e4l"],
+
+          //intercooler
+          {"beamSpring":870369.5,"beamDamp":130.43},
+          {"beamDeform":6300,"beamStrength":"FLT_MAX"},
+          {"deformGroup":"mainEngine_intercooler","deformationTriggerRatio":0.05},
+          ["interc","e1r"],
+          ["interc","e2r"],
+          ["interc","e3r"],
+          ["interc","e4r"],
+          ["interc","e1l"],
+          ["interc","e2l"],
+          ["interc","e3l"],
+          ["interc","e4l"],
+          {"deformGroup":""}
+
+          //intake
+          {"beamSpring":1880940,"beamDamp":235},
+          {"beamDeform":105000,"beamStrength":"FLT_MAX"},
+          //{"deformGroup":"mainEngine_intake", "deformationTriggerRatio":0.01}
+
+          {"beamSpring":120940,"beamDamp":141},
+          {"beamDeform":6150,"beamStrength":"FLT_MAX"},
+          ["intake2", "e4l"],
+          ["intake2", "e3l"],
+          ["intake2", "e2l"],
+          ["intake2", "e1l"],
+          ["intake2", "e4r"],
+          {"optional":true},
+          {"beamDeform":9150,"beamStrength":9900},
+          ["intake2", "s2l"],
+          ["intake2", "s2ll"],
+          ["intake2", "s1l"],
+          ["intake2", "s1ll"],
+          {"deformGroup":""}
+          {"optional":false},
+
+          //exhaust manifold
+          {"beamSpring":11163370,"beamDamp":130.43},
+          {"beamDeform":90000,"beamStrength":"FLT_MAX"},
+          ["exm1r","e3l"],
+          ["exm1r","e3r"],
+          ["exm1r","e4l"],
+          ["exm1r","e4r"],
+          ["exm1r", "e1r"],
+          ["exm1r", "e1l"],
+          ["exm1r", "e2l"],
+          ["e2r", "exm1r", {"isExhaust":"mainEngine"}],
+
+          //mesh break beams
+          {"beamPrecompression":0.8, "beamType":"|SUPPORT","beamLongBound":0.8},
+          {"beamSpring":9400,"beamDamp":0},
+          {"beamDeform":350,"beamStrength":700},
+          ["turbo", "intake2"],
+          ["intake2", "e4l"],
+          {"deformGroup":""},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+
+"G_pickup_intake_v12_turbo_stage2": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Stage 2 Turbocharger",
+        "value":6750,
+    },
+    "slotType" : "G_pickup_intake_v12",
+    "slots": [
+        ["type", "default","description"],
+        ["pickup_exhaust_v8_diesel","pickup_exhaust_v8_diesel","Exhaust"],
+    ],
+    "turbocharger": {
+        "hissLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_semi_01>turbo_hiss",
+        "whineLoopEvent":"event:>Vehicle>Forced_Induction>Turbo>Spin>turbo_spin_powerwhistle_01",
+        "bovEnabled":false,
+        "turboSizeCoef": 0.0,
+        "bovSoundVolumeCoef": 0.0,
+        "hissVolumePerPSI": 0.055,
+        "whineVolumePer10kRPM": 0.050,
+        "whinePitchPer10kRPM": 0.055,
+        "wastegateStart":29,
+        "wastegateLimit":30,
+        "maxExhaustPower": 34000,
+        "backPressureCoef": 0.00006,
+        "frictionCoef": 80,
+        "inertia":15,
+        "damageThresholdTemperature": 750,
+        "pressurePSI":[
+            //turbineRPM, pressure(PSI)
+            [0,       0],
+            [25000,   4],
+            [50000,   16],
+            [100000, 25],
+            [150000, 30],
+            [200000, 39],
+            [250000, 43],
+        ],
+        "engineDef":[
+            //engineRPM, efficiency, exhaustFactor
+            [0,     0.01,  0.01],
+            [250,   0.60,  0.40],
+            [500,   0.71,  0.63],
+            [800,   0.74,  0.71],
+            [1100,  0.75,  0.74],
+            [1400,  0.78,  0.77],
+            [2000,  0.80,  0.80],
+            [2500,  0.82,  0.82],
+            [3000,  0.81,  0.81],
+            [3500,  0.78,  0.77],
+            [4000,  0.73,  0.75],
+            [5000,  0.69,  0.66],
+            [6000,  0.64,  0.62],
+            [7000,  0.57,  0.57],
+        ],
+    },
+    "mainEngine": {
+        //turbocharger name
+        "turbocharger":"turbocharger",
+        "$+particulates":0.06,
+
+        //damage deformGroups
+        "deformGroups_turbo":["mainEngine_turbo","mainEngine_intercooler"]
+    },
+    "soundConfig": {
+        "$+mainGain":1.5,
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["G_gavril_v12_turbocharger", ["pickup_engine", "pickup_exmanifold", "pickup_engine_intake", "pickup_airbox"], [], {"pos":{"x":0, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+        ["G_pickup_v12_intake_stock_belts", ["pickup_engine", "pickup_exmanifold", "pickup_engine_intake", "pickup_airbox"], [], {"pos":{"x":0, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         //--Stock Intake
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":3.76},
+         {"group":["pickup_engine_intake"]},
+         ["turbo", 0.0, -1.3, 1.1],
+         {"group":["pickup_airbox"]},
+         {"nodeWeight":1.88},
+         ["intake2", 0.6, -1.94, 1.04, {"selfCollision":true}],
+         {"engineGroup":""},
+         {"nodeWeight":3},
+         ["interc", 0.0, -1.84, 0.9],
+         {"group":"pickup_exmanifold"},
+         //exhaust manifold
+         ["exm1r", -0.3, -0.7, 0.43, {"nodeWeight":6, "afterFireAudioCoef":1.0, "afterFireVisualCoef":1.0, "afterFireVolumeCoef":1.0, "afterFireMufflingCoef":1.0, "exhaustAudioMufflingCoef":1.0, "exhaustAudioGainChange":0}],
+         {"selfCollision":true},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          //turbo
+          {"beamSpring":2750550,"beamDamp":125},
+          {"beamDeform":30000,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":""},
+          {"deformGroup":"mainEngine_turbo", "deformationTriggerRatio":0.001}
+          ["turbo","e1r"],
+          ["turbo","e2r"],
+          ["turbo","e3r"],
+          ["turbo","e4r"],
+          ["turbo","e1l"],
+          ["turbo","e2l"],
+          ["turbo","e3l"],
+          ["turbo","e4l"],
+
+          //intercooler
+          {"beamSpring":870369.5,"beamDamp":130.43},
+          {"beamDeform":6300,"beamStrength":"FLT_MAX"},
+          {"deformGroup":"mainEngine_intercooler","deformationTriggerRatio":0.05},
+          ["interc","e1r"],
+          ["interc","e2r"],
+          ["interc","e3r"],
+          ["interc","e4r"],
+          ["interc","e1l"],
+          ["interc","e2l"],
+          ["interc","e3l"],
+          ["interc","e4l"],
+          {"deformGroup":""}
+
+          //intake
+          {"beamSpring":1880940,"beamDamp":235},
+          {"beamDeform":105000,"beamStrength":"FLT_MAX"},
+          //{"deformGroup":"mainEngine_intake", "deformationTriggerRatio":0.01}
+
+          {"beamSpring":120940,"beamDamp":141},
+          {"beamDeform":6150,"beamStrength":"FLT_MAX"},
+          ["intake2", "e4l"],
+          ["intake2", "e3l"],
+          ["intake2", "e2l"],
+          ["intake2", "e1l"],
+          ["intake2", "e4r"],
+          {"optional":true},
+          {"beamDeform":9150,"beamStrength":9900},
+          ["intake2", "s2l"],
+          ["intake2", "s2ll"],
+          ["intake2", "s1l"],
+          ["intake2", "s1ll"],
+          {"deformGroup":""}
+          {"optional":false},
+
+          //exhaust manifold
+          {"beamSpring":11163370,"beamDamp":130.43},
+          {"beamDeform":90000,"beamStrength":"FLT_MAX"},
+          ["exm1r","e3l"],
+          ["exm1r","e3r"],
+          ["exm1r","e4l"],
+          ["exm1r","e4r"],
+          ["exm1r", "e1r"],
+          ["exm1r", "e1l"],
+          ["exm1r", "e2l"],
+          ["e2r", "exm1r", {"isExhaust":"mainEngine"}],
+
+          //mesh break beams
+          {"beamPrecompression":0.8, "beamType":"|SUPPORT","beamLongBound":0.8},
+          {"beamSpring":9400,"beamDamp":0},
+          {"beamDeform":350,"beamStrength":700},
+          ["turbo", "intake2"],
+          ["intake2", "e4l"],
+          {"deformGroup":""},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_intake_v12_turbo_stage3": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Stage 3 Variable Boost Turbocharger",
+        "value":9850,
+    },
+    "slotType" : "G_pickup_intake_v12",
+    "slots": [
+        ["type", "default","description"],
+        ["pickup_exhaust_v8_diesel","pickup_exhaust_v8_diesel","Exhaust"],
+    ],
+   "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$wastegateStart", "range", "psi", "Engine", 45, 14, 75, "Turbo Boost Pressure", "Pressure at which the turbocharger wastegate begins to open", {"stepDis":0.5}],
+    ],
+"turbocharger": {
+        "hissLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_semi_01>turbo_hiss_tuned",
+        "whineLoopEvent":"event:>Vehicle>Forced_Induction>Turbo>Spin>turbo_spin_powerwhistle_01",
+        "bovEnabled":false,
+        "turboSizeCoef": 0.0,
+        "bovSoundVolumeCoef": 0.0,
+        "hissVolumePerPSI": 0.027,
+        "whineVolumePer10kRPM": 0.09,
+        "whinePitchPer10kRPM": 0.074,
+        "wastegateStart":"$wastegateStart",
+        "wastegateLimit":"$=$wastegateStart+1",
+        "maxExhaustPower": 30000,
+        "backPressureCoef": 0.00006,
+        "frictionCoef": 43,
+        "inertia":25,
+        "damageThresholdTemperature": 850,
+        "pressurePSI":[
+            //turbineRPM, pressure(PSI)
+            [0,          0],
+            [30000,     10],
+            [60000,     21],
+            [90000,     39],
+            [150000,    72],
+            [200000,    80],
+            [250000,    87],
+            [300000,    93],
+        ],
+        "engineDef":[
+            //engineRPM, efficiency, exhaustFactor
+            [0,     0.01,  0.01],
+            [250,   0.64,  0.40],
+            [500,   0.71,  0.63],
+            [800,   0.73,  0.71],
+            [1100,  0.76,  0.74],
+            [1400,  0.78,  0.77],
+            [2000,  0.80,  0.80],
+            [2500,  0.82,  0.82],
+            [3000,  0.81,  0.81],
+            [3500,  0.78,  0.77],
+            [4000,  0.73,  0.75],
+            [5000,  0.69,  0.66],
+            [6000,  0.64,  0.62],
+            [7000,  0.57,  0.57],
+        ],
+    },
+    "mainEngine": {
+        //turbocharger name
+        "turbocharger":"turbocharger",
+        "$+particulates":0.3,
+
+        //damage deformGroups
+        "deformGroups_turbo":["mainEngine_turbo","mainEngine_intercooler"]
+    },
+    "soundConfig": {
+        "$+mainGain":2,
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["G_gavril_v12_turbocharger", ["pickup_engine", "pickup_exmanifold", "pickup_engine_intake", "pickup_airbox"], [], {"pos":{"x":0, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+        ["G_pickup_v12_intake_stock_belts", ["pickup_engine", "pickup_exmanifold", "pickup_engine_intake", "pickup_airbox"], [], {"pos":{"x":0, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         //--Stock Intake
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":3.76},
+         {"group":["pickup_engine_intake"]},
+         ["turbo", 0.0, -1.3, 1.1],
+         {"group":["pickup_airbox"]},
+         {"nodeWeight":1.88},
+         ["intake2", 0.6, -1.94, 1.04, {"selfCollision":true}],
+         {"engineGroup":""},
+         {"nodeWeight":3},
+         ["interc", 0.0, -1.84, 0.9],
+         {"group":"pickup_exmanifold"},
+         //exhaust manifold
+         ["exm1r", -0.3, -0.7, 0.43, {"nodeWeight":6, "afterFireAudioCoef":1.0, "afterFireVisualCoef":1.0, "afterFireVolumeCoef":1.0, "afterFireMufflingCoef":1.0, "exhaustAudioMufflingCoef":1.0, "exhaustAudioGainChange":0}],
+         {"selfCollision":true},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          //turbo
+          {"beamSpring":2750550,"beamDamp":125},
+          {"beamDeform":30000,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":""},
+          {"deformGroup":"mainEngine_turbo", "deformationTriggerRatio":0.001}
+          ["turbo","e1r"],
+          ["turbo","e2r"],
+          ["turbo","e3r"],
+          ["turbo","e4r"],
+          ["turbo","e1l"],
+          ["turbo","e2l"],
+          ["turbo","e3l"],
+          ["turbo","e4l"],
+
+          //intercooler
+          {"beamSpring":870369.5,"beamDamp":130.43},
+          {"beamDeform":6300,"beamStrength":"FLT_MAX"},
+          {"deformGroup":"mainEngine_intercooler","deformationTriggerRatio":0.05},
+          ["interc","e1r"],
+          ["interc","e2r"],
+          ["interc","e3r"],
+          ["interc","e4r"],
+          ["interc","e1l"],
+          ["interc","e2l"],
+          ["interc","e3l"],
+          ["interc","e4l"],
+          {"deformGroup":""}
+
+          //intake
+          {"beamSpring":1880940,"beamDamp":235},
+          {"beamDeform":105000,"beamStrength":"FLT_MAX"},
+          //{"deformGroup":"mainEngine_intake", "deformationTriggerRatio":0.01}
+
+          {"beamSpring":120940,"beamDamp":141},
+          {"beamDeform":6150,"beamStrength":"FLT_MAX"},
+          ["intake2", "e4l"],
+          ["intake2", "e3l"],
+          ["intake2", "e2l"],
+          ["intake2", "e1l"],
+          ["intake2", "e4r"],
+          {"optional":true},
+          {"beamDeform":9150,"beamStrength":9900},
+          ["intake2", "s2l"],
+          ["intake2", "s2ll"],
+          ["intake2", "s1l"],
+          ["intake2", "s1ll"],
+          {"deformGroup":""}
+          {"optional":false},
+
+          //exhaust manifold
+          {"beamSpring":11163370,"beamDamp":130.43},
+          {"beamDeform":90000,"beamStrength":"FLT_MAX"},
+          ["exm1r","e3l"],
+          ["exm1r","e3r"],
+          ["exm1r","e4l"],
+          ["exm1r","e4r"],
+          ["exm1r", "e1r"],
+          ["exm1r", "e1l"],
+          ["exm1r", "e2l"],
+          ["e2r", "exm1r", {"isExhaust":"mainEngine"}],
+
+          //mesh break beams
+          {"beamPrecompression":0.8, "beamType":"|SUPPORT","beamLongBound":0.8},
+          {"beamSpring":9400,"beamDamp":0},
+          {"beamDeform":350,"beamStrength":700},
+          ["turbo", "intake2"],
+          ["intake2", "e4l"],
+          {"deformGroup":""},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

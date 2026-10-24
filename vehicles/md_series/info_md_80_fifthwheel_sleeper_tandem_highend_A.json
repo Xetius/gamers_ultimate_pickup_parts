@@ -1,0 +1,41 @@
+{
+  "Body Style":"Fifth Wheel Truck",
+  "BoundingBox":[
+    [
+      -0.8854,
+      -1.136,
+      -0.7234
+    ],
+    [
+      1.7534,
+      5.0361,
+      1.632
+    ]
+  ],
+  "Commercial Class":"Class 8 Truck",
+  "Config Type":"Factory",
+  "Configuration":"MD80 Fifth Wheel Sleeper Tandem High End (A)",
+  "Description":"Late model single cab truck with a short sleeper and fifthwheel upfit, tandem rear super singles, and customized for luxury and equipped with the newly developed 7-speed automatic transmission",
+  "Drivetrain":"RWD",
+  "Fuel Type":"Diesel",
+  "Induction Type":"Turbo",
+  "Off-Road Score":34,
+  "Population":4000,
+  "Power":406,
+  "PowerPeakRPM":2400,
+  "Propulsion":"ICE",
+  "Top Speed":32.65652803,
+  "Torque":1227,
+  "TorquePeakRPM":"1150 - 1900",
+  "Transmission":"Automatic",
+  "Value":99000,
+  "Weight":6809,
+  "Weight/Power":27.83163265,
+  "Years":{
+    "max":1998,
+    "min":1992
+  },
+  "defaultPaintName1":"Deep Plum",
+  "defaultPaintName2":"Deep plum",
+  "defaultPaintName3":"Silver"
+}

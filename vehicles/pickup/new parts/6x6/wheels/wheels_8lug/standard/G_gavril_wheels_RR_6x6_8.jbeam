@@ -1,0 +1,286 @@
+{
+"G_wheel_28a_16x7_8_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"16x7 Gavril 10-Slot Rear Rear Wheels",
+        "value":450,
+    },
+    "slotType" : "G_wheel_RR_6x6_8",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_16x7_alt","tire_RR_6x6_225_75_16_alt_standard", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["wheel_28a_16x7_alt", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.01, "y":1.01, "z":1.01}}],
+        ["wheel_28a_16x7_alt", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.01, "y":1.01, "z":1.01}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--REAR WHEELS--
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"nodeWeight":5.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.36, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.36, 0.0, 0.0, {"staticCollision":false}],
+        {"collision":true},
+        //wheel nodes
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.22},
+        {"wheelOffset":-0.035},
+        {"hubWidth":0.205},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1551000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_wheel_28b_16x7_8_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"16x7 Gavril 10-Slot Rear Rear Wheels (Black)",
+        "value":450,
+    },
+    "slotType" : "G_wheel_RR_6x6_8",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_16x7_alt","tire_RR_6x6_225_75_16_alt_standard", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["wheel_28b_16x7_alt", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.01, "y":1.01, "z":1.01}}],
+        ["wheel_28b_16x7_alt", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.01, "y":1.01, "z":1.01}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--REAR WHEELS--
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"nodeWeight":5.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.36, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.36, 0.0, 0.0, {"staticCollision":false}],
+        {"collision":true},
+        //wheel nodes
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.22},
+        {"wheelOffset":-0.035},
+        {"hubWidth":0.205},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1551000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.5},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_wheel_41a_16x7_8_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"16x7 Gavril 8-Slot Rear Rear Wheels (Silver)",
+        "value":250,
+    },
+    "slotType" : "G_wheel_RR_6x6_8",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_16x7_alt","tire_RR_6x6_225_75_16_alt_standard", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["wheel_41a_16x7", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["wheel_41a_16x7", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--REAR WHEELS--
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"nodeWeight":5.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.36, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.36, 0.0, 0.0, {"staticCollision":false}],
+        {"collision":true},
+        //wheel nodes
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.22},
+        {"wheelOffset":-0.020},
+        {"hubWidth":0.205},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+        {"hubNodeWeight":0.5},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_wheel_41b_16x7_8_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"16x7 Gavril 8-Slot Rear Rear Wheels (Chrome)",
+        "value":250,
+    },
+    "slotType" : "G_wheel_RR_6x6_8",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_RR_6x6_16x7_alt","tire_RR_6x6_225_75_16_alt_standard", "Rear Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["wheel_41b_16x7", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["wheel_41b_16x7", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--REAR WHEELS--
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"nodeWeight":5.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_RRR"},
+        ["rwg1r", -0.36, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1l", 0.36, 0.0, 0.0, {"staticCollision":false}],
+        {"collision":true},
+        //wheel nodes
+        {"group":"wheelhub_RRR"},
+        ["rwg1rr", -0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RRL"},
+        ["rwg1ll", 0.65, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":78500,"beamStrength":434000},
+        {"beamSpring":1501000,"beamDamp":25},
+        //rear wheel
+        ["rwg1r","rwg1rr"],
+        ["rwg1l","rwg1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.22},
+        {"wheelOffset":-0.020},
+        {"hubWidth":0.205},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubBeamDeform":43600, "hubBeamStrength":78000},
+        {"hubNodeWeight":0.5},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+}

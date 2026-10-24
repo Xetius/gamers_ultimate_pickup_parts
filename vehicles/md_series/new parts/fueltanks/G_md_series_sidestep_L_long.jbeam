@@ -1,0 +1,167 @@
+{
+"G_md_series_sidestep_L_long": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Long Left Side Step",
+        "value":100,
+    },
+    "slotType" : "md_series_fueltank_L",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_sidestep_L_long", ["md_series_sidestep_L"]],
+    ],
+    "slidenodes": [
+         ["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
+         ["ftm1l", "FtMountL1", true, true, 0, 8100100, "FLT_MAX", "FLT_MAX"],
+         ["ftm2l", "FtMountL1", true, true, 0, 8100100, "FLT_MAX", "FLT_MAX"],
+         ["ftm3l", "FtMountL2", true, true, 0, 8100100, "FLT_MAX", "FLT_MAX"],
+         ["ftm4l", "FtMountL2", true, true, 0, 8100100, "FLT_MAX", "FLT_MAX"],
+    ],
+    "nodes": [
+         ["id",     "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         //--FUEL TANK--
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //mounts
+         {"nodeWeight":4.0},
+         {"selfCollision":false},
+         {"collision":false},
+         {"group":""},
+         ["ftm1l",  0.434, -0.4432, 0.95],
+         ["ftm2l",  0.434,  0.0903, 0.95],
+         ["ftm3l",  0.434, -0.4432, 0.69],
+         ["ftm4l",  0.434,  0.0903, 0.69],
+         {"selfCollision":true},
+         {"collision":true},
+
+         //side step
+         {"group":"md_series_sidestep_L"},
+         {"nodeWeight":2.5},
+         ["ss1l",   0.464, -0.55,   0.93],
+         ["ss2l",   0.464,  0.20,   0.93],
+         ["ss1ll",  0.808, -0.75,   0.77],
+         ["ss2ll",  0.808,  0.42,   0.77],
+         ["ss3l",   0.464, -0.55,   0.46],
+         ["ss4l",   0.464,  0.20,   0.46],
+         ["ss3ll",  0.808, -0.75,   0.46],
+         ["ss4ll",  0.808,  0.42,   0.46],
+         ["ss3lll", 1.125, -0.75,   0.46],
+         ["ss4lll", 1.125,  0.42,   0.46],
+
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:",   "id2:"],
+          //--SIDE STEP--
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamSpring":2001000,"beamDamp":130},
+          {"beamDeform":40000,"beamStrength":"FLT_MAX"},
+
+          //main shape
+          ["ss3ll",  "ss1l"],
+          ["ss1l",   "ss3l"],
+          ["ss3l",   "ss3ll"],
+          ["ss3ll",  "ss3lll"],
+          ["ss4ll",  "ss2l"],
+          ["ss2l",   "ss4l"],
+          ["ss4l",   "ss4ll"],
+          ["ss4ll",  "ss4lll"],
+
+          ["ss1ll",  "ss2ll"],
+          ["ss3ll",  "ss4ll"],
+          ["ss3lll", "ss4lll"],
+
+          //surficial crossing
+          {"beamDeform":15000,"beamStrength":"FLT_MAX"},
+          ["ss1l",   "ss3lll"],
+          ["ss2l",   "ss4lll"],
+          ["ss1ll",  "ss4ll"],
+          ["ss2ll",  "ss3ll"],
+          ["ss3lll", "ss4ll"],
+          ["ss4lll", "ss3ll"],
+          ["ss1ll",  "ss3lll"],
+          ["ss2ll",  "ss4lll"],
+
+          ["ss1l",   "ss1ll"],
+          ["ss2l",   "ss2ll"],
+
+          //rigids
+          {"beamDeform":5000,"beamStrength":"FLT_MAX"},
+          ["ss1l",   "ss2l"],
+          ["ss3l",   "ss4l"],
+          ["ss3l",   "ss3lll"],
+          ["ss4l",   "ss4lll"],
+
+          ["ss1l",   "ss4l"],
+          ["ss2l",   "ss3l"],
+          ["ss3ll",  "ss4l"],
+          ["ss4ll",  "ss3l"],
+          ["ss1l",   "ss4ll"],
+          ["ss2l",   "ss3ll"],
+
+          ["ss1ll",  "ss4lll"],
+          ["ss2ll",  "ss3lll"],
+          ["ss1l",   "ss2ll"],
+          ["ss2l",   "ss1ll"],
+
+          //attach
+          {"beamSpring":3500200,"beamDamp":200},
+          {"beamDeform":35000,"beamStrength":125000},
+
+          {"breakGroup":"sidestep_L1"},
+          ["ss1l",   "ftm1l"],
+          ["ss1l",   "ftm3l"],
+          ["ss1l",   "ftm2l"],
+          ["ss3l",   "ftm3l"],
+          ["ss3l",   "ftm1l"],
+          ["ss3l",   "ftm4l"],
+          ["ss1ll",  "ftm1l"],
+          ["ss3ll",  "ftm3l"],
+          ["ss1ll",  "ftm3l"],
+          ["ss3ll",  "ftm1l"],
+
+          {"breakGroup":"sidestep_L2"},
+          ["ss2l",   "ftm2l"],
+          ["ss2l",   "ftm4l"],
+          ["ss2l",   "ftm1l"],
+          ["ss4l",   "ftm4l"],
+          ["ss4l",   "ftm2l"],
+          ["ss4l",   "ftm3l"],
+          ["ss2ll",  "ftm2l"],
+          ["ss4ll",  "ftm4l"],
+          ["ss2ll",  "ftm4l"],
+          ["ss4ll",  "ftm2l"],
+
+          {"breakGroup":""},
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "triangles": [
+            ["id1:",   "id2:",   "id3:"],
+            {"dragCoef":5},
+            {"groundModel":"metal"},
+
+            {"group":"md_series_sidestep_L"},
+            ["ss3l",   "ss1l",   "ss4l"],
+            ["ss4l",   "ss1l",   "ss2l"],
+            ["ss3ll",  "ss3l",   "ss4ll"],
+            ["ss4ll",  "ss3l",   "ss4l"],
+            ["ss3lll", "ss3ll",  "ss4lll"],
+            ["ss4lll", "ss3ll",  "ss4ll"],
+            ["ss1ll",  "ss3lll", "ss2ll"],
+            ["ss2ll",  "ss3lll", "ss4lll"],
+            ["ss1l",   "ss1ll",  "ss2l"],
+            ["ss2l",   "ss1ll",  "ss2ll"],
+            ["ss3ll",  "ss1l",   "ss3l"],
+            ["ss1ll",  "ss1l",   "ss3ll"],
+            ["ss3lll", "ss1ll",  "ss3ll"],
+            ["ss2l",   "ss4ll",  "ss4l"],
+            ["ss2l",   "ss2ll",  "ss4ll"],
+            ["ss2ll",  "ss4lll", "ss4ll"],
+
+            {"group":""},
+    ],
+},
+}

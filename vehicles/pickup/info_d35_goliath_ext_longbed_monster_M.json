@@ -1,0 +1,48 @@
+{
+  "0-100 km/h":9.8,
+  "0-100 mph":34.9,
+  "0-60 mph":9.2,
+  "100-0 km/h":40.3,
+  "60-0 mph":123.7,
+  "60-100 mph":25.7,
+  "BoundingBox":[
+    [
+      -0.6,
+      -1.42,
+      -0.3099
+    ],
+    [
+      1.7,
+      3.54,
+      1.41
+    ]
+  ],
+  "Braking G":0.975,
+  "Config Type":"Custom",
+  "Configuration":"D35 Goliath Monster Truck (M)",
+  "Description":"Not actually as tough as it looks, but the closest you will get with the Goliath suspension",
+  "Drivetrain":"4WD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"SC",
+  "Off-Road Score":46,
+  "Performance Class":"4",
+  "Population":4000,
+  "Power":872,
+  "PowerPeakRPM":"3950 - 4600",
+  "Propulsion":"ICE",
+  "Top Speed":48.48723133,
+  "Torque":1343,
+  "TorquePeakRPM":"2950 - 3650",
+  "Transmission":"Manual",
+  "Value":195000,
+  "Weight":3441,
+  "Weight/Power":10.45685279,
+  "Years":{
+    "max":1997,
+    "min":1992
+  },
+  "defaultPaintName1":"Pearl White",
+  "defaultPaintName2":"Sea Blue",
+  "defaultPaintName3":"Sea Blue",
+  "vehicleSelectorSubGroup":"vehiclesData.pickup.d35_4WD_ext_longbed_A.vehicleSelectorSubGroup"
+}

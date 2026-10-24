@@ -1,0 +1,16 @@
+{
+  "Config Type":"Custom",
+  "Configuration":"Trailer D45 Single Car Hauler",
+  "Description":"A heavy duty Flatbed car hauler trailer with rear folding ramps, and capacity for one car",
+  "Population":4000,
+  "Value":47100,
+  "Weight":1855,
+  "Years":{
+    "max":2003,
+    "min":1986
+  },
+  "defaultPaintName1":"Carbon Gray",
+  "defaultPaintName2":"Carbon Gray",
+  "defaultPaintName3":"Carbon Gray",
+  "vehicleSelectorSubGroup":"Trailers"
+}

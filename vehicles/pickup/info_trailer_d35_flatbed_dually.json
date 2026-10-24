@@ -1,0 +1,16 @@
+{
+  "Config Type":"Custom",
+  "Configuration":"Trailer D35 Auxiliary Flatbed Dually",
+  "Description":"A Flatbed and additional toolboxes, making for a pretty good trailer",
+  "Population":4000,
+  "Value":42000,
+  "Weight":1263,
+  "Years":{
+    "max":2003,
+    "min":1986
+  },
+  "defaultPaintName1":"Matte Dune",
+  "defaultPaintName2":"Matte Dune",
+  "defaultPaintName3":"Matte Dune",
+  "vehicleSelectorSubGroup":"Trailers"
+}

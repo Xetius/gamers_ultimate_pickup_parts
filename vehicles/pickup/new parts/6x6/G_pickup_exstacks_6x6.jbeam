@@ -1,0 +1,70 @@
+{
+"G_pickup_exstacks_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Exhaust Stacks",
+        "value":800,
+    },
+    "slotType" : ["G_pickup_muffler_6x6","G_pickup_muffler_6x6_tiny"],
+    "slots":[
+        ["type","default","description"],
+        ["G_pickup_exstacks_layout","G_pickup_exstacks_gas","Exhaust Pipework Layout", {"coreSlot":true}],
+        ["G_pickup_exstacks_muffler","G_pickup_exstacks_muffler","Side Muffler Stacks", {"nodeMove":{"x":0,"y":"$=$G_exstacks_move","z":0}}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$G_exstacks_move", "range", "+m", "Exhaust", 0.0, 0.0, 2.16, "Exhaust Stacks Position Backwards / Forwards", "+0.6 For Ext,  +0.9 for Crew,  +1.8 For 6Door,  +0.7 For Auxiliary Support", {"stepDis":0.02}],
+    ],
+}
+"G_pickup_exstacks_6x6_ext": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Exhaust Stacks",
+        "value":800,
+    },
+    "slotType" : ["G_pickup_muffler_6x6_ext","G_pickup_muffler_6x6_ext_tiny"],
+    "slots":[
+        ["type","default","description"],
+        ["G_pickup_exstacks_layout","G_pickup_exstacks_gas","Exhaust Pipework Layout", {"coreSlot":true}],
+        ["G_pickup_exstacks_muffler","G_pickup_exstacks_muffler","Side Muffler Stacks", {"nodeMove":{"x":0,"y":"$=$G_exstacks_move","z":0}}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$G_exstacks_move", "range", "+m", "Exhaust", 0.0, 0.0, 2.16, "Exhaust Stacks Position Backwards / Forwards", "+0.6 For Ext,  +0.9 for Crew,  +1.8 For 6Door,  +0.7 For Auxiliary Support", {"stepDis":0.02}],
+    ],
+}
+"G_pickup_exstacks_6x6_crew": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Exhaust Stacks",
+        "value":800,
+    },
+    "slotType" : ["G_pickup_muffler_6x6_crew","G_pickup_muffler_6x6_crew_tiny"],
+    "slots":[
+        ["type","default","description"],
+        ["G_pickup_exstacks_layout","G_pickup_exstacks_gas","Exhaust Pipework Layout", {"coreSlot":true}],
+        ["G_pickup_exstacks_muffler","G_pickup_exstacks_muffler","Side Muffler Stacks", {"nodeMove":{"x":0,"y":"$=$G_exstacks_move","z":0}}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$G_exstacks_move", "range", "+m", "Exhaust", 0.0, 0.0, 2.16, "Exhaust Stacks Position Backwards / Forwards", "+0.6 For Ext,  +0.9 for Crew,  +1.8 For 6Door,  +0.7 For Auxiliary Support", {"stepDis":0.02}],
+    ],
+}
+"G_pickup_exstacks_6x6_6door": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Exhaust Stacks",
+        "value":800,
+    },
+    "slotType" : ["G_pickup_muffler_6x6_6door","G_pickup_muffler_6x6_6door_tiny"],
+    "slots":[
+        ["type","default","description"],
+        ["G_pickup_exstacks_layout","G_pickup_exstacks_gas","Exhaust Pipework Layout", {"coreSlot":true}],
+        ["G_pickup_exstacks_muffler","G_pickup_exstacks_muffler","Side Muffler Stacks", {"nodeMove":{"x":0,"y":"$=$G_exstacks_move","z":0}}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$G_exstacks_move", "range", "+m", "Exhaust", 0.0, 0.0, 2.16, "Exhaust Stacks Position Backwards / Forwards", "+0.6 For Ext,  +0.9 for Crew,  +1.8 For 6Door,  +0.7 For Auxiliary Support", {"stepDis":0.02}],
+    ],
+}
+}

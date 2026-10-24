@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "paints": {
+    "G_tropical_blue": {
+      "name": "Tropical Blue",
+	  "baseColor":[0.149,0.341,0.37,1.4],"metallic":0.75,"roughness":0.5,"clearcoat":1,"clearcoatRoughness":0.07
+    },
+    "G_ambitious_orange": {
+      "name": "Ambitious Orange",
+      "baseColor":[0.489,0.216,0.078,1.213],"metallic":0.624,"roughness":0.6,"clearcoat":1,"clearcoatRoughness":0.03
+    },
+    "G_royal_green": {
+      "name": "Royal Green",
+      "baseColor":[0.0489,0.156,0.099,2],"metallic":0.498,"roughness":0.6,"clearcoat":1,"clearcoatRoughness":0.07
+    },
+    "G_royal_red": {
+      "name": "Royal Red",
+      "baseColor":[0.5,0,0,2],"metallic":0.66,"roughness":0.75,"clearcoat":0.92,"clearcoatRoughness":0.052
+    },
+    "G_arctic_blue": {
+      "name": "Arctic Blue",
+      "baseColor":[0.036,0.136,0.229,1.2],"metallic":0.894,"roughness":0.65,"clearcoat":1,"clearcoatRoughness":0.03
+    },
+    "G_cerulean_sky": {
+      "name": "Cerulean Sky",
+      "baseColor":[0.116,0.288,0.383,2],"metallic":0.255,"roughness":0.951,"clearcoat":1,"clearcoatRoughness":0.008
+    },
+    "G_lead": {
+      "name": "Lead",
+      "baseColor":[0.077,0.077,0.077,2],"metallic":0.2,"roughness":0.6,"clearcoat":0,"clearcoatRoughness":0
+    },
+    "G_nightshade": {
+      "name": "Nightshade",
+      "baseColor":[0.268,0.143,0.376,1.4],"metallic":0.75,"roughness":0.5,"clearcoat":1,"clearcoatRoughness":0.07
+    },
+    "G_blueberry": {
+      "name": "Blueberry",
+      "baseColor":[0.143,0.239,0.376,1.4],"metallic":0.75,"roughness":0.5,"clearcoat":1,"clearcoatRoughness":0.07
+    },
+    "G_overcast_blue": {
+      "name": "Overcast Blue",
+      "baseColor":[0.09,0.14,0.21,1.2],"metallic":0,"roughness":1,"clearcoat":1,"clearcoatRoughness":0.06
+    },
+    "G_dark_silver": {
+      "name": "Dark Silver",
+      "baseColor":[0.52,0.484,0.459,1.3],"metallic":1,"roughness":0.65,"clearcoat":1,"clearcoatRoughness":0.07
+    },
+    "G_deep_green": {
+      "name": "Deep Green",
+      "baseColor":[0.15,0.21,0.1,2],"metallic":0.1,"roughness":0.12,"clearcoat":0.581,"clearcoatRoughness":0.09
+    },
+    "G_soft_white": {
+      "name": "Soft White",
+      "baseColor":[0.79,0.75,0.69,1],"metallic":0.22,"roughness":0.6,"clearcoat":1,"clearcoatRoughness":0.03
+    },
+    "G_shingle_red": {
+      "name": "Shingle Red",
+      "baseColor":[0.478,0.1,0,1.2],"metallic":0.8,"roughness":0.6,"clearcoat":1,"clearcoatRoughness":0.03
+    },
+    "G_summer_sky": {
+      "name": "Summer Sky",
+      "baseColor":[0.087,0.33,0.556,1.2],"metallic":0.894,"roughness":0.65,"clearcoat":1,"clearcoatRoughness":0.03
+    },
+    "G_royal_magenta": {
+      "name": "Royal Magenta",
+      "baseColor":[0.45,0.049,0.279,2],"metallic":0.71,"roughness":0.61,"clearcoat":1,"clearcoatRoughness":0.03
+    },
+    "G_dark_lime": {
+      "name": "Lime",
+      "baseColor":[0.305,0.38,0.169,2],"metallic":0,"roughness":1,"clearcoat":1,"clearcoatRoughness":0.25
+    },
+    "G_grassland_green": {
+      "name": "Grassland Green",
+      "baseColor":[0.285,0.369,0.218,1.2],"metallic":0.4,"roughness":0.6,"clearcoat":1,"clearcoatRoughness":0.06
+    },
+    "G_ambitious_yellow": {
+      "name": "Ambitious Yellow",
+      "baseColor":[0.9,0.65,0.099,1.514],"metallic":0,"roughness":0.385,"clearcoat":1,"clearcoatRoughness":0.21
+    }
+  },
+  "paintCollections": {
+    "G_pickup_factory_additional": {
+      "name": "Gavril D-Series Additional Factory Colors",
+      "class": "factory",
+      "paints": [
+      "G_ambitious_orange",
+      "G_royal_red",
+      "G_arctic_blue",
+      "G_cerulean_sky",
+      "G_blueberry",
+      "G_dark_silver",
+      "G_deep_green",
+      "G_soft_white",
+      "G_shingle_red",
+      "solar_yellow",
+      "G_summer_sky",
+      "G_dark_lime",
+	  "G_ambitious_yellow",
+      ]
+    },
+    "G_pickup_custom_additional": {
+      "name": "Gavril D-Series Additional Custom Colors",
+      "class": "custom",
+      "paints": [
+      "G_tropical_blue",
+      "G_royal_green",
+      "G_overcast_blue",
+      "G_lead",
+      "G_nightshade",
+      "G_royal_magenta",
+      "G_grassland_green",
+      ]
+    },
+},
+}

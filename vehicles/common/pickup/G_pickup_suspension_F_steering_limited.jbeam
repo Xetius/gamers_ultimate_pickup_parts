@@ -1,0 +1,78 @@
+{
+"G_pickup_steering_limited": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Limited Angle Steering",
+        "value":600,
+    },
+    "slotType" : "pickup_steering",
+    "slots": [
+        ["type", "default", "description"],
+        ["pickup_power_steering","", "Power Steering"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pickup_tierod", ["pickup_tierod_F","pickup_hub1_F","pickup_lowermounts","pickup_steeringrack"]],
+    ],
+    "rails": {
+        "steeringrack":{
+            "links:":["fh6r", "fh6l"], "broken:":[], "looped":false, "capped":true,
+        },
+    },
+    "slidenodes": [
+        ["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
+        ["st1r", "steeringrack", true, true, 0.0, 18001000, "FLT_MAX", "FLT_MAX"],
+        ["st1l", "steeringrack", true, true, 0.0, 18001000, "FLT_MAX", "FLT_MAX"],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$toe_FR", "range", "", "Wheel Alignment", 1, 0.98, 1.02, "Toe Adjust", "Adjusts the wheel toe-in angle", {"subCategory":" Front"}],
+        ["$steer_center_F", "range", "", "Wheel Alignment", 0, -0.002, 0.002, "Toe Left/Right Trim", "Fine tunes the centerpoint of the steering", {"subCategory":" Front"}]
+        ["$steer_max_angle_F", "range", "%", "Maximum Steering Angle", 55, 0, 100, "Maximum Steering Angle", "Maximum angle of steering to minimize wheel rub or suspension breaking", {"subCategory":" Front"}]
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--steering rod--
+         {"selfCollision":false},
+         {"collision":true},
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"pickup_tierod_F"},
+         {"nodeWeight":5.64},
+         ["fh6r", -0.22, -1.3, 0.4],
+         ["fh6l", 0.22, -1.3, 0.4],
+         {"group":""},
+    ],
+    "beams": [
+            ["id1:","id2:"],
+            {"beamPrecompression":1.0, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+            {"beamSpring":9400940,"beamDamp":141,"beamDeform":87500,"beamStrength":192500},
+            ["fh6r","fh6l"],
+            //
+            {"beamSpring":20680940,"beamDamp":141,"beamDeform":101500,"beamStrength":227500},
+            ["fh5r","fh6r", {"beamPrecompression":"$=$toe_FR-$steer_center_F","beamPrecompressionTime":0.5}],
+            ["fh5l","fh6l", {"beamPrecompression":"$=$toe_FR+$steer_center_F","beamPrecompressionTime":0.5}],
+            //steering damper
+            {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":1.0},
+            {"beamSpring":0,"beamDeform":58800,"beamStrength":104664},
+            {"beamLimitSpring":0,"beamLimitDamp":0},
+            {"beamDamp":150},
+            ["fh4r","fx1r", {"beamDampVelocitySplit":0.1,"beamDampFast":1000,"dampCutoffHz":1000}],
+            ["fh4l","fx1l", {"beamDampVelocitySplit":0.1,"beamDampFast":1000,"dampCutoffHz":1000}],
+            ["fh1r","fx2r", {"beamDampVelocitySplit":0.1,"beamDampFast":1000,"dampCutoffHz":1000}],
+            ["fh1l","fx2l", {"beamDampVelocitySplit":0.1,"beamDampFast":1000,"dampCutoffHz":1000}],
+            {"beamPrecompression":1.0, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "hydros": [
+            ["id1:","id2:"],
+            {"beamPrecompression":1.0, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+            {"beamSpring":14001000,"beamDamp":60,"beamDeform":"FLT_MAX","beamStrength":105000},
+            ["fh6r","st1l", {"factor":"$=-0.285*$steer_max_angle_F/100","steeringWheelLock":450,"inRate":1.25,"outRate":1.25}],
+            ["fh6l","st1r", {"factor":"$=0.285*$steer_max_angle_F/100","steeringWheelLock":450,"inRate":1.25,"outRate":1.25}],
+            {"beamPrecompression":1.0, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "input": {
+        "FFBcoef":"$=$ffbstrength*8",
+    },
+},
+}

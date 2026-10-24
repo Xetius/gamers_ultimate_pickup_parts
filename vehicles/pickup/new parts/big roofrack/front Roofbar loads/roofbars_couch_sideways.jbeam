@@ -1,0 +1,826 @@
+{
+"G_pickup_big_roofrack_front_couch_sideways": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Sideways Couch",
+        "value":300,
+    },
+    "slotType" : "G_pickup_big_roofrack_top_front_load",
+    "slots": [
+        ["type", "default", "description"]
+        ["skin_couch","couch_skin_stripes","Fabric type", {"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["couch_body", ["couch"],[],{"rot":{"x":0, "y":0, "z":90}}],
+        ["couch_cushion_M", ["cushion_M"],[],{"rot":{"x":0, "y":0, "z":90}}],
+        ["couch_cushion_L", ["cushion_L"],[],{"rot":{"x":0, "y":0, "z":90}}],
+        ["couch_cushion_R", ["cushion_R"],[],{"rot":{"x":0, "y":0, "z":90}}],
+        {"deformGroup":"couch_rearStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["couch_strap", ["couch", "roofbar_F","roofbar_R"],[],{"pos":{"x":0.0, "y":0.45, "z":0.0}, "scale":{"x":1.0,"y":1.0,"z":1.0},"rot":{"x":0, "y":0, "z":90}}],
+        {"deformGroup":"couch_frontStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["couch_strap", ["couch", "roofbar_F","roofbar_R"],[],{"pos":{"x":0.0, "y":-0.45, "z":0.0}, "scale":{"x":1.0,"y":1.0,"z":1.0},"rot":{"x":0, "y":0, "z":90}}],
+        {"deformGroup":"couch_supportBoard_L","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["couch_supportboard_L", ["couch", "roofbar_F","roofbar_R"],[],{"pos":{"x":-0.05, "y":0.00, "z":-0.025}, "scale":{"x":1.0,"y":1.5,"z":1.22},"rot":{"x":0, "y":0, "z":0}}],
+        {"deformGroup":"couch_supportBoard_R","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["couch_supportboard_R", ["couch", "roofbar_F","roofbar_R"],[],{"pos":{"x":0.05, "y":0.00, "z":-0.025}, "scale":{"x":1.0,"y":1.5,"z":1.22},"rot":{"x":0, "y":0, "z":0}}],
+        {"deformGroup":""},
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"frictionCoef":1.0},
+        {"nodeMaterial":"|NM_WOOD"},
+        {"collision":true},
+        {"selfCollision":true},
+        {"group":"couch"},
+        //{"fixed":true},
+
+        {"nodeWeight":2.5},
+        ["coucha1ll", 0.35, 1.01, -0.00],
+        ["coucha1l", 0.35, 0.33, 0.10],
+        ["coucha1r", 0.35, -0.33, 0.10],
+        ["coucha1rr", 0.35, -1.01, 0.00],
+        ["coucha2ll", -0.35, 1.01, -0.00],
+        ["coucha2l", -0.35, 0.33, 0.10],
+        ["coucha2r", -0.35, -0.33, 0.10],
+        ["coucha2rr", -0.35, -1.01, 0.00],
+        {"nodeMaterial":"|NM_CLOTH"},
+         {"nodeWeight":2},
+        //node layer2
+        ["coucha3l", 0.40, 0.33, 0.31],
+        ["coucha3r", 0.40, -0.33, 0.31],
+        ["coucha4l", -0.20, 0.33, 0.31,{"nodeWeight":4}],
+        ["coucha4r", -0.20, -0.33, 0.31,{"nodeWeight":4}],
+        ["coucha3ll", 0.40, 0.88, 0.31],
+        ["coucha3rr", 0.40, -0.88, 0.31],
+        ["coucha4ll", -0.20, 0.88, 0.31],
+        ["coucha4rr", -0.20, -0.88, 0.31],
+        ["coucha3lll", 0.40, 1.18, 0.70],
+        ["coucha3rrr", 0.40, -1.18, 0.70],
+        ["coucha4lll", -0.35, 1.18, 0.70],
+        ["coucha4rrr", -0.35, -1.18, 0.70],
+
+        ["coucha8l", -0.40, 0.33, 0.90],
+        ["coucha8r", -0.40, -0.33, 0.90],
+
+        ["coucha5ll", 0.40, 0.88, 0.70],
+        ["coucha5rr", 0.40, -0.88, 0.70],
+        ["coucha6l", -0.20, 0.33, 0.70],
+        ["coucha6r", -0.20, -0.33, 0.70],
+        ["coucha6ll", -0.20, 0.88, 0.70],
+        ["coucha6rr", -0.20, -0.88, 0.70],
+        // {"group":""},
+
+
+        {"nodeWeight":1},
+        //cushion
+        {"group":"cushion_M"},
+        ["couchacshm1l", 0.41, 0.27, 0.34],
+        ["couchacshm1r", 0.41, -0.27, 0.34],
+        ["couchacshm2l", -0.17, 0.27, 0.34],
+        ["couchacshm2r", -0.17, -0.27, 0.34],
+
+        ["couchacshm3l", 0.41, 0.27, 0.46],
+        ["couchacshm3r", 0.41, -0.27, 0.46],
+        ["couchacshm4l", -0.17, 0.27, 0.46],
+        ["couchacshm4r", -0.17, -0.27, 0.46],
+        {"group":"cushion_L"},
+        ["couchacshl1l", 0.41, 0.85, 0.34],
+        ["couchacshl1r", 0.41, 0.285, 0.34],
+        ["couchacshl2l", -0.17, 0.85, 0.34],
+        ["couchacshl2r", -0.17, 0.285, 0.34],
+
+        ["couchacshl3l", 0.41, 0.85, 0.46],
+        ["couchacshl3r", 0.41, 0.285, 0.46],
+        ["couchacshl4l", -0.17, 0.85, 0.46],
+        ["couchacshl4r", -0.17, 0.285, 0.46],
+        {"group":"cushion_R"},
+        ["couchacshr1l", 0.41, -0.285, 0.34],
+        ["couchacshr1r", 0.41, -0.85, 0.34],
+        ["couchacshr2l", -0.17, -0.285, 0.34],
+        ["couchacshr2r", -0.17, -0.85, 0.34],
+
+        ["couchacshr3l", 0.41, -0.285, 0.46],
+        ["couchacshr3r", 0.41, -0.85, 0.46],
+        ["couchacshr4l", -0.17, -0.285, 0.46],
+        ["couchacshr4r", -0.17, -0.85, 0.46],
+
+        //cushion guide nodes
+        {"group":""},
+        ["couchacshg1ll", 0.40, 0.73, 0.31],
+        ["couchacshg1l", 0.40, 0.10, 0.31],
+        ["couchacshg1r", 0.40, -0.10, 0.31],
+        ["couchacshg1rr", 0.40, -0.73, 0.31],
+        ["couchacshg2l", 0.40, 0.88, 0.39],
+        ["couchacshg2r", 0.40, -0.88, 0.39],
+
+
+        {"collision":true},
+        {"group":""},
+        {"selfCollision":true},
+
+        ],
+
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+        {"beamSpring":450000,"beamDamp":100},
+        {"beamDeform":2000,"beamStrength":72000},
+        {"deformLimitExpansion":1.2},
+        {"deformLimit":1.5},
+        //middle section
+        //vertical
+        ["coucha1rr", "coucha3rr"],
+        ["coucha2rr", "coucha4rr"],
+        ["coucha1r", "coucha3r"],
+        ["coucha2r", "coucha4r"],
+        ["coucha1l", "coucha3l"],
+        ["coucha2l", "coucha4l"],
+        ["coucha1ll", "coucha3ll"],
+        ["coucha2ll", "coucha4ll"],
+        ["coucha6r", "coucha4r"],
+        ["coucha6l", "coucha4l"],
+        ["coucha6ll", "coucha4ll"],
+        ["coucha4rr", "coucha6rr"],
+        ["coucha5rr", "coucha3rr"],
+        ["coucha5ll", "coucha3ll"],
+
+
+        //backrest node
+
+        ["coucha2r", "coucha8r"],
+        ["coucha2l", "coucha8l"],
+
+        //widthwise
+        ["coucha1rr", "coucha1r"],
+        ["coucha1r", "coucha1l"],
+        ["coucha1l", "coucha1ll"],
+        ["coucha3rr", "coucha3r" {"deformLimitExpansion":1.0}],
+        ["coucha3r", "coucha3l" {"deformLimitExpansion":1.0}],
+        ["coucha3l", "coucha3ll" {"deformLimitExpansion":1.0}],
+        ["coucha2rr", "coucha2r"],
+        ["coucha2l", "coucha2r"],
+        ["coucha2l", "coucha2ll"],
+        ["coucha4rr", "coucha4r"],
+        ["coucha4r", "coucha4l"],
+        ["coucha4l", "coucha4ll"],
+        ["coucha6rr", "coucha6r" {"deformLimitExpansion":1.0}],
+        ["coucha6r", "coucha6l" {"deformLimitExpansion":1.0}],
+        ["coucha6l", "coucha6ll" {"deformLimitExpansion":1.0}],
+        ["coucha8l", "coucha8r"],
+
+
+
+
+        //widthwise diagonals
+        //["coucha3r", "coucha1l"{"beamDeform":3500}],
+        ["coucha3rr", "coucha1r"],
+        ["coucha3r", "coucha1rr"],
+        ["coucha3l", "coucha1ll"],
+        ["coucha3ll", "coucha1l"],
+        ["coucha3l", "coucha1r"],
+        ["coucha3r", "coucha1l"],
+        ["coucha4ll", "coucha2l"],
+        ["coucha4l", "coucha2ll"],
+        ["coucha4l", "coucha2r"],
+        ["coucha4r", "coucha2l"],
+        ["coucha4rr", "coucha2r"],
+        ["coucha4r", "coucha2rr"],
+        ["coucha6rr", "coucha4r"],
+        ["coucha6r", "coucha4rr"],
+        ["coucha6r", "coucha4l"],
+        ["coucha6l", "coucha4r"],
+        ["coucha6l", "coucha4ll"],
+        ["coucha6ll", "coucha4l"],
+        ["coucha8r", "coucha2l"],
+        ["coucha8l", "coucha2r"],
+        //backrest ends
+        ["coucha8l", "coucha4lll"],
+        ["coucha8r", "coucha4rrr"],
+
+        //lenghtwise
+        ["coucha2rr", "coucha1rr"],
+        ["coucha4rr", "coucha3rr"],
+        ["coucha4r", "coucha3r"],
+        ["coucha4l", "coucha3l"],
+        ["coucha4ll", "coucha3ll"],
+        ["coucha2ll", "coucha1ll"],
+        ["coucha2l", "coucha1l"],
+        ["coucha2r", "coucha1r"],
+        ["coucha6ll", "coucha5ll"],
+        ["coucha6rr", "coucha5rr"],
+
+        //lenghtwise diagonals
+        ["coucha6rr", "coucha3rr"],
+        ["coucha5rr", "coucha4rr"],
+        ["coucha6ll", "coucha3ll"],
+        ["coucha5ll", "coucha4ll"],
+        ["coucha4rr", "coucha3r"],
+        ["coucha4r", "coucha3rr"],
+        ["coucha3r", "coucha4l"],
+        ["coucha4r", "coucha3l"],
+        ["coucha3l", "coucha4ll"],
+        ["coucha4l", "coucha3ll"],
+        ["coucha1rr", "coucha2r"],
+        ["coucha2r", "coucha1l"],
+        ["coucha1r", "coucha2l"],
+        ["coucha1l", "coucha2ll"],
+        ["coucha1ll", "coucha2l"],
+
+        //backrest top node to the inner backrest nodes
+        ["coucha8r", "coucha6r"],
+        ["coucha8l", "coucha6l"],
+        ["coucha8l", "coucha6r"],
+        ["coucha8r", "coucha6l"],
+        ["coucha8r", "coucha6rr"],
+        ["coucha8l", "coucha6ll"],
+
+        //inner seat bottom crosses
+        ["coucha4r", "coucha1rr"],
+        ["coucha3rr", "coucha2r"],
+        ["coucha3r", "coucha2rr"],
+        ["coucha4rr", "coucha1r"],
+        ["coucha2l", "coucha3r"],
+        ["coucha4l", "coucha1r"],
+        ["coucha4r", "coucha1l"],
+        ["coucha3l", "coucha2r"],
+        ["coucha4l", "coucha1ll"],
+        ["coucha3ll", "coucha2l"],
+        ["coucha3l", "coucha2ll"],
+        ["coucha4ll", "coucha1l"],
+        ["coucha3ll", "coucha2ll"],
+        ["coucha4ll", "coucha1ll"],
+        ["coucha4rr", "coucha1rr"],
+        ["coucha3rr", "coucha2rr"],
+
+
+        //back seat bottom nodes to top backrest
+        ["coucha4rr", "coucha8r"],
+        ["coucha4r", "coucha8r"],
+        ["coucha4l", "coucha8r"],
+        ["coucha4r", "coucha8l"],
+        ["coucha4l", "coucha8l"],
+        ["coucha4ll", "coucha8l"],
+        //back rest nodes to lower rear nodes
+        ["coucha6ll", "coucha2l"],
+        ["coucha6l", "coucha2ll"],
+        ["coucha6l", "coucha2r"],
+        ["coucha6r", "coucha2l"],
+        ["coucha6l", "coucha2l"],
+        ["coucha6r", "coucha2r"],
+        ["coucha6rr", "coucha2r"],
+        ["coucha6r", "coucha2rr"],
+
+        //right armrest
+        //vertical
+        ["coucha1rr", "coucha3rrr"],
+        ["coucha2rr", "coucha4rrr"],
+        //width
+        ["coucha3rrr", "coucha5rr"],
+        ["coucha4rrr", "coucha6rr"],
+
+
+        //crosses
+        ["coucha3rrr", "coucha3rr"],
+        ["coucha5rr", "coucha1rr"],
+        ["coucha4rrr", "coucha4rr"],
+        ["coucha6rr", "coucha2rr"],
+
+
+        //lenghtwise
+        ["coucha4rrr", "coucha3rrr"],
+        //crosses
+        ["coucha2rr", "coucha3rrr"],
+        ["coucha1rr", "coucha4rrr"],
+        //cross on top of the armrest
+        ["coucha4rrr", "coucha5rr"],
+        ["coucha6rr", "coucha3rrr"],
+
+        //left armrest
+        //vertical
+        ["coucha1ll", "coucha3lll"],
+        ["coucha2ll", "coucha4lll"],
+        //width
+        ["coucha3lll", "coucha5ll"],
+        ["coucha4lll", "coucha6ll"],
+
+
+        //crosses
+        ["coucha3lll", "coucha3ll"],
+        ["coucha5ll", "coucha1ll"],
+        ["coucha4lll", "coucha4ll"],
+        ["coucha6ll", "coucha2ll"],
+
+
+        //lenghtwise
+        ["coucha4lll", "coucha3lll"],
+        //crosses
+        ["coucha2ll", "coucha3lll"],
+        ["coucha1ll", "coucha4lll"],
+        //cross on top of the armrest
+        ["coucha4lll", "coucha5ll"],
+        ["coucha6ll", "coucha3lll"],
+
+        //rigifiers
+        {"beamSpring":500000,"beamDamp":50},
+        {"beamDeform":4500,"beamStrength":72000},
+        //outer armrest nodes anti-invert beams
+        ["coucha3lll", "coucha3l"],
+        ["coucha3rrr", "coucha3r"],
+
+        ["coucha3lll", "coucha3r"],
+        ["coucha3rrr", "coucha3l"],
+        {"beamSpring":450000,"beamDamp":50},
+        {"beamDeform":3000},
+        ["coucha4lll", "coucha6l"],
+        ["coucha4rrr", "coucha6r"],
+        ["coucha4lll", "coucha4l"],
+        ["coucha4rrr", "coucha4r"],
+
+
+
+        {"beamSpring":150000},
+        {"beamDeform":1000},
+        //CushionM
+
+        {"beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":0.3,"boundZone":0.01},
+        {"beamLimitSpring":450000,"beamLimitDamp":500},
+        {"beamSpring":15500,"beamDamp":55},
+        {"beamDeform":26500,"beamStrength":17000},
+        //--EXPANSION DEFORM LIMIT DEFAULT--
+        {"deformLimitExpansion":1.2},
+        //vertical
+        ["couchacshm1l", "couchacshm3l"],
+        ["couchacshm2l", "couchacshm4l"],
+        ["couchacshm1r", "couchacshm3r"],
+        ["couchacshm2r", "couchacshm4r"],
+        //horizontal
+        {"beamSpring":15000,"beamDamp":150},
+        ["couchacshm1l", "couchacshm1r"],
+        ["couchacshm2l", "couchacshm2r"],
+        ["couchacshm3l", "couchacshm3r"],
+        ["couchacshm4l", "couchacshm4r"],
+
+        ["couchacshm1l", "couchacshm2l"],
+        ["couchacshm1r", "couchacshm2r"],
+        ["couchacshm3l", "couchacshm4l"],
+        ["couchacshm3r", "couchacshm4r"],
+        //crossing
+        {"beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":0.05,"boundZone":0.01},
+        {"beamLimitSpring":450000,"beamLimitDamp":800},
+        {"beamSpring":14000,"beamDamp":50},
+        ["couchacshm1l", "couchacshm4l"],
+        ["couchacshm3l", "couchacshm2l"],
+        ["couchacshm1r", "couchacshm4r"],
+        ["couchacshm3r", "couchacshm2r"],
+
+        ["couchacshm1l", "couchacshm3r"],
+        ["couchacshm3l", "couchacshm1r"],
+        ["couchacshm2l", "couchacshm4r"],
+        ["couchacshm4l", "couchacshm2r"],
+
+        ["couchacshm1l", "couchacshm4r"],
+        ["couchacshm4l", "couchacshm1r"],
+
+        ["couchacshm3l", "couchacshm2r"],
+        ["couchacshm2l", "couchacshm3r"],
+
+        //cushion L
+        {"beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":0.3,"boundZone":0.01},
+        {"beamLimitSpring":450000,"beamLimitDamp":500},
+        {"beamSpring":15500,"beamDamp":150},
+        {"beamDeform":6500,"beamStrength":17000},
+        //--EXPANSION DEFORM LIMIT DEFAULT--
+        {"deformLimitExpansion":1.2},
+        //vertical
+        ["couchacshl1l", "couchacshl3l"],
+        ["couchacshl2l", "couchacshl4l"],
+        ["couchacshl1r", "couchacshl3r"],
+        ["couchacshl2r", "couchacshl4r"],
+        //horizontal
+        {"beamSpring":5000,"beamDamp":150},
+        ["couchacshl1l", "couchacshl1r"],
+        ["couchacshl2l", "couchacshl2r"],
+        ["couchacshl3l", "couchacshl3r"],
+        ["couchacshl4l", "couchacshl4r"],
+
+        ["couchacshl1l", "couchacshl2l"],
+        ["couchacshl1r", "couchacshl2r"],
+        ["couchacshl3l", "couchacshl4l"],
+        ["couchacshl3r", "couchacshl4r"],
+        //crossing
+        {"beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":0.05,"boundZone":0.01},
+        {"beamLimitSpring":150000,"beamLimitDamp":800},
+        {"beamSpring":4000,"beamDamp":150},
+        ["couchacshl1l", "couchacshl4l"],
+        ["couchacshl3l", "couchacshl2l"],
+        ["couchacshl1r", "couchacshl4r"],
+        ["couchacshl3r", "couchacshl2r"],
+
+        ["couchacshl1l", "couchacshl3r"],
+        ["couchacshl3l", "couchacshl1r"],
+        ["couchacshl2l", "couchacshl4r"],
+        ["couchacshl4l", "couchacshl2r"],
+
+        ["couchacshl1l", "couchacshl4r"],
+        ["couchacshl4l", "couchacshl1r"],
+
+        ["couchacshl3l", "couchacshl2r"],
+        ["couchacshl2l", "couchacshl3r"],
+
+        //Cushion R
+        {"beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":0.3,"boundZone":0.01},
+        {"beamLimitSpring":450000,"beamLimitDamp":200},
+        {"beamSpring":15500,"beamDamp":55},
+        {"beamDeform":26500,"beamStrength":17000},
+        //--EXPANSION DEFORM LIMIT DEFAULT--
+        {"deformLimitExpansion":1.2},
+        //vertical
+        ["couchacshr1l", "couchacshr3l"],
+        ["couchacshr2l", "couchacshr4l"],
+        ["couchacshr1r", "couchacshr3r"],
+        ["couchacshr2r", "couchacshr4r"],
+        //horizontal
+        {"beamSpring":15000,"beamDamp":150},
+        ["couchacshr1l", "couchacshr1r"],
+        ["couchacshr2l", "couchacshr2r"],
+        ["couchacshr3l", "couchacshr3r"],
+        ["couchacshr4l", "couchacshr4r"],
+
+        ["couchacshr1l", "couchacshr2l"],
+        ["couchacshr1r", "couchacshr2r"],
+        ["couchacshr3l", "couchacshr4l"],
+        ["couchacshr3r", "couchacshr4r"],
+        //crossing
+        {"beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":0.05,"boundZone":0.01},
+        {"beamLimitSpring":450000,"beamLimitDamp":800},
+        {"beamSpring":14000,"beamDamp":50},
+        ["couchacshr1l", "couchacshr4l"],
+        ["couchacshr3l", "couchacshr2l"],
+        ["couchacshr1r", "couchacshr4r"],
+        ["couchacshr3r", "couchacshr2r"],
+
+        ["couchacshr1l", "couchacshr3r"],
+        ["couchacshr3l", "couchacshr1r"],
+        ["couchacshr2l", "couchacshr4r"],
+        ["couchacshr4l", "couchacshr2r"],
+
+        ["couchacshr1l", "couchacshr4r"],
+        ["couchacshr4l", "couchacshr1r"],
+
+        ["couchacshr3l", "couchacshr2r"],
+        ["couchacshr2l", "couchacshr3r"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":100000,"beamDamp":25},
+        {"beamDeform":1500,"beamStrength":7000},
+
+        //cushion guides
+        ["couchacshg2r", "couchacshg1rr"],
+        ["couchacshg2r", "coucha5rr"],
+        ["couchacshg1rr", "coucha5rr"],
+        ["couchacshg2r", "coucha3rr"],
+        ["couchacshg1rr", "coucha3rr"],
+        ["couchacshg1rr", "coucha3r"],
+        ["couchacshg1rr", "coucha1rr"],
+        ["couchacshg2r", "coucha1rr"],
+        ["couchacshg1rr", "coucha4rr"],
+        ["couchacshg2r", "coucha4rr"],
+        ["coucha3r", "couchacshg1r"],
+        ["couchacshg1r", "couchacshg1l"],
+        ["couchacshg1l", "coucha3l"],
+        ["couchacshg1l", "coucha1l"],
+        ["couchacshg1r", "coucha1r"],
+        ["couchacshg1r", "coucha1l"],
+        ["couchacshg1l", "coucha1r"],
+        ["couchacshg1l", "coucha4l"],
+        ["couchacshg1r", "coucha4r"],
+        ["couchacshg1r", "coucha2r"],
+        ["couchacshg1l", "coucha2l"],
+
+
+        ["couchacshg2l", "couchacshg1ll"],
+        ["couchacshg2l", "coucha5ll"],
+        ["couchacshg1ll", "coucha5ll"],
+        ["couchacshg2l", "coucha3ll"],
+        ["couchacshg1ll", "coucha3ll"],
+        ["couchacshg1ll", "coucha3l"],
+        ["couchacshg1ll", "coucha1ll"],
+        ["couchacshg2l", "coucha1ll"],
+        ["couchacshg1ll", "coucha4ll"],
+        ["couchacshg2l", "coucha4ll"],
+         //cushion support beams - prevent the back cushion nodes from falling through the join between seat bottom and seat back
+        {"beamType":"|SUPPORT","beamLongBound":1.1},
+        {"beamPrecompression":1,"beamSpring":1200,"beamDamp":50},
+        {"breakGroup":"couchacshl_support"},
+        ["couchacshl2l", "coucha2ll"],
+        ["couchacshl2l", "coucha2l"],
+        ["couchacshl2r", "coucha2ll"],
+        ["couchacshl2r", "coucha2l"],
+        {"breakGroup":"couchacshm_support"},
+        ["couchacshm2l", "coucha2l"],
+        ["couchacshm2l", "coucha2r"],
+        ["couchacshm2r", "coucha2l"],
+        ["couchacshm2r", "coucha2r"],
+        {"breakGroup":"couchacshr_support"},
+        ["couchacshr2l", "coucha2rr"],
+        ["couchacshr2l", "coucha2r"],
+        ["couchacshr2r", "coucha2rr"],
+        ["couchacshr2r", "coucha2r"],
+
+        {"beamPrecompression":1.01,"beamSpring":800,"beamDamp":5},
+        {"breakGroup":"couchacshl_support"},
+        ["couchacshl2l", "coucha1ll"],
+        ["couchacshl2l", "coucha1l"],
+        ["couchacshl2r", "coucha1ll"],
+        ["couchacshl2r", "coucha1l"],
+        {"breakGroup":"couchacshm_support"},
+        ["couchacshm2l", "coucha1l"],
+        ["couchacshm2l", "coucha1r"],
+        ["couchacshm2r", "coucha1l"],
+        ["couchacshm2r", "coucha1r"],
+        {"breakGroup":"couchacshr_support"},
+        ["couchacshr2l", "coucha1rr"],
+        ["couchacshr2l", "coucha1r"],
+        ["couchacshr2r", "coucha1rr"],
+        ["couchacshr2r", "coucha1r"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+       //attach straps
+        {"beamPrecompression":1, "beamType":"|ANISOTROPIC", "beamLongBound":0.04},
+        {"beamSpring":201000,"beamDamp":190},
+        {"beamDeform":188000,"beamStrength":"FLT_MAX"},
+        {"springExpansion":95000,"dampExpansion":200,"transitionZone":0.01},
+        {"breakGroup":"couch_frontStrap"},
+        {"deformGroup":"couch_frontStrap", "deformationTriggerRatio":0.5}
+        ["coucha3r", "rfb3ll"],
+        ["coucha3rr", "rfb3ll"],
+        ["coucha3r", "rfb3l"],
+        ["coucha3rr", "rfb3l"],
+        ["coucha8r", "rfb3rr"],
+        ["coucha4rrr", "rfb3rr"],
+        ["coucha8r", "rfb3r"],
+        ["coucha4rrr", "rfb3r"],
+        ["coucha3r", "rfb3"],
+        ["coucha3rr", "rfb3"],
+        ["coucha8r", "rfb3"],
+        ["coucha4rrr", "rfb3"],
+        ["coucha2l", "rfb3"],
+        ["coucha2l", "rfb3"],
+        {"breakGroup":"couch_rearStrap"}
+        {"deformGroup":"couch_rearStrap", "deformationTriggerRatio":0.5}
+        ["coucha3l", "rfb4ll"],
+        ["coucha3ll", "rfb4ll"],
+        ["coucha3l", "rfb4l"],
+        ["coucha3ll", "rfb4l"],
+        ["coucha8l", "rfb4rr"],
+        ["coucha4lll", "rfb4rr"],
+        ["coucha8l", "rfb4r"],
+        ["coucha4lll", "rfb4r"],
+
+
+        ["coucha3l", "rfb4"],
+        ["coucha3ll", "rfb4"],
+        ["coucha8l", "rfb4"],
+        ["coucha4lll", "rfb4"],
+        ["coucha1r", "rfb4"],
+        ["coucha2r", "rfb4"],
+        {"deformGroup":""}
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":"couch_frontStrap"},
+        ["couchacshl3r", "coucha3l",{"beamSpring":25000,"beamDamp":20,"beamStrength":"FLT_MAX","beamPrecompression":0.9}],
+        ["couchacshl3l", "coucha3ll",{"beamSpring":25000,"beamDamp":20,"beamStrength":"FLT_MAX","beamPrecompression":0.9}],
+        ["couchacshl3r", "coucha4l",{"beamSpring":25000,"beamDamp":20,"beamStrength":"FLT_MAX","beamPrecompression":0.9}],
+        ["couchacshl3l", "coucha4ll",{"beamSpring":25000,"beamDamp":20,"beamStrength":"FLT_MAX","beamPrecompression":0.9}],
+        ["couchacshl3r", "coucha3ll",{"beamSpring":250000,"beamDamp":20,"beamDeform":18000,"beamStrength":"FLT_MAX"}],
+        ["couchacshl3l", "coucha3rr",{"beamSpring":250000,"beamDamp":20,"beamDeform":18000,"beamStrength":"FLT_MAX"}],
+        {"breakGroup":"couch_rearStrap"}
+        ["couchacshr3r", "coucha3r",{"beamSpring":25000,"beamDamp":20,"beamStrength":"FLT_MAX","beamPrecompression":0.9}],
+        ["couchacshr3l", "coucha3rr",{"beamSpring":25000,"beamDamp":20,"beamStrength":"FLT_MAX","beamPrecompression":0.9}],
+        ["couchacshr3r", "coucha4r",{"beamSpring":25000,"beamDamp":20,"beamStrength":"FLT_MAX","beamPrecompression":0.9}],
+        ["couchacshr3l", "coucha4rr",{"beamSpring":25000,"beamDamp":20,"beamStrength":"FLT_MAX","beamPrecompression":0.9}],
+        ["couchacshr3r", "coucha3rr",{"beamSpring":250000,"beamDamp":20,"beamDeform":18000,"beamStrength":"FLT_MAX","beamPrecompression":0.9}],
+        ["couchacshr3l", "coucha3r",{"beamSpring":250000,"beamDamp":20,"beamDeform":18000,"beamStrength":"FLT_MAX","beamPrecompression":0.9}],
+
+        //cushion support beams - prevent the back cushion nodes from falling through the join between seat bottom and seat back
+        {"beamType":"|SUPPORT","beamLongBound":0.21},
+        {"beamPrecompression":1,"beamSpring":1200,"beamDamp":50},
+        {"breakGroup":""}
+        ["couchacshm3l", "coucha1l"],
+        ["couchacshm3r", "coucha1r"],
+        ["couchacshm4l", "coucha2l"],
+        ["couchacshm4r", "coucha2r"],
+        {"breakGroup":"couch_supportBoard_L"},
+        {"deformGroup":"couch_supportBoard_L", "deformationTriggerRatio":0.1}
+        ["coucha5rr", "rfb3l"],
+        ["coucha5ll", "rfb4l"],
+        {"deformGroup":"couch_supportBoard_R", "deformationTriggerRatio":0.1}
+        {"breakGroup":"couch_supportBoard_R"},
+        ["coucha6rr", "rfb3r"],
+        ["coucha6ll", "rfb4r"],
+        {"breakGroup":""},
+        {"springExpansion":"","dampExpansion":"","transitionZone":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0}
+    ],
+    "torsionbars": [
+        ["id1:", "id2:", "id3:", "id4:"],
+        {"spring":20, "damp":0.5, "deform":250000, "strength":100000},
+        //Invert prevention for the cushions
+        ["couchacshl1r", "couchacshl3r", "couchacshl3l", "couchacshl4l"],
+        ["couchacshl1l", "couchacshl3l", "couchacshl3r", "couchacshl4r"],
+        ["couchacshl2r", "couchacshl4r", "couchacshl4l", "couchacshl3l"],
+        ["couchacshl2l", "couchacshl4l", "couchacshl4r", "couchacshl3r"],
+        ["couchacshl3r", "couchacshl1r", "couchacshl1l", "couchacshl2l"],
+        ["couchacshl3l", "couchacshl1l", "couchacshl1r", "couchacshl2r"],
+        ["couchacshl4r", "couchacshl2r", "couchacshl2l", "couchacshl3l"],
+        ["couchacshl4l", "couchacshl2l", "couchacshl2r", "couchacshl3r"],
+        ["couchacshl1r", "couchacshl3r", "couchacshl4r", "couchacshl4l"],
+        ["couchacshl1l", "couchacshl3l", "couchacshl4l", "couchacshl4r"],
+        ["couchacshl2r", "couchacshl4r", "couchacshl3r", "couchacshl3l"],
+        ["couchacshl2l", "couchacshl4l", "couchacshl3l", "couchacshl3r"],
+        ["couchacshl3r", "couchacshl1r", "couchacshl2r", "couchacshl2l"],
+        ["couchacshl3l", "couchacshl1l", "couchacshl2l", "couchacshl2r"],
+        ["couchacshl4r", "couchacshl2r", "couchacshl1r", "couchacshl1l"],
+        ["couchacshl4l", "couchacshl2l", "couchacshl1l", "couchacshl1r"],
+
+        ["couchacshm1r", "couchacshm3r", "couchacshm3l", "couchacshm4l"],
+        ["couchacshm1l", "couchacshm3l", "couchacshm3r", "couchacshm4r"],
+        ["couchacshm2r", "couchacshm4r", "couchacshm4l", "couchacshm3l"],
+        ["couchacshm2l", "couchacshm4l", "couchacshm4r", "couchacshm3r"],
+        ["couchacshm3r", "couchacshm1r", "couchacshm1l", "couchacshm2l"],
+        ["couchacshm3l", "couchacshm1l", "couchacshm1r", "couchacshm2r"],
+        ["couchacshm4r", "couchacshm2r", "couchacshm2l", "couchacshm3l"],
+        ["couchacshm4l", "couchacshm2l", "couchacshm2r", "couchacshm3r"],
+        ["couchacshm1r", "couchacshm3r", "couchacshm4r", "couchacshm4l"],
+        ["couchacshm1l", "couchacshm3l", "couchacshm4l", "couchacshm4r"],
+        ["couchacshm2r", "couchacshm4r", "couchacshm3r", "couchacshm3l"],
+        ["couchacshm2l", "couchacshm4l", "couchacshm3l", "couchacshm3r"],
+        ["couchacshm3r", "couchacshm1r", "couchacshm2r", "couchacshm2l"],
+        ["couchacshm3l", "couchacshm1l", "couchacshm2l", "couchacshm2r"],
+        ["couchacshm4r", "couchacshm2r", "couchacshm1r", "couchacshm1l"],
+        ["couchacshm4l", "couchacshm2l", "couchacshm1l", "couchacshm1r"],
+
+        ["couchacshr1r", "couchacshr3r", "couchacshr3l", "couchacshr4l"],
+        ["couchacshr1l", "couchacshr3l", "couchacshr3r", "couchacshr4r"],
+        ["couchacshr2r", "couchacshr4r", "couchacshr4l", "couchacshr3l"],
+        ["couchacshr2l", "couchacshr4l", "couchacshr4r", "couchacshr3r"],
+        ["couchacshr3r", "couchacshr1r", "couchacshr1l", "couchacshr2l"],
+        ["couchacshr3l", "couchacshr1l", "couchacshr1r", "couchacshr2r"],
+        ["couchacshr4r", "couchacshr2r", "couchacshr2l", "couchacshr3l"],
+        ["couchacshr4l", "couchacshr2l", "couchacshr2r", "couchacshr3r"],
+        ["couchacshr1r", "couchacshr3r", "couchacshr4r", "couchacshr4l"],
+        ["couchacshr1l", "couchacshr3l", "couchacshr4l", "couchacshr4r"],
+        ["couchacshr2r", "couchacshr4r", "couchacshr3r", "couchacshr3l"],
+        ["couchacshr2l", "couchacshr4l", "couchacshr3l", "couchacshr3r"],
+        ["couchacshr3r", "couchacshr1r", "couchacshr2r", "couchacshr2l"],
+        ["couchacshr3l", "couchacshr1l", "couchacshr2l", "couchacshr2r"],
+        ["couchacshr4r", "couchacshr2r", "couchacshr1r", "couchacshr1l"],
+        ["couchacshr4l", "couchacshr2l", "couchacshr1l", "couchacshr1r"],
+
+
+
+    ],
+
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":10},
+        //front face
+        ["coucha3rrr", "coucha3rr", "couchacshg2r"],
+        ["couchacshg2r", "coucha5rr", "coucha3rrr"],
+        ["coucha3rrr", "coucha1rr", "coucha3rr"],
+        ["coucha3rr", "coucha1rr", "couchacshg1rr"],
+        ["couchacshg1rr", "coucha1rr", "coucha1r"],
+        ["coucha1r", "coucha3r", "couchacshg1rr"],
+        ["coucha1r", "couchacshg1r", "coucha3r"],
+        ["coucha1r", "couchacshg1l", "couchacshg1r"],
+        ["couchacshg1l", "coucha1l", "coucha3l"],
+        ["couchacshg1l", "coucha1r", "coucha1l"],
+        ["coucha1l", "coucha1ll", "coucha3l"],
+        ["coucha3l", "coucha1ll", "couchacshg1ll"],
+        ["couchacshg1ll", "coucha1ll", "coucha3ll"],
+        ["coucha3ll", "coucha1ll", "coucha3lll"],
+        ["coucha3lll", "coucha5ll", "couchacshg2l"],
+        ["couchacshg2l", "coucha3ll", "coucha3lll"],
+
+        //seat back
+        ["coucha6rr", "coucha4rr", "coucha4r"],
+        ["coucha4r", "coucha6r", "coucha6rr"],
+        ["coucha4r", "coucha4l", "coucha6l"],
+        ["coucha6l", "coucha6r", "coucha4r"],
+        ["coucha4l", "coucha4ll", "coucha6ll"],
+        ["coucha6ll", "coucha6l", "coucha4l"],
+        ["coucha4rrr", "coucha6rr", "coucha8r"],
+        ["coucha8r", "coucha6rr", "coucha6r"],
+        ["coucha6r", "coucha8l", "coucha8r"],
+        ["coucha6r", "coucha6l", "coucha8l"],
+        ["coucha8l", "coucha6l", "coucha6ll"],
+        ["coucha6ll", "coucha4lll", "coucha8l"],
+
+
+
+
+
+        //back face
+        ["coucha4lll", "coucha2ll", "coucha8l"],
+        ["coucha8l", "coucha2ll", "coucha2l"],
+        ["coucha2l", "coucha2r", "coucha8l"],
+        ["coucha8l", "coucha2r", "coucha8r"],
+        ["coucha8r", "coucha2r", "coucha2rr"],
+        ["coucha2rr", "coucha4rrr", "coucha8r"],
+
+
+        //right side
+        ["coucha4rrr", "coucha2rr", "coucha1rr"],
+        ["coucha1rr", "coucha3rrr", "coucha4rrr"],
+
+
+        {"dragCoef":0},
+        //inner
+        ["coucha5rr", "couchacshg2r", "coucha4rr"],
+        ["coucha4rr", "couchacshg2r", "coucha3rr"],
+        ["coucha5rr", "coucha4rr", "coucha6rr"],
+
+        //left side inner
+         ["coucha6ll", "coucha4ll", "coucha3ll"],
+        ["coucha3ll", "couchacshg2l", "coucha6ll"],
+        ["coucha6ll", "couchacshg2l", "coucha5ll"],
+
+
+
+        {"dragCoef":10},
+        //outer
+        ["coucha3lll", "coucha1ll", "coucha2ll"],
+        ["coucha2ll", "coucha4lll", "coucha3lll"],
+
+        {"dragCoef":2},
+        //top/seat bottom
+        ["coucha3rrr", "coucha5rr", "coucha6rr"],
+        ["coucha6rr", "coucha4rrr", "coucha3rrr"],
+        ["coucha5ll", "coucha3lll", "coucha6ll"],
+        ["coucha6ll", "coucha3lll", "coucha4lll"],
+        ["coucha4rr", "coucha3rr", "couchacshg1rr"],
+        ["couchacshg1rr", "coucha3r", "coucha4rr"],
+        ["coucha4rr", "coucha3r", "coucha4r"],
+        ["coucha4r", "coucha3r", "couchacshg1r"],
+        ["couchacshg1r", "couchacshg1l", "coucha4r"],
+        ["coucha4r", "couchacshg1l", "coucha3l"],
+        ["coucha3l", "coucha4l", "coucha4r"],
+        ["coucha3l", "couchacshg1ll", "coucha4l"],
+        ["coucha4l", "couchacshg1ll", "coucha3ll"],
+        ["coucha3ll", "coucha4ll", "coucha4l"],
+
+
+
+        {"dragCoef":2},
+        //bottom
+         ["coucha2ll", "coucha1ll", "coucha1l"],
+        ["coucha1l", "coucha2l", "coucha2ll"],
+        ["coucha1l", "coucha1r", "coucha2l"],
+        ["coucha2l", "coucha1r", "coucha2r"],
+        ["coucha2r", "coucha1r", "coucha1rr"],
+        ["coucha1rr", "coucha2rr", "coucha2r"],
+
+        {"dragCoef":10},
+        //cushion
+        //L
+        ["couchacshl4l", "couchacshl2l", "couchacshl2r"],
+        ["couchacshl2r", "couchacshl4r", "couchacshl4l"],
+        ["couchacshl1l", "couchacshl2l", "couchacshl4l"],
+        ["couchacshl3l", "couchacshl1l", "couchacshl4l"],
+        ["couchacshl1r", "couchacshl1l", "couchacshl3l"],
+        ["couchacshl3l", "couchacshl3r", "couchacshl1r"],
+        ["couchacshl2r", "couchacshl1r", "couchacshl3r"],
+        ["couchacshl3r", "couchacshl4r", "couchacshl2r"],
+        ["couchacshl4r", "couchacshl3r", "couchacshl3l"],
+        ["couchacshl3l", "couchacshl4l", "couchacshl4r"],
+        ["couchacshl2r", "couchacshl2l", "couchacshl1r"],
+        ["couchacshl1r", "couchacshl2l", "couchacshl1l"],
+        //M
+        ["couchacshm4l", "couchacshm2l", "couchacshm2r"],
+        ["couchacshm2r", "couchacshm4r", "couchacshm4l"],
+        ["couchacshm1l", "couchacshm2l", "couchacshm4l"],
+        ["couchacshm3l", "couchacshm1l", "couchacshm4l"],
+        ["couchacshm1r", "couchacshm1l", "couchacshm3l"],
+        ["couchacshm3l", "couchacshm3r", "couchacshm1r"],
+        ["couchacshm2r", "couchacshm1r", "couchacshm3r"],
+        ["couchacshm3r", "couchacshm4r", "couchacshm2r"],
+        ["couchacshm4r", "couchacshm3r", "couchacshm3l"],
+        ["couchacshm3l", "couchacshm4l", "couchacshm4r"],
+        ["couchacshm2r", "couchacshm2l", "couchacshm1r"],
+        ["couchacshm1r", "couchacshm2l", "couchacshm1l"],
+
+        //cushion
+        ["couchacshr4l", "couchacshr2l", "couchacshr2r"],
+        ["couchacshr2r", "couchacshr4r", "couchacshr4l"],
+        ["couchacshr1l", "couchacshr2l", "couchacshr4l"],
+        ["couchacshr3l", "couchacshr1l", "couchacshr4l"],
+        ["couchacshr1r", "couchacshr1l", "couchacshr3l"],
+        ["couchacshr3l", "couchacshr3r", "couchacshr1r"],
+        ["couchacshr2r", "couchacshr1r", "couchacshr3r"],
+        ["couchacshr3r", "couchacshr4r", "couchacshr2r"],
+        ["couchacshr4r", "couchacshr3r", "couchacshr3l"],
+        ["couchacshr3l", "couchacshr4l", "couchacshr4r"],
+        ["couchacshr2r", "couchacshr2l", "couchacshr1r"],
+        ["couchacshr1r", "couchacshr2l", "couchacshr1l"],
+        {"liftCoef":""},
+    ],
+},
+}

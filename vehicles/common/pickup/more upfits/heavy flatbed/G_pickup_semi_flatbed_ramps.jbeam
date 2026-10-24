@@ -1,0 +1,1244 @@
+{
+"G_pickup_semi_flatbed_ramps": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Short Single Car Loading Ramps",
+        "value":900,
+    },
+    "slotType" : "G_pickup_semi_flatbed_ramps",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_semi_flatbed_ramp", ["pickup_load_ramps"],[],{"pos":{"x":0.9, "y":0.0, "z":0.0}}],
+         ["G_pickup_semi_flatbed_ramp", ["pickup_load_ramps"],[],{"pos":{"x":-0.9, "y":0.0, "z":0.0}}],
+
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"RampCouplerL"}],
+        ["advancedCouplerControl", {"name":"RampCouplerR"}],
+    ]
+    "RampCouplerL":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["ramp4l",  "ramp4ll",     200000,                     0.015,                  0.005,                      0.2,                 0.1,                   "ramplatch_L", {"forceCid1":"ramp4l", "forceCid2":"ramp2l"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["cf11l"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 70,
+        "openForceDuration": 0.5,
+        "closeForceMagnitude": 190,
+        "closeForceDuration": 1.15
+    }
+    "RampCouplerR":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["ramp4r",  "ramp4rr",     200000,                     0.015,                  0.005,                      0.2,                 0.1,                   "ramplatch_R", {"forceCid1":"ramp4r", "forceCid2":"ramp2r"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["cf11r"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 70,
+        "openForceDuration": 0.5,
+        "closeForceMagnitude": 190,
+        "closeForceDuration": 1.15
+    }
+    "triggers":[
+        ["id", "label", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["RampL", "", "ramp2ll","ramp2l","ramp1ll", "box", {"x":0.04, "y":0.04, "z":0.12}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":-0.005, "y":0.0, "z":-0.022}, {"deformGroup":"pickup_load_ramps"}],
+        ["RampR", "", "ramp2rr","ramp2r","ramp1rr", "box", {"x":0.04, "y":0.04, "z":0.12}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":-0.005, "y":0.0, "z":-0.018}, {"deformGroup":"pickup_load_ramps"}],
+        ["Ramps", "", "cf11","cf11r","cf1", "box", {"x":0.18, "y":0.04, "z":0.06}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":-0.09, "y":0.01, "z":-0.02}, {"deformGroup":"pickup_flatbed"}],
+    ],
+    "triggerEventLinks":[
+        ["triggerId:triggers", "action", "targetEventId:events"],
+        ["RampL", "action0", "RampLatchL"]
+        ["RampR", "action0", "RampLatchR"]
+        ["Ramps", "action0", "RampLatchdummy"]
+        ["Ramps", "action0", "RampLatchL"]
+        ["Ramps", "action0", "RampLatchR"]
+    ],
+    "events":[
+        ["id", "title", "desc"],
+        ["RampLatchdummy", "Toggle Both Ramps", "ui.inputActions.pickup.RampLatchL.description"],
+        ["RampLatchL", "Toggle Left Ramp", "ui.inputActions.pickup.RampLatchL.description", {"onUp":"controller.getControllerSafe('RampCouplerL').toggleGroup()"}],
+        ["RampLatchR", "Toggle Right Ramp", "ui.inputActions.pickup.RampLatchR.description", {"onUp":"controller.getControllerSafe('RampCouplerR').toggleGroup()"}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"collision":true},
+         {"selfCollision":false},
+         {"group":["pickup_load_ramps"]},
+         {"deformgroup":["pickup_load_ramps"]},
+         {"nodeMaterial":"|NM_METAL"},
+         //{"nodeWeight":5.17},
+         {"nodeWeight":2.6},
+         ["ramp1l", 0.62, 4.72, 0.89],
+         ["ramp1r", -0.62, 4.72, 0.89],
+         ["ramp1ll", 1.18, 4.72, 0.89],
+         ["ramp1rr", -1.18, 4.72, 0.89],
+         {"selfCollision":true},
+         ["ramp2l", 0.62, 4.72, 1.65],
+         ["ramp2r", -0.62, 4.72, 1.65],
+         ["ramp2ll", 1.18, 4.72, 1.65],
+         ["ramp2rr", -1.18, 4.72, 1.65],
+         ["ramp3l", 0.62, 4.72, 2.4],
+         ["ramp3r", -0.62, 4.72, 2.4],
+         ["ramp3ll", 1.18, 4.72, 2.4],
+         ["ramp3rr", -1.18, 4.72, 2.4],
+
+         {"group":""},
+         //rigidifier
+         {"collision":false},
+         {"selfCollision":false},
+         ["ramp4l", 0.88, 4.25, 1.65],
+         ["ramp4r", -0.88, 4.25, 1.65],
+         ["ramp4ll", 0.88, 4.25, 1.65],
+         ["ramp4rr", -0.88, 4.25, 1.65],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":3760940,"beamDamp":141},
+          {"beamDeform":56000,"beamStrength":"FLT_MAX"},
+          ["ramp1l","ramp1ll"],
+          ["ramp2l","ramp2ll"],
+          ["ramp3l","ramp3ll"],
+          ["ramp1l","ramp2l"],
+          ["ramp2l","ramp3l"],
+          ["ramp1ll","ramp2ll"],
+          ["ramp2ll","ramp3ll"],
+          ["ramp1l","ramp2ll"],
+          ["ramp2l","ramp1ll"],
+          ["ramp2l","ramp3ll"],
+          ["ramp3l","ramp2ll"],
+
+          ["ramp1r","ramp1rr"],
+          ["ramp2r","ramp2rr"],
+          ["ramp3r","ramp3rr"],
+          ["ramp1r","ramp2r"],
+          ["ramp2r","ramp3r"],
+          ["ramp1rr","ramp2rr"],
+          ["ramp2rr","ramp3rr"],
+          ["ramp1r","ramp2rr"],
+          ["ramp2r","ramp1rr"],
+          ["ramp2r","ramp3rr"],
+          ["ramp3r","ramp2rr"],
+
+          //rigidifier
+          {"beamSpring":3290940,"beamDamp":141},
+          {"beamDeform":214000,"beamStrength":"FLT_MAX"},
+          ["ramp4l", "ramp1l"],
+          ["ramp4l", "ramp1ll"],
+          ["ramp4l", "ramp2l"],
+          ["ramp4l", "ramp2ll"],
+          ["ramp4l", "ramp3l"],
+          ["ramp4l", "ramp3ll"],
+          ["ramp4r", "ramp1r"],
+          ["ramp4r", "ramp1rr"],
+          ["ramp4r", "ramp2r"],
+          ["ramp4r", "ramp2rr"],
+          ["ramp4r", "ramp3r"],
+          ["ramp4r", "ramp3rr"],
+          //coupler
+          ["ramp4ll", "cf11"],
+          ["ramp4ll", "cf11ll"],
+          ["ramp4ll", "cf12"],
+          ["ramp4ll", "cf12ll"],
+          ["ramp4ll", "cfrg2"],
+          ["ramp4rr", "cf11"],
+          ["ramp4rr", "cf11rr"],
+          ["ramp4rr", "cf12"],
+          ["ramp4rr", "cf12rr"],
+          ["ramp4rr", "cfrg2"],
+
+          //hinge attatch
+          {"beamDeform":21400,"beamStrength":"125000"},
+          ["ramp1l", "cf11l"],
+          ["ramp1l", "cf1l"],
+          ["ramp1l", "cf11ll"],
+          ["ramp1l", "cf12l"],
+          ["ramp1l", "cfrg2"],
+          ["ramp1ll", "cf11l"],
+          ["ramp1ll", "cf1l"],
+          ["ramp1ll", "cf11ll"],
+          ["ramp1ll", "cf12l"],
+          ["ramp1ll", "cfrg2"],
+
+          ["ramp1r", "cf11r"],
+          ["ramp1r", "cf1r"],
+          ["ramp1r", "cf11rr"],
+          ["ramp1r", "cf12r"],
+          ["ramp1r", "cfrg2"],
+          ["ramp1rr", "cf11r"],
+          ["ramp1rr", "cf1r"],
+          ["ramp1rr", "cf11rr"],
+          ["ramp1rr", "cf12r"],
+          ["ramp1rr", "cfrg2"],
+
+          //pop open
+          {"optional":true},
+          {"beamPrecompression":1.2,"beamType":"|SUPPORT","beamLongBound":20},
+          {"beamSpring":154,"beamDamp":20},
+          {"beamDeform":13500,"beamStrength":199360},
+          ["cfrg2","ramp4l"{"breakGroup":"ramplatch_L"}],
+          ["cfrg2","ramp4r"{"breakGroup":"ramplatch_R"}],
+          //close limiters
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":10.0, "beamShortBound":0.01},
+          {"beamSpring":154,"beamDamp":20},
+          ["ramp4ll","ramp2l"],
+          ["ramp4rr","ramp2r"],
+          {"optional":false},
+          {"disableTriangleBreaking":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.2},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //floor
+            {"group":"pickup_load_ramps"},
+            {"dragCoef":12},
+            {"groundModel":"asphalt"},
+            ["ramp1l","ramp1ll","ramp2ll"],
+            ["ramp1l","ramp2ll","ramp2l"],
+            ["ramp2l","ramp2ll","ramp3ll"],
+            ["ramp2l","ramp3ll","ramp3l"],
+            ["ramp1r","ramp2rr","ramp1rr"],
+            ["ramp1r","ramp2r","ramp2rr"],
+            ["ramp2r","ramp3rr","ramp2rr"],
+            ["ramp2r","ramp3r","ramp3rr"],
+            {"group":""},
+
+    ],
+},
+"G_pickup_semi_flatbed_ramps_long": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Long Single Car Loading Ramps",
+        "value":1200,
+    },
+    "slotType" : "G_pickup_semi_flatbed_ramps",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_semi_flatbed_ramp", ["pickup_load_ramps"],[],{"pos":{"x":0.9, "y":0.0, "z":-0.368}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":1.0, "z":1.41}}],
+         ["G_pickup_semi_flatbed_ramp", ["pickup_load_ramps"],[],{"pos":{"x":-0.9, "y":0.0, "z":-0.368}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":1.0, "z":1.41}}],
+
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"RampCouplerL"}],
+        ["advancedCouplerControl", {"name":"RampCouplerR"}],
+    ]
+    "RampCouplerL":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["ramp4l",  "ramp4ll",     200000,                     0.015,                  0.005,                      0.2,                 0.1,                   "ramplatch_L", {"forceCid1":"ramp4l", "forceCid2":"ramp2l"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["cf11l"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 90,
+        "openForceDuration": 0.6,
+        "closeForceMagnitude": 190,
+        "closeForceDuration": 1.15
+    }
+    "RampCouplerR":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["ramp4r",  "ramp4rr",     200000,                     0.015,                  0.005,                      0.2,                 0.1,                   "ramplatch_R", {"forceCid1":"ramp4r", "forceCid2":"ramp2r"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["cf11r"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 90,
+        "openForceDuration": 0.6,
+        "closeForceMagnitude": 190,
+        "closeForceDuration": 1.15
+    }
+    "triggers":[
+        ["id", "label", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["RampL", "", "ramp2ll","ramp2l","ramp1ll", "box", {"x":0.04, "y":0.04, "z":0.12}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":-0.005, "y":0.0, "z":-0.022}, {"deformGroup":"pickup_load_ramps"}],
+        ["RampR", "", "ramp2rr","ramp2r","ramp1rr", "box", {"x":0.04, "y":0.04, "z":0.12}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":-0.005, "y":0.0, "z":-0.018}, {"deformGroup":"pickup_load_ramps"}],
+        ["Ramps", "", "cf11","cf11r","cf1", "box", {"x":0.18, "y":0.04, "z":0.06}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":-0.09, "y":0.01, "z":-0.02}, {"deformGroup":"pickup_flatbed"}],
+    ],
+    "triggerEventLinks":[
+        ["triggerId:triggers", "action", "targetEventId:events"],
+        ["RampL", "action0", "RampLatchL"]
+        ["RampR", "action0", "RampLatchR"]
+        ["Ramps", "action0", "RampLatchdummy"]
+        ["Ramps", "action0", "RampLatchL"]
+        ["Ramps", "action0", "RampLatchR"]
+    ],
+    "events":[
+        ["id", "title", "desc"],
+        ["RampLatchdummy", "Toggle Both Ramps", "ui.inputActions.pickup.RampLatchL.description"],
+        ["RampLatchL", "Toggle Left Ramp", "ui.inputActions.pickup.RampLatchL.description", {"onUp":"controller.getControllerSafe('RampCouplerL').toggleGroup()"}],
+        ["RampLatchR", "Toggle Right Ramp", "ui.inputActions.pickup.RampLatchR.description", {"onUp":"controller.getControllerSafe('RampCouplerR').toggleGroup()"}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"collision":true},
+         {"selfCollision":false},
+         {"group":["pickup_load_ramps"]},
+         {"deformgroup":["pickup_load_ramps"]},
+         {"nodeMaterial":"|NM_METAL"},
+         //{"nodeWeight":5.17},
+         {"nodeWeight":2.6},
+         ["ramp1l", 0.62, 4.72, 0.89],
+         ["ramp1r", -0.62, 4.72, 0.89],
+         ["ramp1ll", 1.18, 4.72, 0.89],
+         ["ramp1rr", -1.18, 4.72, 0.89],
+         {"selfCollision":true},
+         ["ramp2l", 0.62, 4.72, 1.95],
+         ["ramp2r", -0.62, 4.72, 1.95],
+         ["ramp2ll", 1.18, 4.72, 1.95],
+         ["ramp2rr", -1.18, 4.72, 1.95],
+         ["ramp3l", 0.62, 4.72, 3.0],
+         ["ramp3r", -0.62, 4.72, 3.0],
+         ["ramp3ll", 1.18, 4.72, 3.0],
+         ["ramp3rr", -1.18, 4.72, 3.0],
+
+         {"group":""},
+         //rigidifier
+         {"collision":false},
+         {"selfCollision":false},
+         ["ramp4l", 0.88, 4.25, 1.95],
+         ["ramp4r", -0.88, 4.25, 1.95],
+         ["ramp4ll", 0.88, 4.25, 1.95],
+         ["ramp4rr", -0.88, 4.25, 1.95],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":3760940,"beamDamp":141},
+          {"beamDeform":56000,"beamStrength":"FLT_MAX"},
+          ["ramp1l","ramp1ll"],
+          ["ramp2l","ramp2ll"],
+          ["ramp3l","ramp3ll"],
+          ["ramp1l","ramp2l"],
+          ["ramp2l","ramp3l"],
+          ["ramp1ll","ramp2ll"],
+          ["ramp2ll","ramp3ll"],
+          ["ramp1l","ramp2ll"],
+          ["ramp2l","ramp1ll"],
+          ["ramp2l","ramp3ll"],
+          ["ramp3l","ramp2ll"],
+
+          ["ramp1r","ramp1rr"],
+          ["ramp2r","ramp2rr"],
+          ["ramp3r","ramp3rr"],
+          ["ramp1r","ramp2r"],
+          ["ramp2r","ramp3r"],
+          ["ramp1rr","ramp2rr"],
+          ["ramp2rr","ramp3rr"],
+          ["ramp1r","ramp2rr"],
+          ["ramp2r","ramp1rr"],
+          ["ramp2r","ramp3rr"],
+          ["ramp3r","ramp2rr"],
+
+          //rigidifier
+          {"beamSpring":3290940,"beamDamp":141},
+          {"beamDeform":214000,"beamStrength":"FLT_MAX"},
+          ["ramp4l", "ramp1l"],
+          ["ramp4l", "ramp1ll"],
+          ["ramp4l", "ramp2l"],
+          ["ramp4l", "ramp2ll"],
+          ["ramp4l", "ramp3l"],
+          ["ramp4l", "ramp3ll"],
+          ["ramp4r", "ramp1r"],
+          ["ramp4r", "ramp1rr"],
+          ["ramp4r", "ramp2r"],
+          ["ramp4r", "ramp2rr"],
+          ["ramp4r", "ramp3r"],
+          ["ramp4r", "ramp3rr"],
+          //coupler
+          ["ramp4ll", "cf11"],
+          ["ramp4ll", "cf11ll"],
+          ["ramp4ll", "cf12"],
+          ["ramp4ll", "cf12ll"],
+          ["ramp4ll", "cfrg2"],
+          ["ramp4rr", "cf11"],
+          ["ramp4rr", "cf11rr"],
+          ["ramp4rr", "cf12"],
+          ["ramp4rr", "cf12rr"],
+          ["ramp4rr", "cfrg2"],
+
+          //hinge attatch
+          {"beamDeform":21400,"beamStrength":"125000"},
+          ["ramp1l", "cf11l"],
+          ["ramp1l", "cf1l"],
+          ["ramp1l", "cf11ll"],
+          ["ramp1l", "cf12l"],
+          ["ramp1l", "cfrg2"],
+          ["ramp1ll", "cf11l"],
+          ["ramp1ll", "cf1l"],
+          ["ramp1ll", "cf11ll"],
+          ["ramp1ll", "cf12l"],
+          ["ramp1ll", "cfrg2"],
+
+          ["ramp1r", "cf11r"],
+          ["ramp1r", "cf1r"],
+          ["ramp1r", "cf11rr"],
+          ["ramp1r", "cf12r"],
+          ["ramp1r", "cfrg2"],
+          ["ramp1rr", "cf11r"],
+          ["ramp1rr", "cf1r"],
+          ["ramp1rr", "cf11rr"],
+          ["ramp1rr", "cf12r"],
+          ["ramp1rr", "cfrg2"],
+
+          //pop open
+          {"optional":true},
+          {"beamPrecompression":1.2,"beamType":"|SUPPORT","beamLongBound":20},
+          {"beamSpring":154,"beamDamp":20},
+          {"beamDeform":13500,"beamStrength":199360},
+          ["cfrg2","ramp4l"{"breakGroup":"ramplatch_L"}],
+          ["cfrg2","ramp4r"{"breakGroup":"ramplatch_R"}],
+          //close limiters
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":10.0, "beamShortBound":0.01},
+          {"beamSpring":154,"beamDamp":20},
+          ["ramp4ll","ramp2l"],
+          ["ramp4rr","ramp2r"],
+          {"optional":false},
+          {"disableTriangleBreaking":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.2},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //floor
+            {"group":"pickup_load_ramps"},
+            {"dragCoef":12},
+            {"groundModel":"asphalt"},
+            ["ramp1l","ramp1ll","ramp2ll"],
+            ["ramp1l","ramp2ll","ramp2l"],
+            ["ramp2l","ramp2ll","ramp3ll"],
+            ["ramp2l","ramp3ll","ramp3l"],
+            ["ramp1r","ramp2rr","ramp1rr"],
+            ["ramp1r","ramp2r","ramp2rr"],
+            ["ramp2r","ramp3rr","ramp2rr"],
+            ["ramp2r","ramp3r","ramp3rr"],
+            {"group":""},
+
+    ],
+},
+"G_pickup_semi_flatbed_ramps_doubble": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Short Double Car Loading Ramps",
+        "value":2600,
+    },
+    "slotType" : "G_pickup_semi_flatbed_ramps",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_semi_flatbed_ramp", ["pickup_load_ramps"],[],{"pos":{"x":0.9, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":1.0, "z":1.004}}],
+         ["G_pickup_semi_flatbed_ramp", ["pickup_load_ramps"],[],{"pos":{"x":-0.9, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":1.0, "z":1.004}}],
+         ["G_pickup_semi_flatbed_ramp", ["pickup_load_ramps_2"],[],{"pos":{"x":0.898, "y":9.462, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.004}}],
+         ["G_pickup_semi_flatbed_ramp", ["pickup_load_ramps_2"],[],{"pos":{"x":-0.898, "y":9.462, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.004}}],
+
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"RampCouplerL"}],
+        ["advancedCouplerControl", {"name":"RampCouplerL2"}],
+        ["advancedCouplerControl", {"name":"RampCouplerL3"}],
+        ["advancedCouplerControl", {"name":"RampCouplerR"}],
+        ["advancedCouplerControl", {"name":"RampCouplerR2"}],
+        ["advancedCouplerControl", {"name":"RampCouplerR3"}],
+    ]
+    "RampCouplerL":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["ramp4l",  "ramp4ll",     200000,                     0.015,                  0.005,                      0.2,                 0.1,                   "ramplatch_L", {"forceCid1":"ramp4l", "forceCid2":"ramp2l"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["cf11l"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 50,
+        "openForceDuration": 0.3,
+        "closeForceMagnitude": 360,
+        "closeForceDuration": 2.5
+    }
+    "RampCouplerL2":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["ramp8l",  "ramp9l",     200000,                     0.015,                  0.005,                      0.2,                 0.1,                   "ramplatch_L_2", {"forceCid1":"ramp4l", "forceCid2":"ramp2l"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["cf11l"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 50,
+        "openForceDuration": 0.3,
+        "closeForceMagnitude": 180,
+        "closeForceDuration": 1.15
+    }
+    "RampCouplerL3":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["ramp7l",  "ramp7ll",     200000,                     0.015,                  0.005,                      0.2,                 0.1,                   "ramplatch_L_3", {"forceCid1":"ramp4l", "forceCid2":"ramp2l"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["cf11l"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 35,
+        "openForceDuration": 0.3,
+        "closeForceMagnitude": 280,
+        "closeForceDuration": 3.5
+    }
+    "RampCouplerR":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["ramp4r",  "ramp4rr",     200000,                     0.015,                  0.005,                      0.2,                 0.1,                   "ramplatch_R", {"forceCid1":"ramp4r", "forceCid2":"ramp2r"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["cf11r"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 50,
+        "openForceDuration": 0.3,
+        "closeForceMagnitude": 360,
+        "closeForceDuration": 2.5
+    }
+    "RampCouplerR2":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["ramp8r",  "ramp9r",     200000,                     0.015,                  0.005,                      0.2,                 0.1,                   "ramplatch_R_2", {"forceCid1":"ramp4r", "forceCid2":"ramp2r"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["cf11r"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 50,
+        "openForceDuration": 0.3,
+        "closeForceMagnitude": 180,
+        "closeForceDuration": 1.15
+    }
+    "RampCouplerR3":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["ramp7r",  "ramp7rr",     200000,                     0.015,                  0.005,                      0.2,                 0.1,                   "ramplatch_R_3", {"forceCid1":"ramp4r", "forceCid2":"ramp2r"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["cf11r"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 35,
+        "openForceDuration": 0.3,
+        "closeForceMagnitude": 280,
+        "closeForceDuration": 3.5
+    }
+    "triggers":[
+        ["id", "label", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["RampL", "", "ramp2ll","ramp2l","ramp1ll", "box", {"x":0.04, "y":0.06, "z":0.12}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":-0.005, "y":0.0, "z":-0.022}, {"deformGroup":"pickup_load_ramps"}],
+        ["RampR", "", "ramp2rr","ramp2r","ramp1rr", "box", {"x":0.04, "y":0.06, "z":0.12}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":-0.005, "y":0.0, "z":-0.038}, {"deformGroup":"pickup_load_ramps"}],
+        ["Ramps", "", "cf11","cf11r","cf1", "box", {"x":0.18, "y":0.04, "z":0.06}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":-0.09, "y":0.01, "z":-0.02}, {"deformGroup":"pickup_flatbed"}],
+    ],
+    "triggerEventLinks":[
+        ["triggerId:triggers", "action", "targetEventId:events"],
+        ["RampL", "action0", "RampLatchL"]
+        ["RampL", "action0", "RampLatchL2"]
+        ["RampL", "action0", "RampLatchL3"]
+        ["RampR", "action0", "RampLatchR"]
+        ["RampR", "action0", "RampLatchR2"]
+        ["RampR", "action0", "RampLatchR3"]
+        ["Ramps", "action0", "RampLatchdummy"]
+        ["Ramps", "action0", "RampLatchL"]
+        ["Ramps", "action0", "RampLatchR"]
+        ["Ramps", "action0", "RampLatchL2"]
+        ["Ramps", "action0", "RampLatchR2"]
+        ["Ramps", "action0", "RampLatchL3"]
+        ["Ramps", "action0", "RampLatchR3"]
+    ],
+    "events":[
+        ["id", "title", "desc"],
+        ["RampLatchdummy", "Toggle Both Ramps", "ui.inputActions.pickup.RampLatchL.description"],
+        ["RampLatchL", "Toggle Left Ramp", "ui.inputActions.pickup.RampLatchL.description", {"onUp":"controller.getControllerSafe('RampCouplerL').toggleGroup()"}],
+        ["RampLatchL2", "Toggle Left Ramp", "ui.inputActions.pickup.RampLatchL.description", {"onUp":"controller.getControllerSafe('RampCouplerL2').toggleGroup()"}],
+        ["RampLatchL3", "Toggle Left Ramp", "ui.inputActions.pickup.RampLatchL.description", {"onUp":"controller.getControllerSafe('RampCouplerL3').toggleGroup()"}],
+        ["RampLatchR", "Toggle Right Ramp", "ui.inputActions.pickup.RampLatchR.description", {"onUp":"controller.getControllerSafe('RampCouplerR').toggleGroup()"}],
+        ["RampLatchR2", "Toggle Right Ramp", "ui.inputActions.pickup.RampLatchR.description", {"onUp":"controller.getControllerSafe('RampCouplerR2').toggleGroup()"}],
+        ["RampLatchR3", "Toggle Right Ramp", "ui.inputActions.pickup.RampLatchR.description", {"onUp":"controller.getControllerSafe('RampCouplerR3').toggleGroup()"}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"collision":true},
+         {"selfCollision":false},
+         {"group":["pickup_load_ramps"]},
+         {"deformgroup":["pickup_load_ramps"]},
+         {"nodeMaterial":"|NM_METAL"},
+         //{"nodeWeight":5.17},
+         {"nodeWeight":2.6},
+         ["ramp1l", 0.62, 4.72, 0.89],
+         ["ramp1r", -0.62, 4.72, 0.89],
+         ["ramp1ll", 1.18, 4.72, 0.89],
+         ["ramp1rr", -1.18, 4.72, 0.89],
+         {"selfCollision":true},
+         ["ramp2l", 0.62, 4.725, 1.65],
+         ["ramp2r", -0.62, 4.725, 1.65],
+         ["ramp2ll", 1.18, 4.725, 1.65],
+         ["ramp2rr", -1.18, 4.725, 1.65],
+         {"group":["pickup_load_ramps","pickup_load_ramps_2"]},
+         ["ramp3l", 0.62, 4.73, 2.4],
+         ["ramp3r", -0.62, 4.73, 2.4],
+         ["ramp3ll", 1.18, 4.73, 2.4],
+         ["ramp3rr", -1.18, 4.73, 2.4],
+
+         {"group":["pickup_load_ramps_2"]},
+         ["ramp5l", 0.62, 4.74, 1.65],
+         ["ramp5r", -0.62, 4.74, 1.65],
+         ["ramp5ll", 1.18, 4.74, 1.65],
+         ["ramp5rr", -1.18, 4.74, 1.65],
+         ["ramp6l", 0.62, 4.75, 0.88],
+         ["ramp6r", -0.62, 4.75, 0.88],
+         ["ramp6ll", 1.18, 4.75, 0.88],
+         ["ramp6rr", -1.18, 4.75, 0.88],
+
+         {"group":""},
+         //rigidifier
+         {"collision":false},
+         {"selfCollision":false},
+         ["ramp4l", 0.88, 4.25, 1.65],
+         ["ramp4r", -0.88, 4.25, 1.65],
+         ["ramp4ll", 0.88, 4.25, 1.65],
+         ["ramp4rr", -0.88, 4.25, 1.65],
+         ["ramp7l", 0.88, 5.23, 1.65],
+         ["ramp7r", -0.88, 5.23, 1.65],
+         ["ramp7ll", 0.88, 5.23, 1.65],
+         ["ramp7rr", -0.88, 5.23, 1.65],
+         ["ramp8l", 0.88, 4.48, 2.4],
+         ["ramp8r", -0.88, 4.48, 2.4],
+         ["ramp9l", 0.88, 4.98, 2.4],
+         ["ramp9r", -0.88, 4.98, 2.4],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":3760940,"beamDamp":141},
+          {"beamDeform":56000,"beamStrength":"FLT_MAX"},
+          ["ramp1l","ramp1ll"],
+          ["ramp2l","ramp2ll"],
+          ["ramp3l","ramp3ll"],
+          ["ramp1l","ramp2l"],
+          ["ramp2l","ramp3l"],
+          ["ramp1ll","ramp2ll"],
+          ["ramp2ll","ramp3ll"],
+          ["ramp1l","ramp2ll"],
+          ["ramp2l","ramp1ll"],
+          ["ramp2l","ramp3ll"],
+          ["ramp3l","ramp2ll"],
+
+          ["ramp1r","ramp1rr"],
+          ["ramp2r","ramp2rr"],
+          ["ramp3r","ramp3rr"],
+          ["ramp1r","ramp2r"],
+          ["ramp2r","ramp3r"],
+          ["ramp1rr","ramp2rr"],
+          ["ramp2rr","ramp3rr"],
+          ["ramp1r","ramp2rr"],
+          ["ramp2r","ramp1rr"],
+          ["ramp2r","ramp3rr"],
+          ["ramp3r","ramp2rr"],
+
+
+          ["ramp3l","ramp3ll"],
+          ["ramp5l","ramp5ll"],
+          ["ramp6l","ramp6ll"],
+          ["ramp3l","ramp5l"],
+          ["ramp5l","ramp6l"],
+          ["ramp3ll","ramp5ll"],
+          ["ramp5ll","ramp6ll"],
+          ["ramp3l","ramp5ll"],
+          ["ramp5l","ramp3ll"],
+          ["ramp5l","ramp6ll"],
+          ["ramp6l","ramp5ll"],
+
+          ["ramp3r","ramp3rr"],
+          ["ramp5r","ramp5rr"],
+          ["ramp6r","ramp6rr"],
+          ["ramp3r","ramp5r"],
+          ["ramp5r","ramp6r"],
+          ["ramp3rr","ramp5rr"],
+          ["ramp5rr","ramp6rr"],
+          ["ramp3r","ramp5rr"],
+          ["ramp5r","ramp3rr"],
+          ["ramp5r","ramp6rr"],
+          ["ramp6r","ramp5rr"],
+
+          //rigidifier
+          {"beamSpring":3290940,"beamDamp":141},
+          {"beamDeform":214000,"beamStrength":"FLT_MAX"},
+          ["ramp4l", "ramp1l"],
+          ["ramp4l", "ramp1ll"],
+          ["ramp4l", "ramp2l"],
+          ["ramp4l", "ramp2ll"],
+          ["ramp4l", "ramp3l"],
+          ["ramp4l", "ramp3ll"],
+          ["ramp4r", "ramp1r"],
+          ["ramp4r", "ramp1rr"],
+          ["ramp4r", "ramp2r"],
+          ["ramp4r", "ramp2rr"],
+          ["ramp4r", "ramp3r"],
+          ["ramp4r", "ramp3rr"],
+
+          ["ramp7l", "ramp3l"],
+          ["ramp7l", "ramp3ll"],
+          ["ramp7l", "ramp5l"],
+          ["ramp7l", "ramp5ll"],
+          ["ramp7l", "ramp6l"],
+          ["ramp7l", "ramp6ll"],
+          ["ramp7r", "ramp3r"],
+          ["ramp7r", "ramp3rr"],
+          ["ramp7r", "ramp5r"],
+          ["ramp7r", "ramp5rr"],
+          ["ramp7r", "ramp6r"],
+          ["ramp7r", "ramp6rr"],
+
+          //coupler
+          ["ramp4ll", "cf11"],
+          ["ramp4ll", "cf11ll"],
+          ["ramp4ll", "cf12"],
+          ["ramp4ll", "cf12ll"],
+          ["ramp4ll", "cfrg2"],
+          ["ramp4rr", "cf11"],
+          ["ramp4rr", "cf11rr"],
+          ["ramp4rr", "cf12"],
+          ["ramp4rr", "cf12rr"],
+          ["ramp4rr", "cfrg2"],
+
+          ["ramp8l", "ramp3l"],
+          ["ramp8l", "ramp3ll"],
+          ["ramp8l", "ramp4l"],
+          ["ramp8r", "ramp3r"],
+          ["ramp8r", "ramp3rr"],
+          ["ramp8r", "ramp4r"],
+
+          ["ramp9l", "ramp3l"],
+          ["ramp9l", "ramp3ll"],
+          ["ramp9l", "ramp7l"],
+          ["ramp9r", "ramp3r"],
+          ["ramp9r", "ramp3rr"],
+          ["ramp9r", "ramp7r"],
+
+          ["ramp7ll", "ramp8l"],
+          ["ramp7ll", "ramp4l"],
+          ["ramp7ll", "ramp1l"],
+          ["ramp7ll", "ramp1ll"],
+          ["ramp7rr", "ramp8r"],
+          ["ramp7rr", "ramp4r"],
+          ["ramp7rr", "ramp1r"],
+          ["ramp7rr", "ramp1rr"],
+
+          //hinge attatch
+          {"beamDeform":21400,"beamStrength":"125000"},
+          ["ramp1l", "cf11l"],
+          ["ramp1l", "cf1l"],
+          ["ramp1l", "cf11ll"],
+          ["ramp1l", "cf12l"],
+          ["ramp1l", "cfrg2"],
+          ["ramp1ll", "cf11l"],
+          ["ramp1ll", "cf1l"],
+          ["ramp1ll", "cf11ll"],
+          ["ramp1ll", "cf12l"],
+          ["ramp1ll", "cfrg2"],
+
+          ["ramp1r", "cf11r"],
+          ["ramp1r", "cf1r"],
+          ["ramp1r", "cf11rr"],
+          ["ramp1r", "cf12r"],
+          ["ramp1r", "cfrg2"],
+          ["ramp1rr", "cf11r"],
+          ["ramp1rr", "cf1r"],
+          ["ramp1rr", "cf11rr"],
+          ["ramp1rr", "cf12r"],
+          ["ramp1rr", "cfrg2"],
+
+          //pop open
+          {"optional":true},
+          {"beamPrecompression":1.2,"beamType":"|SUPPORT","beamLongBound":20},
+          {"beamSpring":154,"beamDamp":20},
+          {"beamDeform":13500,"beamStrength":199360},
+          ["cfrg2","ramp4l"{"breakGroup":"ramplatch_L"}],
+          ["cfrg2","ramp4r"{"breakGroup":"ramplatch_R"}],
+          ["ramp4l","ramp9l"{"breakGroup":"ramplatch_L_2"}],
+          ["ramp4r","ramp9r"{"breakGroup":"ramplatch_R_2"}],
+          {"beamSpring":8000,"beamDamp":20},
+          ["ramp4ll","ramp7l"{"breakGroup":"ramplatch_L_3"}],
+          ["ramp4rr","ramp7r"{"breakGroup":"ramplatch_R_3"}],
+          //close limiters
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":10.0, "beamShortBound":0.01},
+          {"beamSpring":154,"beamDamp":20},
+          ["ramp4ll","ramp2l"],
+          ["ramp4rr","ramp2r"],
+          {"optional":false},
+          {"disableTriangleBreaking":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.2},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //floor
+            {"group":"pickup_load_ramps"},
+            {"dragCoef":12},
+            {"groundModel":"asphalt"},
+            ["ramp1l","ramp1ll","ramp2ll"],
+            ["ramp1l","ramp2ll","ramp2l"],
+            ["ramp2l","ramp2ll","ramp3ll"],
+            ["ramp2l","ramp3ll","ramp3l"],
+            ["ramp1r","ramp2rr","ramp1rr"],
+            ["ramp1r","ramp2r","ramp2rr"],
+            ["ramp2r","ramp3rr","ramp2rr"],
+            ["ramp2r","ramp3r","ramp3rr"],
+
+            ["ramp3l","ramp3ll","ramp5ll"],
+            ["ramp3l","ramp5ll","ramp5l"],
+            ["ramp5l","ramp5ll","ramp6ll"],
+            ["ramp5l","ramp6ll","ramp6l"],
+            ["ramp3r","ramp5rr","ramp3rr"],
+            ["ramp3r","ramp5r","ramp5rr"],
+            ["ramp5r","ramp6rr","ramp5rr"],
+            ["ramp5r","ramp6r","ramp6rr"],
+            {"group":""},
+
+    ],
+},
+"G_pickup_semi_flatbed_ramps_doubble_long": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Long Double Car Loading Ramps",
+        "value":3400,
+    },
+    "slotType" : "G_pickup_semi_flatbed_ramps",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_semi_flatbed_ramp", ["pickup_load_ramps"],[],{"pos":{"x":0.9, "y":0.0, "z":-0.368}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":1.0, "z":1.41}}],
+         ["G_pickup_semi_flatbed_ramp", ["pickup_load_ramps"],[],{"pos":{"x":-0.9, "y":0.0, "z":-0.368}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":1.0, "z":1.41}}],
+         ["G_pickup_semi_flatbed_ramp", ["pickup_load_ramps_2"],[],{"pos":{"x":0.898, "y":9.462, "z":-0.368}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.41}}],
+         ["G_pickup_semi_flatbed_ramp", ["pickup_load_ramps_2"],[],{"pos":{"x":-0.898, "y":9.462, "z":-0.368}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.41}}],
+
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"RampCouplerL"}],
+        ["advancedCouplerControl", {"name":"RampCouplerL2"}],
+        ["advancedCouplerControl", {"name":"RampCouplerL3"}],
+        ["advancedCouplerControl", {"name":"RampCouplerR"}],
+        ["advancedCouplerControl", {"name":"RampCouplerR2"}],
+        ["advancedCouplerControl", {"name":"RampCouplerR3"}],
+    ]
+    "RampCouplerL":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["ramp4l",  "ramp4ll",     200000,                     0.015,                  0.005,                      0.2,                 0.1,                   "ramplatch_L", {"forceCid1":"ramp4l", "forceCid2":"ramp2l"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["cf11l"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 50,
+        "openForceDuration": 0.3,
+        "closeForceMagnitude": 360,
+        "closeForceDuration": 2.5
+    }
+    "RampCouplerL2":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["ramp8l",  "ramp9l",     200000,                     0.015,                  0.005,                      0.2,                 0.1,                   "ramplatch_L_2", {"forceCid1":"ramp4l", "forceCid2":"ramp2l"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["cf11l"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 50,
+        "openForceDuration": 0.3,
+        "closeForceMagnitude": 180,
+        "closeForceDuration": 1.15
+    }
+    "RampCouplerL3":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["ramp7l",  "ramp7ll",     200000,                     0.015,                  0.005,                      0.2,                 0.1,                   "ramplatch_L_3", {"forceCid1":"ramp4l", "forceCid2":"ramp2l"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["cf11l"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 35,
+        "openForceDuration": 0.3,
+        "closeForceMagnitude": 280,
+        "closeForceDuration": 3.5
+    }
+    "RampCouplerR":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["ramp4r",  "ramp4rr",     200000,                     0.015,                  0.005,                      0.2,                 0.1,                   "ramplatch_R", {"forceCid1":"ramp4r", "forceCid2":"ramp2r"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["cf11r"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 50,
+        "openForceDuration": 0.3,
+        "closeForceMagnitude": 360,
+        "closeForceDuration": 2.5
+    }
+    "RampCouplerR2":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["ramp8r",  "ramp9r",     200000,                     0.015,                  0.005,                      0.2,                 0.1,                   "ramplatch_R_2", {"forceCid1":"ramp4r", "forceCid2":"ramp2r"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["cf11r"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 50,
+        "openForceDuration": 0.3,
+        "closeForceMagnitude": 180,
+        "closeForceDuration": 1.15
+    }
+    "RampCouplerR3":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["ramp7r",  "ramp7rr",     200000,                     0.015,                  0.005,                      0.2,                 0.1,                   "ramplatch_R_3", {"forceCid1":"ramp4r", "forceCid2":"ramp2r"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["cf11r"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 35,
+        "openForceDuration": 0.3,
+        "closeForceMagnitude": 280,
+        "closeForceDuration": 3.5
+    }
+    "triggers":[
+        ["id", "label", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["RampL", "", "ramp2ll","ramp2l","ramp1ll", "box", {"x":0.04, "y":0.06, "z":0.12}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":-0.005, "y":0.0, "z":-0.022}, {"deformGroup":"pickup_load_ramps"}],
+        ["RampR", "", "ramp2rr","ramp2r","ramp1rr", "box", {"x":0.04, "y":0.06, "z":0.12}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":-0.005, "y":0.0, "z":-0.038}, {"deformGroup":"pickup_load_ramps"}],
+        ["Ramps", "", "cf11","cf11r","cf1", "box", {"x":0.18, "y":0.04, "z":0.06}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":-0.09, "y":0.01, "z":-0.02}, {"deformGroup":"pickup_flatbed"}],
+    ],
+    "triggerEventLinks":[
+        ["triggerId:triggers", "action", "targetEventId:events"],
+        ["RampL", "action0", "RampLatchL"]
+        ["RampL", "action0", "RampLatchL2"]
+        ["RampL", "action0", "RampLatchL3"]
+        ["RampR", "action0", "RampLatchR"]
+        ["RampR", "action0", "RampLatchR2"]
+        ["RampR", "action0", "RampLatchR3"]
+        ["Ramps", "action0", "RampLatchdummy"]
+        ["Ramps", "action0", "RampLatchL"]
+        ["Ramps", "action0", "RampLatchR"]
+        ["Ramps", "action0", "RampLatchL2"]
+        ["Ramps", "action0", "RampLatchR2"]
+        ["Ramps", "action0", "RampLatchL3"]
+        ["Ramps", "action0", "RampLatchR3"]
+    ],
+    "events":[
+        ["id", "title", "desc"],
+        ["RampLatchdummy", "Toggle Both Ramps", "ui.inputActions.pickup.RampLatchL.description"],
+        ["RampLatchL", "Toggle Left Ramp", "ui.inputActions.pickup.RampLatchL.description", {"onUp":"controller.getControllerSafe('RampCouplerL').toggleGroup()"}],
+        ["RampLatchL2", "Toggle Left Ramp", "ui.inputActions.pickup.RampLatchL.description", {"onUp":"controller.getControllerSafe('RampCouplerL2').toggleGroup()"}],
+        ["RampLatchL3", "Toggle Left Ramp", "ui.inputActions.pickup.RampLatchL.description", {"onUp":"controller.getControllerSafe('RampCouplerL3').toggleGroup()"}],
+        ["RampLatchR", "Toggle Right Ramp", "ui.inputActions.pickup.RampLatchR.description", {"onUp":"controller.getControllerSafe('RampCouplerR').toggleGroup()"}],
+        ["RampLatchR2", "Toggle Right Ramp", "ui.inputActions.pickup.RampLatchR.description", {"onUp":"controller.getControllerSafe('RampCouplerR2').toggleGroup()"}],
+        ["RampLatchR3", "Toggle Right Ramp", "ui.inputActions.pickup.RampLatchR.description", {"onUp":"controller.getControllerSafe('RampCouplerR3').toggleGroup()"}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"collision":true},
+         {"selfCollision":false},
+         {"group":["pickup_load_ramps"]},
+         {"deformgroup":["pickup_load_ramps"]},
+         {"nodeMaterial":"|NM_METAL"},
+         //{"nodeWeight":5.17},
+         {"nodeWeight":2.6},
+         ["ramp1l", 0.62, 4.72, 0.89],
+         ["ramp1r", -0.62, 4.72, 0.89],
+         ["ramp1ll", 1.18, 4.72, 0.89],
+         ["ramp1rr", -1.18, 4.72, 0.89],
+         {"selfCollision":true},
+         ["ramp2l", 0.62, 4.725, 1.95],
+         ["ramp2r", -0.62, 4.725, 1.95],
+         ["ramp2ll", 1.18, 4.725, 1.95],
+         ["ramp2rr", -1.18, 4.725, 1.95],
+         {"group":["pickup_load_ramps","pickup_load_ramps_2"]},
+         ["ramp3l", 0.62, 4.73, 3.0],
+         ["ramp3r", -0.62, 4.73, 3.0],
+         ["ramp3ll", 1.18, 4.73, 3.0],
+         ["ramp3rr", -1.18, 4.73, 3.0],
+
+         {"group":["pickup_load_ramps_2"]},
+         ["ramp5l", 0.62, 4.74, 1.95],
+         ["ramp5r", -0.62, 4.74, 1.95],
+         ["ramp5ll", 1.18, 4.74, 1.95],
+         ["ramp5rr", -1.18, 4.74, 1.95],
+         ["ramp6l", 0.62, 4.75, 0.88],
+         ["ramp6r", -0.62, 4.75, 0.88],
+         ["ramp6ll", 1.18, 4.75, 0.88],
+         ["ramp6rr", -1.18, 4.75, 0.88],
+
+         {"group":""},
+         //rigidifier
+         {"collision":false},
+         {"selfCollision":false},
+         ["ramp4l", 0.88, 4.25, 1.95],
+         ["ramp4r", -0.88, 4.25, 1.95],
+         ["ramp4ll", 0.88, 4.25, 1.95],
+         ["ramp4rr", -0.88, 4.25, 1.95],
+         ["ramp7l", 0.88, 5.23, 1.95],
+         ["ramp7r", -0.88, 5.23, 1.95],
+         ["ramp7ll", 0.88, 5.23, 1.95],
+         ["ramp7rr", -0.88, 5.23, 1.95],
+         ["ramp8l", 0.88, 4.48, 3.0],
+         ["ramp8r", -0.88, 4.48, 3.0],
+         ["ramp9l", 0.88, 4.98, 3.0],
+         ["ramp9r", -0.88, 4.98, 3.0],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":3760940,"beamDamp":141},
+          {"beamDeform":56000,"beamStrength":"FLT_MAX"},
+          ["ramp1l","ramp1ll"],
+          ["ramp2l","ramp2ll"],
+          ["ramp3l","ramp3ll"],
+          ["ramp1l","ramp2l"],
+          ["ramp2l","ramp3l"],
+          ["ramp1ll","ramp2ll"],
+          ["ramp2ll","ramp3ll"],
+          ["ramp1l","ramp2ll"],
+          ["ramp2l","ramp1ll"],
+          ["ramp2l","ramp3ll"],
+          ["ramp3l","ramp2ll"],
+
+          ["ramp1r","ramp1rr"],
+          ["ramp2r","ramp2rr"],
+          ["ramp3r","ramp3rr"],
+          ["ramp1r","ramp2r"],
+          ["ramp2r","ramp3r"],
+          ["ramp1rr","ramp2rr"],
+          ["ramp2rr","ramp3rr"],
+          ["ramp1r","ramp2rr"],
+          ["ramp2r","ramp1rr"],
+          ["ramp2r","ramp3rr"],
+          ["ramp3r","ramp2rr"],
+
+
+          ["ramp3l","ramp3ll"],
+          ["ramp5l","ramp5ll"],
+          ["ramp6l","ramp6ll"],
+          ["ramp3l","ramp5l"],
+          ["ramp5l","ramp6l"],
+          ["ramp3ll","ramp5ll"],
+          ["ramp5ll","ramp6ll"],
+          ["ramp3l","ramp5ll"],
+          ["ramp5l","ramp3ll"],
+          ["ramp5l","ramp6ll"],
+          ["ramp6l","ramp5ll"],
+
+          ["ramp3r","ramp3rr"],
+          ["ramp5r","ramp5rr"],
+          ["ramp6r","ramp6rr"],
+          ["ramp3r","ramp5r"],
+          ["ramp5r","ramp6r"],
+          ["ramp3rr","ramp5rr"],
+          ["ramp5rr","ramp6rr"],
+          ["ramp3r","ramp5rr"],
+          ["ramp5r","ramp3rr"],
+          ["ramp5r","ramp6rr"],
+          ["ramp6r","ramp5rr"],
+
+          //rigidifier
+          {"beamSpring":3290940,"beamDamp":141},
+          {"beamDeform":214000,"beamStrength":"FLT_MAX"},
+          ["ramp4l", "ramp1l"],
+          ["ramp4l", "ramp1ll"],
+          ["ramp4l", "ramp2l"],
+          ["ramp4l", "ramp2ll"],
+          ["ramp4l", "ramp3l"],
+          ["ramp4l", "ramp3ll"],
+          ["ramp4r", "ramp1r"],
+          ["ramp4r", "ramp1rr"],
+          ["ramp4r", "ramp2r"],
+          ["ramp4r", "ramp2rr"],
+          ["ramp4r", "ramp3r"],
+          ["ramp4r", "ramp3rr"],
+
+          ["ramp7l", "ramp3l"],
+          ["ramp7l", "ramp3ll"],
+          ["ramp7l", "ramp5l"],
+          ["ramp7l", "ramp5ll"],
+          ["ramp7l", "ramp6l"],
+          ["ramp7l", "ramp6ll"],
+          ["ramp7r", "ramp3r"],
+          ["ramp7r", "ramp3rr"],
+          ["ramp7r", "ramp5r"],
+          ["ramp7r", "ramp5rr"],
+          ["ramp7r", "ramp6r"],
+          ["ramp7r", "ramp6rr"],
+
+          //coupler
+          ["ramp4ll", "cf11"],
+          ["ramp4ll", "cf11ll"],
+          ["ramp4ll", "cf12"],
+          ["ramp4ll", "cf12ll"],
+          ["ramp4ll", "cfrg2"],
+          ["ramp4rr", "cf11"],
+          ["ramp4rr", "cf11rr"],
+          ["ramp4rr", "cf12"],
+          ["ramp4rr", "cf12rr"],
+          ["ramp4rr", "cfrg2"],
+
+          ["ramp8l", "ramp3l"],
+          ["ramp8l", "ramp3ll"],
+          ["ramp8l", "ramp4l"],
+          ["ramp8r", "ramp3r"],
+          ["ramp8r", "ramp3rr"],
+          ["ramp8r", "ramp4r"],
+
+          ["ramp9l", "ramp3l"],
+          ["ramp9l", "ramp3ll"],
+          ["ramp9l", "ramp7l"],
+          ["ramp9r", "ramp3r"],
+          ["ramp9r", "ramp3rr"],
+          ["ramp9r", "ramp7r"],
+
+          ["ramp7ll", "ramp8l"],
+          ["ramp7ll", "ramp4l"],
+          ["ramp7ll", "ramp1l"],
+          ["ramp7ll", "ramp1ll"],
+          ["ramp7rr", "ramp8r"],
+          ["ramp7rr", "ramp4r"],
+          ["ramp7rr", "ramp1r"],
+          ["ramp7rr", "ramp1rr"],
+
+          //hinge attatch
+          {"beamDeform":21400,"beamStrength":"125000"},
+          ["ramp1l", "cf11l"],
+          ["ramp1l", "cf1l"],
+          ["ramp1l", "cf11ll"],
+          ["ramp1l", "cf12l"],
+          ["ramp1l", "cfrg2"],
+          ["ramp1ll", "cf11l"],
+          ["ramp1ll", "cf1l"],
+          ["ramp1ll", "cf11ll"],
+          ["ramp1ll", "cf12l"],
+          ["ramp1ll", "cfrg2"],
+
+          ["ramp1r", "cf11r"],
+          ["ramp1r", "cf1r"],
+          ["ramp1r", "cf11rr"],
+          ["ramp1r", "cf12r"],
+          ["ramp1r", "cfrg2"],
+          ["ramp1rr", "cf11r"],
+          ["ramp1rr", "cf1r"],
+          ["ramp1rr", "cf11rr"],
+          ["ramp1rr", "cf12r"],
+          ["ramp1rr", "cfrg2"],
+
+          //pop open
+          {"optional":true},
+          {"beamPrecompression":1.2,"beamType":"|SUPPORT","beamLongBound":20},
+          {"beamSpring":154,"beamDamp":20},
+          {"beamDeform":13500,"beamStrength":199360},
+          ["cfrg2","ramp4l"{"breakGroup":"ramplatch_L"}],
+          ["cfrg2","ramp4r"{"breakGroup":"ramplatch_R"}],
+          ["ramp4l","ramp9l"{"breakGroup":"ramplatch_L_2"}],
+          ["ramp4r","ramp9r"{"breakGroup":"ramplatch_R_2"}],
+          {"beamSpring":12000,"beamDamp":20},
+          ["ramp4ll","ramp7l"{"breakGroup":"ramplatch_L_3"}],
+          ["ramp4rr","ramp7r"{"breakGroup":"ramplatch_R_3"}],
+          //close limiters
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":10.0, "beamShortBound":0.01},
+          {"beamSpring":154,"beamDamp":20},
+          ["ramp4ll","ramp2l"],
+          ["ramp4rr","ramp2r"],
+          {"optional":false},
+          {"disableTriangleBreaking":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.2},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //floor
+            {"group":"pickup_load_ramps"},
+            {"dragCoef":12},
+            {"groundModel":"asphalt"},
+            ["ramp1l","ramp1ll","ramp2ll"],
+            ["ramp1l","ramp2ll","ramp2l"],
+            ["ramp2l","ramp2ll","ramp3ll"],
+            ["ramp2l","ramp3ll","ramp3l"],
+            ["ramp1r","ramp2rr","ramp1rr"],
+            ["ramp1r","ramp2r","ramp2rr"],
+            ["ramp2r","ramp3rr","ramp2rr"],
+            ["ramp2r","ramp3r","ramp3rr"],
+
+            ["ramp3l","ramp3ll","ramp5ll"],
+            ["ramp3l","ramp5ll","ramp5l"],
+            ["ramp5l","ramp5ll","ramp6ll"],
+            ["ramp5l","ramp6ll","ramp6l"],
+            ["ramp3r","ramp5rr","ramp3rr"],
+            ["ramp3r","ramp5r","ramp5rr"],
+            ["ramp5r","ramp6rr","ramp5rr"],
+            ["ramp5r","ramp6r","ramp6rr"],
+            {"group":""},
+
+    ],
+},
+}

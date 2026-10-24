@@ -1,0 +1,203 @@
+{
+"G_md_series_airfilter_aux": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Air Filter With Rear Mounted Snorkel [Auxiliary Frame]",
+        "value":800,
+    },
+    "slotType" : "md_series_airfilter",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["md_series_air_cleaner_internal", ["md_series_coventional_airfilter"],[]],
+         {"deformGroup":"airhose_break", "deformMaterialBase":"md_series", "deformMaterialDamaged":"invis"},
+         ["G_md_series_aux_intake_pipe_F", ["md_series_coventional_airfilter_hose", "md_series_coventional_airfilter", "md_series_aux_snorkel_R", , "md_series_aux_snorkel_L"],[]],
+         {"deformGroup":""},
+    ],
+    "nodes": [
+         ["id",     "posX", "posY", "posZ"],
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+
+         //air filter
+         {"nodeWeight":0.67},
+         {"engineGroup":"engine_intake"},
+         {"group":"md_series_coventional_airfilter"},
+         ["afi1l",  0.1968,-1.3159, 1.5124],
+         ["afi1r", -0.1285,-1.3159, 1.5124],
+         ["afi2l",  0.1968,-1.2075, 1.404],
+         ["afi2r", -0.1285,-1.2075, 1.404],
+         ["afi3l",  0.1968,-1.2075, 1.6209]
+         ["afi3r", -0.1285,-1.2075, 1.6209],
+         ["afi4l",  0.1968,-1.0990, 1.5124, {"selfCollision":false}],
+         ["afi4r", -0.1285,-1.0990, 1.5124, {"selfCollision":false}],
+         {"engineGroup":""},
+
+         //hose
+         {"nodeWeight":3},
+         {"group":"md_series_coventional_airfilter_R_hose"},
+         ["afip1l", 0.34,  -0.4, 0.8],
+         ["afip2l", 0.34,  0.7, 0.8],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:",   "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          //air filter main shape
+          {"beamSpring":670000,"beamDamp":67},
+          {"beamDeform":15000,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":1.1},
+          ["afi2r",  "afi2l"],
+          ["afi3r",  "afi3l"],
+          ["afi1r",  "afi1l"],
+          ["afi4r",  "afi4l"],
+          ["afi1l",  "afi2l"],
+          ["afi2l",  "afi4l"],
+          ["afi4l",  "afi3l"],
+          ["afi3l",  "afi1l"],
+          ["afi1r",  "afi2r"],
+          ["afi2r",  "afi4r"],
+          ["afi4r",  "afi3r"],
+          ["afi3r",  "afi1r"],
+
+          //crossing
+          {"beamDeform":5000,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":""},
+          ["afi1r",  "afi4r"],
+          ["afi2r",  "afi3r"],
+          ["afi1l",  "afi4l"],
+          ["afi3l",  "afi2l"],
+          ["afi2l",  "afi1r"],
+          ["afi2r",  "afi1l"],
+          ["afi4r",  "afi2l"],
+          ["afi4l",  "afi2r"],
+          ["afi4r",  "afi3l"],
+          ["afi3r",  "afi4l"],
+          ["afi1l",  "afi3r"],
+          ["afi3l",  "afi1r"],
+          ["afi1r",  "afi4l"],
+          ["afi1l",  "afi4r"],
+          ["afi3r",  "afi2l"],
+          ["afi3l",  "afi2r"],
+
+          //attach
+          {"beamSpring":670000,"beamDamp":67},
+          {"beamDeform":6500,"beamStrength":50000},
+          {"breakGroup":"airfilter"},
+          {"deformGroup":"airhose_break", "deformationTriggerRatio":0.5},
+          ["afi2r",  "b5l"],
+          ["afi2r",  "b7l"],
+          ["afi2r",  "b5r"],
+          ["afi2r",  "b7r"],
+
+          ["afi2l",  "b5l"],
+          ["afi2l",  "b7l"],
+          ["afi2l",  "b5r"],
+          ["afi2l",  "b7r"],
+
+          ["afi3r",  "b5l"],
+          ["afi3r",  "b7l"],
+          ["afi3r",  "b5r"],
+          ["afi3r",  "b7r"],
+
+          ["afi3l",  "b5l"],
+          ["afi3l",  "b7l"],
+          ["afi3l",  "b5r"],
+          ["afi3l",  "b7r"],
+
+          //pipe
+          {"beamSpring":67000,"beamDamp":270},
+          {"beamDeform":9000,"beamStrength":"FLT_MAX"},
+          {"deformationTriggerRatio":0.05},
+          ["afip1l", "afi2l"],
+          ["afip1l", "afi3l"],
+          ["afip1l", "afi2r"],
+          ["afip1l", "afi3r"],
+
+          ["afip2l", "afi2l"],
+          ["afip2l", "afi3l"],
+          ["afip2l", "afi2r"],
+          ["afip2l", "afi3r"],
+
+          ["afip1l", "afip2l"],
+
+          //hose
+          {"beamSpring":6700,"beamDamp":67},
+          {"beamDeform":9000,"beamStrength":20000},
+          //intake to frame
+          ["afi2l",  "ff14l"],
+          ["b5r",    "ff14l"],
+          ["afi2l",  "ff1l"],
+          ["afi2r",  "ff1l"],
+
+          ["afip1l", "ff3l"],
+          ["afip1l", "ff13l"],
+          ["afip1l", "ff4l"],
+          ["afip1l", "ff14l"],
+          ["afip1l", "ff4r"],
+          ["afip1l", "ff14r"],
+
+          ["afip2l", "ff4l"],
+          ["afip2l", "ff14l"],
+          ["afip2l", "ff4r"],
+          ["afip2l", "ff14r"],
+          ["afip2l", "ff5l"],
+          ["afip2l", "ff15l"],
+
+          //air filter to turbo
+          {"optional":true}
+          ["entb1",  "afi2r"],
+          ["entb1",  "afi3r"],
+          ["entb1",  "afi2l"],
+          ["entb1",  "afi3l"],
+
+          ["entb2",  "afi2r"],
+          ["entb2",  "afi3r"],
+          ["entb2",  "afi2l"],
+          ["entb2",  "afi3l"],
+          {"optional":false}
+          {"breakGroup":""},
+          {"deformGroup":"", "deformationTriggerRatio":""},
+
+          //support beams
+          {"beamType":"|SUPPORT","beamLongBound":20},
+          {"beamSpring":671000,"beamDamp":67},
+          {"beamDeform":15000,"beamStrength":150000},
+          ["afi1r",  "b5r"],
+          ["afi1r",  "b7r"],
+          ["afi1r",  "b5l"],
+          ["afi1l",  "b5l"],
+          ["afi1l",  "b5r"],
+          ["afi1l",  "b7l"],
+          ["afi1l",  "b7r"],
+          ["afi4r",  "b6rr"],
+          ["afi4l",  "b6ll"],
+
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+          ["id1:",  "id2:",   "id3:"],
+
+          //air filter
+          {"group":"md_series_coventional_airfilter"},
+          {"dragCoef":0},
+          ["afi1l", "afi2l",  "afi4l"],
+          ["afi4l", "afi3l",  "afi1l"],
+          ["afi4r", "afi2r",  "afi1r"],
+          ["afi1r", "afi3r",  "afi4r"],
+          ["afi3l", "afi4l",  "afi4r"],
+          ["afi4r", "afi3r",  "afi3l"],
+          ["afi4l", "afi2l",  "afi2r"],
+          ["afi2r", "afi4r",  "afi4l"],
+          ["afi1r", "afi2r",  "afi2l"],
+          ["afi2l", "afi1l",  "afi1r"],
+          ["afi3r", "afi1r",  "afi1l"],
+          ["afi1l", "afi3l",  "afi3r"],
+
+          ["afi1r", "afip1l", "afi1l", {"triangleType":"NONCOLLIDABLE"}],
+
+    ],
+},
+}

@@ -1,0 +1,41 @@
+{
+  "Body Style":"Rollback Truck",
+  "BoundingBox":[
+    [
+      -0.8854,
+      -1.136,
+      -0.7234
+    ],
+    [
+      1.7534,
+      5.0361,
+      1.632
+    ]
+  ],
+  "Commercial Class":"Class 8 Truck",
+  "Config Type":"Custom",
+  "Configuration":"MD80 Rollback 6WD (M)",
+  "Description":"Early model single cab truck equipped with a rollback upfit, high suspension and massive tires to carry vehicles over brutal terrain",
+  "Drivetrain":"6WD",
+  "Fuel Type":"Diesel",
+  "Induction Type":"Turbo",
+  "Off-Road Score":34,
+  "Population":4000,
+  "Power":312,
+  "PowerPeakRPM":2400,
+  "Propulsion":"ICE",
+  "Top Speed":32.65652803,
+  "Torque":948,
+  "TorquePeakRPM":"1150 - 1900",
+  "Transmission":"Manual",
+  "Value":210000,
+  "Weight":8137,
+  "Weight/Power":27.83163265,
+  "Years":{
+    "max":1992,
+    "min":1986
+  },
+  "defaultPaintName1":"Royal Red",
+  "defaultPaintName2":"Black",
+  "defaultPaintName3":"Royal Red"
+}

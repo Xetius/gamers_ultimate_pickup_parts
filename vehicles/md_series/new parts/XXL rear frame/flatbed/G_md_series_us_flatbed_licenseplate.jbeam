@@ -1,0 +1,14 @@
+{
+"G_md_series_us_flatbed_licenseplate": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"License Plate",
+        "value":0,
+    },
+    "slotType" : "G_md_series_us_flatbed_licenseplate",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["licenseplate", ["flatbed_rearframe"],[],{"pos":{"x":0.36 "y":8.468, "z":1.05}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+}

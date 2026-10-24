@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 4.0.1 commit date:2023-11-16, commit time:16:40, hash:d0dd92834a08</authoring_tool>
+    </contributor>
+    <created>2025-11-27T00:30:19</created>
+    <modified>2025-11-27T00:30:19</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="trucks_mechanical-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">1</float>
+            </reflectivity>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images/>
+  <library_materials>
+    <material id="trucks_mechanical-material" name="trucks_mechanical">
+      <instance_effect url="#trucks_mechanical-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="pickup_axle_R-mesh" name="pickup_axle_R">
+      <mesh>
+        <source id="pickup_axle_R-mesh-positions">
+          <float_array id="pickup_axle_R-mesh-positions-array" count="96">0.2 -0.05382275 -0.05425733 0.2 -0.07611602 -1.24273e-7 0.2 0.07611513 -1.24273e-7 0.2000001 0.05382192 -0.05425733 0.2 -3.30061e-7 -0.07655161 0.2 0.05382406 0.05425751 0.2 -0.05382275 0.05425751 0.2 -3.30061e-7 0.07655149 0 0 0.07655149 0 0.05382245 0.05425751 0 -0.05382442 0.05425751 0 0 -0.07655161 0 -0.05382215 -0.05425733 0 -0.07611542 -1.24273e-7 0 0.07611572 -1.24273e-7 0 0.05382245 -0.05425733 0.2 0.03289145 0.03315716 0.2 0.04651504 0 0.2 -0.04651498 0 0.2000001 -0.03289139 0.03315716 0.2 0 0.04678148 0.2 -0.03289276 -0.03315728 0.2 0.03289145 -0.03315728 0.2 0 -0.04678148 0 -2.59653e-7 -0.04678148 0 -0.03289175 -0.03315728 0 0.0328924 -0.03315728 0 -2.59653e-7 0.04678148 0 0.03289109 0.03315716 0 0.04651468 0 0 -0.0465154 0 0 -0.03289175 0.03315716</float_array>
+          <technique_common>
+            <accessor source="#pickup_axle_R-mesh-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pickup_axle_R-mesh-normals">
+          <float_array id="pickup_axle_R-mesh-normals-array" count="96">-0.6196316 -0.7848929 8.69716e-5 -2.10201e-6 -0.7090428 -0.7051655 1.54005e-6 -1 -4.57413e-6 -0.6190939 -0.5571253 0.5534747 2.67374e-6 -0.7090399 0.7051685 -0.6190196 1.84701e-4 0.7853756 -1.6504e-6 -5.72952e-6 1 -0.6190874 0.5551531 0.5554601 -1.19419e-6 0.7090482 0.7051601 -0.6190891 0.5569564 -0.55365 2.94388e-6 1 -1.89938e-5 8.32862e-7 0.7090037 -0.7052048 -0.6190227 -1.4874e-4 -0.785373 -2.10844e-7 3.90184e-7 -1 -0.6175795 -0.5569596 -0.5553302 0.6500187 0.7599183 -2.03996e-5 5.08756e-7 0.7091435 0.7050642 0.6499024 0.5369665 0.5378605 0.6483612 -0.5389577 -0.537729 0 2.0536e-7 -1 0.6302546 -1.51452e-4 -0.7763885 0.6613723 0.5321336 -0.5286026 -1.80622e-6 1 -1.87477e-5 1.13057e-6 -6.57149e-6 1 0.6497362 -2.75289e-4 0.7601599 -2.47898e-6 -0.7091063 0.7051016 0.6498192 -0.5393992 0.5355217 -1.23245e-6 -1 -2.50244e-6 0.6500229 -0.7599146 -5.79202e-5 -0.6196333 0.7848916 8.51493e-5 1.27583e-6 -0.7090212 -0.7051872 -7.37562e-7 0.7091012 -0.7051069</float_array>
+          <technique_common>
+            <accessor source="#pickup_axle_R-mesh-normals-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pickup_axle_R-mesh-map-0">
+          <float_array id="pickup_axle_R-mesh-map-0-array" count="192">0.04374796 0.006020963 0.05675381 0.09505218 0.04374766 0.09505218 0.03074193 0.006020963 0.04374766 0.09505218 0.03074204 0.09505218 0.0178253 0.006020963 0.03074204 0.09505218 0.017825 0.0950523 0.108599 0.006020963 0.1215162 0.09505218 0.1085994 0.09505218 0.08258742 0.006020963 0.09559327 0.0950523 0.08258718 0.0950523 0.06967043 0.006020963 0.08258718 0.0950523 0.06967049 0.09505218 0.05675381 0.006020963 0.06967049 0.09505218 0.05675381 0.09505218 0.09559315 0.006020963 0.1085994 0.09505218 0.108599 0.006020963 0.05675381 0.006020963 0.06967049 0.09505218 0.06967043 0.006020963 0.06967049 0.09505218 0.08258742 0.006020963 0.06967043 0.006020963 0.08258742 0.006020963 0.09559327 0.0950523 0.09559315 0.006020963 0.108599 0.006020963 0.1215162 0.09505218 0.1215158 0.006020784 0.0178253 0.006020963 0.03074204 0.09505218 0.03074193 0.006020963 0.03074193 0.006020963 0.04374766 0.09505218 0.04374796 0.006020963 0.09559315 0.006020963 0.1085994 0.09505218 0.09559327 0.0950523 0.04374796 0.006020963 0.05675381 0.09505218 0.05675381 0.006020963 0.04374796 0.006020963 0.05675381 0.006020963 0.05675381 0.09505218 0.03074193 0.006020963 0.04374796 0.006020963 0.04374766 0.09505218 0.0178253 0.006020963 0.03074193 0.006020963 0.03074204 0.09505218 0.108599 0.006020963 0.1215158 0.006020784 0.1215162 0.09505218 0.08258742 0.006020963 0.09559315 0.006020963 0.09559327 0.0950523 0.06967043 0.006020963 0.08258742 0.006020963 0.08258718 0.0950523 0.05675381 0.006020963 0.06967043 0.006020963 0.06967049 0.09505218 0.09559315 0.006020963 0.09559327 0.0950523 0.1085994 0.09505218 0.05675381 0.006020963 0.05675381 0.09505218 0.06967049 0.09505218 0.06967049 0.09505218 0.08258718 0.0950523 0.08258742 0.006020963 0.08258742 0.006020963 0.08258718 0.0950523 0.09559327 0.0950523 0.108599 0.006020963 0.1085994 0.09505218 0.1215162 0.09505218 0.0178253 0.006020963 0.017825 0.0950523 0.03074204 0.09505218 0.03074193 0.006020963 0.03074204 0.09505218 0.04374766 0.09505218 0.09559315 0.006020963 0.108599 0.006020963 0.1085994 0.09505218 0.04374796 0.006020963 0.04374766 0.09505218 0.05675381 0.09505218</float_array>
+          <technique_common>
+            <accessor source="#pickup_axle_R-mesh-map-0-array" count="96" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pickup_axle_R-mesh-colors-Col" name="Col">
+          <float_array id="pickup_axle_R-mesh-colors-Col-array" count="384">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#pickup_axle_R-mesh-colors-Col-array" count="96" stride="4">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+              <param name="A" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pickup_axle_R-mesh-colors-geom-pickup_shocktop_R-map0" name="geom-pickup_shocktop_R-map0">
+          <float_array id="pickup_axle_R-mesh-colors-geom-pickup_shocktop_R-map0-array" count="384">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#pickup_axle_R-mesh-colors-geom-pickup_shocktop_R-map0-array" count="96" stride="4">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+              <param name="A" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pickup_axle_R-mesh-colors-geom-pickup_swaybar_F_offroad-map0" name="geom-pickup_swaybar_F_offroad-map0">
+          <float_array id="pickup_axle_R-mesh-colors-geom-pickup_swaybar_F_offroad-map0-array" count="384">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#pickup_axle_R-mesh-colors-geom-pickup_swaybar_F_offroad-map0-array" count="96" stride="4">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+              <param name="A" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="pickup_axle_R-mesh-vertices">
+          <input semantic="POSITION" source="#pickup_axle_R-mesh-positions"/>
+        </vertices>
+        <triangles material="trucks_mechanical-material" count="32">
+          <input semantic="VERTEX" source="#pickup_axle_R-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#pickup_axle_R-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#pickup_axle_R-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#pickup_axle_R-mesh-colors-Col" offset="3" set="0"/>
+          <input semantic="COLOR" source="#pickup_axle_R-mesh-colors-geom-pickup_shocktop_R-map0" offset="3" set="1"/>
+          <input semantic="COLOR" source="#pickup_axle_R-mesh-colors-geom-pickup_swaybar_F_offroad-map0" offset="3" set="2"/>
+          <p>13 0 0 0 0 1 1 1 1 2 2 2 10 3 3 3 1 2 4 4 6 4 5 5 8 5 6 6 6 4 7 7 7 6 8 8 9 7 9 9 7 6 10 10 5 8 11 11 15 9 12 12 2 10 13 13 3 11 14 14 11 12 15 15 3 11 16 16 4 13 17 17 12 14 18 18 4 13 19 19 0 1 20 20 30 15 21 21 21 16 22 22 25 17 23 23 28 18 24 24 20 19 25 25 27 20 26 26 20 19 27 27 31 21 28 28 27 20 29 29 31 21 30 30 18 22 31 31 30 15 32 32 25 17 33 33 23 23 34 34 24 24 35 35 24 24 36 36 22 25 37 37 26 26 38 38 26 26 39 39 17 27 40 40 29 28 41 41 14 29 42 42 5 8 43 43 2 10 44 44 29 28 45 45 16 30 46 46 28 18 47 47 13 0 48 48 12 14 49 49 0 1 50 50 10 3 51 51 13 0 52 52 1 2 53 53 8 5 54 54 10 3 55 55 6 4 56 56 9 7 57 57 8 5 58 58 7 6 59 59 15 9 60 60 14 29 61 61 2 10 62 62 11 12 63 63 15 9 64 64 3 11 65 65 12 14 66 66 11 12 67 67 4 13 68 68 30 15 69 69 18 22 70 70 21 16 71 71 28 18 72 72 16 30 73 73 20 19 74 74 20 19 75 75 19 31 76 76 31 21 77 77 31 21 78 78 19 31 79 79 18 22 80 80 25 17 81 81 21 16 82 82 23 23 83 83 24 24 84 84 23 23 85 85 22 25 86 86 26 26 87 87 22 25 88 88 17 27 89 89 14 29 90 90 9 7 91 91 5 8 92 92 29 28 93 93 17 27 94 94 16 30 95 95</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="G_hub_dually_extension" name="G_hub_dually_extension" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#pickup_axle_R-mesh" name="G_hub_dually_extension">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="trucks_mechanical-material" target="#trucks_mechanical-material">
+                <bind_vertex_input semantic="pickup_axle_R-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

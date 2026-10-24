@@ -1,0 +1,48 @@
+{
+  "0-100 km/h":9.8,
+  "0-100 mph":34.9,
+  "0-60 mph":9.2,
+  "100-0 km/h":40.3,
+  "60-0 mph":123.7,
+  "60-100 mph":25.7,
+  "BoundingBox":[
+    [
+      -0.6,
+      -1.42,
+      -0.3099
+    ],
+    [
+      1.7,
+      3.54,
+      1.41
+    ]
+  ],
+  "Braking G":0.975,
+  "Config Type":"Custom",
+  "Configuration":"D35 Crew Cab Dually Slammed (A)",
+  "Description":"Gives the phrase 'down to earth' a whole new meaning! This truck uses MD-series chrome duallies for an even sleeker look",
+  "Drivetrain":"RWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Off-Road Score":46,
+  "Performance Class":"4",
+  "Population":4000,
+  "Power":237,
+  "PowerPeakRPM":"3950 - 4600",
+  "Propulsion":"ICE",
+  "Top Speed":48.48723133,
+  "Torque":443,
+  "TorquePeakRPM":"2950 - 3650",
+  "Transmission":"Automatic",
+  "Value":82500,
+  "Weight":2673,
+  "Weight/Power":10.45685279,
+  "Years":{
+    "max":1991,
+    "min":1986
+  },
+  "defaultPaintName1":"Autumn Yellow",
+  "defaultPaintName2":"Butterscotch",
+  "defaultPaintName3":"Autumn Yellow",
+  "vehicleSelectorSubGroup":"vehiclesData.pickup.d35_4WD_ext_longbed_A.vehicleSelectorSubGroup"
+}

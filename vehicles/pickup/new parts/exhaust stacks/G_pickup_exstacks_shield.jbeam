@@ -1,0 +1,32 @@
+{
+"G_pickup_exstacks_muffler_shield": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Heat Shields",
+        "value":240,
+    },
+    "slotType" : "G_pickup_exstacks_muffler_shield",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_exstacks_muffler_shield_R", ["pickup_exhaust_R_stack"]],
+         ["G_pickup_exstacks_muffler_shield_L", ["pickup_exhaust_L_stack"]],
+         ["G_pickup_exstacks_brackets_R", ["pickup_exhaust_R_stack"]],
+         ["G_pickup_exstacks_brackets_L", ["pickup_exhaust_L_stack"]],
+    ],
+}
+"G_pickup_exstacks_straight_shield": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Heat Shields",
+        "value":240,
+    },
+    "slotType" : "G_pickup_exstacks_straight_shield",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_exstacks_muffler_shield_R", ["pickup_exhaust_R_stack"]],
+         ["G_pickup_exstacks_muffler_shield_L", ["pickup_exhaust_L_stack"]],
+         ["G_pickup_exstacks_no_muffler_brackets_R", ["pickup_exhaust_R_stack"]],
+         ["G_pickup_exstacks_no_muffler_brackets_L", ["pickup_exhaust_L_stack"]],
+    ],
+}
+}

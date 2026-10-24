@@ -1,0 +1,146 @@
+{
+  "G_pickup_skin_twotone_alt_flare":{
+    "globalSkin":"twotone_alt_flare",
+    "information":{
+      "authors":"Gamer!",
+      "name":"Two Tone (Alternate Fender Flare - Colorable)",
+      "value":1200
+    },
+    "slotType":"paint_design"
+  },
+  "G_pickup_skin_stripes_fix":{
+    "globalSkin":"stripes_fix",
+    "information":{
+      "authors":"Gamer!",
+      "name":"Stripes (Colorable, Crew Cab Compatible)",
+      "value":1200
+    },
+    "slotType":"paint_design"
+  },
+  "G_pickup_skin_classic_side_stripes":{
+    "globalSkin":"classic_side_stripes",
+    "information":{
+      "authors":"Gamer!",
+      "name":"Classic Side Stripes 1",
+      "value":2000
+    },
+    "slotType":"paint_design"
+  },
+  "G_pickup_skin_classic_side_stripes_2":{
+    "globalSkin":"classic_side_stripes_2",
+    "information":{
+      "authors":"Gamer!",
+      "name":"Classic Side Stripes 2",
+      "value":2000
+    },
+    "slotType":"paint_design"
+  },
+  "G_pickup_skin_classic_side_stripes_3":{
+    "globalSkin":"classic_side_stripes_3",
+    "information":{
+      "authors":"Gamer!",
+      "name":"Classic Side Stripes 3",
+      "value":2000
+    },
+    "slotType":"paint_design"
+  },
+  "G_pickup_skin_stripes_250k":{
+    "globalSkin":"stripes_250k",
+    "information":{
+      "authors":"Gamer!",
+      "name":"250K Downloads Celebration Livery",
+      "value":1200
+    },
+    "slotType":"paint_design"
+  },
+  "G_pickup_skin_stripes_narrow":{
+    "globalSkin":"stripes_narrow",
+    "information":{
+      "authors":"Gamer!",
+      "name":"Narrow Double Stripes",
+      "value":1200
+    },
+    "slotType":"paint_design"
+  },
+  "G_pickup_skin_half_color":{
+    "globalSkin":"half_color",
+    "information":{
+      "authors":"Gamer!",
+      "name":"Half Down Colored",
+      "value":2800
+    },
+    "slotType":"paint_design"
+  },
+  "G_pickup_skin_half_color_alt":{
+    "globalSkin":"half_color_alt",
+    "information":{
+      "authors":"Gamer!",
+      "name":"Half Down Colored With Center Stripe",
+      "value":2800
+    },
+    "slotType":"paint_design"
+  },
+  "G_pickup_skin_police_769":{
+    "globalSkin":"police_769",
+    "information":{
+      "authors":"Gamer!",
+      "name":"Police Livery (Colorable)",
+      "value":2800
+    },
+    "slotType":"paint_design"
+  },
+  "G_pickup_skin_spraypaint_500k":{
+    "globalSkin":"spraypaint_500k",
+    "information":{
+      "authors":"Gamer!",
+      "name":"500K Downloads Celebration Livery (Spraypaint)",
+      "value":2200
+    },
+    "slotType":"paint_design"
+  },
+  "G_pickup_skin_spraypaint":{
+    "globalSkin":"spraypaint",
+    "information":{
+      "authors":"Gamer!",
+      "name":"Spraypaint Custom Livery (Colorable)",
+      "value":1900
+    },
+    "slotType":"paint_design"
+  },
+  "G_pickup_skin_fenders_4":{
+    "globalSkin":"fenders_4",
+    "information":{
+      "authors":"Gamer!",
+      "name":"Seperate Fenders (Front + Rear)",
+      "value":1200
+    },
+    "slotType":"paint_design"
+  },
+  "G_pickup_skin_fenders_2":{
+    "globalSkin":"fenders_2",
+    "information":{
+      "authors":"Gamer!",
+      "name":"Seperate Fenders (Front)",
+      "value":1200
+    },
+    "slotType":"paint_design"
+  },
+  "G_pickup_skin_front_end":{
+    "globalSkin":"front_end",
+    "information":{
+      "authors":"Gamer!",
+      "name":"Front End Swap",
+      "value":1200
+    },
+    "slotType":"paint_design"
+  },
+  "G_pickup_skin_two_tone_750k":{
+    "globalSkin":"two_tone_750k",
+    "information":{
+      "authors":"Gamer!",
+      "name":"750K Downloads Celebration Livery",
+      "value":1200
+    },
+    "slotType":"paint_design"
+  },
+}

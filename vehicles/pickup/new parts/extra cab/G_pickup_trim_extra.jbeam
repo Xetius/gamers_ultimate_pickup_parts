@@ -1,0 +1,51 @@
+{
+"G_pickup_trim_extra": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Trim",
+        "value":150,
+    },
+    "slotType" : "G_pickup_trim_extra",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_trim_body_extra_R", ["pickup_body"]],
+         ["G_pickup_trim_body_extra_L", ["pickup_body"]],
+         ["pickup_trim_fender_R", ["pickup_fender_R"]],
+         ["pickup_trim_fender_L", ["pickup_fender_L"]],
+         ["pickup_trim_door_R", ["pickup_door_FR"]],
+         ["pickup_trim_door_L", ["pickup_door_FL"]],
+    ],
+},
+"G_pickup_body_handle_extra": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Cab Handles",
+        "value":300,
+    },
+    "slotType" : "G_pickup_trim_extra",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_body_handle_L", ["pickup_body"], [],{"pos":{"x":0,"y":-0.03,"z":0}}],
+         ["G_pickup_body_handle_R", ["pickup_body"], [],{"pos":{"x":0,"y":-0.03,"z":0}}],
+    ],
+},
+"G_pickup_trim_extra_handle": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Trim With Cab Handles",
+        "value":450,
+    },
+    "slotType" : "G_pickup_trim_extra",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_trim_body_extra_R", ["pickup_body"]],
+         ["G_pickup_trim_body_extra_L", ["pickup_body"]],
+         ["pickup_trim_fender_R", ["pickup_fender_R"]],
+         ["pickup_trim_fender_L", ["pickup_fender_L"]],
+         ["pickup_trim_door_R", ["pickup_door_FR"]],
+         ["pickup_trim_door_L", ["pickup_door_FL"]],
+         ["G_pickup_body_handle_L", ["pickup_body"], [],{"pos":{"x":0,"y":-0.03,"z":0}}],
+         ["G_pickup_body_handle_R", ["pickup_body"], [],{"pos":{"x":0,"y":-0.03,"z":0}}],
+    ],
+},
+}

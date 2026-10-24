@@ -1,0 +1,919 @@
+{
+"G_md_series_us_sleeper_smlslp_chickenlights": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Halogen Chicken Lights",
+        "value":25,
+    },
+    "slotType" : "G_md_series_us_sleeper_smlslp_chickenlights",
+    "slots2": [
+        ["name", "allowTypes", "denyTypes", "default", "description"],
+        ["G_md_series_us_sleeper_smlslp_chickenlights_R_1_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper R (1)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp1rr", "$nodeX": "sp2rr", "$nodeY": "sp5rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.175, "$posY": -0.56, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_smlslp_chickenlights_R_2_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper R (2)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp1rr", "$nodeX": "sp2rr", "$nodeY": "sp5rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.175, "$posY": -0.35, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_smlslp_chickenlights_R_3_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper R (3)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp2rr", "$nodeX": "sp3rr", "$nodeY": "sp6rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.175, "$posY": -0.14, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_smlslp_chickenlights_R_4_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper R (4)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp2rr", "$nodeX": "sp3rr", "$nodeY": "sp6rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.175, "$posY": 0.07, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_smlslp_chickenlights_L_1_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper L (1)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp1ll", "$nodeX": "sp2ll", "$nodeY": "sp5ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.175, "$posY": -0.56, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_smlslp_chickenlights_L_2_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper L (2)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp1ll", "$nodeX": "sp2ll", "$nodeY": "sp5ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.175, "$posY": -0.35, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_smlslp_chickenlights_L_3_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper L (3)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp2ll", "$nodeX": "sp3ll", "$nodeY": "sp6ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.175, "$posY": -0.14, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_smlslp_chickenlights_L_4_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper L (4)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp2ll", "$nodeX": "sp3ll", "$nodeY": "sp6ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.175, "$posY": 0.07, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }]
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        {"deformGroup":"chicken_sleeper_R", "deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        {"materialOverride":[
+          ["halogen_utility_lights", "halogen_utility_lights_lowhighbeam"],
+          ["halogen_utility_lightglass", "halogen_utility_lightglass_lowhighbeam"],
+        ]},
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x":-1.175, "y":-0.56, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x":-1.175, "y":-0.35, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x":-1.175, "y":-0.14, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x":-1.175, "y": 0.07, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+
+        {"deformGroup":"chicken_sleeper_L", "deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x": 1.175, "y":-0.56, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x": 1.175, "y":-0.35, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x": 1.175, "y":-0.14, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x": 1.175, "y": 0.07, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+
+        {"deformGroup":"chicken_sleeper_R", "deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x":-1.175, "y":-0.56, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x":-1.175, "y":-0.35, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x":-1.175, "y":-0.14, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x":-1.175, "y": 0.07, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+
+        {"deformGroup":"chicken_sleeper_L", "deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x": 1.175, "y":-0.56, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x": 1.175, "y":-0.35, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x": 1.175, "y":-0.14, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x": 1.175, "y": 0.07, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        {"deformGroup":""},
+        {"materialOverride":[
+          ["halogen_utility_lights", "halogen_utility_lights"],
+          ["halogen_utility_lightglass", "halogen_utility_lightglass"],
+        ]},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"disableMeshBreaking":true,"disableTriangleBreaking":true},
+        {"beamSpring":1895830,"beamDamp":122.2},
+        {"deformGroup":"chicken_sleeper_R", "deformationTriggerRatio":0.03},
+        {"beamDeform":14700,"beamStrength":12460},
+        {"breakGroup":"chicken_sleeper_R"},
+        {"deformLimitExpansion":""},
+        ["sp1rr", "sp6rr"],
+        ["sp3rr", "sp4rr"],
+        {"deformGroup":"chicken_sleeper_L", "deformationTriggerRatio":0.03},
+        {"breakGroup":"chicken_sleeper_L"},
+        ["sp1ll", "sp6ll"],
+        ["sp3ll", "sp4ll"],
+        {"breakGroup":""},
+        {"disableMeshBreaking":false,"disableTriangleBreaking":false},
+        {"deformGroup":"", "deformationTriggerRatio":""},
+        {"deformLimitExpansion":1.2},
+    ],
+},
+"G_md_series_us_sleeper_lrgslp_chickenlights": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Halogen Chicken Lights",
+        "value":25,
+    },
+    "slotType" : "G_md_series_us_sleeper_lrgslp_chickenlights",
+    "slots2": [
+        ["name", "allowTypes", "denyTypes", "default", "description"],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_R_1_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper R (1)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp1rr", "$nodeX": "sp2rr", "$nodeY": "sp5rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.179, "$posY": -0.50, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_R_2_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper R (2)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp1rr", "$nodeX": "sp2rr", "$nodeY": "sp5rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.179, "$posY": -0.29, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_R_3_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper R (3)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp1rr", "$nodeX": "sp2rr", "$nodeY": "sp5rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.179, "$posY": -0.08, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_R_4_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper R (4)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp2rr", "$nodeX": "sp3rr", "$nodeY": "sp6rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.179, "$posY": 0.13, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_R_5_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper R (5)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp2rr", "$nodeX": "sp3rr", "$nodeY": "sp6rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.179, "$posY": 0.34, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_R_6_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper R (6)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp3rr", "$nodeX": "sp4rr", "$nodeY": "sp7rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.179, "$posY": 0.55, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_R_7_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper R (7)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp3rr", "$nodeX": "sp4rr", "$nodeY": "sp7rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.179, "$posY": 0.76, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_R_8_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper R (8)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp3rr", "$nodeX": "sp4rr", "$nodeY": "sp7rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.179, "$posY": 0.97, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_R_9_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper R (9)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp3rr", "$nodeX": "sp4rr", "$nodeY": "sp7rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.179, "$posY": 0.97, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_R_10_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper R (10)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp3rr", "$nodeX": "sp4rr", "$nodeY": "sp7rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.179, "$posY": 1.18, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_L_1_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper L (1)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp1ll", "$nodeX": "sp2ll", "$nodeY": "sp5ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.179, "$posY": -0.50, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_L_2_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper L (2)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp1ll", "$nodeX": "sp2ll", "$nodeY": "sp5ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.179, "$posY": -0.29, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_L_3_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper L (3)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp1ll", "$nodeX": "sp2ll", "$nodeY": "sp5ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.179, "$posY": -0.08, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_L_4_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper L (4)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp2ll", "$nodeX": "sp3ll", "$nodeY": "sp6ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.179, "$posY": 0.13, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_L_5_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper L (5)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp2ll", "$nodeX": "sp3ll", "$nodeY": "sp6ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.179, "$posY": 0.34, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_L_6_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper L (6)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp3ll", "$nodeX": "sp4ll", "$nodeY": "sp7ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.179, "$posY": 0.55, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_L_7_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper L (7)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp3ll", "$nodeX": "sp4ll", "$nodeY": "sp7ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.179, "$posY": 0.76, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_L_8_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper L (8)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp3ll", "$nodeX": "sp4ll", "$nodeY": "sp7ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.179, "$posY": 0.97, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_L_9_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper L (9)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp3ll", "$nodeX": "sp4ll", "$nodeY": "sp7ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.179, "$posY": 0.97, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_L_10_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Sleeper L (10)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "sp3ll", "$nodeX": "sp4ll", "$nodeY": "sp7ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.179, "$posY": 1.18, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }]
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        {"deformGroup":"chicken_sleeper_R", "deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        {"materialOverride":[
+          ["halogen_utility_lights", "halogen_utility_lights_lowhighbeam"],
+          ["halogen_utility_lightglass", "halogen_utility_lightglass_lowhighbeam"],
+        ]},
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y":-0.50, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y":-0.29, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y":-0.08, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 0.13, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 0.34, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 0.55, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 0.76, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 0.97, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 1.18, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+
+        {"deformGroup":"chicken_sleeper_L", "deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y":-0.50, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y":-0.29, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y":-0.08, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 0.13, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 0.34, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 0.55, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 0.76, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 0.97, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 1.18, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+
+        {"deformGroup":"chicken_sleeper_R", "deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y":-0.50, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y":-0.29, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y":-0.08, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 0.13, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 0.34, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 0.55, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 0.76, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 0.97, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 1.18, "z":0.99}, "rot":{"x":90, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+
+        {"deformGroup":"chicken_sleeper_L", "deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y":-0.50, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y":-0.29, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y":-0.08, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 0.13, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 0.34, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 0.55, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 0.76, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 0.97, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["halogen_utility_smallsquare_amber_glass", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 1.18, "z":0.99}, "rot":{"x":90, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        {"deformGroup":""},
+        {"materialOverride":[
+          ["halogen_utility_lights", "halogen_utility_lights"],
+          ["halogen_utility_lightglass", "halogen_utility_lightglass"],
+        ]},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"disableMeshBreaking":true,"disableTriangleBreaking":true},
+        {"beamSpring":1895830,"beamDamp":122.2},
+        {"deformGroup":"chicken_sleeper_R", "deformationTriggerRatio":0.03},
+        {"beamDeform":14700,"beamStrength":12460},
+        {"breakGroup":"chicken_sleeper_R"},
+        {"deformLimitExpansion":""},
+        ["sp1rr", "sp7rr"],
+        ["sp3rr", "sp5rr"],
+        ["sp2rr", "sp8rr"],
+        ["sp4rr", "sp6rr"],
+        {"deformGroup":"chicken_sleeper_L", "deformationTriggerRatio":0.03},
+        {"breakGroup":"chicken_sleeper_L"},
+        ["sp1ll", "sp7ll"],
+        ["sp3ll", "sp5ll"],
+        ["sp2ll", "sp8ll"],
+        ["sp4ll", "sp6ll"],
+        {"breakGroup":""},
+        {"disableMeshBreaking":false,"disableTriangleBreaking":false},
+        {"deformGroup":"", "deformationTriggerRatio":""},
+        {"deformLimitExpansion":1.2},
+    ],
+},
+
+
+
+
+
+"G_md_series_us_sleeper_smlslp_chickenlights_LED": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"LED Chicken Lights",
+        "value":50,
+    },
+    "slotType" : "G_md_series_us_sleeper_smlslp_chickenlights",
+    "slots2": [
+        ["name", "allowTypes", "denyTypes", "default", "description"],
+        ["G_md_series_us_sleeper_smlslp_chickenlights_R_1_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper R (1)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp1rr", "$nodeX": "sp2rr", "$nodeY": "sp5rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.175, "$posY": -0.56, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_smlslp_chickenlights_R_2_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper R (2)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp1rr", "$nodeX": "sp2rr", "$nodeY": "sp5rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.175, "$posY": -0.35, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_smlslp_chickenlights_R_3_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper R (3)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp2rr", "$nodeX": "sp3rr", "$nodeY": "sp6rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.175, "$posY": -0.14, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_smlslp_chickenlights_R_4_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper R (4)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp2rr", "$nodeX": "sp3rr", "$nodeY": "sp6rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.175, "$posY": 0.07, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_smlslp_chickenlights_L_1_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper L (1)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp1ll", "$nodeX": "sp2ll", "$nodeY": "sp5ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.175, "$posY": -0.56, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_smlslp_chickenlights_L_2_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper L (2)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp1ll", "$nodeX": "sp2ll", "$nodeY": "sp5ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.175, "$posY": -0.35, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_smlslp_chickenlights_L_3_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper L (3)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp2ll", "$nodeX": "sp3ll", "$nodeY": "sp6ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.175, "$posY": -0.14, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_smlslp_chickenlights_L_4_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper L (4)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp2ll", "$nodeX": "sp3ll", "$nodeY": "sp6ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.175, "$posY": 0.07, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }]
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        {"deformGroup":"chicken_sleeper_R", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.175, "y":-0.56, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.175, "y":-0.35, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.175, "y":-0.14, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.175, "y": 0.07, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+
+        {"deformGroup":"chicken_sleeper_L", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.175, "y":-0.56, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.175, "y":-0.35, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.175, "y":-0.14, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.175, "y": 0.07, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+
+        {"deformGroup":"chicken_sleeper_R", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.175, "y":-0.56, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.175, "y":-0.35, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.175, "y":-0.14, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.175, "y": 0.07, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+
+        {"deformGroup":"chicken_sleeper_L", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.175, "y":-0.56, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.175, "y":-0.35, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.175, "y":-0.14, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.175, "y": 0.07, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        {"deformGroup":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"disableMeshBreaking":true,"disableTriangleBreaking":true},
+        {"beamSpring":1895830,"beamDamp":122.2},
+        {"deformGroup":"chicken_sleeper_R", "deformationTriggerRatio":0.03},
+        {"beamDeform":14700,"beamStrength":12460},
+        {"breakGroup":"chicken_sleeper_R"},
+        {"deformLimitExpansion":""},
+        ["sp1rr", "sp6rr"],
+        ["sp3rr", "sp4rr"],
+        {"deformGroup":"chicken_sleeper_L", "deformationTriggerRatio":0.03},
+        {"breakGroup":"chicken_sleeper_L"},
+        ["sp1ll", "sp6ll"],
+        ["sp3ll", "sp4ll"],
+        {"breakGroup":""},
+        {"disableMeshBreaking":false,"disableTriangleBreaking":false},
+        {"deformGroup":"", "deformationTriggerRatio":""},
+        {"deformLimitExpansion":1.2},
+    ],
+},
+"G_md_series_us_sleeper_lrgslp_chickenlights_LED": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"LED Chicken Lights",
+        "value":50,
+    },
+    "slotType" : "G_md_series_us_sleeper_lrgslp_chickenlights",
+    "slots2": [
+        ["name", "allowTypes", "denyTypes", "default", "description"],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_R_1_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper R (1)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp1rr", "$nodeX": "sp2rr", "$nodeY": "sp5rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.179, "$posY": -0.50, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_R_2_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper R (2)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp1rr", "$nodeX": "sp2rr", "$nodeY": "sp5rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.179, "$posY": -0.29, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_R_3_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper R (3)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp1rr", "$nodeX": "sp2rr", "$nodeY": "sp5rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.179, "$posY": -0.08, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_R_4_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper R (4)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp2rr", "$nodeX": "sp3rr", "$nodeY": "sp6rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.179, "$posY": 0.13, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_R_5_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper R (5)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp2rr", "$nodeX": "sp3rr", "$nodeY": "sp6rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.179, "$posY": 0.34, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_R_6_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper R (6)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp3rr", "$nodeX": "sp4rr", "$nodeY": "sp7rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.179, "$posY": 0.55, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_R_7_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper R (7)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp3rr", "$nodeX": "sp4rr", "$nodeY": "sp7rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.179, "$posY": 0.76, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_R_8_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper R (8)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp3rr", "$nodeX": "sp4rr", "$nodeY": "sp7rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.179, "$posY": 0.97, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_R_9_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper R (9)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp3rr", "$nodeX": "sp4rr", "$nodeY": "sp7rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.179, "$posY": 0.97, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_R_10_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper R (10)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp3rr", "$nodeX": "sp4rr", "$nodeY": "sp7rr",
+          "$deformGroup": "chicken_sleeper_R",
+          "$posX": -1.179, "$posY": 1.18, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_L_1_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper L (1)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp1ll", "$nodeX": "sp2ll", "$nodeY": "sp5ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.179, "$posY": -0.50, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_L_2_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper L (2)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp1ll", "$nodeX": "sp2ll", "$nodeY": "sp5ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.179, "$posY": -0.29, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_L_3_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper L (3)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp1ll", "$nodeX": "sp2ll", "$nodeY": "sp5ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.179, "$posY": -0.08, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_L_4_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper L (4)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp2ll", "$nodeX": "sp3ll", "$nodeY": "sp6ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.179, "$posY": 0.13, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_L_5_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper L (5)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp2ll", "$nodeX": "sp3ll", "$nodeY": "sp6ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.179, "$posY": 0.34, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_L_6_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper L (6)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp3ll", "$nodeX": "sp4ll", "$nodeY": "sp7ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.179, "$posY": 0.55, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_L_7_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper L (7)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp3ll", "$nodeX": "sp4ll", "$nodeY": "sp7ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.179, "$posY": 0.76, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_L_8_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper L (8)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp3ll", "$nodeX": "sp4ll", "$nodeY": "sp7ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.179, "$posY": 0.97, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_L_9_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper L (9)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp3ll", "$nodeX": "sp4ll", "$nodeY": "sp7ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.179, "$posY": 0.97, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }],
+        ["G_md_series_us_sleeper_lrgslp_chickenlights_L_10_bulb2", ["generic_2inch_led_amber_1W"], [], "generic_2inch_led_amber_1W", "Sleeper L (10)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "sp3ll", "$nodeX": "sp4ll", "$nodeY": "sp7ll",
+          "$deformGroup": "chicken_sleeper_L",
+          "$posX": 1.179, "$posY": 1.18, "$posZ": 0.99,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -270
+        }
+        }]
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        {"deformGroup":"chicken_sleeper_R", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y":-0.50, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y":-0.29, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y":-0.08, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 0.13, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 0.34, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 0.55, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 0.76, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 0.97, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 1.18, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+
+        {"deformGroup":"chicken_sleeper_L", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y":-0.50, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y":-0.29, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y":-0.08, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 0.13, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 0.34, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 0.55, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 0.76, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 0.97, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 1.18, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+
+        {"deformGroup":"chicken_sleeper_R", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y":-0.50, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y":-0.29, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y":-0.08, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 0.13, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 0.34, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 0.55, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 0.76, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 0.97, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x":-1.179, "y": 1.18, "z":0.99}, "rot":{"x":0, "y":0, "z": -90}, "scale":{"x":1, "y":1, "z":1}}],
+
+        {"deformGroup":"chicken_sleeper_L", "deformMaterialBase":"off_road_lights_glass", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y":-0.50, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y":-0.29, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y":-0.08, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 0.13, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 0.34, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 0.55, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 0.76, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 0.97, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        ["round_led_2inch_glass_amber_aux2", ["md_series_sleeper"],[],{"pos":{"x": 1.179, "y": 1.18, "z":0.99}, "rot":{"x":0, "y":0, "z":  90}, "scale":{"x":1, "y":1, "z":1}}],
+        {"deformGroup":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"disableMeshBreaking":true,"disableTriangleBreaking":true},
+        {"beamSpring":1895830,"beamDamp":122.2},
+        {"deformGroup":"chicken_sleeper_R", "deformationTriggerRatio":0.03},
+        {"beamDeform":14700,"beamStrength":12460},
+        {"breakGroup":"chicken_sleeper_R"},
+        {"deformLimitExpansion":""},
+        ["sp1rr", "sp7rr"],
+        ["sp3rr", "sp5rr"],
+        ["sp2rr", "sp8rr"],
+        ["sp4rr", "sp6rr"],
+        {"deformGroup":"chicken_sleeper_L", "deformationTriggerRatio":0.03},
+        {"breakGroup":"chicken_sleeper_L"},
+        ["sp1ll", "sp7ll"],
+        ["sp3ll", "sp5ll"],
+        ["sp2ll", "sp8ll"],
+        ["sp4ll", "sp6ll"],
+        {"breakGroup":""},
+        {"disableMeshBreaking":false,"disableTriangleBreaking":false},
+        {"deformGroup":"", "deformationTriggerRatio":""},
+        {"deformLimitExpansion":1.2},
+    ],
+},
+}

@@ -1,0 +1,482 @@
+{
+"G_pickup_aux_driveshaft_R": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Driveshaft",
+        "value":450,
+    },
+    "slotType" : "G_pickup_aux_driveshaft_R",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear driveshaft
+        ["torsionReactor", "torsionReactorR", "transfercase", 1, {}],
+        ["shaft", "driveshaft", "torsionReactorR", 1, {"breakTriggerBeam":"driveshaft", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":0.519, "dynamicFriction": 0.00112}],
+    ],
+    "torsionReactorR": {
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+    },
+    "props": [
+        ["func",       "mesh",              "idRef:","idX:","idY:", "baseRotation",            "rotation",            "translation",         "min", "max", "offset", "multiplier",],
+        ["driveshaft", "G_pickup_aux_driveshaft", "ax3r","ax3l","tra1",   {"x":-88.2, "y":0, "z":0}, {"x":0, "y":1, "z":0}, {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"breakGroup":"driveshaft","deformGroup":"driveshaft","optional":true}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //driveshaft
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.075, "beamShortBound":0.075},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3535,"beamStrength":4599},
+          {"beamLimitSpring":10001000,"beamLimitDamp":1000},
+          ["ax3","tra1", {"name":"driveshaft","optional":true,"breakGroup":"driveshaft","deformGroup":"driveshaft"}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_aux_driveshaft_R_longbed": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Long Bed Rear Driveshaft",
+        "value":550,
+    },
+    "slotType" : "G_pickup_aux_driveshaft_R_longbed",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear driveshaft
+        ["torsionReactor", "torsionReactorR", "transfercase", 1, {}],
+        ["shaft", "driveshaft", "torsionReactorR", 1, {"breakTriggerBeam":"driveshaft", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":0.519, "dynamicFriction": 0.00112}],
+    ],
+    "torsionReactorR": {
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+    },
+    "props": [
+        ["func",       "mesh",              "idRef:","idX:","idY:", "baseRotation",            "rotation",            "translation",         "min", "max", "offset", "multiplier",],
+        ["driveshaft", "G_pickup_aux_driveshaft_longbed", "ax3r","ax3l","tra1",   {"x":-88.2, "y":0, "z":0}, {"x":0, "y":1, "z":0}, {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"breakGroup":"driveshaft","deformGroup":"driveshaft","optional":true}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //driveshaft
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.075, "beamShortBound":0.075},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3535,"beamStrength":4599},
+          {"beamLimitSpring":10001000,"beamLimitDamp":1000},
+          ["ax3","tra1", {"name":"driveshaft","optional":true,"breakGroup":"driveshaft","deformGroup":"driveshaft"}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_aux_driveshaft_R_ext": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Extended Rear Driveshaft",
+        "value":470,
+    },
+    "slotType" : "G_pickup_aux_driveshaft_R_ext",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear driveshaft
+        ["torsionReactor", "torsionReactorR", "transfercase", 1, {}],
+        ["shaft", "driveshaft", "torsionReactorR", 1, {"breakTriggerBeam":"driveshaft", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":0.519, "dynamicFriction": 0.00112}],
+    ],
+    "torsionReactorR": {
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+    },
+    "props": [
+        ["func",       "mesh",                 "idRef:","idX:","idY:", "baseRotation",            "rotation",            "translation",         "min", "max", "offset", "multiplier",],
+        ["driveshaft", "G_pickup_aux_driveshaft_ext","ax3r","ax3l", "tra1",  {"x":-88.2, "y":0, "z":0}, {"x":0, "y":1, "z":0}, {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"breakGroup":"driveshaft","deformGroup":"driveshaft","optional":true}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //driveshaft
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.075, "beamShortBound":0.075},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3535,"beamStrength":4599},
+          {"beamLimitSpring":10001000,"beamLimitDamp":1000},
+          ["ax3","tra1", {"name":"driveshaft","optional":true,"breakGroup":"driveshaft","deformGroup":"driveshaft"}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_aux_driveshaft_R_extlongbed": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Long Bed Extended Rear Driveshaft",
+        "value":570,
+    },
+    "slotType" : "G_pickup_aux_driveshaft_R_extlongbed",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear driveshaft
+        ["torsionReactor", "torsionReactorR", "transfercase", 1, {}],
+        ["shaft", "driveshaft", "torsionReactorR", 1, {"breakTriggerBeam":"driveshaft", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":0.519, "dynamicFriction": 0.00112}],
+    ],
+    "torsionReactorR": {
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+    },
+    "props": [
+        ["func",       "mesh",                 "idRef:","idX:","idY:", "baseRotation",            "rotation",            "translation",         "min", "max", "offset", "multiplier",],
+        ["driveshaft", "G_pickup_aux_driveshaft_extlongbed","ax3r","ax3l", "tra1",  {"x":-88.2, "y":0, "z":0}, {"x":0, "y":1, "z":0}, {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"breakGroup":"driveshaft","deformGroup":"driveshaft","optional":true}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //driveshaft
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.075, "beamShortBound":0.075},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3535,"beamStrength":4599},
+          {"beamLimitSpring":10001000,"beamLimitDamp":1000},
+          ["ax3","tra1", {"name":"driveshaft","optional":true,"breakGroup":"driveshaft","deformGroup":"driveshaft"}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_aux_driveshaft_R_crew": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Crew Rear Driveshaft",
+        "value":580,
+    },
+    "slotType" : "G_pickup_aux_driveshaft_R_crew",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear driveshaft
+        ["torsionReactor", "torsionReactorR", "transfercase", 1, {}],
+        ["shaft", "driveshaft", "torsionReactorR", 1, {"breakTriggerBeam":"driveshaft", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":0.519, "dynamicFriction": 0.00112}],
+    ],
+    "torsionReactorR": {
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+    },
+    "props": [
+        ["func",       "mesh",                 "idRef:","idX:","idY:", "baseRotation",            "rotation",            "translation",         "min", "max", "offset", "multiplier",],
+        ["driveshaft", "G_pickup_aux_driveshaft_crew","ax3r","ax3l", "tra1",  {"x":-88.2, "y":0, "z":0}, {"x":0, "y":1, "z":0}, {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"breakGroup":"driveshaft","deformGroup":"driveshaft","optional":true}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //driveshaft
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.075, "beamShortBound":0.075},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3535,"beamStrength":4599},
+          {"beamLimitSpring":10001000,"beamLimitDamp":1000},
+          ["ax3","tra1", {"name":"driveshaft","optional":true,"breakGroup":"driveshaft","deformGroup":"driveshaft"}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_aux_driveshaft_R_crewlongbed": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Long Bed Crew Rear Driveshaft",
+        "value":580,
+    },
+    "slotType" : "G_pickup_aux_driveshaft_R_crewlongbed",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear driveshaft
+        ["torsionReactor", "torsionReactorR", "transfercase", 1, {}],
+        ["shaft", "driveshaft", "torsionReactorR", 1, {"breakTriggerBeam":"driveshaft", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":0.519, "dynamicFriction": 0.00112}],
+    ],
+    "torsionReactorR": {
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+    },
+    "props": [
+        ["func",       "mesh",                 "idRef:","idX:","idY:", "baseRotation",            "rotation",            "translation",         "min", "max", "offset", "multiplier",],
+        ["driveshaft", "G_pickup_aux_driveshaft_crewlongbed","ax3r","ax3l", "tra1",  {"x":-88.2, "y":0, "z":0}, {"x":0, "y":1, "z":0}, {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"breakGroup":"driveshaft","deformGroup":"driveshaft","optional":true}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //driveshaft
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.075, "beamShortBound":0.075},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3535,"beamStrength":4599},
+          {"beamLimitSpring":10001000,"beamLimitDamp":1000},
+          ["ax3","tra1", {"name":"driveshaft","optional":true,"breakGroup":"driveshaft","deformGroup":"driveshaft"}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_aux_driveshaft_R_upfit": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Upfit Rear Driveshaft",
+        "value":450,
+    },
+    "slotType" : "G_pickup_aux_driveshaft_R_upfit",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear driveshaft
+        ["torsionReactor", "torsionReactorR", "transfercase", 1, {}],
+        ["shaft", "driveshaft", "torsionReactorR", 1, {"breakTriggerBeam":"driveshaft", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":0.519, "dynamicFriction": 0.00112}],
+    ],
+    "torsionReactorR": {
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+    },
+    "props": [
+        ["func"      , "mesh"           , "idRef:", "idX:", "idY:", "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["driveshaft", "G_pickup_aux_driveshaft_upfit", "ax3r", "ax3l", "tra1",    {"x":-88.5, "y":0, "z":0}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"breakGroup":"driveshaft","deformGroup":"driveshaft","optional":true}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //driveshaft
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.025, "beamShortBound":0.025},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3535,"beamStrength":4599},
+          {"beamLimitSpring":10001000,"beamLimitDamp":1000},
+          ["ax3","tra1", {"name":"driveshaft","optional":true,"breakGroup":"driveshaft","deformGroup":"driveshaft"}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_aux_driveshaft_R_6door": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"6 Door Rear Driveshaft",
+        "value":580,
+    },
+    "slotType" : "G_pickup_aux_driveshaft_R_6door",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear driveshaft
+        ["torsionReactor", "torsionReactorR", "transfercase", 1, {}],
+        ["shaft", "driveshaft", "torsionReactorR", 1, {"breakTriggerBeam":"driveshaft", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":0.519, "dynamicFriction": 0.00112}],
+    ],
+    "torsionReactorR": {
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+    },
+    "props": [
+        ["func",       "mesh",                 "idRef:","idX:","idY:", "baseRotation",            "rotation",            "translation",         "min", "max", "offset", "multiplier",],
+        ["driveshaft", "G_pickup_aux_driveshaft_6door","ax3r","ax3l", "tra1",  {"x":-88.2, "y":0, "z":0}, {"x":0, "y":1, "z":0}, {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"breakGroup":"driveshaft","deformGroup":"driveshaft","optional":true}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //driveshaft
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.075, "beamShortBound":0.075},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3535,"beamStrength":4599},
+          {"beamLimitSpring":10001000,"beamLimitDamp":1000},
+          ["ax3","tra1", {"name":"driveshaft","optional":true,"breakGroup":"driveshaft","deformGroup":"driveshaft"}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_aux_driveshaft_R_6doorlongbed": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Long Bed 6 Door Rear Driveshaft",
+        "value":580,
+    },
+    "slotType" : "G_pickup_aux_driveshaft_R_6doorlongbed",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear driveshaft
+        ["torsionReactor", "torsionReactorR", "transfercase", 1, {}],
+        ["shaft", "driveshaft", "torsionReactorR", 1, {"breakTriggerBeam":"driveshaft", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":0.519, "dynamicFriction": 0.00112}],
+    ],
+    "torsionReactorR": {
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+    },
+    "props": [
+        ["func",       "mesh",                 "idRef:","idX:","idY:", "baseRotation",            "rotation",            "translation",         "min", "max", "offset", "multiplier",],
+        ["driveshaft", "G_pickup_aux_driveshaft_6doorlongbed","ax3r","ax3l", "tra1",  {"x":-88.2, "y":0, "z":0}, {"x":0, "y":1, "z":0}, {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"breakGroup":"driveshaft","deformGroup":"driveshaft","optional":true}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //driveshaft
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.075, "beamShortBound":0.075},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3535,"beamStrength":4599},
+          {"beamLimitSpring":10001000,"beamLimitDamp":1000},
+          ["ax3","tra1", {"name":"driveshaft","optional":true,"breakGroup":"driveshaft","deformGroup":"driveshaft"}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_aux_driveshaft_R_upfit_ext": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Upfit Rear Driveshaft",
+        "value":600,
+    },
+    "slotType" : "G_pickup_aux_driveshaft_R_upfit_ext",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear driveshaft
+        ["torsionReactor", "torsionReactorR", "transfercase", 1, {}],
+        ["shaft", "driveshaft", "torsionReactorR", 1, {"breakTriggerBeam":"driveshaft", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":0.519, "dynamicFriction": 0.00112}],
+    ],
+    "torsionReactorR": {
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+    },
+    "props": [
+        ["func"      , "mesh"           , "idRef:", "idX:", "idY:", "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["driveshaft", "G_pickup_aux_driveshaft_upfit_ext", "ax3r", "ax3l", "tra1",    {"x":-88.5, "y":0, "z":0}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"breakGroup":"driveshaft","deformGroup":"driveshaft","optional":true}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //driveshaft
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.025, "beamShortBound":0.025},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3535,"beamStrength":4599},
+          {"beamLimitSpring":10001000,"beamLimitDamp":1000},
+          ["ax3","tra1", {"name":"driveshaft","optional":true,"breakGroup":"driveshaft","deformGroup":"driveshaft"}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_aux_driveshaft_R_upfit_crew": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Upfit Rear Driveshaft",
+        "value":800,
+    },
+    "slotType" : "G_pickup_aux_driveshaft_R_upfit_crew",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear driveshaft
+        ["torsionReactor", "torsionReactorR", "transfercase", 1, {}],
+        ["shaft", "driveshaft", "torsionReactorR", 1, {"breakTriggerBeam":"driveshaft", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":0.519, "dynamicFriction": 0.00112}],
+    ],
+    "torsionReactorR": {
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+    },
+    "props": [
+        ["func"      , "mesh"           , "idRef:", "idX:", "idY:", "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["driveshaft", "G_pickup_aux_driveshaft_upfit_crew", "ax3r", "ax3l", "tra1",    {"x":-88.5, "y":0, "z":0}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"breakGroup":"driveshaft","deformGroup":"driveshaft","optional":true}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //driveshaft
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.025, "beamShortBound":0.025},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3535,"beamStrength":4599},
+          {"beamLimitSpring":10001000,"beamLimitDamp":1000},
+          ["ax3","tra1", {"name":"driveshaft","optional":true,"breakGroup":"driveshaft","deformGroup":"driveshaft"}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_aux_driveshaft_R_upfit_6door": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Upfit Rear Driveshaft",
+        "value":950,
+    },
+    "slotType" : "G_pickup_aux_driveshaft_R_upfit_6door",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear driveshaft
+        ["torsionReactor", "torsionReactorR", "transfercase", 1, {}],
+        ["shaft", "driveshaft", "torsionReactorR", 1, {"breakTriggerBeam":"driveshaft", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":0.519, "dynamicFriction": 0.00112}],
+    ],
+    "torsionReactorR": {
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+    },
+    "props": [
+        ["func"      , "mesh"           , "idRef:", "idX:", "idY:", "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["driveshaft", "G_pickup_aux_driveshaft_upfit_6door", "ax3r", "ax3l", "tra1",    {"x":-88.5, "y":0, "z":0}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"breakGroup":"driveshaft","deformGroup":"driveshaft","optional":true}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //driveshaft
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.025, "beamShortBound":0.025},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3535,"beamStrength":4599},
+          {"beamLimitSpring":10001000,"beamLimitDamp":1000},
+          ["ax3","tra1", {"name":"driveshaft","optional":true,"breakGroup":"driveshaft","deformGroup":"driveshaft"}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_aux_driveshaft_R_tiny": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Driveshaft",
+        "value":450,
+    },
+    "slotType" : "G_pickup_aux_driveshaft_R_tiny",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear driveshaft
+        ["torsionReactor", "torsionReactorR", "transfercase", 1, {}],
+        ["shaft", "driveshaft", "torsionReactorR", 1, {"breakTriggerBeam":"driveshaft", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":0.519, "dynamicFriction": 0.00112}],
+    ],
+    "torsionReactorR": {
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+    },
+    "props": [
+        ["func",       "mesh",              "idRef:","idX:","idY:", "baseRotation",            "rotation",            "translation",         "min", "max", "offset", "multiplier",],
+        ["driveshaft", "G_pickup_aux_driveshaft_tiny", "ax3r","ax3l","tra1",   {"x":-88.2, "y":0, "z":0}, {"x":0, "y":1, "z":0}, {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"breakGroup":"driveshaft","deformGroup":"driveshaft","optional":true}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //driveshaft
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.075, "beamShortBound":0.075},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3535,"beamStrength":4599},
+          {"beamLimitSpring":10001000,"beamLimitDamp":1000},
+          ["ax3","tra1", {"name":"driveshaft","optional":true,"breakGroup":"driveshaft","deformGroup":"driveshaft"}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_aux_driveshaft_R_ext_tiny": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Driveshaft",
+        "value":450,
+    },
+    "slotType" : "G_pickup_aux_driveshaft_R_ext_tiny",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear driveshaft
+        ["torsionReactor", "torsionReactorR", "transfercase", 1, {}],
+        ["shaft", "driveshaft", "torsionReactorR", 1, {"breakTriggerBeam":"driveshaft", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":0.519, "dynamicFriction": 0.00112}],
+    ],
+    "torsionReactorR": {
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+    },
+    "props": [
+        ["func",       "mesh",              "idRef:","idX:","idY:", "baseRotation",            "rotation",            "translation",         "min", "max", "offset", "multiplier",],
+        ["driveshaft", "G_pickup_aux_driveshaft_ext_tiny", "ax3r","ax3l","tra1",   {"x":-88.2, "y":0, "z":0}, {"x":0, "y":1, "z":0}, {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"breakGroup":"driveshaft","deformGroup":"driveshaft","optional":true}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //driveshaft
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.075, "beamShortBound":0.075},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3535,"beamStrength":4599},
+          {"beamLimitSpring":10001000,"beamLimitDamp":1000},
+          ["ax3","tra1", {"name":"driveshaft","optional":true,"breakGroup":"driveshaft","deformGroup":"driveshaft"}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_aux_driveshaft_R_crew_tiny": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Driveshaft",
+        "value":450,
+    },
+    "slotType" : "G_pickup_aux_driveshaft_R_crew_tiny",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear driveshaft
+        ["torsionReactor", "torsionReactorR", "transfercase", 1, {}],
+        ["shaft", "driveshaft", "torsionReactorR", 1, {"breakTriggerBeam":"driveshaft", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":0.519, "dynamicFriction": 0.00112}],
+    ],
+    "torsionReactorR": {
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+    },
+    "props": [
+        ["func",       "mesh",              "idRef:","idX:","idY:", "baseRotation",            "rotation",            "translation",         "min", "max", "offset", "multiplier",],
+        ["driveshaft", "G_pickup_aux_driveshaft_crew_tiny", "ax3r","ax3l","tra1",   {"x":-88.2, "y":0, "z":0}, {"x":0, "y":1, "z":0}, {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"breakGroup":"driveshaft","deformGroup":"driveshaft","optional":true}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //driveshaft
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.075, "beamShortBound":0.075},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3535,"beamStrength":4599},
+          {"beamLimitSpring":10001000,"beamLimitDamp":1000},
+          ["ax3","tra1", {"name":"driveshaft","optional":true,"breakGroup":"driveshaft","deformGroup":"driveshaft"}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_aux_driveshaft_R_6door_tiny": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Driveshaft",
+        "value":450,
+    },
+    "slotType" : "G_pickup_aux_driveshaft_R_6door_tiny",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear driveshaft
+        ["torsionReactor", "torsionReactorR", "transfercase", 1, {}],
+        ["shaft", "driveshaft", "torsionReactorR", 1, {"breakTriggerBeam":"driveshaft", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":0.519, "dynamicFriction": 0.00112}],
+    ],
+    "torsionReactorR": {
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+    },
+    "props": [
+        ["func",       "mesh",              "idRef:","idX:","idY:", "baseRotation",            "rotation",            "translation",         "min", "max", "offset", "multiplier",],
+        ["driveshaft", "G_pickup_aux_driveshaft_6door_tiny", "ax3r","ax3l","tra1",   {"x":-88.2, "y":0, "z":0}, {"x":0, "y":1, "z":0}, {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"breakGroup":"driveshaft","deformGroup":"driveshaft","optional":true}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //driveshaft
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.075, "beamShortBound":0.075},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3535,"beamStrength":4599},
+          {"beamLimitSpring":10001000,"beamLimitDamp":1000},
+          ["ax3","tra1", {"name":"driveshaft","optional":true,"breakGroup":"driveshaft","deformGroup":"driveshaft"}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+}

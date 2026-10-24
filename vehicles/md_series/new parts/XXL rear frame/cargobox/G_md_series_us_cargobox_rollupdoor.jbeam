@@ -1,0 +1,584 @@
+{
+"G_md_series_us_cargobox_rollupdoor": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rollup Door",
+        "value":700,
+    },
+    "slotType" : "G_md_series_us_cargobox_rollupdoor",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_cargobox_slidingdoor_1", ["md_series_cargobox_rollup_1"]],
+         ["G_md_series_us_cargobox_slidingdoor_2", ["md_series_cargobox_rollup_2"]],
+         ["G_md_series_us_cargobox_slidingdoor_3", ["md_series_cargobox_rollup_3"]],
+         ["G_md_series_us_cargobox_slidingdoor_4", ["md_series_cargobox_rollup_4"]],
+         ["G_md_series_us_cargobox_slidingdoor_5", ["md_series_cargobox_rollup_5"]],
+         ["G_md_series_us_cargobox_slidingdoor_6", ["md_series_cargobox_rollup_6"]],
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"cargoDoorRRCoupler"}],
+        ["sound/linearMovement", {"name":"rollupdoor_movement"}]
+    ],
+
+    "rollupdoor_movement": {
+        "hasSegments":true
+        "hasEndstops":true
+        "movementSoundEvent":"event:>Vehicle>Sliding>DoorSegmented_Loop",
+        "minPositionSoundEvent":"event:>Vehicle>Sliding>DoorSegmented_LimitUp",
+        "maxPositionSoundEvent":"event:>Vehicle>Sliding>DoorSegmented_LimitDown",
+        "segmentSoundEvent":"event:>Vehicle>Sliding>DoorSegmented_Segment",
+        "movementSoundVolume":1,
+        "movementSoundNode:":["fra14"]
+        "positionSensorBeamTag":"rollupdoor_sound"
+        "minPosition":0.5
+        "maxPosition": 2.4
+        "segmentLength":0.373
+        "positionCalibration": -0.3
+        "debugMode":false
+
+        "movementSoundPitchMaxVelocity":2
+        "movementSoundVolumeCoefMinVelocity":0.05
+        "movementSoundVolumeCoefMaxVelocity":0.1
+        "movementSoundPlayingThresholdVelocity":0.01
+        "movementSoundPlayingThresholdVolume":0.05
+    }
+    "cargoDoorRRCoupler":{
+        "couplerNodes":[
+            ["cid1",  "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["cd11", "fra12",     146000,                     0.01,                   0.005,                      0.2,                 1.1,                   "reardoorhinge_b_R", {"forceCid1":"cd1l", "forceCid2":"cd11l"}],
+
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["cd11"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>dryvan_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>dryvan_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 450,
+        "openForceDuration": 2,
+        "closeForceMagnitude": 300,
+        "closeForceDuration": 10
+    },
+    "triggers2":[
+        ["id",  "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["cargodoorR", "cd1l","cd11l","cd1r", "box", {"x":0.09, "y":0.09, "z":0.32}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.27, "y":0.21, "z":0.00}, {"deformGroup":"reardoorhinge_b_R"}],
+    ],
+    "triggerEventLinks2":[
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["cargodoorR", "action0", "toggle_cargodoorRR"]
+    ],
+    "actionsEnabled": [
+        ["id"],
+        ["toggle_cargodoorRR"],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         //--CARGO DOOR--
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":0.5},
+         {"group":["rollupdoorColide","md_series_cargobox_rollup_1"]},
+         ["cd1rr",-1.17, 8.37, 1.225],
+         ["cd1r", -0.37, 8.37, 1.225],
+         ["cd1l",  0.37, 8.37, 1.225],
+         ["cd1ll", 1.17, 8.37, 1.225],
+         ["cd11rr",-1.17, 8.37, 1.60, {"tag":"rollup_RR1"}],
+         ["cd11r", -0.37, 8.37, 1.60, {"tag":"rollup_R1"}],
+         ["cd11l",  0.37, 8.37, 1.60, {"tag":"rollup_L1"}],
+         ["cd11ll", 1.17, 8.37, 1.60, {"tag":"rollup_LL1"}],
+         //latch
+         ["cd11",   0.00, 8.40, 1.22,{"selfCollision":false,"collision":false}],
+         //rigifier
+         ["cd1",  0.00, 8.08, 1.407,{"selfCollision":false,"collision":false}],
+         //segment 2
+         {"group":["rollupdoorColide","md_series_cargobox_rollup_2"]},
+         ["cd2rr",-1.17, 8.37, 1.60, {"couplerTag":"rollup_RR1", "couplerStrength":12000, "couplerRadius":0.1, "couplerStartRadius":0.1, "couplerLock":true, "breakGroup":"rollup_1","selfCollision":false}],
+         ["cd2r", -0.37, 8.37, 1.60, {"couplerTag":"rollup_R1",  "couplerStrength":12000, "couplerRadius":0.1, "couplerStartRadius":0.1, "couplerLock":true, "breakGroup":"rollup_1","selfCollision":false}],
+         ["cd2l",  0.37, 8.37, 1.60, {"couplerTag":"rollup_L1",  "couplerStrength":12000, "couplerRadius":0.1, "couplerStartRadius":0.1, "couplerLock":true, "breakGroup":"rollup_1","selfCollision":false}],
+         ["cd2ll", 1.17, 8.37, 1.60, {"couplerTag":"rollup_LL1", "couplerStrength":12000, "couplerRadius":0.1, "couplerStartRadius":0.1, "couplerLock":true, "breakGroup":"rollup_1","selfCollision":false}],
+         ["cd12rr",-1.17, 8.37, 1.973, {"tag":"rollup_RR2"}],
+         ["cd12r", -0.37, 8.37, 1.973, {"tag":"rollup_R2"}],
+         ["cd12l",  0.37, 8.37, 1.973, {"tag":"rollup_L2"}],
+         ["cd12ll", 1.17, 8.37, 1.973, {"tag":"rollup_LL2"}],
+         //rigifier
+         ["cd2",  0.00, 8.08, 1.78,{"selfCollision":false,"collision":false}],
+         //segment 3
+         {"group":["rollupdoorColide","md_series_cargobox_rollup_3"]},
+         ["cd3rr",-1.17, 8.37, 1.973, {"couplerTag":"rollup_RR2", "couplerStrength":12000, "couplerRadius":0.1, "couplerStartRadius":0.1, "couplerLock":true, "breakGroup":"rollup_2","selfCollision":false}],
+         ["cd3r", -0.37, 8.37, 1.973, {"couplerTag":"rollup_R2",  "couplerStrength":12000, "couplerRadius":0.1, "couplerStartRadius":0.1, "couplerLock":true, "breakGroup":"rollup_2","selfCollision":false}],
+         ["cd3l",  0.37, 8.37, 1.973, {"couplerTag":"rollup_L2",  "couplerStrength":12000, "couplerRadius":0.1, "couplerStartRadius":0.1, "couplerLock":true, "breakGroup":"rollup_2","selfCollision":false}],
+         ["cd3ll", 1.17, 8.37, 1.973, {"couplerTag":"rollup_LL2", "couplerStrength":12000, "couplerRadius":0.1, "couplerStartRadius":0.1, "couplerLock":true, "breakGroup":"rollup_2","selfCollision":false}],
+         ["cd13rr",-1.17, 8.37, 2.347, {"tag":"rollup_RR3"}],
+         ["cd13r", -0.37, 8.37, 2.347, {"tag":"rollup_R3"}],
+         ["cd13l",  0.37, 8.37, 2.347, {"tag":"rollup_L3"}],
+         ["cd13ll", 1.17, 8.37, 2.347, {"tag":"rollup_LL3"}],
+         //rigifier
+         ["cd3",  0.00, 8.08, 2.16,{"selfCollision":false,"collision":false}],
+         //segment 4
+         {"group":["rollupdoorColide","md_series_cargobox_rollup_4"]},
+         ["cd4rr",-1.17, 8.37, 2.347, {"couplerTag":"rollup_RR3", "couplerStrength":12000, "couplerRadius":0.1, "couplerStartRadius":0.1, "couplerLock":true, "breakGroup":"rollup_3","selfCollision":false}],
+         ["cd4r", -0.37, 8.37, 2.347, {"couplerTag":"rollup_R3",  "couplerStrength":12000, "couplerRadius":0.1, "couplerStartRadius":0.1, "couplerLock":true, "breakGroup":"rollup_3","selfCollision":false}],
+         ["cd4l",  0.37, 8.37, 2.347, {"couplerTag":"rollup_L3",  "couplerStrength":12000, "couplerRadius":0.1, "couplerStartRadius":0.1, "couplerLock":true, "breakGroup":"rollup_3","selfCollision":false}],
+         ["cd4ll", 1.17, 8.37, 2.347, {"couplerTag":"rollup_LL3", "couplerStrength":12000, "couplerRadius":0.1, "couplerStartRadius":0.1, "couplerLock":true, "breakGroup":"rollup_3","selfCollision":false}],
+         ["cd14rr",-1.17, 8.37, 2.723, {"tag":"rollup_RR4"}],
+         ["cd14r", -0.37, 8.37, 2.723, {"tag":"rollup_R4"}],
+         ["cd14l",  0.37, 8.37, 2.723, {"tag":"rollup_L4"}],
+         ["cd14ll", 1.17, 8.37, 2.723, {"tag":"rollup_LL4"}],
+         //rigifier
+         ["cd4",  0.00, 8.08, 2.53,{"selfCollision":false,"collision":false}],
+         //segment 5
+         {"group":["rollupdoorColide","md_series_cargobox_rollup_5"]},
+         ["cd5rr",-1.17, 8.37, 2.723, {"couplerTag":"rollup_RR4", "couplerStrength":12000, "couplerRadius":0.1, "couplerStartRadius":0.1, "couplerLock":true, "breakGroup":"rollup_4","selfCollision":false}],
+         ["cd5r", -0.37, 8.37, 2.723, {"couplerTag":"rollup_R4",  "couplerStrength":12000, "couplerRadius":0.1, "couplerStartRadius":0.1, "couplerLock":true, "breakGroup":"rollup_4","selfCollision":false}],
+         ["cd5l",  0.37, 8.37, 2.723, {"couplerTag":"rollup_L4",  "couplerStrength":12000, "couplerRadius":0.1, "couplerStartRadius":0.1, "couplerLock":true, "breakGroup":"rollup_4","selfCollision":false}],
+         ["cd5ll", 1.17, 8.37, 2.723, {"couplerTag":"rollup_LL4", "couplerStrength":12000, "couplerRadius":0.1, "couplerStartRadius":0.1, "couplerLock":true, "breakGroup":"rollup_4","selfCollision":false}],
+         ["cd15rr",-1.17, 8.37, 3.09, {"tag":"rollup_RR5"}],
+         ["cd15r", -0.37, 8.37, 3.09, {"tag":"rollup_R5"}],
+         ["cd15l",  0.37, 8.37, 3.09, {"tag":"rollup_L5"}],
+         ["cd15ll", 1.17, 8.37, 3.09, {"tag":"rollup_LL5"}],
+         //rigifier
+         ["cd5",  0.00, 8.08, 2.91,{"selfCollision":false,"collision":false}],
+         //segment 6
+         {"group":["rollupdoorColide","md_series_cargobox_rollup_6"]},
+         ["cd6rr",-1.17, 8.37, 3.09, {"couplerTag":"rollup_RR5", "couplerStrength":12000, "couplerRadius":0.1, "couplerStartRadius":0.1, "couplerLock":true, "breakGroup":"rollup_5","selfCollision":false}],
+         ["cd6r", -0.37, 8.37, 3.09, {"couplerTag":"rollup_R5",  "couplerStrength":12000, "couplerRadius":0.1, "couplerStartRadius":0.1, "couplerLock":true, "breakGroup":"rollup_5","selfCollision":false}],
+         ["cd6l",  0.37, 8.37, 3.09, {"couplerTag":"rollup_L5",  "couplerStrength":12000, "couplerRadius":0.1, "couplerStartRadius":0.1, "couplerLock":true, "breakGroup":"rollup_5","selfCollision":false}],
+         ["cd6ll", 1.17, 8.37, 3.09, {"couplerTag":"rollup_LL5", "couplerStrength":12000, "couplerRadius":0.1, "couplerStartRadius":0.1, "couplerLock":true, "breakGroup":"rollup_5","selfCollision":false}],
+         ["cd16rr",-1.17, 8.37, 3.477],
+         ["cd16r", -0.37, 8.37, 3.477],
+         ["cd16l",  0.37, 8.37, 3.477],
+         ["cd16ll", 1.17, 8.37, 3.477],
+
+         ["cd26rr",-1.17, 8.37,3.40],
+         ["cd26ll", 1.17, 8.37,3.40],
+         //rigifier
+         ["cd6",  0.00, 8.08, 3.28,{"selfCollision":false,"collision":false}],
+         {"group":""},
+    ],
+    "rails": {
+
+        "rollupHelp6R":{"links:":["cd16rr", "cd6rr"], "broken:":[], "looped":false, "capped":true},
+        "rollupHelp6L":{"links:":["cd16ll", "cd6ll"], "broken:":[], "looped":false, "capped":true},
+    },
+    "slidenodes": [
+        ["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
+        [ "cd1rr", "rollupRailR", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+        [ "cd1ll", "rollupRailL", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+        ["cd11rr", "rollupRailR", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+        ["cd11ll", "rollupRailL", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+
+        [ "cd2rr", "rollupRailR", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+        [ "cd2ll", "rollupRailL", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+        ["cd12rr", "rollupRailR", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+        ["cd12ll", "rollupRailL", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+
+        [ "cd3rr", "rollupRailR", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+        [ "cd3ll", "rollupRailL", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+        ["cd13rr", "rollupRailR", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+        ["cd13ll", "rollupRailL", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+
+        [ "cd4rr", "rollupRailR", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+        [ "cd4ll", "rollupRailL", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+        ["cd14rr", "rollupRailR", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+        ["cd14ll", "rollupRailL", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+
+        [ "cd5rr", "rollupRailR", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+        [ "cd5ll", "rollupRailL", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+        ["cd15rr", "rollupRailR", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+        ["cd15ll", "rollupRailL", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+
+        [ "cd6rr", "rollupRailR", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+        [ "cd6ll", "rollupRailL", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+        ["cd26rr", "rollupRailR", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+        ["cd26ll", "rollupRailL", true, true, 0.0, 501000, 20100, "FLT_MAX"],
+
+        ["cd26rr", "rollupHelp6R", true, true, 0.0, 501000, "FLT_MAX", "FLT_MAX"],
+        ["cd26ll", "rollupHelp6L", true, true, 0.0, 501000, "FLT_MAX", "FLT_MAX"],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--RIGHT CARGO DOOR--
+          {"beamSpring":800100,"beamDamp":50},
+          {"beamDeform":31000,"beamStrength":"FLT_MAX"},
+          //-----SECTION 1---------
+          //main shape
+          ["cd1ll", "cd11ll"],
+          ["cd1l",  "cd11l"],
+          ["cd1r",  "cd11r"],
+          ["cd1rr", "cd11rr"],
+
+          ["cd1ll", "cd1l"],
+          ["cd1l",  "cd1r"],
+          ["cd1r",  "cd1rr"],
+          ["cd11ll","cd11l"],
+          ["cd11l", "cd11r"],
+          ["cd11r", "cd11rr"],
+
+          ["cd1ll", "cd11l"],
+          ["cd1l",  "cd11ll"],
+          ["cd1r",  "cd11l"],
+          ["cd1l",  "cd11r"],
+
+          ["cd1rr", "cd11r"],
+          ["cd1r",  "cd11rr"],
+          //rigifier
+          {"beamSpring":400100,"beamDamp":50},
+          {"beamDeform":11000,"beamStrength":"FLT_MAX"},
+          ["cd1ll", "cd1"],
+          ["cd1l",  "cd1"],
+          ["cd1r",  "cd1"],
+          ["cd1rr", "cd1"],
+          ["cd11ll","cd1"],
+          ["cd11l", "cd1"],
+          ["cd11r", "cd1"],
+          ["cd11rr","cd1"],
+          //-----SECTION 2---------
+          {"beamSpring":800100,"beamDamp":50},
+          {"beamDeform":31000,"beamStrength":"FLT_MAX"},
+          //main shape
+          ["cd2ll", "cd12ll"],
+          ["cd2l",  "cd12l"],
+          ["cd2r",  "cd12r"],
+          ["cd2rr", "cd12rr"],
+
+          ["cd2ll", "cd2l"],
+          ["cd2l",  "cd2r"],
+          ["cd2r",  "cd2rr"],
+          ["cd12ll","cd12l"],
+          ["cd12l", "cd12r"],
+          ["cd12r", "cd12rr"],
+
+          ["cd2ll", "cd12l"],
+          ["cd2l",  "cd12ll"],
+          ["cd2r",  "cd12l"],
+          ["cd2l",  "cd12r"],
+
+          ["cd2rr", "cd12r"],
+          ["cd2r",  "cd12rr"],
+          //rigifier
+          {"beamSpring":400100,"beamDamp":50},
+          {"beamDeform":11000,"beamStrength":"FLT_MAX"},
+          ["cd2ll", "cd2"],
+          ["cd2l",  "cd2"],
+          ["cd2r",  "cd2"],
+          ["cd2rr", "cd2"],
+          ["cd12ll","cd2"],
+          ["cd12l", "cd2"],
+          ["cd12r", "cd2"],
+          ["cd12rr","cd2"],
+
+          //latch node
+          //rigifier
+          {"beamSpring":400100,"beamDamp":50},
+          {"beamDeform":11000,"beamStrength":"FLT_MAX"},
+          ["cd11l","cd11"],
+          ["cd11r","cd11"],
+          ["cd1l","cd11"],
+          ["cd1r","cd11"],
+          ["cd1","cd11"],
+          //-----SECTION 3---------
+          {"beamSpring":800100,"beamDamp":50},
+          {"beamDeform":31000,"beamStrength":"FLT_MAX"},
+          //main shape
+          ["cd3ll", "cd13ll"],
+          ["cd3l",  "cd13l"],
+          ["cd3r",  "cd13r"],
+          ["cd3rr", "cd13rr"],
+
+          ["cd3ll", "cd3l"],
+          ["cd3l",  "cd3r"],
+          ["cd3r",  "cd3rr"],
+          ["cd13ll","cd13l"],
+          ["cd13l", "cd13r"],
+          ["cd13r", "cd13rr"],
+
+          ["cd3ll", "cd13l"],
+          ["cd3l",  "cd13ll"],
+          ["cd3r",  "cd13l"],
+          ["cd3l",  "cd13r"],
+
+          ["cd3rr", "cd13r"],
+          ["cd3r",  "cd13rr"],
+          //rigifier
+          {"beamSpring":400100,"beamDamp":50},
+          {"beamDeform":11000,"beamStrength":"FLT_MAX"},
+          ["cd3ll", "cd3"],
+          ["cd3l",  "cd3"],
+          ["cd3r",  "cd3"],
+          ["cd3rr", "cd3"],
+          ["cd13ll","cd3"],
+          ["cd13l", "cd3"],
+          ["cd13r", "cd3"],
+          ["cd13rr","cd3"],
+          //-----SECTION 4---------
+          {"beamSpring":800100,"beamDamp":50},
+          {"beamDeform":31000,"beamStrength":"FLT_MAX"},
+          //main shape
+          ["cd4ll", "cd14ll"],
+          ["cd4l",  "cd14l"],
+          ["cd4r",  "cd14r"],
+          ["cd4rr", "cd14rr"],
+
+          ["cd4ll", "cd4l"],
+          ["cd4l",  "cd4r"],
+          ["cd4r",  "cd4rr"],
+          ["cd14ll","cd14l"],
+          ["cd14l", "cd14r"],
+          ["cd14r", "cd14rr"],
+
+          ["cd4ll", "cd14l"],
+          ["cd4l",  "cd14ll"],
+          ["cd4r",  "cd14l"],
+          ["cd4l",  "cd14r"],
+
+          ["cd4rr", "cd14r"],
+          ["cd4r",  "cd14rr"],
+          //rigifier
+          {"beamSpring":400100,"beamDamp":50},
+          {"beamDeform":11000,"beamStrength":"FLT_MAX"},
+          ["cd4ll", "cd4"],
+          ["cd4l",  "cd4"],
+          ["cd4r",  "cd4"],
+          ["cd4rr", "cd4"],
+          ["cd14ll","cd4"],
+          ["cd14l", "cd4"],
+          ["cd14r", "cd4"],
+          ["cd14rr","cd4"],
+          //-----SECTION 5---------
+          {"beamSpring":800100,"beamDamp":50},
+          {"beamDeform":31000,"beamStrength":"FLT_MAX"},
+          //main shape
+          ["cd5ll", "cd15ll"],
+          ["cd5l",  "cd15l"],
+          ["cd5r",  "cd15r"],
+          ["cd5rr", "cd15rr"],
+
+          ["cd5ll", "cd5l"],
+          ["cd5l",  "cd5r"],
+          ["cd5r",  "cd5rr"],
+          ["cd15ll","cd15l"],
+          ["cd15l", "cd15r"],
+          ["cd15r", "cd15rr"],
+
+          ["cd5ll", "cd15l"],
+          ["cd5l",  "cd15ll"],
+          ["cd5r",  "cd15l"],
+          ["cd5l",  "cd15r"],
+
+          ["cd5rr", "cd15r"],
+          ["cd5r",  "cd15rr"],
+          //rigifier
+          {"beamSpring":400100,"beamDamp":50},
+          {"beamDeform":11000,"beamStrength":"FLT_MAX"},
+          ["cd5ll", "cd5"],
+          ["cd5l",  "cd5"],
+          ["cd5r",  "cd5"],
+          ["cd5rr", "cd5"],
+          ["cd15ll","cd5"],
+          ["cd15l", "cd5"],
+          ["cd15r", "cd5"],
+          ["cd15rr","cd5"],
+
+          //-----SECTION 6---------
+          {"beamSpring":800100,"beamDamp":50},
+          {"beamDeform":31000,"beamStrength":"FLT_MAX"},
+          //main shape
+          ["cd6ll", "cd26ll"],
+          ["cd6rr", "cd26rr"],
+          ["cd16ll", "cd26ll"],
+          ["cd16rr", "cd26rr"],
+
+
+          ["cd6ll", "cd16ll"],
+          ["cd6l",  "cd16l"],
+          ["cd6r",  "cd16r"],
+          ["cd6rr", "cd16rr"],
+
+          ["cd6ll", "cd6l"],
+          ["cd6l",  "cd6r"],
+          ["cd6r",  "cd6rr"],
+          ["cd16ll","cd16l"],
+          ["cd16l", "cd16r"],
+          ["cd16r", "cd16rr"],
+
+          ["cd6ll", "cd16l"],
+          ["cd6l",  "cd16ll"],
+          ["cd6r",  "cd16l"],
+          ["cd6l",  "cd16r"],
+
+          ["cd6rr", "cd16r"],
+          ["cd6r",  "cd16rr"],
+          //rigifier
+          {"beamSpring":400100,"beamDamp":50},
+          {"beamDeform":11000,"beamStrength":"FLT_MAX"},
+          ["cd6ll", "cd6"],
+          ["cd6l",  "cd6"],
+          ["cd6r",  "cd6"],
+          ["cd6rr", "cd6"],
+          ["cd16ll","cd6"],
+          ["cd16l", "cd6"],
+          ["cd16r", "cd6"],
+          ["cd16rr","cd6"],
+          ["cd26ll","cd6"],
+          ["cd26rr","cd6"],
+          //hold up spring
+          {"beamPrecompression":0.20,"beamSpring":60,"beamDamp":15},
+          {"beamDeform":11000,"beamStrength":"FLT_MAX"},
+          ["cd15rr","rlur9r"],
+          ["cd15ll","rlur9l"],
+          //rail friction
+          {"beamType":"|NORMAL","beamPrecompression":1,"beamSpring":1200,"beamDamp":70},
+          {"beamDeform":1,"deformLimitStress":1,"deformLimitExpansion":"","beamStrength":"FLT_MAX"},
+          ["cd11rr","rlur1r"],
+          ["cd11ll","rlur1l"],
+          ["cd12rr","rlur1r"],
+          ["cd12ll","rlur1l"],
+          ["cd13rr","rlur1r"],
+          ["cd13ll","rlur1l"],
+          ["cd14rr","rlur1r"],
+          ["cd14ll","rlur1l"],
+          ["cd15rr","rlur1r"],
+          ["cd15ll","rlur1l"],
+          ["cd16rr","rlur5r"],
+          ["cd16ll","rlur5l"],
+          //sound beams
+          {"beamPrecompression":1.0,"beamSpring":0,"beamDamp":0},
+          {"beamDeform":11000,"beamStrength":"FLT_MAX"},
+          ["cd11","fra14",{"tag":"rollupdoor_sound"}],
+          {"breakGroup":""},
+          //hold up spring
+          {"beamType":"|SUPPORT","deformLimitStress":"","beamPrecompression":0.25, "beamLongBound":12},
+          {"beamSpring":160000,"beamDamp":150},
+          {"beamDeform":11000,"beamStrength":"FLT_MAX"},
+          ["cd6rr","rlur9r"],
+          ["cd6ll","rlur9l"],
+          //support beams between sections
+          {"beamType":"|SUPPORT","beamPrecompression":1,"beamSpring":820100,"beamDamp":70, "beamLongBound":12},
+          {"beamDeform":120000,"beamStrength":"FLT_MAX"},
+          {"optional":true},
+          //6th segment
+          ["cd16rr","cd15rr",{"precompressionRange": 0.000}],
+          ["cd16ll","cd15ll",{"precompressionRange": 0.000}],
+          ["cd16rr","cd14rr",{"precompressionRange":-0.367}],
+          ["cd16ll","cd14ll",{"precompressionRange":-0.367}],
+          ["cd16rr","cd13rr",{"precompressionRange":-0.734}],
+          ["cd16ll","cd13ll",{"precompressionRange":-0.734}],
+          ["cd16rr","cd12rr",{"precompressionRange":-1.101}],
+          ["cd16ll","cd12ll",{"precompressionRange":-1.101}],
+          ["cd16rr","cd11rr",{"precompressionRange":-1.468}],
+          ["cd16ll","cd11ll",{"precompressionRange":-1.468}],
+
+          //5th segment
+          ["cd15rr","cd16rr",{"precompressionRange": 0.000}],
+          ["cd15ll","cd16ll",{"precompressionRange": 0.000}],
+          ["cd15rr","cd14rr",{"precompressionRange": 0.000}],
+          ["cd15ll","cd14ll",{"precompressionRange": 0.000}],
+          ["cd15rr","cd13rr",{"precompressionRange":-0.367}],
+          ["cd15ll","cd13ll",{"precompressionRange":-0.367}],
+          ["cd15rr","cd12rr",{"precompressionRange":-0.734}],
+          ["cd15ll","cd12ll",{"precompressionRange":-0.734}],
+          ["cd15rr","cd11rr",{"precompressionRange":-1.101}],
+          ["cd15ll","cd11ll",{"precompressionRange":-1.101}],
+          //4th segment
+          ["cd14rr","cd16rr",{"precompressionRange":-0.367}],
+          ["cd14ll","cd16ll",{"precompressionRange":-0.367}],
+          ["cd14rr","cd15rr",{"precompressionRange": 0.000}],
+          ["cd14ll","cd15ll",{"precompressionRange": 0.000}],
+          ["cd14rr","cd13rr",{"precompressionRange": 0.000}],
+          ["cd14ll","cd13ll",{"precompressionRange": 0.000}],
+          ["cd14rr","cd12rr",{"precompressionRange":-0.367}],
+          ["cd14ll","cd12ll",{"precompressionRange":-0.367}],
+          ["cd14rr","cd11rr",{"precompressionRange":-0.734}],
+          ["cd14ll","cd11ll",{"precompressionRange":-0.734}],
+          //3rd segment
+          ["cd13rr","cd16rr",{"precompressionRange":-0.734}],
+          ["cd13ll","cd16ll",{"precompressionRange":-0.734}],
+          ["cd13rr","cd15rr",{"precompressionRange":-0.367}],
+          ["cd13ll","cd15ll",{"precompressionRange":-0.367}],
+          ["cd13rr","cd14rr",{"precompressionRange": 0.000}],
+          ["cd13ll","cd14ll",{"precompressionRange": 0.000}],
+          ["cd13rr","cd12rr",{"precompressionRange": 0.000}],
+          ["cd13ll","cd12ll",{"precompressionRange": 0.000}],
+          ["cd13rr","cd11rr",{"precompressionRange":-0.367}],
+          ["cd13ll","cd11ll",{"precompressionRange":-0.367}],
+          //2nd segment
+          ["cd12rr","cd16rr",{"precompressionRange":-1.101}],
+          ["cd12ll","cd16ll",{"precompressionRange":-1.101}],
+          ["cd12rr","cd15rr",{"precompressionRange":-0.734}],
+          ["cd12ll","cd15ll",{"precompressionRange":-0.734}],
+          ["cd12rr","cd14rr",{"precompressionRange":-0.367}],
+          ["cd12ll","cd14ll",{"precompressionRange":-0.367}],
+          ["cd12rr","cd13rr",{"precompressionRange": 0.000}],
+          ["cd12ll","cd13ll",{"precompressionRange": 0.000}],
+          ["cd12rr","cd11rr",{"precompressionRange": 0.000}],
+          ["cd12ll","cd11ll",{"precompressionRange": 0.000}],
+          //1st segment
+          ["cd11rr","cd16rr",{"precompressionRange":-1.468}],
+          ["cd11ll","cd16ll",{"precompressionRange":-1.468}],
+          ["cd11rr","cd15rr",{"precompressionRange":-1.101}],
+          ["cd11ll","cd15ll",{"precompressionRange":-1.101}],
+          ["cd11rr","cd14rr",{"precompressionRange":-0.734}],
+          ["cd11ll","cd14ll",{"precompressionRange":-0.734}],
+          ["cd11rr","cd13rr",{"precompressionRange":-0.367}],
+          ["cd11ll","cd13ll",{"precompressionRange":-0.367}],
+          ["cd11rr","cd12rr",{"precompressionRange": 0.000}],
+          ["cd11ll","cd12ll",{"precompressionRange": 0.000}],
+          {"breakGroup":""},
+          {"optional":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL","deformLimitStress":"", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //right rear door
+            {"dragCoef":5},
+            {"group":"md_series_rollup_1"},
+            ["cd11ll","cd1ll","cd1l"],
+            ["cd1l","cd11l","cd11ll"],
+            ["cd1l","cd1r","cd11r"],
+            ["cd11r","cd11l","cd1l"],
+            ["cd1rr", "cd11rr", "cd1r"],
+            ["cd11r", "cd1r", "cd11rr"],
+            {"group":"md_series_rollup_2"},
+            ["cd12ll","cd2ll","cd2l"],
+            ["cd2l","cd12l","cd12ll"],
+            ["cd2l","cd2r","cd12r"],
+            ["cd12r","cd12l","cd2l"],
+            ["cd2rr", "cd12rr", "cd2r"],
+            ["cd12r", "cd2r", "cd12rr"],
+            {"group":"md_series_rollup_3"},
+            ["cd13ll","cd3ll","cd3l"],
+            ["cd3l","cd13l","cd13ll"],
+            ["cd3l","cd3r","cd13r"],
+            ["cd13r","cd13l","cd3l"],
+            ["cd3rr", "cd13rr", "cd3r"],
+            ["cd13r", "cd3r", "cd13rr"],
+            {"group":"md_series_rollup_4"},
+            ["cd14ll","cd4ll","cd4l"],
+            ["cd4l","cd14l","cd14ll"],
+            ["cd4l","cd4r","cd14r"],
+            ["cd14r","cd14l","cd4l"],
+            ["cd4rr", "cd14rr", "cd4r"],
+            ["cd14r", "cd4r", "cd14rr"],
+            {"group":"md_series_rollup_5"},
+            ["cd15ll","cd5ll","cd5l"],
+            ["cd5l","cd15l","cd15ll"],
+            ["cd5l","cd5r","cd15r"],
+            ["cd15r","cd15l","cd5l"],
+            ["cd5rr", "cd15rr", "cd5r"],
+            ["cd15r", "cd5r", "cd15rr"],
+            {"group":"md_series_rollup_6"},
+            ["cd16ll","cd6ll","cd6l"],
+            ["cd6l","cd16l","cd16ll"],
+            ["cd6l","cd6r","cd16r"],
+            ["cd16r","cd16l","cd6l"],
+            ["cd6rr", "cd16rr", "cd6r"],
+            ["cd16r", "cd6r", "cd16rr"],
+            {"breakGroup":""},
+    ],
+},
+}

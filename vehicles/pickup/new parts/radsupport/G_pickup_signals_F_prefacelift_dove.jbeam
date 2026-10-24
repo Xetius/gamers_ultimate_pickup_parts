@@ -1,0 +1,351 @@
+{
+"G_pickup_signal_FR_prefacelift_dove": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Early Front Right Signal",
+        "value":70,
+    },
+    "slotType" : "G_pickup_signal_prefacelift_dove_FR",
+    "slots2": [
+        ["name", "allowTypes", "denyTypes", "default", "description"],
+        ["pickup_turnsignal_FR_bulb", ["incandescent_amber_21W"], [], "incandescent_amber_21W", "Front Right Turn Signal",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"signal_R_filament",
+          "$nodeRef":"fa2rr", "$nodeX":"fa2r", "$nodeY":"fa1rr",
+          "$deformGroup":"headlightglass_R_break",
+          "$posX":-0.675, "$posY":-2.06, "$posZ":0.87,
+          "$rotX":0, "$rotY":0, "$rotZ":180,
+          "$shadowEnable":1,
+        }
+        }]
+        ["pickup_marker_FR_bulb", ["incandescent_amber_21W"], [], "incandescent_amber_21W", "Front Right Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"fa2rr", "$nodeX":"fa2r", "$nodeY":"fa1rr",
+          "$deformGroup":"headlightglass_R_break",
+          "$posX":-0.675, "$posY":-2.06, "$posZ":0.87,
+          "$rotX":0, "$rotY":0, "$rotZ":180,
+          "$shadowEnable":1,
+        }
+        }]
+        ["pickup_flasher_FR_bulb", ["incandescent_amber_21W"], [], "incandescent_amber_21W", "Front Right Flasher Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"FR",
+          "$nodeRef":"fa2rr", "$nodeX":"fa2r", "$nodeY":"fa1rr",
+          "$deformGroup":"headlightglass_R_break",
+          "$posX":-0.675, "$posY":-2.06, "$posZ":0.87,
+          "$rotX":0, "$rotY":0, "$rotZ":180,
+          "$shadowEnable":1,
+        }
+        }]
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ////lights
+         {"deformGroup":"headlightglass_R_break", "deformMaterialBase":"pickup_lights", "deformMaterialDamaged":"pickup_lights"},
+         ["G_pickup_signal_FR_prefacelift_fixed", ["pickup_fascia"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6, "pos":{"x":0.1, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":4}}],
+         {"deformGroup":"headlightglass_R_break", "deformMaterialBase":"pickup_lightglass", "deformMaterialDamaged":"pickup_lightglass_dmg"},
+         ["pickup_signalglass_FR_prefacelift", ["pickup_fascia"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6, "pos":{"x":0.1, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":4}}],
+         {"deformGroup":""},
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"frictionCoef":0.5},
+         //--FRONT FASCIA--
+         {"collision":true},
+         {"selfCollision":true},
+         {"group":"pickup_fascia"},
+         {"nodeWeight":2.0},
+         ["fa2rr", -0.9, -2.01, 0.82],
+         ["fa2r", -0.41, -2.09, 0.8],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--FRONT FASCIA--
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":129869.6,"beamDamp":73.32},
+          {"beamDeform":4175,"beamStrength":"FLT_MAX"},
+          //headlight deform
+          {"deformLimitExpansion":""},
+          {"deformGroup":"headlightglass_R_break","deformationTriggerRatio":0.02},
+          {"optional":true}
+          ["fa2rr", "fa1r"],
+          ["fa2r", "fa1rr"],
+          {"optional":false}
+          {"deformGroup":"", "deformationTriggerRatio":""},
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.2},
+    ],
+},
+"G_pickup_signal_FL_prefacelift_dove": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Early Front Left Signal",
+        "value":70,
+    },
+    "slotType" : "G_pickup_signal_prefacelift_dove_FL",
+    "slots2": [
+        ["name", "allowTypes", "denyTypes", "default", "description"],
+        ["pickup_turnsignal_FL_bulb", ["incandescent_amber_21W"], [], "incandescent_amber_21W", "Front Left Turn Signal",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"signal_L_filament",
+          "$nodeRef":"fa2ll", "$nodeX":"fa2l", "$nodeY":"fa1ll",
+          "$deformGroup":"headlightglass_L_break",
+          "$posX":0.775, "$posY":-2.06, "$posZ":0.87,
+          "$rotX":0, "$rotY":0, "$rotZ":180,
+          "$shadowEnable":1,
+        }
+        }]
+        ["pickup_marker_FL_bulb", ["incandescent_amber_21W"], [], "incandescent_amber_21W", "Front Left Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"fa2ll", "$nodeX":"fa2l", "$nodeY":"fa1ll",
+          "$deformGroup":"headlightglass_L_break",
+          "$posX":0.775, "$posY":-2.06, "$posZ":0.87,
+          "$rotX":0, "$rotY":0, "$rotZ":180,
+          "$shadowEnable":1,
+        }
+        }]
+        ["pickup_flasher_FL_bulb", ["incandescent_amber_21W"], [], "incandescent_amber_21W", "Front Left Flasher Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"FL",
+          "$nodeRef":"fa2ll", "$nodeX":"fa2l", "$nodeY":"fa1ll",
+          "$deformGroup":"headlightglass_L_break",
+          "$posX":0.775, "$posY":-2.06, "$posZ":0.87,
+          "$rotX":0, "$rotY":0, "$rotZ":180,
+          "$shadowEnable":1,
+        }
+        }]
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+        ////lights
+         {"deformGroup":"headlightglass_L_break", "deformMaterialBase":"pickup_lights", "deformMaterialDamaged":"pickup_lights"},
+         ["G_pickup_signal_FL_prefacelift_fixed", ["pickup_fascia"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6, "pos":{"x":-0.1, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":-4}}],
+         {"deformGroup":"headlightglass_L_break", "deformMaterialBase":"pickup_lightglass", "deformMaterialDamaged":"pickup_lightglass_dmg"},
+         ["pickup_signalglass_FL_prefacelift", ["pickup_fascia"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6, "pos":{"x":-0.1, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":-4}}],
+         {"deformGroup":""},
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"frictionCoef":0.5},
+         //--FRONT FASCIA--
+         {"collision":true},
+         {"selfCollision":true},
+         {"group":"pickup_fascia"},
+         {"nodeWeight":2.0},
+         ["fa2ll", 0.9, -2.01, 0.82],
+         ["fa2l", 0.41, -2.09, 0.8],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--FRONT FASCIA--
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":129869.6,"beamDamp":73.32},
+          {"beamDeform":4175,"beamStrength":"FLT_MAX"},
+          //headlight deform
+          {"deformLimitExpansion":""},
+          {"deformGroup":"headlightglass_L_break","deformationTriggerRatio":0.02},
+          {"optional":true}
+          ["fa2ll", "fa1l"],
+          ["fa2l", "fa1ll"],
+          {"optional":false}
+          {"deformGroup":"", "deformationTriggerRatio":""},
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.2},
+    ],
+},
+"G_pickup_signal_FR_prefacelift_dove_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Intermediate Front Right Signal",
+        "value":90,
+    },
+    "slotType" : "G_pickup_signal_prefacelift_dove_FR",
+    "slots2": [
+        ["name", "allowTypes", "denyTypes", "default", "description"],
+        ["pickup_turnsignal_FR_bulb", ["incandescent_amber_21W"], [], "incandescent_amber_21W", "Front Right Turn Signal",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"signal_R_filament",
+          "$nodeRef":"fa2rr", "$nodeX":"fa2r", "$nodeY":"fa1rr",
+          "$deformGroup":"headlightglass_R_break",
+          "$posX":-0.775, "$posY":-2.06, "$posZ":0.87,
+          "$rotX":0, "$rotY":0, "$rotZ":180,
+          "$shadowEnable":1,
+        }
+        }]
+        ["pickup_marker_FR_bulb", ["incandescent_amber_21W"], [], "incandescent_amber_21W", "Front Right Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"fa2rr", "$nodeX":"fa2r", "$nodeY":"fa1rr",
+          "$deformGroup":"headlightglass_R_break",
+          "$posX":-0.775, "$posY":-2.06, "$posZ":0.87,
+          "$rotX":0, "$rotY":0, "$rotZ":180,
+          "$shadowEnable":1,
+        }
+        }]
+        ["pickup_flasher_FR_bulb", ["incandescent_amber_21W"], [], "incandescent_amber_21W", "Front Right Flasher Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"FR",
+          "$nodeRef":"fa2rr", "$nodeX":"fa2r", "$nodeY":"fa1rr",
+          "$deformGroup":"headlightglass_R_break",
+          "$posX":-0.775, "$posY":-2.06, "$posZ":0.87,
+          "$rotX":0, "$rotY":0, "$rotZ":180,
+          "$shadowEnable":1,
+        }
+        }]
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+
+         ////lights
+         {"deformGroup":"headlightglass_R_break", "deformMaterialBase":"pickup_lights", "deformMaterialDamaged":"pickup_lights"},
+         ["pickup_signal_FR_prefacelift_alt", ["pickup_fascia"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6, "pos":{"x":0.1, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":4}}],
+         {"deformGroup":"headlightglass_R_break", "deformMaterialBase":"pickup_lightglass", "deformMaterialDamaged":"pickup_lightglass_dmg"},
+         ["pickup_signalglass_FR_prefacelift_alt", ["pickup_fascia"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6, "pos":{"x":0.1, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":4}}],
+         {"deformGroup":""},
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"frictionCoef":0.5},
+         //--FRONT FASCIA--
+         {"collision":true},
+         {"selfCollision":true},
+         {"group":"pickup_fascia"},
+         {"nodeWeight":2.0},
+         ["fa2rr", -0.9, -2.01, 0.82],
+         ["fa2r", -0.41, -2.09, 0.8],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--FRONT FASCIA--
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":129869.6,"beamDamp":73.32},
+          {"beamDeform":4175,"beamStrength":"FLT_MAX"},
+          //headlight deform
+          {"deformLimitExpansion":""},
+          {"deformGroup":"headlightglass_R_break","deformationTriggerRatio":0.02},
+          {"optional":true}
+          ["fa2rr", "fa1r"],
+          ["fa2r", "fa1rr"],
+          {"optional":false}
+          {"deformGroup":"", "deformationTriggerRatio":""},
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.2},
+    ],
+},
+"G_pickup_signal_FL_prefacelift_dove_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Intermediate Front Left Signal",
+        "value":90,
+    },
+    "slotType" : "G_pickup_signal_prefacelift_dove_FL",
+    "slots2": [
+        ["name", "allowTypes", "denyTypes", "default", "description"],
+        ["pickup_turnsignal_FL_bulb", ["incandescent_amber_21W"], [], "incandescent_amber_21W", "Front Left Turn Signal",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"signal_L_filament",
+          "$nodeRef":"fa2ll", "$nodeX":"fa2l", "$nodeY":"fa1ll",
+          "$deformGroup":"headlightglass_L_break",
+          "$posX":0.775, "$posY":-2.06, "$posZ":0.87,
+          "$rotX":0, "$rotY":0, "$rotZ":180,
+          "$shadowEnable":1,
+        }
+        }]
+        ["pickup_marker_FL_bulb", ["incandescent_amber_21W"], [], "incandescent_amber_21W", "Front Left Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"fa2ll", "$nodeX":"fa2l", "$nodeY":"fa1ll",
+          "$deformGroup":"headlightglass_L_break",
+          "$posX":0.775, "$posY":-2.06, "$posZ":0.87,
+          "$rotX":0, "$rotY":0, "$rotZ":180,
+          "$shadowEnable":1,
+        }
+        }]
+        ["pickup_flasher_FL_bulb", ["incandescent_amber_21W"], [], "incandescent_amber_21W", "Front Left Flasher Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"FL",
+          "$nodeRef":"fa2ll", "$nodeX":"fa2l", "$nodeY":"fa1ll",
+          "$deformGroup":"headlightglass_L_break",
+          "$posX":0.775, "$posY":-2.06, "$posZ":0.87,
+          "$rotX":0, "$rotY":0, "$rotZ":180,
+          "$shadowEnable":1,
+        }
+        }]
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ////lights
+         {"deformGroup":"headlightglass_L_break", "deformMaterialBase":"pickup_lights", "deformMaterialDamaged":"pickup_lights"},
+         ["pickup_signal_FL_prefacelift_alt", ["pickup_fascia"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6, "pos":{"x":-0.1, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":-4}}],
+         {"deformGroup":"headlightglass_L_break", "deformMaterialBase":"pickup_lightglass", "deformMaterialDamaged":"pickup_lightglass_dmg"},
+         ["pickup_signalglass_FL_prefacelift_alt", ["pickup_fascia"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6, "pos":{"x":-0.1, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":-4}}],
+         {"deformGroup":""},
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"frictionCoef":0.5},
+         //--FRONT FASCIA--
+         {"collision":true},
+         {"selfCollision":true},
+         {"group":"pickup_fascia"},
+         {"nodeWeight":2.0},
+         ["fa2ll", 0.9, -2.01, 0.82],
+         ["fa2l", 0.41, -2.09, 0.8],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--FRONT FASCIA--
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":129869.6,"beamDamp":73.32},
+          {"beamDeform":4175,"beamStrength":"FLT_MAX"},
+          //headlight deform
+          {"deformLimitExpansion":""},
+          {"deformGroup":"headlightglass_L_break","deformationTriggerRatio":0.02},
+          {"optional":true}
+          ["fa2ll", "fa1l"],
+          ["fa2l", "fa1ll"],
+          {"optional":false}
+          {"deformGroup":"", "deformationTriggerRatio":""},
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.2},
+    ],
+},
+}

@@ -1,0 +1,34 @@
+{
+  "G_md_series_toplvlcrawler": {
+    "name": "G_md_series_toplvlcrawler",
+    "mapTo": "G_md_series_toplvlcrawler",
+    "class": "Material",
+    "Stages": [
+      {
+        "baseColorMap": "vehicles/pickup/deserttruck/pickupcage_toplvlcrawler_d.color.png",
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/pickup/deserttruck/pickupcage_toplvlcrawler_m.data.png",
+        "normalMap": "vehicles/pickup/deserttruck/pickupcage_toplvlcrawler_n.normal.png",
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/pickup/deserttruck/pickupcage_toplvlcrawler_r.data.png"
+      },
+      {
+        "metallicFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "metallicFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "metallicFactor": null,
+        "pixelSpecular": null
+      }
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "translucent": true,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  }
+}

@@ -1,0 +1,20 @@
+{
+"G_pickup_finaldrive_RR_6x6_race_ext": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Extended Race Adjustable Rear Rear Final Drive",
+        "value":750,
+    },
+
+    "slotType" : "G_pickup_finaldrive_RR_6x6",
+
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$finaldrive_RR", "range", ":1", "Differentials", 1.50, 2.0, 18.0, "Final Drive Gear Ratio", "Torque multiplication ratio", {"subCategory":"Rear Rear", "stepDis":0.05}],
+    ],
+
+    "differential_RR" : {
+        "gearRatio":"$finaldrive_RR",
+    },
+},
+}

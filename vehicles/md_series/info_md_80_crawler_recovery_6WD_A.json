@@ -1,0 +1,41 @@
+{
+  "Body Style":"Flatbed Truck",
+  "BoundingBox":[
+    [
+      -0.8854,
+      -1.136,
+      -0.7234
+    ],
+    [
+      1.7534,
+      5.0361,
+      1.632
+    ]
+  ],
+  "Commercial Class":"Class 8 Truck",
+  "Config Type":"Custom",
+  "Configuration":"MD80 Crawler Recovery 6WD (A)",
+  "Description":"Late model Crew cab Truck on 6 massive tires, ready to rescue any unfortunate friends off-road",
+  "Drivetrain":"6WD",
+  "Fuel Type":"Diesel",
+  "Induction Type":"Turbo",
+  "Off-Road Score":34,
+  "Population":4000,
+  "Power":357,
+  "PowerPeakRPM":2400,
+  "Propulsion":"ICE",
+  "Top Speed":32.65652803,
+  "Torque":1080,
+  "TorquePeakRPM":"1150 - 1900",
+  "Transmission":"Automatic",
+  "Value":230000,
+  "Weight":6586,
+  "Weight/Power":27.83163265,
+  "Years":{
+    "max":1998,
+    "min":1992
+  },
+  "defaultPaintName1":"Soft White",
+  "defaultPaintName2":"Lead",
+  "defaultPaintName3":"Cactus Green"
+}

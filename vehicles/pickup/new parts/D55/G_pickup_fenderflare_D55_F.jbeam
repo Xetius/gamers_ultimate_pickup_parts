@@ -1,0 +1,286 @@
+{
+"G_pickup_fenderflare_FR_D55": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Front Right Fender Flare (Body Colored)",
+        "value":650,
+    },
+    "slotType" : "pickup_fenderflare_FR_offroad",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_pickup_fenderflare_FR_D55_quater","", "Right Bumper Quater Piece"],
+        ["G_pickup_fenderflare_FR_D55_offroad","", "Front Right Outer Fender Flare"],
+        ["G_pickup_fendersignal_R_D55","G_pickup_fendersignal_R_D55", "Front Right D55 Fender Signal"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_fenderflare_D55_FR", ["pickup_fender_R","pickup_fender_R_flared"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //--FENDER--
+         {"selfCollision":true},
+         {"collision":true},
+         {"group":["pickup_fender_R","pickup_fender_R_flared"]},
+         {"nodeWeight":1.88},
+         ["fe2r", -0.99, -0.92, 0.39],
+         ["fe4r", -1.08, -1.15, 0.91],
+         ["fe5r", -1.08, -1.79, 0.91],
+         ["fe6r", -0.94, -1.95, 0.73],
+         {"group":""},
+    ],
+},
+"G_pickup_fenderflare_FL_D55": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Front Left Fender Flare (Body Colored)",
+        "value":650,
+    },
+    "slotType" : "pickup_fenderflare_FL_offroad",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_pickup_fenderflare_FL_D55_quater","", "Left Bumper Quater Piece"],
+        ["G_pickup_fenderflare_FL_D55_offroad","", "Front Left Outer Fender Flare"],
+        ["G_pickup_fendersignal_L_D55","G_pickup_fendersignal_L_D55", "Front Left D55 Fender Signal"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_fenderflare_D55_FL", ["pickup_fender_L","pickup_fender_L_flared"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //--FENDER--
+         {"selfCollision":true},
+         {"collision":true},
+         {"group":["pickup_fender_L","pickup_fender_L_flared"]},
+         {"nodeWeight":1.88},
+         ["fe2l", 0.99, -0.92, 0.39],
+         ["fe4l", 1.08, -1.15, 0.91],
+         ["fe5l", 1.08, -1.79, 0.91],
+         ["fe6l", 0.94, -1.95, 0.73],
+         {"group":""},
+    ],
+},
+"G_pickup_fenderflare_FR_D55_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Front Right Fender Flare (Black)",
+        "value":400,
+    },
+    "slotType" : "pickup_fenderflare_FR_offroad",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_pickup_fenderflare_FR_D55_quater","", "Right Bumper Quater Piece"],
+        ["G_pickup_fenderflare_FR_D55_offroad","", "Front Right Outer Fender Flare"],
+        ["G_pickup_fendersignal_R_D55","G_pickup_fendersignal_R_D55", "Front Right D55 Fender Signal"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_fenderflare_D55_FR_alt", ["pickup_fender_R","pickup_fender_R_flared"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //--FENDER--
+         {"selfCollision":true},
+         {"collision":true},
+         {"group":["pickup_fender_R","pickup_fender_R_flared"]},
+         {"nodeWeight":1.88},
+         ["fe2r", -0.99, -0.92, 0.39],
+         ["fe4r", -1.08, -1.15, 0.91],
+         ["fe5r", -1.08, -1.79, 0.91],
+         ["fe6r", -0.94, -1.95, 0.73],
+         {"group":""},
+    ],
+},
+"G_pickup_fenderflare_FL_D55_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Front Left Fender Flare (Black)",
+        "value":400,
+    },
+    "slotType" : "pickup_fenderflare_FL_offroad",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_pickup_fenderflare_FL_D55_quater","", "Left Bumper Quater Piece"],
+        ["G_pickup_fenderflare_FL_D55_offroad","", "Front Left Outer Fender Flare"],
+        ["G_pickup_fendersignal_L_D55","G_pickup_fendersignal_L_D55", "Front Left D55 Fender Signal"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_fenderflare_D55_FL_alt", ["pickup_fender_L","pickup_fender_L_flared"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //--FENDER--
+         {"selfCollision":true},
+         {"collision":true},
+         {"group":["pickup_fender_L","pickup_fender_L_flared"]},
+         {"nodeWeight":1.88},
+         ["fe2l", 0.99, -0.92, 0.39],
+         ["fe4l", 1.08, -1.15, 0.91],
+         ["fe5l", 1.08, -1.79, 0.91],
+         ["fe6l", 0.94, -1.95, 0.73],
+         {"group":""},
+    ],
+},
+"G_pickup_fenderflare_FR_D55_quater": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Right Bumper Quater Piece (Body Colored)",
+        "value":150,
+    },
+    "slotType" : "G_pickup_fenderflare_FR_D55_quater",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_fenderflare_D55_FR_quater", ["pickup_bumper_F"], [],{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_pickup_bumper_F_D55_heavy_quater_R", ["pickup_bumper_F_D55_heavy"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+},
+"G_pickup_fenderflare_FL_D55_quater": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Left Bumper Quater Piece (Body Colored)",
+        "value":150,
+    },
+    "slotType" : "G_pickup_fenderflare_FL_D55_quater",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_fenderflare_D55_FL_quater", ["pickup_bumper_F"], [],{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_pickup_bumper_F_D55_heavy_quater_L", ["pickup_bumper_F_D55_heavy"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+},
+"G_pickup_fenderflare_FR_D55_quater_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Right Bumper Quater Piece (Black)",
+        "value":50,
+    },
+    "slotType" : "G_pickup_fenderflare_FR_D55_quater",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_fenderflare_D55_FR_quater_alt", ["pickup_bumper_F"], [],{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_pickup_bumper_F_D55_heavy_quater_R", ["pickup_bumper_F_D55_heavy"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+},
+"G_pickup_fenderflare_FL_D55_quater_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Left Bumper Quater Piece (Black)",
+        "value":50,
+    },
+    "slotType" : "G_pickup_fenderflare_FL_D55_quater",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_fenderflare_D55_FL_quater_alt", ["pickup_bumper_F"], [],{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_pickup_bumper_F_D55_heavy_quater_L", ["pickup_bumper_F_D55_heavy"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+},
+"G_pickup_fenderflare_FR_D55_offroad": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Off-Road Front Right Outer Fender Flare (Black)",
+        "value":180,
+    },
+    "slotType" : "G_pickup_fenderflare_FR_D55_offroad",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_fenderflare_D55_FR_offroad", ["pickup_fender_R","pickup_fender_R_flared"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //--FENDER--
+         {"selfCollision":true},
+         {"collision":true},
+         {"group":["pickup_fender_R","pickup_fender_R_flared"]},
+         {"nodeWeight":1.88},
+         ["fe4r", -1.14, -1.15, 0.87],
+         ["fe5r", -1.14, -1.79, 0.87],
+         {"group":""},
+    ],
+},
+"G_pickup_fenderflare_FL_D55_offroad": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Off-Road Front Left Outer Fender Flare (Black)",
+        "value":180,
+    },
+    "slotType" : "G_pickup_fenderflare_FL_D55_offroad",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_fenderflare_D55_FL_offroad", ["pickup_fender_L","pickup_fender_L_flared"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //--FENDER--
+         {"selfCollision":true},
+         {"collision":true},
+         {"group":["pickup_fender_L","pickup_fender_L_flared"]},
+         {"nodeWeight":1.88},
+         ["fe4l",  1.14, -1.15, 0.87],
+         ["fe5l",  1.14, -1.79, 0.87],
+         {"group":""},
+    ],
+},
+"G_pickup_fenderflare_FR_D55_offroad_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Off-Road Front Right Outer Fender Flare (Body Colored)",
+        "value":240,
+    },
+    "slotType" : "G_pickup_fenderflare_FR_D55_offroad",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_fenderflare_D55_FR_offroad_alt", ["pickup_fender_R","pickup_fender_R_flared"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //--FENDER--
+         {"selfCollision":true},
+         {"collision":true},
+         {"group":["pickup_fender_R","pickup_fender_R_flared"]},
+         {"nodeWeight":1.88},
+         ["fe4r", -1.14, -1.15, 0.87],
+         ["fe5r", -1.14, -1.79, 0.87],
+         {"group":""},
+    ],
+},
+"G_pickup_fenderflare_FL_D55_offroad_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Off-Road Front Left Outer Fender Flare (Body Colored)",
+        "value":240,
+    },
+    "slotType" : "G_pickup_fenderflare_FL_D55_offroad",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_fenderflare_D55_FL_offroad_alt", ["pickup_fender_L","pickup_fender_L_flared"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //--FENDER--
+         {"selfCollision":true},
+         {"collision":true},
+         {"group":["pickup_fender_L","pickup_fender_L_flared"]},
+         {"nodeWeight":1.88},
+         ["fe4l",  1.14, -1.15, 0.87],
+         ["fe5l",  1.14, -1.79, 0.87],
+         {"group":""},
+    ],
+},
+}

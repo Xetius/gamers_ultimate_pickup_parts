@@ -1,0 +1,194 @@
+{
+"G_steelwheel_12a_22x10_alt_La": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"22.5x10 Steel Lift Axle Wheels (Colorable)",
+        "value":400,
+    },
+    "slotType" : "G_md_series_wheel_La_10",
+    "slots2": [
+        ["name",             "allowTypes",         "denyTypes", "default",          "description"],
+        ["G_md_series_tire_La", ["G_md_series_tire_La"], [],          "G_md_series_tire_La_275/70R22_5_alt", "Lift Axle Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         ["steelwheel_12a_22x10", ["wheel_LaR","wheelhub_LaR"], [], {"pos":{"x":-1.0654, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["steelwheel_12a_22x10", ["wheel_LaL","wheelhub_LaL"], [], {"pos":{"x": 1.0654, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+         ["id",    "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeWeight":20},
+         {"group":"wheelhub_LaR"},
+         //Law1 as in steer wheel 1
+         ["Law1r", -0.85,   0.00,   0.00],
+         ["Law1rr",-1.22,   0.00,   0.00],
+         {"group":"wheelhub_LaL"},
+         ["Law1l",  0.85,   0.00,   0.00],
+         ["Law1ll", 1.22,   0.00,   0.00],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--FRONT WHEELS--
+          {"beamSpring":6501000,"beamDamp":100},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamDeform":200000,"beamStrength":"FLT_MAX"},
+          ["Law1r", "Law1rr"],
+          ["Law1l", "Law1ll"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            {"enableTireLbeams":true,"disableMeshBreaking":false,"disableHubMeshBreaking":false},
+
+            //general settings
+            {"hubRadius":0.30},
+            {"wheelOffset":-0.03},
+            {"hubWidth":0.255},
+            {"numRays":20},
+            {"brakeSpring":150},//define higher value than hubs
+
+            //hub options
+            {"hubTreadBeamSpring":2501000, "hubTreadBeamDamp":80},
+            {"hubPeripheryBeamSpring":2501000, "hubPeripheryBeamDamp":80},
+            {"hubSideBeamSpring":4251000, "hubSideBeamDamp":80},
+            {"hubBeamDeform":110000, "hubBeamStrength":420000},
+            {"hubNodeWeight":1.20},
+            {"hubNodeMaterial":"|NM_METAL","hasTire":false},
+            {"hubFrictionCoef":0.5},
+    ],
+},
+"G_steelwheel_12a_22x10_La": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"22.5x10 Steel Lift Axle Wheels (White)",
+        "value":400,
+    },
+    "slotType" : "G_md_series_wheel_La_10",
+    "slots2": [
+        ["name",             "allowTypes",         "denyTypes", "default",          "description"],
+        ["G_md_series_tire_La", ["G_md_series_tire_La"], [],          "G_md_series_tire_La_275/70R22_5_alt", "Lift Axle Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         ["steelwheel_12a_22x10_bare", ["wheel_LaR","wheelhub_LaR"], [], {"pos":{"x":-1.0654, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["steelwheel_12a_22x10_bare", ["wheel_LaL","wheelhub_LaL"], [], {"pos":{"x": 1.0654, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+         ["id",    "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeWeight":20},
+         {"group":"wheelhub_LaR"},
+         //Law1 as in steer wheel 1
+         ["Law1r", -0.85,   0.00,   0.00],
+         ["Law1rr",-1.22,   0.00,   0.00],
+         {"group":"wheelhub_LaL"},
+         ["Law1l",  0.85,   0.00,   0.00],
+         ["Law1ll", 1.22,   0.00,   0.00],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--FRONT WHEELS--
+          {"beamSpring":6501000,"beamDamp":100},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamDeform":200000,"beamStrength":"FLT_MAX"},
+          ["Law1r", "Law1rr"],
+          ["Law1l", "Law1ll"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            {"enableTireLbeams":true,"disableMeshBreaking":false,"disableHubMeshBreaking":false},
+
+            //general settings
+            {"hubRadius":0.30},
+            {"wheelOffset":-0.03},
+            {"hubWidth":0.255},
+            {"numRays":20},
+            {"brakeSpring":150},//define higher value than hubs
+
+            //hub options
+            {"hubTreadBeamSpring":2501000, "hubTreadBeamDamp":80},
+            {"hubPeripheryBeamSpring":2501000, "hubPeripheryBeamDamp":80},
+            {"hubSideBeamSpring":4251000, "hubSideBeamDamp":80},
+            {"hubBeamDeform":110000, "hubBeamStrength":420000},
+            {"hubNodeWeight":1.20},
+            {"hubNodeMaterial":"|NM_METAL","hasTire":false},
+            {"hubFrictionCoef":0.5},
+    ],
+},
+"G_steelwheel_06a_22x10_La": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"22.5x10 Aluminum Lift Axle Wheels",
+        "value":600,
+    },
+    "slotType" : "G_md_series_wheel_La_10",
+    "slots2": [
+        ["name",             "allowTypes",         "denyTypes", "default",          "description"],
+        ["G_md_series_tire_La", ["G_md_series_tire_La"], [],          "G_md_series_tire_La_275/70R22_5_alt", "Lift Axle Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         ["steelwheel_06a_22x10", ["wheel_LaR","wheelhub_LaR"], [], {"pos":{"x":-1.0654, "y":0.00, "z":0.00}, "rot":{"x":17.5, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["steelwheel_06a_22x10", ["wheel_LaL","wheelhub_LaL"], [], {"pos":{"x": 1.0654, "y":0.00, "z":0.00}, "rot":{"x":17.5, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+         ["id",    "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeWeight":20},
+         {"group":"wheelhub_LaR"},
+         //Law1 as in steer wheel 1
+         ["Law1r", -0.85,   0.00,   0.00],
+         ["Law1rr",-1.22,   0.00,   0.00],
+         {"group":"wheelhub_LaL"},
+         ["Law1l",  0.85,   0.00,   0.00],
+         ["Law1ll", 1.22,   0.00,   0.00],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--FRONT WHEELS--
+          {"beamSpring":6501000,"beamDamp":100},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamDeform":200000,"beamStrength":"FLT_MAX"},
+          ["Law1r", "Law1rr"],
+          ["Law1l", "Law1ll"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            {"enableTireLbeams":true,"disableMeshBreaking":false,"disableHubMeshBreaking":false},
+
+            //general settings
+            {"hubRadius":0.30},
+            {"wheelOffset":-0.03},
+            {"hubWidth":0.255},
+            {"numRays":20},
+            {"brakeSpring":150},//define higher value than hubs
+
+            //hub options
+            {"hubTreadBeamSpring":2501000, "hubTreadBeamDamp":80},
+            {"hubPeripheryBeamSpring":2501000, "hubPeripheryBeamDamp":80},
+            {"hubSideBeamSpring":4251000, "hubSideBeamDamp":80},
+            {"hubBeamDeform":150000, "hubBeamStrength":420000},
+            {"hubNodeWeight":1.11},
+            {"hubNodeMaterial":"|NM_METAL","hasTire":false},
+            {"hubFrictionCoef":0.5},
+    ],
+},
+}

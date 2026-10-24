@@ -1,0 +1,484 @@
+{
+"G_pickup_door_FR_tube_custom": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Customizable Front Right Tube Half Door",
+        "value":180,
+    },
+    "slotType" : "pickup_door_FR",
+    "slots": [
+        ["type", "default", "description"],
+        ["pickup_doordetent_FR","pickup_doordetent_FR", "Front Right Door Detent"],
+        ["G_pickup_tubedoor_hinge_FR","G_pickup_tubedoor_hinge_FR", "Front Right Door Hinge", {"coreSlot":true}],
+        ["G_pickup_tubedoor_R_mirror","G_pickup_mirror_tubedoor_R_heavy_prefacelift_altb", "Front Right Mirror"],
+    ],
+    "flexbodies": [
+         ["mesh","[group]:","nonFlexMaterials"],
+         ["pickup_tubedoor_R", ["pickup_tubeDoor_FR"]],
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"doorFRCoupler"}],
+    ]
+    "doorFRCoupler":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["rb7rrr",  "d14rr",     40000,                     0.01,                   0.005,                      0.2,                 0.1,                   "doorFR_latch", {"forceCid1":"d6r", "forceCid2":"d14rr"}],
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["d14rr"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Door>buggy_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Door>buggy_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 60,
+        "openForceDuration": 0.6,
+        "closeForceMagnitude": 100,
+        "closeForceDuration": 0.6
+    }
+    "triggers":[
+        ["id", "label", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["door_FR", "", "d9r","d8r","d6r", "box", {"x":0.09, "y":0.04, "z":0.09}, {"x":-0, "y":0, "z":-0.0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.033, "y":0.06, "z":-0.05}],
+    ],
+    "triggerEventLinks":[
+        ["triggerId:triggers", "action", "targetEventId:events"],
+        ["door_FR", "action0", "doorLatch_FR"],
+    ],
+    "events":[
+        ["id", "title", "desc"],
+        ["doorLatch_FR", "ui.inputActions.pickup.doorLatch_R.title", "ui.inputActions.pickup.doorLatch_R.description", {"onUp":"controller.getControllerSafe('doorFRCoupler').toggleGroup()"}],
+    ],
+    "nodes": [
+         ["id","posX","posY","posZ"],
+         //--DOOR--
+         //front right door
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"selfCollision":true},
+         {"collision":true},
+         {"group":"pickup_tubeDoor_FR"},
+         {"nodeWeight":1.25},
+         {"selfCollision":true},
+         ["d1r", -0.93, -0.84, 0.56],
+         ["d4r", -0.93, -0.84, 0.83],
+         ["d5r", -0.93, -0.35, 0.82],
+         ["d6r", -0.93, 0.25, 0.84, {"selfCollision":false}],
+         ["d7r", -0.93, -0.84, 1.12],
+         ["d8r", -0.93, -0.35, 1.04],
+         ["d9r", -0.93, 0.25, 1.04, {"selfCollision":false}],
+         //rigidifier
+         {"selfCollision":false},
+         {"collision":false},
+         {"nodeWeight":1.4},
+         ["d14r", -0.63, -0.35, 0.89],
+         //latch node
+         {"group":""},
+         ["d14rr", -0.96, 0.25, 0.84],
+    ],
+    "beams": [
+          ["id1:","id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL","beamLongBound":1.0, "beamShortBound":1.0},
+          //front
+          {"beamSpring":1501000,"beamDamp":120},
+          {"beamDeform":35000,"beamStrength":"FLT_MAX"},
+          //front door main shape
+          {"deformLimitExpansion":1.2},
+          ["d4r","d5r"],
+          ["d5r","d6r"],
+          ["d7r","d8r"],
+          ["d8r","d9r"],
+          ["d1r","d4r"],
+          ["d4r","d7r"],
+          ["d5r","d8r"],
+          ["d6r","d9r"],
+          ["d1r","d5r"],
+          {"beamDeform":10000},
+          //surficial crossing
+          {"deformLimitExpansion":""},
+          ["d4r","d8r"],
+          ["d5r","d7r"],
+          ["d5r","d9r"],
+          ["d6r","d8r"],
+          {"beamDeform":4000},
+          {"beamSpring":801000,"beamDamp":90},
+          //corner rigids
+          ["d7r","d9r"],
+          ["d1r","d7r"],
+          //lengthwise
+          ["d4r","d6r"],
+          //rigidifier
+          {"beamSpring":1501000,"beamDamp":120},
+          {"beamDeform":6000,"beamStrength":"FLT_MAX"},
+          ["d1r","d14r"],
+          ["d4r","d14r"],
+          ["d5r","d14r"],
+          ["d6r","d14r"],
+          ["d7r","d14r"],
+          ["d8r","d14r"],
+          ["d9r","d14r"],
+          {"deformGroup":""},
+
+          //latch node
+          {"beamSpring":1880940,"beamDamp":141},
+          {"beamDeform":31850,"beamStrength":"FLT_MAX"},
+          ["d14rr","d14r"],
+          ["d14rr","d6r"],
+          ["d14rr","d9r"],
+          ["d14rr","d5r"],
+          //door hinge
+          {"disableTriangleBreaking":true},
+          {"beamSpring":2585940,"beamDamp":141},
+          {"beamDeform":39760,"beamStrength":67550},
+          {"breakGroup":"doorhinge_a_R"},
+          ["d1r","b1rr"],
+          ["d7r","b6rr"],
+          ["d1r","b5rr"],
+          ["d7r","b5r"],
+          ["d1r","b1r"],
+          ["d7r","b2rr"],
+
+          {"beamDeform":46760,"beamStrength":91280},
+          {"breakGroup":"doorhinge_b_R"},
+          ["d7r","b1rr"],
+          ["d1r","b6rr"],
+          ["d7r","b5rr"],
+          ["d1r","b5r"],
+          ["d1r","b2rr"],
+          {"breakGroup":""},
+
+          //damping
+          {"beamDeform":77280,"beamStrength":448560},
+          {"beamSpring":0,"beamDamp":12.77},
+          {"breakGroup":"doorhinge_a_R"},
+          ["d6r","b3r"],
+          {"breakGroup":"doorhinge_b_R"},
+          ["d9r","b3r"],
+          {"breakGroup":""},
+
+          //--DOOR SUPPORT BEAMS--
+          {"optional":true},
+          {"beamType":"|SUPPORT","beamLongBound":8},
+          {"beamSpring":1895830,"beamDamp":94},
+          {"beamDeform":7560,"beamStrength":279104},
+          {"beamPrecompression":0.99},
+          ["d4r","b5r", {"beamPrecompression":0.9}],
+          ["d5r","b5rr"],
+          ["d6r","b3rr"],
+          ["d9r","b3rr"],
+          {"beamDeform":16380,"beamStrength":89712},
+          ["d8r","p6r"],
+          ["d7r","b6r"],
+          ["d12r","rf3r"],
+
+          //reg
+          {"beamDeform":7560,"beamStrength":279104},
+          ["d9r", "rf2r"],
+          ["d6r", "rb7rr"],
+          ["d9r", "rb8rr"],
+
+          //crew
+          {"beamDeform":7560,"beamStrength":279104},
+          ["d9r","p3r"],
+          ["d6r","p5r"],
+          {"beamDeform":16380,"beamStrength":89712},
+          ["d5r","p5r"],
+          ["d9r","p4r"],
+          {"optional":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //front right door
+            {"groundModel":"metal"},
+            {"group":"pickup_tubeDoor_FR"},
+            {"dragCoef":20},
+            ["d4r","d5r","d1r"],
+            ["d7r","d5r","d4r"],
+            ["d7r","d8r","d5r"],
+            ["d8r","d6r","d5r"],
+            ["d8r","d9r","d6r"],
+            {"dragCoef":0},
+            {"group":""},
+    ],
+},
+"G_pickup_door_FL_tube_custom": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Customizable Front Left Tube Half Door",
+        "value":180,
+    },
+    "slotType" : "pickup_door_FL",
+    "slots": [
+        ["type", "default", "description"],
+        ["pickup_doordetent_FL","pickup_doordetent_FL", "Front Left Door Detent"],
+        ["G_pickup_tubedoor_hinge_FL","G_pickup_tubedoor_hinge_FL", "Front Left Door Hinge", {"coreSlot":true}],
+        ["G_pickup_tubedoor_L_mirror","G_pickup_mirror_tubedoor_L_heavy_prefacelift_altb", "Front Left Mirror"],
+    ],
+    "flexbodies": [
+         ["mesh","[group]:","nonFlexMaterials"],
+         ["pickup_tubedoor_L", ["pickup_tubeDoor_FL"]],
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"doorFLCoupler"}],
+    ]
+    "doorFLCoupler":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["rb7lll",  "d14ll",     35000,                     0.01,                   0.005,                      0.2,                 0.1,                   "doorFL_latch", {"forceCid1":"d6l", "forceCid2":"d14ll"}],
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["d14ll"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Door>buggy_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Door>buggy_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 60,
+        "openForceDuration": 0.6,
+        "closeForceMagnitude": 100,
+        "closeForceDuration": 0.6
+    }
+    "triggers":[
+        ["id", "label", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["door_FL", "", "d9l","d8l","d6l", "box", {"x":0.09, "y":0.04, "z":0.09}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.033, "y":0.06, "z":0.01}],
+    ],
+    "triggerEventLinks":[
+        ["triggerId:triggers", "action", "targetEventId:events"],
+        ["door_FL", "action0", "doorLatch_FL"],
+    ],
+    "events":[
+        ["id", "title", "desc"],
+        ["doorLatch_FL", "ui.inputActions.pickup.doorLatch_FL.title", "ui.inputActions.pickup.doorLatch_FL.description", {"onUp":"controller.getControllerSafe('doorFLCoupler').toggleGroup()"}],
+    ],
+    "nodes": [
+         ["id","posX","posY","posZ"],
+         //--DOOR--
+         //FLont left door
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"selfCollision":true},
+         {"collision":true},
+         {"group":"pickup_tubeDoor_FL"},
+         {"nodeWeight":1.25},
+         {"selfCollision":true},
+         ["d1l", 0.93, -0.84, 0.56],
+         ["d4l", 0.93, -0.84, 0.83],
+         ["d5l", 0.93, -0.35, 0.82],
+         ["d6l", 0.93, 0.25, 0.84, {"selfCollision":false}],
+         ["d7l", 0.93, -0.84, 1.12],
+         ["d8l", 0.93, -0.35, 1.04],
+         ["d9l", 0.93, 0.25, 1.04, {"selfCollision":false}],
+         //rigidifier
+         {"selfCollision":false},
+         {"collision":false},
+         {"nodeWeight":1.4},
+         ["d14l", 0.63, -0.35, 0.89],
+         //latch node
+         {"group":""},
+         ["d14ll", 0.96, 0.25, 0.84],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:","id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL","beamLongBound":1.0, "beamShortBound":1.0},
+          //FLont
+          {"beamSpring":1501000,"beamDamp":120},
+          {"beamDeform":35000,"beamStrength":"FLT_MAX"},
+          //FLont door main shape
+          {"deformLimitExpansion":1.2},
+          ["d4l","d5l"],
+          ["d5l","d6l"],
+          ["d7l","d8l"],
+          ["d8l","d9l"],
+          ["d1l","d4l"],
+          ["d4l","d7l"],
+          ["d5l","d8l"],
+          ["d6l","d9l"],
+          ["d1l","d5l"],
+          {"beamDeform":10000},
+          //surficial crossing
+          {"deformLimitExpansion":""},
+          ["d4l","d8l"],
+          ["d5l","d7l"],
+          ["d5l","d9l"],
+          ["d6l","d8l"],
+          {"beamDeform":4000},
+          {"beamSpring":801000,"beamDamp":90},
+          //corner rigids
+          ["d7l","d9l"],
+          ["d1l","d7l"],
+          //lengthwise
+          ["d4l","d6l"],
+          //rigidifier
+          {"beamSpring":1501000,"beamDamp":120},
+          {"beamDeform":6000,"beamStrength":"FLT_MAX"},
+          ["d1l","d14l"],
+          ["d4l","d14l"],
+          ["d5l","d14l"],
+          ["d6l","d14l"],
+          ["d7l","d14l"],
+          ["d8l","d14l"],
+          ["d9l","d14l"],
+          {"deformGroup":""},
+
+          //latch node
+          {"beamSpring":1880940,"beamDamp":141},
+          {"beamDeform":31850,"beamStrength":"FLT_MAX"},
+          ["d14ll","d14l"],
+          ["d14ll","d6l"],
+          ["d14ll","d9l"],
+          ["d14ll","d5l"],
+          //door hinge
+          //door hinge
+          {"disableTriangleBreaking":true},
+          {"beamSpring":2585940,"beamDamp":141},
+          {"beamDeform":39760,"beamStrength":67550},
+          {"breakGroup":"doorhinge_a_L"},
+          ["d1l","b1ll"],
+          ["d7l","b6ll"],
+          ["d1l","b5ll"],
+          ["d7l","b5l"],
+          ["d1l","b1l"],
+          ["d7l","b2ll"],
+
+          {"beamDeform":46760,"beamStrength":91280},
+          {"breakGroup":"doorhinge_b_L"},
+          ["d7l","b1ll"],
+          ["d1l","b6ll"],
+          ["d7l","b5ll"],
+          ["d1l","b5l"],
+          ["d1l","b2ll"],
+          {"breakGroup":""},
+
+          //damping
+          {"beamDeform":77280,"beamStrength":448560},
+          {"beamSpring":0,"beamDamp":12.77},
+          {"breakGroup":"doorhinge_a_L"},
+          ["d6l","b3l"],
+          {"breakGroup":"doorhinge_b_L"},
+          ["d9l","b3l"],
+          {"breakGroup":""},
+
+          //--DOOR SUPPORT BEAMS--
+          {"optional":true},
+          {"beamType":"|SUPPORT","beamLongBound":8},
+          {"beamSpring":1895830,"beamDamp":94},
+          {"beamDeform":7560,"beamStrength":279104},
+          {"beamPrecompression":0.99},
+          ["d4l","b5l", {"beamPrecompression":0.9}],
+          ["d5l","b5ll"],
+          ["d6l","b3ll"],
+          ["d9l","b3ll"],
+          {"beamDeform":16380,"beamStrength":89712},
+          ["d8l","p6l"],
+          ["d7l","b6l"],
+          ["d12l","lf3l"],
+
+          //reg
+          {"beamDeform":7560,"beamStrength":279104},
+          ["d9l", "lf2l"],
+          ["d6l", "lb7ll"],
+          ["d9l", "lb8ll"],
+
+          //crew
+          {"beamDeform":7560,"beamStrength":279104},
+          ["d9l","p3l"],
+          ["d6l","p5l"],
+          {"beamDeform":16380,"beamStrength":89712},
+          ["d5l","p5l"],
+          ["d9l","p4l"],
+          {"optional":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //FLont right door
+            {"groundModel":"metal"},
+            {"group":"pickup_tubeDoor_FL"},
+            {"dragCoef":20},
+            ["d5l","d4l","d1l"],
+            ["d5l","d7l","d4l"],
+            ["d8l","d7l","d5l"],
+            ["d6l","d8l","d5l"],
+            ["d9l","d8l","d6l"],
+            {"dragCoef":0},
+            {"group":""},
+    ],
+},
+"G_pickup_tubedoor_hinge_FR": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Exposed Front Right Door Hinge",
+        "value":80,
+    },
+    "slotType" : "G_pickup_tubedoor_hinge_FR",
+    "flexbodies": [
+         ["mesh","[group]:","nonFlexMaterials"],
+         ["G_pickup_tubedoor_hinge_R", ["pickup_body"]],
+    ],
+    "nodes": [
+         ["id","posX","posY","posZ"],
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"selfCollision":true},
+         {"collision":true},
+         {"group":"pickup_tubeDoor_FR"},
+         {"nodeWeight":1.25},
+         {"selfCollision":true},
+         ["d1r", -0.93, -0.82, 0.56],
+         ["d4r", -0.93, -0.82, 0.83],
+         ["d7r", -0.93, -0.82, 1.12],
+    ],
+},
+"G_pickup_tubedoor_hinge_FL": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Exposed Front Left Door Hinge",
+        "value":80,
+    },
+    "slotType" : "G_pickup_tubedoor_hinge_FL",
+    "flexbodies": [
+         ["mesh","[group]:","nonFlexMaterials"],
+         ["G_pickup_tubedoor_hinge_L", ["pickup_body"]],
+    ],
+    "nodes": [
+         ["id","posX","posY","posZ"],
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"selfCollision":true},
+         {"collision":true},
+         {"group":"pickup_tubeDoor_FL"},
+         {"nodeWeight":1.25},
+         {"selfCollision":true},
+         ["d1l", 0.93, -0.82, 0.56],
+         ["d4l", 0.93, -0.82, 0.83],
+         ["d7l", 0.93, -0.82, 1.12],
+    ],
+},
+"G_pickup_tubedoor_hinge_cover_FR": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Covered Front Right Door Hinge",
+        "value":120,
+    },
+    "slotType" : "G_pickup_tubedoor_hinge_FR",
+    "flexbodies": [
+         ["mesh","[group]:","nonFlexMaterials"],
+         ["pickup_doorchunk_R", ["pickup_tubeDoor_FR"]],
+    ],
+},
+"G_pickup_tubedoor_hinge_cover_FL": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Covered Front Left Door Hinge",
+        "value":120,
+    },
+    "slotType" : "G_pickup_tubedoor_hinge_FL",
+    "flexbodies": [
+         ["mesh","[group]:","nonFlexMaterials"],
+         ["pickup_doorchunk_L", ["pickup_tubeDoor_FL"]],
+    ],
+},
+}

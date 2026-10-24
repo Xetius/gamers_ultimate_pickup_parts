@@ -1,0 +1,324 @@
+{
+"G_pickup_grp_gauges": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Analog Metric Gauges",
+        "value":350,
+    },
+    "slotType" : "G_pickup_grp_gauges",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_grp_gauges_lhd", ["pickup_dash"]],
+    ],
+    "glowMap":{
+        //gauges
+        "grp_gauges":       {"simpleFunction":{"lowhighbeam":0.6},                                 "off":"grp_gauges", "on":"grp_gauges_on"                                                },
+    }
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "G_pickup_grp_gauges_lhd_needle_tacho",   "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":22},  {"x":0, "y":0, "z":-3.5},   {"x":0, "y":0, "z":0}, 8.6, 83.3, -26.4, 1,   {"baseTranslationGlobal":{"x":0.353075, "y":-0.652252,"z":1.17727}}],
+       ["rpm",        "G_pickup_grp_gauges_lhd_needle_speedo",  "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":90},  {"x":0, "y":0, "z":-0.032}, {"x":0, "y":0, "z":0}, 0, 9000, -4000, 1,     {"baseTranslationGlobal":{"x":0.456, "y":-0.658878,"z":1.20026}}],
+       ["fuel",       "G_pickup_grp_gauges_lhd_needle_fuel",    "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":100}, {"x":0, "y":0, "z":-110},   {"x":0, "y":0, "z":0}, 0, 1, -0.6, 1,         {"baseTranslationGlobal":{"x":0.54412, "y":-0.658191,"z":1.19788}}],
+       ["watertemp",  "G_pickup_grp_gauges_lhd_needle_temp",    "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":-70}, {"x":0, "y":0, "z":-1.80},  {"x":0, "y":0, "z":0}, 60, 130, -0.6, 1,      {"baseTranslationGlobal":{"x":0.527983, "y":-0.642965,"z":1.14504}}],
+       ["oiltemp",    "G_pickup_grp_gauges_lhd_needle_oil",     "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":-45}, {"x":0, "y":0, "z":-1.3},   {"x":0, "y":0, "z":0}, 60, 150, -0.6, 1,      {"baseTranslationGlobal":{"x":0.599287, "y":-0.652256,"z":1.17728}}],
+       ["volt",       "G_pickup_grp_gauges_lhd_needle_volt",    "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":95},  {"x":0, "y":0, "z":1.8},    {"x":0, "y":0, "z":0}, 8, 16, 0, 1,           {"baseTranslationGlobal":{"x":0.583151, "y":-0.63703,"z":1.12444}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["gauges/analogOdometer", {"name":"analogOdometer" }],
+    ],
+    "analogOdometer": {
+        "configuration": {
+            "materialName": "@generic_gauges_odo",
+            "htmlPath": "local://local/vehicles/common/analogOdo.html",
+            "displayWidth":512,
+            "displayHeight":32,
+            "odometerDigits":7,
+            "odometerHasDecimalSeparator":true,
+            "tripHasDecimalSeparator":true,
+            "unit":"metric",
+            "floatStyle":{"color":"black"},
+            "bodyStyle":{
+                "background": "url('/vehicles/common/odometer_analog_b.cef_color.png')",
+                "font-family": "OpenSans",
+                "font-size": "28px",
+                "color": "white",
+                "letter-spacing": "15.5px",
+                "margin": "-4.5px 10.5px",
+                "transform": "scaleX(1.26)",
+                "transform-origin": "left",
+            },
+            "tripDivStyle":{
+                "margin-left": "-3px",
+                "position": "fixed",
+                "letter-spacing": "32px"
+            }
+        },
+    },
+},
+"G_pickup_grp_gauges_imperial": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Analog Imperial Gauges",
+        "value":350,
+    },
+    "slotType" : "G_pickup_grp_gauges",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_grp_gauges_lhd", ["pickup_dash"]],
+    ],
+    "glowMap":{
+        //gauges
+        "grp_gauges":       {"simpleFunction":{"lowhighbeam":0.6},                                 "off":"grp_gauges_imperial", "on":"grp_gauges_imperial_on"                                                },
+    }
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "G_pickup_grp_gauges_lhd_needle_tacho",   "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":22},  {"x":0, "y":0, "z":-3.5},   {"x":0, "y":0, "z":0}, 8.6, 83.3, -26.4, 1,   {"baseTranslationGlobal":{"x":0.353075, "y":-0.652252,"z":1.17727}}],
+       ["rpm",        "G_pickup_grp_gauges_lhd_needle_speedo",  "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":90},  {"x":0, "y":0, "z":-0.032}, {"x":0, "y":0, "z":0}, 0, 9000, -4000, 1,     {"baseTranslationGlobal":{"x":0.456, "y":-0.658878,"z":1.20026}}],
+       ["fuel",       "G_pickup_grp_gauges_lhd_needle_fuel",    "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":100}, {"x":0, "y":0, "z":-110},   {"x":0, "y":0, "z":0}, 0, 1, -0.6, 1,         {"baseTranslationGlobal":{"x":0.54412, "y":-0.658191,"z":1.19788}}],
+       ["watertemp",  "G_pickup_grp_gauges_lhd_needle_temp",    "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":-70}, {"x":0, "y":0, "z":-1.80},  {"x":0, "y":0, "z":0}, 60, 130, -0.6, 1,      {"baseTranslationGlobal":{"x":0.527983, "y":-0.642965,"z":1.14504}}],
+       ["oiltemp",    "G_pickup_grp_gauges_lhd_needle_oil",     "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":-45}, {"x":0, "y":0, "z":-1.3},   {"x":0, "y":0, "z":0}, 60, 150, -0.6, 1,      {"baseTranslationGlobal":{"x":0.599287, "y":-0.652256,"z":1.17728}}],
+       ["volt",       "G_pickup_grp_gauges_lhd_needle_volt",    "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":95},  {"x":0, "y":0, "z":1.8},    {"x":0, "y":0, "z":0}, 8, 16, 0, 1,           {"baseTranslationGlobal":{"x":0.583151, "y":-0.63703,"z":1.12444}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["gauges/analogOdometer", {"name":"analogOdometer" }],
+    ],
+    "analogOdometer": {
+        "configuration": {
+            "materialName": "@generic_gauges_odo",
+            "htmlPath": "local://local/vehicles/common/analogOdo.html",
+            "displayWidth":512,
+            "displayHeight":32,
+            "odometerDigits":7,
+            "odometerHasDecimalSeparator":true,
+            "tripHasDecimalSeparator":true,
+            "unit":"imperial",
+            "floatStyle":{"color":"black"},
+            "bodyStyle":{
+                "background": "url('/vehicles/common/odometer_analog_b.cef_color.png')",
+                "font-family": "OpenSans",
+                "font-size": "28px",
+                "color": "white",
+                "letter-spacing": "15.5px",
+                "margin": "-4.5px 10.5px",
+                "transform": "scaleX(1.26)",
+                "transform-origin": "left",
+            },
+            "tripDivStyle":{
+                "margin-left": "-3px",
+                "position": "fixed",
+                "letter-spacing": "32px"
+            }
+        },
+    },
+},
+"G_pickup_grp_gauges_turbo": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Analog Metric Turbo Gauges",
+        "value":400,
+    },
+    "slotType" : "G_pickup_grp_gauges",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_grp_gauges_lhd_boost", ["pickup_dash"]],
+    ],
+    "glowMap":{
+        //gauges
+        "grp_gauges":       {"simpleFunction":{"lowhighbeam":0.6},                                 "off":"grp_gauges", "on":"grp_gauges_on"                                                },
+    }
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "G_pickup_grp_gauges_lhd_needle_tacho",   "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":22},  {"x":0, "y":0, "z":-3.5},   {"x":0, "y":0, "z":0}, 8.6, 83.3, -26.4, 1,   {"baseTranslationGlobal":{"x":0.353075, "y":-0.652252,"z":1.17727}}],
+       ["rpm",        "G_pickup_grp_gauges_lhd_needle_speedo",  "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":90},  {"x":0, "y":0, "z":-0.032}, {"x":0, "y":0, "z":0}, 0, 9000, -4000, 1,     {"baseTranslationGlobal":{"x":0.456, "y":-0.658878,"z":1.20026}}],
+       ["fuel",       "G_pickup_grp_gauges_lhd_needle_fuel",    "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":100}, {"x":0, "y":0, "z":-110},   {"x":0, "y":0, "z":0}, 0, 1, -0.6, 1,         {"baseTranslationGlobal":{"x":0.54412, "y":-0.658191,"z":1.19788}}],
+       ["watertemp",  "G_pickup_grp_gauges_lhd_needle_temp",    "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":-70}, {"x":0, "y":0, "z":-1.80},  {"x":0, "y":0, "z":0}, 60, 130, -0.6, 1,      {"baseTranslationGlobal":{"x":0.527983, "y":-0.642965,"z":1.14504}}],
+       ["boost",      "G_pickup_grp_gauges_lhd_needle_boost",   "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":-40}, {"x":0, "y":0, "z":-5.3},   {"x":0, "y":0, "z":0}, -14, 36.25, 14, 1,     {"baseTranslationGlobal":{"x":0.599287, "y":-0.654617,"z":1.18548}}],
+       ["oiltemp",    "G_pickup_grp_gauges_lhd_needle_oil",     "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":-45}, {"x":0, "y":0, "z":-1.3},   {"x":0, "y":0, "z":0}, 60, 150, -0.6, 1,      {"baseTranslationGlobal":{"x":0.583151, "y":-0.63703,"z":1.12444}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["gauges/analogOdometer", {"name":"analogOdometer" }],
+    ],
+    "analogOdometer": {
+        "configuration": {
+            "materialName": "@generic_gauges_odo",
+            "htmlPath": "local://local/vehicles/common/analogOdo.html",
+            "displayWidth":512,
+            "displayHeight":32,
+            "odometerDigits":7,
+            "odometerHasDecimalSeparator":true,
+            "tripHasDecimalSeparator":true,
+            "unit":"metric",
+            "floatStyle":{"color":"black"},
+            "bodyStyle":{
+                "background": "url('/vehicles/common/odometer_analog_b.cef_color.png')",
+                "font-family": "OpenSans",
+                "font-size": "28px",
+                "color": "white",
+                "letter-spacing": "15.5px",
+                "margin": "-4.5px 10.5px",
+                "transform": "scaleX(1.26)",
+                "transform-origin": "left",
+            },
+            "tripDivStyle":{
+                "margin-left": "-3px",
+                "position": "fixed",
+                "letter-spacing": "32px"
+            }
+        },
+    },
+},
+"G_pickup_grp_gauges_turbo_imperial": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Analog Imperial Turbo Gauges",
+        "value":400,
+    },
+    "slotType" : "G_pickup_grp_gauges",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_grp_gauges_lhd_boost", ["pickup_dash"]],
+    ],
+    "glowMap":{
+        //gauges
+        "grp_gauges":       {"simpleFunction":{"lowhighbeam":0.6},                                 "off":"grp_gauges_imperial", "on":"grp_gauges_imperial_on"                                                },
+    }
+    "props": [
+       ["func",       "mesh",                "idRef:", "idX:", "idY:", "baseRotation",              "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
+       //needles
+       ["wheelspeed", "G_pickup_grp_gauges_lhd_needle_tacho",   "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":22},  {"x":0, "y":0, "z":-3.5},   {"x":0, "y":0, "z":0}, 8.6, 83.3, -26.4, 1,   {"baseTranslationGlobal":{"x":0.353075, "y":-0.652252,"z":1.17727}}],
+       ["rpm",        "G_pickup_grp_gauges_lhd_needle_speedo",  "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":90},  {"x":0, "y":0, "z":-0.032}, {"x":0, "y":0, "z":0}, 0, 9000, -4000, 1,     {"baseTranslationGlobal":{"x":0.456, "y":-0.658878,"z":1.20026}}],
+       ["fuel",       "G_pickup_grp_gauges_lhd_needle_fuel",    "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":100}, {"x":0, "y":0, "z":-110},   {"x":0, "y":0, "z":0}, 0, 1, -0.6, 1,         {"baseTranslationGlobal":{"x":0.54412, "y":-0.658191,"z":1.19788}}],
+       ["watertemp",  "G_pickup_grp_gauges_lhd_needle_temp",    "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":-70}, {"x":0, "y":0, "z":-1.80},  {"x":0, "y":0, "z":0}, 60, 130, -0.6, 1,      {"baseTranslationGlobal":{"x":0.527983, "y":-0.642965,"z":1.14504}}],
+       ["boost",      "G_pickup_grp_gauges_lhd_needle_boost",   "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":-40}, {"x":0, "y":0, "z":-5.3},   {"x":0, "y":0, "z":0}, -14, 36.25, 14, 1,     {"baseTranslationGlobal":{"x":0.599287, "y":-0.654617,"z":1.18548}}],
+       ["oiltemp",    "G_pickup_grp_gauges_lhd_needle_oil",     "int_strw","dsh3","dshl",       {"x":180, "y":7, "z":-45}, {"x":0, "y":0, "z":-1.3},   {"x":0, "y":0, "z":0}, 60, 150, -0.6, 1,      {"baseTranslationGlobal":{"x":0.583151, "y":-0.63703,"z":1.12444}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["gauges/analogOdometer", {"name":"analogOdometer" }],
+    ],
+    "analogOdometer": {
+        "configuration": {
+            "materialName": "@generic_gauges_odo",
+            "htmlPath": "local://local/vehicles/common/analogOdo.html",
+            "displayWidth":512,
+            "displayHeight":32,
+            "odometerDigits":7,
+            "odometerHasDecimalSeparator":true,
+            "tripHasDecimalSeparator":true,
+            "unit":"imperial",
+            "floatStyle":{"color":"black"},
+            "bodyStyle":{
+                "background": "url('/vehicles/common/odometer_analog_b.cef_color.png')",
+                "font-family": "OpenSans",
+                "font-size": "28px",
+                "color": "white",
+                "letter-spacing": "15.5px",
+                "margin": "-4.5px 10.5px",
+                "transform": "scaleX(1.26)",
+                "transform-origin": "left",
+            },
+            "tripDivStyle":{
+                "margin-left": "-3px",
+                "position": "fixed",
+                "letter-spacing": "32px"
+            }
+        },
+    },
+},
+"G_pickup_grp_gauges_digital": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Digital Single Screen",
+        "value":1150,
+    },
+    "slotType" : "G_pickup_grp_gauges",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_grp_dash_instrumentpanel", ["pickup_dash"]],
+         {"deformGroup":"display_break", "deformMaterialBase":"vivace_gauges_screen", "deformMaterialDamaged":"vivace_gauges_break"},
+         ["digidash", ["pickup_dash"], [], {"pos":{"x": 0.456, "y":-0.66, "z":1.19}, "rot":{"x":16, "y":0, "z":0}, "scale":{"x":1.25, "y":1.25, "z":1.25}}],
+         ["digidash_screen", ["pickup_dash"], [], {"pos":{"x": 0.456, "y":-0.66, "z":1.19}, "rot":{"x":16, "y":0, "z":0}, "scale":{"x":1.25, "y":1.25, "z":1.25}}],
+         {"deformGroup":""},
+    ],
+    "controller": [
+        ["fileName"],
+        ["shiftLights"{"name": "shiftLights_digidash"}],
+    ],
+    "shiftLights_digidash": {
+        "engineName":"mainEngine",
+        "maxEngineRPMOffset": 500,
+        "rpmRange": 3000,
+        "keepLEDsActive": true,
+        "hasStallWarning": true,
+        "outputElectrics": ["led0", "led1", "led2", "led3", "led4", "led5"],
+        "flashingOutputElectrics": ["led0", "led1", "led2", "led3", "led4", "led5"],
+        "flashingAlternateOutputElectrics": [],
+    },
+    "glowMap":{
+        "vivace_gauges_screen":     {"simpleFunction":"nop", "off":"vivace_gauges_break", "on":"vivace_gauges_break"},
+        "shiftlight_multi_l0":     {"simpleFunction":{"led0":1}, "off":"shiftlight_off", "on":"shiftlight_on"},
+        "shiftlight_multi_l1":     {"simpleFunction":{"led1":1}, "off":"shiftlight_off", "on":"shiftlight_on"},
+        "shiftlight_multi_l2":     {"simpleFunction":{"led2":1}, "off":"shiftlight_off", "on":"shiftlight_on"},
+        "shiftlight_multi_l3":     {"simpleFunction":{"led3":1}, "off":"shiftlight_off", "on":"shiftlight_on"},
+        "shiftlight_multi_l4":     {"simpleFunction":{"led4":1}, "off":"shiftlight_off", "on":"shiftlight_on"},
+        "shiftlight_multi_l5":     {"simpleFunction":{"led5":1}, "off":"shiftlight_off", "on":"shiftlight_on"},
+    },
+    "slots2": [
+        ["name",                           "allowTypes",                       "denyTypes", "default",                       "description"],
+        ["digidash_screen_logic",            ["digidash_screen_logic"],          [],          "digidash_screen_logic_bng",     "Screen", {"coreSlot":true}],
+    ],
+},
+"G_pickup_grp_gauges_digital_dual": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Digital Dual Screen",
+        "value":1450,
+    },
+    "slotType" : "G_pickup_grp_gauges",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_grp_dash_instrumentpanel", ["pickup_dash"]],
+         {"deformGroup":"display_break", "deformMaterialBase":"vivace_gauges_screen", "deformMaterialDamaged":"vivace_gauges_break"},
+         ["digidash", ["pickup_dash"], [], {"pos":{"x": 0.521, "y":-0.65, "z":1.18}, "rot":{"x":16, "y":0, "z":0}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+         ["digidash_screen", ["pickup_dash"], [], {"pos":{"x": 0.521, "y":-0.65, "z":1.18}, "rot":{"x":16, "y":0, "z":0}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+         {"deformGroup":""},
+         ["G_pickup_grp_gps", ["pickup_dash"]],
+         ["G_pickup_grp_gps_screen", ["pickup_dash"]],
+    ],
+    "controller": [
+        ["fileName"],
+        ["shiftLights"{"name": "shiftLights_digidash"}],
+        ["beamNavigator"],
+    ],
+    "shiftLights_digidash": {
+        "engineName":"mainEngine",
+        "maxEngineRPMOffset": 500,
+        "rpmRange": 3000,
+        "keepLEDsActive": true,
+        "hasStallWarning": true,
+        "outputElectrics": ["led0", "led1", "led2", "led3", "led4", "led5"],
+        "flashingOutputElectrics": ["led0", "led1", "led2", "led3", "led4", "led5"],
+        "flashingAlternateOutputElectrics": [],
+    },
+    "glowMap":{
+        "vivace_gauges_screen":     {"simpleFunction":"nop", "off":"vivace_gauges_break", "on":"vivace_gauges_break"},
+        "shiftlight_multi_l0":     {"simpleFunction":{"led0":1}, "off":"shiftlight_off", "on":"shiftlight_on"},
+        "shiftlight_multi_l1":     {"simpleFunction":{"led1":1}, "off":"shiftlight_off", "on":"shiftlight_on"},
+        "shiftlight_multi_l2":     {"simpleFunction":{"led2":1}, "off":"shiftlight_off", "on":"shiftlight_on"},
+        "shiftlight_multi_l3":     {"simpleFunction":{"led3":1}, "off":"shiftlight_off", "on":"shiftlight_on"},
+        "shiftlight_multi_l4":     {"simpleFunction":{"led4":1}, "off":"shiftlight_off", "on":"shiftlight_on"},
+        "shiftlight_multi_l5":     {"simpleFunction":{"led5":1}, "off":"shiftlight_off", "on":"shiftlight_on"},
+        "screen_gps":{"simpleFunction":{"ignitionLevel":0.5}, "off":"screen_off","on":"beamnav_naviscreen_accessory", "on_intense":"screen_gps"},
+    },
+    "slots2": [
+        ["name",                           "allowTypes",                       "denyTypes", "default",                       "description"],
+        ["digidash_screen_logic",            ["digidash_screen_logic"],          [],          "digidash_screen_logic_bng",     "Screen", {"coreSlot":true}],
+    ],
+},
+}

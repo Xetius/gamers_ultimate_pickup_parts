@@ -1,0 +1,504 @@
+{
+"G_pickup_D55_tanker_wheelwell_R": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Short Right Wheel Well",
+        "value":300,
+    },
+    "slotType" : "G_pickup_D55_tanker_wheelwell_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_D55_tanker_upfit_wheelwell_R", ["pickup_tanker_wheelwell_RR"], [], {"pos":{"x":0,"y":-0.475,"z":0}}],
+    ],
+    "nodes": [
+        ["id",     "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        {"frictionCoef":0.5},
+        //wheel well
+        {"nodeMaterial":"|NM_METAL"},
+        {"group":"pickup_tanker_wheelwell_RR"},
+        {"nodeWeight":5},
+        ["tww1r", -0.733,  1.910,  0.581],
+        ["tww1rr",-1.200,  1.910,  0.581],
+        ["tww2r", -0.733,  2.109,  0.835],
+        ["tww2rr",-1.200,  2.109,  0.835],
+        ["tww3r", -0.733,  2.940,  0.835],
+        ["tww3rr",-1.200,  2.940,  0.835],
+        ["tww4r", -0.733,  3.139,  0.581],
+        ["tww4rr",-1.200,  3.139,  0.581],
+        ["tww5r", -1.019,  2.190,  1.112],
+        ["tww6r", -1.019,  2.864,  1.112],
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:",   "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":4501000,"beamDamp":300},
+        {"beamDeform":81000,"beamStrength":"FLT_MAX"},
+
+        //main shape
+        ["tww1r",  "tww1rr"],
+        ["tww2r",  "tww2rr"],
+        ["tww3r",  "tww3rr"],
+        ["tww4r",  "tww4rr"],
+
+        ["tww1r",  "tww2r"],
+        ["tww2r",  "tww3r"],
+        ["tww3r",  "tww4r"],
+        ["tww1rr", "tww2rr"],
+        ["tww2rr", "tww3rr"],
+        ["tww3rr", "tww4rr"],
+
+        ["tww5r",  "tww2r"],
+        ["tww5r",  "tww2rr"],
+        ["tww6r",  "tww3r"],
+        ["tww6r",  "tww3rr"],
+
+        //cross
+        {"beamDeform":51000,"beamStrength":"FLT_MAX"},
+        ["tww1r",  "tww2rr"],
+        ["tww2r",  "tww3rr"],
+        ["tww3r",  "tww4rr"],
+        ["tww1rr", "tww2r"],
+        ["tww2rr", "tww3r"],
+        ["tww3rr", "tww4r"],
+
+        //rigids
+        {"beamDeform":22000,"beamStrength":"FLT_MAX"},
+        ["tww1r",  "tww3r"],
+        ["tww2r",  "tww4r"],
+        ["tww1rr", "tww3rr"],
+        ["tww2rr", "tww4rr"],
+
+        //rigidifiers
+        {"beamDeform":15000,"beamStrength":"FLT_MAX"},
+        ["tww5r",  "tww1r"],
+        ["tww5r",  "tww1rr"],
+        ["tww5r",  "tww3r"],
+        ["tww5r",  "tww3rr"],
+        ["tww6r",  "tww2r"],
+        ["tww6r",  "tww2rr"],
+        ["tww6r",  "tww4r"],
+        ["tww6r",  "tww4rr"],
+
+        //attach
+        {"beamSpring":2501000,"beamDamp":250},
+        {"beamDeform":22000,"beamStrength":42000},
+
+        {"breakGroup":"wheelwell_RR_a"},
+        ["tww2r",  "tnkb12r"],
+        ["tww2r",  "tnkb11r"],
+        ["tww2r",  "tnk2r"],
+        ["tww2rr", "tnkb12r"],
+        ["tww3r",  "tnkb2r"],
+        ["tww5r",  "tnkb12r"],
+
+        {"breakGroup":"wheelwell_RR_b"},
+        ["tww3r",  "tnkb11r"],
+        ["tww3r",  "tnkb12r"],
+        ["tww3r",  "tnk1r"],
+        ["tww3rr", "tnkb11r"],
+        ["tww2r",  "tnkb1r"],
+        ["tww6r",  "tnkb11r"],
+
+        {"breakGroup":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+        ["id1:",   "id2:",  "id3:"],
+        {"group":"pickup_tanker_wheelwell_RR"},
+        {"dragCoef":10},
+        {"groundModel":"metal"},
+
+        ["tww3r",  "tww4r", "tww3rr"],
+        ["tww3rr", "tww4r", "tww4rr"],
+        ["tww2r",  "tww3r", "tww2rr"],
+        ["tww2rr", "tww3r", "tww3rr"],
+        ["tww1r",  "tww2r", "tww1rr"],
+        ["tww1rr", "tww2r", "tww2rr"],
+
+        ["tww3r",  "tww2r", "tww5r"],
+        ["tww3r",  "tww5r", "tww6r"],
+
+        {"group":""},
+    ],
+},
+"G_pickup_D55_tanker_wheelwell_L": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Short Left Wheel Well",
+        "value":300,
+    },
+    "slotType" : "G_pickup_D55_tanker_wheelwell_L",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_D55_tanker_upfit_wheelwell_L", ["pickup_tanker_wheelwell_LL"], [], {"pos":{"x":0,"y":-0.475,"z":0}}],
+    ],
+    "nodes": [
+        ["id",     "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        {"frictionCoef":0.5},
+        //wheel well
+        {"nodeMaterial":"|NM_METAL"},
+        {"group":"pickup_tanker_wheelwell_LL"},
+        {"nodeWeight":5},
+        ["tww1l",  0.733,  1.910,  0.581],
+        ["tww1ll", 1.200,  1.910,  0.581],
+        ["tww2l",  0.733,  2.109,  0.835],
+        ["tww2ll", 1.200,  2.109,  0.835],
+        ["tww3l",  0.733,  2.940,  0.835],
+        ["tww3ll", 1.200,  2.940,  0.835],
+        ["tww4l",  0.733,  3.139,  0.581],
+        ["tww4ll", 1.200,  3.139,  0.581],
+        ["tww5l",  1.019,  2.190,  1.112],
+        ["tww6l",  1.019,  2.864,  1.112],
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:",   "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":4501000,"beamDamp":300},
+        {"beamDeform":81000,"beamStrength":"FLT_MAX"},
+
+        //main shape
+        ["tww1l",  "tww1ll"],
+        ["tww2l",  "tww2ll"],
+        ["tww3l",  "tww3ll"],
+        ["tww4l",  "tww4ll"],
+
+        ["tww1l",  "tww2l"],
+        ["tww2l",  "tww3l"],
+        ["tww3l",  "tww4l"],
+        ["tww1ll", "tww2ll"],
+        ["tww2ll", "tww3ll"],
+        ["tww3ll", "tww4ll"],
+
+        ["tww5l",  "tww2l"],
+        ["tww5l",  "tww2ll"],
+        ["tww6l",  "tww3l"],
+        ["tww6l",  "tww3ll"],
+
+        //cross
+        {"beamDeform":51000,"beamStrength":"FLT_MAX"},
+        ["tww1l",  "tww2ll"],
+        ["tww2l",  "tww3ll"],
+        ["tww3l",  "tww4ll"],
+        ["tww1ll", "tww2l"],
+        ["tww2ll", "tww3l"],
+        ["tww3ll", "tww4l"],
+
+        //rigids
+        {"beamDeform":22000,"beamStrength":"FLT_MAX"},
+        ["tww1l",  "tww3l"],
+        ["tww2l",  "tww4l"],
+        ["tww1ll", "tww3ll"],
+        ["tww2ll", "tww4ll"],
+
+        //rigidifiers
+        {"beamDeform":15000,"beamStrength":"FLT_MAX"},
+        ["tww5l",  "tww1l"],
+        ["tww5l",  "tww1ll"],
+        ["tww5l",  "tww3l"],
+        ["tww5l",  "tww3ll"],
+        ["tww6l",  "tww2l"],
+        ["tww6l",  "tww2ll"],
+        ["tww6l",  "tww4l"],
+        ["tww6l",  "tww4ll"],
+
+        //attach
+        {"beamSpring":2501000,"beamDamp":250},
+        {"beamDeform":22000,"beamStrength":42000},
+
+        {"breakGroup":"wheelwell_RL_a"},
+        ["tww2l",  "tnkb12l"],
+        ["tww2l",  "tnkb11l"],
+        ["tww2l",  "tnk2l"],
+        ["tww2ll", "tnkb12l"],
+        ["tww3l",  "tnkb2l"],
+        ["tww5l",  "tnkb12l"],
+
+        {"breakGroup":"wheelwell_RL_b"},
+        ["tww3l",  "tnkb11l"],
+        ["tww3l",  "tnkb12l"],
+        ["tww3l",  "tnk1l"],
+        ["tww3ll", "tnkb11l"],
+        ["tww2l",  "tnkb1l"],
+        ["tww6l",  "tnkb11l"],
+
+        {"breakGroup":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+        ["id1:",  "id2:",   "id3:"],
+        {"group":"pickup_tanker_wheelwell_RL"},
+        {"dragCoef":10},
+        {"groundModel":"metal"},
+
+        ["tww4l", "tww3l",  "tww3ll"],
+        ["tww4l", "tww3ll", "tww4ll"],
+        ["tww3l", "tww2l",  "tww2ll"],
+        ["tww3l", "tww2ll", "tww3ll"],
+        ["tww2l", "tww1l",  "tww1ll"],
+        ["tww2l", "tww1ll", "tww2ll"],
+
+        ["tww2l", "tww3l",  "tww5l"],
+        ["tww5l", "tww3l",  "tww6l"],
+
+        {"group":""},
+    ],
+},
+
+"G_pickup_D55_tanker_wheelwell_R_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"6x6 Right Wheel Well",
+        "value":300,
+    },
+    "slotType" : "G_pickup_D55_tanker_wheelwell_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_D55_tanker_upfit_wheelwell_R_6x6", ["pickup_tanker_wheelwell_RR"], [], {"pos":{"x":0,"y":-0.475,"z":0}}],
+    ],
+    "nodes": [
+        ["id",     "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        {"frictionCoef":0.5},
+        //wheel well
+        {"nodeMaterial":"|NM_METAL"},
+        {"group":"pickup_tanker_wheelwell_RR"},
+        {"nodeWeight":5},
+        ["tww1r", -0.733,  1.460,  0.581],
+        ["tww1rr",-1.200,  1.460,  0.581],
+        ["tww2r", -0.733,  1.659,  0.835],
+        ["tww2rr",-1.200,  1.659,  0.835],
+        ["tww3r", -0.733,  3.390,  0.835],
+        ["tww3rr",-1.200,  3.390,  0.835],
+        ["tww4r", -0.733,  3.589,  0.581],
+        ["tww4rr",-1.200,  3.589,  0.581],
+        ["tww5r", -1.019,  1.740,  1.112],
+        ["tww6r", -1.019,  3.314,  1.112],
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:",   "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":4501000,"beamDamp":300},
+        {"beamDeform":81000,"beamStrength":"FLT_MAX"},
+
+        //main shape
+        ["tww1r",  "tww1rr"],
+        ["tww2r",  "tww2rr"],
+        ["tww3r",  "tww3rr"],
+        ["tww4r",  "tww4rr"],
+
+        ["tww1r",  "tww2r"],
+        ["tww2r",  "tww3r"],
+        ["tww3r",  "tww4r"],
+        ["tww1rr", "tww2rr"],
+        ["tww2rr", "tww3rr"],
+        ["tww3rr", "tww4rr"],
+
+        ["tww5r",  "tww2r"],
+        ["tww5r",  "tww2rr"],
+        ["tww6r",  "tww3r"],
+        ["tww6r",  "tww3rr"],
+
+        //cross
+        {"beamDeform":51000,"beamStrength":"FLT_MAX"},
+        ["tww1r",  "tww2rr"],
+        ["tww2r",  "tww3rr"],
+        ["tww3r",  "tww4rr"],
+        ["tww1rr", "tww2r"],
+        ["tww2rr", "tww3r"],
+        ["tww3rr", "tww4r"],
+
+        //rigids
+        {"beamDeform":22000,"beamStrength":"FLT_MAX"},
+        ["tww1r",  "tww3r"],
+        ["tww2r",  "tww4r"],
+        ["tww1rr", "tww3rr"],
+        ["tww2rr", "tww4rr"],
+
+        //rigidifiers
+        {"beamDeform":15000,"beamStrength":"FLT_MAX"},
+        ["tww5r",  "tww1r"],
+        ["tww5r",  "tww1rr"],
+        ["tww5r",  "tww3r"],
+        ["tww5r",  "tww3rr"],
+        ["tww6r",  "tww2r"],
+        ["tww6r",  "tww2rr"],
+        ["tww6r",  "tww4r"],
+        ["tww6r",  "tww4rr"],
+
+        //attach
+        {"beamSpring":2501000,"beamDamp":250},
+        {"beamDeform":22000,"beamStrength":42000},
+
+        {"breakGroup":"wheelwell_RR_a"},
+        ["tww2r",  "tnkb12r"],
+        ["tww2r",  "tnkb11r"],
+        ["tww2r",  "tnk2r"],
+        ["tww2rr", "tnkb12r"],
+        ["tww3r",  "tnkb2r"],
+        ["tww5r",  "tnkb12r"],
+
+        {"breakGroup":"wheelwell_RR_b"},
+        ["tww3r",  "tnkb11r"],
+        ["tww3r",  "tnkb12r"],
+        ["tww3r",  "tnk1r"],
+        ["tww3rr", "tnkb11r"],
+        ["tww2r",  "tnkb1r"],
+        ["tww6r",  "tnkb11r"],
+
+        {"breakGroup":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+        ["id1:",   "id2:",  "id3:"],
+        {"group":"pickup_tanker_wheelwell_RR"},
+        {"dragCoef":10},
+        {"groundModel":"metal"},
+
+        ["tww3r",  "tww4r", "tww3rr"],
+        ["tww3rr", "tww4r", "tww4rr"],
+        ["tww2r",  "tww3r", "tww2rr"],
+        ["tww2rr", "tww3r", "tww3rr"],
+        ["tww1r",  "tww2r", "tww1rr"],
+        ["tww1rr", "tww2r", "tww2rr"],
+
+        ["tww3r",  "tww2r", "tww5r"],
+        ["tww3r",  "tww5r", "tww6r"],
+
+        {"group":""},
+    ],
+},
+"G_pickup_D55_tanker_wheelwell_L_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"6x6 Left Wheel Well",
+        "value":300,
+    },
+    "slotType" : "G_pickup_D55_tanker_wheelwell_L",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_D55_tanker_upfit_wheelwell_L_6x6", ["pickup_tanker_wheelwell_LL"], [], {"pos":{"x":0,"y":-0.475,"z":0}}],
+    ],
+    "nodes": [
+        ["id",     "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        {"frictionCoef":0.5},
+        //wheel well
+        {"nodeMaterial":"|NM_METAL"},
+        {"group":"pickup_tanker_wheelwell_LL"},
+        {"nodeWeight":5},
+        ["tww1l",  0.733,  1.460,  0.581],
+        ["tww1ll", 1.200,  1.460,  0.581],
+        ["tww2l",  0.733,  1.659,  0.835],
+        ["tww2ll", 1.200,  1.659,  0.835],
+        ["tww3l",  0.733,  3.390,  0.835],
+        ["tww3ll", 1.200,  3.390,  0.835],
+        ["tww4l",  0.733,  3.589,  0.581],
+        ["tww4ll", 1.200,  3.589,  0.581],
+        ["tww5l",  1.019,  1.740,  1.112],
+        ["tww6l",  1.019,  3.314,  1.112],
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:",   "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":4501000,"beamDamp":300},
+        {"beamDeform":81000,"beamStrength":"FLT_MAX"},
+
+        //main shape
+        ["tww1l",  "tww1ll"],
+        ["tww2l",  "tww2ll"],
+        ["tww3l",  "tww3ll"],
+        ["tww4l",  "tww4ll"],
+
+        ["tww1l",  "tww2l"],
+        ["tww2l",  "tww3l"],
+        ["tww3l",  "tww4l"],
+        ["tww1ll", "tww2ll"],
+        ["tww2ll", "tww3ll"],
+        ["tww3ll", "tww4ll"],
+
+        ["tww5l",  "tww2l"],
+        ["tww5l",  "tww2ll"],
+        ["tww6l",  "tww3l"],
+        ["tww6l",  "tww3ll"],
+
+        //cross
+        {"beamDeform":51000,"beamStrength":"FLT_MAX"},
+        ["tww1l",  "tww2ll"],
+        ["tww2l",  "tww3ll"],
+        ["tww3l",  "tww4ll"],
+        ["tww1ll", "tww2l"],
+        ["tww2ll", "tww3l"],
+        ["tww3ll", "tww4l"],
+
+        //rigids
+        {"beamDeform":22000,"beamStrength":"FLT_MAX"},
+        ["tww1l",  "tww3l"],
+        ["tww2l",  "tww4l"],
+        ["tww1ll", "tww3ll"],
+        ["tww2ll", "tww4ll"],
+
+        //rigidifiers
+        {"beamDeform":15000,"beamStrength":"FLT_MAX"},
+        ["tww5l",  "tww1l"],
+        ["tww5l",  "tww1ll"],
+        ["tww5l",  "tww3l"],
+        ["tww5l",  "tww3ll"],
+        ["tww6l",  "tww2l"],
+        ["tww6l",  "tww2ll"],
+        ["tww6l",  "tww4l"],
+        ["tww6l",  "tww4ll"],
+
+        //attach
+        {"beamSpring":2501000,"beamDamp":250},
+        {"beamDeform":22000,"beamStrength":42000},
+
+        {"breakGroup":"wheelwell_RL_a"},
+        ["tww2l",  "tnkb12l"],
+        ["tww2l",  "tnkb11l"],
+        ["tww2l",  "tnk2l"],
+        ["tww2ll", "tnkb12l"],
+        ["tww3l",  "tnkb2l"],
+        ["tww5l",  "tnkb12l"],
+
+        {"breakGroup":"wheelwell_RL_b"},
+        ["tww3l",  "tnkb11l"],
+        ["tww3l",  "tnkb12l"],
+        ["tww3l",  "tnk1l"],
+        ["tww3ll", "tnkb11l"],
+        ["tww2l",  "tnkb1l"],
+        ["tww6l",  "tnkb11l"],
+
+        {"breakGroup":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+        ["id1:",  "id2:",   "id3:"],
+        {"group":"pickup_tanker_wheelwell_RL"},
+        {"dragCoef":10},
+        {"groundModel":"metal"},
+
+        ["tww4l", "tww3l",  "tww3ll"],
+        ["tww4l", "tww3ll", "tww4ll"],
+        ["tww3l", "tww2l",  "tww2ll"],
+        ["tww3l", "tww2ll", "tww3ll"],
+        ["tww2l", "tww1l",  "tww1ll"],
+        ["tww2l", "tww1ll", "tww2ll"],
+
+        ["tww2l", "tww3l",  "tww5l"],
+        ["tww5l", "tww3l",  "tww6l"],
+
+        {"group":""},
+    ],
+},
+
+}

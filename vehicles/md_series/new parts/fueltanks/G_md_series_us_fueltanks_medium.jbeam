@@ -1,0 +1,1111 @@
+{
+"G_md_series_us_fueltank_R": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"370L Right Fuel Tank",
+        "value":600,
+    },
+    "slotType" : "G_md_series_us_fueltank_R",
+    "slots2": [
+        ["name",                                 "allowTypes",                             "denyTypes", "default",                                     "description"],
+        ["G_md_series_us_fueltank_steps_R",      ["G_md_series_us_fueltank_steps_R"],      [],          "",                                            "Steps"],
+        ["G_md_series_us_fueltank_R_tank_type",  ["G_md_series_us_fueltank_R_tank_type"],  [],          "G_md_series_us_fueltank_R_tank_type_bare",    "Right Fuel Tank Design",       {"coreSlot":true}],
+        ["G_md_series_us_fueltank_R_strap_type", ["G_md_series_us_fueltank_R_strap_type"], [],          "G_md_series_us_fueltank_R_strap_type_chrome", "Right Fuel Tank Strap Design", {"coreSlot":true}],
+    ],
+    "energyStorage": [
+        ["type", "name"],
+        ["fuelTank", "mainTank_R"],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$fuel_R", "range", "L", "Chassis", 370, 0, 370, "Right Tank Fuel Volume", "Initial fuel volume", {"stepDis":10}],
+    ],
+    "mainTank_R": {
+        "energyType":"diesel",
+        "fuelCapacity": 370,
+        "startingFuelCapacity": "$fuel_R",
+        "fuel": {"[engineGroup]:":["fuel_R"]},
+        "breakTriggerBeam": "fuelTankR",
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         //--FUEL TANK--
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //mounts
+         {"nodeWeight":4.0},
+         {"selfCollision":false},
+         {"collision":false},
+         {"group":""},
+         //["gftm1r",-0.434,-0.1838, 0.95],
+         //["gftm3r",-0.434, 0.4337, 0.95],
+         //["gftm2r",-0.434,-0.1838, 0.69],
+         //["gftm4r",-0.434, 0.4337, 0.69],
+         {"selfCollision":true},
+         {"collision":true},
+         {"group":"G_md_series_us_fueltank_R"},
+         //middle nodes
+         {"nodeWeight":2.96},
+         //add weight to these 2 nodes to represent fuel
+         {"engineGroup":["fuel_R"]},
+         ["gftfm_R", -0.797,-0.50, 0.555],
+         ["gftrm_R", -0.797, 0.75, 0.555],
+         {"engineGroup":""},
+         {"nodeWeight":2.96},
+         //rear circle nodes
+         ["gft1r_R", -0.797, 0.754, 0.81,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         ["gft2r_R", -1.106, 0.754, 0.73],                                                                                                                                                          //overwritten by steps
+         ["gft3r_R", -1.156, 0.754, 0.35,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},], //overwritten by steps
+         ["gft4r_R", -0.850, 0.754, 0.21],
+         ["gft5r_R", -0.502, 0.754, 0.37,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         ["gft6r_R", -0.517, 0.754, 0.75],
+         //middle circle nodes
+         ["gft1m_R", -0.797, 0.118, 0.81],
+         ["gft2m_R", -1.106, 0.118, 0.73,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],//overwritten by steps
+         ["gft3m_R", -1.156, 0.118, 0.35],                                                                                                                                                         //overwritten by steps
+         ["gft4m_R", -0.850, 0.118, 0.21,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         ["gft5m_R", -0.502, 0.118, 0.37],
+         ["gft6m_R", -0.517, 0.118, 0.75,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         //front circle nodes
+         ["gft1f_R", -0.797, -0.50, 0.81,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         ["gft2f_R", -1.106, -0.50, 0.73],                                                                                                                                                         //overwritten by steps
+         ["gft3f_R", -1.156, -0.50, 0.35,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],//overwritten by steps
+         ["gft4f_R", -0.850, -0.50, 0.21],
+         ["gft5f_R", -0.502, -0.50, 0.37,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         ["gft6f_R", -0.517, -0.50, 0.75],
+         {"group":""},
+
+         //detachable fuel nodes
+         {"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},
+         {"selfCollision":false},
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"engineGroup":["fuel_R"]},
+         ["gftn1_R", -0.807,-0.2469, 0.60],
+         ["gftn2_R", -0.807, 0.1012, 0.60],
+         ["gftn3_R", -0.807, 0.4493, 0.60],
+         {"engineGroup":""},
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false,"vaporPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false,"containerBeam":false},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          //--FUEL TANK--
+          {"beamSpring":2400800,"beamDamp":160},
+          {"beamDeform":50000,"beamStrength":"FLT_MAX"},
+          //main shape
+          //circles
+          ["gft1r_R","gft2r_R"],
+          ["gft2r_R","gft3r_R"],
+          ["gft3r_R","gft4r_R"],
+          ["gft4r_R","gft5r_R"],
+          ["gft5r_R","gft6r_R"],
+          ["gft6r_R","gft1r_R"],
+
+          ["gft1m_R","gft2m_R"],
+          ["gft2m_R","gft3m_R"],
+          ["gft3m_R","gft4m_R"],
+          ["gft4m_R","gft5m_R"],
+          ["gft5m_R","gft6m_R"],
+          ["gft6m_R","gft1m_R"],
+
+          ["gft1f_R","gft2f_R"],
+          ["gft2f_R","gft3f_R"],
+          ["gft3f_R","gft4f_R"],
+          ["gft4f_R","gft5f_R"],
+          ["gft5f_R","gft6f_R"],
+          ["gft6f_R","gft1f_R"],
+
+          //lengthwise main shape
+          ["gft1f_R","gft1m_R"],
+          ["gft2f_R","gft2m_R"],
+          ["gft3f_R","gft3m_R"],
+          ["gft4f_R","gft4m_R"],
+          ["gft5f_R","gft5m_R"],
+          ["gft6f_R","gft6m_R"],
+
+          ["gft1r_R","gft1m_R"],
+          ["gft2r_R","gft2m_R"],
+          ["gft3r_R","gft3m_R"],
+          ["gft4r_R","gft4m_R"],
+          ["gft5r_R","gft5m_R"],
+          ["gft6r_R","gft6m_R"],
+
+          {"beamDeform":15000,"beamStrength":"FLT_MAX"},
+          //front and rear cap faces
+          ["gft1f_R","gftfm_R"],
+          ["gft2f_R","gftfm_R"],
+          ["gft3f_R","gftfm_R"],
+          ["gft4f_R","gftfm_R"],
+          ["gft5f_R","gftfm_R"],
+          ["gft6f_R","gftfm_R"],
+
+          ["gft1r_R","gftrm_R"],
+          ["gft2r_R","gftrm_R"],
+          ["gft3r_R","gftrm_R"],
+          ["gft4r_R","gftrm_R"],
+          ["gft5r_R","gftrm_R"],
+          ["gft6r_R","gftrm_R"],
+
+          //surficial crossing
+          ["gft1r_R","gft2m_R"],
+          ["gft2r_R","gft1m_R"],
+          ["gft2r_R","gft3m_R"],
+          ["gft3r_R","gft2m_R"],
+          ["gft3r_R","gft4m_R"],
+          ["gft4r_R","gft3m_R"],
+          ["gft4r_R","gft5m_R"],
+          ["gft5r_R","gft4m_R"],
+          ["gft5r_R","gft6m_R"],
+          ["gft6r_R","gft5m_R"],
+          ["gft6r_R","gft1m_R"],
+          ["gft1r_R","gft6m_R"],
+
+          ["gft1f_R","gft2m_R"],
+          ["gft2f_R","gft1m_R"],
+          ["gft2f_R","gft3m_R"],
+          ["gft3f_R","gft2m_R"],
+          ["gft3f_R","gft4m_R"],
+          ["gft4f_R","gft3m_R"],
+          ["gft4f_R","gft5m_R"],
+          ["gft5f_R","gft4m_R"],
+          ["gft5f_R","gft6m_R"],
+          ["gft6f_R","gft5m_R"],
+          ["gft6f_R","gft1m_R"],
+          ["gft1f_R","gft6m_R"],
+
+          //rigidify
+          ["gft1m_R","gftfm_R"],
+          ["gft2m_R","gftfm_R"],
+          ["gft3m_R","gftfm_R"],
+          ["gft4m_R","gftfm_R"],
+          ["gft5m_R","gftfm_R"],
+          ["gft6m_R","gftfm_R"],
+
+          ["gft1m_R","gftrm_R"],
+          ["gft2m_R","gftrm_R"],
+          ["gft3m_R","gftrm_R"],
+          ["gft4m_R","gftrm_R"],
+          ["gft5m_R","gftrm_R"],
+          ["gft6m_R","gftrm_R"],
+
+          //corner rigids
+          ["gft1r_R","gft3r_R"],
+          ["gft2r_R","gft4r_R"],
+          ["gft3r_R","gft5r_R"],
+          ["gft4r_R","gft6r_R"],
+          ["gft5r_R","gft1r_R"],
+
+          ["gft1f_R","gft3f_R"],
+          ["gft2f_R","gft4f_R"],
+          ["gft3f_R","gft5f_R"],
+          ["gft4f_R","gft6f_R"],
+          ["gft5f_R","gft1f_R"],
+
+          {"beamDeform":8000},
+          ["gft1m_R","gft3m_R"],
+          ["gft2m_R","gft4m_R"],
+          ["gft3m_R","gft5m_R"],
+          ["gft4m_R","gft6m_R"],
+          ["gft5m_R","gft1m_R"],
+
+          {"beamDeform":15000,"beamStrength":"FLT_MAX"},
+          //lengthwise
+          ["gft1f_R","gft1r_R"],
+          ["gft2f_R","gft2r_R"],
+          ["gft3f_R","gft3r_R"],
+          ["gft4f_R","gft4r_R"],
+          ["gft5f_R","gft5r_R"],
+          ["gft6f_R","gft6r_R"],
+          //floating fuel nodes
+          {"beamSpring":200800,"beamDamp":160},
+          {"beamDeform":25000,"beamStrength":"FLT_MAX"},
+          {"breakGroup":"fueltank_a_R"},
+          {"breakGroupType":1},
+          ["gftn1_R","gft1f_R"],
+          ["gftn1_R","gft3f_R"],
+          ["gftn1_R","gft5f_R"],
+
+          ["gftn2_R","gft1m_R"],
+          ["gftn2_R","gft3m_R"],
+          ["gftn2_R","gft5m_R"],
+
+          ["gftn3_R","gft1r_R"],
+          ["gftn3_R","gft3r_R"],
+          ["gftn3_R","gft5r_R"],
+          {"breakGroupType":0},
+          //attach
+          {"beamSpring":3500200,"beamDamp":200},
+          {"beamDeform":35000,"beamStrength":125000},
+          {"breakGroup":"fueltank_a_R"},
+          ["gft1r_R","gftm3r", {"name":"fuelTankR","containerBeam":"fuelTankR"}],
+          ["gft1r_R", "gftm4r"],
+          ["gftrm_R", "gftm3r"],
+          ["gftrm_R", "gftm4r"],
+          ["gft6r_R", "gftm3r"],
+          ["gft6r_R", "gftm4r"],
+          ["gft5r_R", "gftm3r"],
+          ["gft5r_R", "gftm4r"],
+          ["gft1m_R", "gftm3r"],
+          ["gft1m_R", "gftm4r"],
+
+          ["gft3m_R", "gftm4r"],
+          ["gft3r_R", "gftm4r"],
+          ["gft3m_R", "gftm2r"],
+          ["gft3r_R", "gftm2r"],
+          ["gft2m_R", "gftm4r"],
+          ["gft2r_R", "gftm4r"],
+          ["gft2m_R", "gftm2r"],
+          ["gft2r_R", "gftm2r"],
+
+          {"breakGroup":"fueltank_b_R"},
+          ["gft1f_R", "gftm1r"],
+          ["gft1f_R", "gftm2r"],
+          ["gftfm_R", "gftm1r"],
+          ["gftfm_R", "gftm2r"],
+          ["gftfm_R", "gftm4r"],
+          ["gftfm_R", "gftm3r"],
+          ["gft1f_R", "gftm3r"],
+          ["gft1f_R", "gftm4r"],
+          ["gft1m_R", "gftm1r"],
+          ["gft1m_R", "gftm2r"],
+          ["gft6m_R", "gftm1r"],
+          ["gft6m_R", "gftm2r"],
+          ["gft5m_R", "gftm2r"],
+          ["gft5m_R", "gftm1r"],
+
+          ["gft3m_R", "gftm3r"],
+          ["gft3f_R", "gftm3r"],
+          ["gft3m_R", "gftm1r"],
+          ["gft3f_R", "gftm1r"],
+          ["gft2m_R", "gftm3r"],
+          ["gft2f_R", "gftm3r"],
+          ["gft2m_R", "gftm1r"],
+          ["gft2f_R", "gftm1r"],
+          {"breakGroup":""},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"dragCoef":5},
+            {"groundModel":"metal"},
+            {"group":"G_md_series_us_fueltank_R"},
+            ["gft1r_R","gft2r_R","gft2m_R"],
+            ["gft1r_R","gft2m_R","gft1m_R"],
+            ["gft1m_R","gft2m_R","gft2f_R"],
+            ["gft1m_R","gft2f_R","gft1f_R"],
+
+            ["gft2r_R","gft3r_R","gft3m_R"],
+            ["gft2r_R","gft3m_R","gft2m_R"],
+            ["gft2m_R","gft3m_R","gft3f_R"],
+            ["gft2m_R","gft3f_R","gft2f_R"],
+
+            ["gft3r_R","gft4r_R","gft4m_R"],
+            ["gft3r_R","gft4m_R","gft3m_R"],
+            ["gft3m_R","gft4m_R","gft4f_R"],
+            ["gft3m_R","gft4f_R","gft3f_R"],
+
+            ["gft4r_R","gft5r_R","gft5m_R"],
+            ["gft4r_R","gft5m_R","gft4m_R"],
+            ["gft4m_R","gft5m_R","gft5f_R"],
+            ["gft4m_R","gft5f_R","gft4f_R"],
+
+            ["gft5r_R","gft6r_R","gft6m_R"],
+            ["gft5r_R","gft6m_R","gft5m_R"],
+            ["gft5m_R","gft6m_R","gft6f_R"],
+            ["gft5m_R","gft6f_R","gft5f_R"],
+
+            ["gft6r_R","gft1r_R","gft1m_R"],
+            ["gft6r_R","gft1m_R","gft6m_R"],
+            ["gft6m_R","gft1m_R","gft1f_R"],
+            ["gft6m_R","gft1f_R","gft6f_R"],
+
+            //front face
+            ["gft1f_R","gft2f_R","gftfm_R"],
+            ["gft2f_R","gft3f_R","gftfm_R"],
+            ["gft3f_R","gft4f_R","gftfm_R"],
+            ["gft4f_R","gft5f_R","gftfm_R"],
+            ["gft5f_R","gft6f_R","gftfm_R"],
+            ["gft6f_R","gft1f_R","gftfm_R"],
+
+            //rear face
+            ["gft2r_R","gft1r_R","gftrm_R"],
+            ["gft3r_R","gft2r_R","gftrm_R"],
+            ["gft4r_R","gft3r_R","gftrm_R"],
+            ["gft5r_R","gft4r_R","gftrm_R"],
+            ["gft6r_R","gft5r_R","gftrm_R"],
+            ["gft1r_R","gft6r_R","gftrm_R"],
+            {"group":""},
+    ],
+},
+"G_md_series_us_fueltank_L": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"370L Left Fuel Tank",
+        "value":600,
+    },
+    "slotType" : "G_md_series_us_fueltank_L",
+    "slots2": [
+        ["name",                                 "allowTypes",                             "denyTypes", "default",                                     "description"],
+        ["G_md_series_us_fueltank_steps_L",      ["G_md_series_us_fueltank_steps_L"],      [],          "",                                            "Steps"],
+        ["G_md_series_us_fueltank_L_tank_type",  ["G_md_series_us_fueltank_L_tank_type"],  [],          "G_md_series_us_fueltank_L_tank_type_bare",    "Left Fuel Tank Design",       {"coreSlot":true}],
+        ["G_md_series_us_fueltank_L_strap_type", ["G_md_series_us_fueltank_L_strap_type"], [],          "G_md_series_us_fueltank_L_strap_type_chrome", "Left Fuel Tank Strap Design", {"coreSlot":true}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$fuel_L", "range", "L", "Chassis", 370, 0, 370, "Left Tank Fuel Volume", "Initial fuel volume", {"stepDis":10}],
+    ],
+    "energyStorage": [
+        ["type", "name"],
+        ["fuelTank", "mainTank_L"],
+    ],
+    "mainTank_L": {
+        "energyType":"diesel",
+        "fuelCapacity": 370,
+        "startingFuelCapacity": "$fuel_L",
+        "fuel": {"[engineGroup]:":["fuel_L"]},
+        "breakTriggerBeam": "fuelTankL",
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         //--FUEL TANK--
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //mounts
+         {"nodeWeight":4.0},
+         {"selfCollision":false},
+         {"collision":false},
+         {"group":""},
+         //["gftm1l", 0.434,-0.2352, 0.95],
+         //["gftm3l", 0.434, 0.2818, 0.95],
+         //["gftm2l", 0.434,-0.2352, 0.69],
+         //["gftm4l", 0.434, 0.2818, 0.69],
+         {"selfCollision":true},
+         {"collision":true},
+         {"group":"G_md_series_us_fueltank_L"},
+         //middle nodes
+         {"nodeWeight":2.96},
+         //add weight to these 2 nodes to represent fuel
+         {"engineGroup":["fuel_L"]},
+         ["gftfm_L", 0.797,-0.50, 0.555],
+         ["gftrm_L", 0.797, 0.75, 0.555],
+         {"engineGroup":""},
+         {"nodeWeight":2.96},
+         //rear circle nodes
+         ["gft1r_L",  0.797, 0.754, 0.81{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankL"},],
+         ["gft2r_L",  1.106, 0.754, 0.73],                                                                                                                                                          //overwritten by steps
+         ["gft3r_L",  1.156, 0.754, 0.35{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankL"},], //overwritten by steps
+         ["gft4r_L",  0.850, 0.754, 0.21],
+         ["gft5r_L",  0.502, 0.754, 0.37{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankL"},],
+         ["gft6r_L",  0.517, 0.754, 0.75],
+         //middle circle nodes
+         ["gft1m_L",  0.797, 0.118, 0.81],
+         ["gft2m_L",  1.106, 0.118, 0.73,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankL"},],//overwritten by steps
+         ["gft3m_L",  1.156, 0.118, 0.35],                                                                                                                                                         //overwritten by steps
+         ["gft4m_L",  0.850, 0.118, 0.21,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankL"},],
+         ["gft5m_L",  0.502, 0.118, 0.37],
+         ["gft6m_L",  0.517, 0.118, 0.75,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankL"},],
+         //front circle nodes
+         ["gft1f_L",  0.797, -0.50, 0.81,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankL"},],
+         ["gft2f_L",  1.106, -0.50, 0.73],                                                                                                                                                         //overwritten by steps
+         ["gft3f_L",  1.156, -0.50, 0.35,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankL"},],//overwritten by steps
+         ["gft4f_L",  0.850, -0.50, 0.21],
+         ["gft5f_L",  0.502, -0.50, 0.37,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankL"},],
+         ["gft6f_L",  0.517, -0.50, 0.75],
+         {"group":""},
+
+         //detachable fuel nodes
+         {"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankL"},
+         {"selfCollision":false},
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"engineGroup":["fuel_L"]},
+         ["gftn1_L", 0.807,-0.2469, 0.60],
+         ["gftn2_L", 0.807, 0.1012, 0.60],
+         ["gftn3_L", 0.807, 0.4493, 0.60],
+         {"engineGroup":""},
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false,"vaporPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false,"containerBeam":false},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--FUEL TANK--
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamSpring":2400800,"beamDamp":160},
+          {"beamDeform":50000,"beamStrength":"FLT_MAX"},
+          //main shape
+          //circles
+          ["gft1r_L","gft2r_L"],
+          ["gft2r_L","gft3r_L"],
+          ["gft3r_L","gft4r_L"],
+          ["gft4r_L","gft5r_L"],
+          ["gft5r_L","gft6r_L"],
+          ["gft6r_L","gft1r_L"],
+
+          ["gft1m_L","gft2m_L"],
+          ["gft2m_L","gft3m_L"],
+          ["gft3m_L","gft4m_L"],
+          ["gft4m_L","gft5m_L"],
+          ["gft5m_L","gft6m_L"],
+          ["gft6m_L","gft1m_L"],
+
+          ["gft1f_L","gft2f_L"],
+          ["gft2f_L","gft3f_L"],
+          ["gft3f_L","gft4f_L"],
+          ["gft4f_L","gft5f_L"],
+          ["gft5f_L","gft6f_L"],
+          ["gft6f_L","gft1f_L"],
+
+          //lengthwise main shape
+          ["gft1f_L","gft1m_L"],
+          ["gft2f_L","gft2m_L"],
+          ["gft3f_L","gft3m_L"],
+          ["gft4f_L","gft4m_L"],
+          ["gft5f_L","gft5m_L"],
+          ["gft6f_L","gft6m_L"],
+
+          ["gft1r_L","gft1m_L"],
+          ["gft2r_L","gft2m_L"],
+          ["gft3r_L","gft3m_L"],
+          ["gft4r_L","gft4m_L"],
+          ["gft5r_L","gft5m_L"],
+          ["gft6r_L","gft6m_L"],
+
+          {"beamDeform":15000,"beamStrength":"FLT_MAX"},
+          //front and rear cap faces
+          ["gft1f_L","gftfm_L"],
+          ["gft2f_L","gftfm_L"],
+          ["gft3f_L","gftfm_L"],
+          ["gft4f_L","gftfm_L"],
+          ["gft5f_L","gftfm_L"],
+          ["gft6f_L","gftfm_L"],
+
+          ["gft1r_L","gftrm_L"],
+          ["gft2r_L","gftrm_L"],
+          ["gft3r_L","gftrm_L"],
+          ["gft4r_L","gftrm_L"],
+          ["gft5r_L","gftrm_L"],
+          ["gft6r_L","gftrm_L"],
+
+          //surficial crossing
+          ["gft1r_L","gft2m_L"],
+          ["gft2r_L","gft1m_L"],
+          ["gft2r_L","gft3m_L"],
+          ["gft3r_L","gft2m_L"],
+          ["gft3r_L","gft4m_L"],
+          ["gft4r_L","gft3m_L"],
+          ["gft4r_L","gft5m_L"],
+          ["gft5r_L","gft4m_L"],
+          ["gft5r_L","gft6m_L"],
+          ["gft6r_L","gft5m_L"],
+          ["gft6r_L","gft1m_L"],
+          ["gft1r_L","gft6m_L"],
+
+          ["gft1f_L","gft2m_L"],
+          ["gft2f_L","gft1m_L"],
+          ["gft2f_L","gft3m_L"],
+          ["gft3f_L","gft2m_L"],
+          ["gft3f_L","gft4m_L"],
+          ["gft4f_L","gft3m_L"],
+          ["gft4f_L","gft5m_L"],
+          ["gft5f_L","gft4m_L"],
+          ["gft5f_L","gft6m_L"],
+          ["gft6f_L","gft5m_L"],
+          ["gft6f_L","gft1m_L"],
+          ["gft1f_L","gft6m_L"],
+
+          //rigidify
+          ["gft1m_L","gftfm_L"],
+          ["gft2m_L","gftfm_L"],
+          ["gft3m_L","gftfm_L"],
+          ["gft4m_L","gftfm_L"],
+          ["gft5m_L","gftfm_L"],
+          ["gft6m_L","gftfm_L"],
+
+          ["gft1m_L","gftrm_L"],
+          ["gft2m_L","gftrm_L"],
+          ["gft3m_L","gftrm_L"],
+          ["gft4m_L","gftrm_L"],
+          ["gft5m_L","gftrm_L"],
+          ["gft6m_L","gftrm_L"],
+
+          //corner rigids
+          ["gft1r_L","gft3r_L"],
+          ["gft2r_L","gft4r_L"],
+          ["gft3r_L","gft5r_L"],
+          ["gft4r_L","gft6r_L"],
+          ["gft5r_L","gft1r_L"],
+
+          ["gft1f_L","gft3f_L"],
+          ["gft2f_L","gft4f_L"],
+          ["gft3f_L","gft5f_L"],
+          ["gft4f_L","gft6f_L"],
+          ["gft5f_L","gft1f_L"],
+
+          {"beamDeform":8000},
+          ["gft1m_L","gft3m_L"],
+          ["gft2m_L","gft4m_L"],
+          ["gft3m_L","gft5m_L"],
+          ["gft4m_L","gft6m_L"],
+          ["gft5m_L","gft1m_L"],
+
+          {"beamDeform":15000,"beamStrength":"FLT_MAX"},
+          //lengthwise
+          ["gft1f_L","gft1r_L"],
+          ["gft2f_L","gft2r_L"],
+          ["gft3f_L","gft3r_L"],
+          ["gft4f_L","gft4r_L"],
+          ["gft5f_L","gft5r_L"],
+          ["gft6f_L","gft6r_L"],
+
+          //floating fuel nodes
+          {"beamSpring":200800,"beamDamp":160},
+          {"beamDeform":25000,"beamStrength":"FLT_MAX"},
+          {"breakGroup":"fueltank_a_L"},
+          {"breakGroupType":1},
+          ["gftn1_L","gft1f_L"],
+          ["gftn1_L","gft3f_L"],
+          ["gftn1_L","gft5f_L"],
+
+          ["gftn2_L","gft1m_L"],
+          ["gftn2_L","gft3m_L"],
+          ["gftn2_L","gft5m_L"],
+
+          ["gftn3_L","gft1r_L"],
+          ["gftn3_L","gft3r_L"],
+          ["gftn3_L","gft5r_L"],
+          {"breakGroupType":0},
+
+          //attach
+          {"beamSpring":3500200,"beamDamp":200},
+          {"beamDeform":35000,"beamStrength":125000},
+          {"breakGroup":"fueltank_a_L"},
+          ["gft1r_L","gftm3l", {"name":"fuelTankL","containerBeam":"fuelTankL"}],
+          ["gft1r_L", "gftm4l"],
+          ["gftrm_L", "gftm3l"],
+          ["gftrm_L", "gftm4l"],
+          ["gft6r_L", "gftm3l"],
+          ["gft6r_L", "gftm4l"],
+          ["gft5r_L", "gftm3l"],
+          ["gft5r_L", "gftm4l"],
+          ["gft1m_L", "gftm3l"],
+          ["gft1m_L", "gftm4l"],
+
+          ["gft3m_L", "gftm4l"],
+          ["gft3r_L", "gftm4l"],
+          ["gft3m_L", "gftm2l"],
+          ["gft3r_L", "gftm2l"],
+          ["gft2m_L", "gftm4l"],
+          ["gft2r_L", "gftm4l"],
+          ["gft2m_L", "gftm2l"],
+          ["gft2r_L", "gftm2l"],
+
+          {"breakGroup":"fueltank_b_L"},
+          ["gft1f_L", "gftm1l"],
+          ["gft1f_L", "gftm2l"],
+          ["gftfm_L", "gftm1l"],
+          ["gftfm_L", "gftm2l"],
+          ["gftfm_L", "gftm4l"],
+          ["gftfm_L", "gftm3l"],
+          ["gft1f_L", "gftm3l"],
+          ["gft1f_L", "gftm4l"],
+          ["gft1m_L", "gftm1l"],
+          ["gft1m_L", "gftm2l"],
+          ["gft6m_L", "gftm1l"],
+          ["gft6m_L", "gftm2l"],
+          ["gft5m_L", "gftm2l"],
+          ["gft5m_L", "gftm1l"],
+
+          ["gft3m_L", "gftm3l"],
+          ["gft3f_L", "gftm3l"],
+          ["gft3m_L", "gftm1l"],
+          ["gft3f_L", "gftm1l"],
+          ["gft2m_L", "gftm3l"],
+          ["gft2f_L", "gftm3l"],
+          ["gft2m_L", "gftm1l"],
+          ["gft2f_L", "gftm1l"],
+          {"breakGroup":""},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"dragCoef":5},
+            {"groundModel":"metal"},
+            {"group":"G_md_series_us_fueltank_L"},
+            ["gft2r_L","gft1r_L","gft2m_L"],
+            ["gft1r_L","gft1m_L","gft2m_L"],
+            ["gft2m_L","gft1m_L","gft2f_L"],
+            ["gft1m_L","gft1f_L","gft2f_L"],
+
+            ["gft3r_L","gft2r_L","gft3m_L"],
+            ["gft2r_L","gft2m_L","gft3m_L"],
+            ["gft3m_L","gft2m_L","gft3f_L"],
+            ["gft2m_L","gft2f_L","gft3f_L"],
+
+            ["gft4r_L","gft3r_L","gft4m_L"],
+            ["gft3r_L","gft3m_L","gft4m_L"],
+            ["gft4m_L","gft3m_L","gft4f_L"],
+            ["gft3m_L","gft3f_L","gft4f_L"],
+
+            ["gft5r_L","gft4r_L","gft5m_L"],
+            ["gft4r_L","gft4m_L","gft5m_L"],
+            ["gft5m_L","gft4m_L","gft5f_L"],
+            ["gft4m_L","gft4f_L","gft5f_L"],
+
+            ["gft6r_L","gft5r_L","gft6m_L"],
+            ["gft5r_L","gft5m_L","gft6m_L"],
+            ["gft6m_L","gft5m_L","gft6f_L"],
+            ["gft5m_L","gft5f_L","gft6f_L"],
+
+            ["gft1r_L","gft6r_L","gft1m_L"],
+            ["gft6r_L","gft6m_L","gft1m_L"],
+            ["gft1m_L","gft6m_L","gft1f_L"],
+            ["gft6m_L","gft6f_L","gft1f_L"],
+
+            //front face
+            ["gft2f_L","gft1f_L","gftfm_L"],
+            ["gft3f_L","gft2f_L","gftfm_L"],
+            ["gft4f_L","gft3f_L","gftfm_L"],
+            ["gft5f_L","gft4f_L","gftfm_L"],
+            ["gft6f_L","gft5f_L","gftfm_L"],
+            ["gft1f_L","gft6f_L","gftfm_L"],
+
+            //rear face
+            ["gft1r_L","gft2r_L","gftrm_L"],
+            ["gft2r_L","gft3r_L","gftrm_L"],
+            ["gft3r_L","gft4r_L","gftrm_L"],
+            ["gft4r_L","gft5r_L","gftrm_L"],
+            ["gft5r_L","gft6r_L","gftrm_L"],
+            ["gft6r_L","gft1r_L","gftrm_L"],
+            {"group":""},
+    ],
+},
+"G_md_series_us_fueltank_steps_R": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Bare Metal Right Fuel Tank Steps",
+        "value":200,
+    },
+    "slotType" : "G_md_series_us_fueltank_steps_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_fueltank_steps_R", ["G_md_series_us_fueltank_R"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0},"materialOverride":[["us_semi_common","us_semi_common"]]}],
+     ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         //--FUEL TANK--
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"group":"G_md_series_us_fueltank_R"},
+         {"nodeWeight":4.50},
+         //nudge nodes out for steps
+         ["gft2r_R", -1.21, 0.754, 0.73],
+         ["gft3r_R", -1.21, 0.754, 0.42,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         ["gft2m_R", -1.21, 0.118, 0.73,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         ["gft3m_R", -1.21, 0.118, 0.42],
+         ["gft2f_R", -1.21, -0.50, 0.73],
+         ["gft3f_R", -1.21, -0.50, 0.42,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         {"group":""},
+         {"engineGroup":""},
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false},
+    ],
+}
+"G_md_series_us_fueltank_steps_L": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Bare Metal Left Fuel Tank Steps",
+        "value":200,
+    },
+    "slotType" : "G_md_series_us_fueltank_steps_L",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_fueltank_steps_L", ["G_md_series_us_fueltank_L"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0},"materialOverride":[["us_semi_common","us_semi_common"]]}],
+     ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         //--FUEL TANK--
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"group":"G_md_series_us_fueltank_R"},
+         {"nodeWeight":4.50},
+         //nudge nodes out for steps
+         ["gft2r_L", 1.21, 0.754, 0.73],
+         ["gft3r_L", 1.21, 0.754, 0.42,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         ["gft2m_L", 1.21, 0.118, 0.73,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         ["gft3m_L", 1.21, 0.118, 0.42],
+         ["gft2f_L", 1.21, -0.50, 0.73],
+         ["gft3f_L", 1.21, -0.50, 0.42,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         {"group":""},
+         {"engineGroup":""},
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false},
+    ],
+},
+"G_md_series_us_fueltank_steps_R_chrome": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Polished Right Fuel Tank Steps",
+        "value":200,
+    },
+    "slotType" : "G_md_series_us_fueltank_steps_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_fueltank_steps_R", ["G_md_series_us_fueltank_R"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0},"materialOverride":[["us_semi_common","us_semi_common_chrome"]]}],
+     ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         //--FUEL TANK--
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"group":"G_md_series_us_fueltank_R"},
+         {"nodeWeight":4.50},
+         //nudge nodes out for steps
+         ["gft2r_R", -1.21, 0.754, 0.73],
+         ["gft3r_R", -1.21, 0.754, 0.42,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         ["gft2m_R", -1.21, 0.118, 0.73,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         ["gft3m_R", -1.21, 0.118, 0.42],
+         ["gft2f_R", -1.21, -0.50, 0.73],
+         ["gft3f_R", -1.21, -0.50, 0.42,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         {"group":""},
+         {"engineGroup":""},
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false},
+    ],
+}
+"G_md_series_us_fueltank_steps_L_chrome": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Polished Left Fuel Tank Steps",
+        "value":200,
+    },
+    "slotType" : "G_md_series_us_fueltank_steps_L",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_fueltank_steps_L", ["G_md_series_us_fueltank_L"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0},"materialOverride":[["us_semi_common","us_semi_common_chrome"]]}],
+     ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         //--FUEL TANK--
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"group":"G_md_series_us_fueltank_R"},
+         {"nodeWeight":4.50},
+         //nudge nodes out for steps
+         ["gft2r_L", 1.21, 0.754, 0.73],
+         ["gft3r_L", 1.21, 0.754, 0.42,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         ["gft2m_L", 1.21, 0.118, 0.73,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         ["gft3m_L", 1.21, 0.118, 0.42],
+         ["gft2f_L", 1.21, -0.50, 0.73],
+         ["gft3f_L", 1.21, -0.50, 0.42,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         {"group":""},
+         {"engineGroup":""},
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false},
+    ],
+},
+"G_md_series_us_fueltank_steps_R_painted": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Painted Right Fuel Tank Steps",
+        "value":200,
+    },
+    "slotType" : "G_md_series_us_fueltank_steps_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_fueltank_steps_R", ["G_md_series_us_fueltank_R"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0},"materialOverride":[["us_semi_common","us_semi_common_painted"]]}],
+     ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         //--FUEL TANK--
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"group":"G_md_series_us_fueltank_R"},
+         {"nodeWeight":4.50},
+         //nudge nodes out for steps
+         ["gft2r_R", -1.21, 0.754, 0.73],
+         ["gft3r_R", -1.21, 0.754, 0.42,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         ["gft2m_R", -1.21, 0.118, 0.73,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         ["gft3m_R", -1.21, 0.118, 0.42],
+         ["gft2f_R", -1.21, -0.50, 0.73],
+         ["gft3f_R", -1.21, -0.50, 0.42,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         {"group":""},
+         {"engineGroup":""},
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false},
+    ],
+}
+"G_md_series_us_fueltank_steps_L_painted": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Painted Left Fuel Tank Steps",
+        "value":200,
+    },
+    "slotType" : "G_md_series_us_fueltank_steps_L",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_fueltank_steps_L", ["G_md_series_us_fueltank_L"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0},"materialOverride":[["us_semi_common","us_semi_common_painted"]]}],
+     ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         //--FUEL TANK--
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"group":"G_md_series_us_fueltank_R"},
+         {"nodeWeight":4.50},
+         //nudge nodes out for steps
+         ["gft2r_L", 1.21, 0.754, 0.73],
+         ["gft3r_L", 1.21, 0.754, 0.42,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         ["gft2m_L", 1.21, 0.118, 0.73,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         ["gft3m_L", 1.21, 0.118, 0.42],
+         ["gft2f_L", 1.21, -0.50, 0.73],
+         ["gft3f_L", 1.21, -0.50, 0.42,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         {"group":""},
+         {"engineGroup":""},
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false},
+    ],
+},
+"G_md_series_us_fueltank_steps_R_black": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Black Right Fuel Tank Steps",
+        "value":200,
+    },
+    "slotType" : "G_md_series_us_fueltank_steps_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_fueltank_steps_R", ["G_md_series_us_fueltank_R"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0},"materialOverride":[["us_semi_common","us_semi_common_black"]]}],
+     ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         //--FUEL TANK--
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"group":"G_md_series_us_fueltank_R"},
+         {"nodeWeight":4.50},
+         //nudge nodes out for steps
+         ["gft2r_R", -1.21, 0.754, 0.73],
+         ["gft3r_R", -1.21, 0.754, 0.42,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         ["gft2m_R", -1.21, 0.118, 0.73,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         ["gft3m_R", -1.21, 0.118, 0.42],
+         ["gft2f_R", -1.21, -0.50, 0.73],
+         ["gft3f_R", -1.21, -0.50, 0.42,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         {"group":""},
+         {"engineGroup":""},
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false},
+    ],
+}
+"G_md_series_us_fueltank_steps_L_black": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Black Left Fuel Tank Steps",
+        "value":200,
+    },
+    "slotType" : "G_md_series_us_fueltank_steps_L",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_fueltank_steps_L", ["G_md_series_us_fueltank_L"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0},"materialOverride":[["us_semi_common","us_semi_common_black"]]}],
+     ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         //--FUEL TANK--
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"group":"G_md_series_us_fueltank_R"},
+         {"nodeWeight":4.50},
+         //nudge nodes out for steps
+         ["gft2r_L", 1.21, 0.754, 0.73],
+         ["gft3r_L", 1.21, 0.754, 0.42,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         ["gft2m_L", 1.21, 0.118, 0.73,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         ["gft3m_L", 1.21, 0.118, 0.42],
+         ["gft2f_L", 1.21, -0.50, 0.73],
+         ["gft3f_L", 1.21, -0.50, 0.42,{"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.004,"smokePoint":220,"containerBeam":"fuelTankR"},],
+         {"group":""},
+         {"engineGroup":""},
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false},
+    ],
+},
+//types
+//TANKS
+"G_md_series_us_fueltank_R_tank_type_bare": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Bare Metal Tank",
+        "value":150,
+    },
+    "slotType" : "G_md_series_us_fueltank_R_tank_type",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_fueltank_M_R", ["G_md_series_us_fueltank_R"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0},"materialOverride":[["us_semi_common","us_semi_common"]]}],
+    ],
+},
+"G_md_series_us_fueltank_L_tank_type_bare": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Bare Metal Tank",
+        "value":150,
+    },
+    "slotType" : "G_md_series_us_fueltank_L_tank_type",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_fueltank_M_L", ["G_md_series_us_fueltank_L"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0},"materialOverride":[["us_semi_common","us_semi_common"]]}],
+        ],
+},
+"G_md_series_us_fueltank_R_tank_type_chrome": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Polished Tank",
+        "value":150,
+    },
+    "slotType" : "G_md_series_us_fueltank_R_tank_type",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_fueltank_M_R", ["G_md_series_us_fueltank_R"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0},"materialOverride":[["us_semi_common","us_semi_common_chrome"]]}],
+    ],
+},
+"G_md_series_us_fueltank_L_tank_type_chrome": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Polished Tank",
+        "value":150,
+    },
+    "slotType" : "G_md_series_us_fueltank_L_tank_type",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_fueltank_M_L", ["G_md_series_us_fueltank_L"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0},"materialOverride":[["us_semi_common","us_semi_common_chrome"]]}],
+        ],
+},
+"G_md_series_us_fueltank_R_tank_type_painted": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Painted Tank",
+        "value":150,
+    },
+    "slotType" : "G_md_series_us_fueltank_R_tank_type",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_fueltank_M_R", ["G_md_series_us_fueltank_R"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0},"materialOverride":[["us_semi_common","us_semi_common_painted"]]}],
+    ],
+},
+"G_md_series_us_fueltank_L_tank_type_painted": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Painted Tank",
+        "value":150,
+    },
+    "slotType" : "G_md_series_us_fueltank_L_tank_type",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_fueltank_M_L", ["G_md_series_us_fueltank_L"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0},"materialOverride":[["us_semi_common","us_semi_common_painted"]]}],
+        ],
+},
+"G_md_series_us_fueltank_R_tank_type_black": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Black Tank",
+        "value":150,
+    },
+    "slotType" : "G_md_series_us_fueltank_R_tank_type",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_fueltank_M_R", ["G_md_series_us_fueltank_R"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0},"materialOverride":[["us_semi_common","us_semi_common_black"]]}],
+    ],
+},
+"G_md_series_us_fueltank_L_tank_type_black": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Black Tank",
+        "value":150,
+    },
+    "slotType" : "G_md_series_us_fueltank_L_tank_type",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_fueltank_M_L", ["G_md_series_us_fueltank_L"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0},"materialOverride":[["us_semi_common","us_semi_common_black"]]}],
+        ],
+},
+//Straps
+"G_md_series_us_fueltank_R_strap_type_chrome": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Polished Straps",
+        "value":150,
+    },
+    "slotType" : "G_md_series_us_fueltank_R_strap_type",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_fueltank_M_straps_R", ["G_md_series_us_fueltank_R"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0},"materialOverride":[["us_semi_common","us_semi_common_chrome"]]}],
+    ],
+},
+"G_md_series_us_fueltank_L_strap_type_chrome": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Polished Straps",
+        "value":150,
+    },
+    "slotType" : "G_md_series_us_fueltank_L_strap_type",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_fueltank_M_straps_L", ["G_md_series_us_fueltank_L"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0},"materialOverride":[["us_semi_common","us_semi_common_chrome"]]}],
+        ],
+},
+"G_md_series_us_fueltank_R_strap_type_painted": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Painted Straps",
+        "value":150,
+    },
+    "slotType" : "G_md_series_us_fueltank_R_strap_type",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_fueltank_M_straps_R", ["G_md_series_us_fueltank_R"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0},"materialOverride":[["us_semi_common","us_semi_common_painted"]]}],
+    ],
+},
+"G_md_series_us_fueltank_L_strap_type_painted": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Painted Straps",
+        "value":150,
+    },
+    "slotType" : "G_md_series_us_fueltank_L_strap_type",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_fueltank_M_straps_L", ["G_md_series_us_fueltank_L"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0},"materialOverride":[["us_semi_common","us_semi_common_painted"]]}],
+        ],
+},
+"G_md_series_us_fueltank_R_strap_type_black": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Black Straps",
+        "value":150,
+    },
+    "slotType" : "G_md_series_us_fueltank_R_strap_type",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_fueltank_M_straps_R", ["G_md_series_us_fueltank_R"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0},"materialOverride":[["us_semi_common","us_semi_common_black"]]}],
+    ],
+},
+"G_md_series_us_fueltank_L_strap_type_black": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Black Straps",
+        "value":150,
+    },
+    "slotType" : "G_md_series_us_fueltank_L_strap_type",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_us_fueltank_M_straps_L", ["G_md_series_us_fueltank_L"], [],{"pos":{"x":0.0, "y":0.0, "z":0.0},"materialOverride":[["us_semi_common","us_semi_common_black"]]}],
+        ],
+},
+}

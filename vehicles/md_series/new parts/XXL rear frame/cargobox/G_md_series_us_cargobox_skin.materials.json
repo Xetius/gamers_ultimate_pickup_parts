@@ -1,0 +1,220 @@
+{
+  "us_semi_cargobox.G_skin_md_series_us_cargobox.beamindustries": {
+    "name": "us_semi_cargobox.G_skin_md_series_us_cargobox.beamindustries",
+    "mapTo": "us_semi_cargobox.G_skin_md_series_us_cargobox.beamindustries",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "vehicles/common/us_semi_cargobox/cargobox_ao.data.png",
+        "baseColorMap": "vehicles/common/us_semi_cargobox/cargobox_b.color.png",
+        "colorPaletteMapUseUV": null,
+        "metallicFactor": 1,
+        "metallicMap": "vehicles/common/us_semi_cargobox/cargobox_m.data.png",
+        "normalMap": "vehicles/common/us_semi_cargobox/cargobox_nm.normal.png",
+        "roughnessMap": "vehicles/common/us_semi_cargobox/cargobox_r.data.png"
+      },
+      {
+        "ambientOcclusionMap": "vehicles/common/us_semi_cargobox/cargobox_ao.data.png",
+        "baseColorMap": "vehicles/common/us_semi_cargobox/cargobox_b.color.png",
+        "colorPaletteMap": "vehicles/common/us_semi_cargobox/cargobox_skin_beamindustries_p.color.png",
+        "colorPaletteMapUseUV": 1,
+        "metallicFactor": 1,
+        "metallicMap": "vehicles/common/us_semi_cargobox/cargobox_m.data.png",
+        "normalMap": "vehicles/common/us_semi_cargobox/cargobox_nm.normal.png",
+        "opacityMap": "/vehicles/common/us_semi_cargobox/cargobox_c.data.png",
+        "roughnessMap": "vehicles/common/us_semi_cargobox/cargobox_r.data.png"
+      },
+      {
+        "colorPaletteMapUseUV": null,
+        "metallicFactor": null
+      },
+      {
+        "colorPaletteMapUseUV": null,
+        "metallicFactor": null
+      }
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "us_semi_cargobox.G_skin_md_series_us_cargobox.bng": {
+    "name": "us_semi_cargobox.G_skin_md_series_us_cargobox.bng",
+    "mapTo": "us_semi_cargobox.G_skin_md_series_us_cargobox.bng",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "vehicles/common/us_semi_cargobox/cargobox_ao.data.png",
+        "baseColorMap": "vehicles/common/us_semi_cargobox/cargobox_b.color.png",
+        "diffuseMapUseUV": null,
+        "metallicFactor": 1,
+        "metallicMap": "vehicles/common/us_semi_cargobox/cargobox_m.data.png",
+        "normalMap": "vehicles/common/us_semi_cargobox/cargobox_nm.normal.png",
+        "roughnessFactor": null,
+        "roughnessMap": "vehicles/common/us_semi_cargobox/cargobox_r.data.png"
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/common/us_semi_cargobox/cargobox_ao.data.png",
+        "baseColorMap": "vehicles/common/us_semi_cargobox/cargobox_skin_bng.color.png",
+        "diffuseMapUseUV": 1,
+        "metallicFactor": 0.800000012,
+        "normalMap": "vehicles/common/us_semi_cargobox/cargobox_nm.normal.png",
+        "opacityMap": "/vehicles/common/us_semi_cargobox/cargobox_c.data.png",
+        "roughnessFactor": 0.600000024
+      },
+      {
+        "diffuseMapUseUV": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "diffuseMapUseUV": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      }
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "us_semi_cargobox.G_skin_md_series_us_cargobox.cola": {
+    "name": "us_semi_cargobox.G_skin_md_series_us_cargobox.cola",
+    "mapTo": "us_semi_cargobox.G_skin_md_series_us_cargobox.cola",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "vehicles/common/us_semi_cargobox/cargobox_ao.data.png",
+        "baseColorMap": "vehicles/common/us_semi_cargobox/cargobox_b.color.png",
+        "diffuseMapUseUV": null,
+        "metallicFactor": 1,
+        "metallicMap": "vehicles/common/us_semi_cargobox/cargobox_m.data.png",
+        "normalMap": "vehicles/common/us_semi_cargobox/cargobox_nm.normal.png",
+        "roughnessFactor": null,
+        "roughnessMap": "vehicles/common/us_semi_cargobox/cargobox_r.data.png"
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/common/us_semi_cargobox/cargobox_ao.data.png",
+        "baseColorMap": "/vehicles/common/us_semi_cargobox/cargobox_skin_cola.color.png",
+        "diffuseMapUseUV": 1,
+        "metallicFactor": 0.800000012,
+        "normalMap": "vehicles/common/us_semi_cargobox/cargobox_nm.normal.png",
+        "opacityMap": "vehicles/common/us_semi_cargobox/cargobox_c.data.png",
+        "roughnessFactor": 0.600000024
+      },
+      {
+        "diffuseMapUseUV": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "diffuseMapUseUV": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      }
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "us_semi_cargobox.G_skin_md_series_us_cargobox.team": {
+    "name": "us_semi_cargobox.G_skin_md_series_us_cargobox.team",
+    "mapTo": "us_semi_cargobox.G_skin_md_series_us_cargobox.team",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "vehicles/common/us_semi_cargobox/cargobox_ao.data.png",
+        "baseColorMap": "vehicles/common/us_semi_cargobox/cargobox_b.color.png",
+        "colorPaletteMapUseUV": null,
+        "diffuseMapUseUV": null,
+        "instanceDiffuse": null,
+        "metallicFactor": 1,
+        "metallicMap": "vehicles/common/us_semi_cargobox/cargobox_m.data.png",
+        "metallicMapUseUV": null,
+        "normalMap": "vehicles/common/us_semi_cargobox/cargobox_nm.normal.png",
+        "roughnessFactor": null,
+        "roughnessMap": "vehicles/common/us_semi_cargobox/cargobox_r.data.png"
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/common/us_semi_cargobox/cargobox_ao.data.png",
+        "baseColorMap": "/vehicles/common/us_semi_cargobox/cargobox_skin_team_offroad_b.color.png",
+        "colorPaletteMap": "vehicles/common/us_semi_cargobox/cargobox_skin_team_offroad_palette_uv1.color.png",
+        "colorPaletteMapUseUV": 1,
+        "diffuseMapUseUV": 1,
+        "instanceDiffuse": true,
+        "metallicFactor": 0.800000012,
+        "metallicMap": "/vehicles/common/us_semi_cargobox/cargobox_skin_team_offroad_skin_m.data.png",
+        "metallicMapUseUV": 1,
+        "normalMap": "vehicles/common/us_semi_cargobox/cargobox_nm.normal.png",
+        "opacityMap": "vehicles/common/us_semi_cargobox/cargobox_c.data.png",
+        "roughnessFactor": 0.600000024
+      },
+      {
+        "colorPaletteMapUseUV": null,
+        "diffuseMapUseUV": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null,
+        "metallicMapUseUV": null,
+        "roughnessFactor": null
+      },
+      {
+        "colorPaletteMapUseUV": null,
+        "diffuseMapUseUV": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null,
+        "metallicMapUseUV": null,
+        "roughnessFactor": null
+      }
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "us_semi_cargobox.G_skin_md_series_us_cargobox.G_1M_special": {
+    "name": "us_semi_cargobox.G_skin_md_series_us_cargobox.G_1M_special",
+    "mapTo": "us_semi_cargobox.G_skin_md_series_us_cargobox.G_1M_special",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "vehicles/common/us_semi_cargobox/cargobox_ao.data.png",
+        "baseColorMap": "vehicles/common/us_semi_cargobox/cargobox_b.color.png",
+        "diffuseMapUseUV": null,
+        "metallicFactor": 1,
+        "metallicMap": "vehicles/common/us_semi_cargobox/cargobox_m.data.png",
+        "normalMap": "vehicles/common/us_semi_cargobox/cargobox_nm.normal.png",
+        "roughnessFactor": null,
+        "roughnessMap": "vehicles/common/us_semi_cargobox/cargobox_r.data.png"
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/common/us_semi_cargobox/cargobox_ao.data.png",
+        "baseColorMap": "/vehicles/md_series/new parts/XXL rear frame/cargobox/G_1M_special_cargobox_b.color.png",
+        "diffuseMapUseUV": 1,
+        "metallicFactor": 0.800000012,
+        "normalMap": "vehicles/common/us_semi_cargobox/cargobox_nm.normal.png",
+        "opacityMap": "vehicles/common/us_semi_cargobox/cargobox_c.data.png",
+        "roughnessFactor": 0.600000024
+      },
+      {
+        "diffuseMapUseUV": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "diffuseMapUseUV": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      }
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  }
+}

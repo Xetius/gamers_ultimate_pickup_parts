@@ -1,0 +1,105 @@
+{
+"G_pickup_glass_extra_RR": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Right Side Glass",
+        "value":50,
+    },
+    "slotType" : "G_pickup_glass_extra_RR",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         {"deformGroup":"glass_RR_break", "deformMaterialBase":"pickup_glass", "deformMaterialDamaged":"pickup_glass_dmg"},
+         ["G_pickup_glass_RR_extra", ["pickup_body"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound5", "deformVolume":0.7}],
+         {"deformGroup":"glass_RR_break", "deformMaterialBase":"pickup_glass_int", "deformMaterialDamaged":"pickup_glass_dmg"},
+         ["G_pickup_glass_RR_extra_int", ["pickup_body"]],
+         {"deformGroup":""},
+    ],
+    "sounds": {
+        "$+cabinFilterCoef": 0.04
+    },
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamPrecompression":1, "beamLongBound":1.0, "beamShortBound":1.0},
+          //brittle glass beams
+          {"beamSpring":793230,"beamDamp":104.4},
+          {"beamDeform":86800,"beamStrength":10100},
+          {"disableMeshBreaking":true,"disableTriangleBreaking":true},
+          {"deformGroup":"glass_RR_break", "deformationTriggerRatio":0.02},
+          {"breakGroup":"glass_RR"},
+          {"deformLimitExpansion":""},
+          ["rb8rrr","rb8r"],
+          ["rf2rr","rb8r"],
+          ["rb8rrr","rf2r"],
+          ["rb8rr","rf2rr"],
+          ["rp3rr","rb8r"],
+          ["rp3rr","rfc2r"],
+          {"breakGroup":""},
+          {"deformGroup":""},
+          {"deformLimitExpansion":1.2},
+          {"disableMeshBreaking":false,"disableTriangleBreaking":false},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //sides
+            {"dragCoef":12},
+            {"group":"pickup_rightside"},
+            ["rb8rr", "rb8rrr", "rp3rr"],
+            ["rp3rr", "rp3r", "rb8rr"],
+            ["rf2r", "rp3r", "rp3rr"],
+            ["rp3rr", "rf2rr", "rf2r"],
+            {"group":""},
+    ],
+},
+"G_pickup_glass_extra_RL": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Left Side Glass",
+        "value":50,
+    },
+    "slotType" : "G_pickup_glass_extra_RL",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         {"deformGroup":"glass_RL_break", "deformMaterialBase":"pickup_glass", "deformMaterialDamaged":"pickup_glass_dmg"},
+         ["G_pickup_glass_RL_extra", ["pickup_body"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound6", "deformVolume":0.7}],
+         {"deformGroup":"glass_RL_break", "deformMaterialBase":"pickup_glass_int", "deformMaterialDamaged":"pickup_glass_dmg"},
+         ["G_pickup_glass_RL_extra_int", ["pickup_body"]],
+         {"deformGroup":""},
+    ],
+    "sounds": {
+        "$+cabinFilterCoef": 0.04
+    },
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamPrecompression":1, "beamLongBound":1.0, "beamShortBound":1.0},
+          //brittle glass beams
+          {"beamSpring":793230,"beamDamp":104.4},
+          {"beamDeform":86800,"beamStrength":10100},
+          {"disableMeshBreaking":true,"disableTriangleBreaking":true},
+          {"deformGroup":"glass_RL_break", "deformationTriggerRatio":0.02},
+          {"breakGroup":"glass_RL"},
+          {"deformLimitExpansion":""},
+          ["rb8lll","rb8l"],
+          ["rf2ll","rb8l"],
+          ["rb8lll","rf2l"],
+          ["rb8ll","rf2ll"],
+          ["rp3ll","rb8l"],
+          ["rp3ll","rfc2l"],
+          {"breakGroup":""},
+          {"deformGroup":""},
+          {"deformLimitExpansion":1.2},
+          {"disableMeshBreaking":false,"disableTriangleBreaking":false},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //sides
+            {"dragCoef":12},
+            {"group":"pickup_leftside"},
+            ["rp3ll", "rb8lll", "rb8ll"],
+            ["rb8ll", "rp3l", "rp3ll"],
+            ["rp3l", "rf2l", "rf2ll"],
+            ["rf2ll", "rp3ll", "rp3l"],
+            {"group":""},
+    ],
+},
+},
+}

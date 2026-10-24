@@ -1,0 +1,268 @@
+{
+"G_pickup_mudflap_innerfender_R":
+{
+    "information":{
+        "authors":"Gamer!",
+        "name":"Front Right Inner Fender",
+        "value":110,
+    },
+
+    "slotType" : "G_pickup_mudflap_innerfender_R",
+
+    "flexbodies":[
+        ["mesh", "[group]:","nonFlexMaterials"],
+        ["pickup_innerfender_FR", ["pickup_innerfender_FR"]],
+    ],
+
+    "nodes":[
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":2.444},
+         //--right inner fender--
+         {"group":"pickup_innerfender_FR"},
+         ["if1r", -0.83, -0.94, 0.4],
+         ["if2r", -0.91, -1.17, 0.97],
+         ["if3r", -0.87, -1.76, 0.97],
+         ["if4r", -0.82, -1.92, 0.7],
+         ["if5r", -0.4, -1.47, 0.8],
+         {"group":""},
+        ],
+    "beams":[
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          //right inner fender
+          //main shape
+          {"deformLimitExpansion":1.2},
+          {"beamSpring":87819.5,"beamDamp":86.95},
+          {"beamDeform":14700,"beamStrength":"FLT_MAX"},
+          ["if5r", "if4r"],
+          ["if5r", "if1r"],
+          ["if5r", "if2r"],
+          ["if5r", "if3r"],
+          ["if4r", "if3r"],
+          ["if3r", "if2r"],
+          ["if2r", "if1r"],
+          //rigids
+          {"deformLimitExpansion":""},
+          {"beamDeform":3500,"beamStrength":"FLT_MAX"},
+          ["if1r", "if3r"],
+          ["if4r", "if2r"],
+
+          //attach
+          {"beamDeform":4550,"beamStrength":8400},
+          {"optional":true},
+          //radsupport
+          ["if4r", "s2rr"],
+          ["if4r", "s1rr"],
+          ["if4r", "s2r"],
+          //body
+          ["if1r", "b1rr"],
+          ["if1r", "b5rr"],
+          ["if1r", "f4r"],
+          ["if1r", "b2rr"],
+          ["if2r", "b5rr"],
+          ["if2r", "b6rr"],
+          ["if2r", "b5r"],
+          //fender
+          {"beamDeform":5950,"beamStrength":22400},
+          ["if1r", "fe2r"],
+          ["if1r", "fe1r"],
+          ["if1r", "fe4r"],
+          ["if1r", "fe3r"],
+          ["if2r", "fe4r"],
+          ["if2r", "fe3r"],
+          ["if2r", "fe8r"],
+          ["if2r", "fe2r"],
+          ["if3r", "fe9r"],
+          ["if3r", "fe8r"],
+          ["if3r", "fe4r"],
+          ["if3r", "fe5r"],
+          ["if3r", "fe10r"],
+          ["if4r", "fe5r"],
+          ["if4r", "fe6r"],
+          ["if4r", "fe11r"],
+          {"optional":false},
+
+          //limiters
+          {"beamType":"|SUPPORT", "beamPrecompression":1, "beamLongBound":6},
+          {"beamSpring":128780,"beamDamp":43.48},
+          {"beamDeform":6650,"beamStrength":7000},
+          //to wheel
+          {"optional":true},
+          {"beamPrecompression":0.6},
+          ["if4r", "fw1rr"],
+          ["if3r", "fw1rr"],
+          ["if2r", "fw1rr"],
+          ["if1r", "fw1rr"],
+          //to body
+          ["if2r", "b6rr"],
+          ["if3r", "b5rr"],
+          {"beamPrecompression":0.9},
+          ["if1r", "b2rr"],
+          ["if1r", "b2rr"],
+          ["if2r", "b5rr"],
+          //to radsupport
+          ["s2rr", "if4r"],
+          ["s1rr", "if3r"],
+          //to fender
+          {"beamPrecompression":1.0},
+          ["fe2r", "if5r"],
+          ["fe4r", "if5r"],
+          ["fe5r", "if5r"],
+
+          ["fb1rr", "if4r"],
+          ["fblr", "if4r"],
+          ["va2rr", "if4r"],
+          ["va1rr", "if4r"],
+          {"optional":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //inner fender
+            {"groundModel":"plastic"},
+            {"group":"pickup_innerfender_R"},
+            {"dragCoef":5},
+            ["if3r", "if4r", "if5r"],
+            ["if3r", "if5r", "if2r"],
+            ["if2r", "if5r", "if1r"],
+            {"group":""},
+    ],
+},
+"G_pickup_mudflap_innerfender_L":
+{
+    "information":{
+        "authors":"Gamer!",
+        "name":"Front Left Inner Fender",
+        "value":110,
+    },
+
+    "slotType" : "G_pickup_mudflap_innerfender_L",
+
+    "flexbodies":[
+        ["mesh", "[group]:","nonFlexMaterials"],
+        ["pickup_innerfender_FL", ["pickup_innerfender_FL"]],
+    ],
+
+    "nodes":[
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true},
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":2.444},
+         //--left inner fender--
+         {"group":"pickup_innerfender_FL"},
+         ["if1l", 0.83, -0.94, 0.4],
+         ["if2l", 0.91, -1.17, 0.97],
+         ["if3l", 0.87, -1.76, 0.97],
+         ["if4l", 0.82, -1.92, 0.7],
+         ["if5l", 0.4, -1.47, 0.8],
+         {"group":""},
+        ],
+    "beams":[
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          //left inner fender
+          //main shape
+          {"deformLimitExpansion":1.2},
+          {"beamSpring":87819.5,"beamDamp":86.95},
+          {"beamDeform":14700,"beamStrength":"FLT_MAX"},
+          ["if5l", "if4l"],
+          ["if5l", "if1l"],
+          ["if5l", "if2l"],
+          ["if5l", "if3l"],
+          ["if4l", "if3l"],
+          ["if3l", "if2l"],
+          ["if2l", "if1l"],
+          //rigids
+          {"deformLimitExpansion":""},
+          {"beamDeform":3500,"beamStrength":"FLT_MAX"},
+          ["if1l", "if3l"],
+          ["if4l", "if2l"],
+
+          //attach
+          {"beamDeform":4550,"beamStrength":8400},
+          {"optional":true},
+          //radsupport
+          ["if4l", "s2ll"],
+          ["if4l", "s1ll"],
+          ["if4l", "s2l"],
+          //body
+          ["if1l", "b1ll"],
+          ["if1l", "b5ll"],
+          ["if1l", "f4l"],
+          ["if1l", "b2ll"],
+          ["if2l", "b5ll"],
+          ["if2l", "b6ll"],
+          ["if2l", "b5l"],
+          //fender
+          {"beamDeform":5950,"beamStrength":22400},
+          ["if1l", "fe2l"],
+          ["if1l", "fe1l"],
+          ["if1l", "fe4l"],
+          ["if1l", "fe3l"],
+          ["if2l", "fe4l"],
+          ["if2l", "fe3l"],
+          ["if2l", "fe8l"],
+          ["if2l", "fe2l"],
+          ["if3l", "fe9l"],
+          ["if3l", "fe8l"],
+          ["if3l", "fe4l"],
+          ["if3l", "fe5l"],
+          ["if3l", "fe10l"],
+          ["if4l", "fe5l"],
+          ["if4l", "fe6l"],
+          ["if4l", "fe11l"],
+          {"optional":false},
+
+          //limiters
+          {"beamType":"|SUPPORT", "beamPrecompression":1, "beamLongBound":6},
+          {"beamSpring":128780,"beamDamp":43.48},
+          {"beamDeform":6650,"beamStrength":7000},
+          //to wheel
+          {"optional":true},
+          {"beamPrecompression":0.6},
+          ["if4l", "fw1ll"],
+          ["if3l", "fw1ll"],
+          ["if2l", "fw1ll"],
+          ["if1l", "fw1ll"],
+          //to body
+          ["if2l", "b6ll"],
+          ["if3l", "b5ll"],
+          {"beamPrecompression":0.9},
+          ["if1l", "b2ll"],
+          ["if1l", "b2ll"],
+          ["if2l", "b5ll"],
+          //to radsupport
+          ["s2ll", "if4l"],
+          ["s1ll", "if3l"],
+          //to fender
+          {"beamPrecompression":1.0},
+          ["fe2l", "if5l"],
+          ["fe4l", "if5l"],
+          ["fe5l", "if5l"],
+
+          ["fb1ll", "if4l"],
+          ["fbll", "if4l"],
+          ["va2ll", "if4l"],
+          ["va1ll", "if4l"],
+          {"optional":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //inner fender
+            {"groundModel":"plastic"},
+            {"group":"pickup_innerfender_l"},
+            {"dragCoef":5},
+            ["if4l", "if3l", "if5l"],
+            ["if5l", "if3l", "if2l"],
+            ["if5l", "if2l", "if1l"],
+            {"group":""},
+    ],
+},
+}

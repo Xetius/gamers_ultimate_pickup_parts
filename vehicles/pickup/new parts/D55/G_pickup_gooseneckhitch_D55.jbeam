@@ -1,0 +1,81 @@
+{
+"G_pickup_gooseneck_ball_D55_rear": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Gooseneck Hitch",
+        "value":70,
+    },
+    "slotType" : "G_pickup_D55_gooseneck_rear",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_D55_gooseneck_trailer_hitch", ["pickup_frame", "pickup_towhitch"],[],{"pos":{"x":0.0, "y":2.125, "z":0.0}}],
+    ],
+    "triggers2":[
+        ["id",           "idRef:","idX:","idY:","type","size", "baseRotation",       "rotation",           "translation",        "baseTranslation"],
+        ["gooseneckAttach","gh","gh2","f7",  "sphere", 0.04, {"x":0, "y":0, "z":0},{"x":0, "y":0, "z":0},{"x":0, "y":0, "z":0},{"x":0, "y":0, "z":0}],
+    ],
+    "triggerEventLinks2":[
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["gooseneckAttach",        "action0", "gooseneckToggle"]
+    ],
+    "actionsEnabled": [
+        ["id"],
+        ["gooseneckToggle"],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"selfCollision":false},
+         //--TOW HITCH--
+         {"nodeMaterial":"|NM_METAL"},
+         {"group":"pickup_towhitch"},
+         {"nodeWeight":5.5},
+         ["gh",  0.0, 3.64, 0.73,{"couplerTag":"gooseneck_hitch","couplerStrength":2001000,"couplerRadius":1}],
+         ["gh2", 0.0, 3.64, 0.45],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TOW HITCH--
+          {"beamSpring":1264150,"beamDamp":183.3},
+          {"beamDeform":90300,"beamStrength":623000},
+          ["gh2", "gh"],
+          {"beamDeform":60300,"beamStrength":623000},
+          ["gh", "f10l"],
+          ["gh", "f10r"],
+          ["gh2","f10l"],
+          ["gh2","f10r"],
+          ["gh", "f18l"],
+          ["gh", "f18r"],
+          ["gh2","f18l"],
+          ["gh2","f18r"],
+          ["gh", "f19l"],
+          ["gh", "f19r"],
+          ["gh2","f19l"],
+          ["gh2","f19r"],
+          ["gh", "f20l"],
+          ["gh", "f20r"],
+          ["gh2","f20l"],
+          ["gh2","f20r"],
+          ["gh", "f9l"],
+          ["gh", "f9r"],
+          ["gh2","f9l"],
+          ["gh2","f9r"],
+          ["gh", "f8l"],
+          ["gh", "f8r"],
+          ["gh2","f8l"],
+          ["gh2","f8r"],
+          ["gh", "f9"],
+          ["gh2","f9"],
+          ["gh", "f19"],
+          ["gh2","f19"],
+
+    ],
+    "ties":[
+        ["id1:", "maxLen", "rate", "short", "long", "group", "maxforce"],
+        ["gh", 0.75, 1, 1, 1, "pickup_towhitch", 10000000],
+    ],
+},
+}

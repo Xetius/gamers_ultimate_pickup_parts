@@ -1,0 +1,16 @@
+{
+  "Config Type":"Custom",
+  "Configuration":"Trailer D55 Triple Car Hauler",
+  "Description":"A heavy duty gooseneck car hauler trailer with hydraulic lifting ramps, and capacity for up to three cars",
+  "Population":4000,
+  "Value":88700,
+  "Weight":2920,
+  "Years":{
+    "max":2003,
+    "min":1986
+  },
+  "defaultPaintName1":"Royal Red",
+  "defaultPaintName2":"Royal Red",
+  "defaultPaintName3":"Royal Red",
+  "vehicleSelectorSubGroup":"Trailers"
+}

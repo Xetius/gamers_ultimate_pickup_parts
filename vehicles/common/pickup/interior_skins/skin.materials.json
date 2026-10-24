@@ -1,0 +1,290 @@
+{
+  "pickup_interior.skin_interior.pink": {
+    "name": "pickup_interior.skin_interior.pink",
+    "mapTo": "pickup_interior.skin_interior.pink",
+    "class": "Material",
+    "persistentId": "ec06e45e-45ad-4ec5-829a-085fc5e9d833",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "vehicles/common/pickup/pickup_interior_ao.color.png",
+        "baseColorMap": "vehicles/common/pickup/interior_skins/pickup_interior_pink_d.color.png",
+        "metallicMap": "vehicles/common/pickup/pickup_interior_m.data.png",
+        "normalMap": "vehicles/common/pickup/pickup_interior_leather_nm.normal.png",
+        "pixelSpecular": true,
+        "reflectivityMap": "vehicles/common/pickup/pickup_interior_grey_r.color.png",
+        "roughnessMap": "vehicles/common/pickup/pickup_interior_r.data.png",
+        "metallicFactor": 1,
+        "roughnessFactor": 1,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "cubemap": "global_cubemap_metalblurred",
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "pickup_interior.skin_interior.green": {
+    "name": "pickup_interior.skin_interior.green",
+    "mapTo": "pickup_interior.skin_interior.green",
+    "class": "Material",
+    "persistentId": "ec06e45e-45ad-4ec5-829a-085fc5e9d833",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "vehicles/common/pickup/pickup_interior_ao.color.png",
+        "baseColorMap": "vehicles/common/pickup/interior_skins/pickup_interior_green_d.color.png",
+        "metallicMap": "vehicles/common/pickup/pickup_interior_m.data.png",
+        "normalMap": "vehicles/common/pickup/pickup_interior_leather_nm.normal.png",
+        "pixelSpecular": true,
+        "reflectivityMap": "vehicles/common/pickup/pickup_interior_grey_r.color.png",
+        "roughnessMap": "vehicles/common/pickup/pickup_interior_r.data.png",
+        "metallicFactor": 1,
+        "roughnessFactor": 1,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "cubemap": "global_cubemap_metalblurred",
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "pickup_interior.skin_interior.dark_brown": {
+    "name": "pickup_interior.skin_interior.dark_brown",
+    "mapTo": "pickup_interior.skin_interior.dark_brown",
+    "class": "Material",
+    "persistentId": "ec06e45e-45ad-4ec5-829a-085fc5e9d833",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "vehicles/common/pickup/pickup_interior_ao.color.png",
+        "baseColorMap": "vehicles/common/pickup/interior_skins/pickup_interior_dark_brown_d.color.png",
+        "metallicMap": "vehicles/common/pickup/pickup_interior_m.data.png",
+        "normalMap": "vehicles/common/pickup/pickup_interior_leather_nm.normal.png",
+        "pixelSpecular": true,
+        "reflectivityMap": "vehicles/common/pickup/pickup_interior_grey_r.color.png",
+        "roughnessMap": "vehicles/common/pickup/pickup_interior_r.data.png",
+        "metallicFactor": 1,
+        "roughnessFactor": 1,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "cubemap": "global_cubemap_metalblurred",
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "pickup_interior.skin_interior.dark_blue": {
+    "name": "pickup_interior.skin_interior.dark_blue",
+    "mapTo": "pickup_interior.skin_interior.dark_blue",
+    "class": "Material",
+    "persistentId": "ec06e45e-45ad-4ec5-829a-085fc5e9d833",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "vehicles/common/pickup/pickup_interior_ao.color.png",
+        "baseColorMap": "vehicles/common/pickup/interior_skins/pickup_interior_dark_blue_d.color.png",
+        "metallicMap": "vehicles/common/pickup/pickup_interior_m.data.png",
+        "normalMap": "vehicles/common/pickup/pickup_interior_leather_nm.normal.png",
+        "pixelSpecular": true,
+        "reflectivityMap": "vehicles/common/pickup/pickup_interior_grey_r.color.png",
+        "roughnessMap": "vehicles/common/pickup/pickup_interior_r.data.png",
+        "metallicFactor": 1,
+        "roughnessFactor": 1,
+        "useAnisotropic": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "alphaRef": 0,
+    "cubemap": "global_cubemap_metalblurred",
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "order_simset": 0,
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "roamer_interior.skin_interior.pink": {
+    "name": "roamer_interior.skin_interior.pink",
+    "mapTo": "roamer_interior.skin_interior.pink",
+    "class": "Material",
+    "persistentId": "ec06e45e-45ad-4ec5-829a-085fc5e9d833",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/common/pickup/roamer_interior_blue_ao.data.png",
+        "baseColorMap": "vehicles/common/pickup/interior_skins/roamer_interior_pink_d.color.png",
+        "clearCoatRoughnessFactor": 0,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/common/pickup/roamer_interior_m.data.png",
+        "normalMap": "/vehicles/common/pickup/roamer_interior_blue_nm.normal.png",
+        "opacityFactor": 0,
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/common/pickup/roamer_interior_blue_r.data.png"
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      }
+    ],
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "roamer_interior.skin_interior.green": {
+    "name": "roamer_interior.skin_interior.green",
+    "mapTo": "roamer_interior.skin_interior.green",
+    "class": "Material",
+    "persistentId": "ec06e45e-45ad-4ec5-829a-085fc5e9d833",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/common/pickup/roamer_interior_red_ao.data.png",
+        "baseColorMap": "vehicles/common/pickup/interior_skins/roamer_interior_green_d.color.png",
+        "clearCoatRoughnessFactor": 0,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/common/pickup/roamer_interior_m.data.png",
+        "normalMap": "/vehicles/common/pickup/roamer_interior_red_nm.normal.png",
+        "opacityFactor": 0,
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/common/pickup/roamer_interior_red_r.data.png"
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      }
+    ],
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "roamer_interior.skin_interior.dark_brown": {
+    "name": "roamer_interior.skin_interior.dark_brown",
+    "mapTo": "roamer_interior.skin_interior.dark_brown",
+    "class": "Material",
+    "persistentId": "ec06e45e-45ad-4ec5-829a-085fc5e9d833",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/common/pickup/roamer_interior_red_ao.data.png",
+        "baseColorMap": "vehicles/common/pickup/interior_skins/roamer_interior_dark_brown_d.color.png",
+        "clearCoatRoughnessFactor": 0,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/common/pickup/roamer_interior_m.data.png",
+        "normalMap": "/vehicles/common/pickup/roamer_interior_red_nm.normal.png",
+        "opacityFactor": 0,
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/common/pickup/roamer_interior_red_r.data.png"
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      }
+    ],
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "roamer_interior.skin_interior.dark_blue": {
+    "name": "roamer_interior.skin_interior.dark_blue",
+    "mapTo": "roamer_interior.skin_interior.dark_blue",
+    "class": "Material",
+    "persistentId": "ec06e45e-45ad-4ec5-829a-085fc5e9d833",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/common/pickup/roamer_interior_red_ao.data.png",
+        "baseColorMap": "vehicles/common/pickup/interior_skins/roamer_interior_dark_blue_d.color.png",
+        "clearCoatRoughnessFactor": 0,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/common/pickup/roamer_interior_m.data.png",
+        "normalMap": "/vehicles/common/pickup/roamer_interior_red_nm.normal.png",
+        "opacityFactor": 0,
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/common/pickup/roamer_interior_red_r.data.png"
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      }
+    ],
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  }
+}

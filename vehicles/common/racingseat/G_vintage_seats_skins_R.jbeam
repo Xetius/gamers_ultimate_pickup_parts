@@ -1,0 +1,77 @@
+{
+//this works by leaking materialOverride to seat flexbodies, only affects vintageseat_01 material
+/*
+"G_skin_vintageseat_RL_black": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Black Leather",
+        "value":1100,
+    },
+    "slotType" : "G_skin_vintageseat_RL",
+    "flexbodies": [
+       ["mesh", "[group]:", "nonFlexMaterials"],
+       {"materialOverride":[["vintageseat_01","vintageseat_01"]]},
+   ],
+},
+"G_skin_vintageseat_RL_tan": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Tan Leather",
+        "value":1100,
+    },
+    "slotType" : "G_skin_vintageseat_RL",
+    "flexbodies": [
+       ["mesh", "[group]:", "nonFlexMaterials"],
+       {"materialOverride":[["vintageseat_01","vintageseat_01_tan"]]},
+   ],
+},
+"G_skin_vintageseat_RL_red": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Red Leather",
+        "value":1100,
+    },
+    "slotType" : "G_skin_vintageseat_RL",
+    "flexbodies": [
+       ["mesh", "[group]:", "nonFlexMaterials"],
+       {"materialOverride":[["vintageseat_01","vintageseat_01_red"]]},
+   ],
+},
+"G_skin_vintageseat_RR_black": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Black Leather",
+        "value":1100,
+    },
+    "slotType" : "G_skin_vintageseat_RR",
+    "flexbodies": [
+       ["mesh", "[group]:", "nonFlexMaterials"],
+       {"materialOverride":[["vintageseat_01","vintageseat_01"]]},
+   ],
+},
+"G_skin_vintageseat_RR_tan": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Tan Leather",
+        "value":1100,
+    },
+    "slotType" : "G_skin_vintageseat_RR",
+    "flexbodies": [
+       ["mesh", "[group]:", "nonFlexMaterials"],
+       {"materialOverride":[["vintageseat_01","vintageseat_01_tan"]]},
+   ],
+},
+"G_skin_vintageseat_RR_red": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Red Leather",
+        "value":1100,
+    },
+    "slotType" : "G_skin_vintageseat_RR",
+    "flexbodies": [
+       ["mesh", "[group]:", "nonFlexMaterials"],
+       {"materialOverride":[["vintageseat_01","vintageseat_01_red"]]},
+   ],
+},
+*/
+},

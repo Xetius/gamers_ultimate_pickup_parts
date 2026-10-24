@@ -1,0 +1,312 @@
+{
+"G_pickup_front_trailer_hitch_light": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Light Duty Tongue Hitch",
+        "value":700,
+    },
+    "slotType" : "G_pickup_front_trailer_hitch",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_pickup_tiltdeck_hydraulicPump","","Hydraulic Pump"],
+    ],
+    "electrics": {
+        "allowedIgnitionLevels":[0]
+        "ignitionLevelOverrideType": "none"
+    }
+    "controller": [
+        ["fileName"],
+        ["trailerFeet"],
+    ],
+    "triggers":[
+        ["id", "label", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["toggle_feet", "", "tjr1b","tjr2b","tjr1a", "box", {"x":0.08, "y":0.08, "z":0.08}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.15, "y":0.15, "z":0.15}, {"deformGroup":"boxutility_feet"}],
+    ],
+    "triggerEventLinks":[
+        ["triggerId:triggers", "action", "targetEventId:events"],
+        ["toggle_feet", "action0", "toggle_feet"]
+    ],
+    "events":[
+        ["id", "title", "desc"],
+        ["toggle_feet", "ui.inputActions.boxutility.toggle_feet.title", "ui.inputActions.boxutility.toggle_feet.description", {"onUp":"electrics.values.feet = 1-(electrics.values.feet or 0)", "order": 1}]
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["G_pickup_trailer_tongue", ["pickup_frame"], [],{"pos":{"x":0.0, "y":0.05, "z":0.0}}],
+        ["G_pickup_trailer_tongueboard", ["pickup_frame"], [],{"pos":{"x":0.0, "y":0.05, "z":0.0}}],
+        ["G_pickup_trailer_tonguejack", ["pickup_tonguejack"], [],{"pos":{"x":0.0, "y":0.01, "z":0.0}}],
+        ["G_pickup_trailer_tonguejack_foot", ["pickup_tonguejack_foot"], [],{"pos":{"x":0.0, "y":0.01, "z":0.01}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"selfCollision":true},
+         //--TRAILER--
+         {"nodeMaterial":"|NM_METAL"},
+         {"group":"pickup_frame"},
+         {"nodeWeight":3.25},
+         ["t27r", -0.37, 0.05, 0.48],
+         ["t27l", 0.37, 0.05, 0.48],
+
+         ["t17r", -0.37, 0.05, 0.36],
+         ["t17l", 0.37, 0.05, 0.36],
+
+         //extra node
+         {"group":"pickup_frame"},
+         ["t8", 0.0, -0.60, 0.36, {"nodeWeight":3.5, "selfCollision":false}],
+         //tow ball end
+         {"selfCollision":true},
+         {"nodeWeight":5.0},
+         ["t9", 0.0, -0.82, 0.43, {"tag":"tow_hitch","couplerStrength":801000,"importElectrics": ["lowhighbeam", "reverse", "signal_L", "signal_R", "brakelight_signal_L", "brakelight_signal_R"],"importInputs": ["brake", "parkingbrake"]}],
+
+          //tongue jack
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeWeight":2.1},
+         {"group":"pickup_tonguejack_foot"},
+         ["tj1a", -0.1, -0.52, 0.0],
+         ["tj2a",  0.1, -0.52, 0.0],
+         ["tj3a",  0.0, -0.67, 0.0, {"selfCollision":false}],
+
+         {"collision":false},
+         {"selfCollision":false},
+         ["tj1b", -0.1, -0.52, 0.85],
+         ["tj2b",  0.1, -0.52, 0.85],
+         ["tj3b",  0.0, -0.67, 0.85],
+
+         //rail on frame
+         {"collision":true},
+         {"nodeWeight":2.1},
+         {"selfCollision":false},
+         {"group":"pickup_tonguejack"},
+         ["tjr1a", -0.1, -0.52, 0.41],
+         ["tjr2a",  0.1, -0.52, 0.41],
+         ["tjr3a",  0.0, -0.67, 0.41],
+
+         ["tjr1b", -0.1, -0.52, 0.83],
+         ["tjr2b",  0.1, -0.52, 0.83],
+         ["tjr3b",  0.0, -0.67, 0.83],
+         {"group":""},
+    ],
+    "rails": {
+        "tonguejack_1":{
+            "links:":["tj1a","tj1b"], "broken:":[], "looped":false, "capped":true,
+        },
+        "tonguejack_2":{
+            "links:":["tj2a","tj2b"], "broken:":[], "looped":false, "capped":true,
+        },
+        "tonguejack_3":{
+            "links:":["tj3a","tj3b"], "broken:":[], "looped":false, "capped":true,
+        },
+        "rearWallRailL":{
+            "links:":["wr1l","wr2l"], "broken:":[], "looped":false, "capped":true,
+        },
+        "rearWallRailR":{
+            "links:":["wr1r","wr2r"], "broken:":[], "looped":false, "capped":true,
+        },
+    },
+    "slidenodes": [
+        ["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
+        ["tjr1a", "tonguejack_1", true, true, 0.0, 2001000, 5000000, 5000000],
+        ["tjr1b", "tonguejack_1", true, true, 0.0, 2001000, 5000000, 5000000],
+        ["tjr2a", "tonguejack_2", true, true, 0.0, 2001000, 5000000, 5000000],
+        ["tjr2b", "tonguejack_2", true, true, 0.0, 2001000, 5000000, 5000000],
+        ["tjr3a", "tonguejack_3", true, true, 0.0, 2001000, 5000000, 5000000],
+        ["tjr3b", "tonguejack_3", true, true, 0.0, 2001000, 5000000, 5000000],
+
+        ["wrc1l", "rearWallRailL", true, true, 0.0, 201000, 5000000, 5000000],
+        ["wrc2l", "rearWallRailL", true, true, 0.0, 201000, 5000000, 5000000],
+        ["wrc3l", "rearWallRailL", true, true, 0.0, 201000, 5000000, 5000000],
+
+        ["wrc1r", "rearWallRailR", true, true, 0.0, 201000, 5000000, 5000000],
+        ["wrc2r", "rearWallRailR", true, true, 0.0, 201000, 5000000, 5000000],
+        ["wrc3r", "rearWallRailR", true, true, 0.0, 201000, 5000000, 5000000],
+    ],
+    "hydros": [
+          ["id1:","id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":2001000,"beamDamp":1000},
+          {"beamDeform":50000,"beamStrength":"FLT_MAX"},
+          //feet
+          ["tj1a","tjr1a", {"inputSource":"feet","inLimit":0.15,"outLimit":1,"inRate":0.4,"outRate":0.4,"inputFactor":-1.0}],
+          ["tj2a","tjr2a", {"inputSource":"feet","inLimit":0.15,"outLimit":1,"inRate":0.4,"outRate":0.4,"inputFactor":-1.0}],
+          ["tj3a","tjr3a", {"inputSource":"feet","inLimit":0.15,"outLimit":1,"inRate":0.4,"outRate":0.4,"inputFactor":-1.0}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //tongue jack
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":2001000,"beamDamp":100},
+          {"beamDeform":40000,"beamStrength":"FLT_MAX"},
+          {"deformationTriggerRatio":0.03},
+          ["tj1a","tj2a"],
+          ["tj2a","tj3a"],
+          ["tj3a","tj1a"],
+          ["tj1b","tj2b"],
+          ["tj2b","tj3b"],
+          ["tj3b","tj1b"],
+
+          ["tj1a","tj1b"],
+          ["tj1a","tj2b"],
+          ["tj1a","tj3b"],
+          ["tj2a","tj1b"],
+          ["tj2a","tj2b"],
+          ["tj2a","tj3b"],
+          ["tj3a","tj1b"],
+          ["tj3a","tj2b"],
+          ["tj3a","tj3b"],
+
+          //rail on frame
+          ["tjr1a","tjr2a"],
+          ["tjr2a","tjr3a"],
+          ["tjr3a","tjr1a"],
+          ["tjr1b","tjr2b"],
+          ["tjr2b","tjr3b"],
+          ["tjr3b","tjr1b"],
+
+          ["tjr1a","tjr1b"],
+          ["tjr1a","tjr2b"],
+          ["tjr1a","tjr3b"],
+          ["tjr2a","tjr1b"],
+          ["tjr2a","tjr2b"],
+          ["tjr2a","tjr3b"],
+          ["tjr3a","tjr1b"],
+          ["tjr3a","tjr2b"],
+          ["tjr3a","tjr3b"],
+
+          //rail to frame
+          {"beamSpring":4001000,"beamDamp":100},
+          ["tjr1a", "t8"],
+          ["tjr2a", "t8"],
+          ["tjr3a", "t8"],
+          ["tjr1a", "t9"],
+          ["tjr3a", "t9"],
+          ["tjr2a", "t9"],
+          ["tjr3b", "t9"],
+          ["tjr1b", "t9"],
+          ["tjr2b", "t9"],
+          ["tjr3b", "t8"],
+          ["tjr2b", "t8"],
+          ["tjr1b", "t8"],
+
+          ["t17r", "tjr1b"],
+          ["t17l", "tjr2b"],
+          ["t17r", "tjr2b"],
+          ["t17l", "tjr1b"],
+          ["t27r", "tjr1a"],
+          ["t27l", "tjr2a"],
+          ["t27r", "tjr2a"],
+          ["t27l", "tjr1a"],
+
+          ["f5r", "tjr1b"],
+          ["f5l", "tjr1b"],
+          ["f16r", "tjr1b"],
+          ["f16l", "tjr1b"],
+          ["f5r", "tjr2b"],
+          ["f5l", "tjr2b"],
+          ["f16r", "tjr2b"],
+          ["f16l", "tjr2b"],
+          ["f5r", "tjr3b"],
+          ["f5l", "tjr3b"],
+          ["f16r", "tjr3b"],
+          ["f16l", "tjr3b"],
+
+          //--TRAILER--
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":1501000,"beamDamp":150},
+          {"beamDeform":50000,"beamStrength":"FLT_MAX"},
+          //bottom
+          ["t17r","t17l"],
+          ["t27r","t27l"],
+
+          //main shape vertical
+          ["t27r","t17r"],
+          ["t27l","t17l"],
+
+          //attatch to frame
+          ["t17r","f15r"],
+          ["t17l","f15l"],
+          ["t17r","f5r"],
+          ["t17l","f5l"],
+          ["t27r","f15r"],
+          ["t27l","f15l"],
+          ["t27r","f5r"],
+          ["t27l","f5l"],
+
+          ["t17r","f16r"],
+          ["t17l","f16l"],
+          ["t17r","f6r"],
+          ["t17l","f6l"],
+          ["t17r","f16"],
+          ["t17l","f16"],
+          ["t27r","f16r"],
+          ["t27l","f16l"],
+          ["t27r","f6r"],
+          ["t27l","f6l"],
+          ["t27r","f16"],
+          ["t27l","f16"],
+
+          //attach to towball part of frame
+          {"beamSpring":1501000,"beamDamp":150},
+          {"beamDeform":60000,"beamStrength":"FLT_MAX"},
+          ["t27r","t8"],
+          ["t27l","t8"],
+          ["t17r","t8"],
+          ["t17l","t8"],
+          ["f15r","t8"],
+          ["f5l","t8"],
+          ["f15r","t8"],
+          ["f5l","t8"],
+
+          ["t27r","t9"],
+          ["t27l","t9"],
+          ["t17r","t9"],
+          ["t17l","t9"],
+          ["f15r","t9"],
+          ["f5l","t9"],
+          ["f15r","t9"],
+          ["f5l","t9"],
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":2001000,"beamDamp":100},
+          {"beamDeform":40000,"beamStrength":"FLT_MAX"},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //trailer
+            //top
+            {"group":""},
+            {"dragCoef":10},
+            {"groundModel":"metal"},
+
+            //1st
+            ["t8","t27l","t27r"],
+            ["t8","t17r","t17l"],
+            ["t8","t17l","t27l"],
+            ["t8","t27r","t17r"],
+
+            //2nd
+            ["f16","f15r","t27r"],
+            ["f16","t27r","t27l"],
+            ["f16","t27l","f15l"],
+            ["f15r","f5r","t27r"],
+            ["f5r","t17r","t27r"],
+            ["f15l","t27","f5l"],
+            ["f5l","t27l","t17l"],
+            ["f5r","f5l","t17r"],
+            ["f5l","t17l","t17r"],
+
+            //tongue jack
+            {"dragCoef":1},
+            ["tjr3b", "tj3a", "tj2a"],
+            ["tj2a", "tjr2b", "tjr3b"],
+            ["tjr2b", "tj2a", "tj1a"],
+            ["tj1a", "tjr1b", "tjr2b"],
+            ["tjr1b", "tj1a", "tj3a"],
+            ["tj3a", "tjr3b", "tjr1b"],
+            ["tjr1b", "tjr3b", "tjr2b"],
+            ["tj3a", "tj1a", "tj2a"],
+    ],
+},
+}

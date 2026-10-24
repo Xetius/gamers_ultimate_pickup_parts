@@ -1,0 +1,396 @@
+{
+"G_pickup_aux_cover": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Top Cover (Body Colored)",
+        "value":350,
+    },
+    "slotType" : "G_pickup_aux_roof",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_aux_bedcover", ["pickup_aux_bedcover"], [], {"pos":{"x": 0.0, "y":1.101, "z":0.0}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"auxCoverCoupler"}],
+    ]
+    "auxCoverCoupler":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["auc2rr",      "auc2r",       20000,                     0.015,                  0.005,                      0.2,                 0.1,                   "auxCoverLatch_break", {"forceCid1":"aus2r", "forceCid2":"auc2r"}]
+            ["auc2ll",      "auc2l",       20000,                     0.015,                  0.005,                      0.2,                 0.1,                   "auxCoverLatch_break", {"forceCid1":"aus2l", "forceCid2":"auc2l"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["auc2"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 20,
+        "openForceDuration": 0.2,
+        "closeForceMagnitude": 195,
+        "closeForceDuration": 1.2
+    }
+    "triggers":[
+        ["id", "label", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["auxCoverR", "", "auc2r","auc2","auc1r", "box", {"x":0.05, "y":0.05, "z":0.15}, {"x":0, "y":0, "z":-10}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":-0.03, "y":0.03, "z":-0.09}, {"deformGroup":"pickup_aux_bedcover"}],
+        ["auxCoverL", "", "auc2l","auc2","auc1l", "box", {"x":0.05, "y":0.05, "z":0.15}, {"x":0, "y":0, "z":10}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":-0.03, "y":0.03, "z":0.04}, {"deformGroup":"pickup_aux_bedcover"}],
+    ],
+    "triggerEventLinks":[
+        ["triggerId:triggers", "action", "targetEventId:events"],
+        ["auxCoverR", "action0", "auxCoverLatch"]
+        ["auxCoverL", "action0", "auxCoverLatch"]
+    ],
+    "events":[
+        ["id", "title", "desc"],
+        ["auxCoverLatch", "Toggle Top Cover", "ui.inputActions.pickup.bedCoverLatch.description", {"onUp":"controller.getControllerSafe('auxCoverCoupler').toggleGroupConditional({{'rollcage_doorlock_1','attached','Unable to open with current setup'}})"}],
+        ["auxLatch_R", "Toggle Right Toolbox", "ui.inputActions.pickup.doorLatch_R.description", {"onUp":"controller.getControllerSafe('auxRCoupler').toggleGroupConditional({{'auxCoverCoupler','attached','vehicle.advancedCouplerControl.openOtherSideFirst'}})"}],
+        ["auxLatch_L", "Toggle Left Toolbox", "ui.inputActions.pickup.doorLatch_L.description", {"onUp":"controller.getControllerSafe('auxLCoupler').toggleGroupConditional({{'auxCoverCoupler','attached','vehicle.advancedCouplerControl.openOtherSideFirst'}})"}],
+
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"frictionCoef":0.5},
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeWeight":0.6},
+         {"group":"pickup_aux_bedcover"},
+         ["auc1r",-0.90, 0.445, 1.21],
+         ["auc1",0.0, 0.445, 1.21],
+         ["auc1l",0.90, 0.445, 1.21],
+
+         ["auc2r",-0.90, 1.14, 1.236],
+         ["auc2",0.0, 1.14, 1.236],
+         ["auc2l",0.90, 1.14, 1.236],
+
+         {"group":""},
+         ["auc3",0.0, 0.8, 0.85, {"collision":false, "selfCollision":false}],
+         ["auc2rr",-0.90, 1.14, 1.236, {"collision":false, "selfCollision":false}],
+         ["auc2ll",0.90, 1.14, 1.236, {"collision":false, "selfCollision":false}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":188940,"beamDamp":23.5},
+          {"beamDeform":5000,"beamStrength":25000},
+          {"deformLimitExpansion":1.2},
+          ["auc1l", "auc1"],
+          ["auc1", "auc1r"],
+          ["auc2l", "auc2"],
+          ["auc2", "auc2r"],
+          ["auc2r", "auc1r"],
+          ["auc2", "auc1"],
+          ["auc2l", "auc1l"],
+          //cross
+          {"deformLimitExpansion":""},
+          ["auc1r", "auc2"],
+          ["auc1r", "auc2"],
+          ["auc2", "auc1l"],
+          ["auc1", "auc2l"],
+          //rigids
+          ["auc1r", "auc1l"],
+          ["auc2r", "auc2l"],
+          ["auc1r", "auc2l"],
+          ["auc2r", "auc1l"],
+
+          //rigidifier
+          {"beamSpring":128940,"beamDamp":90},
+          ["auc3", "auc1l"],
+          ["auc3", "auc1"],
+          ["auc3", "auc1r"],
+          ["auc3", "auc2l"],
+          ["auc3", "auc2"],
+          ["auc3", "auc2r"],
+
+          //attach to support
+          {"breakGroup":"G_aux_bedcover"},
+          {"beamSpring":288940,"beamDamp":23.5},
+          {"beamDeform":3800,"beamStrength":7000},
+          ["auc1r", "aus1r"],
+          ["auc1r", "aus2r"],
+          ["auc1", "aus1r"],
+          ["auc1", "aus2r"],
+          ["auc1r", "aus3r"],
+          ["auc1r", "aus4r"],
+          ["auc1", "aus3r"],
+          ["auc1", "aus4r"],
+
+          ["auc1", "aut3rr"],
+          ["auc1", "aut4rr"],
+          ["auc1", "aut3r"],
+          ["auc1", "aut4r"],
+          ["auc1r", "aut3rr"],
+          ["auc1r", "aut4rr"],
+          ["auc1r", "aut3r"],
+          ["auc1r", "aut4r"],
+
+          ["auc1l", "aus1l"],
+          ["auc1l", "aus2l"],
+          ["auc1", "aus1l"],
+          ["auc1", "aus2l"],
+          ["auc1l", "aus3l"],
+          ["auc1l", "aus4l"],
+          ["auc1", "aus3l"],
+          ["auc1", "aus4l"],
+
+          ["auc1", "aut3ll"],
+          ["auc1", "aut4ll"],
+          ["auc1", "aut3l"],
+          ["auc1", "aut4l"],
+          ["auc1l", "aut3ll"],
+          ["auc1l", "aut4ll"],
+          ["auc1l", "aut3l"],
+          ["auc1l", "aut4l"],
+
+          //attach couplers
+          {"breakGroup":""},
+          ["auc2rr", "aus1r"],
+          ["auc2rr", "aus2r"],
+          ["auc2rr", "aus3r"],
+          ["auc2rr", "aus4r"],
+          ["auc2rr", "aus2l"],
+          ["auc2rr", "aus3l"],
+          ["auc2ll", "aus1l"],
+          ["auc2ll", "aus2l"],
+          ["auc2ll", "aus3l"],
+          ["auc2ll", "aus4l"],
+          ["auc2ll", "aus1r"],
+          ["auc2ll", "aus2r"],
+
+          {"beamSpring":300,"beamDamp":100},
+          {"beamDeform":4000,"beamStrength":4000},
+          {"beamPrecompression":1.6},
+          //["aus2r", "auc2r", {"breakGroup":"auxcover_R"}],
+          //["aus2l", "auc2l", {"breakGroup":"auxcover_L"}],
+          {"beamSpring":480,"beamDamp":120},
+          {"beamDeform":4000,"beamStrength":4000},
+          {"beamPrecompression":2.35},
+          ["aus5", "auc2", {"breakGroup":"auxcover"}],
+          {"beamPrecompression":1},
+
+          //--SUPPORT BEAMS--
+          {"beamType":"|SUPPORT","beamLongBound":5},
+          {"beamSpring":37700,"beamDamp":225},
+          {"beamDeform":2835,"beamStrength":57400},
+          ["aus2r","auc2r"],
+          ["aus2r","auc2"],
+          ["aus2l","auc2l"],
+          ["aus2l","auc2"],
+          {"optional":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.2},
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":60},
+        {"groundModel":"plastic"},
+        ["auc2l", "auc1l", "auc1ll"],
+        ["auc2l", "auc1ll", "auc2ll"],
+        ["auc2l", "auc1", "auc1l"],
+        ["auc2l", "auc2", "auc1"],
+        ["auc2r", "auc1", "auc2"],
+        ["auc2r", "auc1r", "auc1"],
+        ["auc2r", "auc1rr", "auc1r"],
+        ["auc2r", "auc2rr", "auc1rr"],
+    ],
+},
+"G_pickup_aux_cover_black": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Top Cover (Black)",
+        "value":350,
+    },
+    "slotType" : "G_pickup_aux_roof",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_aux_bedcover_black", ["pickup_aux_bedcover"], [], {"pos":{"x": 0.0, "y":1.101, "z":0.0}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"auxCoverCoupler"}],
+    ]
+    "auxCoverCoupler":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["auc2rr",      "auc2r",       20000,                     0.015,                  0.005,                      0.2,                 0.1,                   "auxCoverLatch_break", {"forceCid1":"aus2r", "forceCid2":"auc2r"}]
+            ["auc2ll",      "auc2l",       20000,                     0.015,                  0.005,                      0.2,                 0.1,                   "auxCoverLatch_break", {"forceCid1":"aus2l", "forceCid2":"auc2l"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["auc2"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 20,
+        "openForceDuration": 0.2,
+        "closeForceMagnitude": 195,
+        "closeForceDuration": 1.2
+    }
+    "triggers":[
+        ["id", "label", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["auxCoverR", "", "auc2r","auc2","auc1r", "box", {"x":0.05, "y":0.05, "z":0.15}, {"x":0, "y":0, "z":-10}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":-0.03, "y":0.03, "z":-0.09}, {"deformGroup":"pickup_aux_bedcover"}],
+        ["auxCoverL", "", "auc2l","auc2","auc1l", "box", {"x":0.05, "y":0.05, "z":0.15}, {"x":0, "y":0, "z":10}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":-0.03, "y":0.03, "z":0.04}, {"deformGroup":"pickup_aux_bedcover"}],
+    ],
+    "triggerEventLinks":[
+        ["triggerId:triggers", "action", "targetEventId:events"],
+        ["auxCoverR", "action0", "auxCoverLatch"]
+        ["auxCoverL", "action0", "auxCoverLatch"]
+    ],
+    "events":[
+        ["id", "title", "desc"],
+        ["auxCoverLatch", "Toggle Top Cover", "ui.inputActions.pickup.bedCoverLatch.description", {"onUp":"controller.getControllerSafe('auxCoverCoupler').toggleGroupConditional({{'rollcage_doorlock_1','attached','Unable to open with current setup'}})"}],
+        ["auxLatch_R", "Toggle Right Toolbox", "ui.inputActions.pickup.doorLatch_R.description", {"onUp":"controller.getControllerSafe('auxRCoupler').toggleGroupConditional({{'auxCoverCoupler','attached','vehicle.advancedCouplerControl.openOtherSideFirst'}})"}],
+        ["auxLatch_L", "Toggle Left Toolbox", "ui.inputActions.pickup.doorLatch_L.description", {"onUp":"controller.getControllerSafe('auxLCoupler').toggleGroupConditional({{'auxCoverCoupler','attached','vehicle.advancedCouplerControl.openOtherSideFirst'}})"}],
+
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"frictionCoef":0.5},
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeWeight":0.6},
+         {"group":"pickup_aux_bedcover"},
+         ["auc1r",-0.90, 0.445, 1.21],
+         ["auc1",0.0, 0.445, 1.21],
+         ["auc1l",0.90, 0.445, 1.21],
+
+         ["auc2r",-0.90, 1.14, 1.236],
+         ["auc2",0.0, 1.14, 1.236],
+         ["auc2l",0.90, 1.14, 1.236],
+
+         {"group":""},
+         ["auc3",0.0, 0.8, 0.85, {"collision":false, "selfCollision":false}],
+         ["auc2rr",-0.90, 1.14, 1.236, {"collision":false, "selfCollision":false}],
+         ["auc2ll",0.90, 1.14, 1.236, {"collision":false, "selfCollision":false}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":188940,"beamDamp":23.5},
+          {"beamDeform":5000,"beamStrength":25000},
+          {"deformLimitExpansion":1.2},
+          ["auc1l", "auc1"],
+          ["auc1", "auc1r"],
+          ["auc2l", "auc2"],
+          ["auc2", "auc2r"],
+          ["auc2r", "auc1r"],
+          ["auc2", "auc1"],
+          ["auc2l", "auc1l"],
+          //cross
+          {"deformLimitExpansion":""},
+          ["auc1r", "auc2"],
+          ["auc1r", "auc2"],
+          ["auc2", "auc1l"],
+          ["auc1", "auc2l"],
+          //rigids
+          ["auc1r", "auc1l"],
+          ["auc2r", "auc2l"],
+          ["auc1r", "auc2l"],
+          ["auc2r", "auc1l"],
+
+          //rigidifier
+          {"beamSpring":128940,"beamDamp":90},
+          ["auc3", "auc1l"],
+          ["auc3", "auc1"],
+          ["auc3", "auc1r"],
+          ["auc3", "auc2l"],
+          ["auc3", "auc2"],
+          ["auc3", "auc2r"],
+
+          //attach to support
+          {"breakGroup":"G_aux_bedcover"},
+          {"beamSpring":288940,"beamDamp":23.5},
+          {"beamDeform":3800,"beamStrength":7000},
+          ["auc1r", "aus1r"],
+          ["auc1r", "aus2r"],
+          ["auc1", "aus1r"],
+          ["auc1", "aus2r"],
+          ["auc1r", "aus3r"],
+          ["auc1r", "aus4r"],
+          ["auc1", "aus3r"],
+          ["auc1", "aus4r"],
+
+          ["auc1", "aut3rr"],
+          ["auc1", "aut4rr"],
+          ["auc1", "aut3r"],
+          ["auc1", "aut4r"],
+          ["auc1r", "aut3rr"],
+          ["auc1r", "aut4rr"],
+          ["auc1r", "aut3r"],
+          ["auc1r", "aut4r"],
+
+          ["auc1l", "aus1l"],
+          ["auc1l", "aus2l"],
+          ["auc1", "aus1l"],
+          ["auc1", "aus2l"],
+          ["auc1l", "aus3l"],
+          ["auc1l", "aus4l"],
+          ["auc1", "aus3l"],
+          ["auc1", "aus4l"],
+
+          ["auc1", "aut3ll"],
+          ["auc1", "aut4ll"],
+          ["auc1", "aut3l"],
+          ["auc1", "aut4l"],
+          ["auc1l", "aut3ll"],
+          ["auc1l", "aut4ll"],
+          ["auc1l", "aut3l"],
+          ["auc1l", "aut4l"],
+
+          //attach couplers
+          {"breakGroup":""},
+          ["auc2rr", "aus1r"],
+          ["auc2rr", "aus2r"],
+          ["auc2rr", "aus3r"],
+          ["auc2rr", "aus4r"],
+          ["auc2rr", "aus2l"],
+          ["auc2rr", "aus3l"],
+          ["auc2ll", "aus1l"],
+          ["auc2ll", "aus2l"],
+          ["auc2ll", "aus3l"],
+          ["auc2ll", "aus4l"],
+          ["auc2ll", "aus1r"],
+          ["auc2ll", "aus2r"],
+
+          {"beamSpring":300,"beamDamp":100},
+          {"beamDeform":4000,"beamStrength":4000},
+          {"beamPrecompression":1.6},
+          //["aus2r", "auc2r", {"breakGroup":"auxcover_R"}],
+          //["aus2l", "auc2l", {"breakGroup":"auxcover_L"}],
+          {"beamSpring":480,"beamDamp":120},
+          {"beamDeform":4000,"beamStrength":4000},
+          {"beamPrecompression":2.35},
+          ["aus5", "auc2", {"breakGroup":"auxcover"}],
+          {"beamPrecompression":1},
+
+          //--SUPPORT BEAMS--
+          {"beamType":"|SUPPORT","beamLongBound":5},
+          {"beamSpring":37700,"beamDamp":225},
+          {"beamDeform":2835,"beamStrength":57400},
+          ["aus2r","auc2r"],
+          ["aus2r","auc2"],
+          ["aus2l","auc2l"],
+          ["aus2l","auc2"],
+          {"optional":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.2},
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":60},
+        {"groundModel":"plastic"},
+        ["auc2l", "auc1l", "auc1ll"],
+        ["auc2l", "auc1ll", "auc2ll"],
+        ["auc2l", "auc1", "auc1l"],
+        ["auc2l", "auc2", "auc1"],
+        ["auc2r", "auc1", "auc2"],
+        ["auc2r", "auc1r", "auc1"],
+        ["auc2r", "auc1rr", "auc1r"],
+        ["auc2r", "auc2rr", "auc1rr"],
+    ],
+},
+}

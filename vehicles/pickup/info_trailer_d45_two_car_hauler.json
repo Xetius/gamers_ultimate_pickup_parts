@@ -1,0 +1,16 @@
+{
+  "Config Type":"Custom",
+  "Configuration":"Trailer D45 Dual Car Hauler",
+  "Description":"A heavy duty pintle hitch car hauler trailer with hydraulic lifting ramps, and capacity for up to three cars",
+  "Population":4000,
+  "Value":73000,
+  "Weight":2466,
+  "Years":{
+    "max":2003,
+    "min":1986
+  },
+  "defaultPaintName1":"Blueberry",
+  "defaultPaintName2":"Blueberry",
+  "defaultPaintName3":"Silver",
+  "vehicleSelectorSubGroup":"Trailers"
+}

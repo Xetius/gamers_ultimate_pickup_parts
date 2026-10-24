@@ -1,0 +1,355 @@
+{
+"G_pickup_ex_rollcage_aux": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Auxiliary Addon Rear Cage",
+        "value":1000,
+    },
+    "slotType" : "G_pickup_ex_rollcage_bed",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_pickup_ex_rollcage_aux_doors","G_pickup_ex_rollcage_aux_doors_1", "Auxiliary Door Cage"],
+        ["G_pickup_ex_rollcage_aux_rear","G_pickup_ex_rollcage_aux_rear", "Rear Bar"],
+        ["G_pickup_ex_rollcage_bed_aux","", "Bed Cage", {"nodeMove":{"x":0.0, "y":"$=-($components.frame_F and $components.frame_F.offset_Y or 0)+0.7", "z":0.0}}],
+
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_exterior_rollcage_aux", ["pickup_rollcage"]],
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"rollcage_doorlock_1"}],
+    ]
+    "rollcage_doorlock_1":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["rc3",  "rc3d",     20000,                     0.015,                  0.005,                      0.2,                 0.1,                   "rollcage_doorlock"]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["rc3"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 0,
+        "openForceDuration": 0,
+        "closeForceMagnitude": 0,
+        "closeForceDuration": 0
+    }
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"selfCollision":true},
+         {"collision":true},
+         {"nodeWeight":12},
+         {"group":"pickup_rollcage"},
+         ["rca1l", 0.96, 1.12, 0.4],
+         ["rca1r",-0.96, 1.12, 0.4],
+         ["rca2l", 1.01, 1.12, 1.2],
+         ["rca2r",-1.01, 1.12, 1.2],
+         ["rca3l", 0.72, 1.08, 1.77],
+         ["rca3",  0.0,  1.08, 1.82],
+         ["rca3r",-0.72, 1.08, 1.77],
+
+         //aux door lock
+         {"group":""},
+         ["rc3d",  0.0,  0.38, 1.82],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":904940,"beamDamp":240},
+          {"beamDeform":70000,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":1.2},
+          //main shape
+          ["rca1l", "rca2l"],
+          ["rca2l", "rca3l"],
+          ["rca3l", "rca3"],
+          ["rca1r", "rca2r"],
+          ["rca2r", "rca3r"],
+          ["rca3r", "rca3"],
+
+          ["rca1l", "rca1r"],
+          ["rca2l", "rca2r"],
+          ["rca3l", "rca3r"],
+          ["rca1l", "rca2r"],
+          ["rca1l", "rca3r"],
+          ["rca2l", "rca3r"],
+          ["rca1r", "rca2l"],
+          ["rca1r", "rca3l"],
+          ["rca2r", "rca3l"],
+
+          //straight to cab frame
+          ["rca1l", "rc1l"],
+          ["rca1r", "rc1r"],
+          ["rca2l", "rc2l"],
+          ["rca2r", "rc2r"],
+          ["rca3l", "rc3l"],
+          ["rca3", "rc3"],
+          ["rca3r", "rc3r"],
+
+          //diagonal to cab frame
+          ["rca1l", "rc2l"],
+          ["rca2l", "rc1l"],
+          ["rca1r", "rc2r"],
+          ["rca2r", "rc1r"],
+          ["rca2l", "rc3l"],
+          ["rca3l", "rc2l"],
+          ["rca2r", "rc3r"],
+          ["rca3r", "rc2r"],
+          ["rca3l", "rc3"],
+          ["rca3", "rc3l"],
+          ["rca3r", "rc3"],
+          ["rca3", "rc3r"],
+
+          //double diagonal to cab frame
+          ["rca1l", "rc3l"],
+          ["rca1r", "rc3r"],
+          ["rca1l", "rc3"],
+          ["rca1r", "rc3"],
+          ["rc1l", "rca3l"],
+          ["rc1r", "rca3r"],
+          ["rc1l", "rca3"],
+          ["rc1r", "rca3"],
+
+          ["rca2l", "rc3"],
+          ["rca2r", "rc3"],
+          ["rca2l", "rc3r"],
+          ["rca2r", "rc3l"],
+          ["rc2l", "rca3"],
+          ["rc2r", "rca3"],
+          ["rc2l", "rca3r"],
+          ["rc2r", "rca3l"],
+
+          ["rca3l", "rc3r"],
+          ["rca3r", "rc3l"],
+
+          //attatch
+          {"beamDeform":25000,"beamStrength":202000},
+          {"breakGroup":"rollcage_auxL"},
+          ["rca1l", "f6l"],
+          ["rca1l", "f16l"],
+          ["rca1l", "f7l"],
+          ["rca1l", "f17l"],
+          ["rca2l", "f16l"],
+          ["rca2l", "f17l"],
+          {"breakGroup":"rollcage_auxR"},
+          ["rca1r", "f6r"],
+          ["rca1r", "f16r"],
+          ["rca1r", "f7r"],
+          ["rca1r", "f17r"],
+          ["rca2r", "f16r"],
+          ["rca2r", "f17r"],
+          {"breakGroup":"rollcage_aux"},
+          {"optional":true},
+          ["rca1l", "aus1l"],
+          ["rca1l", "aus2l"],
+          ["rca2l", "aus1l"],
+          ["rca2l", "aus2l"],
+          ["rca2l", "aus3l"],
+          ["rca2l", "aus4l"],
+          ["rca3l", "aus3l"],
+          ["rca3l", "aus4l"],
+
+          ["rca3", "aus3l"],
+          ["rca3", "aus4l"],
+          ["rca3", "aus3r"],
+          ["rca3", "aus4r"],
+          ["rca3", "aus6r"],
+          ["rca3", "aus7r"],
+          ["rca3", "aus6l"],
+          ["rca3", "aus7l"],
+
+          ["rca1r", "aus1r"],
+          ["rca1r", "aus2r"],
+          ["rca2r", "aus1r"],
+          ["rca2r", "aus2r"],
+          ["rca2r", "aus3r"],
+          ["rca2r", "aus4r"],
+          ["rca3r", "aus3r"],
+          ["rca3r", "aus4r"],
+
+          ["rca1r", "aus6r"],
+          ["rca1r", "aus7r"],
+          ["rca2r", "aus6r"],
+          ["rca2r", "aus7r"],
+          ["rca3r", "aus6r"],
+          ["rca3r", "aus7r"],
+          ["rca3r", "aus6l"],
+          ["rca3r", "aus7l"],
+
+
+          ["rc1l", "aus1l"],
+          ["rc1l", "aus2l"],
+          ["rc2l", "aus1l"],
+          ["rc2l", "aus2l"],
+          ["rc2l", "aus3l"],
+          ["rc2l", "aus4l"],
+          ["rc3l", "aus3l"],
+          ["rc3l", "aus4l"],
+
+          ["rc3", "aus3l"],
+          ["rc3", "aus4l"],
+          ["rc3", "aus3r"],
+          ["rc3", "aus4r"],
+
+          ["rc1r", "aus1r"],
+          ["rc1r", "aus2r"],
+          ["rc2r", "aus1r"],
+          ["rc2r", "aus2r"],
+          ["rc2r", "aus3r"],
+          ["rc2r", "aus4r"],
+          ["rc3r", "aus3r"],
+          ["rc3r", "aus4r"],
+          {"optional":false},
+          {"breakGroup":""},
+          {"deformLimitExpansion":""},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"group":"pickup_rollcage"},
+            {"groundModel":"metal"},
+            {"dragCoef":5},
+            {"triangleType":"NONCOLLIDABLE"},
+            ["rca1l","rca2l","rc1l"],
+            ["rca2l","rca3l","rc3l"],
+            ["rca1r","rc1r","rca2r"],
+            ["rca2r","rc3r","rca3r"],
+
+            ["rca3l","rca3","rc3l"],
+            ["rca3r","rc3r","rca3"],
+
+            ["rca3l","rca2l","rca3"],
+            ["rca3r","rca3","rca2r"],
+            {"triangleType":"NORMALTYPE"},
+            {"dragCoef":0},
+    ],
+},
+"G_pickup_ex_rollcage_aux_doors_1": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Single Pipe Cage",
+        "value":250,
+    },
+    "slotType" : "G_pickup_ex_rollcage_aux_doors",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_exterior_rollcage_aux_door_half", ["pickup_rollcage"]],
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"rollcage_doorlock_2"}],
+    ]
+    "rollcage_doorlock_2":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["rc3",  "rc3d",     20000,                     0.015,                  0.005,                      0.2,                 0.1,                   "rollcage_doorlock"]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["rc3"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 0,
+        "openForceDuration": 0,
+        "closeForceMagnitude": 0,
+        "closeForceDuration": 0
+    }
+},
+"G_pickup_ex_rollcage_aux_doors_2": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Full Door Cage",
+        "value":550,
+    },
+    "slotType" : "G_pickup_ex_rollcage_aux_doors",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_exterior_rollcage_aux_door_half", ["pickup_rollcage"]],
+         ["G_pickup_exterior_rollcage_aux_door_full", ["pickup_rollcage"]],
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"rollcage_doorlock_2"}],
+        ["advancedCouplerControl", {"name":"rollcage_doorlock_3"}],
+    ]
+    "rollcage_doorlock_2":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["rc3",  "rc3d",     20000,                     0.015,                  0.005,                      0.2,                 0.1,                   "rollcage_doorlock"]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["rc3"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 0,
+        "openForceDuration": 0,
+        "closeForceMagnitude": 0,
+        "closeForceDuration": 0
+    }
+    "rollcage_doorlock_3":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["rc3",  "rc3d",     20000,                     0.015,                  0.005,                      0.2,                 0.1,                   "rollcage_doorlock"]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["rc3"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>tailgate_02_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 0,
+        "openForceDuration": 0,
+        "closeForceMagnitude": 0,
+        "closeForceDuration": 0
+    }
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"group":"pickup_rollcage"},
+            {"groundModel":"metal"},
+            {"dragCoef":5},
+            {"triangleType":"NONCOLLIDABLE"},
+            ["rc1l","rca2l","rc2l"],
+            ["rc2l","rca2l","rc3l"],
+            ["rc1r","rc2r","rca2r"],
+            ["rc2r","rc3r","rca2r"],
+            {"triangleType":"NORMALTYPE"},
+            {"dragCoef":0},
+    ],
+},
+"G_pickup_ex_rollcage_aux_rear": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Bar",
+        "value":220,
+    },
+    "slotType" : "G_pickup_ex_rollcage_aux_rear",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_exterior_rollcage_aux_rear", ["pickup_rollcage"]],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":904940,"beamDamp":240},
+          {"beamDeform":70000,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":1.2},
+          ["rca1l", "rc1r"],
+          ["rca1r", "rc1l"],
+          ["rca2l", "rc1r"],
+          ["rca2r", "rc1l"],
+          ["rca1l", "rc2r"],
+          ["rca1r", "rc2l"],
+          {"deformLimitExpansion":""},
+    ],
+},
+}

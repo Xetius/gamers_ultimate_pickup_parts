@@ -1,0 +1,16 @@
+{
+  "Config Type":"Factory",
+  "Configuration":"Trailer D45 Cargo Box Upfit Beamoving",
+  "Description":"A heavy duty cargo box trailer, suited for big towing vehicles",
+  "Population":4000,
+  "Value":46300,
+  "Weight":1851,
+  "Years":{
+    "max":2003,
+    "min":1986
+  },
+  "defaultPaintName1":"Lead",
+  "defaultPaintName2":"Lead",
+  "defaultPaintName3":"Lead",
+  "vehicleSelectorSubGroup":"Trailers"
+}

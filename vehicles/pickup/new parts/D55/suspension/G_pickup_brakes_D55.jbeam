@@ -1,0 +1,390 @@
+{
+"G_pickup_brake_F_D55": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Front Disc Brakes",
+        "value":600,
+    },
+    "slotType" : "G_pickup_brake_F_D55",
+    "slots": [
+        ["type", "default", "description"],
+        ["brakepad_F","brakepad_F_premium", "Front Brake Pads", {"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake discs
+        ["brake_disc_plain", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.86,"y":-1.463, "z":0.36}, "scale":{"x":1.6,"y":1.22,"z":1.22}, "rot":{"x":0,"y":0,"z":0}, "materialOverride":[["disc_brake", "disc_brake_FR"]]}],
+        ["brake_disc_plain", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x":0.86,"y":-1.463, "z":0.36}, "scale":{"x":1.6,"y":1.22,"z":1.22}, "rot":{"x":180,"y":0,"z":0}, "materialOverride":[["disc_brake", "disc_brake_FL"]]}],
+        ["brake_caliper_4pot_plain", ["pickup_hub_F","wheelhub_FR"], [], {"pos":{"x":-0.86,"y":-1.463, "z":0.36}, "scale":{"x":1.6,"y":1.08,"z":1.08}, "rot":{"x":180,"y":0,"z":0}}],
+        ["brake_caliper_4pot_plain", ["pickup_hub_F","wheelhub_FL"], [], {"pos":{"x":0.86,"y":-1.463, "z":0.36}, "scale":{"x":1.6,"y":1.08,"z":1.08}, "rot":{"x":180,"y":180,"z":0}}],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"brakeTorque":"$=$brakestrength*4500"},
+        {"brakeInputSplit":1},
+        {"brakeSplitCoef":1},
+        {"parkingTorque":0},
+        {"brakeSpring":135},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.390},
+        {"brakeMass":16},
+        {"brakeType":"vented-disc"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":1},
+
+        //hub
+        //general settings
+        {"hubRadius":0.165},
+        {"wheelOffset":0.0},
+        {"hubWidth":0.05},
+        {"numRays":5},
+
+        //hub options
+        {"hubTreadBeamSpring":1128940, "hubTreadBeamDamp":5.64},
+        {"hubPeripheryBeamSpring":1128940, "hubPeripheryBeamDamp":5.64},
+        {"hubSideBeamSpring":2256940, "hubSideBeamDamp":5.64},
+        {"hubNodeWeight":0.7},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.2},
+        {"hubBeamDeform":45500, "hubBeamStrength":87500},
+        //brake sounds
+        {"squealCoefNatural": 0.0, "squealCoefLowSpeed": 0.5}
+    ],
+},
+"G_pickup_brake_R_D55": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Rear Drum Brakes",
+        "value":400,
+    },
+    "slotType" : ["pickup_brake_R_heavy", "pickup_brake_R"],
+    "slots": [
+        ["type", "default", "description"],
+        ["brakepad_R","brakepad_R_premium", "Rear Brake Pads", {"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake discs
+        ["pickup_brakedrum_RR", ["wheel_RR1","wheelhub_RR1","wheel_RR","wheelhub_RR"], [], {"pos":{"x": 0.33,"y":0, "z":0}, "scale":{"x":1.4,"y":1,"z":1}}],
+        ["pickup_brakedrum_RL", ["wheel_RL1","wheelhub_RL1","wheel_RL","wheelhub_RL"], [], {"pos":{"x":-0.33,"y":0, "z":0}, "scale":{"x":1.4,"y":1,"z":1}}],
+        ["pickup_brakedrum_shield_R", ["pickup_axle_R"], [], {"pos":{"x":0,"y":0, "z":0}, "scale":{"x":0.96,"y":1,"z":1}}],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"brakeTorque":"$=$brakestrength*3700"},
+        {"brakeInputSplit":0.5},
+        {"brakeSplitCoef":0.5},
+        {"parkingTorque":3500},
+        {"brakeSpring":125},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.33},
+        {"brakeMass":13},
+        {"brakeType":"drum"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":0.9},
+
+        //hub
+        //general settings
+        {"hubRadius":0.165},
+        {"wheelOffset":0.0},
+        {"hubWidth":0.08},
+        {"numRays":5},
+
+        //hub options
+        {"hubTreadBeamSpring":1128940, "hubTreadBeamDamp":5.64},
+        {"hubPeripheryBeamSpring":1128940, "hubPeripheryBeamDamp":5.64},
+        {"hubSideBeamSpring":2256940, "hubSideBeamDamp":5.64},
+        {"hubNodeWeight":0.7},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.2},
+        {"hubBeamDeform":45500, "hubBeamStrength":87500},
+
+        //brake sounds
+        {"squealCoefNatural": 0.0, "squealCoefLowSpeed": 0.0}
+    ],
+},
+"G_pickup_brake_RR_6x6_D55": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Rear Rear Drum Brakes",
+        "value":400,
+    },
+    "slotType" : ["G_pickup_brake_RR_6x6_heavy", "G_pickup_brake_RR_6x6"],
+    "slots": [
+        ["type", "default", "description"],
+        ["brakepad_RR","brakepad_RR_premium", "Rear Rear Brake Pads", {"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake discs
+        ["pickup_brakedrum_RR", ["wheel_RRR1","wheelhub_RRR1","wheel_RRR","wheelhub_RRR"], [], {"pos":{"x": 0.33,"y":0.9, "z":0}, "scale":{"x":1.4,"y":1,"z":1}}],
+        ["pickup_brakedrum_RL", ["wheel_RRL1","wheelhub_RRL1","wheel_RRL","wheelhub_RRL"], [], {"pos":{"x":-0.33,"y":0.9, "z":0}, "scale":{"x":1.4,"y":1,"z":1}}],
+        ["pickup_brakedrum_shield_R", ["pickup_axle_RR_6x6"], [], {"pos":{"x":0,"y":0.9, "z":0}, "scale":{"x":0.96,"y":1,"z":1}}],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"brakeTorque":"$=$brakestrength*3700"},
+        {"brakeInputSplit":0.5},
+        {"brakeSplitCoef":0.5},
+        {"parkingTorque":3500},
+        {"brakeSpring":125},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.33},
+        {"brakeMass":13},
+        {"brakeType":"drum"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":0.9},
+
+        //hub
+        //general settings
+        {"hubRadius":0.165},
+        {"wheelOffset":0.0},
+        {"hubWidth":0.08},
+        {"numRays":5},
+
+        //hub options
+        {"hubTreadBeamSpring":1128940, "hubTreadBeamDamp":5.64},
+        {"hubPeripheryBeamSpring":1128940, "hubPeripheryBeamDamp":5.64},
+        {"hubSideBeamSpring":2256940, "hubSideBeamDamp":5.64},
+        {"hubNodeWeight":0.7},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.2},
+        {"hubBeamDeform":45500, "hubBeamStrength":87500},
+
+        //brake sounds
+        {"squealCoefNatural": 0.0, "squealCoefLowSpeed": 0.0}
+    ],
+},
+"G_pickup_brake_F_D55_air": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Front Air Drum Brakes",
+        "value":1200,
+    },
+    "slotType" : "G_pickup_brake_F_D55",
+    "slots": [
+        ["type", "default", "description"],
+        ["brakepad_F","brakepad_F_premium", "Front Brake Pads", {"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake discs
+        ["G_pickup_brakedrum_FR_D55", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":0,"y":0, "z":0.03}}],
+        ["G_pickup_brakedrum_FL_D55", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x":0,"y":0, "z":0.03}}],
+        ["G_pickup_brakedrum_shield_FR_D55", ["pickup_hub_F","wheelhub_FR"], [], {"pos":{"x":0,"y":0, "z":0.03}}],
+        ["G_pickup_brakedrum_shield_FL_D55", ["pickup_hub_F","wheelhub_FL"], [], {"pos":{"x":0,"y":0, "z":0.03}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["pneumatics/airbrakes", { "name": "airbrakes_F" }],
+    ],
+    "airbrakes_F": {
+        "soundEvent":"event:>Vehicle>Pneumatics>Air_Brakes_02",
+        "soundNode:":["fax2"],
+        "brakedWheels":["FL","FR"],
+        "brakeTorque": [
+            ["pressure", "torqueCoef"],
+            [21000, 0],
+            [413685, 1],
+        ],
+        "springBrakeTorque": [
+            ["pressure", "torqueCoef"],
+            [0,      1],
+            [180000, 0],
+        ],
+    },
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"brakeTorque":"$=$brakestrength*5700"},
+        {"brakeInputSplit":1},
+        {"brakeSplitCoef":1},
+        {"parkingTorque":0},
+        {"brakeSpring":135},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.33},
+        {"brakeMass":13},
+        {"brakeType":"drum"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":0.9},
+
+        //hub
+        //general settings
+        {"hubRadius":0.165},
+        {"wheelOffset":0.0},
+        {"hubWidth":0.05},
+        {"numRays":5},
+
+        //hub options
+        {"hubTreadBeamSpring":1128940, "hubTreadBeamDamp":5.64},
+        {"hubPeripheryBeamSpring":1128940, "hubPeripheryBeamDamp":5.64},
+        {"hubSideBeamSpring":2256940, "hubSideBeamDamp":5.64},
+        {"hubNodeWeight":0.7},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.2},
+        {"hubBeamDeform":45500, "hubBeamStrength":87500},
+
+        //brake sounds
+        {"squealCoefNatural": 0.0, "squealCoefLowSpeed": 0.0}
+    ],
+},
+"G_pickup_brake_R_D55_air": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Rear Air Drum Brakes",
+        "value":800,
+    },
+    "slotType" : ["pickup_brake_R_heavy", "pickup_brake_R"],
+    "slots": [
+        ["type", "default", "description"],
+        ["brakepad_R","brakepad_R_premium", "Rear Brake Pads", {"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake discs
+        ["pickup_brakedrum_RR", ["wheel_RR1","wheelhub_RR1","wheel_RR","wheelhub_RR"], [], {"pos":{"x": 0.33,"y":0, "z":0}, "scale":{"x":1.4,"y":1,"z":1}}],
+        ["pickup_brakedrum_RL", ["wheel_RL1","wheelhub_RL1","wheel_RL","wheelhub_RL"], [], {"pos":{"x":-0.33,"y":0, "z":0}, "scale":{"x":1.4,"y":1,"z":1}}],
+        ["pickup_brakedrum_shield_R", ["pickup_axle_R"], [], {"pos":{"x":0,"y":0, "z":0}, "scale":{"x":0.96,"y":1,"z":1}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["pneumatics/airbrakes", { "name": "airbrakes_R" }],
+    ],
+    "airbrakes_R": {
+        "soundEvent":"event:>Vehicle>Pneumatics>Air_Brakes_02",
+        "soundNode:":["ax1"],
+        "brakedWheels":["RL1","RL2","RL",  "RR1","RR2","RR"],
+        "brakeTorque": [
+            ["pressure", "torqueCoef"],
+            [21000, 0],
+            [413685, 1],
+        ],
+        "springBrakeTorque": [
+            ["pressure", "torqueCoef"],
+            [0,      1],
+            [350000, 0],
+        ],
+    },
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"brakeTorque":"$=$brakestrength*5700"},
+        {"brakeInputSplit":0.5},
+        {"brakeSplitCoef":0.5},
+        {"parkingTorque":3500},
+        {"brakeSpring":125},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.33},
+        {"brakeMass":13},
+        {"brakeType":"drum"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":0.9},
+
+        //hub
+        //general settings
+        {"hubRadius":0.165},
+        {"wheelOffset":0.0},
+        {"hubWidth":0.08},
+        {"numRays":5},
+
+        //hub options
+        {"hubTreadBeamSpring":1128940, "hubTreadBeamDamp":5.64},
+        {"hubPeripheryBeamSpring":1128940, "hubPeripheryBeamDamp":5.64},
+        {"hubSideBeamSpring":2256940, "hubSideBeamDamp":5.64},
+        {"hubNodeWeight":0.7},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.2},
+        {"hubBeamDeform":45500, "hubBeamStrength":87500},
+
+        //brake sounds
+        {"squealCoefNatural": 0.0, "squealCoefLowSpeed": 0.0}
+    ],
+},
+"G_pickup_brake_RR_6x6_D55_air": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Rear Rear Air Drum Brakes",
+        "value":800,
+    },
+    "slotType" : ["G_pickup_brake_RR_6x6_heavy", "G_pickup_brake_RR_6x6"],
+    "slots": [
+        ["type", "default", "description"],
+        ["brakepad_RR","brakepad_RR_premium", "Rear Rear Brake Pads", {"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake discs
+        ["pickup_brakedrum_RR", ["wheel_RRR1","wheelhub_RRR1","wheel_RRR","wheelhub_RRR"], [], {"pos":{"x": 0.33,"y":0.9, "z":0}, "scale":{"x":1.4,"y":1,"z":1}}],
+        ["pickup_brakedrum_RL", ["wheel_RRL1","wheelhub_RRL1","wheel_RRL","wheelhub_RRL"], [], {"pos":{"x":-0.33,"y":0.9, "z":0}, "scale":{"x":1.4,"y":1,"z":1}}],
+        ["pickup_brakedrum_shield_R", ["pickup_axle_RR"], [], {"pos":{"x":0,"y":0.9, "z":0}, "scale":{"x":0.96,"y":1,"z":1}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["pneumatics/airbrakes", { "name": "airbrakes_RR" }],
+    ],
+    "airbrakes_RR": {
+        "soundEvent":"event:>Vehicle>Pneumatics>Air_Brakes_02",
+        "soundNode:":["axg1"],
+        "brakedWheels":["RRL1","RRL2","RRL",  "RRR1","RRR2","RRR"],
+        "brakeTorque": [
+            ["pressure", "torqueCoef"],
+            [21000, 0],
+            [413685, 1],
+        ],
+        "springBrakeTorque": [
+            ["pressure", "torqueCoef"],
+            [0,      1],
+            [350000, 0],
+        ],
+    },
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"brakeTorque":"$=$brakestrength*5700"},
+        {"brakeInputSplit":0.5},
+        {"brakeSplitCoef":0.5},
+        {"parkingTorque":3500},
+        {"brakeSpring":125},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.33},
+        {"brakeMass":13},
+        {"brakeType":"drum"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":0.9},
+
+        //hub
+        //general settings
+        {"hubRadius":0.165},
+        {"wheelOffset":0.0},
+        {"hubWidth":0.08},
+        {"numRays":5},
+
+        //hub options
+        {"hubTreadBeamSpring":1128940, "hubTreadBeamDamp":5.64},
+        {"hubPeripheryBeamSpring":1128940, "hubPeripheryBeamDamp":5.64},
+        {"hubSideBeamSpring":2256940, "hubSideBeamDamp":5.64},
+        {"hubNodeWeight":0.7},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.2},
+        {"hubBeamDeform":45500, "hubBeamStrength":87500},
+
+        //brake sounds
+        {"squealCoefNatural": 0.0, "squealCoefLowSpeed": 0.0}
+    ],
+},
+}

@@ -1,0 +1,179 @@
+{
+"G_steelwheel_12a_22x16_alt_F": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"22.5x16 Super Single Steel Front Wheels (Colourable)",
+        "value":700,
+    },
+    "slotType" : ["md_series_wheel_F_10","wheel_F_10"],
+    "slots2": [
+        ["name",                       "allowTypes",                   "denyTypes", "default",                          "description"],
+        ["G_md_series_tire_F_22.5x16", ["G_md_series_tire_F_22.5x16"], [],          "G_md_series_tire_F_385/50R22_5_alt", "Front Tires"],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$trackoffset_F", "range", "+m", "Wheels", 0.0,-0.005, 0.08, "Wheel Offset", "Spacing of the wheel from the hub", {"stepDis":0.005,"subCategory":"Front"}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         ["G_steelwheel_12a_22x16_F", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":"$=-1.0654-$trackoffset_F", "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["G_steelwheel_12a_22x16_F", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x":"$= 1.0654+$trackoffset_F", "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+         ["id",    "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeWeight":20},
+         {"group":"wheelhub_FR"},
+         //sw1 as in steer wheel 1
+         ["sw1r", -0.85,   0.00,   0.00],
+         ["sw1rr",-1.22,   0.00,   0.00],
+         {"group":"wheelhub_FL"},
+         ["sw1l",  0.85,   0.00,   0.00],
+         ["sw1ll", 1.22,   0.00,   0.00],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--FRONT WHEELS--
+          {"beamSpring":6501000,"beamDamp":100},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamDeform":200000,"beamStrength":"FLT_MAX"},
+          ["sw1r", "sw1rr"],
+          ["sw1l", "sw1ll"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            {"enableTireLbeams":true,"disableMeshBreaking":false,"disableHubMeshBreaking":false},
+
+            //general settings
+            {"hubRadius":0.30},
+            {"wheelOffset":"$=-0.03-$trackoffset_F"},
+            {"hubWidth":0.395},
+            {"numRays":20},
+            {"brakeSpring":150},//define higher value than hubs
+
+            //hub options
+            {"hubTreadBeamSpring":2501000, "hubTreadBeamDamp":80},
+            {"hubPeripheryBeamSpring":2501000, "hubPeripheryBeamDamp":80},
+            {"hubSideBeamSpring":4251000, "hubSideBeamDamp":80},
+            {"hubBeamDeform":110000, "hubBeamStrength":420000},
+            {"hubNodeWeight":1.20},
+            {"hubNodeMaterial":"|NM_METAL","hasTire":false},
+            {"hubFrictionCoef":0.5},
+    ],
+},
+"G_steelwheel_12a_22x16_F": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"22.5x16 Super Single Steel Front Wheels (White)",
+        "value":700,
+    },
+    "slotType" : ["md_series_wheel_F_10","wheel_F_10"],
+    "slots2": [
+        ["name",                       "allowTypes",                   "denyTypes", "default",                          "description"],
+        ["G_md_series_tire_F_22.5x16", ["G_md_series_tire_F_22.5x16"], [],          "G_md_series_tire_F_385/50R22_5_alt", "Front Tires"],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$trackoffset_F", "range", "+m", "Wheels", 0.0,-0.005, 0.08, "Wheel Offset", "Spacing of the wheel from the hub", {"stepDis":0.005,"subCategory":"Front"}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         ["G_steelwheel_12a_22x16_bare_F", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":"$=-1.0654-$trackoffset_F", "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["G_steelwheel_12a_22x16_bare_F", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x":"$= 1.0654+$trackoffset_F", "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+         ["id",    "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeWeight":20},
+         {"group":"wheelhub_FR"},
+         //sw1 as in steer wheel 1
+         ["sw1r", -0.85,   0.00,   0.00],
+         ["sw1rr",-1.22,   0.00,   0.00],
+         {"group":"wheelhub_FL"},
+         ["sw1l",  0.85,   0.00,   0.00],
+         ["sw1ll", 1.22,   0.00,   0.00],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--FRONT WHEELS--
+          {"beamSpring":6501000,"beamDamp":100},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamDeform":200000,"beamStrength":"FLT_MAX"},
+          ["sw1r", "sw1rr"],
+          ["sw1l", "sw1ll"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            {"enableTireLbeams":true,"disableMeshBreaking":false,"disableHubMeshBreaking":false},
+
+            //general settings
+            {"hubRadius":0.30},
+            {"wheelOffset":"$=-0.03-$trackoffset_F"},
+            {"hubWidth":0.395},
+            {"numRays":20},
+            {"brakeSpring":150},//define higher value than hubs
+
+            //hub options
+            {"hubTreadBeamSpring":2501000, "hubTreadBeamDamp":80},
+            {"hubPeripheryBeamSpring":2501000, "hubPeripheryBeamDamp":80},
+            {"hubSideBeamSpring":4251000, "hubSideBeamDamp":80},
+            {"hubBeamDeform":110000, "hubBeamStrength":420000},
+            {"hubNodeWeight":1.20},
+            {"hubNodeMaterial":"|NM_METAL","hasTire":false},
+            {"hubFrictionCoef":0.5},
+    ],
+},
+"G_md_series_wheeldata_F_single": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Super Single Front Spindles",
+        "value":0,
+    },
+    "slotType" : "md_series_wheeldata_F",
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //rear
+        {"selfCollision":false},
+        {"collision":true},
+        {"axleBeams":["axle_FR"]},
+        ["FR", "wheel_FR", "tire_FR", "sw1rr", "sw1r", 9999, "fa4r", 1, {"torqueCoupling:":"fh3r", "torqueArm:":"fh4r", "steerAxisUp:":"fa5r","steerAxisDown:":"fa4r"}],
+        {"axleBeams":["axle_FL"]},
+        ["FL", "wheel_FL", "tire_FL", "sw1ll", "sw1l", 9999, "fa4l", -1, {"torqueCoupling:":"fh3l", "torqueArm:":"fh4l", "steerAxisUp:":"fa5l","steerAxisDown:":"fa4l"}],
+        {"brakeTorque":0},
+        {"parkingTorque":0},
+        {"triangleCollision":true},
+        {"selfCollision":true},
+        {"axleBeams":[]},{"disableMeshBreaking":false,"disableTriangleBreaking":false},
+        {"enableHubcaps":false},
+        {"enableTireLbeams":false},
+        {"enableTreadReinfBeams":false},
+        {"enableTireReinfBeams":false},
+        {"enableTreadReinfBeams":false},
+        {"enableTirePeripheryReinfBeams":false},
+        {"loadSensitivitySlope":""},
+        {"noLoadCoef":""},
+        {"fullLoadCoef":""},
+        {"frictionCoef":""},
+        {"slidingFrictionCoef":""},
+        {"softnessCoef":0.5},
+        {"treadCoef":1.0},
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["shaft", "wheelaxleFL", "differential_F", 1, {"connectedWheel":"FL", "breakTriggerBeam":"axle_FL", "uiName":"Front Left Axle", "friction":10.6, "dynamicFriction": 0.014}],
+        ["shaft", "wheelaxleFR", "differential_F", 2, {"connectedWheel":"FR", "breakTriggerBeam":"axle_FR", "uiName":"Front Right Axle", "friction":10.6, "dynamicFriction": 0.014}],
+    ],
+},
+}

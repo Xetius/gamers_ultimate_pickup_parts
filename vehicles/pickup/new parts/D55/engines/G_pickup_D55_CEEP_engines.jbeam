@@ -1,0 +1,28 @@
+{
+"G_classic_pickup_D55_engines": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"CEEP Engines swap (needs CEEP mod, use D55 transmissions)",
+        "value":0,
+    },
+    "slotType" : "G_pickup_engine_D55",
+    "slots": [
+        ["type", "default", "description"],
+        //["classic_pickup_engines","pickup_291_engine_v8", "Engine", {"nodeOffset":{"x":0.0,"y":"$=0.0-($components.frame_F and $components.frame_F.offset_Y or 0)","z":0.07}}],
+        ["classic_pickup_engines","pickup_291_engine_v8", "Engine", {"nodeMove":{"x":0.0,"y":0.0,"z":0.07}}],
+        //["classic_pickup_engines","pickup_291_engine_v8", "Engine", {"nodeOffset3":{"x":0.0,"y":0.0,"z":0.07}}],
+        ["G_pickup_air_compressor","", "Air Compressor"],
+        ["G_pickup_hydraulic_pump","", "Hydraulic Pump"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["G_pickup_transmission_D55_i6", ["pickup_engine","pickup_transmission","classic_engine","classic_transmission"],[],{"pos":{"x":0, "y":-0.06, "z":0}}],
+        ["G_pickup_transmission_D55_rear", ["pickup_engine","pickup_transmission","classic_engine","classic_transmission"]],
+    ],
+    "mainEngine": {
+        //PTO
+        "numberOfOutputPorts": 3,
+    },
+},
+
+}

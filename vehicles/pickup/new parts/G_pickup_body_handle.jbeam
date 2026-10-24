@@ -1,0 +1,163 @@
+{
+"G_pickup_body_handle": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Cab Handles",
+        "value":300,
+    },
+    "slotType" : "pickup_trim",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_body_handle_L", ["pickup_body"], [],{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_pickup_body_handle_R", ["pickup_body"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+},
+"G_pickup_trim_handle": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Trim With Cab Handles",
+        "value":430,
+    },
+    "slotType" : "pickup_trim",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pickup_trim_body", ["pickup_body"]],
+         ["pickup_trim_fender_R", ["pickup_fender_R"]],
+         ["pickup_trim_fender_L", ["pickup_fender_L"]],
+         ["pickup_trim_door_R", ["pickup_door_FR"]],
+         ["pickup_trim_door_L", ["pickup_door_FL"]],
+         ["G_pickup_body_handle_L", ["pickup_body"], [],{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_pickup_body_handle_R", ["pickup_body"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+},
+"G_pickup_body_handle_ext": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Cab Handles",
+        "value":300,
+    },
+    "slotType" : "pickup_trim_ext",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_body_handle_L", ["pickup_body"], [],{"pos":{"x":0,"y":0.613,"z":0}}],
+         ["G_pickup_body_handle_R", ["pickup_body"], [],{"pos":{"x":0,"y":0.613,"z":0}}],
+    ],
+},
+"G_pickup_trim_ext_handle": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Trim With Cab Handles",
+        "value":440,
+    },
+    "slotType" : "pickup_trim_ext",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pickup_trim_body", ["pickup_body"],[]{"pos":{"x":0,"y":0.613,"z":0}}],
+         ["pickup_trim_fender_R", ["pickup_fender_R"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["pickup_trim_fender_L", ["pickup_fender_L"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["pickup_trim_door_R", ["pickup_door_FR"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["pickup_trim_door_L", ["pickup_door_FL"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["pickup_trim_door_RR", ["pickup_door_RR"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["pickup_trim_door_RL", ["pickup_door_RL"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_pickup_body_handle_L", ["pickup_body"], [],{"pos":{"x":0,"y":0.613,"z":0}}],
+         ["G_pickup_body_handle_R", ["pickup_body"], [],{"pos":{"x":0,"y":0.613,"z":0}}],
+    ],
+},
+"G_pickup_body_handle_crew": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Cab Handles",
+        "value":300,
+    },
+    "slotType" : "pickup_trim_crew",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_body_handle_L", ["pickup_body"], [],{"pos":{"x":0,"y":0.9,"z":0}}],
+         ["G_pickup_body_handle_R", ["pickup_body"], [],{"pos":{"x":0,"y":0.9,"z":0}}],
+    ],
+},
+"G_pickup_trim_crew_handle": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Trim With Cab Handles",
+        "value":450,
+    },
+    "slotType" : "pickup_trim_crew",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pickup_trim_body", ["pickup_body"],[]{"pos":{"x":0,"y":0.8987,"z":0}}],
+         ["pickup_trim_fender_R", ["pickup_fender_R"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["pickup_trim_fender_L", ["pickup_fender_L"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["pickup_trim_door_R", ["pickup_door_FR"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["pickup_trim_door_L", ["pickup_door_FL"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["pickup_trim_door_RR_crew", ["pickup_door_RR"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["pickup_trim_door_RL_crew", ["pickup_door_RL"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_pickup_body_handle_L", ["pickup_body"], [],{"pos":{"x":0,"y":0.9,"z":0}}],
+         ["G_pickup_body_handle_R", ["pickup_body"], [],{"pos":{"x":0,"y":0.9,"z":0}}],
+    ],
+},
+"G_pickup_body_handle_short": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Cab Handles",
+        "value":300,
+    },
+    "slotType" : "pickup_trim_short",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_body_handle_L", ["pickup_body"], [],{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_pickup_body_handle_R", ["pickup_body"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+},
+"G_pickup_trim_short_handle": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Trim With Cab Handles",
+        "value":445,
+    },
+    "slotType" : "pickup_trim_short",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pickup_trim_body_short", ["pickup_body", "pickup_bed"]],
+         ["pickup_trim_fender_R", ["pickup_fender_R"]],
+         ["pickup_trim_fender_L", ["pickup_fender_L"]],
+         ["pickup_trim_door_R", ["pickup_door_FR"]],
+         ["pickup_trim_door_L", ["pickup_door_FL"]],
+         ["G_pickup_body_handle_L", ["pickup_body"], [],{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_pickup_body_handle_R", ["pickup_body"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+},
+"G_pickup_body_handle_short_ext": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Cab Handles",
+        "value":300,
+    },
+    "slotType" : "pickup_trim_short_ext",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_body_handle_L", ["pickup_body"], [],{"pos":{"x":0,"y":0.9,"z":0}}],
+         ["G_pickup_body_handle_R", ["pickup_body"], [],{"pos":{"x":0,"y":0.9,"z":0}}],
+    ],
+},
+"G_pickup_trim_short_ext_handle": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Trim With Cab Handles",
+        "value":445,
+    },
+    "slotType" : "pickup_trim_short_ext",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pickup_trim_body_short", ["pickup_body", "pickup_bed"], [], {"pos":{"x":0,"y":0.8987,"z":0}}],
+         ["pickup_trim_fender_R", ["pickup_fender_R"]],
+         ["pickup_trim_fender_L", ["pickup_fender_L"]],
+         ["pickup_trim_door_R", ["pickup_door_FR"]],
+         ["pickup_trim_door_L", ["pickup_door_FL"]],
+         ["pickup_trim_door_RR_crew", ["pickup_door_RR"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["pickup_trim_door_RL_crew", ["pickup_door_RL"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_pickup_body_handle_L", ["pickup_body"], [],{"pos":{"x":0,"y":0.9,"z":0}}],
+         ["G_pickup_body_handle_R", ["pickup_body"], [],{"pos":{"x":0,"y":0.9,"z":0}}],
+    ],
+},
+}

@@ -1,0 +1,250 @@
+{
+"G_pickup_roofrack_lights": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Roof Rack With Lights",
+        "value":520,
+    },
+    "slotType" : "pickup_roofrack",
+    "slots2": [
+        ["name", "allowTypes", "denyTypes", "default", "description"],
+        ["pickup_roofrack_accessory", ["pickup_roofrack_accessory"], [],          "",        "Roof Rack Accessory", {"nodeOffset":{"x":0.0,"y":0.0,"z":0.014}}],
+        ["pickup_roofmarker_M_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Center Roof Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"rf1", "$nodeX":"rf2", "$nodeY":"rf1r",
+          "$deformGroup":"windshield_break",
+          "$posX":0.0, "$posY":-0.261, "$posZ":1.78,
+          "$rotX":200, "$rotY":0, "$rotZ":0,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_roofmarker_R_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Inner Right Roof Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"rf1", "$nodeX":"rf2", "$nodeY":"rf1r",
+          "$deformGroup":"windshield_break",
+          "$posX":-0.115, "$posY":-0.261, "$posZ":1.78,
+          "$rotX":200, "$rotY":0, "$rotZ":0,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_roofmarker_L_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Inner Left Roof Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"rf1", "$nodeX":"rf2", "$nodeY":"rf1l",
+          "$deformGroup":"windshield_break",
+          "$posX":0.115, "$posY":-0.261, "$posZ":1.78,
+          "$rotX":200, "$rotY":0, "$rotZ":0,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_roofmarker_RR_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Outer Right Roof Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"rf1", "$nodeX":"rf2", "$nodeY":"rf1r",
+          "$deformGroup":"windshield_break",
+          "$posX":-0.514, "$posY":-0.238, "$posZ":1.77,
+          "$rotX":200, "$rotY":0, "$rotZ":0,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_roofmarker_LL_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Outer Left Roof Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"rf1", "$nodeX":"rf2", "$nodeY":"rf1l",
+          "$deformGroup":"windshield_break",
+          "$posX":0.514, "$posY":-0.238, "$posZ":1.77,
+          "$rotX":200, "$rotY":0, "$rotZ":0,
+          "$shadowEnable":0,
+        }
+        }]
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pickup_roofrack", ["pickup_body"], [],{"pos":{"x":0,"y":0,"z":0}}],
+
+         {"deformGroup":"windshield_break", "deformMaterialBase":"pickup_lights", "deformMaterialDamaged":"pickup_lights"},
+         ["pickup_rooflights", ["pickup_body"], [],{"pos":{"x":0,"y":0,"z":0}, "deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound4", "deformVolume":0.5}],
+         {"deformGroup":"windshield_break", "deformMaterialBase":"pickup_lightglass", "deformMaterialDamaged":"pickup_lightglass_dmg"},
+         ["pickup_rooflightglass", ["pickup_body"], [],{"pos":{"x":0,"y":0,"z":0}, "deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound4", "deformVolume":0.5}],
+         {"deformGroup":""},
+    ],
+},
+"G_pickup_roofrack_lights_ext": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Roof Rack With Lights",
+        "value":540,
+    },
+    "slotType" : "pickup_roofrack_ext",
+    "slots2": [
+        ["name", "allowTypes", "denyTypes", "default", "description"],
+        ["pickup_roofrack_accessory", ["pickup_roofrack_accessory"], [],          "",        "Roof Rack Accessory", {"nodeOffset":{"x":0.0,"y":0.16,"z":0.014}}],
+
+        ["pickup_roofmarker_M_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Center Roof Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"rf1", "$nodeX":"rf2", "$nodeY":"rf1r",
+          "$deformGroup":"windshield_break",
+          "$posX":0.0, "$posY":-0.261, "$posZ":1.78,
+          "$rotX":200, "$rotY":0, "$rotZ":0,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_roofmarker_R_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Inner Right Roof Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"rf1", "$nodeX":"rf2", "$nodeY":"rf1r",
+          "$deformGroup":"windshield_break",
+          "$posX":-0.115, "$posY":-0.261, "$posZ":1.78,
+          "$rotX":200, "$rotY":0, "$rotZ":0,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_roofmarker_L_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Inner Left Roof Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"rf1", "$nodeX":"rf2", "$nodeY":"rf1l",
+          "$deformGroup":"windshield_break",
+          "$posX":0.115, "$posY":-0.261, "$posZ":1.78,
+          "$rotX":200, "$rotY":0, "$rotZ":0,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_roofmarker_RR_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Outer Right Roof Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"rf1", "$nodeX":"rf2", "$nodeY":"rf1r",
+          "$deformGroup":"windshield_break",
+          "$posX":-0.514, "$posY":-0.238, "$posZ":1.77,
+          "$rotX":200, "$rotY":0, "$rotZ":0,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_roofmarker_LL_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Outer Left Roof Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"rf1", "$nodeX":"rf2", "$nodeY":"rf1l",
+          "$deformGroup":"windshield_break",
+          "$posX":0.514, "$posY":-0.238, "$posZ":1.77,
+          "$rotX":200, "$rotY":0, "$rotZ":0,
+          "$shadowEnable":0,
+        }
+        }]
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pickup_roofrack_ext", ["pickup_body"], [],{"pos":{"x":0,"y":0,"z":0}}],
+
+         {"deformGroup":"windshield_break", "deformMaterialBase":"pickup_lights", "deformMaterialDamaged":"pickup_lights"},
+         ["pickup_rooflights", ["pickup_body"], [],{"pos":{"x":0,"y":0,"z":0}, "deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound4", "deformVolume":0.5}],
+         {"deformGroup":"windshield_break", "deformMaterialBase":"pickup_lightglass", "deformMaterialDamaged":"pickup_lightglass_dmg"},
+         ["pickup_rooflightglass", ["pickup_body"], [],{"pos":{"x":0,"y":0,"z":0}, "deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound4", "deformVolume":0.5}],
+         {"deformGroup":""},
+    ],
+},
+"G_pickup_roofrack_lights_crew": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Roof Rack With Lights",
+        "value":560,
+    },
+    "slotType" : "pickup_roofrack_crew",
+    "slots2": [
+        ["name", "allowTypes", "denyTypes", "default", "description"],
+        ["pickup_roofrack_accessory", ["pickup_roofrack_accessory"], [],          "",        "Roof Rack Accessory", {"nodeOffset":{"x":0.0,"y":0.0,"z":0.014}}],
+
+        ["pickup_roofmarker_M_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Center Roof Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"rf1", "$nodeX":"rf2", "$nodeY":"rf1r",
+          "$deformGroup":"windshield_break",
+          "$posX":0.0, "$posY":-0.261, "$posZ":1.78,
+          "$rotX":200, "$rotY":0, "$rotZ":0,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_roofmarker_R_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Inner Right Roof Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"rf1", "$nodeX":"rf2", "$nodeY":"rf1r",
+          "$deformGroup":"windshield_break",
+          "$posX":-0.115, "$posY":-0.261, "$posZ":1.78,
+          "$rotX":200, "$rotY":0, "$rotZ":0,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_roofmarker_L_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Inner Left Roof Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"rf1", "$nodeX":"rf2", "$nodeY":"rf1l",
+          "$deformGroup":"windshield_break",
+          "$posX":0.115, "$posY":-0.261, "$posZ":1.78,
+          "$rotX":200, "$rotY":0, "$rotZ":0,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_roofmarker_RR_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Outer Right Roof Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"rf1", "$nodeX":"rf2", "$nodeY":"rf1r",
+          "$deformGroup":"windshield_break",
+          "$posX":-0.514, "$posY":-0.238, "$posZ":1.77,
+          "$rotX":200, "$rotY":0, "$rotZ":0,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_roofmarker_LL_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Outer Left Roof Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"rf1", "$nodeX":"rf2", "$nodeY":"rf1l",
+          "$deformGroup":"windshield_break",
+          "$posX":0.514, "$posY":-0.238, "$posZ":1.77,
+          "$rotX":200, "$rotY":0, "$rotZ":0,
+          "$shadowEnable":0,
+        }
+        }]
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pickup_roofrack_crew", ["pickup_body"], [],{"pos":{"x":0,"y":0,"z":0}}],
+
+         {"deformGroup":"windshield_break", "deformMaterialBase":"pickup_lights", "deformMaterialDamaged":"pickup_lights"},
+         ["pickup_rooflights", ["pickup_body"], [],{"pos":{"x":0,"y":0,"z":0}, "deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound4", "deformVolume":0.5}],
+         {"deformGroup":"windshield_break", "deformMaterialBase":"pickup_lightglass", "deformMaterialDamaged":"pickup_lightglass_dmg"},
+         ["pickup_rooflightglass", ["pickup_body"], [],{"pos":{"x":0,"y":0,"z":0}, "deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound4", "deformVolume":0.5}],
+         {"deformGroup":""},
+    ],
+},
+}

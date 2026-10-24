@@ -1,0 +1,434 @@
+{
+"G_pickup_grp_interior": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Race Dashboard",
+        "value":1000,
+    },
+    "slotType" : "pickup_interior",
+    "slots2": [
+        ["name",                           "allowTypes",                       "denyTypes", "default",                       "description"],
+        ["pickup_sunvisors",               ["pickup_sunvisors"],               [],          "pickup_sunvisors",              "Sunvisors"],
+        ["G_pickup_grp_shifter",           ["G_pickup_grp_shifter"],           [],          "G_pickup_grp_shifter_M_5",      "Shifter"],
+        ["G_pickup_grp_shifter_T",         ["G_pickup_grp_shifter_T"],         [],          "",                              "Range Selector"],
+        ["pickup_steer",                   ["pickup_steer"],                   [],          "pickup_steer_01a",              "Steering Wheel"],
+        ["G_pickup_grp_switchcovers",      ["G_pickup_grp_switchcovers"],      [],          "",                              "Switch Covers"],
+        ["G_pickup_grp_controls",          ["G_pickup_grp_controls"],          [],          "G_pickup_grp_buttons_race",     "Lower Controls"],
+        ["skin_grp",                       ["skin_grp"],                       [],          "skin_grp_carbon",               "Dashboard Material", {"coreSlot":true}],
+        ["G_pickup_grp_gauges",            ["G_pickup_grp_gauges"],            [],          "G_pickup_grp_gauges",           "Gauges", {"coreSlot":true}],
+        ["pickup_interior_accessory",      ["pickup_interior_accessory"],      [],          "",                              "Interior Accessories"],
+        ["G_pickup_grp_lettering",         ["G_pickup_grp_lettering"],         [],          "",                              "Lettering"],
+        ["G_pickup_grp_thissideup",        ["G_pickup_grp_thissideup"],        [],          "",                              "Dashboard Accessory"],
+    ],
+    "camerasInternal":[
+        ["type", "x", "y", "z", "fov", "id1:", "id2:", "id3:", "id4:", "id5:", "id6:"],
+        {"nodeWeight":2.35},
+        {"beamSpring":846, "beamDamp":94},
+        {"selfCollision":true},
+        {"collision":true},
+        //dash cam
+        ["dash", 0.462, 0.1, 1.53, 55, "b1rr","b1ll","b3rr","b3ll","b6rr","b6ll", {"beamDeform":2800560,"beamStrength":"FLT_MAX"}],
+    ],
+    "soundscape": [
+        ["name", "src"],
+        //indicator7
+        {"node:":"int_strw"},
+        ["indicatorStart", "event:>Vehicle>Interior>Indicator>POL_On"],
+        ["indicatorStop", "event:>Vehicle>Interior>Indicator>POL_Off"],
+        ["indLoop1", "event:>Vehicle>Interior>Indicator>FIPA_Click"],
+        ["indLoop2", "event:>Vehicle>Interior>Indicator>FIPA_Clack"],
+        //lights3
+        ["LightOn", "event:>Vehicle>Interior>Light>AU5_Light_On"],
+        ["LightOff", "event:>Vehicle>Interior>Light>AU5_Light_Off"],
+        //handbrake2
+        {"node:":"int_pbrk"},
+        ["handbrakeDisengaged","event:>Vehicle>Interior>Handbrake_Pedal>Pedal_04_Unlock"],
+        ["handbrakeEngaging","event:>Vehicle>Interior>Handbrake_Pedal>Pedal_04_Lock"],
+        //affects horn location because horn soundscape is loaded after
+        {"node:":"b6l"},
+    ],
+    "props": [
+        ["func",         "mesh",                      "idRef:","idX:","idY:",        "baseRotation",              "rotation",                  "translation",           "min", "max", "offset", "multiplier"],
+        //pedals
+        ["brake",        "pickup_pedal_brake",        "b1l","b1r","b5l",             {"x":154, "y":180, "z":0},   {"x":-25, "y":0, "z":0},     {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1,        {"baseTranslationGlobal":{"x":0.457551, "y":-0.956836,"z":0.890531}}],
+        ["throttle",     "pickup_pedal_gas",          "b1l","b1r","b5l",             {"x":154, "y":180, "z":0},   {"x":-23, "y":0, "z":0},     {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1,        {"baseTranslationGlobal":{"x":0.341552, "y":-0.956247,"z":0.890695}}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //interior
+         ["G_pickup_grp_dash", ["pickup_dash"]],
+         ["G_pickup_grp_column", ["pickup_dash"]],
+         ["G_pickup_grp_column_support", ["pickup_dash"]],
+         ["G_pickup_grp_dash_switchpanel", ["pickup_dash"]],
+         ["G_pickup_grp_buttons_generic", ["pickup_dash"]],
+         ["pickup_intmirror", ["pickup_windshield"]],
+         ["G_pickup_intcarpet_D55", ["pickup_body"]],
+         ["pickup_locker_button_front", ["pickup_dash"], [], {"disable":"$=$components.locker_F ~= true",  "rot":{"x":-10, "y":0, "z":0}, "pos":{"x":0.100, "y":-0.20, "z":-0.1}}],
+         ["pickup_locker_button_rear",  ["pickup_dash"], [], {"disable":"$=$components.locker_R ~= true",  "rot":{"x":-10, "y":0, "z":0}, "pos":{"x":0.100, "y":-0.20, "z":-0.1}}],
+         ["G_pickup_locker_button_int",  ["pickup_dash"], [], {"disable":"$=$components.locker_I ~= true", "rot":{"x":-10, "y":0, "z":0}, "pos":{"x":0.082, "y":-0.20, "z":-0.1}}],
+    ],
+    "mirrors": [
+        ["mesh", "idRef:", "id1:", "id2:"],
+        ["pickup_intmirror","rf1","rfc1r","rf2",{"refBaseTranslation":{"x":0.0,"y":-0.090,"z":-0.140},"baseRotationGlobal":{"x":0,"y":0,"z":19}, "optional":true}],
+    ],
+    "triggers2":[
+        ["id", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["hood_int", "dshl","dsh","b1ll", "box", {"x":0.04, "y":0.04, "z":0.04}, {"x":25, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0},{"x":-0.23, "y":0.22, "z":-0.10}],
+        ["front_lock",    "dshl","dsh","int_strw","box", {"x":0.02, "y":0.04, "z":0.02}, {"x":28, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0},{"x":-0.285, "y":-0.050, "z": 0.010}, {"disable":"$=$components.locker_F ~= true"}],
+        ["rear_lock",     "dshl","dsh","int_strw","box", {"x":0.02, "y":0.04, "z":0.02}, {"x":28, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0},{"x":-0.265, "y":-0.050, "z": 0.010}, {"disable":"$=$components.locker_R ~= true"}],
+        ["int_lock",      "dshl","dsh","int_strw","box", {"x":0.02, "y":0.04, "z":0.02}, {"x":28, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0},{"x":-0.245, "y":-0.050, "z": 0.010}, {"disable":"$=$components.locker_I ~= true"}],
+        ["sw_ignition", "dsh", "dshl", "dsh2", "sphere", 0.015,  {"x":0, "y":0, "z":90}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.226 "y":0.054, "z":0.035}, {"deformGroup":"", "color": [0, 0, 1, 0.4]}],
+        ["sw_starter",  "dsh", "dshl", "dsh2", "sphere", 0.015,  {"x":0, "y":0, "z":90}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.22 "y":-0.031, "z":0.03}, {"deformGroup":"", "color": [0, 0, 1, 0.4]}],
+        ["headlights",  "dsh", "dshl", "dsh2", "sphere", 0.015,  {"x":0, "y":0, "z":90}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.077 "y":0.008, "z":0.092}, {"deformGroup":"", "color": [0, 0, 1, 0.4]}],
+    ],
+    "actionsEnabled": [
+        ["id"],
+        ["hoodRelease"],
+        ["toggleFrontDiff",     {"disable":"$=$components.locker_F ~= true"}],
+        ["lockFrontDiff",       {"disable":"$=$components.locker_F ~= true"}],
+        ["unlockFrontDiff",     {"disable":"$=$components.locker_F ~= true"}],
+        ["setFrontDiffModeAxis",{"disable":"$=$components.locker_F ~= true"}],
+        ["toggleRearDiff",      {"disable":"$=$components.locker_R ~= true"}],
+        ["lockRearDiff",        {"disable":"$=$components.locker_R ~= true"}],
+        ["unlockRearDiff",      {"disable":"$=$components.locker_R ~= true"}],
+        ["setRearDiffModeAxis", {"disable":"$=$components.locker_R ~= true"}],
+    ],
+    "triggerEventLinks2":[
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["hood_int", "action0", "hoodRelease"],
+        ["sw_ignition", "action0", "common:activateStarterMotor"],
+        ["sw_starter", "action0", "common:setIgnitionLevel3Momentary"],
+        ["headlights", "action0", "common:toggle_headlights"],
+        ["int_lock", "action0", "toggleInteraxleDiff", {"disable":"$=$components.locker_I ~= true"}],
+        ["rear_lock", "action0", "toggleRearDiff", {"disable":"$=$components.locker_R ~= true"}],
+        ["front_lock","action0", "toggleFrontDiff",{"disable":"$=$components.locker_F ~= true"}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"collision":true},
+         {"selfCollision":true},
+
+         //dash nodes
+         {"group":["pickup_dash", "pickup_dash_pickup"]},
+         {"nodeWeight":0.752},
+         ["dshr",-0.455, -0.626, 1.090],
+         ["dsh",  0.000, -0.626, 1.090],
+         ["dshl", 0.455, -0.626, 1.090],
+         {"collision":false},
+         {"selfCollision":false},
+         ["int_strw", 0.455, -0.475, 1.172],
+         ["dsh3", 0.455, -0.390, 1.010, {"group":""}],
+         {"nodeWeight":0.2},
+         //flexbody node
+         ["dsh2",  0.000, -0.716, 1.290],
+         {"group":""},
+         ["int_pbrk", 0.66, -0.93, 0.86],
+         {"group":""},
+    ],
+    "torsionbars":[
+       ["id1:", "id2:", "id3:", "id4:"],
+        //rigify the column
+        {"spring":20000, "damp":1, "deform":18000, "strength":28000},
+        ["int_strw", "dshl", "dsh", "b5l"],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          //dash board
+          {"beamSpring":869146.6,"beamDamp":142.73},
+          {"beamDeform":12400,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":""},
+          ["dshr","b5r"],
+          ["dshl","b5l"],
+          ["dshr","b6r"],
+          ["dshl","b6l"],
+          ["dshr","b1r"],
+          ["dshl","b1l"],
+          ["dshr","b5rr"],
+          ["dshl","b5ll"],
+          ["dshr","b6rr"],
+          ["dshl","b6ll"],
+          ["dshl","dshr"],
+          ["dsh","b5r"],
+          ["dsh","b5l"],
+          ["dsh","b6r"],
+          ["dsh","b6l"],
+          ["dsh","b1r"],
+          ["dsh","b1l"],
+          ["dshl","dsh"],
+          ["dshr","dsh"],
+          ["dsh","int_strw"],
+          ["dshl","int_strw"],
+          //dsh3 connect
+          ["dsh3","b5r"],
+          ["dsh3","b5l"],
+          ["dsh3","b5ll"],
+          ["dsh3","b6r"],
+          ["dsh3","b6l"],
+          ["dsh3","b6ll"],
+          //["dsh3","dsh"],
+          //["dsh3","dsh2"],
+          ["dsh3","dshl"],
+          ["dsh3","int_strw"],
+          {"beamSpring":169146.6,"beamDamp":42.73},
+          ["dsh2","b5r"],
+          ["dsh2","b5l"],
+          ["dsh2","b6r"],
+          ["dsh2","b6l"],
+          ["dsh2","b1r"],
+          ["dsh2","b1l"],
+          ["dshl","dsh2"],
+          ["dshr","dsh2"],
+          {"beamSpring":160100,"beamDamp":142.73},
+          {"beamDeform":70300,"beamStrength":"FLT_MAX"},
+          ["int_pbrk","dshl"],
+          ["int_pbrk","b5ll"],
+          ["int_pbrk","b5l"],
+          ["int_pbrk","b1lll"],
+          //--BLEED DEFORM LIMIT TO OTHER PARTS--
+          {"deformLimitExpansion":1.2},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //sides
+            {"dragCoef":0},
+            {"group":"pickup_dash"},
+            ["dshl", "b6ll", "b5ll"],
+            ["b6ll", "dshl", "b6l"],
+            ["b6l", "dshl", "dsh"],
+            ["dsh", "b6r", "b6l"],
+            ["dsh", "dshr", "b6r"],
+            ["b6r", "dshr", "b6rr"],
+            ["dshr", "b5rr", "b6rr"],
+            ["dshl", "b5ll", "b5l"],
+            ["b5l", "dsh", "dshl"],
+            ["b5l", "b5r", "dsh"],
+            ["dsh", "b5r", "dshr"],
+            ["dshr", "b5r", "b5rr"],
+    ],
+},
+"G_pickup_grp_switchcovers": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Switch Covers",
+        "value":50,
+    },
+    "slotType" : "G_pickup_grp_switchcovers",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_grp_buttons_cups", ["pickup_dash"]],
+    ],
+},
+"G_pickup_grp_gauges_cover": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Blank Cover",
+        "value":50,
+    },
+    "slotType" : "G_pickup_grp_gauges",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_grp_dash_instrumentpanel", ["pickup_dash"]],
+    ],
+},
+"G_pickup_grp_gps": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Navigation Screen",
+        "value":300,
+    },
+    "slotType" : "G_pickup_grp_controls",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_grp_gps_alt", ["pickup_dash"]],
+         ["G_pickup_grp_gps_alt_screen", ["pickup_dash"]],
+    ],
+    "controller": [
+        ["fileName"],
+        ["beamNavigator"],
+    ],
+    "glowMap":{
+        "screen_gps":{"simpleFunction":{"ignitionLevel":0.5}, "off":"screen_off","on":"beamnav_naviscreen_accessory", "on_intense":"screen_gps"},
+    },
+},
+"G_pickup_grp_doorpanel_FR": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Race Front Right Door Panel",
+        "value":600,
+    },
+    "slotType" : "pickup_doorpanel_FR",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_grp_doorpanel_R", ["pickup_doorpanel_FR"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         {"deformGroup":""},
+    ],
+    "triggers2":[
+        ["id", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["door_FR_int", "d7r","d8r","d4r", "box", {"x":0.12, "y":0.03, "z":0.07}, {"x":-2, "y":0, "z":-1}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.36, "y":0.14, "z":0.07}],
+    ],
+    "triggerEventLinks2":[
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["door_FR_int", "action0", "door_FR"],
+    ],
+    "sounds": {
+        "$+cabinFilterCoef": 0.03
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //rigidifier
+         {"selfCollision":false},
+         {"collision":false},
+         {"nodeWeight":2.64},
+         ["d14r",-0.7, -0.10, 1.1, {"group":""}],
+         {"group":""},
+    ],
+},
+"G_pickup_grp_doorpanel_FL": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Race Front Left Door Panel",
+        "value":600,
+    },
+    "slotType" : "pickup_doorpanel_FL",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_grp_doorpanel_L", ["pickup_doorpanel_FL"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         {"deformGroup":""},
+    ],
+    "triggers2":[
+        ["id", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["door_FL_int", "d7l","d8l","d4l", "box", {"x":0.12, "y":0.03, "z":0.07}, {"x":2, "y":0, "z":1}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.36, "y":0.14, "z":-0.10}],
+    ],
+    "triggerEventLinks2":[
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["door_FL_int", "action0", "door_FL"],
+    ],
+    "sounds": {
+        "$+cabinFilterCoef": 0.03
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //rigidifier
+         {"selfCollision":false},
+         {"collision":false},
+         {"nodeWeight":2.64},
+         ["d14l",0.6, -0.10, 1.1, {"group":""}],
+         {"group":""},
+    ],
+},
+"G_pickup_grp_buttons_race": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Race Buttons",
+        "value":150,
+    },
+    "slotType" : "G_pickup_grp_controls",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_grp_buttons_race", ["pickup_dash"]],
+    ],
+},
+"G_pickup_grp_buttons_D55": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Air Controls",
+        "value":350,
+    },
+    "slotType" : "G_pickup_grp_controls",
+    "slots2": [
+        ["name",                           "allowTypes",                       "denyTypes", "default", "description"],
+        ["G_pickup_grp_D55_sliderlatch",   ["G_pickup_grp_D55_sliderlatch"],   [],          "",        "Fifth Wheel Slider Latch"],
+        ["G_pickup_D55_pto",               ["G_pickup_D55_pto"],               [],          "",        "PTO Controls"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_grp_D55_dash_vent_gauge", ["pickup_dash"]],
+         ["G_pickup_grp_D55_parking_brake_base", ["pickup_dash"]],
+         ["G_pickup_grp_D55_trailer_brake_base", ["pickup_dash"]],
+    ],
+    "props": [
+        ["func",                        "mesh",                                "idRef:","idX:","idY:", "baseRotation",             "rotation",                 "translation",       "min", "max", "offset", "multiplier"],
+        ["mainAirTank_pressureRelative","G_pickup_D55_air_gauge_needle_a_dash", "dsh", "dshl", "dsh2", {"x":-90, "y":3.4051, "z":-24.583},   {"x":0, "y":0, "z":-0.264}, {"x":0, "y":0, "z":0}, 0, 1834, -467, 0.001, {"baseTranslationGlobal":{"x":0.142671, "y":-0.552529, "z":1.06424}}],
+        ["mainAirTank_pressureRelative","G_pickup_D55_air_gauge_needle_b_dash", "dsh", "dshl", "dsh2", {"x":-90, "y":3.4051, "z":-24.583},   {"x":0, "y":0, "z":-0.264}, {"x":0, "y":0, "z":0}, 0, 1834, -467, 0.001, {"baseTranslationGlobal":{"x":0.142671, "y":-0.552529, "z":1.06424}}],
+        //parking brake button
+        ["parkingbrake",                    "G_pickup_grp_D55_parking_brake_switch", "dshl","dsh","dsh2",    {"x":-7, "y":-45, "z":160}, {"x":0, "y":0, "z":0},  {"x":0.013, "y":-0.014, "z":-0.009},  -1, 1, -0.4, 1, {"baseTranslationGlobal":{"x":0.19289, "y":-0.556354, "z":1.01859}}],
+        //trailer air release                                                                                                                                                    -0.014      -0.009
+        ["mainAirTank_pressureConsumerCoef","G_pickup_grp_D55_trailer_brake_switch", "dshl","dsh","dsh2",    {"x":30, "y":118, "z":190}, {"x":0, "y":0, "z":0},  {"x":0.013, "y":-0.014, "z":-0.009},   -1, 1, 0.0, 1,  {"baseTranslationGlobal":{"x":0.125705, "y":-0.523282, "z":1.00495}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["pneumatics/lowAirPressureWarning", {"airTooLowPressure":410000, "airOkPressure":420000, "lowAirWarningSoundEvent":"event:>Vehicle>Interior>Low_Pressure_Alarm_01", "lowAirWarningSoundNode":"dshl"}],
+    ],
+    "triggers2":[
+        ["id", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["parkingBrake","dsh", "dshl", "dsh2", "sphere", 0.035, {"x":0, "y":0, "z":90}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.21 "y":-0.095, "z":0.08}, {"deformGroup":"", "color": [0, 0, 1, 0.4]}],
+        ["trailerAir",  "dsh", "dshl", "dsh2", "sphere", 0.035, {"x":0, "y":0, "z":90}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.145 "y":-0.125, "z":0.11}, {"deformGroup":"", "color": [0, 0, 1, 0.4]}],
+    ],
+    "triggerEventLinks2": [
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["parkingBrake", "action0", "common:parkingbrake"],
+        ["trailerAir", "action0", "toggleTrailerAirSupply"],
+    ],
+    "actionsEnabled": [
+        ["id"],
+        ["toggleTrailerAirSupply"],
+    ],
+},
+"G_pickup_grp_D55_sliderlatch": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Fifth Wheel Slider Latch",
+        "value":10,
+    },
+    "slotType" : "G_pickup_grp_D55_sliderlatch",
+    "triggers2":[
+        ["id", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["sliderLatch", "dsh", "dshl", "dsh2", "sphere", 0.015, {"x":0, "y":0, "z":90}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0.233 "y":0.017, "z":0.023}, {"nodeMove":{"x":0.0, "y":0.0, "z":0.0}, "deformGroup":"", "color": [0, 0, 1, 0.4]}],
+    ],
+    "triggerEventLinks2": [
+        ["triggerId:triggers2", "triggerInput", "inputAction"],
+        ["sliderLatch",        "action0", "fifthwheelSliderLock"]
+    ],
+},
+"G_pickup_grp_lettering_gavril": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Big Gavril Lettering",
+        "value":100,
+    },
+    "slotType" : "G_pickup_grp_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_grp_lettering_gavril", ["pickup_dash"]],
+    ],
+},
+"G_pickup_grp_lettering_gavril_small": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Small Gavril Lettering",
+        "value":60,
+    },
+    "slotType" : "G_pickup_grp_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_grp_lettering_gavril_small", ["pickup_dash"]],
+    ],
+},
+"G_pickup_grp_thissideup": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Advanced Pit Crew Communication Device",
+        "value":20,
+    },
+    "slotType" : "G_pickup_grp_thissideup",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_grp_lettering_thissideup", ["pickup_dash"]],
+    ],
+},
+}

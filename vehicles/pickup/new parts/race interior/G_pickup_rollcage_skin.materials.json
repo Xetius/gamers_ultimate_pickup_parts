@@ -1,0 +1,76 @@
+{
+  "rollcage_01a.skin_G_pickup_rollcage_color.secondary": {
+    "name": "rollcage_01a.skin_G_pickup_rollcage_color.secondary",
+    "mapTo": "rollcage_01a.skin_G_pickup_rollcage_color.secondary",
+    "class": "Material",
+    "Stages": [
+      {
+        "clearCoatRoughnessFactor": 0,
+        "colorPaletteMap": "/vehicles/common/nullcolormaskG.color.png",
+        "metallicFactor": 1,
+        "pixelSpecular": true,
+        "roughnessFactor": 0.300000012
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "pixelSpecular": null,
+        "roughnessFactor": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "pixelSpecular": null,
+        "roughnessFactor": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "pixelSpecular": null,
+        "roughnessFactor": null
+      }
+    ],
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "rollcage_01a.skin_G_pickup_rollcage_color.black": {
+    "name": "rollcage_01a.skin_G_pickup_rollcage_color.black",
+    "mapTo": "rollcage_01a.skin_G_pickup_rollcage_color.black",
+    "class": "Material",
+    "Stages": [
+      {
+        "baseColorFactor": [
+          0.123671003,
+          0.123671003,
+          0.123671003,
+          1
+        ],
+        "metallicFactor": 0.38,
+        "roughnessFactor": 0.6
+      },
+      {
+        "baseColorFactor": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "baseColorFactor": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      },
+      {
+        "baseColorFactor": null,
+        "metallicFactor": null,
+        "roughnessFactor": null
+      }
+    ],
+    "alphaRef": 0,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "translucentBlendOp": "None",
+    "version": 1.5
+  }
+}

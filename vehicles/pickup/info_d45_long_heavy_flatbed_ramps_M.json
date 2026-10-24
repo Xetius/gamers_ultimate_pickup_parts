@@ -1,0 +1,49 @@
+{
+  "0-100 km/h":9.8,
+  "0-100 mph":34.9,
+  "0-60 mph":9.2,
+  "100-0 km/h":40.3,
+  "60-0 mph":123.7,
+  "60-100 mph":25.7,
+  "BoundingBox":[
+    [
+      -0.6,
+      -1.42,
+      -0.3099
+    ],
+    [
+      1.7,
+      3.54,
+      1.41
+    ]
+  ],
+  "Braking G":0.975,
+  "Commercial Class":"Class 4 Truck",
+  "Config Type":"Custom",
+  "Configuration":"D45 Extended Cab Long Heavy Duty Flatbed Ramps (M)",
+  "Description":"An old work Truck, that has probably spent more time driving overloaded than empty",
+  "Drivetrain":"RWD",
+  "Fuel Type":"Diesel",
+  "Induction Type":"TURBO",
+  "Off-Road Score":46,
+  "Performance Class":"4",
+  "Population":4000,
+  "Power":183,
+  "PowerPeakRPM":"3950 - 4600",
+  "Propulsion":"ICE",
+  "Top Speed":48.48723133,
+  "Torque":515,
+  "TorquePeakRPM":"2950 - 3650",
+  "Transmission":"Manual",
+  "Value":130000,
+  "Weight":3477,
+  "Weight/Power":10.45685279,
+  "Years":{
+    "max":1991,
+    "min":1986
+  },
+  "defaultPaintName1":"Army Green",
+  "defaultPaintName2":"Army Green",
+  "defaultPaintName3":"Army Green",
+  "vehicleSelectorSubGroup":"vehiclesData.pickup.d45_ambulance_A.vehicleSelectorSubGroup"
+}

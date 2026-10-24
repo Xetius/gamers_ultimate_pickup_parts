@@ -1,0 +1,41 @@
+{
+  "Body Style":"Flatbed Truck",
+  "BoundingBox":[
+    [
+      -0.8854,
+      -1.136,
+      -0.7234
+    ],
+    [
+      1.7534,
+      5.0361,
+      1.632
+    ]
+  ],
+  "Commercial Class":"Class 8 Truck",
+  "Config Type":"Custom",
+  "Configuration":"MD80 Flatbed Tandem Lift Axle (A)",
+  "Description":"Late model single cab truck all the bells and whistles, made to carry the heaviest of loads",
+  "Drivetrain":"RWD",
+  "Fuel Type":"Diesel",
+  "Induction Type":"Turbo",
+  "Off-Road Score":34,
+  "Population":4000,
+  "Power":406,
+  "PowerPeakRPM":2400,
+  "Propulsion":"ICE",
+  "Top Speed":32.65652803,
+  "Torque":1227,
+  "TorquePeakRPM":"1150 - 1900",
+  "Transmission":"Automatic",
+  "Value":190000,
+  "Weight":9409,
+  "Weight/Power":27.83163265,
+  "Years":{
+    "max":1998,
+    "min":1992
+  },
+  "defaultPaintName1":"Shingle Red",
+  "defaultPaintName2":"Shingle Red",
+  "defaultPaintName3":"Lead"
+}

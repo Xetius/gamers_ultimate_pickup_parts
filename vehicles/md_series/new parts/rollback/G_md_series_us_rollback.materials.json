@@ -1,0 +1,43 @@
+{
+  "G_md_series_us_semi_rollback": {
+    "name": "G_md_series_us_semi_rollback",
+    "mapTo": "G_md_series_us_semi_rollback",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/tiltdeck/tiltdeck_ao.data.png",
+        "baseColorMap": "/vehicles/tiltdeck/tiltdeck_b.color.png",
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/tiltdeck/tiltdeck_m.data.png",
+        "normalMap": "/vehicles/tiltdeck/tiltdeck_nm.normal.png",
+        "roughnessMap": "/vehicles/tiltdeck/tiltdeck_r.data.png"
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/tiltdeck/tiltdeck_ao.data.png",
+        "clearCoatFactor": 1,
+        "colorPaletteMap": "/vehicles/common/nullcolormaskG.dds",
+        "instanceDiffuse": true,
+        "metallicFactor": 1,
+        "normalMap": "/vehicles/tiltdeck/tiltdeck_nm.normal.png",
+        "opacityMap": "/vehicles/tiltdeck/tiltdeck_c.data.png"
+      },
+      {
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null
+      },
+      {
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null
+      }
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+}

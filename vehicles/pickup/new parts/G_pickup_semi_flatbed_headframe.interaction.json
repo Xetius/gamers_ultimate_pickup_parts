@@ -1,0 +1,10 @@
+{
+    "fileversion": 2,
+    "actions": {
+       //Car Lift
+       //"G_carliftUp":             {"order": 1.1, "onChange":"custom_input.tiltBed( 0.5 * VALUE)",   "title": "ui.inputActions.pickup.tiltUp.title",     "desc": "ui.inputActions.pickup.tiltUp.description" },
+       //"G_carliftDown":           {"order": 1.2, "onChange":"custom_input.tiltBed(-0.5 * VALUE)",   "title": "ui.inputActions.pickup.tiltDown.title",   "desc": "ui.inputActions.pickup.tiltDown.description" },
+       "G_carliftUp":             {"order": 1.1, "onChange":"electrics.values.upfit_tilt = VALUE",   "title": "Car lift up",     "desc": "Raises front car lift ramps" },
+       "G_carliftDown":           {"order": 1.2, "onChange":"electrics.values.upfit_tilt = -VALUE",   "title": "Car lift down",   "desc": "Lowers front car lift ramps" },
+    }
+}

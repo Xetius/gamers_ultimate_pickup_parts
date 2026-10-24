@@ -1,0 +1,459 @@
+{
+"G_pickup_wheeldata_R_goliath_dually": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Goliath Dually Rear Spindles",
+        "value":100,
+    },
+    "slotType" : "pickup_wheeldata_R_dually",
+    "components": {
+        "goliath_dually_reduce_width": 0.12,
+    },
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //rear
+        {"breakGroup":""},
+        {"deformGroup":""},
+        {"selfCollision":false},
+        {"collision":true},
+        {"hubcapBreakGroup":"hubcap_RL"},
+        {"hubcapGroup":"hubcap_RL"},
+        {"wheelOffset":-0.025},
+        {"axleBeams":["axle_RR1"]},
+        ["RR", "wheel_RR1", "tire_RR1", "rw1rr", "rw1r", 9999, "ax3r", 1, {"torqueCoupling:":"ax1", "torqueArm:":"ax3"}],
+        {"axleBeams":["axle_RL1"]},
+        ["RL", "wheel_RL1", "tire_RL1", "rw1ll", "rw1l", 9999, "ax3l", -1, {"torqueCoupling:":"ax1", "torqueArm:":"ax3"}],
+        //disable outer wheel brake
+        {"brakeTorque":0},
+        {"parkingTorque":0},
+        {"enableBrakeThermals":false},
+        //
+        {"wheelOffset":"$=-0.365-($components.goliath_dually_offset_X or 0)"},
+        {"axleBeams":["axle_RR1"]},
+        ["RR2", "wheel_RR2", "tire_RR2", "rw1rr", "rw1r", 9999, "ax3r", 1, {"torqueCoupling:":"ax1", "torqueArm:":"ax3","wheelAngle":7.5}],
+        {"axleBeams":["axle_RL1"]},
+        ["RL2", "wheel_RL2", "tire_RL2", "rw1ll", "rw1l", 9999, "ax3l", -1, {"torqueCoupling:":"ax1", "torqueArm:":"ax3","wheelAngle":7.5}],
+        {"selfCollision":true},
+        {"axleBeams":[]},{"disableMeshBreaking":false,"disableTriangleBreaking":false},
+        {"hubcapBreakGroup":""},
+        {"hubcapGroup":""},
+        {"enableHubcaps":false},
+        {"enableTireLbeams":false},
+        {"enableTreadReinfBeams":false},
+        {"enableTireReinfBeams":false},
+        {"enableTreadReinfBeams":false},
+        {"enableTirePeripheryReinfBeams":false},
+        {"loadSensitivitySlope":""},
+        {"noLoadCoef":""},
+        {"fullLoadCoef":""},
+        {"frictionCoef":""},
+        {"slidingFrictionCoef":""},
+        {"softnessCoef":0.5},
+        {"treadCoef":1.0},
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["shaft", "wheelaxleRL", "differential_R", 1, {"breakTriggerBeam":"axle_RL", "uiName":"Rear Left Axle", "friction":1}],
+        ["shaft", "wheelaxleRR", "differential_R", 2, {"breakTriggerBeam":"axle_RR", "uiName":"Rear Right Axle", "friction":1}],
+        ["differential", "differential_RL", "wheelaxleRL", 1, {"diffType":"dually", "gearRatio":1, "lockTorque":500000, "friction":4.69, "dynamicFriction":0.00785, "uiName":"Rear Left Dually Hub","defaultVirtualInertia":2}],
+        ["differential", "differential_RR", "wheelaxleRR", 1, {"diffType":"dually", "gearRatio":1, "lockTorque":500000, "friction":4.69, "dynamicFriction":0.00785, "uiName":"Rear Right Dually Hub","defaultVirtualInertia":2}],
+        //rear left axle outer
+        ["shaft", "wheelaxle_RL1", "differential_RL", 1, {"connectedWheel":"RL", "breakTriggerBeam":"axle_RL1", "uiName":"Rear Left Axle", "friction":0.25}],
+        //rear left axle inner
+        ["shaft", "wheelaxle_RL2", "differential_RL", 2, {"connectedWheel":"RL2", "breakTriggerBeam":"axle_RL1", "uiName":"Rear Left Axle", "friction":0.25}],
+        //rear right axle outer
+        ["shaft", "wheelaxle_RR1", "differential_RR", 1, {"connectedWheel":"RR", "breakTriggerBeam":"axle_RR1", "uiName":"Rear Right Axle", "friction":0.25}],
+        //rear right axle inner
+        ["shaft", "wheelaxle_RR2", "differential_RR", 2, {"connectedWheel":"RR2", "breakTriggerBeam":"axle_RR1", "uiName":"Rear Right Axle", "friction":0.25}],
+    ],
+},
+"G_pickup_goliath_wheeldata_R_RS_goliath_dually": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Goliath Dually Rear Spindles",
+        "value":100,
+    },
+    "slotType" : "G_pickup_goliath_wheeldata_R_RS_dually",
+    "components": {
+        "goliath_dually_reduce_width": 0.12,
+    },
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //rear
+        {"breakGroup":""},
+        {"deformGroup":""},
+        {"selfCollision":false},
+        {"collision":true},
+        {"hubcapBreakGroup":"hubcap_RL"},
+        {"hubcapGroup":"hubcap_RL"},
+        //{"wheelOffset":0.065},
+        {"wheelOffset":-0.025},
+        {"axleBeams":["axle_RR1"]},
+        ["RR", "wheel_RR1", "tire_RR1", "rw1rr", "rw1r", 9999, "ax3r", 1, {"torqueCoupling:":"ax1", "torqueArm:":"ax3"}],
+        {"axleBeams":["axle_RL1"]},
+        ["RL", "wheel_RL1", "tire_RL1", "rw1ll", "rw1l", 9999, "ax3l", -1, {"torqueCoupling:":"ax1", "torqueArm:":"ax3"}],
+        //disable outer wheel brake
+        {"brakeTorque":0},
+        {"parkingTorque":0},
+        {"enableBrakeThermals":false},
+        //
+        {"wheelOffset":"$=-0.365-($components.goliath_dually_offset_X or 0)"},
+        {"axleBeams":["axle_RR2"]},
+        ["RR2", "wheel_RR2", "tire_RR2", "rw1rr", "rw1r", 9999, "ax3r", 1, {"torqueCoupling:":"ax1", "torqueArm:":"ax3","wheelAngle":7.5}],
+        {"axleBeams":["axle_RL2"]},
+        ["RL2", "wheel_RL2", "tire_RL2", "rw1ll", "rw1l", 9999, "ax3l", -1, {"torqueCoupling:":"ax1", "torqueArm:":"ax3","wheelAngle":7.5}],
+        {"selfCollision":true},
+        {"axleBeams":[]},{"disableMeshBreaking":false,"disableTriangleBreaking":false},
+        {"hubcapBreakGroup":""},
+        {"hubcapGroup":""},
+        {"enableHubcaps":false},
+        {"enableTireLbeams":false},
+        {"enableTreadReinfBeams":false},
+        {"enableTireReinfBeams":false},
+        {"enableTreadReinfBeams":false},
+        {"enableTirePeripheryReinfBeams":false},
+        {"loadSensitivitySlope":""},
+        {"noLoadCoef":""},
+        {"fullLoadCoef":""},
+        {"frictionCoef":""},
+        {"slidingFrictionCoef":""},
+        {"softnessCoef":0.5},
+        {"treadCoef":1.0},
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["differential", "differential_RL", "halfshaftRL", 1, {"diffType":"dually", "gearRatio":1, "lockTorque":500000, "friction":4.69, "dynamicFriction":0.00785, "uiName":"Rear Left Dually Hub","defaultVirtualInertia":2}],
+        ["differential", "differential_RR", "halfshaftRR", 2, {"diffType":"dually", "gearRatio":1, "lockTorque":500000, "friction":4.69, "dynamicFriction":0.00785, "uiName":"Rear Right Dually Hub","defaultVirtualInertia":2}],
+        //rear left axle outer
+        ["shaft", "wheelaxle_RL1", "differential_RL", 1, {"connectedWheel":"RL", "breakTriggerBeam":"axle_RL", "uiName":"Rear Left Axle", "friction":0.25}],
+        //rear left axle inner
+        ["shaft", "wheelaxle_RL2", "differential_RL", 2, {"connectedWheel":"RL2", "breakTriggerBeam":"axle_RL2", "uiName":"Rear Left Axle", "friction":0.25}],
+        //rear right axle outer
+        ["shaft", "wheelaxle_RR1", "differential_RR", 1, {"connectedWheel":"RR", "breakTriggerBeam":"axle_RR", "uiName":"Rear Right Axle", "friction":0.25}],
+        //rear right axle inner
+        ["shaft", "wheelaxle_RR2", "differential_RR", 2, {"connectedWheel":"RR2", "breakTriggerBeam":"axle_RR2", "uiName":"Rear Right Axle", "friction":0.25}],
+    ],
+},
+"G_steelwheel_03a_20x11_R_dually_true": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"20x11 STX Goliath Dually Rear Wheels (White, Needs Spindles)",
+        "value":2400,
+        //dual pressurewheel
+    },
+    "slotType" : "wheel_R_8_dually",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_R_20x11_offroad_dually_true","G_tire_R_38_14_20_11_dirt_dually_true","Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //inner
+        ["G_steelwheel_03a_20x11", ["wheel_RR1","wheelhub_RR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["G_steelwheel_03a_20x11", ["wheel_RL1","wheelhub_RL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1, "z":1}}],
+        //outer
+        ["G_steelwheel_03a_20x11", ["wheel_RR2","wheelhub_RR"], [], {"pos":{"x":"$=-0.9-($components.goliath_dually_offset_X or 0)", "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["G_steelwheel_03a_20x11", ["wheel_RL2","wheelhub_RL"], [], {"pos":{"x":"$= 0.9+($components.goliath_dually_offset_X or 0)", "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1, "z":1}}],
+        ["G_hub_dually_extension", ["wheel_RR2","wheelhub_RR"], [], {"pos":{"x":"$=-0.54-($components.goliath_dually_offset_X or 0)", "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":2.0, "y":1.55, "z":1.55}}],
+        ["G_hub_dually_extension", ["wheel_RL2","wheelhub_RL"], [], {"pos":{"x":"$= 0.54+($components.goliath_dually_offset_X or 0)", "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":2.0, "y":1.55, "z":1.55}}],
+        //
+        ["hub_plain", ["wheel_RR1","wheelhub_RR"], [], {"pos":{"x":-0.64, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+        ["hub_plain", ["wheel_RL1","wheelhub_RL"], [], {"pos":{"x": 0.64, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--REAR WHEELS--
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"nodeWeight":12.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_RR"},
+        ["rw1r", -0.27, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RL"},
+        ["rw1l", 0.27, 0.0, 0.0, {"staticCollision":false}],
+        {"collision":true},
+        //wheel nodes
+        {"group":"wheelhub_RR"},
+        ["rw1rr", -0.80, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RL"},
+        ["rw1ll", 0.80, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--REAR WHEELS--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":110000,"beamStrength":1400000},
+        ["rw1r","rw1rr"],
+        ["rw1l","rw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.27},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.285},
+        //{"numRays":20},
+        {"numRays":12},
+
+        //hub options
+        {"hubTreadBeamSpring":2001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":2001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":2001000, "hubSideBeamDamp":10},
+        {"hubBeamDeform":48000, "hubBeamStrength":155000},
+        {"hubNodeWeight":0.8},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_steelwheel_03b_20x11_R_dually_true": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"20x11 STX Goliath Dually Rear Wheels (Black, Needs Spindles)",
+        "value":2400,
+        //dual pressurewheel
+    },
+    "slotType" : "wheel_R_8_dually",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_R_20x11_offroad_dually_true","G_tire_R_38_14_20_11_dirt_dually_true","Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //inner
+        ["G_steelwheel_03b_20x11", ["wheel_RR1","wheelhub_RR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["G_steelwheel_03b_20x11", ["wheel_RL1","wheelhub_RL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1, "z":1}}],
+        //outer
+        ["G_steelwheel_03b_20x11", ["wheel_RR2","wheelhub_RR"], [], {"pos":{"x":"$=-0.9-($components.goliath_dually_offset_X or 0)", "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["G_steelwheel_03b_20x11", ["wheel_RL2","wheelhub_RL"], [], {"pos":{"x":"$= 0.9+($components.goliath_dually_offset_X or 0)", "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1, "z":1}}],
+        ["G_hub_dually_extension", ["wheel_RR2","wheelhub_RR"], [], {"pos":{"x":"$=-0.54-($components.goliath_dually_offset_X or 0)", "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":2.0, "y":1.55, "z":1.55}}],
+        ["G_hub_dually_extension", ["wheel_RL2","wheelhub_RL"], [], {"pos":{"x":"$= 0.54+($components.goliath_dually_offset_X or 0)", "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":2.0, "y":1.55, "z":1.55}}],
+        //
+        ["hub_plain", ["wheel_RR1","wheelhub_RR"], [], {"pos":{"x":-0.64, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+        ["hub_plain", ["wheel_RL1","wheelhub_RL"], [], {"pos":{"x": 0.64, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--REAR WHEELS--
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"nodeWeight":12.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_RR"},
+        ["rw1r", -0.27, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RL"},
+        ["rw1l", 0.27, 0.0, 0.0, {"staticCollision":false}],
+        {"collision":true},
+        //wheel nodes
+        {"group":"wheelhub_RR"},
+        ["rw1rr", -0.80, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RL"},
+        ["rw1ll", 0.80, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--REAR WHEELS--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":110000,"beamStrength":1400000},
+        ["rw1r","rw1rr"],
+        ["rw1l","rw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.27},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.285},
+        //{"numRays":20},
+        {"numRays":12},
+
+        //hub options
+        {"hubTreadBeamSpring":2001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":2001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":2001000, "hubSideBeamDamp":10},
+        {"hubBeamDeform":48000, "hubBeamStrength":155000},
+        {"hubNodeWeight":0.8},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_steelwheel_03c_20x11_R_dually_true": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"20x11 STX Goliath Dually Rear Wheels (Gray, Needs Spindles)",
+        "value":2400,
+        //dual pressurewheel
+    },
+    "slotType" : "wheel_R_8_dually",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_R_20x11_offroad_dually_true","G_tire_R_38_14_20_11_dirt_dually_true","Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //inner
+        ["G_steelwheel_03c_20x11", ["wheel_RR1","wheelhub_RR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["G_steelwheel_03c_20x11", ["wheel_RL1","wheelhub_RL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1, "z":1}}],
+        ["G_hub_dually_extension", ["wheel_RR1","wheelhub_RR"], [], {"pos":{"x":-0.60, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.65, "y":1.551, "z":1.551}}],
+        ["G_hub_dually_extension", ["wheel_RL1","wheelhub_RL"], [], {"pos":{"x": 0.60, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.65, "y":1.551, "z":1.551}}],
+        //outer
+        ["G_steelwheel_03c_20x11", ["wheel_RR2","wheelhub_RR"], [], {"pos":{"x":"$=-0.9-($components.goliath_dually_offset_X or 0)", "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["G_steelwheel_03c_20x11", ["wheel_RL2","wheelhub_RL"], [], {"pos":{"x":"$= 0.9+($components.goliath_dually_offset_X or 0)", "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1, "z":1}}],
+        ["G_hub_dually_extension", ["wheel_RR2","wheelhub_RR"], [], {"pos":{"x":"$=-0.61-($components.goliath_dually_offset_X or 0)", "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.65, "y":1.55, "z":1.55}}],
+        ["G_hub_dually_extension", ["wheel_RL2","wheelhub_RL"], [], {"pos":{"x":"$= 0.61+($components.goliath_dually_offset_X or 0)", "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.65, "y":1.55, "z":1.55}}],
+        //
+        ["hub_plain", ["wheel_RR1","wheelhub_RR"], [], {"pos":{"x":-0.64, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+        ["hub_plain", ["wheel_RL1","wheelhub_RL"], [], {"pos":{"x": 0.64, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--REAR WHEELS--
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"nodeWeight":12.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_RR"},
+        ["rw1r", -0.27, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RL"},
+        ["rw1l", 0.27, 0.0, 0.0, {"staticCollision":false}],
+        {"collision":true},
+        //wheel nodes
+        {"group":"wheelhub_RR"},
+        ["rw1rr", -0.80, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RL"},
+        ["rw1ll", 0.80, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--REAR WHEELS--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":110000,"beamStrength":1400000},
+        ["rw1r","rw1rr"],
+        ["rw1l","rw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.27},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.285},
+        //{"numRays":20},
+        {"numRays":12},
+
+        //hub options
+        {"hubTreadBeamSpring":2001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":2001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":2001000, "hubSideBeamDamp":10},
+        {"hubBeamDeform":48000, "hubBeamStrength":155000},
+        {"hubNodeWeight":0.8},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_steelwheel_03d_20x11_R_dually_true": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"20x11 STX Goliath Dually Rear Wheels (Chrome, Needs Spindles)",
+        "value":2400,
+        //dual pressurewheel
+    },
+    "slotType" : "wheel_R_8_dually",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_R_20x11_offroad_dually_true","G_tire_R_38_14_20_11_dirt_dually_true","Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //inner
+        ["G_steelwheel_03d_20x11", ["wheel_RR1","wheelhub_RR"], [], {"pos":{"x":-0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["G_steelwheel_03d_20x11", ["wheel_RL1","wheelhub_RL"], [], {"pos":{"x": 0.56, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1, "z":1}}],
+        //outer
+        ["G_steelwheel_03d_20x11", ["wheel_RR2","wheelhub_RR"], [], {"pos":{"x":"$=-0.9-($components.goliath_dually_offset_X or 0)", "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1, "z":1}}],
+        ["G_steelwheel_03d_20x11", ["wheel_RL2","wheelhub_RL"], [], {"pos":{"x":"$= 0.9+($components.goliath_dually_offset_X or 0)", "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1, "z":1}}],
+        ["G_hub_dually_extension", ["wheel_RR2","wheelhub_RR"], [], {"pos":{"x":"$=-0.54-($components.goliath_dually_offset_X or 0)", "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":2.0, "y":1.55, "z":1.55}}],
+        ["G_hub_dually_extension", ["wheel_RL2","wheelhub_RL"], [], {"pos":{"x":"$= 0.54+($components.goliath_dually_offset_X or 0)", "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":2.0, "y":1.55, "z":1.55}}],
+        //
+        ["hub_plain", ["wheel_RR1","wheelhub_RR"], [], {"pos":{"x":-0.64, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+        ["hub_plain", ["wheel_RL1","wheelhub_RL"], [], {"pos":{"x": 0.64, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.5, "y":1.25, "z":1.25}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--REAR WHEELS--
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"nodeWeight":12.0},
+        {"selfCollision":true},
+        {"collision":true},
+        {"group":"wheelhub_RR"},
+        ["rw1r", -0.27, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RL"},
+        ["rw1l", 0.27, 0.0, 0.0, {"staticCollision":false}],
+        {"collision":true},
+        //wheel nodes
+        {"group":"wheelhub_RR"},
+        ["rw1rr", -0.80, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_RL"},
+        ["rw1ll", 0.80, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--REAR WHEELS--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":110000,"beamStrength":1400000},
+        ["rw1r","rw1rr"],
+        ["rw1l","rw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.27},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.285},
+        //{"numRays":20},
+        {"numRays":12},
+
+        //hub options
+        {"hubTreadBeamSpring":2001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":2001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":2001000, "hubSideBeamDamp":10},
+        {"hubBeamDeform":48000, "hubBeamStrength":155000},
+        {"hubNodeWeight":0.8},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+}

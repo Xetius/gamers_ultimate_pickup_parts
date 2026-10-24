@@ -1,0 +1,48 @@
+{
+  "0-100 km/h":9.8,
+  "0-100 mph":34.9,
+  "0-60 mph":9.2,
+  "100-0 km/h":40.3,
+  "60-0 mph":123.7,
+  "60-100 mph":25.7,
+  "BoundingBox":[
+    [
+      -0.6,
+      -1.42,
+      -0.3099
+    ],
+    [
+      1.7,
+      3.54,
+      1.41
+    ]
+  ],
+  "Braking G":0.975,
+  "Config Type":"Custom",
+  "Configuration":"D15 AWD Drift (M)",
+  "Description":"Have you ever driven on these giant empty streets of the US and got bored quickly? Well, with this monstrosity these streets may even seem a bit narrow, because now you've got the holy grail of All-Wheel drifting! The brutal, supercharged V12 with 2810 Nm torque, 1893 HP and a rear-mounted cooler will accelerate this drift missile violently. It's main focus are fast and long drifts, but it's also capable of slower and more precise ones too. Just watch out, because being too fast can happen within the blink of an eye!",
+  "Drivetrain":"AWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"SC",
+  "Off-Road Score":46,
+  "Performance Class":"4",
+  "Population":4000,
+  "Power":1894,
+  "PowerPeakRPM":"3950 - 4600",
+  "Propulsion":"ICE",
+  "Top Speed":48.48723133,
+  "Torque":2810,
+  "TorquePeakRPM":"2950 - 3650",
+  "Transmission":"Manual",
+  "Value":171500,
+  "Weight":2380,
+  "Weight/Power":10.45685279,
+  "Years":{
+    "max":1997,
+    "min":1992
+  },
+  "defaultPaintName1":"Bermuda Blue",
+  "defaultPaintName2":"Silver",
+  "defaultPaintName3":"Bermuda Blue",
+  "vehicleSelectorSubGroup":"vehiclesData.pickup.d15_423sport_A.vehicleSelectorSubGroup"
+}

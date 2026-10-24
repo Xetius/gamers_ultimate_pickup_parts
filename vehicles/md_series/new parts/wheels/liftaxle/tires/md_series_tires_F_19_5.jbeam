@@ -1,0 +1,209 @@
+{
+"G_md_series_tire_La_19_5": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"245/70R19.5 Heavy Duty Lift Axle Tires",
+        "value":500,
+    },
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["tire_02a_19.5x6.75_33", ["wheel_LaR","tire_LaR"], [], {"pos":{"x":-1.078, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":180},   "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+         ["tire_02a_19.5x6.75_33", ["wheel_LaL","tire_LaL"], [], {"pos":{"x": 1.078, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+     ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$tirepressure_La", "range", "psi", "Wheels", 100, 0, 120, "Tire Pressure", "Relative to atmospheric pressure", {"subCategory":"Lift Axle"}],
+    ],
+    "slotType" : "G_md_series_tire_La_19_5",
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            {"enableTireLbeams":false},
+            {"enableTireReinfBeams":true},
+            {"enableTireSideReinfBeams":false},
+            {"enableTreadReinfBeams":false},
+            {"enableTirePeripheryReinfBeams":false},
+            {"disableMeshBreaking":false},
+            {"disableHubMeshBreaking":false},
+
+            //general settings
+            {"radius":0.419},
+            {"tireWidth":0.195},
+
+            //tire options
+            {"wheelSideBeamSpring":0,"wheelSideBeamDamp":80},
+            {"wheelSideBeamSpringExpansion":1501000,"wheelSideBeamDampExpansion":80},
+            {"wheelSideTransitionZone":0.05,"wheelSideBeamPrecompression":0.98},
+
+            {"wheelReinfBeamSpring":30000,"wheelReinfBeamDamp":300},
+            {"wheelReinfBeamDampCutoffHz":500,"wheelReinfBeamPrecompression":0.98},
+
+            {"wheelTreadBeamSpring":801000,"wheelTreadBeamDamp":200},
+            {"wheelTreadBeamDampCutoffHz":500,"wheelTreadBeamPrecompression":0.98},
+
+            {"wheelPeripheryBeamSpring":351000,"wheelPeripheryBeamDamp":100},
+            {"wheelPeripheryBeamDampCutoffHz":500,"wheelPeripheryBeamPrecompression":0.98},
+
+            //deform values
+            {"wheelSideBeamDeform":78000,"wheelSideBeamStrength":82000},
+            {"wheelReinfBeamDeform":78000,"wheelReinfBeamStrength":82000},
+            {"wheelTreadBeamDeform":78000,"wheelTreadBeamStrength":96000},
+            {"wheelPeripheryBeamDeform":158000,"wheelPeripheryBeamStrength":176000},
+
+            //general tire values
+            {"nodeWeight":0.68},
+            {"nodeMaterial":"|NM_RUBBER","hasTire":true},
+            {"triangleCollision":true},
+            {"pressurePSI":"$tirepressure_La"},
+            {"dragCoef":5},
+
+            //groundmodel friction multipliers
+            {"frictionCoef":1},
+            {"slidingFrictionCoef":1},
+            {"treadCoef":0.6},
+
+            //advanced friction values
+            {"noLoadCoef":1.09},
+            {"loadSensitivitySlope":0.000028},
+            {"fullLoadCoef":0.25},
+            {"softnessCoef":0.3},
+    ],
+},
+"G_md_series_tire_02c_19.5x6.75_3_La": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"245/70R19.5 Heavy Duty Steer Lift Axle Tires",
+        "value":500,
+    },
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["tire_02c_19.5x6.75_33", ["wheel_LaR","tire_LaR"], [], {"pos":{"x":-1.078, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+         ["tire_02c_19.5x6.75_33", ["wheel_LaL","tire_LaL"], [], {"pos":{"x": 1.078, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+     ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$tirepressure_La", "range", "psi", "Wheels", 100, 0, 120, "Tire Pressure", "Relative to atmospheric pressure", {"subCategory":"Lift Axle"}],
+    ],
+    "slotType" : "G_md_series_tire_La_19_5",
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            {"enableTireLbeams":false},
+            {"enableTireReinfBeams":true},
+            {"enableTireSideReinfBeams":false},
+            {"enableTreadReinfBeams":false},
+            {"enableTirePeripheryReinfBeams":false},
+            {"disableMeshBreaking":false},
+            {"disableHubMeshBreaking":false},
+
+            //general settings
+            {"radius":0.419},
+            {"tireWidth":0.195},
+
+            //tire options
+            {"wheelSideBeamSpring":0,"wheelSideBeamDamp":80},
+            {"wheelSideBeamSpringExpansion":1501000,"wheelSideBeamDampExpansion":80},
+            {"wheelSideTransitionZone":0.05,"wheelSideBeamPrecompression":0.98},
+
+            {"wheelReinfBeamSpring":30000,"wheelReinfBeamDamp":300},
+            {"wheelReinfBeamDampCutoffHz":500,"wheelReinfBeamPrecompression":0.98},
+
+            {"wheelTreadBeamSpring":801000,"wheelTreadBeamDamp":200},
+            {"wheelTreadBeamDampCutoffHz":500,"wheelTreadBeamPrecompression":0.98},
+
+            {"wheelPeripheryBeamSpring":351000,"wheelPeripheryBeamDamp":100},
+            {"wheelPeripheryBeamDampCutoffHz":500,"wheelPeripheryBeamPrecompression":0.98},
+
+            //deform values
+            {"wheelSideBeamDeform":78000,"wheelSideBeamStrength":82000},
+            {"wheelReinfBeamDeform":78000,"wheelReinfBeamStrength":82000},
+            {"wheelTreadBeamDeform":78000,"wheelTreadBeamStrength":96000},
+            {"wheelPeripheryBeamDeform":158000,"wheelPeripheryBeamStrength":176000},
+
+            //general tire values
+            {"nodeWeight":0.68},
+            {"nodeMaterial":"|NM_RUBBER","hasTire":true},
+            {"triangleCollision":true},
+            {"pressurePSI":"$tirepressure_La"},
+            {"dragCoef":5},
+
+            //groundmodel friction multipliers
+            {"frictionCoef":1},
+            {"slidingFrictionCoef":1},
+            {"treadCoef":0.6},
+
+            //advanced friction values
+            {"noLoadCoef":1.09},
+            {"loadSensitivitySlope":0.000028},
+            {"fullLoadCoef":0.25},
+            {"softnessCoef":0.3},
+    ],
+},
+"G_md_series_tire_La_19_5_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"9R19.5 Bar-Grip Bias Ply Lift Axle Tires",
+        "value":500,
+    },
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["tire_02b_19.5x6.75_33", ["wheel_LaR","tire_LaR"], [], {"pos":{"x":-1.077, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":180},"scale":{"x":1.0, "y":1.0, "z":1.0}}],
+         ["tire_02b_19.5x6.75_33", ["wheel_LaL","tire_LaL"], [], {"pos":{"x": 1.077, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":0},  "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+     ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$tirepressure_La", "range", "psi", "Wheels", 80, 0, 120, "Tire Pressure", "Relative to atmospheric pressure", {"subCategory":"Lift Axle"}],
+    ],
+    "slotType" : "G_md_series_tire_La_19_5",
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            {"enableTireLbeams":false},
+            {"enableTireReinfBeams":true},
+            {"enableTireSideReinfBeams":false},
+            {"enableTreadReinfBeams":false},
+            {"enableTirePeripheryReinfBeams":false},
+            {"disableMeshBreaking":false},
+            {"disableHubMeshBreaking":false},
+
+            //general settings
+            {"radius":0.425},
+            {"tireWidth":0.20},
+
+            //tire options
+            {"wheelSideBeamSpring":0,"wheelSideBeamDamp":100},
+            {"wheelSideBeamSpringExpansion":1401000,"wheelSideBeamDampExpansion":100},
+            {"wheelSideTransitionZone":0.05,"wheelSideBeamPrecompression":0.975},
+
+            {"wheelReinfBeamSpring":30000,"wheelReinfBeamDamp":200},
+            {"wheelReinfBeamDampCutoffHz":500,"wheelReinfBeamPrecompression":0.98},
+
+            {"wheelTreadBeamSpring":801000,"wheelTreadBeamDamp":250},
+            {"wheelTreadBeamDampCutoffHz":500,"wheelTreadBeamPrecompression":0.98},
+
+            {"wheelPeripheryBeamSpring":301000,"wheelPeripheryBeamDamp":100},
+            {"wheelPeripheryBeamDampCutoffHz":500,"wheelPeripheryBeamPrecompression":0.98},
+
+            //deform values
+            {"wheelSideBeamDeform":78000,"wheelSideBeamStrength":82000},
+            {"wheelReinfBeamDeform":78000,"wheelReinfBeamStrength":82000},
+            {"wheelTreadBeamDeform":78000,"wheelTreadBeamStrength":96000},
+            {"wheelPeripheryBeamDeform":158000,"wheelPeripheryBeamStrength":176000},
+
+            //general tire values
+            {"nodeWeight":0.86},
+            {"nodeMaterial":"|NM_RUBBER","hasTire":true},
+            {"triangleCollision":false},
+            {"pressurePSI":"$tirepressure_La"},
+            {"dragCoef":5},
+
+            //groundmodel friction multipliers
+            {"frictionCoef":1},
+            {"slidingFrictionCoef":1},
+            {"treadCoef":0.8},
+
+            //advanced friction values
+            {"noLoadCoef":1.08},
+            {"loadSensitivitySlope":0.00003},
+            {"fullLoadCoef":0.25},
+            {"softnessCoef":0.3},
+    ],
+},
+}

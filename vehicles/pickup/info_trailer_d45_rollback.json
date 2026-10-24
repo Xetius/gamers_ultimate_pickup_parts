@@ -1,0 +1,16 @@
+{
+  "Config Type":"Service",
+  "Configuration":"Trailer D45 Rollback",
+  "Description":"A heavy duty rollback trailer with twin axles, this tourns any SUV into a service vehicle",
+  "Population":4000,
+  "Value":48200,
+  "Weight":2532,
+  "Years":{
+    "max":2003,
+    "min":1986
+  },
+  "defaultPaintName1":"Matte Dune",
+  "defaultPaintName2":"Matte Dune",
+  "defaultPaintName3":"Matte Dune",
+  "vehicleSelectorSubGroup":"Trailers"
+}

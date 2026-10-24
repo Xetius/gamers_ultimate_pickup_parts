@@ -1,0 +1,16 @@
+{
+  "Config Type":"Custom",
+  "Configuration":"Trailer D35 Dually Long Bed",
+  "Description":"This can either be used to haul cargo directly, or to work as an adapter for gooseneck trailers, allowing every car to tow trailers not suited for them!",
+  "Population":4000,
+  "Value":41250,
+  "Weight":1093,
+  "Years":{
+    "max":1997,
+    "min":1992
+  },
+  "defaultPaintName1":"Burgundy",
+  "defaultPaintName2":"Burgundy",
+  "defaultPaintName3":"Burgundy",
+  "vehicleSelectorSubGroup":"Trailers"
+}

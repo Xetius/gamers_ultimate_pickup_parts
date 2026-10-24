@@ -1,0 +1,28 @@
+{
+"G_pickup_lettering_d55": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Lettering",
+        "value":75,
+    },
+    "slotType" : "pickup_lettering_fender",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_lettering_d55_L", ["pickup_fender_L"], [],{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_pickup_lettering_d55_R", ["pickup_fender_R"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+},
+"G_pickup_lettering_d50": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D50 Lettering",
+        "value":75,
+    },
+    "slotType" : "pickup_lettering_fender",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_lettering_d50_L", ["pickup_fender_L"], [],{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_pickup_lettering_d50_R", ["pickup_fender_R"], [],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+},
+}

@@ -1,0 +1,38 @@
+{
+"G_van_cargobox_skin_sfhauling": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"S & F Hauling Livery",
+        "value":2200
+    },
+    "slotType" : "skin_van_cargobox",
+    "skinName" : "sfhauling"
+},
+"G_van_cargobox_skin_boxcolorable1": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Colorable (Color Wheel 1)",
+        "value":2200
+    },
+    "slotType" : "skin_van_cargobox",
+    "skinName" : "boxcolorable1"
+},
+"G_van_cargobox_skin_boxcolorable2": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Colorable (Color Wheel 2)",
+        "value":2200
+    },
+    "slotType" : "skin_van_cargobox",
+    "skinName" : "boxcolorable2"
+},
+"G_van_cargobox_skin_boxcolorable3": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Colorable (Color Wheel 3)",
+        "value":2200
+    },
+    "slotType" : "skin_van_cargobox",
+    "skinName" : "boxcolorable3"
+},
+}

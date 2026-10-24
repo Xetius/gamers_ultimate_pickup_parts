@@ -1,0 +1,48 @@
+{
+  "0-100 km/h":9.8,
+  "0-100 mph":34.9,
+  "0-60 mph":9.2,
+  "100-0 km/h":40.3,
+  "60-0 mph":123.7,
+  "60-100 mph":25.7,
+  "BoundingBox":[
+    [
+      -0.6,
+      -1.42,
+      -0.3099
+    ],
+    [
+      1.7,
+      3.54,
+      1.41
+    ]
+  ],
+  "Braking G":0.975,
+  "Config Type":"Custom",
+  "Configuration":"D15 V8 Extended Cab Flatbed RWD Offroad (A)",
+  "Description":"As good as offraod gets with RWD, but still capeable. Surely a sturdy Truck for demanding enviroments",
+  "Drivetrain":"RWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"SC",
+  "Off-Road Score":46,
+  "Performance Class":"4",
+  "Population":4000,
+  "Power":305,
+  "PowerPeakRPM":"3950 - 4600",
+  "Propulsion":"ICE",
+  "Top Speed":48.48723133,
+  "Torque":570,
+  "TorquePeakRPM":"2950 - 3650",
+  "Transmission":"Automatic",
+  "Value":81000,
+  "Weight":2739,
+  "Weight/Power":10.45685279,
+  "Years":{
+    "max":1997,
+    "min":1992
+  },
+  "defaultPaintName1":"Olive Green",
+  "defaultPaintName2":"Forest Green",
+  "defaultPaintName3":"Olive Green",
+  "vehicleSelectorSubGroup":"vehiclesData.pickup.d35_4WD_ext_longbed_A.vehicleSelectorSubGroup"
+}

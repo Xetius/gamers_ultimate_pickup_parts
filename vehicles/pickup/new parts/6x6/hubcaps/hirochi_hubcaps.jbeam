@@ -1,0 +1,91 @@
+{
+"hirochi_hubcap_01a_15_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Hirochi Splitter Rear Rear Hubcaps",
+        "value":80,
+    },
+    "slotType" : "hubcap_RR_6x6_15",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //hubcaps
+         ["hirochi_hubcap_01a_15", ["hubcap_RRR"], [], {"pos":{"x":-0.486, "y":0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1.01, "z":1.01}}],
+         ["hirochi_hubcap_01a_15", ["hubcap_RRL"], [], {"pos":{"x": 0.486, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1.01, "z":1.01}}],
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            //hubcap options
+            {"enableHubcaps":true},
+            {"hubcapSelfCollision":true},
+            {"hubcapCollision":true,"enableExtraHubcapBeams":false},
+            {"hubcapOffset":0.0},
+            {"hubcapWidth":0.06},
+            {"hubcapRadius":0.20},
+            {"hubcapBeamSpring":221000, "hubcapBeamDamp":10},
+            {"hubcapBeamDeform":2900, "hubcapBeamStrength":14000},
+            {"hubcapAttachBeamSpring":121000, "hubcapAttachBeamDamp":10},
+            {"hubcapAttachBeamDeform":1200, "hubcapAttachBeamStrength":1800},
+            {"hubcapSupportBeamDeform":3500, "hubcapSupportBeamStrength":5500},
+            {"hubcapNodeWeight":0.12},
+            {"hubcapCenterNodeWeight":0.12},
+            {"hubcapNodeMaterial":"|NM_PLASTIC"},
+            {"hubcapFrictionCoef":0.7},
+    ],
+},
+"hirochi_hubcap_01a_18x8_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Hirochi TurboFan Rear Rear Caps (Translucent)",
+        "value":250,
+    },
+    "slotType" : "hubcap_RR_6x6_18x8",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //hubcaps
+         ["hirochi_turbofan_01a_18x9_R", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.475, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.98, "y":1, "z":1}}],
+         ["hirochi_turbofan_01a_18x9_L", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.475, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.98, "y":1, "z":1}}],
+    ],
+},
+"hirochi_hubcap_01b_18x8_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Hirochi TurboFan Rear Rear Caps (Body Colored)",
+        "value":250,
+    },
+    "slotType" : "hubcap_RR_6x6_18x8",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //hubcaps
+         ["hirochi_turbofan_01b_18x9_R", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.475, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.98, "y":1, "z":1}}],
+         ["hirochi_turbofan_01b_18x9_L", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.475, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.98, "y":1, "z":1}}],
+    ],
+},
+"hirochi_hubcap_01a_18x11_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Hirochi TurboFan Rear Rear Caps (Translucent)",
+        "value":250,
+    },
+    "slotType" : "hubcap_RR_6x6_18x11",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //hubcaps
+         ["hirochi_turbofan_01a_18x11_R", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.4775, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.98, "y":1, "z":1}}],
+         ["hirochi_turbofan_01a_18x11_L", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.4775, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.98, "y":1, "z":1}}],
+    ],
+},
+"hirochi_hubcap_01b_18x11_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Hirochi TurboFan Rear Rear Caps (Body Colored)",
+        "value":250,
+    },
+    "slotType" : "hubcap_RR_6x6_18x11",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //hubcaps
+         ["hirochi_turbofan_01b_18x11_R", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.4775, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.98, "y":1, "z":1}}],
+         ["hirochi_turbofan_01b_18x11_L", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.4775, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.98, "y":1, "z":1}}],
+    ],
+},
+}

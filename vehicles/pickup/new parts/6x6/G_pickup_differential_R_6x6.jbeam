@@ -1,0 +1,325 @@
+{
+"G_pickup_differential_R_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Open Rear Differential",
+        "value":450,
+    },
+    "slotType" : "G_pickup_differential_R_6x6",
+    "slots": [
+        ["type", "default", "description"],
+        //["pickup_driveshaft_R","pickup_driveshaft_R","Rear Driveshaft"],
+        ["pickup_finaldrive_R","pickup_finaldrive_R_355", "Rear Final Drive", {"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear diff
+        ["shaft", "driveshaft_R_intern", "differential_interaxle", 1, {"uiName":"Rear Intern Driveshaft"}],
+        ["differential", "differential_R", "driveshaft_R_intern", 1, {"diffType":"open", "uiName":"Rear Differential","defaultVirtualInertia":0.5}],
+    ],
+    "differential_R": {
+        "friction": 6.6,
+        "dynamicFriction": 0.00311,
+        "torqueLossCoef": 0.03,
+    },
+},
+"G_pickup_differential_R_6x6_LSD": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Limited Slip Rear Differential",
+        "value":750,
+    },
+    "slotType" : "G_pickup_differential_R_6x6",
+    "slots": [
+        ["type", "default", "description"],
+        //["pickup_driveshaft_R","pickup_driveshaft_R","Rear Driveshaft"],
+        ["pickup_finaldrive_R","pickup_finaldrive_R_355", "Rear Final Drive", {"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear diff
+        ["shaft", "driveshaft_R_intern", "differential_interaxle", 1, {"uiName":"Rear Intern Driveshaft"}],
+        ["differential", "differential_R", "driveshaft_R_intern", 1, {"diffType":"lsd", "lsdPreload":150, "lsdLockCoef":0.15, "lsdRevLockCoef":0.075, "uiName":"Rear Differential","defaultVirtualInertia":0.5}],
+    ],
+    "differential_R": {
+        "friction": 6.6,
+        "dynamicFriction": 0.00311,
+        "torqueLossCoef": 0.03,
+    },
+},
+"G_pickup_differential_R_6x6_heavy_LSD": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Heavy Duty Limited Slip Rear Differential",
+        "value":850,
+    },
+    "slotType" : "G_pickup_differential_R_6x6",
+    "slots": [
+        ["type", "default", "description"],
+        //["pickup_driveshaft_R","pickup_driveshaft_R","Rear Driveshaft"],
+        ["pickup_finaldrive_R","pickup_finaldrive_R_355", "Rear Final Drive", {"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear diff
+        ["shaft", "driveshaft_R_intern", "differential_interaxle", 1, {"uiName":"Rear Intern Driveshaft"}],
+        ["differential", "differential_R", "driveshaft_R_intern", 1, {"diffType":"lsd", "lsdPreload":250, "lsdLockCoef":0.2, "lsdRevLockCoef":0.2, "uiName":"Rear Differential","defaultVirtualInertia":0.5}],
+    ],
+    "differential_R": {
+        "friction": 4.95,
+        "dynamicFriction": 0.00218,
+        "torqueLossCoef": 0.03,
+    },
+},
+"G_pickup_differential_R_6x6_welded": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Welded Rear Differential",
+        "value":450,
+    },
+    "slotType" : "G_pickup_differential_R_6x6",
+    "slots": [
+        ["type", "default", "description"],
+        //["pickup_driveshaft_R","pickup_driveshaft_R","Rear Driveshaft"],
+        ["pickup_finaldrive_R","pickup_finaldrive_R_355", "Rear Final Drive", {"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear diff
+        ["shaft", "driveshaft_R_intern", "differential_interaxle", 1, {"uiName":"Rear Intern Driveshaft"}],
+        ["differential", "differential_R", "driveshaft_R_intern", 1, {"diffType":"locked", "lockTorque":10000, "uiName":"Rear Differential","defaultVirtualInertia":0.5}],
+    ],
+    "differential_R": {
+        "friction": 6.6,
+        "dynamicFriction": 0.00311,
+        "torqueLossCoef": 0.03,
+    },
+},
+"G_pickup_differential_R_6x6_locking": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Locking Rear Differential",
+        "value":950,
+    },
+    "slotType" : "G_pickup_differential_R_6x6",
+    "slots": [
+        ["type", "default", "description"],
+        //["pickup_driveshaft_R","pickup_driveshaft_R","Rear Driveshaft"],
+        ["pickup_finaldrive_R","pickup_finaldrive_R_355", "Rear Final Drive", {"coreSlot":true}],
+    ],
+    "components":{
+        "locker_R":true,
+    },
+    "controller": [
+        ["fileName"],
+        ["driveModes", {"name":"rearLockControl"}]
+    ],
+    "rearLockControl":{
+        "uiName": "Rear Differential"
+        "quickAccessTitle":"Rear Differential"
+        "quickAccessIcon":"differentialRearDefault"
+        "quickAccessLevel":"/vehicleFeatures/"
+        "enabledModes":["unlocked", "locked"]
+        "defaultMode": "unlocked"
+        "modes": {
+            "unlocked": {
+                "name": "Unlocked",
+                "order": 10,
+                "settings": [
+                    ["type"]
+                    ["powertrainDeviceMode", {"deviceName":"differential_R", "mode":"open"}]
+                    ["powertrainDeviceMode", {"deviceName":"differential_RR_6x6", "mode":"open"}]
+                    ["electricsValue", {"electricsName":"rear_lock", "value":0}]
+                    ["quickAccess", {"icon":"differentialRearDefault"}]
+                    ["simpleControlButton", {"buttonId":"rearDiff", "icon":"powertrain_differential_open", "uiName":"Rear Differential"}]
+                ],
+            },
+            "locked": {
+                "name": "Locked",
+                "order": 20,
+                "settings": [
+                    ["type"]
+                    ["powertrainDeviceMode", {"deviceName":"differential_R", "mode":"locked"}]
+                    ["powertrainDeviceMode", {"deviceName":"differential_RR_6x6", "mode":"locked"}]
+                    ["electricsValue", {"electricsName":"rear_lock", "value":1}]
+                    ["quickAccess", {"icon":"differentialRearLocked"}]
+                    ["simpleControlButton", {"buttonId":"rearDiff", "icon":"powertrain_differential_closed", "uiName":"Rear Differential"}]
+                ],
+            },
+        }
+    }
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear diff
+        ["shaft", "driveshaft_R_intern", "differential_interaxle", 1, {"uiName":"Rear Intern Driveshaft"}],
+        ["differential", "differential_R", "driveshaft_R_intern", 1, {"uiSimpleModeControl":false, "diffType":["open","locked"], "lockTorque":20000, "uiName":"Rear Differential","defaultVirtualInertia":0.5}],
+    ],
+    "differential_R": {
+        "friction": 6.6,
+        "dynamicFriction": 0.00311,
+        "torqueLossCoef": 0.03,
+    },
+},
+"G_pickup_differential_R_6x6_lsd_locking": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Locking Limited Slip Rear Differential",
+        "value":1650,
+    },
+    "slotType" : "G_pickup_differential_R_6x6",
+    "slots": [
+        ["type", "default", "description"],
+        //["pickup_driveshaft_R","pickup_driveshaft_R","Rear Driveshaft"],
+        ["pickup_finaldrive_R","pickup_finaldrive_R_355", "Rear Final Drive", {"coreSlot":true}],
+    ],
+    "components":{
+        "locker_R":true,
+    },
+    "controller": [
+        ["fileName"],
+        ["driveModes", {"name":"rearLockControl"}]
+    ],
+    "rearLockControl":{
+        "uiName": "Rear Differential"
+        "quickAccessTitle":"Rear Differential"
+        "quickAccessIcon":"differentialRearDefault"
+        "quickAccessLevel":"/vehicleFeatures/"
+        "enabledModes":["unlocked", "locked"]
+        "defaultMode": "unlocked"
+        "modes": {
+            "unlocked": {
+                "name": "Unlocked",
+                "order": 10,
+                "settings": [
+                    ["type"]
+                    ["powertrainDeviceMode", {"deviceName":"differential_R", "mode":"lsd"}]
+                    ["powertrainDeviceMode", {"deviceName":"differential_RR_6x6", "mode":"lsd"}]
+                    ["electricsValue", {"electricsName":"rear_lock", "value":0}]
+                    ["quickAccess", {"icon":"differentialRearDefault"}]
+                    ["simpleControlButton", {"buttonId":"rearDiff", "icon":"powertrain_differential_lsd", "uiName":"Rear Differential"}]
+                ],
+            },
+            "locked": {
+                "name": "Locked",
+                "order": 20,
+                "settings": [
+                    ["type"]
+                    ["powertrainDeviceMode", {"deviceName":"differential_R", "mode":"locked"}]
+                    ["powertrainDeviceMode", {"deviceName":"differential_RR_6x6", "mode":"locked"}]
+                    ["electricsValue", {"electricsName":"rear_lock", "value":1}]
+                    ["quickAccess", {"icon":"differentialRearLocked"}]
+                    ["simpleControlButton", {"buttonId":"rearDiff", "icon":"powertrain_differential_closed", "uiName":"Rear Differential"}]
+                ],
+            },
+        }
+    }
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //rear diff
+        ["shaft", "driveshaft_R_intern", "differential_interaxle", 1, {"uiName":"Rear Intern Driveshaft"}],
+        ["differential", "differential_R", "driveshaft_R_intern", 1, {"uiSimpleModeControl":false, "diffType":["lsd","locked"], "lsdPreload":250, "lsdLockCoef":0.2, "lsdRevLockCoef":0.2, "lockTorque":20000, "uiName":"Rear Differential","defaultVirtualInertia":0.5}],
+    ],
+    "differential_R": {
+        "friction": 6.6,
+        "dynamicFriction": 0.00311,
+        "torqueLossCoef": 0.03,
+    },
+},
+"G_pickup_differential_R_6x6_int_lsd": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Limited Slip Interaxle Differential",
+        "value":450,
+    },
+    "slotType" : "G_pickup_differential_R_6x6_int",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["differential", "differential_interaxle", "driveshaft", 1, {"diffType":"lsd", "lsdPreload":250, "lsdLockCoef":0.2, "lsdRevLockCoef":0.2, "uiName":"Interaxle Differential","defaultVirtualInertia":0.5}],
+    ],
+    "differential_interaxle": {
+        "friction": 6.6,
+        "dynamicFriction": 0.00311,
+        "torqueLossCoef": 0.03,
+    },
+},
+"G_pickup_differential_R_6x6_int_welded": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Welded Interaxle Differential",
+        "value":250,
+    },
+    "slotType" : "G_pickup_differential_R_6x6_int",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["differential", "differential_interaxle", "driveshaft", 1, {"diffType":"locked", "lockTorque":10000, "uiName":"Interaxle Differential","defaultVirtualInertia":0.5}],
+    ],
+    "differential_interaxle": {
+        "friction": 6.6,
+        "dynamicFriction": 0.00311,
+        "torqueLossCoef": 0.03,
+    },
+},
+"G_pickup_differential_R_6x6_int_lsd_locking": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Locking Limited Slip Interaxle Differential",
+        "value":1150,
+    },
+    "slotType" : "G_pickup_differential_R_6x6_int",
+    "components":{
+        "locker_I":true,
+    },
+    "actionsEnabled": [
+        ["id"],
+        ["toggleInteraxleDiff"],
+        ["lockInteraxleDiff"],
+        ["unlockInteraxleDiff"],
+        ["setInteraxleDiffModeAxis"],
+    ],
+    "controller": [
+        ["fileName"],
+        ["driveModes", {"name":"interaxleLockControl"}]
+    ],
+    "interaxleLockControl":{
+        "uiName": "Interaxle Differential"
+        "quickAccessTitle":"Interaxle Differential"
+        "quickAccessIcon":"differentialIntDefault"
+        "quickAccessLevel":"/vehicleFeatures/"
+        "enabledModes":["unlocked", "locked"]
+        "defaultMode": "unlocked"
+        "modes": {
+            "unlocked": {
+                "name": "Unlocked",
+                "order": 10,
+                "settings": [
+                    ["type"]
+                    ["powertrainDeviceMode", {"deviceName":"differential_interaxle", "mode":"lsd"}]
+                    ["electricsValue", {"electricsName":"interaxle_lock", "value":0}]
+                    ["quickAccess", {"icon":"differentialInteraxleDefault"}]
+                    ["simpleControlButton", {"buttonId":"interaxleDiff", "icon":"powertrain_differential_lsd", "uiName":"Interaxle Differential"}]
+                ],
+            },
+            "locked": {
+                "name": "Locked",
+                "order": 20,
+                "settings": [
+                    ["type"]
+                    ["powertrainDeviceMode", {"deviceName":"differential_interaxle", "mode":"locked"}]
+                    ["electricsValue", {"electricsName":"interaxle_lock", "value":1}]
+                    ["quickAccess", {"icon":"differentialInteraxleLocked"}]
+                    ["simpleControlButton", {"buttonId":"interaxleDiff", "icon":"powertrain_differential_closed", "uiName":"Interaxle Differential"}]
+                ],
+            },
+        }
+    }
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["differential", "differential_interaxle", "driveshaft", 1, {"uiSimpleModeControl":false, "diffType":["lsd","locked"], "lsdPreload":250, "lsdLockCoef":0.2, "lsdRevLockCoef":0.2, "lockTorque":20000, "uiName":"Interaxle Differential","defaultVirtualInertia":0.5}],
+    ],
+    "differential_interaxle": {
+        "friction": 6.6,
+        "dynamicFriction": 0.00311,
+        "torqueLossCoef": 0.03,
+    },
+},
+}

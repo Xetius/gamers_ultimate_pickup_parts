@@ -1,0 +1,49 @@
+{
+  "0-100 km/h":12.7,
+  "0-100 mph":65.7,
+  "0-60 mph":11.9,
+  "100-0 km/h":58.6,
+  "60-0 mph":183.9,
+  "60-100 mph":53.8,
+  "Body Style":"SUV",
+  "BoundingBox":[
+    [
+      -0.55,
+      -1.57,
+      -0.4183
+    ],
+    [
+      1.65,
+      3.625,
+      1.62
+    ]
+  ],
+  "Braking G":0.67,
+  "Config Type":"Custom",
+  "Configuration":"V8 4wd Goliath (M)",
+  "Description":"with this machine, you can take a walk in the mountains without taking a walk!",
+  "Drivetrain":"4WD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"SC",
+  "Off-Road Score":50,
+  "Performance Class":"6",
+  "Population":500,
+  "Power":382,
+  "PowerPeakRPM":"4450 - 5150",
+  "Propulsion":"ICE",
+  "Top Speed":46.0070282,
+  "Torque":598,
+  "TorquePeakRPM":"2550 - 3400",
+  "Transmission":"Manual",
+  "Value":141000,
+  "Weight":3647,
+  "Weight/Power":11.79372197,
+  "Years":{
+    "max":1998,
+    "min":1992
+  },
+  "defaultPaintName1":"Ambitions Orange",
+  "defaultPaintName2":"Ambitions Orange",
+  "defaultPaintName3":"Ambitions Orange",
+  "vehicleSelectorSubGroup":"vehiclesData.roamer.4wd_facelift.vehicleSelectorSubGroup"
+}

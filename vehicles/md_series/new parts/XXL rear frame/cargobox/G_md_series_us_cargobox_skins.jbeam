@@ -1,0 +1,47 @@
+{
+"G_md_series_us_cargobox_skin_cola": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Tasti Cola Livery",
+        "value":2200
+    },
+    "slotType" : "G_skin_md_series_us_cargobox",
+    "skinName" : "cola"
+},
+"G_md_series_us_cargobox_skin_bng": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"BeamNG Livery",
+        "value":2200
+    },
+    "slotType" : "G_skin_md_series_us_cargobox",
+    "skinName" : "bng"
+},
+"G_md_series_us_cargobox_skin_beamindustries": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Fink Industries Livery",
+        "value":2200
+    },
+    "slotType" : "G_skin_md_series_us_cargobox",
+    "skinName" : "beamindustries"
+},
+"G_md_series_us_cargobox_skin_team": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Team Offroad Livery",
+        "value":2200
+    },
+    "slotType" : "G_skin_md_series_us_cargobox",
+    "skinName" : "team"
+},
+"G_md_series_us_cargobox_skin_G_1M_special": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"1,000,000 Downloads Celebration Livery",
+        "value":2200
+    },
+    "slotType" : "G_skin_md_series_us_cargobox",
+    "skinName" : "G_1M_special"
+},
+}

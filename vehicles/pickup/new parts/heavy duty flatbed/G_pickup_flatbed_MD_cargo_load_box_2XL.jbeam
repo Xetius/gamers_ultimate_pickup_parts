@@ -1,0 +1,92 @@
+{
+"G_pickup_flatbed_MD_two_cargo_load_box_XL": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"2x Cargo Box XL Slot",
+        "value":0,
+    },
+    "slotType" : "G_pickup_flatbed_MD_load",
+    "slots":[
+        ["type", "default", "description"],
+        ["cargo_load_box_XL_A_90deg","cargo_load_box_XL_A_90deg", "Box A Type", {"coreSlot":true,"nodeMove":{"x":0, "y":1.25, "z":0.95},"variables":{"$dragCoef":7.5}}],
+        ["cargo_load_box_XL_B_90deg","cargo_load_box_XL_B_90deg", "Box B Type", {"coreSlot":true,"nodeMove":{"x":0, "y":2.48, "z":0.95},"variables":{"$dragCoef":7.5}}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        {"deformGroup":"cargo_load_box_xl_FrontStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":0.85, "z":0.95}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":"cargo_load_box_xl_RearStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":1.65, "z":0.95}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":"cargo_load_box_xl_two_FrontStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_B", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":1.98, "z":0.95}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":"cargo_load_box_xl_two_RearStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_B", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":2.88, "z":0.95}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":""},
+   ],
+   "beams": [
+       ["id1:",    "id2:"],
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":35000,"beamStrength":35000},
+       {"breakGroup":"cargo_load_box_xl_FrontStrap"}
+       {"deformGroup":"cargo_load_box_xl_FrontStrap", "deformationTriggerRatio":0.5}
+       ["box_A_0",  "flb1ll"],
+       ["box_A_0",  "flb2ll"],
+       ["box_A_0",  "flb12ll"],
+       ["box_A_4",  "flb12ll"],
+       ["box_A_4",  "flb2ll"],
+       ["box_A_4",  "flb2rr"],
+       ["box_A_4",  "flb12rr"],
+       ["box_A_2",  "flb12rr"],
+       ["box_A_2",  "flb2rr"],
+       ["box_A_2",  "flb1rr"],
+
+       {"breakGroup":"cargo_load_box_xl_RearStrap"}
+       {"deformGroup":"cargo_load_box_xl_RearStrap", "deformationTriggerRatio":0.5}
+       ["box_A_15", "flb12ll"],
+       ["box_A_15", "flb13ll"],
+       ["box_A_15", "flb2ll"],
+       ["box_A_7",  "flb13ll"],
+       ["box_A_7",  "flb12ll"],
+       ["box_A_7",  "flb12rr"],
+       ["box_A_7",  "flb13rr"],
+       ["box_A_9",  "flb12rr"],
+       ["box_A_9",  "flb13rr"],
+       ["box_A_9",  "flb2rr"],
+
+       //2nd cargo_load_box_xl Strap
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":35000,"beamStrength":35000},
+       {"breakGroup":"cargo_load_box_xl_two_FrontStrap"}
+       {"deformGroup":"cargo_load_box_xl_two_FrontStrap", "deformationTriggerRatio":0.5}
+       ["box_B_0",  "flb12ll"],
+       ["box_B_0",  "flb13ll"],
+       ["box_B_0",  "flb2ll"],
+       ["box_B_4",  "flb13ll"],
+       ["box_B_4",  "flb12ll"],
+       ["box_B_4",  "flb12rr"],
+       ["box_B_4",  "flb13rr"],
+       ["box_B_2",  "flb12rr"],
+       ["box_B_2",  "flb13rr"],
+       ["box_B_2",  "flb2rr"],
+       {"breakGroup":"cargo_load_box_xl_two_RearStrap"}
+       {"deformGroup":"cargo_load_box_xl_two_RearStrap", "deformationTriggerRatio":0.5}
+       ["box_B_15", "flb14ll"],
+       ["box_B_15", "flb13ll"],
+       ["box_B_15", "flb3ll"],
+       ["box_B_7",  "flb13ll"],
+       ["box_B_7",  "flb14ll"],
+       ["box_B_7",  "flb14rr"],
+       ["box_B_7",  "flb13rr"],
+       ["box_B_9",  "flb14rr"],
+       ["box_B_9",  "flb13rr"],
+       ["box_B_9",  "flb3rr"],
+
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+       {"breakGroup":""}
+       {"deformGroup":""}
+   ],
+},
+
+}

@@ -1,0 +1,76 @@
+ {
+"tire_RR_6x6_27_7_15_offroad": {
+    "information":{
+        "authors":"GAMER!",
+        "name":"27x7.0R15 Mud Terrain Rear Rear Tires",
+        "value":230,
+    },
+    "slotType" : "G_tire_RR_6x6_15x6",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["offroadtire_03a_15x8_27", ["wheel_RRR","tire_RRR"], [], {"pos":{"x":-0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.81, "y":1, "z":1}}],
+        ["offroadtire_03a_15x8_27", ["wheel_RRL","tire_RRL"], [], {"pos":{"x": 0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":0.81, "y":1, "z":1}}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$tirepressure_RR", "range", "psi", "Wheels", 20, 0, 40, "Tire Pressure", "Relative to atmospheric pressure", {"subCategory":"Rear Rear"}],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false},
+        {"hasTire":true},
+        {"enableTireReinfBeams":false},
+        {"enableTireLbeams":true},
+        {"enableTireSideReinfBeams":false},
+        {"enableTreadReinfBeams":true},
+        {"enableTirePeripheryReinfBeams":true},
+
+        //general settings
+        {"radius":0.348},
+        {"tireWidth":0.165},
+
+        //tire options
+        {"wheelSideBeamSpring":"$=$tirepressure_R*870","wheelSideBeamDamp":35},
+        {"wheelSideBeamSpringExpansion":401000,"wheelSideBeamDampExpansion":35},
+        {"wheelSideTransitionZone":0.09,"wheelSideBeamPrecompression":0.985},
+
+        {"wheelReinfBeamSpring":17000,"wheelReinfBeamDamp":180},
+        {"wheelReinfBeamDampCutoffHz":500,"wheelReinfBeamPrecompression":0.985},
+
+        {"wheelTreadBeamSpring":75000,"wheelTreadBeamDamp":80},
+        {"wheelTreadBeamDampCutoffHz":500,"wheelTreadBeamPrecompression":0.985},
+
+        {"wheelTreadReinfBeamSpring":135000,"wheelTreadReinfBeamDamp":60},
+        {"wheelTreadReinfBeamDampCutoffHz":500,"wheelTreadReinfBeamPrecompression":0.985},
+
+        {"wheelPeripheryBeamSpring":40000,"wheelPeripheryBeamDamp":40},
+        {"wheelPeripheryBeamDampCutoffHz":500,"wheelPeripheryBeamPrecompression":0.985},
+
+        {"wheelPeripheryReinfBeamSpring":80000,"wheelPeripheryReinfBeamDamp":40},
+        {"wheelPeripheryReinfBeamDampCutoffHz":500,"wheelPeripheryReinfBeamPrecompression":0.985},
+
+        //general tire values
+        {"nodeWeight":0.175},
+        {"nodeMaterial":"|NM_RUBBER"},
+        {"triangleCollision":false},
+        {"pressurePSI":"$tirepressure_RR"},
+        {"dragCoef":5},
+
+        //groundmodel friction multipliers
+        {"frictionCoef":1.0},
+        {"slidingFrictionCoef":1.02},
+        {"treadCoef":0.85},
+
+        //advanced friction values
+        {"noLoadCoef":1.29},
+        {"loadSensitivitySlope":0.00012},
+        {"fullLoadCoef":0.6},
+        {"softnessCoef":0.7},
+
+        //deform values
+        {"wheelSideBeamDeform":23000,"wheelSideBeamStrength":30000},
+        {"wheelTreadBeamDeform":22000,"wheelTreadBeamStrength":28000},
+        {"wheelPeripheryBeamDeform":65000,"wheelPeripheryBeamStrength":65000},
+    ],
+},
+}

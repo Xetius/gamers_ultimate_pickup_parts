@@ -1,0 +1,18 @@
+{
+  "Author": "BeamNG",
+  "Body Style": "Van",
+  "Brand": "Gavril",
+  "Country": "United States",
+  "Derby Class": "Medium Truck",
+  "Description": "vehiclesData.van.Description",
+  "Name": "vehiclesData.van.Name",
+  "Type": "Truck",
+  "InsuranceClass": "dailyDriver",
+  "Region": "northAmerica",
+  "defaultPaintName1": "White",
+  "default_pc": "h15_vanster",
+  "paints": {},
+  "multiPaintSetups": [],
+  "libraryPaints": [],
+  "paintCollections": ["van_factory", "gavril_twotone_factory", "van_custom", "G_pickup_factory_additional", "G_pickup_custom_additional"],
+}

@@ -1,0 +1,47 @@
+{
+"G_md_series_skin_sleeper_longnose_interior": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Blue Interior",
+        "value":100
+    },
+    "slotType" : "G_md_series_skin_sleeper_longnose_interior",
+    "skinName" : ""
+},
+"G_md_series_skin_sleeper_longnose_interior_black": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Black Interior",
+        "value":100
+    },
+    "slotType" : "G_md_series_skin_sleeper_longnose_interior",
+    "skinName" : "black"
+},
+"G_md_series_skin_sleeper_longnose_interior_brown": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Brown Interior",
+        "value":100
+    },
+    "slotType" : "G_md_series_skin_sleeper_longnose_interior",
+    "skinName" : "brown"
+},
+"G_md_series_skin_sleeper_longnose_interior_red": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Red Interior",
+        "value":100
+    },
+    "slotType" : "G_md_series_skin_sleeper_longnose_interior",
+    "skinName" : "red"
+},
+"G_md_series_skin_sleeper_longnose_interior_tan": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Tan Interior",
+        "value":100
+    },
+    "slotType" : "G_md_series_skin_sleeper_longnose_interior",
+    "skinName" : "tan"
+},
+}

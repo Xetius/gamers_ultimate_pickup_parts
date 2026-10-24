@@ -1,0 +1,174 @@
+{
+"G_pickup_door_RR_fabric_custom": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Customizable Rear Right Fabric Half Door",
+        "value":120,
+    },
+    "slotType" : "pickup_door_RR",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_pickup_tubedoor_fabric_RR","G_pickup_tubedoor_fabric_RR", "Rear Right Door Fabric"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_tubedoor_fabric_RR_ext", ["pickup_body"]],
+         {"deformGroup":""},
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //--DOOR--
+         {"collision":true},
+         {"selfCollision":true},
+         {"group":"pickup_body"},
+         {"nodeWeight":1.88},
+
+         ["d15r",-0.9, 0.32, 0.99],
+         ["d16r", -0.89, 0.65, 0.75, {"nodeWeight":0.5, "group":"pickup_doornet_RR"}],
+
+         //front door latch
+         ["rb7rrr", -0.96, 0.25, 0.84],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamSpring":1880940,"beamDamp":141},
+          {"beamDeform":12740,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":1.2},
+
+          ["d15r","b3rrr"],
+          ["d15r","eb7rrr"],
+          ["d15r","eb8rrr"],
+          ["d15r","b3r"],
+
+          ["rb7rrr","d15r"],
+          ["rb7rrr","b3rrr"],
+          ["rb7rrr","b3r"],
+
+          //net
+          {"beamSpring":81000,"beamDamp":100},
+          ["d16r","d15r"],
+          ["d16r","b3rrr"],
+          ["d16r","eb7rrr"],
+          ["d16r","eb8rrr"],
+          ["d16r","b4rrr"],
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //right door
+            {"groundModel":"metal"},
+            {"group":"pickup_door_RR"},
+            {"dragCoef":18.75},
+
+            ["d16r","d15r","eb7rrr"],
+            ["d15r","eb8rrr","eb7rrr"],
+            ["d16r","eb7rrr","b4rrr"],
+            ["d16r","b4rrr","b3rrr"],
+            ["d16r","b3rrr","d15r"],
+
+            {"optional":false},
+            {"breakGroup":""},
+            {"dragCoef":0},
+    ],
+},
+"G_pickup_door_RL_fabric_custom": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Customizable Rear Left Fabric Half Door",
+        "value":120,
+    },
+    "slotType" : "pickup_door_RL",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_pickup_tubedoor_fabric_RL","G_pickup_tubedoor_fabric_RL", "Rear Left Door Fabric"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_tubedoor_fabric_RL_ext", ["pickup_body"]],
+         {"deformGroup":""},
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //--DOOR--
+         {"collision":true},
+         {"selfCollision":true},
+         {"group":"pickup_body"},
+         {"nodeWeight":1.88},
+
+         ["d15l",0.9, 0.32, 0.99],
+         ["d16l", 0.89, 0.65, 0.75, {"nodeWeight":0.5, "group":"pickup_doornet_RL"}],
+
+         //front door latch
+         ["rb7lll", 0.96, 0.25, 0.84],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamSpring":1880940,"beamDamp":141},
+          {"beamDeform":12740,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":1.2},
+
+          ["d15l","b3lll"],
+          ["d15l","eb7lll"],
+          ["d15l","eb8lll"],
+          ["d15l","b3l"],
+
+          ["rb7lll","d15l"],
+          ["rb7lll","b3lll"],
+          ["rb7lll","b3l"],
+
+          //net
+          {"beamSpring":81000,"beamDamp":100},
+          ["d16l","d15l"],
+          ["d16l","b3lll"],
+          ["d16l","eb7lll"],
+          ["d16l","eb8lll"],
+          ["d16l","b4lll"],
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //right door
+            {"groundModel":"metal"},
+            {"group":"pickup_door_RL"},
+            {"dragCoef":18.75},
+
+            ["d16l","eb7lll","d15l"],
+            ["d15l","eb7lll","eb8lll"],
+            ["d16l","b4lll","eb7lll"],
+            ["d16l","b3lll","b4lll"],
+            ["d16l","d15l","b3lll"],
+
+            {"optional":false},
+            {"breakGroup":""},
+            {"dragCoef":0},
+    ],
+},
+"G_pickup_tubedoor_fabric_RR": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Right Door Fabric",
+        "value":20,
+    },
+    "slotType" : "G_pickup_tubedoor_fabric_RR",
+    "flexbodies": [
+         ["mesh","[group]:","nonFlexMaterials"],
+         ["G_pickup_tubedoor_fabric_net_RR_ext", ["pickup_body", "pickup_doornet_RR"]],
+    ],
+},
+"G_pickup_tubedoor_fabric_RL": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Left Door Fabric",
+        "value":20,
+    },
+    "slotType" : "G_pickup_tubedoor_fabric_RL",
+    "flexbodies": [
+         ["mesh","[group]:","nonFlexMaterials"],
+         ["G_pickup_tubedoor_fabric_net_RL_ext", ["pickup_body", "pickup_doornet_RL"]],
+    ],
+},
+}

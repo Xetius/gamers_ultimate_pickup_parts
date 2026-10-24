@@ -1,0 +1,282 @@
+{
+"G_vintage_seat_RL": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Left Vintage Seat",
+        "value":1100,
+    },
+    "slotType" : "G_vintage_seat_RL",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_vintage_seat_RL_headrest","G_vintage_seat_RL_headrest", "Headrest"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["vintageseat_01" ["vintage_seat_RL"],[],{"pos":{"x":0.0,"y":0.0,"z":0.02}, "scale":{"x":1.05, "y":1.05, "z":1.05}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeWeight":6},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //seats flexbody
+         {"group":"vintage_seat_RL"},
+         {"nodeWeight":1.5},
+         ["sr1l", -0.24, -0.2634, 0.0297],
+         ["sr1ll", 0.24, -0.2634, 0.0297],
+         ["sr2l", -0.17, 0.2218, 0.0238],
+         ["sr2ll", 0.17, 0.2218, 0.0238],
+         ["sr3l", -0.1994, 0.3835, 0.59],
+         ["sr3ll", 0.1994, 0.3835, 0.59],
+         {"group":""},
+    ],
+    "beams":[
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //main shape
+        {"beamSpring":2501000,"beamDamp":300},
+        {"beamDeform":10000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":1.1},
+        ["sr1l", "sr1ll"],
+        ["sr2l", "sr2ll"],
+        ["sr3l", "sr3ll"],
+        ["sr1l", "sr2l"],
+        ["sr2l", "sr3l"],
+        ["sr1ll", "sr2ll"],
+        ["sr2ll", "sr3ll"],
+        //crossing
+        {"beamDeform":7000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":""},
+        ["sr1ll", "sr2l"],
+        ["sr2ll", "sr1l"],
+        ["sr2l", "sr3ll"],
+        ["sr3l", "sr2ll"],
+        //corners
+        {"beamDeform":9000},
+        ["sr3l", "sr1l", {"deformLimitExpansion":1.1}],
+        ["sr3ll", "sr1ll", {"deformLimitExpansion":1.1}],
+
+        {"beamPrecompression":1},
+
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"deformLimitExpansion":""},
+    ],
+    "triangles":[
+        ["id1:", "id2:", "id3:"],
+        {"groundModel":"metal"},
+        {"dragCoef":0},
+        //front seat
+        ["sr2l",  "sr1l",  "sr1ll"],
+        ["sr1ll", "sr2ll", "sr2l"],
+        ["sr3l",  "sr2l",  "sr2ll"],
+        ["sr2ll", "sr3ll", "sr3l"],
+        ["sr3l", "sr1l", "sr2l"],
+        ["sr3ll", "sr2ll", "sr1ll"],
+    ],
+},
+"G_vintage_seat_RR": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Right Vintage Seat",
+        "value":1100,
+    },
+    "slotType" : "G_vintage_seat_RR",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_vintage_seat_RR_headrest","G_vintage_seat_RR_headrest", "Headrest"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["vintageseat_01" ["vintage_seat_RR"],[],{"pos":{"x":0.0,"y":0.0,"z":0.02}, "scale":{"x":1.05, "y":1.05, "z":1.05}}],
+    ],
+       "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeWeight":6},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //seats flexbody
+         {"group":"vintage_seat_RR"},
+         {"nodeWeight":1.5},
+         ["sr1r", 0.2383, -0.2657, 0.0310],
+         ["sr1rr", -0.2366, -0.2657, 0.0310],
+         ["sr2r", 0.2147, 0.2175, 0.0290],
+         ["sr2rr", -0.213, 0.2175, 0.0290],
+         ["sr3r", 0.2022, 0.3768, 0.59],
+         ["sr3rr", -0.2004, 0.3768, 0.59],
+         {"group":""},
+    ],
+    "beams":[
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //main shape
+        {"beamSpring":2501000,"beamDamp":300},
+        {"beamDeform":10000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":1.1},
+        ["sr1r", "sr1rr"],
+        ["sr2r", "sr2rr"],
+        ["sr3r", "sr3rr"],
+        ["sr1r", "sr2r"],
+        ["sr2r", "sr3r"],
+        ["sr1rr", "sr2rr"],
+        ["sr2rr", "sr3rr"],
+        //crossing
+        {"beamDeform":7000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":""},
+        ["sr1rr", "sr2r"],
+        ["sr2rr", "sr1r"],
+        ["sr2r", "sr3rr"],
+        ["sr3r", "sr2rr"],
+        //corners
+        {"beamDeform":9000},
+        ["sr3r", "sr1r", {"deformLimitExpansion":1.1}],
+        ["sr3rr", "sr1rr", {"deformLimitExpansion":1.1}],
+
+        {"beamPrecompression":1},
+
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"deformLimitExpansion":""},
+    ],
+    "triangles":[
+        ["id1:", "id2:", "id3:"],
+        {"groundModel":"metal"},
+        {"dragCoef":0},
+        //front seat
+        ["sr1r",  "sr2r",  "sr1rr"],
+        ["sr2rr", "sr1rr", "sr2r"],
+        ["sr2r",  "sr3r",  "sr2rr"],
+        ["sr3rr", "sr2rr", "sr3r"],
+        ["sr1r",  "sr3r",  "sr2r"],
+        ["sr2rr", "sr3rr", "sr1rr"],
+    ],
+},
+"G_vintage_seat_RL_headrest": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Left Vintage Seat Headrest",
+        "value":50,
+    },
+    "slotType" : "G_vintage_seat_RL_headrest",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["vintageseat_01_headrest" ["vintage_seat_RL"],[],{"pos":{"x":0.0,"y":0.0,"z":0.02}, "scale":{"x":1.05, "y":1.05, "z":1.05}}],
+         {"materialOverride":[["vintageseat_01","vintageseat_01"]]}, //cancel override
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeWeight":6},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //headrest flexbody
+         {"group":"vintage_seat_RL"},
+         {"nodeWeight":0.5},
+         ["sr4l", -0.1329, 0.3835, 0.75],
+         ["sr4ll", 0.1329, 0.3835, 0.75],
+         {"group":""},
+    ],
+    "beams":[
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //main shape
+        {"beamSpring":801000,"beamDamp":50},
+        {"beamDeform":10000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":1.1},
+        ["sr4l", "sr3l"],
+        ["sr4l", "sr4ll"],
+        ["sr4ll", "sr3ll"],
+
+        //crossing
+        {"beamDeform":7000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":""},
+        //corners
+        ["sr4ll", "sr3l"],
+        ["sr3ll", "sr4l"],
+
+        {"beamDeform":9000},
+        ["sr4l", "sr1l", {"deformLimitExpansion":1.1}],
+        ["sr4ll", "sr1ll", {"deformLimitExpansion":1.1}],
+        ["sr4l", "sr2l", {"deformLimitExpansion":1.1}],
+        ["sr4ll", "sr2ll", {"deformLimitExpansion":1.1}],
+        {"beamPrecompression":1},
+
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"deformLimitExpansion":""},
+    ],
+    "triangles":[
+        ["id1:", "id2:", "id3:"],
+        {"groundModel":"metal"},
+        {"dragCoef":0},
+        //front seat
+        ["sr3ll", "sr4ll", "sr3l"],
+        ["sr4l", "sr3l", "sr4ll"],
+    ],
+},
+"G_vintage_seat_RR_headrest": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Right Vintage Seat Headrest",
+        "value":50,
+    },
+    "slotType" : "G_vintage_seat_RR_headrest",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["vintageseat_01_headrest" ["vintage_seat_RR"],[],{"pos":{"x":0.0,"y":0.0,"z":0.02}, "scale":{"x":1.05, "y":1.05, "z":1.05}}],
+         {"materialOverride":[["vintageseat_01","vintageseat_01"]]}, //cancel override
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeWeight":6},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //headrest flexbody
+         {"group":"vintage_seat_RL"},
+         {"nodeWeight":0.5},
+         ["sr4r",  0.1329, 0.3835, 0.75],
+         ["sr4rr",-0.1329, 0.3835, 0.75],
+         {"group":""},
+    ],
+    "beams":[
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //main shape
+        {"beamSpring":801000,"beamDamp":50},
+        {"beamDeform":10000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":1.1},
+        ["sr4r", "sr3r"],
+        ["sr4r", "sr4rr"],
+        ["sr4rr", "sr3rr"],
+
+        //crossing
+        {"beamDeform":7000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":""},
+        //corners
+        ["sr4rr", "sr3r"],
+        ["sr3rr", "sr4r"],
+
+        {"beamDeform":9000},
+        ["sr4r", "sr1r", {"deformLimitExpansion":1.1}],
+        ["sr4rr", "sr1rr", {"deformLimitExpansion":1.1}],
+        ["sr4r", "sr2r", {"deformLimitExpansion":1.1}],
+        ["sr4rr", "sr2rr", {"deformLimitExpansion":1.1}],
+        {"beamPrecompression":1},
+
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"deformLimitExpansion":""},
+    ],
+    "triangles":[
+        ["id1:", "id2:", "id3:"],
+        {"groundModel":"metal"},
+        {"dragCoef":0},
+        //front seat
+        ["sr4rr", "sr3rr", "sr3r"],
+        ["sr3r", "sr4r", "sr4rr"],
+    ],
+},
+},

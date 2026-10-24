@@ -1,0 +1,10 @@
+{
+  "bindings":[
+    {"control":"o", "action":"dumpTailgateLock"},
+    {"control":"o", "action":"fifthwheelTiltLock"},
+    {"control":"shift T", "action":"PTOPlus"},
+    {"control":"shift G", "action":"PTOMinus"},
+    {"control":"ctrl shift p", "action":"toggleTrailerAirSupply"},
+  ]
+
+}

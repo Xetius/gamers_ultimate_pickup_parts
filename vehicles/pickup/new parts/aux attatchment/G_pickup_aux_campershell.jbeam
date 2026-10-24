@@ -1,0 +1,754 @@
+{
+"G_pickup_aux_campershell_color": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Cab Extension (Body Colored)",
+        "value":800,
+    },
+    "slotType" : "G_pickup_aux_roof",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_pickup_aux_sportbar_lettering","G_pickup_aux_sportbar_lettering","Lettering"],
+        ["G_pickup_aux_campershell_mesh","","Rear Mesh Cover"],
+        ["G_pickup_aux_campershell_chmsl","","Center High Mounted Stop Light"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_aux_campershell_color", ["pickup_aux_sportbar"], [], {"pos":{"x": 0.0, "y":0.0, "z":0.0}}],
+         ["G_pickup_aux_campershell_color_R", ["pickup_aux_sportbar_R"], [], {"pos":{"x": 0.0, "y":0.0, "z":0.0}}],
+         ["G_pickup_aux_campershell_color_L", ["pickup_aux_sportbar_L"], [], {"pos":{"x": 0.0, "y":0.0, "z":0.0}}],
+         ["G_pickup_aux_campershell_seam", ["pickup_aux_sportbar"], [], {"pos":{"x": 0.0, "y":0.0, "z":0.0}}],
+         {"deformGroup":"aux_campershell_support","deformMaterialBase":"us_semi_common","deformMaterialDamaged":"invis"},
+         ["G_pickup_aux_campershell_support_R_alt", ["G_pickup_aux_support_bigspare"], [], {"pos":{"x": 0.0, "y":0.0, "z":0.0}}],
+         ["G_pickup_aux_campershell_support_R", ["G_pickup_aux_support_regular"], [], {"pos":{"x": 0.0, "y":0.0, "z":0.0}}],
+         ["G_pickup_aux_campershell_support_L", ["G_pickup_aux_support"], [], {"pos":{"x": 0.0, "y":0.0, "z":0.0}}],
+         {"deformGroup":""},
+         ["G_pickup_aux_campershell_support_F", ["pickup_body"], [], {"pos":{"x": 0.0, "y":0.0, "z":0.0}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"auxCoverCoupler_R"}],
+        ["advancedCouplerControl", {"name":"auxCoverCoupler_L"}],
+    ]
+    "auxCoverCoupler_R":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["aucd3r",      "auc3r",       20000,                     0.015,                  0.005,                      0.2,                 0.1,                   "auxCoverLatch_R_break", {"forceCid1":"aucd3r", "forceCid2":"aucd1rr"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["aucd3r"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 20,
+        "openForceDuration": 0.2,
+        "closeForceMagnitude": 190,
+        "closeForceDuration": 1.2
+    }
+    "auxCoverCoupler_L":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["auc3l",      "aucd3l",       20000,                     0.015,                  0.005,                      0.2,                 0.1,                   "auxCoverLatch_L_break", {"forceCid1":"aucd3l", "forceCid2":"aucd1ll"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["aucd3l"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 20,
+        "openForceDuration": 0.2,
+        "closeForceMagnitude": 190,
+        "closeForceDuration": 1.2
+    }
+    "triggers":[
+        ["id", "label", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["auxCoverR", "", "aucd2rr","aucd2r","aucd1rr", "box", {"x":0.05, "y":0.05, "z":0.15}, {"x":0, "y":-6, "z":15}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0.25, "z":-0.03}, {"deformGroup":"pickup_aux_bedcover_R"}],
+        ["auxCoverL", "", "aucd2ll","aucd2l","aucd1ll", "box", {"x":0.05, "y":0.05, "z":0.15}, {"x":0, "y":-6, "z":-15}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0.25, "z":-0.02}, {"deformGroup":"pickup_aux_bedcover_L"}],
+    ],
+    "triggerEventLinks":[
+        ["triggerId:triggers", "action", "targetEventId:events"],
+        ["auxCoverR", "action0", "auxCoverLatch_R"]
+        ["auxCoverL", "action0", "auxCoverLatch_L"]
+    ],
+    "events":[
+        ["id", "title", "desc"],
+        ["auxCoverLatch_R", "Toggle Right Cover Panel", "ui.inputActions.pickup.bedCoverLatch.description", {"onUp":"controller.getControllerSafe('auxCoverCoupler_R').toggleGroupConditional({{'rollcage_doorlock_2','attached','Unable to open with current setup'}})"}],
+        ["auxCoverLatch_L", "Toggle Left Cover Panel", "ui.inputActions.pickup.bedCoverLatch.description", {"onUp":"controller.getControllerSafe('auxCoverCoupler_L').toggleGroupConditional({{'rollcage_doorlock_2','attached','Unable to open with current setup'}})"}],
+        ["auxLatch_R", "Toggle Right Toolbox", "ui.inputActions.pickup.doorLatch_R.description", {"onUp":"controller.getControllerSafe('auxRCoupler').toggleGroupConditional({{'auxCoverCoupler_R','attached','vehicle.advancedCouplerControl.openOtherSideFirst'}})"}],
+        ["auxLatch_L", "Toggle Left Toolbox", "ui.inputActions.pickup.doorLatch_L.description", {"onUp":"controller.getControllerSafe('auxLCoupler').toggleGroupConditional({{'auxCoverCoupler_L','attached','vehicle.advancedCouplerControl.openOtherSideFirst'}})"}],
+
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"frictionCoef":0.5},
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeWeight":0.6},
+         {"group":"pickup_aux_sportbar"},
+         ["auc1r",-0.68, 0.41, 1.73],
+         ["auc1",0.0, 0.41, 1.76],
+         ["auc1l",0.68, 0.41, 1.73],
+
+         ["auc2r",-0.68, 1.06, 1.73],
+         ["auc2",0.0, 1.06, 1.76],
+         ["auc2l",0.68, 1.06, 1.73],
+
+         {"group":"pickup_aux_sportbar_R"},
+         ["aucd1r",-0.67, 0.41, 1.65],
+         ["aucd1rr",-0.90, 0.46, 1.236],
+         ["aucd2r",-0.67, 1.06, 1.65],
+         ["aucd2rr",-0.90, 1.11, 1.236],
+
+         {"group":"pickup_aux_sportbar_L"},
+         ["aucd1l",0.67, 0.41, 1.65],
+         ["aucd1ll",0.90, 0.46, 1.236],
+         ["aucd2l",0.67, 1.06, 1.65],
+         ["aucd2ll",0.90, 1.11, 1.236],
+
+         //rigidifier
+         {"collision":false},
+         {"selfCollision":false},
+         {"group":""},
+         ["auc3",0.0, 0.6, 1.44],
+         ["aucd3r",-0.60, 0.8, 1.35],
+         ["aucd3l",0.60, 0.8, 1.35],
+
+         ["auc3r",-0.60, 0.8, 1.35],
+         ["auc3l",0.60, 0.8, 1.35],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          //sport bar
+          {"beamSpring":288940,"beamDamp":23.5},
+          //{"beamDeform":5000,"beamStrength":25000},
+          {"beamDeform":5000,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":1.2},
+          ["auc1l", "auc1"],
+          ["auc1", "auc1r"],
+          ["auc2l", "auc2"],
+          ["auc2", "auc2r"],
+          ["auc2l", "auc1l"],
+          ["auc2r", "auc1r"],
+          ["auc2", "auc1"],
+          //cross
+          {"deformLimitExpansion":""},
+          ["auc1r", "auc2"],
+          ["auc1r", "auc2"],
+          ["auc2", "auc1l"],
+          ["auc1", "auc2l"],
+          //rigids
+          ["auc1r", "auc1l"],
+          ["auc2r", "auc2l"],
+          ["auc1r", "auc2l"],
+          ["auc2r", "auc1l"],
+
+          //side doors
+          ["aucd1r", "aucd1rr"],
+          ["aucd2r", "aucd2rr"],
+          ["aucd1r", "aucd2r"],
+          ["aucd1rr", "aucd2rr"],
+          ["aucd1r", "aucd2rr"],
+          ["aucd2r", "aucd1rr"],
+
+          ["aucd1l", "aucd1ll"],
+          ["aucd2l", "aucd2ll"],
+          ["aucd1l", "aucd2l"],
+          ["aucd1ll", "aucd2ll"],
+          ["aucd1l", "aucd2ll"],
+          ["aucd2l", "aucd1ll"],
+
+          //rigidifier
+          {"beamSpring":134940,"beamDamp":23.5},
+          ["auc3", "auc1r"],
+          ["auc3", "auc1"],
+          ["auc3", "auc1l"],
+          ["auc3", "auc2r"],
+          ["auc3", "auc2"],
+          ["auc3", "auc2l"],
+
+          //door rigidifier
+          ["aucd3r", "aucd1r"],
+          ["aucd3r", "aucd2r"],
+          ["aucd3r", "aucd1rr"],
+          ["aucd3r", "aucd2rr"],
+
+          ["aucd3l", "aucd1l"],
+          ["aucd3l", "aucd2l"],
+          ["aucd3l", "aucd1ll"],
+          ["aucd3l", "aucd2ll"],
+
+          //side doors attatch
+          {"beamSpring":88940,"beamDamp":230.5},
+          {"beamDeform":3800,"beamStrength":4000},
+          //r
+          {"breakGroup":"G_aux_sportbar_door_R"},
+          ["aucd1r", "auc1r"],
+          ["aucd1r", "auc2r"],
+          ["aucd1r", "auc1"],
+          ["aucd1r", "auc2"],
+          ["aucd1r", "auc3"],
+
+          ["aucd2r", "auc1r"],
+          ["aucd2r", "auc2r"],
+          ["aucd2r", "auc1"],
+          ["aucd2r", "auc2"],
+          ["aucd2r", "auc3"],
+          {"breakGroup":"G_aux_sportbar_door_R_2"},
+          ["aucd1r", "aus1r"],
+          ["aucd1r", "aus2r"],
+          ["aucd1r", "aus3r"],
+          ["aucd1r", "aus4r"],
+          ["aucd2r", "aus1r"],
+          ["aucd2r", "aus2r"],
+          ["aucd2r", "aus3r"],
+          ["aucd2r", "aus4r"],
+
+          //l
+          {"breakGroup":"G_aux_sportbar_door_L"},
+          ["aucd1l", "auc1l"],
+          ["aucd1l", "auc2l"],
+          ["aucd1l", "auc1"],
+          ["aucd1l", "auc2"],
+          ["aucd1l", "auc3"],
+
+          ["aucd2l", "auc1l"],
+          ["aucd2l", "auc2l"],
+          ["aucd2l", "auc1"],
+          ["aucd2l", "auc2"],
+          ["aucd2l", "auc3"],
+          {"breakGroup":"G_aux_sportbar_door_L_2"},
+          ["aucd1l", "aus1l"],
+          ["aucd1l", "aus2l"],
+          ["aucd1l", "aus3l"],
+          ["aucd1l", "aus4l"],
+          ["aucd2l", "aus1l"],
+          ["aucd2l", "aus2l"],
+          ["aucd2l", "aus3l"],
+          ["aucd2l", "aus4l"],
+
+          //sportbar attatch
+          {"breakGroup":"G_aux_sportbar"},
+          {"deformGroup":"aux_campershell_support"},
+          ["auc1r", "aus1r"],
+          ["auc1r", "aus2r"],
+          ["auc1r", "aus3r"],
+          ["auc1r", "aus4r"],
+          ["auc2r", "aus1l"],
+          ["auc2r", "aus2l"],
+          ["auc2r", "aus3l"],
+          ["auc2r", "aus4l"],
+
+          ["auc1l", "aus1r"],
+          ["auc1l", "aus2r"],
+          ["auc1l", "aus3r"],
+          ["auc1l", "aus4r"],
+          ["auc2l", "aus1l"],
+          ["auc2l", "aus2l"],
+          ["auc2l", "aus3l"],
+          ["auc2l", "aus4l"],
+
+          ["auc1", "aus1r"],
+          ["auc1", "aus2r"],
+          ["auc1", "aus3r"],
+          ["auc1", "aus4r"],
+          ["auc2", "aus1l"],
+          ["auc2", "aus2l"],
+          ["auc2", "aus3l"],
+          ["auc2", "aus4l"],
+          {"deformGroup":""},
+
+          {"optional":true},
+          {"breakGroup":"G_aux_sportbar_cab"},
+          ["auc1r", "rf3r"],
+          ["auc1r", "ep3r"],
+
+          ["auc1l", "rf3l"],
+          ["auc1l", "ep3l"],
+
+          ["auc1", "rfc3"],
+          ["auc1", "eb8r"],
+          ["auc1", "eb8l"],
+
+
+          ["auc1r", "rf2r"],
+          ["auc1r", "rp3r"],
+
+          ["auc1l", "rf2l"],
+          ["auc1l", "rp3l"],
+
+          ["auc1", "rfc2"],
+          ["auc1", "rb8r"],
+          ["auc1", "rb8l"],
+
+          {"breakGroup":"G_aux_sportbar_cover_F"},
+          ["auc1r", "aucf1rr"],
+          ["auc1r", "aucf1r"],
+          ["auc2r", "aucf1rr"],
+          ["auc2r", "aucf1r"],
+          ["auc2r", "aucf2r"],
+
+          ["auc1l", "aucf1ll"],
+          ["auc1l", "aucf1l"],
+          ["auc2l", "aucf1ll"],
+          ["auc2l", "aucf1l"],
+          ["auc2l", "aucf2l"],
+
+          ["auc1", "aucf1r"],
+          ["auc1", "aucf1l"],
+          ["auc2", "aucf1r"],
+          ["auc2", "aucf1l"],
+          ["auc2", "aucf2r"],
+          ["auc2", "aucf2l"],
+          {"breakGroup":""},
+          {"optional":false},
+
+          //side doors coupler attatch
+          {"optional":true},
+          ["auc3l", "aus1l"],
+          ["auc3l", "aus2l"],
+          ["auc3l", "aus3l"],
+          ["auc3l", "aus4l"],
+          ["auc3l", "aus1r"],
+          ["auc3l", "aus2r"],
+          ["auc3l", "aus5"],
+
+          ["auc3r", "aus1r"],
+          ["auc3r", "aus2r"],
+          ["auc3r", "aus3r"],
+          ["auc3r", "aus4r"],
+          ["auc3r", "aus1l"],
+          ["auc3r", "aus2l"],
+          ["auc3r", "aus5"],
+
+          ["auc3r", "aus6r"],
+          ["auc3r", "aus7r"],
+          {"optional":false},
+
+          {"beamSpring":220,"beamDamp":120},
+          {"beamDeform":4000,"beamStrength":800},
+          {"beamPrecompression":2.9},
+          ["aucd3l", "aus4l", {"breakGroup":"G_aux_sportbar_door_L_3"}],
+          {"optional":true},
+          ["aucd3r", "aus4r", {"breakGroup":"G_aux_sportbar_door_R_3"}],
+          {"beamPrecompression":1},
+
+          //--SUPPORT BEAMS--
+          {"beamType":"|SUPPORT","beamLongBound":5},
+          {"beamSpring":37700,"beamDamp":225},
+          {"beamDeform":2835,"beamStrength":57400},
+          ["aucd1rr", "aus3r"],
+          ["aucd2rr", "aus4r"],
+          ["aucd1ll", "aus3l"],
+          ["aucd2ll", "aus4l"],
+          {"beamType":"|SUPPORT","beamLongBound":15},
+          {"beamSpring":37700,"beamDamp":225},
+          {"beamDeform":2835,"beamStrength":57400},
+          ["aucd1rr", "aus6r"],
+          {"optional":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.2},
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":60},
+        {"groundModel":"plastic"},
+        ["auc2l", "auc1", "auc1l"],
+        ["auc2l", "auc2", "auc1"],
+        ["auc2r", "auc1", "auc2"],
+        ["auc2r", "auc1r", "auc1"],
+
+        ["aucd1l", "aucd1ll", "aucd2l"],
+        ["aucd2l", "aucd1ll", "aucd2ll"],
+
+        ["aucd1r", "aucd2r", "aucd1rr"],
+        ["aucd2r", "aucd2rr", "aucd1rr"],
+    ],
+},
+"G_pickup_aux_campershell_black": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Cab Extension (Black)",
+        "value":700,
+    },
+    "slotType" : "G_pickup_aux_roof",
+    "slots": [
+        ["type", "default", "description"],
+        ["G_pickup_aux_sportbar_lettering","G_pickup_aux_sportbar_lettering","Lettering"],
+        ["G_pickup_aux_campershell_mesh","","Rear Mesh Cover"],
+        ["G_pickup_aux_campershell_chmsl","","Center High Mounted Stop Light"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_aux_campershell_black", ["pickup_aux_sportbar"], [], {"pos":{"x": 0.0, "y":0.0, "z":0.0}}],
+         ["G_pickup_aux_campershell_black_R", ["pickup_aux_sportbar_R"], [], {"pos":{"x": 0.0, "y":0.0, "z":0.0}}],
+         ["G_pickup_aux_campershell_black_L", ["pickup_aux_sportbar_L"], [], {"pos":{"x": 0.0, "y":0.0, "z":0.0}}],
+         ["G_pickup_aux_campershell_seam", ["pickup_aux_sportbar"], [], {"pos":{"x": 0.0, "y":0.0, "z":0.0}}],
+         ["G_pickup_aux_campershell_support_R", ["G_pickup_aux_support"], [], {"pos":{"x": 0.0, "y":0.0, "z":0.0}}],
+         ["G_pickup_aux_campershell_support_L", ["G_pickup_aux_support"], [], {"pos":{"x": 0.0, "y":0.0, "z":0.0}}],
+         ["G_pickup_aux_campershell_support_F", ["pickup_body"], [], {"pos":{"x": 0.0, "y":0.0, "z":0.0}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["advancedCouplerControl", {"name":"auxCoverCoupler_R"}],
+        ["advancedCouplerControl", {"name":"auxCoverCoupler_L"}],
+    ]
+    "auxCoverCoupler_R":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["aucd3r",      "auc3r",       20000,                     0.015,                  0.005,                      0.2,                 0.1,                   "auxCoverLatch_R_break", {"forceCid1":"aucd3r", "forceCid2":"aucd1rr"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["aucd3r"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 20,
+        "openForceDuration": 0.2,
+        "closeForceMagnitude": 190,
+        "closeForceDuration": 1.2
+    }
+    "auxCoverCoupler_L":{
+        "couplerNodes":[
+            ["cid1",    "cid2",     "autoCouplingStrength",    "autoCouplingRadius",   "autoCouplingLockRadius",   "autoCouplingSpeed", "couplingStartRadius",  "breakGroup"]
+            ["auc3l",      "aucd3l",       20000,                     0.015,                  0.005,                      0.2,                 0.1,                   "auxCoverLatch_L_break", {"forceCid1":"aucd3l", "forceCid2":"aucd1ll"}]
+        ]
+        "groupType": "autoCoupling",
+        "attachSoundVolume":1,
+        "detachSoundVolume":1,
+        "soundNode:":["aucd3l"]
+        "attachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_close",
+        "detachSoundEvent": "event:>Vehicle>Latches>Special>bedcover_open",
+        "breakSoundEvent":""
+        "openForceMagnitude": 20,
+        "openForceDuration": 0.2,
+        "closeForceMagnitude": 190,
+        "closeForceDuration": 1.2
+    }
+    "triggers":[
+        ["id", "label", "idRef:", "idX:", "idY:", "type", "size", "baseRotation", "rotation", "translation", "baseTranslation"],
+        ["auxCoverR", "", "aucd2rr","aucd2r","aucd1rr", "box", {"x":0.05, "y":0.05, "z":0.15}, {"x":0, "y":-6, "z":15}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0.25, "z":-0.03}, {"deformGroup":"pickup_aux_bedcover_R"}],
+        ["auxCoverL", "", "aucd2ll","aucd2l","aucd1ll", "box", {"x":0.05, "y":0.05, "z":0.15}, {"x":0, "y":-6, "z":-15}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0.25, "z":-0.02}, {"deformGroup":"pickup_aux_bedcover_L"}],
+    ],
+    "triggerEventLinks":[
+        ["triggerId:triggers", "action", "targetEventId:events"],
+        ["auxCoverR", "action0", "auxCoverLatch_R"]
+        ["auxCoverL", "action0", "auxCoverLatch_L"]
+    ],
+    "events":[
+        ["id", "title", "desc"],
+        ["auxCoverLatch_R", "Toggle Right Cover Panel", "ui.inputActions.pickup.bedCoverLatch.description", {"onUp":"controller.getControllerSafe('auxCoverCoupler_R').toggleGroupConditional({{'rollcage_doorlock_2','attached','Unable to open with current setup'}})"}],
+        ["auxCoverLatch_L", "Toggle Left Cover Panel", "ui.inputActions.pickup.bedCoverLatch.description", {"onUp":"controller.getControllerSafe('auxCoverCoupler_L').toggleGroupConditional({{'rollcage_doorlock_2','attached','Unable to open with current setup'}})"}],
+        ["auxLatch_R", "Toggle Right Toolbox", "ui.inputActions.pickup.doorLatch_R.description", {"onUp":"controller.getControllerSafe('auxRCoupler').toggleGroupConditional({{'auxCoverCoupler_R','attached','vehicle.advancedCouplerControl.openOtherSideFirst'}})"}],
+        ["auxLatch_L", "Toggle Left Toolbox", "ui.inputActions.pickup.doorLatch_L.description", {"onUp":"controller.getControllerSafe('auxLCoupler').toggleGroupConditional({{'auxCoverCoupler_L','attached','vehicle.advancedCouplerControl.openOtherSideFirst'}})"}],
+
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"frictionCoef":0.5},
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeWeight":0.6},
+         {"group":"pickup_aux_sportbar"},
+         ["auc1r",-0.68, 0.41, 1.73],
+         ["auc1",0.0, 0.41, 1.76],
+         ["auc1l",0.68, 0.41, 1.73],
+
+         ["auc2r",-0.68, 1.06, 1.73],
+         ["auc2",0.0, 1.06, 1.76],
+         ["auc2l",0.68, 1.06, 1.73],
+
+         {"group":"pickup_aux_sportbar_R"},
+         ["aucd1r",-0.67, 0.41, 1.65],
+         ["aucd1rr",-0.90, 0.46, 1.236],
+         ["aucd2r",-0.67, 1.06, 1.65],
+         ["aucd2rr",-0.90, 1.11, 1.236],
+
+         {"group":"pickup_aux_sportbar_L"},
+         ["aucd1l",0.67, 0.41, 1.65],
+         ["aucd1ll",0.90, 0.46, 1.236],
+         ["aucd2l",0.67, 1.06, 1.65],
+         ["aucd2ll",0.90, 1.11, 1.236],
+
+         //rigidifier
+         {"collision":false},
+         {"selfCollision":false},
+         {"group":""},
+         ["auc3",0.0, 0.6, 1.44],
+         ["aucd3r",-0.60, 0.8, 1.35],
+         ["aucd3l",0.60, 0.8, 1.35],
+
+         ["auc3r",-0.60, 0.8, 1.35],
+         ["auc3l",0.60, 0.8, 1.35],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          //sport bar
+          {"beamSpring":288940,"beamDamp":23.5},
+          //{"beamDeform":5000,"beamStrength":25000},
+          {"beamDeform":5000,"beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":1.2},
+          ["auc1l", "auc1"],
+          ["auc1", "auc1r"],
+          ["auc2l", "auc2"],
+          ["auc2", "auc2r"],
+          ["auc2l", "auc1l"],
+          ["auc2r", "auc1r"],
+          ["auc2", "auc1"],
+          //cross
+          {"deformLimitExpansion":""},
+          ["auc1r", "auc2"],
+          ["auc1r", "auc2"],
+          ["auc2", "auc1l"],
+          ["auc1", "auc2l"],
+          //rigids
+          ["auc1r", "auc1l"],
+          ["auc2r", "auc2l"],
+          ["auc1r", "auc2l"],
+          ["auc2r", "auc1l"],
+
+          //side doors
+          ["aucd1r", "aucd1rr"],
+          ["aucd2r", "aucd2rr"],
+          ["aucd1r", "aucd2r"],
+          ["aucd1rr", "aucd2rr"],
+          ["aucd1r", "aucd2rr"],
+          ["aucd2r", "aucd1rr"],
+
+          ["aucd1l", "aucd1ll"],
+          ["aucd2l", "aucd2ll"],
+          ["aucd1l", "aucd2l"],
+          ["aucd1ll", "aucd2ll"],
+          ["aucd1l", "aucd2ll"],
+          ["aucd2l", "aucd1ll"],
+
+          //rigidifier
+          {"beamSpring":134940,"beamDamp":23.5},
+          ["auc3", "auc1r"],
+          ["auc3", "auc1"],
+          ["auc3", "auc1l"],
+          ["auc3", "auc2r"],
+          ["auc3", "auc2"],
+          ["auc3", "auc2l"],
+
+          //door rigidifier
+          ["aucd3r", "aucd1r"],
+          ["aucd3r", "aucd2r"],
+          ["aucd3r", "aucd1rr"],
+          ["aucd3r", "aucd2rr"],
+
+          ["aucd3l", "aucd1l"],
+          ["aucd3l", "aucd2l"],
+          ["aucd3l", "aucd1ll"],
+          ["aucd3l", "aucd2ll"],
+
+          //side doors attatch
+          {"beamSpring":88940,"beamDamp":230.5},
+          {"beamDeform":3800,"beamStrength":4000},
+          //r
+          {"breakGroup":"G_aux_sportbar_door_R"},
+          ["aucd1r", "auc1r"],
+          ["aucd1r", "auc2r"],
+          ["aucd1r", "auc1"],
+          ["aucd1r", "auc2"],
+          ["aucd1r", "auc3"],
+
+          ["aucd2r", "auc1r"],
+          ["aucd2r", "auc2r"],
+          ["aucd2r", "auc1"],
+          ["aucd2r", "auc2"],
+          ["aucd2r", "auc3"],
+          {"breakGroup":"G_aux_sportbar_door_R_2"},
+          ["aucd1r", "aus1r"],
+          ["aucd1r", "aus2r"],
+          ["aucd1r", "aus3r"],
+          ["aucd1r", "aus4r"],
+          ["aucd2r", "aus1r"],
+          ["aucd2r", "aus2r"],
+          ["aucd2r", "aus3r"],
+          ["aucd2r", "aus4r"],
+
+          //l
+          {"breakGroup":"G_aux_sportbar_door_L"},
+          ["aucd1l", "auc1l"],
+          ["aucd1l", "auc2l"],
+          ["aucd1l", "auc1"],
+          ["aucd1l", "auc2"],
+          ["aucd1l", "auc3"],
+
+          ["aucd2l", "auc1l"],
+          ["aucd2l", "auc2l"],
+          ["aucd2l", "auc1"],
+          ["aucd2l", "auc2"],
+          ["aucd2l", "auc3"],
+          {"breakGroup":"G_aux_sportbar_door_L_2"},
+          ["aucd1l", "aus1l"],
+          ["aucd1l", "aus2l"],
+          ["aucd1l", "aus3l"],
+          ["aucd1l", "aus4l"],
+          ["aucd2l", "aus1l"],
+          ["aucd2l", "aus2l"],
+          ["aucd2l", "aus3l"],
+          ["aucd2l", "aus4l"],
+
+          //sportbar attatch
+          {"breakGroup":"G_aux_sportbar"},
+          ["auc1r", "aus1r"],
+          ["auc1r", "aus2r"],
+          ["auc1r", "aus3r"],
+          ["auc1r", "aus4r"],
+          ["auc2r", "aus1l"],
+          ["auc2r", "aus2l"],
+          ["auc2r", "aus3l"],
+          ["auc2r", "aus4l"],
+
+          ["auc1l", "aus1r"],
+          ["auc1l", "aus2r"],
+          ["auc1l", "aus3r"],
+          ["auc1l", "aus4r"],
+          ["auc2l", "aus1l"],
+          ["auc2l", "aus2l"],
+          ["auc2l", "aus3l"],
+          ["auc2l", "aus4l"],
+
+          ["auc1", "aus1r"],
+          ["auc1", "aus2r"],
+          ["auc1", "aus3r"],
+          ["auc1", "aus4r"],
+          ["auc2", "aus1l"],
+          ["auc2", "aus2l"],
+          ["auc2", "aus3l"],
+          ["auc2", "aus4l"],
+
+          {"optional":true},
+          {"breakGroup":"G_aux_sportbar_cab"},
+          ["auc1r", "rf3r"],
+          ["auc1r", "ep3r"],
+
+          ["auc1l", "rf3l"],
+          ["auc1l", "ep3l"],
+
+          ["auc1", "rfc3"],
+          ["auc1", "eb8r"],
+          ["auc1", "eb8l"],
+
+
+          ["auc1r", "rf2r"],
+          ["auc1r", "rp3r"],
+
+          ["auc1l", "rf2l"],
+          ["auc1l", "rp3l"],
+
+          ["auc1", "rfc2"],
+          ["auc1", "rb8r"],
+          ["auc1", "rb8l"],
+
+          {"breakGroup":"G_aux_sportbar_cover_F"},
+          ["auc1r", "aucf1rr"],
+          ["auc1r", "aucf1r"],
+          ["auc2r", "aucf1rr"],
+          ["auc2r", "aucf1r"],
+          ["auc2r", "aucf2r"],
+
+          ["auc1l", "aucf1ll"],
+          ["auc1l", "aucf1l"],
+          ["auc2l", "aucf1ll"],
+          ["auc2l", "aucf1l"],
+          ["auc2l", "aucf2l"],
+
+          ["auc1", "aucf1r"],
+          ["auc1", "aucf1l"],
+          ["auc2", "aucf1r"],
+          ["auc2", "aucf1l"],
+          ["auc2", "aucf2r"],
+          ["auc2", "aucf2l"],
+          {"breakGroup":""},
+          {"optional":false},
+
+          //side doors coupler attatch
+          {"optional":true},
+          ["auc3l", "aus1l"],
+          ["auc3l", "aus2l"],
+          ["auc3l", "aus3l"],
+          ["auc3l", "aus4l"],
+          ["auc3l", "aus1r"],
+          ["auc3l", "aus2r"],
+          ["auc3l", "aus5"],
+
+          ["auc3r", "aus1r"],
+          ["auc3r", "aus2r"],
+          ["auc3r", "aus3r"],
+          ["auc3r", "aus4r"],
+          ["auc3r", "aus1l"],
+          ["auc3r", "aus2l"],
+          ["auc3r", "aus5"],
+
+          ["auc3r", "aus6r"],
+          ["auc3r", "aus7r"],
+          {"optional":false},
+
+          {"beamSpring":220,"beamDamp":120},
+          {"beamDeform":4000,"beamStrength":800},
+          {"beamPrecompression":2.9},
+          ["aucd3l", "aus4l", {"breakGroup":"G_aux_sportbar_door_L_3"}],
+          {"optional":true},
+          ["aucd3r", "aus4r", {"breakGroup":"G_aux_sportbar_door_R_3"}],
+          {"beamPrecompression":1},
+
+          //--SUPPORT BEAMS--
+          {"beamType":"|SUPPORT","beamLongBound":5},
+          {"beamSpring":37700,"beamDamp":225},
+          {"beamDeform":2835,"beamStrength":57400},
+          ["aucd1rr", "aus3r"],
+          ["aucd2rr", "aus4r"],
+          ["aucd1ll", "aus3l"],
+          ["aucd2ll", "aus4l"],
+          {"beamType":"|SUPPORT","beamLongBound":15},
+          {"beamSpring":37700,"beamDamp":225},
+          {"beamDeform":2835,"beamStrength":57400},
+          ["aucd1rr", "aus6r"],
+          {"optional":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.2},
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":60},
+        {"groundModel":"plastic"},
+        ["auc2l", "auc1", "auc1l"],
+        ["auc2l", "auc2", "auc1"],
+        ["auc2r", "auc1", "auc2"],
+        ["auc2r", "auc1r", "auc1"],
+
+        ["aucd1l", "aucd1ll", "aucd2l"],
+        ["aucd2l", "aucd1ll", "aucd2ll"],
+
+        ["aucd1r", "aucd2r", "aucd1rr"],
+        ["aucd2r", "aucd2rr", "aucd1rr"],
+    ],
+},
+"G_pickup_aux_campershell_mesh": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Rear Mesh",
+        "value":90,
+    },
+    "slotType" : "G_pickup_aux_campershell_mesh",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_aux_campershell_mesh", ["pickup_aux_sportbar"], [], {"pos":{"x": 0.0, "y":0.0, "z":0.0}}],
+         ["G_pickup_aux_campershell_mesh_bar", ["pickup_aux_sportbar"], [], {"pos":{"x": 0.0, "y":0.0, "z":0.0}}],
+    ],
+},
+}

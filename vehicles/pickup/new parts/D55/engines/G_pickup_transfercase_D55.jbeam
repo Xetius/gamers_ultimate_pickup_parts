@@ -1,0 +1,497 @@
+{
+"G_pickup_transfercase_D55_single_RWD": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"RWD Transfer Case Without Rangebox",
+        "value":250,
+    },
+    "slotType" : "G_pickup_transfercase_D55_single",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //straight through shaft
+        ["shaft", "transfercase", "gearbox", 1, {"friction":0.32, "dynamicFriction":0.000354, "uiName":"Rear Output Shaft"}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":37.6},
+         {"group":""},
+         ["tra4", 0.0, -0.291, 0.36],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":18800940,"beamDamp":470},
+          {"beamDeform":175000,"beamStrength":"FLT_MAX"},
+          ["tra4","e1r"],
+          ["tra4","e3r"],
+          ["tra4","e1l"],
+          ["tra4","e3l"],
+          ["tra4","tra1"],
+
+          //transmission mount
+          {"beamSpring":240000, "beamDamp":2700},
+          {"beamLimitSpring":1001000, "beamLimitDamp":500},
+          {"beamDeform":20000, "beamStrength":160000},
+          {"boundZone":0.01},
+
+          {"breakGroup":"transmissionmount"},
+          ["tra4", "f14"],
+          ["tra4", "f4"],
+          ["tra4", "f4r"],
+          ["tra4", "f14r"],
+          ["tra4", "f4l"],
+          ["tra4", "f14l"],
+          ["tra4", "f5r"],
+          ["tra4", "f15r"],
+          ["tra4", "f5l"],
+          ["tra4", "f15l"],
+          {"boundZone":""},
+          {"breakGroup":""},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_transfercase_D55_single_RWD_low": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"RWD Transfer Case With Rangebox",
+        "value":950,
+    },
+    "slotType" : "G_pickup_transfercase_D55_single",
+    "controller": [
+        ["fileName"],
+        ["driveModes", {"name":"transfercaseControl"}]
+        ["4wd", {"driveModesTransfercaseNames":["transfercaseControl"], "driveModesRangeNames":["transfercaseControl"]}]
+    ],
+
+    "transfercaseControl":{
+        "uiName": "Transfercase"
+        "quickAccessTitle":"Transfercase"
+        "quickAccessIcon":"radial_highrangebox"
+        "quickAccessLevel":"/powertrain/"
+        "enabledModes":["2hi", "2lo"]
+        "defaultMode": "2hi"
+        "modes": {
+            "2hi": {
+                "name": "2WD High Gear",
+                "order": 10,
+                "settings": [
+                    ["type"]
+                    ["powertrainDeviceMode", {"deviceName":"rangebox", "mode":"high"}]
+                    ["powertrainDeviceMode", {"deviceName":"transfercase_F", "mode":"disconnected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFR", "mode":"disconnected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFL", "mode":"disconnected"}]
+                    ["electricsValue", {"electricsName":"transfercase_state", "value":1}]
+                    ["simpleControlButton", {"buttonId":"transfercase", "icon":"powertrain_transfercase_high-2", "uiName":"Transfercase"}]
+                    ["quickAccess", {"icon":"powertrain_transfercase_high-2"}]
+                ],
+            },
+            "2lo": {
+                "name": "2WD Low Gear",
+                "order": 30,
+                "settings": [
+                    ["type"]
+                    ["powertrainDeviceMode", {"deviceName":"rangebox", "mode":"low"}]
+                    ["powertrainDeviceMode", {"deviceName":"transfercase_F", "mode":"disconnected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFR", "mode":"disconnected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFL", "mode":"disconnected"}]
+                    ["electricsValue", {"electricsName":"transfercase_state", "value":-1}]
+                    ["simpleControlButton", {"buttonId":"transfercase", "icon":"powertrain_transfercase_low-2", "uiName":"Transfercase"}]
+                    ["quickAccess", {"icon":"powertrain_transfercase_low-2"}]
+                ],
+            },
+        }
+    }
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["rangeBox", "rangebox", "gearbox", 1, {"uiSimpleModeControl":false, "gearRatios":[1,2.2], "uiName":"Rangebox"}],
+        //locked center diff
+        ["differential", "transfercase", "rangebox", 1, {"diffType":"locked", "lockTorque":8000, "friction":0.44, "dynamicFriction":0.00048, "torqueLossCoef":0.012, "uiName":"Transfer Case", "defaultVirtualInertia":0.1}],
+        //disconnecting front shaft
+        ["shaft", "transfercase_F", "transfercase", 2, {"uiSimpleModeControl":false, "canDisconnect":true, "friction":0.44, "dynamicFriction":0.00048, "uiName":"Front Output Shaft"}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":37.6},
+         {"group":""},
+         ["tra4", 0.0, -0.291, 0.36],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":18800940,"beamDamp":470},
+          {"beamDeform":175000,"beamStrength":"FLT_MAX"},
+          ["tra4","e1r"],
+          ["tra4","e3r"],
+          ["tra4","e1l"],
+          ["tra4","e3l"],
+          ["tra4","tra1"],
+
+          //transmission mount
+          {"beamSpring":240000, "beamDamp":2700},
+          {"beamLimitSpring":1001000, "beamLimitDamp":500},
+          {"beamDeform":20000, "beamStrength":160000},
+          {"boundZone":0.01},
+
+          {"breakGroup":"transmissionmount"},
+          ["tra4", "f14"],
+          ["tra4", "f4"],
+          ["tra4", "f4r"],
+          ["tra4", "f14r"],
+          ["tra4", "f4l"],
+          ["tra4", "f14l"],
+          ["tra4", "f5r"],
+          ["tra4", "f15r"],
+          ["tra4", "f5l"],
+          ["tra4", "f15l"],
+          {"boundZone":""},
+          {"breakGroup":""},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_transfercase_D55_single_4WD": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"4WD Transfer Case With Rangebox",
+        "value":2000,
+    },
+    "slotType" : "G_pickup_transfercase_D55_single",
+    "controller": [
+        ["fileName"],
+        ["driveModes", {"name":"transfercaseControl"}]
+        ["4wd", {"driveModesTransfercaseNames":["transfercaseControl"], "driveModesRangeNames":["transfercaseControl"]}]
+    ],
+
+    "transfercaseControl":{
+        "uiName": "Transfercase"
+        "quickAccessTitle":"Transfercase"
+        "quickAccessIcon":"radial_highrangebox"
+        "quickAccessLevel":"/powertrain/"
+        "enabledModes":["2hi", "4hi", "4lo"]
+        "defaultMode": "2hi"
+        "modes": {
+            "2hi": {
+                "name": "2WD High Gear",
+                "order": 10,
+                "settings": [
+                    ["type"]
+                    ["powertrainDeviceMode", {"deviceName":"rangebox", "mode":"high"}]
+                    ["powertrainDeviceMode", {"deviceName":"transfercase_F", "mode":"disconnected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFR", "mode":"disconnected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFL", "mode":"disconnected"}]
+                    ["electricsValue", {"electricsName":"transfercase_state", "value":1}]
+                    ["simpleControlButton", {"buttonId":"transfercase", "icon":"powertrain_transfercase_high-2", "uiName":"Transfercase"}]
+                    ["quickAccess", {"icon":"powertrain_transfercase_high-2"}]
+                ],
+            },
+            "4hi": {
+                "name": "4WD High Gear",
+                "order": 20,
+                "settings": [
+                    ["type"]
+                    ["powertrainDeviceMode", {"deviceName":"rangebox", "mode":"high"}]
+                    ["powertrainDeviceMode", {"deviceName":"transfercase_F", "mode":"connected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFR", "mode":"connected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFL", "mode":"connected"}]
+                    ["electricsValue", {"electricsName":"transfercase_state", "value":0.33}]
+                    ["simpleControlButton", {"buttonId":"transfercase", "icon":"powertrain_transfercase_high-4", "uiName":"Transfercase"}]
+                    ["quickAccess", {"icon":"powertrain_transfercase_high-4"}]
+                ],
+            },
+            "4lo": {
+                "name": "4WD Low Gear",
+                "order": 30,
+                "settings": [
+                    ["type"]
+                    ["powertrainDeviceMode", {"deviceName":"rangebox", "mode":"low"}]
+                    ["powertrainDeviceMode", {"deviceName":"transfercase_F", "mode":"connected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFR", "mode":"connected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFL", "mode":"connected"}]
+                    ["electricsValue", {"electricsName":"transfercase_state", "value":-1}]
+                    ["simpleControlButton", {"buttonId":"transfercase", "icon":"powertrain_transfercase_low-4", "uiName":"Transfercase"}]
+                    ["quickAccess", {"icon":"powertrain_transfercase_low-4"}]
+                ],
+            },
+        }
+    }
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["rangeBox", "rangebox", "gearbox", 1, {"uiSimpleModeControl":false, "gearRatios":[1,2.2], "uiName":"Rangebox"}],
+        //locked center diff
+        ["differential", "transfercase", "rangebox", 1, {"diffType":"locked", "lockTorque":8000, "friction":0.44, "dynamicFriction":0.00048, "torqueLossCoef":0.012, "uiName":"Transfer Case", "defaultVirtualInertia":0.1}],
+        //disconnecting front shaft
+        ["shaft", "transfercase_F", "transfercase", 2, {"uiSimpleModeControl":false, "canDisconnect":true, "friction":0.44, "dynamicFriction":0.00048, "uiName":"Front Output Shaft"}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["G_pickup_transfer_case_D55", ["pickup_transmission","pickup_engine"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":18},
+         {"group":"pickup_transmission"},
+         ["tra2",-0.19, -0.58, 0.32],
+         ["tra3", 0.19, -0.58, 0.32],
+         {"nodeWeight":37.6},
+         {"group":""},
+         ["tra4", 0.0, -0.23, 0.36],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":12600840,"beamDamp":390},
+          {"beamDeform":99750,"beamStrength":"FLT_MAX"},
+          ["tra2","tra1"],
+
+          ["tra2","e1r"],
+          ["tra2","e1l"],
+          ["tra2","e3r"],
+          ["tra2","e3l"],
+
+          ["tra3","e1r"],
+          ["tra3","e1l"],
+          ["tra3","e3r"],
+          ["tra3","e3l"],
+
+          ["tra3","tra2"],
+          ["tra3","tra1"],
+
+          //--TRANSMISSION CONE--
+          {"beamSpring":18800940,"beamDamp":470},
+          {"beamDeform":175000,"beamStrength":"FLT_MAX"},
+          ["tra4","e1r"],
+          ["tra4","e3r"],
+          ["tra4","e1l"],
+          ["tra4","e3l"],
+          ["tra4","tra1"],
+          ["tra4","tra2"],
+          ["tra4","tra3"],
+
+          //transmission mount
+          {"beamSpring":240000, "beamDamp":2700},
+          {"beamLimitSpring":1001000, "beamLimitDamp":500},
+          {"beamDeform":20000, "beamStrength":160000},
+          {"boundZone":0.01},
+
+          {"breakGroup":"transmissionmount"},
+          ["tra4", "f14"],
+          ["tra4", "f4"],
+          ["tra4", "f4r"],
+          ["tra4", "f14r"],
+          ["tra4", "f4l"],
+          ["tra4", "f14l"],
+          ["tra4", "f5r"],
+          ["tra4", "f15r"],
+          ["tra4", "f5l"],
+          ["tra4", "f15l"],
+          {"boundZone":""},
+          {"breakGroup":""},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_transfercase_D55_ext_RWD": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"RWD Transfer Case Without Rangebox",
+        "value":250,
+    },
+    "slotType" : "G_pickup_transfercase_D55_ext",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //straight through shaft
+        ["shaft", "transfercase", "gearbox", 1, {"friction":0.32, "dynamicFriction":0.000354, "uiName":"Rear Output Shaft"}],
+    ],
+},
+"G_pickup_transfercase_D55_ext_RWD_low": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"RWD Transfer Case With Rangebox",
+        "value":950,
+    },
+    "slotType" : "G_pickup_transfercase_D55_ext",
+    "controller": [
+        ["fileName"],
+        ["driveModes", {"name":"transfercaseControl"}]
+        ["4wd", {"driveModesTransfercaseNames":["transfercaseControl"], "driveModesRangeNames":["transfercaseControl"]}]
+    ],
+
+    "transfercaseControl":{
+        "uiName": "Transfercase"
+        "quickAccessTitle":"Transfercase"
+        "quickAccessIcon":"radial_highrangebox"
+        "quickAccessLevel":"/powertrain/"
+        "enabledModes":["2hi", "2lo"]
+        "defaultMode": "2hi"
+        "modes": {
+            "2hi": {
+                "name": "2WD High Gear",
+                "order": 10,
+                "settings": [
+                    ["type"]
+                    ["powertrainDeviceMode", {"deviceName":"rangebox", "mode":"high"}]
+                    ["powertrainDeviceMode", {"deviceName":"transfercase_F", "mode":"disconnected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFR", "mode":"disconnected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFL", "mode":"disconnected"}]
+                    ["electricsValue", {"electricsName":"transfercase_state", "value":1}]
+                    ["simpleControlButton", {"buttonId":"transfercase", "icon":"powertrain_transfercase_high-2", "uiName":"Transfercase"}]
+                    ["quickAccess", {"icon":"powertrain_transfercase_high-2"}]
+                ],
+            },
+            "2lo": {
+                "name": "2WD Low Gear",
+                "order": 30,
+                "settings": [
+                    ["type"]
+                    ["powertrainDeviceMode", {"deviceName":"rangebox", "mode":"low"}]
+                    ["powertrainDeviceMode", {"deviceName":"transfercase_F", "mode":"disconnected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFR", "mode":"disconnected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFL", "mode":"disconnected"}]
+                    ["electricsValue", {"electricsName":"transfercase_state", "value":-1}]
+                    ["simpleControlButton", {"buttonId":"transfercase", "icon":"powertrain_transfercase_low-2", "uiName":"Transfercase"}]
+                    ["quickAccess", {"icon":"powertrain_transfercase_low-2"}]
+                ],
+            },
+        }
+    }
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["rangeBox", "rangebox", "gearbox", 1, {"uiSimpleModeControl":false, "gearRatios":[1,2.2], "uiName":"Rangebox"}],
+        //locked center diff
+        ["differential", "transfercase", "rangebox", 1, {"diffType":"locked", "lockTorque":8000, "friction":0.44, "dynamicFriction":0.00048, "torqueLossCoef":0.012, "uiName":"Transfer Case", "defaultVirtualInertia":0.1}],
+        //disconnecting front shaft
+        ["shaft", "transfercase_F", "transfercase", 2, {"uiSimpleModeControl":false, "canDisconnect":true, "friction":0.44, "dynamicFriction":0.00048, "uiName":"Front Output Shaft"}],
+    ],
+},
+"G_pickup_transfercase_D55_ext_4WD": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"4WD Transfer Case With Rangebox",
+        "value":2000,
+    },
+    "slotType" : "G_pickup_transfercase_D55_ext",
+    "controller": [
+        ["fileName"],
+        ["driveModes", {"name":"transfercaseControl"}]
+        ["4wd", {"driveModesTransfercaseNames":["transfercaseControl"], "driveModesRangeNames":["transfercaseControl"]}]
+    ],
+
+    "transfercaseControl":{
+        "uiName": "Transfercase"
+        "quickAccessTitle":"Transfercase"
+        "quickAccessIcon":"radial_highrangebox"
+        "quickAccessLevel":"/powertrain/"
+        "enabledModes":["2hi", "4hi", "4lo"]
+        "defaultMode": "2hi"
+        "modes": {
+            "2hi": {
+                "name": "2WD High Gear",
+                "order": 10,
+                "settings": [
+                    ["type"]
+                    ["powertrainDeviceMode", {"deviceName":"rangebox", "mode":"high"}]
+                    ["powertrainDeviceMode", {"deviceName":"transfercase_F", "mode":"disconnected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFR", "mode":"disconnected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFL", "mode":"disconnected"}]
+                    ["electricsValue", {"electricsName":"transfercase_state", "value":1}]
+                    ["simpleControlButton", {"buttonId":"transfercase", "icon":"powertrain_transfercase_high-2", "uiName":"Transfercase"}]
+                    ["quickAccess", {"icon":"powertrain_transfercase_high-2"}]
+                ],
+            },
+            "4hi": {
+                "name": "4WD High Gear",
+                "order": 20,
+                "settings": [
+                    ["type"]
+                    ["powertrainDeviceMode", {"deviceName":"rangebox", "mode":"high"}]
+                    ["powertrainDeviceMode", {"deviceName":"transfercase_F", "mode":"connected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFR", "mode":"connected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFL", "mode":"connected"}]
+                    ["electricsValue", {"electricsName":"transfercase_state", "value":0.33}]
+                    ["simpleControlButton", {"buttonId":"transfercase", "icon":"powertrain_transfercase_high-4", "uiName":"Transfercase"}]
+                    ["quickAccess", {"icon":"powertrain_transfercase_high-4"}]
+                ],
+            },
+            "4lo": {
+                "name": "4WD Low Gear",
+                "order": 30,
+                "settings": [
+                    ["type"]
+                    ["powertrainDeviceMode", {"deviceName":"rangebox", "mode":"low"}]
+                    ["powertrainDeviceMode", {"deviceName":"transfercase_F", "mode":"connected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFR", "mode":"connected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFL", "mode":"connected"}]
+                    ["electricsValue", {"electricsName":"transfercase_state", "value":-1}]
+                    ["simpleControlButton", {"buttonId":"transfercase", "icon":"powertrain_transfercase_low-4", "uiName":"Transfercase"}]
+                    ["quickAccess", {"icon":"powertrain_transfercase_low-4"}]
+                ],
+            },
+        }
+    }
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["rangeBox", "rangebox", "gearbox", 1, {"uiSimpleModeControl":false, "gearRatios":[1,2.2], "uiName":"Rangebox"}],
+        //locked center diff
+        ["differential", "transfercase", "rangebox", 1, {"diffType":"locked", "lockTorque":8000, "friction":0.44, "dynamicFriction":0.00048, "torqueLossCoef":0.012, "uiName":"Transfer Case", "defaultVirtualInertia":0.1}],
+        //disconnecting front shaft
+        ["shaft", "transfercase_F", "transfercase", 2, {"uiSimpleModeControl":false, "canDisconnect":true, "friction":0.44, "dynamicFriction":0.00048, "uiName":"Front Output Shaft"}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["G_pickup_transfer_case_D55", ["pickup_transmission","pickup_engine"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":18},
+         {"group":"pickup_transmission"},
+         ["tra2",-0.19, -0.58, 0.32],
+         ["tra3", 0.19, -0.58, 0.32],
+         {"nodeWeight":37.6},
+         ["tra1", 0.0, -0.23, 0.36],
+         {"nodeWeight":37.6},
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":12600840,"beamDamp":390},
+          {"beamDeform":99750,"beamStrength":"FLT_MAX"},
+          ["tra2","tra1"],
+
+          ["tra2","e1r"],
+          ["tra2","e1l"],
+          ["tra2","e3r"],
+          ["tra2","e3l"],
+
+          ["tra3","e1r"],
+          ["tra3","e1l"],
+          ["tra3","e3r"],
+          ["tra3","e3l"],
+
+          ["tra3","tra2"],
+          ["tra3","tra1"],
+          {"boundZone":""},
+          {"breakGroup":""},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+}

@@ -1,0 +1,99 @@
+{
+"G_md_series_body_handle": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Cab Handles",
+        "value":300,
+    },
+    "slotType" : "md_series_trim",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_body_handle_L", ["md_series_body"], [],{"pos":{"x":0,"y":-0.035,"z":-0.06}}],
+         ["G_md_series_body_handle_R", ["md_series_body"], [],{"pos":{"x":0,"y":-0.035,"z":-0.06}}],
+    ],
+},
+"G_md_series_trim_handle": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Trim With Cab Handles",
+        "value":430,
+    },
+    "slotType" : "md_series_trim",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["md_series_trim_body", ["md_series_body"]],
+         ["md_series_trim_fender_R", ["md_series_fender_R"]],
+         ["md_series_trim_fender_L", ["md_series_fender_L"]],
+         ["md_series_trim_door_R", ["md_series_door_FR"]],
+         ["md_series_trim_door_L", ["md_series_door_FL"]],
+         ["G_md_series_body_handle_L", ["md_series_body"], [],{"pos":{"x":0,"y":-0.035,"z":-0.06}}],
+         ["G_md_series_body_handle_R", ["md_series_body"], [],{"pos":{"x":0,"y":-0.035,"z":-0.06}}],
+    ],
+},
+"G_md_series_body_handle_ext": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Cab Handles",
+        "value":300,
+    },
+    "slotType" : "md_series_trim_ext",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_body_handle_L", ["md_series_body"], [],{"pos":{"x":0,"y":0.578,"z":-0.06}}],
+         ["G_md_series_body_handle_R", ["md_series_body"], [],{"pos":{"x":0,"y":0.578,"z":-0.06}}],
+    ],
+},
+"G_md_series_trim_ext_handle": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Trim With Cab Handles",
+        "value":440,
+    },
+    "slotType" : "md_series_trim_ext",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["md_series_trim_body", ["md_series_body"],[]{"pos":{"x":0,"y":0.613,"z":0}}],
+         ["md_series_trim_fender_R", ["md_series_fender_R"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["md_series_trim_fender_L", ["md_series_fender_L"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["md_series_trim_door_R", ["md_series_door_FR"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["md_series_trim_door_L", ["md_series_door_FL"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["md_series_trim_door_RR", ["md_series_door_RR"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["md_series_trim_door_RL", ["md_series_door_RL"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_md_series_body_handle_L", ["md_series_body"], [],{"pos":{"x":0,"y":0.578,"z":-0.06}}],
+         ["G_md_series_body_handle_R", ["md_series_body"], [],{"pos":{"x":0,"y":0.578,"z":-0.06}}],
+    ],
+},
+"G_md_series_body_handle_crew": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Cab Handles",
+        "value":300,
+    },
+    "slotType" : "md_series_trim_crew",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_md_series_body_handle_L", ["md_series_body"], [],{"pos":{"x":0,"y":0.865,"z":-0.06}}],
+         ["G_md_series_body_handle_R", ["md_series_body"], [],{"pos":{"x":0,"y":0.865,"z":-0.06}}],
+    ],
+},
+"G_md_series_trim_crew_handle": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Trim With Cab Handles",
+        "value":450,
+    },
+    "slotType" : "md_series_trim_crew",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["md_series_trim_body", ["md_series_body"],[]{"pos":{"x":0,"y":0.8987,"z":0}}],
+         ["md_series_trim_fender_R", ["md_series_fender_R"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["md_series_trim_fender_L", ["md_series_fender_L"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["md_series_trim_door_R", ["md_series_door_FR"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["md_series_trim_door_L", ["md_series_door_FL"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["md_series_trim_door_RR_crew", ["md_series_door_RR"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["md_series_trim_door_RL_crew", ["md_series_door_RL"],[]{"pos":{"x":0,"y":0,"z":0}}],
+         ["G_md_series_body_handle_L", ["md_series_body"], [],{"pos":{"x":0,"y":0.865,"z":-0.06}}],
+         ["G_md_series_body_handle_R", ["md_series_body"], [],{"pos":{"x":0,"y":0.865,"z":-0.06}}],
+    ],
+},
+}

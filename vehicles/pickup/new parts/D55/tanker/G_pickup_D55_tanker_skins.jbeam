@@ -1,0 +1,20 @@
+{
+"tankerupfit_skin_twotone": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Two Tone Paint",
+        "value":2200
+    },
+    "slotType" : "skin_md_series_tanker",
+    "skinName" : "twotone"
+},
+"tankerupfit_skin_spearleaf": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Spearleaf Livery",
+        "value":2200
+    },
+    "slotType" : "skin_md_series_tanker",
+    "skinName" : "spearleaf"
+}
+}

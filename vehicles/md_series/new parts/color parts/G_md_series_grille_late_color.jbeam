@@ -1,0 +1,40 @@
+{
+"G_md_series_grille_late_color_chrome": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Chrome Grille",
+        "value":0,
+    },
+    "slotType" : "md_series_grille_late_color",
+    "flexbodies": [
+       ["mesh", "[group]:", "nonFlexMaterials"],
+       ["md_series_grille_late", ["md_series_grille"], [],{"materialOverride":[["md_series_main","md_series_main"]]}],
+       ["G_md_series_grille_late_color", ["md_series_grille"], [],{"materialOverride":[["md_series_main","us_semi_common_chrome"]]}],
+   ],
+},
+"G_md_series_grille_late_color_black": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Black Grille",
+        "value":0,
+    },
+    "slotType" : "md_series_grille_late_color",
+    "flexbodies": [
+       ["mesh", "[group]:", "nonFlexMaterials"],
+       ["md_series_grille_late", ["md_series_grille"], [],{"materialOverride":[["md_series_main","md_series_main_black"]]}],
+   ],
+},
+"G_md_series_grille_late_color_black_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Matte Black Grille",
+        "value":0,
+    },
+    "slotType" : "md_series_grille_late_color",
+    "flexbodies": [
+       ["mesh", "[group]:", "nonFlexMaterials"],
+       ["md_series_grille_late", ["md_series_grille"], [],{"materialOverride":[["md_series_main","md_series_main_black"]]}],
+       ["G_md_series_grille_late_color", ["md_series_grille"], [],{"materialOverride":[["md_series_main","us_semi_common_black"]]}],
+   ],
+},
+}

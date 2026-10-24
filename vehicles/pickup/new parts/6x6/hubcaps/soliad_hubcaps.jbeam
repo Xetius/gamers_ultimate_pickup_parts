@@ -1,0 +1,70 @@
+{
+"soliad_hubcap_01a_15_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Soliad Storm Rear Rear Hubcaps",
+        "value":25,
+    },
+    "slotType" : "hubcap_RR_6x6_15_alt",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //hubcaps
+         ["soliad_hubcap_01a_15", ["hubcap_RRR"], [], {"pos":{"x":-0.634, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["soliad_hubcap_01a_15", ["hubcap_RRL"], [], {"pos":{"x": 0.634, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            //hubcap options
+            {"enableHubcaps":true},
+            {"hubcapSelfCollision":true},
+            {"hubcapCollision":true},
+            {"enableExtraHubcapBeams":false},
+            {"hubcapOffset":0.005},
+            {"hubcapWidth":0.06},
+            {"hubcapRadius":0.2},
+            {"hubcapBeamSpring":251000, "hubcapBeamDamp":11},
+            {"hubcapBeamDeform":3500, "hubcapBeamStrength":14000},
+            {"hubcapAttachBeamSpring":251000, "hubcapAttachBeamDamp":10},
+            {"hubcapAttachBeamDeform":1600, "hubcapAttachBeamStrength":2000},
+            {"hubcapSupportBeamDeform":3500, "hubcapSupportBeamStrength":5500},
+            {"hubcapNodeWeight":0.16},
+            {"hubcapCenterNodeWeight":0.16},
+            {"hubcapNodeMaterial":"|NM_METAL"},
+            {"hubcapFrictionCoef":0.7},
+    ],
+},
+"soliad_hubcap_02a_15_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Soliad Astro Rear Rear Hubcaps",
+        "value":50,
+    },
+    "slotType" : "hubcap_RR_6x6_15_alt",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //hubcaps
+         ["soliad_hubcap_02a_15", ["hubcap_RRR"], [], {"pos":{"x":-0.634, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["soliad_hubcap_02a_15", ["hubcap_RRL"], [], {"pos":{"x": 0.634, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            //hubcap options
+            {"enableHubcaps":true},
+            {"hubcapSelfCollision":true},
+            {"hubcapCollision":true},
+            {"enableExtraHubcapBeams":false},
+            {"hubcapOffset":0.005},
+            {"hubcapWidth":0.06},
+            {"hubcapRadius":0.2},
+            {"hubcapBeamSpring":251000, "hubcapBeamDamp":11},
+            {"hubcapBeamDeform":3500, "hubcapBeamStrength":14000},
+            {"hubcapAttachBeamSpring":251000, "hubcapAttachBeamDamp":10},
+            {"hubcapAttachBeamDeform":1600, "hubcapAttachBeamStrength":2000},
+            {"hubcapSupportBeamDeform":3500, "hubcapSupportBeamStrength":5500},
+            {"hubcapNodeWeight":0.16},
+            {"hubcapCenterNodeWeight":0.16},
+            {"hubcapNodeMaterial":"|NM_METAL"},
+            {"hubcapFrictionCoef":0.7},
+    ],
+},
+}

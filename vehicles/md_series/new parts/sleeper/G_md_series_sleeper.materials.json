@@ -1,0 +1,366 @@
+{
+  "G_md_series_sleeper_longnose_interior": {
+    "name": "G_md_series_sleeper_longnose_interior",
+    "mapTo": "G_md_series_sleeper_longnose_interior",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/us_semi/longnose_interior_ao.data.png",
+        "baseColorMap": "/vehicles/us_semi/longnose_interior_b.color.png",
+        "clearCoatRoughnessFactor": 0,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/us_semi/longnose_interior_m.data.png",
+        "normalMap": "/vehicles/us_semi/longnose_interior_nm.normal.png",
+        "opacityFactor": 0,
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/us_semi/longnose_interior_r.data.png"
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      }
+    ],
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "G_md_series_sleeper_longnose_main": {
+    "name": "G_md_series_sleeper_longnose_main",
+    "mapTo": "G_md_series_sleeper_longnose_main",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/us_semi/longnose_main_ao.data.png",
+        "baseColorMap": "/vehicles/us_semi/longnose_main_b.color.png",
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/us_semi/longnose_main_m.data.png",
+        "normalMap": "vehicles/us_semi/longnose_main_nm.normal.png",
+        "roughnessMap": "/vehicles/us_semi/longnose_main_r.data.png"
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/us_semi/longnose_main_ao.data.png",
+        "clearCoatFactor": 1,
+        "clearCoatMap": "/vehicles/us_semi/longnose_main_cc.data.png",
+        "colorPaletteMap": "/vehicles/us_semi/longnose_main_c.data.png",
+        "instanceDiffuse": true,
+        "metallicFactor": 1,
+        "normalMap": "/vehicles/us_semi/longnose_main_nm.normal.png",
+        "opacityMap": "/vehicles/us_semi/longnose_main_c.data.png"
+      },
+      {
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null
+      },
+      {
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null
+      }
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "G_md_series_sleeper_cabover_main": {
+    "name": "G_md_series_sleeper_cabover_main",
+    "mapTo": "G_md_series_sleeper_cabover_main",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/us_semi/cabover_main_ao.data.png",
+        "baseColorMap": "/vehicles/us_semi/cabover_main_b.color.png",
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/us_semi/cabover_main_m.data.png",
+        "normalMap": "vehicles/us_semi/cabover_main_nm.normal.png",
+        "roughnessMap": "/vehicles/us_semi/cabover_main_r.data.png"
+      },
+      {
+        "ambientOcclusionMap": "/vehicles/us_semi/cabover_main_ao.data.png",
+        "clearCoatFactor": 1,
+        "clearCoatMap": "/vehicles/us_semi/cabover_main_cc.data.png",
+        "colorPaletteMap": "/vehicles/us_semi/cabover_main_c.data.png",
+        "instanceDiffuse": true,
+        "metallicFactor": 1,
+        "normalMap": "/vehicles/us_semi/cabover_main_nm.normal.png",
+        "opacityMap": "/vehicles/us_semi/cabover_main_c.data.png"
+      },
+      {
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null
+      },
+      {
+        "clearCoatFactor": null,
+        "instanceDiffuse": null,
+        "metallicFactor": null
+      }
+    ],
+    "activeLayers": 2,
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "G_md_series_us_semi_badges": {
+    "name": "G_md_series_us_semi_badges",
+    "mapTo": "G_md_series_us_semi_badges",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/us_semi/us_semi_badges_ao.data.png",
+        "baseColorMap": "/vehicles/us_semi/us_semi_badges_b.color.png",
+        "clearCoatRoughnessFactor": 0,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/us_semi/us_semi_badges_m.data.png",
+        "normalMap": "/vehicles/us_semi/us_semi_badges_nm.normal.png",
+        "opacityFactor": 0,
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/us_semi/us_semi_badges_r.data.png"
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      }
+    ],
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "G_md_series_sleeper_longnose_interior.G_md_series_skin_sleeper_longnose_interior.black": {
+    "name": "G_md_series_sleeper_longnose_interior.G_md_series_skin_sleeper_longnose_interior.black",
+    "mapTo": "G_md_series_sleeper_longnose_interior.G_md_series_skin_sleeper_longnose_interior.black",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/us_semi/longnose_interior_ao.data.png",
+        "baseColorMap": "/vehicles/us_semi/longnose_interior_black_b.color.png",
+        "clearCoatRoughnessFactor": 0,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/us_semi/longnose_interior_m.data.png",
+        "normalMap": "/vehicles/us_semi/longnose_interior_nm.normal.png",
+        "opacityFactor": 0,
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/us_semi/longnose_interior_r.data.png"
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      }
+    ],
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "G_md_series_sleeper_longnose_interior.G_md_series_skin_sleeper_longnose_interior.blue": {
+    "name": "G_md_series_sleeper_longnose_interior.G_md_series_skin_sleeper_longnose_interior.blue",
+    "mapTo": "G_md_series_sleeper_longnose_interior.G_md_series_skin_sleeper_longnose_interior.blue",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/us_semi/longnose_interior_ao.data.png",
+        "baseColorMap": "/vehicles/us_semi/longnose_interior_blue_b.color.png",
+        "clearCoatRoughnessFactor": 0,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/us_semi/longnose_interior_m.data.png",
+        "normalMap": "/vehicles/us_semi/longnose_interior_nm.normal.png",
+        "opacityFactor": 0,
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/us_semi/longnose_interior_r.data.png"
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      }
+    ],
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "G_md_series_sleeper_longnose_interior.G_md_series_skin_sleeper_longnose_interior.brown": {
+    "name": "G_md_series_sleeper_longnose_interior.G_md_series_skin_sleeper_longnose_interior.brown",
+    "mapTo": "G_md_series_sleeper_longnose_interior.G_md_series_skin_sleeper_longnose_interior.brown",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/us_semi/longnose_interior_ao.data.png",
+        "baseColorMap": "/vehicles/us_semi/longnose_interior_brown_b.color.png",
+        "clearCoatRoughnessFactor": 0,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/us_semi/longnose_interior_m.data.png",
+        "normalMap": "/vehicles/us_semi/longnose_interior_nm.normal.png",
+        "opacityFactor": 0,
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/us_semi/longnose_interior_r.data.png"
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      }
+    ],
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "G_md_series_sleeper_longnose_interior.G_md_series_skin_sleeper_longnose_interior.red": {
+    "name": "G_md_series_sleeper_longnose_interior.G_md_series_skin_sleeper_longnose_interior.red",
+    "mapTo": "G_md_series_sleeper_longnose_interior.G_md_series_skin_sleeper_longnose_interior.red",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/us_semi/longnose_interior_ao.data.png",
+        "baseColorMap": "/vehicles/us_semi/longnose_interior_red_b.color.png",
+        "clearCoatRoughnessFactor": 0,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/us_semi/longnose_interior_m.data.png",
+        "normalMap": "/vehicles/us_semi/longnose_interior_nm.normal.png",
+        "opacityFactor": 0,
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/us_semi/longnose_interior_r.data.png"
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      }
+    ],
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "G_md_series_sleeper_longnose_interior.G_md_series_skin_sleeper_longnose_interior.tan": {
+    "name": "G_md_series_sleeper_longnose_interior.G_md_series_skin_sleeper_longnose_interior.tan",
+    "mapTo": "G_md_series_sleeper_longnose_interior.G_md_series_skin_sleeper_longnose_interior.tan",
+    "class": "Material",
+    "Stages": [
+      {
+        "ambientOcclusionMap": "/vehicles/us_semi/longnose_interior_ao.data.png",
+        "baseColorMap": "/vehicles/us_semi/longnose_interior_tan_b.color.png",
+        "clearCoatRoughnessFactor": 0,
+        "metallicFactor": 1,
+        "metallicMap": "/vehicles/us_semi/longnose_interior_m.data.png",
+        "normalMap": "/vehicles/us_semi/longnose_interior_nm.normal.png",
+        "opacityFactor": 0,
+        "pixelSpecular": true,
+        "roughnessMap": "/vehicles/us_semi/longnose_interior_r.data.png"
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      },
+      {
+        "clearCoatRoughnessFactor": null,
+        "metallicFactor": null,
+        "opacityFactor": null,
+        "pixelSpecular": null
+      }
+    ],
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+}

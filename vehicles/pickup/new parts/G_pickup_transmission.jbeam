@@ -1,0 +1,976 @@
+{
+"G_pickup_transmission_3A": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"3-Speed Early Automatic Transmission",
+        "value":720,
+    },
+    "slotType" : "pickup_transmission",
+    "slots": [
+        ["type", "default", "description"],
+        ["pickup_converter","pickup_converter","Torque Converter", {"coreSlot":true}],
+        ["pickup_transfer_case","pickup_transfer_case_4WD","Transfer Case", {"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torqueConverter", "torqueConverter", "mainEngine", 1],
+        ["automaticGearbox", "gearbox", "torqueConverter", 1],
+    ],
+    "gearbox": {
+        "uiName":"Gearbox",
+        "gearRatios":[-2.00, 0, 2.45, 1.42, 0.98],
+        "parkLockTorque":2500,
+        "oneWayViscousCoef":60,
+        "friction": 1.66,
+        "dynamicFriction": 0.00168,
+        "torqueLossCoef": 0.017,
+        "gearboxNode:":"tra1",
+    },
+    "vehicleController": {
+        "automaticModes":"PRND21",
+        "calculateOptimalLoadShiftPoints": true,
+        "transmissionGearChangeDelay":2.1,
+        "gearboxDecisionSmoothingUp":2,
+        "gearboxDecisionSmoothingDown":2,
+        "aggressionSmoothingUp":1,
+        "aggressionSmoothingDown":0.5,
+        "aggressionHoldOffThrottleDelay":1.75,
+        "lowShiftDownRPM":1000,
+        "lowShiftUpRPM":1800,
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["gavril_v8_pickup_transmission", ["pickup_engine","pickup_transmission"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         //--4 Speed Auto-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":32.9},
+         {"group":"pickup_transmission"},
+         ["tra1", 0.0, -0.41, 0.46],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":18800940,"beamDamp":470},
+          {"beamDeform":175000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+
+"G_pickup_transmission_4M": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"4-Speed Early Manual Transmission",
+        "value":280,
+    },
+    "slotType" : "pickup_transmission",
+    "slots": [
+        ["type", "default","description"],
+        ["pickup_flywheel","pickup_flywheel","Flywheel", {"coreSlot":true}],
+        ["pickup_transfer_case","pickup_transfer_case_4WD","Transfer Case", {"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "uiName":"Gearbox",
+        "gearRatios":[-3.39, 0, 3.9, 2.22, 1.4, 0.76],
+        "friction": 1.38,
+        "dynamicFriction": 0.00141,
+        "torqueLossCoef": 0.0155,
+        "gearboxNode:":"tra1",
+
+        "gearWhineCoefsInput":  [0.60, 0.00, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12],
+        "gearWhineCoefsOutput": [0.00, 0.00, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24],
+        "gearWhineInputEvent": "event:>Vehicle>Transmission>helical_01>twine_in_tuned",
+        "gearWhineOutputEvent": "event:>Vehicle>Transmission>helical_01>twine_out_tuned",
+
+        "forwardInputPitchCoef":0.95
+        "forwardOutputPitchCoef":0.95
+        //"reverseInputPitchCoef":0.7
+        //"reverseOutputPitchCoef":0.7
+
+        //"gearWhineInputPitchCoefSmoothing":50
+        //"gearWhineOutputPitchCoefSmoothing":50
+        //"gearWhineInputVolumeCoefSmoothing":10
+        //"gearWhineOutputVolumeCoefSmoothing":10
+
+        //"gearWhineFixedCoefOutput": 0.7
+        //"gearWhineFixedCoefInput": 0.4
+    },
+    "clutch": {
+        "uiName":"Clutch",
+    },
+    "vehicleController": {
+        "calculateOptimalLoadShiftPoints": true,
+        "shiftDownRPMOffsetCoef":1.1,
+        "lowShiftDownRPM":[0,0,0,1300,1500,1400,1300,1100],
+        "lowShiftUpRPM":[0,0,2800,2600,2500,2300,2000],
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["gavril_v8_pickup_transmission", ["pickup_engine","pickup_transmission"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         //--5 Speed Manual-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":32.9},
+         {"group":"pickup_transmission"},
+         ["tra1", 0.0, -0.41, 0.46],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":18800940,"beamDamp":470},
+          {"beamDeform":175000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_transmission_8A": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"8-Speed Late Automatic Transmission",
+        "value":3200,
+    },
+    "slotType" : "pickup_transmission",
+    "slots": [
+        ["type", "default", "description"],
+        ["pickup_converter","pickup_converter_heavy","Torque Converter", {"coreSlot":true}],
+        ["pickup_transfer_case","pickup_transfer_case_4WD","Transfer Case", {"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torqueConverter", "torqueConverter", "mainEngine", 1],
+        ["automaticGearbox", "gearbox", "torqueConverter", 1],
+    ],
+    "gearbox": {
+        "uiName":"Gearbox",
+        //premultiplied to account for 3.55 differential ratio instead of 3.15
+        //source ratios: [-3.4, 0, 4.17, 2.34, 1.52, 1.14, 0.87, 0.69]
+        //"gearRatios":[-3.35, 0, 4.20, 2.68, 2.05, 1.7, 1.43, 1.25, 1.12, 1.0],
+        "gearRatios":[-3.35, 0, 4.20, 2.58, 1.85, 1.45, 1.2, 1.02, 0.9, 0.7],
+        "parkLockTorque":2500,
+        "oneWayViscousCoef":60,
+        "friction": 1.68,
+        "dynamicFriction": 0.0017,
+        "torqueLossCoef": 0.017,
+        "gearboxNode:":"tra1",
+    },
+    "vehicleController": {
+        "automaticModes":"PRND21",
+        "transmissionGearChangeDelay":1.3,
+        "calculateOptimalLoadShiftPoints": true,
+        "aggressionSmoothingUp":1,
+        "aggressionSmoothingDown":0.5,
+        "aggressionHoldOffThrottleDelay":1.75,
+        "gearboxDecisionSmoothingUp":2,
+        "gearboxDecisionSmoothingDown":2,
+        "lowShiftDownRPM":1000,
+        "lowShiftUpRPM":[0,0,1700,1500,1500,1500,1500],
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["gavril_v8_pickup_transmission", ["pickup_engine","pickup_transmission"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         //--6 Speed Auto-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":37.6},
+         {"group":"pickup_transmission"},
+         ["tra1", 0.0, -0.41, 0.46],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":18800940,"beamDamp":470},
+          {"beamDeform":175000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+
+"G_pickup_transmission_8M_heavy": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"8-Speed Heavy Duty Manual Transmission",
+        "value":980,
+    },
+    "slotType" : "pickup_transmission",
+    "slots": [
+        ["type", "default","description"],
+        ["pickup_flywheel","pickup_flywheel","Flywheel", {"coreSlot":true}],
+        ["pickup_transfer_case","pickup_transfer_case_4WD","Transfer Case", {"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "uiName":"Gearbox",
+        "gearRatios":[-4.9, -7.4, 0, 6.0, 4.2, 3.0, 2.35, 1.85, 1.4, 1.1, 0.84],
+        "friction": 1.38,
+        "dynamicFriction": 0.00141,
+        "torqueLossCoef": 0.0155,
+        "gearboxNode:":"tra1",
+
+        "gearWhineCoefsInput":  [0.60, 0.00, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12],
+        "gearWhineCoefsOutput": [0.00, 0.00, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24],
+        "gearWhineInputEvent": "event:>Vehicle>Transmission>helical_01>twine_in_tuned",
+        "gearWhineOutputEvent": "event:>Vehicle>Transmission>helical_01>twine_out_tuned",
+
+        "forwardInputPitchCoef":0.95
+        "forwardOutputPitchCoef":0.95
+        //"reverseInputPitchCoef":0.7
+        //"reverseOutputPitchCoef":0.7
+
+        //"gearWhineInputPitchCoefSmoothing":50
+        //"gearWhineOutputPitchCoefSmoothing":50
+        //"gearWhineInputVolumeCoefSmoothing":10
+        //"gearWhineOutputVolumeCoefSmoothing":10
+
+        //"gearWhineFixedCoefOutput": 0.7
+        //"gearWhineFixedCoefInput": 0.4
+    },
+    "clutch": {
+        "uiName":"Clutch",
+    },
+    "vehicleController": {
+        "calculateOptimalLoadShiftPoints": true,
+        "shiftDownRPMOffsetCoef":1.1,
+        "lowShiftDownRPM":[0,0,0,1300,1500,1400,1300,1100],
+        "lowShiftUpRPM":[0,0,2800,2600,2500,2300,2000],
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["gavril_v8_pickup_transmission", ["pickup_engine","pickup_transmission"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         //--5 Speed Manual-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":32.9},
+         {"group":"pickup_transmission"},
+         ["tra1", 0.0, -0.41, 0.46],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":18800940,"beamDamp":470},
+          {"beamDeform":175000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+
+"G_pickup_transmission_8M_heavy_Diesel": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Diesel 8-Speed Heavy Duty Manual Transmission",
+        "value":980,
+    },
+    "slotType" : "pickup_transmission",
+    "slots": [
+        ["type", "default","description"],
+        ["pickup_flywheel","pickup_flywheel","Flywheel", {"coreSlot":true}],
+        ["pickup_transfer_case","pickup_transfer_case_4WD","Transfer Case", {"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "uiName":"Gearbox",
+        "gearRatios":[-3.8, -5.9, 0, 5.0, 3.1, 2.3, 1.85, 1.52, 1.3, 1.07, 0.83],
+        "friction": 1.38,
+        "dynamicFriction": 0.00141,
+        "torqueLossCoef": 0.0155,
+        "gearboxNode:":"tra1",
+
+        "gearWhineCoefsInput":  [0.60, 0.00, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12],
+        "gearWhineCoefsOutput": [0.00, 0.00, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24],
+        "gearWhineInputEvent": "event:>Vehicle>Transmission>helical_01>twine_in_tuned",
+        "gearWhineOutputEvent": "event:>Vehicle>Transmission>helical_01>twine_out_tuned",
+
+        "forwardInputPitchCoef":0.95
+        "forwardOutputPitchCoef":0.95
+        //"reverseInputPitchCoef":0.7
+        //"reverseOutputPitchCoef":0.7
+
+        //"gearWhineInputPitchCoefSmoothing":50
+        //"gearWhineOutputPitchCoefSmoothing":50
+        //"gearWhineInputVolumeCoefSmoothing":10
+        //"gearWhineOutputVolumeCoefSmoothing":10
+
+        //"gearWhineFixedCoefOutput": 0.7
+        //"gearWhineFixedCoefInput": 0.4
+    },
+    "clutch": {
+        "uiName":"Clutch",
+    },
+    "vehicleController": {
+        "calculateOptimalLoadShiftPoints": true,
+        "shiftDownRPMOffsetCoef":1.1,
+        "lowShiftDownRPM":[0,0,0,1300,1500,1400,1300,1100],
+        "lowShiftUpRPM":[0,0,2800,2600,2500,2300,2000],
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["gavril_v8_pickup_transmission", ["pickup_engine","pickup_transmission"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         //--5 Speed Manual-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":32.9},
+         {"group":"pickup_transmission"},
+         ["tra1", 0.0, -0.41, 0.46],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":18800940,"beamDamp":470},
+          {"beamDeform":175000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"G_pickup_transfer_case_RWD_rangebox": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"RWD Transfer Case With Rangebox",
+        "value":1700,
+    },
+    "slotType" : "pickup_transfer_case",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["rangeBox", "rangebox", "gearbox", 1, {"uiSimpleModeControl":false, "gearRatios":[1,4], "uiName":"Rangebox"}],
+        //straight through shaft
+        ["shaft", "transfercase", "rangebox", 1, {"friction":0.32, "dynamicFriction":0.000354, "uiName":"Rear Output Shaft"}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["driveModes", {"name":"transfercaseControl"}]
+        ["4wd", {"driveModesTransfercaseNames":["transfercaseControl"], "driveModesRangeNames":["transfercaseControl"]}]
+    ],
+
+    "transfercaseControl":{
+        "uiName": "Transfercase"
+        "quickAccessTitle":"Transfercase"
+        "quickAccessIcon":"radial_highrangebox"
+        "quickAccessLevel":"/powertrain/"
+        "enabledModes":["2hi", "2lo"]
+        "defaultMode": "2hi"
+        "modes": {
+            "2hi": {
+                "name": "2WD High Gear",
+                "order": 10,
+                "settings": [
+                    ["type"]
+                    ["powertrainDeviceMode", {"deviceName":"rangebox", "mode":"high"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFR", "mode":"disconnected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFL", "mode":"disconnected"}]
+                    ["electricsValue", {"electricsName":"transfercase_state", "value":1}]
+                    ["simpleControlButton", {"buttonId":"transfercase", "icon":"powertrain_transfercase_high-2", "uiName":"Transfercase"}]
+                    ["quickAccess", {"icon":"powertrain_transfercase_high-2"}]
+                ],
+            },
+            "2lo": {
+                "name": "2WD Low Gear",
+                "order": 30,
+                "settings": [
+                    ["type"]
+                    ["powertrainDeviceMode", {"deviceName":"rangebox", "mode":"low"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFR", "mode":"disconnected"}]
+                    ["powertrainDeviceMode", {"deviceName":"wheelaxleFL", "mode":"disconnected"}]
+                    ["electricsValue", {"electricsName":"transfercase_state", "value":-1}]
+                    ["simpleControlButton", {"buttonId":"transfercase", "icon":"powertrain_transfercase_low-2", "uiName":"Transfercase"}]
+                    ["quickAccess", {"icon":"powertrain_transfercase_low-2"}]
+                ],
+            },
+        }
+    }
+    "gearbox": {
+        "uiName":"Gearbox",
+        //added stabilization for one way clutch with ultra low range
+        "oneWayViscousCoef":20,
+        "oneWayViscousSmoothing":100,
+    },
+    "torqueConverter": {
+        "uiName":"Torque Converter",
+        //added stabilization for torque converter with ultra low range
+        "kFactorSmoothing":250,
+    },
+},
+"G_pickup_transfer_case_FWD": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"FWD Transfer Case",
+        "value":650,
+    },
+    "slotType" : "pickup_transfer_case",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //welded center diff
+        ["differential", "transfercase_fwd", "gearbox", 1, {"diffType":"locked", "lockTorque":10000, "uiName":"Rear Differential","defaultVirtualInertia":0.5}],
+        //non disconnecting front shaft
+        ["shaft", "transfercase_F", "transfercase_fwd", 2, {"friction":0.44, "dynamicFriction":0.00048, "uiName":"Front Output Shaft"}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["pickup_transfer_case", ["pickup_transmission","pickup_engine"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":18},
+         {"group":"pickup_transmission"},
+         ["tra2", -0.12, -0.78, 0.425],
+         ["tra3", 0.18, -0.78, 0.425],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":12600840,"beamDamp":390},
+          {"beamDeform":99750,"beamStrength":"FLT_MAX"},
+          ["tra2","tra1"],
+
+          ["tra2","e1r"],
+          ["tra2","e1l"],
+          ["tra2","e3r"],
+          ["tra2","e3l"],
+
+          ["tra3","e1r"],
+          ["tra3","e1l"],
+          ["tra3","e3r"],
+          ["tra3","e3l"],
+
+          ["tra3","tra2"],
+          ["tra3","tra1"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"pickup_shifter_M_4": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"4-Speed Manual Shifter",
+        "value":50,
+    },
+    "slotType" : "pickup_shifter",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //cover up the auto shifter numbering
+         ["pickup_gauges_cover_M", ["pickup_body", "pickup_dash"]],
+         ["pickup_shifter_M_alt", ["pickup_floor","pickup_shifterboot_M","pickup_shifterknob_M","pickup_shifterbase_M"]],
+    ],
+    "props": [
+        ["func",   "mesh",             "idRef:","idX:","idY:", "baseRotation",         "rotation",            "translation",         "min", "max", "offset", "multiplier"],
+        //shifter
+        ["clutch", "pickup_pedal_clutch"   , "b1l","b1r","b5l",    {"x":154, "y":180, "z":0},   {"x":-25, "y":0, "z":0},     {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+    ],
+    "controller": [
+        ["fileName"],
+        ["propAnimation/hPattern", {"name":"hPattern"}],
+
+    ]
+    "hPattern": {
+        "gearCoordinates": [
+            ["gearIndex",   "x",      "y"]
+            [-1,            0.5,        1]
+            [0,             0.0,        0]
+            [1,            -0.5,        1]
+            [2,            -0.5,       -1]
+            [3,             0.0,        1]
+            [4,             0.0,       -1]
+        ]
+        "shiftSoundNode:":["sh_b3"]
+        "shiftSoundEventHPatternGearIn": "event:>Vehicle>Interior>Gearshift>manual_modern_10_in",
+        "shiftSoundEventHPatternGearOut": "event:>Vehicle>Interior>Gearshift>manual_modern_10_out",
+        "shiftSoundVolumeHPatternGearIn": 0.5,
+        "shiftSoundVolumeHPatternGearOut": 0.5,
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"collision":true},
+         {"selfCollision":false},
+         //--SHIFTER---  has to be jbeamed to allow for realistic movement
+         {"group":"pickup_shifterbase_M"},
+         {"nodeWeight":0.45}
+         ["sh_b1l",  0.076, -0.870, 0.688],
+         ["sh_b1r", -0.076, -0.870, 0.688],
+         ["sh_b2l",  0.076, -0.702, 0.632],
+         ["sh_b2r", -0.076, -0.702, 0.632],
+
+         ["sh_b3", 0.00, -0.80, 0.607],
+         {"selfCollision":true},
+         {"group":["pickup_shifterboot_M","pickup_shifterknob_M"]},
+         {"nodeWeight":1.5}
+         ["sh_l3", 0.00, -0.665, 0.86],
+
+         {"selfCollision":false},
+         {"nodeWeight":0.30}
+         {"group":["pickup_shifterboot_M","pickup_shifterknob_M"]},
+         ["sh_l1l",  0.032, -0.799 0.749],
+         ["sh_l1r", -0.032, -0.799 0.749],
+         ["sh_l2l",  0.032, -0.723, 0.723],
+         ["sh_l2r", -0.032, -0.723, 0.723],
+         {"selfCollision":false},
+         {"collision":true},
+         {"group":""},
+    ],
+    "beams":[
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //main shape
+        {"beamSpring":401000,"beamDamp":55},
+        {"beamDeform":259000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":1.1},
+        ["sh_b1l", "sh_b1r"],
+        ["sh_b1l", "sh_b2l"],
+        ["sh_b1l", "sh_b2r"],
+        ["sh_b1r", "sh_b2l"],
+        ["sh_b1r", "sh_b2r"],
+        ["sh_b2l", "sh_b2r"],
+
+        ["sh_b1l", "sh_b3"],
+        ["sh_b1r", "sh_b3"],
+        ["sh_b2l", "sh_b3"],
+        ["sh_b2r", "sh_b3"],
+
+        //lever
+        {"beamSpring":121000,"beamDamp":35},
+        ["sh_l3", "sh_l1l"],
+        ["sh_l3", "sh_l1r"],
+        ["sh_l3", "sh_l2l"],
+        ["sh_l3", "sh_l2r"],
+
+        ["sh_l1l", "sh_l1r"],
+        ["sh_l1l", "sh_l2l"],
+        ["sh_l1l", "sh_l2r"],
+
+        ["sh_l1r", "sh_l2l"],
+        ["sh_l1r", "sh_l2r"],
+        ["sh_l2l", "sh_l2r"],
+        //hinge
+        {"beamSpring":121000,"beamDamp":25},
+        ["sh_b3", "sh_l3"],
+        ["sh_b3", "sh_l1l"],
+        ["sh_b3", "sh_l1r"],
+        ["sh_b3", "sh_l2l"],
+        ["sh_b3", "sh_l2r"],
+
+        //stabilize the shifter
+        {"beamSpring":0,"beamDamp":175},
+        ["sh_b1l", "sh_l3"],
+        ["sh_b1r", "sh_l3"],
+        ["sh_b2l", "sh_l3"],
+        ["sh_b2r", "sh_l3"],
+        {"breakGroup":""},
+        //attach to body
+        {"beamSpring":300000,"beamDamp":70},
+        {"beamDeform":1400,"beamStrength":"FLT_MAX"},
+        ["sh_b1l", "b5r"],
+        ["sh_b1r", "b5r"],
+        ["sh_b2l", "b5r"],
+        ["sh_b2r", "b5r"],
+        ["sh_b3",  "b5r"],
+
+        ["sh_b1l", "b5l"],
+        ["sh_b1r", "b5l"],
+        ["sh_b2l", "b5l"],
+        ["sh_b2r", "b5l"],
+        ["sh_b3",  "b5l"],
+
+        ["sh_b1l", "dsh",{"beamDeform":12400}],
+        ["sh_b1r", "dsh",{"beamDeform":12400}],
+        ["sh_b2l", "dsh",{"beamDeform":12400}],
+        ["sh_b2r", "dsh",{"beamDeform":12400}],
+        ["sh_b3",  "dsh",{"beamDeform":12400}],
+
+        ["sh_b1l", "b1r"],
+        ["sh_b1r", "b1r"],
+        ["sh_b2l", "b1r"],
+        ["sh_b2r", "b1r"],
+        ["sh_b3",  "b1r"],
+
+        ["sh_b1l", "b1l"],
+        ["sh_b1r", "b1l"],
+        ["sh_b2l", "b1l"],
+        ["sh_b2r", "b1l"],
+        ["sh_b3",  "b1l"],
+        //support beams
+        {"beamType":"|SUPPORT","beamPrecompression":0.895,"beamLongBound":2},
+        {"beamSpring":201000,"beamDamp":50},
+        {"beamDeform":16000,"beamStrength":"FLT_MAX"},
+        ["sh_l1r", "sh_b2l"],
+        ["sh_l2r", "sh_b1l"],
+        ["sh_l2l", "sh_b1r"],
+        ["sh_l1l", "sh_b2r"],
+        {"beamPrecompression":0.905}
+        ["sh_l3", "sh_b1l"],
+        ["sh_l3", "sh_b1r"],
+        ["sh_l3", "sh_b2l"],
+        ["sh_l3", "sh_b2r"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "torsionHydros": [
+        ["id1:","id2:","id3:","id4:"],
+        {"spring":200, "damp":1, "deform":"FLT_MAX", "strength":1000},
+        ["sh_b2l","sh_b1l","sh_b1r","sh_l3",  {"inputSource":"hPatternAxisY","factor":-0.20}],
+        ["sh_b1r","sh_b1l","sh_b2l","sh_l3",  {"inputSource":"hPatternAxisX","factor":-0.15}],
+        ["sh_b1r","sh_b2r","sh_b2l","sh_l3",  {"inputSource":"hPatternAxisY","factor":0.20}],
+        ["sh_b2l","sh_b2r","sh_b1r","sh_l3",  {"inputSource":"hPatternAxisX","factor":0.15}],
+    ],
+    "torsionbars": [
+        ["id1:", "id2:", "id3:", "id4:"],
+        {"spring":100, "damp":0.2, "deform":30000, "strength":1000},
+        ["sh_b1r", "sh_b3", "sh_l3", "sh_l1r"],
+        ["sh_b2r", "sh_b3", "sh_l3", "sh_l2r"],
+        ["sh_b2l", "sh_b3", "sh_l3", "sh_l2l"],
+        ["sh_b1l", "sh_b3", "sh_l3", "sh_l1l"],
+
+    ],
+},
+"G_pickup_shifter_M_8": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"8-Speed Manual Shifter",
+        "value":50,
+    },
+    "slotType" : ["pickup_shifter", "G_pickup_D55_shifter", "pickup_facelift_shifter", "G_pickup_D55_facelift_shifter"],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //cover up the auto shifter numbering
+         ["pickup_gauges_cover_M", ["pickup_body", "pickup_dash"]],
+         ["pickup_shifter_M_alt", ["pickup_floor","pickup_shifterboot_M","pickup_shifterknob_M","pickup_shifterbase_M"]],
+    ],
+    "props": [
+        ["func",   "mesh",             "idRef:","idX:","idY:", "baseRotation",         "rotation",            "translation",         "min", "max", "offset", "multiplier"],
+        //shifter
+        ["clutch", "pickup_pedal_clutch"   , "b1l","b1r","b5l",    {"x":154, "y":180, "z":0},   {"x":-25, "y":0, "z":0},     {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1, {"baseTranslationGlobal":{"x":0.70967,"y":-0.926651,"z":0.891497}}],
+    ],
+    "controller": [
+        ["fileName"],
+        ["propAnimation/hPattern", {"name":"hPattern"}],
+
+    ]
+    "hPattern": {
+        "gearCoordinates": [
+            ["gearIndex",   "x",      "y"]
+            [-2,            1.0,       -1.0]
+            [-1,            1.0,       -0.5]
+            [0,             0.0,        0.0]
+            [1,            -0.8,        0.5]
+            [2,            -0.8,        1.0]
+            [3,            -0.8,       -0.5]
+            [4,            -0.8,       -1.0]
+            [5,             0.0,        0.5]
+            [6,             0.0,        1.0]
+            [7,             0.0,       -0.5]
+            [8,             0.0,       -1.0]
+        ]
+        "shiftSoundNode:":["sh_b3"]
+        "shiftSoundEventHPatternGearIn": "event:>Vehicle>Interior>Gearshift>manual_modern_10_in",
+        "shiftSoundEventHPatternGearOut": "event:>Vehicle>Interior>Gearshift>manual_modern_10_out",
+        "shiftSoundVolumeHPatternGearIn": 0.5,
+        "shiftSoundVolumeHPatternGearOut": 0.5,
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"collision":true},
+         {"selfCollision":false},
+         //--SHIFTER---  has to be jbeamed to allow for realistic movement
+         {"group":"pickup_shifterbase_M"},
+         {"nodeWeight":0.45}
+         ["sh_b1l",  0.076, -0.870, 0.688],
+         ["sh_b1r", -0.076, -0.870, 0.688],
+         ["sh_b2l",  0.076, -0.702, 0.632],
+         ["sh_b2r", -0.076, -0.702, 0.632],
+
+         ["sh_b3", 0.00, -0.80, 0.607],
+         {"selfCollision":true},
+         {"group":["pickup_shifterboot_M","pickup_shifterknob_M"]},
+         {"nodeWeight":1.5}
+         //replaced for less shitknob deformation
+         //["sh_l3", 0.00, -0.665, 0.86],
+         ["sh_l3", 0.00, -0.635, 0.92],
+
+         {"selfCollision":false},
+         {"nodeWeight":0.30}
+         {"group":["pickup_shifterboot_M","pickup_shifterknob_M"]},
+         ["sh_l1l",  0.032, -0.799 0.749],
+         ["sh_l1r", -0.032, -0.799 0.749],
+         ["sh_l2l",  0.032, -0.723, 0.723],
+         ["sh_l2r", -0.032, -0.723, 0.723],
+         {"selfCollision":false},
+         {"collision":true},
+         {"group":""},
+    ],
+    "beams":[
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //main shape
+        {"beamSpring":401000,"beamDamp":55},
+        {"beamDeform":259000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":1.1},
+        ["sh_b1l", "sh_b1r"],
+        ["sh_b1l", "sh_b2l"],
+        ["sh_b1l", "sh_b2r"],
+        ["sh_b1r", "sh_b2l"],
+        ["sh_b1r", "sh_b2r"],
+        ["sh_b2l", "sh_b2r"],
+
+        ["sh_b1l", "sh_b3"],
+        ["sh_b1r", "sh_b3"],
+        ["sh_b2l", "sh_b3"],
+        ["sh_b2r", "sh_b3"],
+
+        //lever
+        {"beamSpring":121000,"beamDamp":35},
+        ["sh_l3", "sh_l1l"],
+        ["sh_l3", "sh_l1r"],
+        ["sh_l3", "sh_l2l"],
+        ["sh_l3", "sh_l2r"],
+
+        ["sh_l1l", "sh_l1r"],
+        ["sh_l1l", "sh_l2l"],
+        ["sh_l1l", "sh_l2r"],
+
+        ["sh_l1r", "sh_l2l"],
+        ["sh_l1r", "sh_l2r"],
+        ["sh_l2l", "sh_l2r"],
+        //hinge
+        {"beamSpring":121000,"beamDamp":25},
+        ["sh_b3", "sh_l3"],
+        ["sh_b3", "sh_l1l"],
+        ["sh_b3", "sh_l1r"],
+        ["sh_b3", "sh_l2l"],
+        ["sh_b3", "sh_l2r"],
+
+        //stabilize the shifter
+        {"beamSpring":0,"beamDamp":175},
+        ["sh_b1l", "sh_l3"],
+        ["sh_b1r", "sh_l3"],
+        ["sh_b2l", "sh_l3"],
+        ["sh_b2r", "sh_l3"],
+        {"breakGroup":""},
+        //attach to body
+        {"beamSpring":300000,"beamDamp":70},
+        {"beamDeform":1400,"beamStrength":"FLT_MAX"},
+        ["sh_b1l", "b5r"],
+        ["sh_b1r", "b5r"],
+        ["sh_b2l", "b5r"],
+        ["sh_b2r", "b5r"],
+        ["sh_b3",  "b5r"],
+
+        ["sh_b1l", "b5l"],
+        ["sh_b1r", "b5l"],
+        ["sh_b2l", "b5l"],
+        ["sh_b2r", "b5l"],
+        ["sh_b3",  "b5l"],
+
+        ["sh_b1l", "dsh",{"beamDeform":12400}],
+        ["sh_b1r", "dsh",{"beamDeform":12400}],
+        ["sh_b2l", "dsh",{"beamDeform":12400}],
+        ["sh_b2r", "dsh",{"beamDeform":12400}],
+        ["sh_b3",  "dsh",{"beamDeform":12400}],
+
+        ["sh_b1l", "b1r"],
+        ["sh_b1r", "b1r"],
+        ["sh_b2l", "b1r"],
+        ["sh_b2r", "b1r"],
+        ["sh_b3",  "b1r"],
+
+        ["sh_b1l", "b1l"],
+        ["sh_b1r", "b1l"],
+        ["sh_b2l", "b1l"],
+        ["sh_b2r", "b1l"],
+        ["sh_b3",  "b1l"],
+        //support beams
+        {"beamType":"|SUPPORT","beamPrecompression":0.895,"beamLongBound":2},
+        {"beamSpring":201000,"beamDamp":50},
+        {"beamDeform":16000,"beamStrength":"FLT_MAX"},
+        ["sh_l1r", "sh_b2l"],
+        ["sh_l2r", "sh_b1l"],
+        ["sh_l2l", "sh_b1r"],
+        ["sh_l1l", "sh_b2r"],
+        {"beamPrecompression":0.905}
+        ["sh_l3", "sh_b1l"],
+        ["sh_l3", "sh_b1r"],
+        ["sh_l3", "sh_b2l"],
+        ["sh_l3", "sh_b2r"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "torsionHydros": [
+        ["id1:","id2:","id3:","id4:"],
+        {"spring":200, "damp":1, "deform":"FLT_MAX", "strength":1000},
+        ["sh_b2l","sh_b1l","sh_b1r","sh_l3",  {"inputSource":"hPatternAxisY","factor":-0.25}],
+        ["sh_b1r","sh_b1l","sh_b2l","sh_l3",  {"inputSource":"hPatternAxisX","factor":-0.15}],
+        ["sh_b1r","sh_b2r","sh_b2l","sh_l3",  {"inputSource":"hPatternAxisY","factor":0.25}],
+        ["sh_b2l","sh_b2r","sh_b1r","sh_l3",  {"inputSource":"hPatternAxisX","factor":0.15}],
+    ],
+    "torsionbars": [
+        ["id1:", "id2:", "id3:", "id4:"],
+        {"spring":100, "damp":0.2, "deform":30000, "strength":1000},
+        ["sh_b1r", "sh_b3", "sh_l3", "sh_l1r"],
+        ["sh_b2r", "sh_b3", "sh_l3", "sh_l2r"],
+        ["sh_b2l", "sh_b3", "sh_l3", "sh_l2l"],
+        ["sh_b1l", "sh_b3", "sh_l3", "sh_l1l"],
+
+    ],
+},
+"G_pickup_shifter_A_race": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Automatic Ratchet Shifter",
+        "value":140,
+    },
+    "slotType" : ["pickup_shifter", "pickup_facelift_shifter"],
+    "controller": [
+        ["fileName"],
+        ["propAnimation/singleAxisLever", {"name":"singleAxisLever"}],
+
+    ]
+    "singleAxisLever": {
+        "gearCoordinates": [
+            ["gearIndex",   "value"]
+            [1,            0.0]
+            [2,             0.2]
+            [3,             0.4]
+            [4,             0.6]
+            [5,             0.8]
+            [6,             1]
+        ]
+        "shiftSoundNode:":["dsh"]
+        "shiftSoundEventSingleAxisLever": "event:>Vehicle>Interior>Gearshift>automatic_lever_02",
+        "shiftSoundVolumeSingleAxisLever": 0.5,
+    },
+    "props": [
+        ["func" ,  "mesh",               "idRef:","idX:","idY:", "baseRotation",           "rotation",              "translation",           "min", "max", "offset", "multiplier"],
+        //automatic transmission
+            ],
+    "slots":[
+        ["type", "default", "description"],
+        //["pickup_shiftknob_sq","pickup_shiftknob_sq", "Shift knob"],
+
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["grp_stand_L", ["pickup_floor","pickup_stand"], [], {"pos":{"x": 0.02, "y":-0.40, "z":0.87}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":1.0, "z":1.1}}],
+         ["grp_stand_plate", ["pickup_stand"], [], {"pos":{"x": 0.045, "y":-0.40, "z":0.87}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+
+    ],
+    "props": [
+        ["func",       "mesh",               "idRef:", "idX:", "idY:",  "baseRotation",            "rotation",               "translation",          "min", "max", "offset", "multiplier"],
+        //pedals
+        ["gearModeIndex", "pickup_needle_gear", "dsh","dshl","int_strw",       {"x":-80 "y":180, "z":180}, {"x":0, "y":0, "z":0},   {"x":-0.095, "y":0, "z":0}, 0, 1, 0, 1],
+        //stand mounted shifter
+        ["dummy", "grp_rs_housing",  "st_1r","st_1l","st_2r",          {"x":90 "y":0, "z":0}, {"x":0, "y":0, "z":0}, {"x":0, "y":0, "z":0},    0, 1, 0, 1, {"baseTranslation":{"x":0.1, "y":0.09, "z":-0.055}}],
+        ["gearModeIndex", "grp_rs_handle",  "st_1r","st_1l","st_2r",          {"x":120 "y":0, "z":0}, {"x":-70, "y":0, "z":0}, {"x":0, "y":0, "z":0},    0, 1, 0, 1, {"baseTranslation":{"x":0.113, "y":0.09, "z":-0.045}}],
+        ["gearModeIndex", "grp_rs_handle_lock",  "st_1r","st_1l","st_2r",          {"x":120 "y":0, "z":0}, {"x":-70, "y":0, "z":0}, {"x":0, "y":0, "z":0},    0, 1, 0, 1, {"baseTranslation":{"x":0.113, "y":0.09, "z":-0.045}}],
+    ],
+     "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"collision":true},
+         {"selfCollision":true},
+         {"group":"pickup_stand"},
+         {"nodeWeight":0.6},
+         ["st_1r", -0.053, -0.47, 0.87],
+         ["st_1l", 0.067, -0.47, 0.87],
+
+         ["st_2r", -0.053, -0.36, 0.87],
+         {"group":""},
+    ],
+     "beams":[
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //stand main shape
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":282000,"beamDamp":50},
+        {"beamDeform":10000,"beamStrength":"FLT_MAX"},
+        ["st_1r", "st_2r"],
+        ["st_1l", "st_1r"],
+        ["st_1l", "st_2r"],
+        //stand to floor
+        {"beamSpring":282000,"beamDamp":50},
+        {"beamDeform":2000,"beamStrength":40000,"deformLimit":1.5},
+        ["st_1l", "b1r"],
+        ["st_1r", "b1r"],
+        ["st_2r", "b1r"],
+        ["st_1l", "b1l"],
+        ["st_1r", "b1l"],
+        ["st_2r", "b1l"],
+
+        ["st_1l", "b2r"],
+        ["st_1r", "b2r"],
+        ["st_2r", "b2r"],
+        ["st_1l", "b2l"],
+        ["st_1r", "b2l"],
+        ["st_2r", "b2l"],
+
+
+
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"deformLimitExpansion":""},
+    ],
+},
+}

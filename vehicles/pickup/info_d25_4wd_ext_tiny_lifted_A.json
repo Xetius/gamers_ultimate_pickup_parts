@@ -1,0 +1,48 @@
+{
+  "0-100 km/h":9.8,
+  "0-100 mph":34.9,
+  "0-60 mph":9.2,
+  "100-0 km/h":40.3,
+  "60-0 mph":123.7,
+  "60-100 mph":25.7,
+  "BoundingBox":[
+    [
+      -0.6,
+      -1.42,
+      -0.3099
+    ],
+    [
+      1.7,
+      3.54,
+      1.41
+    ]
+  ],
+  "Braking G":0.975,
+  "Config Type":"Factory",
+  "Configuration":"D25 4WD Extended Cab Tiny Bed (A)",
+  "Description":"Beach buggy styling and open top rear seats makes this 4wd truck a good weekend car",
+  "Drivetrain":"4WD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Off-Road Score":46,
+  "Performance Class":"4",
+  "Population":4000,
+  "Power":195,
+  "PowerPeakRPM":"3950 - 4600",
+  "Propulsion":"ICE",
+  "Top Speed":48.48723133,
+  "Torque":385,
+  "TorquePeakRPM":"2950 - 3650",
+  "Transmission":"Automatic",
+  "Value":56000,
+  "Weight":2539,
+  "Weight/Power":10.45685279,
+  "Years":{
+    "max":1992,
+    "min":1986
+  },
+  "defaultPaintName1":"Fall Gold",
+  "defaultPaintName2":"Jet Black",
+  "defaultPaintName3":"Jet Black",
+  "vehicleSelectorSubGroup":"vehiclesData.pickup.d25_crew_4wd_A.vehicleSelectorSubGroup"
+}

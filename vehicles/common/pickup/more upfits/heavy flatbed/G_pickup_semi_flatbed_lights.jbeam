@@ -1,0 +1,463 @@
+{
+"G_pickup_semi_flatbed_lights_R": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Halogen Rear Lights",
+    },
+    "slotType" : "G_pickup_semi_flatbed_lights_R",
+    "slots2": [
+        ["name", "allowTypes", "denyTypes", "default", "description"],
+        ["md_series_flatbed_rear_guard_side_L_bulb", ["incandescent_red_5W"], [], "incandescent_red_5W", "2\" Red (side L)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "cf11ll", "$nodeX": "cf11l", "$nodeY": "cf1ll",
+          "$deformGroup": "side_lightL1",
+          "$shadowEnable": 1,
+          "$posX": 1.27, "$posY": 4.676, "$posZ": 0.78,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 90
+        }
+        }],
+        ["md_series_flatbed_rear_guard_4inch_LL_running_bulb", ["incandescent_red_21W"], [], "incandescent_red_21W", "4\" Red running (LL)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighBrakeSignal_L_filament",
+          "$nodeRef": "cf1ll", "$nodeX": "cf1l", "$nodeY": "cf11ll",
+          "$deformGroup": "taillight_l",
+          "$shadowEnable": 1,
+          "$posX": 1.05, "$posY": 4.6896, "$posZ": 0.72,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["md_series_flatbed_rear_guard_4inch_L_running_bulb", ["incandescent_red_21W"], [], "incandescent_red_21W", "4\" Red running (L)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighBrake_filament",
+          "$nodeRef": "cf1ll", "$nodeX": "cf1l", "$nodeY": "cf11ll",
+          "$deformGroup": "taillight_l",
+          "$shadowEnable": 1,
+          "$posX": 0.85, "$posY": 4.686, "$posZ": 0.72,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["md_series_flatbed_rear_guard_2inch_ML_bulb", ["incandescent_red_5W"], [], "incandescent_red_5W", "2\" Red (ML)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "cf1l", "$nodeX": "cf1", "$nodeY": "cf11l",
+          "$deformGroup": "taillight_r",
+          "$shadowEnable": 1,
+          "$posX": 0.15, "$posY": 4.6766, "$posZ": 0.79,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["md_series_flatbed_rear_guard_2inch_M_bulb", ["incandescent_red_5W"], [], "incandescent_red_5W", "2\" Red (M)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "cf1", "$nodeX": "cf1r", "$nodeY": "cf11",
+          "$deformGroup": "taillight_r",
+          "$shadowEnable": 1,
+          "$posX": 0.0, "$posY": 4.6766, "$posZ": 0.79,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["md_series_flatbed_rear_guard_2inch_MR_bulb", ["incandescent_red_5W"], [], "incandescent_red_5W", "2\" Red (MR)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "cf1r", "$nodeX": "cf1", "$nodeY": "cf11r",
+          "$deformGroup": "taillight_r",
+          "$shadowEnable": 1,
+          "$posX": -0.15, "$posY": 4.6766, "$posZ": 0.79,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["md_series_flatbed_rear_guard_4inch_R_running_bulb", ["incandescent_red_21W"], [], "incandescent_red_21W", "4\" Red running (R)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighBrake_filament",
+          "$nodeRef": "cf1rr", "$nodeX": "cf1r", "$nodeY": "cf11rr",
+          "$deformGroup": "taillight_r",
+          "$shadowEnable": 1,
+          "$posX": -0.85, "$posY": 4.686, "$posZ": 0.72,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["md_series_flatbed_rear_guard_4inch_RR_running_bulb", ["incandescent_red_21W"], [], "incandescent_red_21W", "4\" Red running (RR)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighBrakeSignal_R_filament",
+          "$nodeRef": "cf1rr", "$nodeX": "cf1r", "$nodeY": "cf11rr",
+          "$deformGroup": "taillight_r",
+          "$shadowEnable": 1,
+          "$posX": -1.05, "$posY": 4.686, "$posZ": 0.72,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["md_series_flatbed_rear_guard_side_R_bulb", ["incandescent_red_5W"], [], "incandescent_red_5W", "2\" Red (side R)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam_filament",
+          "$nodeRef": "cf11rr", "$nodeX": "cf11r", "$nodeY": "cf1rr",
+          "$deformGroup": "side_lightR1",
+          "$shadowEnable": 1,
+          "$posX": -1.27, "$posY": 4.676, "$posZ": 0.78,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //Left side marker
+        {"materialOverride":[
+          ["halogen_utility_lights", "halogen_utility_lights_lowhighbeam"],
+          ["halogen_utility_lightglass", "halogen_utility_lightglass_lowhighbeam"],
+        ]},
+        {"deformGroup":"flatbed_lights_L_break", "deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        ["halogen_utility_rectangle_red", ["pickup_flatbed"],[],{"pos":{"x": 1.27, "y":4.676, "z":0.78}, "rot":{"x": 90, "y":0, "z":90}, "scale":{"x":1, "y":1, "z":1}}],
+        {"deformGroup":"flatbed_lights_L_break", "deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_rectangle_red_glass", ["pickup_flatbed"],[],{"pos":{"x": 1.27, "y":4.676, "z":0.78}, "rot":{"x":90, "y":0, "z":90}, "scale":{"x":1, "y":1, "z":1}}],
+        //LL taillight signal left
+        {"materialOverride":[
+          ["halogen_utility_lights", "halogen_utility_lights_lowhighBrakeSignal_L"],
+          ["halogen_utility_lightglass", "halogen_utility_lightglass_lowhighBrakeSignal_L"],
+        ]},
+        {"deformGroup":"flatbed_lights_L_break", "deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        ["halogen_utility_circle_red", ["pickup_flatbed"],[],{"pos":{"x": 1.05, "y":4.686, "z":0.72}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        {"deformGroup":"flatbed_lights_L_break", "deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_circle_red_glass", ["pickup_flatbed"],[],{"pos":{"x": 1.05, "y":4.686, "z":0.72}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        //L taillight
+        {"materialOverride":[
+          ["halogen_utility_lights", "halogen_utility_lights_lowhighBrake"],
+          ["halogen_utility_lightglass", "halogen_utility_lightglass_lowhighBrake"],
+        ]},
+        {"deformGroup":"flatbed_lights_L_break", "deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        ["halogen_utility_circle_red", ["pickup_flatbed"],[],{"pos":{"x": 0.85, "y":4.686, "z":0.72}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        {"deformGroup":"flatbed_lights_L_break", "deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_circle_red_glass", ["pickup_flatbed"],[],{"pos":{"x": 0.85, "y":4.686, "z":0.72}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        //ML marker
+        {"materialOverride":[
+          ["halogen_utility_lights", "halogen_utility_lights_lowhighbeam"],
+          ["halogen_utility_lightglass", "halogen_utility_lightglass_lowhighbeam"],
+        ]},
+        {"deformGroup":"flatbed_lights_M_break", "deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        ["halogen_utility_rectangle_red", ["pickup_flatbed"],[],{"pos":{"x": 0.15, "y":4.6766, "z":0.79}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        {"deformGroup":"flatbed_lights_M_break", "deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_rectangle_red_glass", ["pickup_flatbed"],[],{"pos":{"x": 0.15, "y":4.6766, "z":0.79}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        //M marker
+        {"materialOverride":[
+          ["halogen_utility_lights", "halogen_utility_lights_lowhighbeam"],
+          ["halogen_utility_lightglass", "halogen_utility_lightglass_lowhighbeam"],
+        ]},
+        {"deformGroup":"flatbed_lights_M_break", "deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        ["halogen_utility_rectangle_red", ["pickup_flatbed"],[],{"pos":{"x": 0.0, "y":4.6766, "z":0.79}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        {"deformGroup":"flatbed_lights_M_break", "deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_rectangle_red_glass", ["pickup_flatbed"],[],{"pos":{"x": 0.0, "y":4.6766, "z":0.79}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        //MR marker
+        {"materialOverride":[
+          ["halogen_utility_lights", "halogen_utility_lights_lowhighbeam"],
+          ["halogen_utility_lightglass", "halogen_utility_lightglass_lowhighbeam"],
+        ]},
+        {"deformGroup":"flatbed_lights_M_break", "deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        ["halogen_utility_rectangle_red", ["pickup_flatbed"],[],{"pos":{"x": -0.15, "y":4.6766, "z":0.79}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        {"deformGroup":"flatbed_lights_M_break", "deformMaterialBase":"off_road_lights_glass_dmg", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_rectangle_red_glass", ["pickup_flatbed"],[],{"pos":{"x": -0.15, "y":4.6766, "z":0.79}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        //R taillight
+        {"materialOverride":[
+          ["halogen_utility_lights", "halogen_utility_lights_lowhighBrake"],
+          ["halogen_utility_lightglass", "halogen_utility_lightglass_lowhighBrake"],
+        ]},
+        {"deformGroup":"flatbed_lights_R_break", "deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        ["halogen_utility_circle_red", ["pickup_flatbed"],[],{"pos":{"x": -0.85, "y":4.686, "z":0.72}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        {"deformGroup":"flatbed_lights_R_break", "deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_circle_red_glass", ["pickup_flatbed"],[],{"pos":{"x": -0.85, "y":4.686, "z":0.72}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        //RR taillight signal left
+        {"materialOverride":[
+          ["halogen_utility_lights", "halogen_utility_lights_lowhighBrakeSignal_R"],
+          ["halogen_utility_lightglass", "halogen_utility_lightglass_lowhighBrakeSignal_R"],
+        ]},
+        {"deformGroup":"flatbed_lights_R_break", "deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        ["halogen_utility_circle_red", ["pickup_flatbed"],[],{"pos":{"x": -1.05, "y":4.686, "z":0.72}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        {"deformGroup":"flatbed_lights_R_break", "deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_circle_red_glass", ["pickup_flatbed"],[],{"pos":{"x": -1.05, "y":4.686, "z":0.72}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        //Right side marker
+        {"materialOverride":[
+          ["halogen_utility_lights", "halogen_utility_lights_lowhighbeam"],
+          ["halogen_utility_lightglass", "halogen_utility_lightglass_lowhighbeam"],
+        ]},
+        {"deformGroup":"flatbed_lights_R_break", "deformMaterialBase":"halogen_utility_lights", "deformMaterialDamaged":"halogen_utility_lights"},
+        ["halogen_utility_rectangle_red", ["pickup_flatbed"],[],{"pos":{"x": -1.27, "y":4.676, "z":0.78}, "rot":{"x":90, "y":0, "z":-90}, "scale":{"x":1, "y":1, "z":1}}],
+        {"deformGroup":"flatbed_lights_R_break", "deformMaterialBase":"halogen_utility_lightglass", "deformMaterialDamaged":"halogen_utility_lightglass_dmg"},
+        ["halogen_utility_rectangle_red_glass", ["pickup_flatbed"],[],{"pos":{"x": -1.27, "y":4.676, "z":0.78}, "rot":{"x":90, "y":0, "z":-90}, "scale":{"x":1, "y":1, "z":1}}],
+        {"deformGroup":""},
+        {"materialOverride":[
+          ["halogen_utility_lights", "halogen_utility_lights"],
+          ["halogen_utility_lightglass", "halogen_utility_lightglass"],
+        ]},
+    ],
+    "glowMap":{
+        //halogen utility lights
+        "halogen_utility_lights_lowhighbeam":         {"simpleFunction":"lowhighbeam_filament",         "off":"halogen_utility_lights", "on":"halogen_utility_lights_on","materialEmissiveScaling":{"on_max":1.00}},
+        "halogen_utility_lights_lowhighBrake":        {"simpleFunction":"lowhighBrake_filament",        "off":"halogen_utility_lights", "on":"halogen_utility_lights_on","materialEmissiveScaling":{"on_max":1.00}},
+        "halogen_utility_lights_signal_R":            {"simpleFunction":"signal_R_filament",            "off":"halogen_utility_lights", "on":"halogen_utility_lights_on","materialEmissiveScaling":{"on_max":1.00}},
+        "halogen_utility_lights_signal_L":            {"simpleFunction":"signal_L_filament",            "off":"halogen_utility_lights", "on":"halogen_utility_lights_on","materialEmissiveScaling":{"on_max":1.00}},
+        "halogen_utility_lights_lowhighBrakeSignal_R":{"simpleFunction":"lowhighBrakeSignal_R_filament","off":"halogen_utility_lights", "on":"halogen_utility_lights_on","materialEmissiveScaling":{"on_max":1.00}},
+        "halogen_utility_lights_lowhighBrakeSignal_L":{"simpleFunction":"lowhighBrakeSignal_L_filament","off":"halogen_utility_lights", "on":"halogen_utility_lights_on","materialEmissiveScaling":{"on_max":1.00}},
+        "halogen_utility_lightglass_lowhighbeam":         {"simpleFunction":"lowhighbeam_filament",         "off":"halogen_utility_lightglass", "on":"halogen_utility_lightglass_on","materialEmissiveScaling":{"on_max":1.00}},
+        "halogen_utility_lightglass_lowhighBrake":        {"simpleFunction":"lowhighBrake_filament",        "off":"halogen_utility_lightglass", "on":"halogen_utility_lightglass_on","materialEmissiveScaling":{"on_max":1.00}},
+        "halogen_utility_lightglass_signal_R":            {"simpleFunction":"signal_R_filament",            "off":"halogen_utility_lightglass", "on":"halogen_utility_lightglass_on","materialEmissiveScaling":{"on_max":1.00}},
+        "halogen_utility_lightglass_signal_L":            {"simpleFunction":"signal_L_filament",            "off":"halogen_utility_lightglass", "on":"halogen_utility_lightglass_on","materialEmissiveScaling":{"on_max":1.00}},
+        "halogen_utility_lightglass_lowhighBrakeSignal_R":{"simpleFunction":"lowhighBrakeSignal_R_filament","off":"halogen_utility_lightglass", "on":"halogen_utility_lightglass_on","materialEmissiveScaling":{"on_max":1.00}},
+        "halogen_utility_lightglass_lowhighBrakeSignal_L":{"simpleFunction":"lowhighBrakeSignal_L_filament","off":"halogen_utility_lightglass", "on":"halogen_utility_lightglass_on","materialEmissiveScaling":{"on_max":1.00}},
+    },
+},
+"G_pickup_semi_flatbed_lights_R_LED": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"LED Rear Lights",
+    },
+    "slotType" : "G_pickup_semi_flatbed_lights_R",
+    "slots2": [
+        ["name", "allowTypes", "denyTypes", "default", "description"],
+        ["md_series_flatbed_rear_guard_side_L_bulb2", ["generic_2inch_led_red_1W"], [], "generic_2inch_led_red_1W", "2\" Red (side L)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "cf11ll", "$nodeX": "cf11l", "$nodeY": "cf1ll",
+          "$deformGroup": "side_lightL1",
+          "$shadowEnable": 1,
+          "$posX": 1.27, "$posY": 4.676, "$posZ": 0.78,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 90
+        }
+        }],
+        ["md_series_flatbed_rear_guard_4inch_LL_running_bulb2", ["generic_4inch_led_red_5W"], [], "generic_4inch_led_red_5W", "4\" Red running (LL)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "cf1ll", "$nodeX": "cf1l", "$nodeY": "cf11ll",
+          "$deformGroup": "taillight_l",
+          "$shadowEnable": 1,
+          "$posX": 1.05, "$posY": 4.686, "$posZ": 0.72,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["md_series_flatbed_rear_guard_4inch_LL_signal_bulb2", ["generic_4inch_led_red_5W"], [], "generic_4inch_led_red_5W", "4\" Red signal (LL)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "brakelight_signal_L",
+          "$nodeRef": "cf1ll", "$nodeX": "cf1l", "$nodeY": "cf11ll",
+          "$deformGroup": "taillight_l",
+          "$shadowEnable": 1,
+          "$posX": 1.05, "$posY": 4.686, "$posZ": 0.72,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["md_series_flatbed_rear_guard_4inch_L_running_bulb2", ["generic_4inch_led_red_5W"], [], "generic_4inch_led_red_5W", "4\" Red running (L)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "cf1ll", "$nodeX": "cf1l", "$nodeY": "cf11ll",
+          "$deformGroup": "taillight_l",
+          "$shadowEnable": 1,
+          "$posX": 0.85, "$posY": 4.686, "$posZ": 0.72,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["md_series_flatbed_rear_guard_4inch_L_brake_bulb2", ["generic_4inch_led_red_5W"], [], "generic_4inch_led_red_5W", "4\" Red brake (L)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "brake",
+          "$nodeRef": "cf1ll", "$nodeX": "cf1l", "$nodeY": "cf11ll",
+          "$deformGroup": "taillight_l",
+          "$shadowEnable": 1,
+          "$posX": 0.85, "$posY": 4.686, "$posZ": 0.72,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["md_series_flatbed_rear_guard_2inch_ML_bulb2", ["generic_2inch_led_red_1W"], [], "generic_2inch_led_red_1W", "2\" Red (ML)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "cf1l", "$nodeX": "cf1", "$nodeY": "cf11l",
+          "$deformGroup": "taillight_r",
+          "$shadowEnable": 1,
+          "$posX": 0.15, "$posY": 4.6766, "$posZ": 0.79,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["md_series_flatbed_rear_guard_2inch_M_bulb2", ["generic_2inch_led_red_1W"], [], "generic_2inch_led_red_1W", "2\" Red (M)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "cf1", "$nodeX": "cf1r", "$nodeY": "cf11",
+          "$deformGroup": "taillight_r",
+          "$shadowEnable": 1,
+          "$posX": 0.0, "$posY": 4.6766, "$posZ": 0.79,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["md_series_flatbed_rear_guard_2inch_MR_bulb2", ["generic_2inch_led_red_1W"], [], "generic_2inch_led_red_1W", "2\" Red (MR)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "cf1r", "$nodeX": "cf1", "$nodeY": "cf11r",
+          "$deformGroup": "taillight_r",
+          "$shadowEnable": 1,
+          "$posX": -0.15, "$posY": 4.6766, "$posZ": 0.79,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["md_series_flatbed_rear_guard_4inch_R_running_bulb2", ["generic_4inch_led_red_5W"], [], "generic_4inch_led_red_5W", "4\" Red running (R)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "cf1rr", "$nodeX": "cf1r", "$nodeY": "cf11rr",
+          "$deformGroup": "taillight_r",
+          "$shadowEnable": 1,
+          "$posX": -0.85, "$posY": 4.686, "$posZ": 0.72,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["md_series_flatbed_rear_guard_4inch_R_brake_bulb2", ["generic_4inch_led_red_5W"], [], "generic_4inch_led_red_5W", "4\" Red brake (R)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "brake",
+          "$nodeRef": "cf1rr", "$nodeX": "cf1r", "$nodeY": "cf11rr",
+          "$deformGroup": "taillight_r",
+          "$shadowEnable": 1,
+          "$posX": -0.85, "$posY": 4.686, "$posZ": 0.72,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["md_series_flatbed_rear_guard_4inch_RR_running_bulb2", ["generic_4inch_led_red_5W"], [], "generic_4inch_led_red_5W", "4\" Red running (RR)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "cf1rr", "$nodeX": "cf1r", "$nodeY": "cf11rr",
+          "$deformGroup": "taillight_r",
+          "$shadowEnable": 1,
+          "$posX": -1.05, "$posY": 4.686, "$posZ": 0.72,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["md_series_flatbed_rear_guard_4inch_RR_signal_bulb2", ["generic_4inch_led_red_5W"], [], "generic_4inch_led_red_5W", "4\" Red signal (RR)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "brakelight_signal_R",
+          "$nodeRef": "cf1rr", "$nodeX": "cf1r", "$nodeY": "cf11rr",
+          "$deformGroup": "taillight_r",
+          "$shadowEnable": 1,
+          "$posX": -1.05, "$posY": 4.686, "$posZ": 0.72,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["md_series_flatbed_rear_guard_side_R_bulb2", ["generic_2inch_led_red_1W"], [], "generic_2inch_led_red_1W", "2\" Red (side R)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighbeam",
+          "$nodeRef": "cf11rr", "$nodeX": "cf11r", "$nodeY": "cf1rr",
+          "$deformGroup": "side_lightR1",
+          "$shadowEnable": 1,
+          "$posX": -1.27, "$posY": 4.676, "$posZ": 0.88,
+          "$rotX": 0, "$rotY": 0, "$rotZ": -90
+        }
+        }],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //Left side marker
+        {"deformGroup":"flatbed_lights_L_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["round_led_2inch_aux1", ["pickup_flatbed"],[],{"pos":{"x": 1.27, "y":4.676, "z":0.78}, "rot":{"x": -1, "y":0, "z":90}, "scale":{"x":1, "y":1, "z":1}}],
+        {"deformGroup":"flatbed_lights_L_break", "deformMaterialBase":"off_road_lights_glass_dmg", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["round_led_2inch_glass_red_aux1", ["pickup_flatbed"],[],{"pos":{"x": 1.27, "y":4.676, "z":0.78}, "rot":{"x":-1, "y":0, "z":90}, "scale":{"x":1, "y":1, "z":1}}],
+        //LL taillight signal left
+        {"deformGroup":"flatbed_lights_L_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["round_led_4inch_taillight_L", ["pickup_flatbed"],[],{"pos":{"x": 1.05, "y":4.686, "z":0.72}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        {"deformGroup":"flatbed_lights_L_break", "deformMaterialBase":"off_road_lights_glass_dmg", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["round_led_4inch_glass_red_taillight_L", ["pickup_flatbed"],[],{"pos":{"x": 1.05, "y":4.686, "z":0.72}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        //L taillight
+        {"deformGroup":"flatbed_lights_L_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["round_led_4inch_taillight", ["pickup_flatbed"],[],{"pos":{"x": 0.85, "y":4.686, "z":0.72}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        {"deformGroup":"flatbed_lights_L_break", "deformMaterialBase":"off_road_lights_glass_dmg", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["round_led_4inch_glass_red_taillight", ["pickup_flatbed"],[],{"pos":{"x": 0.85, "y":4.686, "z":0.72}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        //ML marker
+        {"deformGroup":"flatbed_lights_M_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["round_led_2inch_aux1", ["pickup_flatbed"],[],{"pos":{"x": 0.15, "y":4.6766, "z":0.79}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        {"deformGroup":"flatbed_lights_M_break", "deformMaterialBase":"off_road_lights_glass_dmg", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["round_led_2inch_glass_red_aux1", ["pickup_flatbed"],[],{"pos":{"x": 0.15, "y":4.6766, "z":0.79}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        //M marker
+        {"deformGroup":"flatbed_lights_M_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["round_led_2inch_aux1", ["pickup_flatbed"],[],{"pos":{"x": 0.0, "y":4.6766, "z":0.79}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        {"deformGroup":"flatbed_lights_M_break", "deformMaterialBase":"off_road_lights_glass_dmg", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["round_led_2inch_glass_red_aux1", ["pickup_flatbed"],[],{"pos":{"x": 0.0, "y":4.6766, "z":0.79}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        //MR marker
+        {"deformGroup":"flatbed_lights_M_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["round_led_2inch_aux1", ["pickup_flatbed"],[],{"pos":{"x": -0.15, "y":4.6766, "z":0.79}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        {"deformGroup":"flatbed_lights_M_break", "deformMaterialBase":"off_road_lights_glass_dmg", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["round_led_2inch_glass_red_aux1", ["pickup_flatbed"],[],{"pos":{"x": -0.15, "y":4.6766, "z":0.79}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        //R taillight
+        {"deformGroup":"flatbed_lights_R_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["round_led_4inch_taillight", ["pickup_flatbed"],[],{"pos":{"x": -0.85, "y":4.686, "z":0.72}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        {"deformGroup":"flatbed_lights_R_break", "deformMaterialBase":"off_road_lights_glass_dmg", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["round_led_4inch_glass_red_taillight", ["pickup_flatbed"],[],{"pos":{"x": -0.85, "y":4.686, "z":0.72}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        //RR taillight signal left
+        {"deformGroup":"flatbed_lights_R_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["round_led_4inch_taillight_R", ["pickup_flatbed"],[],{"pos":{"x": -1.05, "y":4.686, "z":0.72}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        {"deformGroup":"flatbed_lights_R_break", "deformMaterialBase":"off_road_lights_glass_dmg", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["round_led_4inch_glass_red_taillight_R", ["pickup_flatbed"],[],{"pos":{"x": -1.05, "y":4.686, "z":0.72}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        //Right side marker
+        {"deformGroup":"flatbed_lights_R_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["round_led_2inch_aux1", ["pickup_flatbed"],[],{"pos":{"x": -1.27, "y":4.676, "z":0.78}, "rot":{"x": -1, "y":0, "z":-90}, "scale":{"x":1, "y":1, "z":1}}],
+        {"deformGroup":"flatbed_lights_R_break", "deformMaterialBase":"off_road_lights_glass_dmg", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["round_led_2inch_glass_red_aux1", ["pickup_flatbed"],[],{"pos":{"x": -1.27, "y":4.676, "z":0.78}, "rot":{"x":-1, "y":0, "z":-90}, "scale":{"x":1, "y":1, "z":1}}],
+        {"deformGroup":""},
+    ],
+    "glowMap":{
+        //LED lights
+        "off_road_lights_taillight":  {"simpleFunction":{"lowhighbeam":0.49,"brake":1000},           "off":"off_road_lights","on":"off_road_lights_on","on_intense":"off_road_lights_on_intense"},
+        "off_road_lights_taillight_L":{"simpleFunction":{"brakelight_signal_L":1,"lowhighbeam":0.49},"off":"off_road_lights","on":"off_road_lights_on","on_intense":"off_road_lights_on_intense"},
+        "off_road_lights_taillight_R":{"simpleFunction":{"brakelight_signal_R":1,"lowhighbeam":0.49},"off":"off_road_lights","on":"off_road_lights_on","on_intense":"off_road_lights_on_intense"},
+        "off_road_lights_signal_L":   {"simpleFunction":{"signal_L":0.49},                           "off":"off_road_lights","on":"off_road_lights_on","on_intense":"off_road_lights_on_intense"},
+        "off_road_lights_signal_R":   {"simpleFunction":{"signal_R":0.49},                           "off":"off_road_lights","on":"off_road_lights_on","on_intense":"off_road_lights_on_intense"},
+        "off_road_lights_reverse":    {"simpleFunction":{"reverse":1},                               "off":"off_road_lights","on":"off_road_lights_on","on_intense":"off_road_lights_on_intense"},
+        "off_road_lights_fog":        {"simpleFunction":{"fog":1},                                   "off":"off_road_lights","on":"off_road_lights_on","on_intense":"off_road_lights_on_intense"},
+        "off_road_lights_aux1":       {"simpleFunction":{"lowhighbeam":0.49},                        "off":"off_road_lights","on":"off_road_lights_on","on_intense":"off_road_lights_on_intense"}, //red marker
+        "off_road_lights_aux2":       {"simpleFunction":{"lowhighbeam":0.49},                        "off":"off_road_lights","on":"off_road_lights_on","on_intense":"off_road_lights_on_intense"}, //orange marker
+        "off_road_lights_orange_aux2":{"simpleFunction":{"lowhighbeam":0.49},                        "off":"off_road_lights","on":"off_road_lights_on","on_intense":"off_road_lights_on_intense"}, //orange marker oval
+        "off_road_lights_white_aux1": {"simpleFunction":{"reverse":1},                               "off":"off_road_lights","on":"off_road_lights_on","on_intense":"off_road_lights_on_intense"}, //work light
+        "off_road_lights_glass_taillight":  {"simpleFunction":{"lowhighbeam":0.49,"brake":1000},           "off":"off_road_lights_glass","on":"off_road_lights_glass_on",      "on_intense":"off_road_lights_glass_on_intense"},
+        "off_road_lights_glass_taillight_L":{"simpleFunction":{"brakelight_signal_L":1,"lowhighbeam":0.49},"off":"off_road_lights_glass","on":"off_road_lights_glass_on",      "on_intense":"off_road_lights_glass_on_intense"},
+        "off_road_lights_glass_taillight_R":{"simpleFunction":{"brakelight_signal_R":1,"lowhighbeam":0.49},"off":"off_road_lights_glass","on":"off_road_lights_glass_on",      "on_intense":"off_road_lights_glass_on_intense"},
+        "off_road_lights_glass_signal_L":   {"simpleFunction":{"signal_L":0.49},                           "off":"off_road_lights_glass","on":"off_road_lights_glass_on_amber","on_intense":"off_road_lights_glass_on_intense_amber"},
+        "off_road_lights_glass_signal_R":   {"simpleFunction":{"signal_R":0.49},                           "off":"off_road_lights_glass","on":"off_road_lights_glass_on_amber","on_intense":"off_road_lights_glass_on_intense_amber"},
+        "off_road_lights_glass_reverse":    {"simpleFunction":{"reverse":1},                               "off":"off_road_lights_glass","on":"off_road_lights_glass_on",      "on_intense":"off_road_lights_glass_on_intense"},
+        "off_road_lights_glass_fog":        {"simpleFunction":{"fog":1},                                   "off":"off_road_lights_glass","on":"off_road_lights_glass_on",      "on_intense":"off_road_lights_glass_on_intense"},
+        "off_road_lights_glass_aux1":       {"simpleFunction":{"lowhighbeam":0.49},                        "off":"off_road_lights_glass","on":"off_road_lights_glass_on",      "on_intense":"off_road_lights_glass_on_intense"}, //red marker
+        "off_road_lights_glass_orange_aux2":{"simpleFunction":{"lowhighbeam":0.49},                        "off":"off_road_lights_glass","on":"off_road_lights_glass_on_amber","on_intense":"off_road_lights_glass_on_intense_amber"}, //orange marker
+        "off_road_lights_glass_aux1.001":   {"simpleFunction":{"reverse":1},                               "off":"off_road_lights_glass","on":"off_road_lights_glass_on",      "on_intense":"off_road_lights_glass_on_intense"}, //work light
+    },
+},
+}

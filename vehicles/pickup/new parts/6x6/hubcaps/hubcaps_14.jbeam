@@ -1,0 +1,101 @@
+{
+"hubcap_06a_14_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"CarPlus A11 Rear Rear Hubcaps",
+        "value":35,
+    },
+    "slotType" : "hubcap_RR_6x6_14",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //hubcaps
+         ["hubcap_06a_15", ["hubcap_RRR"], [], {"pos":{"x":-0.474, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.93, "y":0.93, "z":0.93}}],
+         ["hubcap_06a_15", ["hubcap_RRL"], [], {"pos":{"x": 0.474, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":0.93, "y":0.93, "z":0.93}}],
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            //hubcap options
+            {"enableHubcaps":true},
+            {"hubcapSelfCollision":true},
+            {"hubcapCollision":true,"enableExtraHubcapBeams":false},
+            {"hubcapOffset":0.0},
+            {"hubcapWidth":0.05},
+            {"hubcapRadius":0.19},
+            {"hubcapBeamSpring":181000, "hubcapBeamDamp":10},
+            {"hubcapBeamDeform":2500, "hubcapBeamStrength":12000},
+            {"hubcapAttachBeamSpring":101000, "hubcapAttachBeamDamp":10},
+            {"hubcapAttachBeamDeform":1000, "hubcapAttachBeamStrength":1200},
+            {"hubcapSupportBeamDeform":2500, "hubcapSupportBeamStrength":5000},
+            {"hubcapNodeWeight":0.10},
+            {"hubcapCenterNodeWeight":0.10},
+            {"hubcapNodeMaterial":"|NM_PLASTIC"},
+            {"hubcapFrictionCoef":0.7},
+    ],
+},
+"hubcap_07a_14_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"CarPlus C55 Rear Rear Hubcaps",
+        "value":35,
+    },
+    "slotType" : "hubcap_RR_6x6_14",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //hubcaps
+         ["hubcap_07a_15", ["hubcap_RRR"], [], {"pos":{"x":-0.474, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.93, "y":0.93, "z":0.93}}],
+         ["hubcap_07a_15", ["hubcap_RRL"], [], {"pos":{"x": 0.474, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":0.93, "y":0.93, "z":0.93}}],
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            //hubcap options
+            {"enableHubcaps":true},
+            {"hubcapSelfCollision":true},
+            {"hubcapCollision":true,"enableExtraHubcapBeams":false},
+            {"hubcapOffset":0.0},
+            {"hubcapWidth":0.05},
+            {"hubcapRadius":0.19},
+            {"hubcapBeamSpring":181000, "hubcapBeamDamp":10},
+            {"hubcapBeamDeform":2500, "hubcapBeamStrength":12000},
+            {"hubcapAttachBeamSpring":101000, "hubcapAttachBeamDamp":10},
+            {"hubcapAttachBeamDeform":1000, "hubcapAttachBeamStrength":1200},
+            {"hubcapSupportBeamDeform":2500, "hubcapSupportBeamStrength":5000},
+            {"hubcapNodeWeight":0.10},
+            {"hubcapCenterNodeWeight":0.10},
+            {"hubcapNodeMaterial":"|NM_PLASTIC"},
+            {"hubcapFrictionCoef":0.7},
+    ],
+},
+"hubcap_08a_14_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"CarPlus CS11 Rear Rear Hubcaps",
+        "value":35,
+    },
+    "slotType" : "hubcap_RR_6x6_14",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //hubcaps
+         ["hubcap_08a_15", ["hubcap_RRR"], [], {"pos":{"x":-0.470, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.93, "y":0.93, "z":0.93}}],
+         ["hubcap_08a_15", ["hubcap_RRL"], [], {"pos":{"x": 0.470, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":0.93, "y":0.93, "z":0.93}}],
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            //hubcap options
+            {"enableHubcaps":true},
+            {"hubcapSelfCollision":true},
+            {"hubcapCollision":true,"enableExtraHubcapBeams":false},
+            {"hubcapOffset":0.0},
+            {"hubcapWidth":0.05},
+            {"hubcapRadius":0.19},
+            {"hubcapBeamSpring":181000, "hubcapBeamDamp":10},
+            {"hubcapBeamDeform":2500, "hubcapBeamStrength":12000},
+            {"hubcapAttachBeamSpring":101000, "hubcapAttachBeamDamp":10},
+            {"hubcapAttachBeamDeform":1000, "hubcapAttachBeamStrength":1200},
+            {"hubcapSupportBeamDeform":2500, "hubcapSupportBeamStrength":5000},
+            {"hubcapNodeWeight":0.10},
+            {"hubcapCenterNodeWeight":0.10},
+            {"hubcapNodeMaterial":"|NM_PLASTIC"},
+            {"hubcapFrictionCoef":0.7},
+    ],
+},
+}

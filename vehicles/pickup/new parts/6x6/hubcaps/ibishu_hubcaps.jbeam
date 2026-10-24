@@ -1,0 +1,381 @@
+{
+"ibishu_hubcap_01a_15_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Ibishu Blade Rear Rear Hubcaps",
+        "value":80,
+    },
+    "slotType" : "hubcap_RR_6x6_15",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //hubcaps
+         ["ibishu_hubcap_01a_15", ["hubcap_RRR"], [], {"pos":{"x":-0.487, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.01, "y":1.01, "z":1.01}}],
+         ["ibishu_hubcap_01a_15", ["hubcap_RRL"], [], {"pos":{"x": 0.487, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.01, "y":1.01, "z":1.01}}],
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            //hubcap options
+            {"enableHubcaps":true},
+            {"hubcapSelfCollision":true},
+            {"hubcapCollision":true,"enableExtraHubcapBeams":false},
+            {"hubcapOffset":0.0},
+            {"hubcapWidth":0.06},
+            {"hubcapRadius":0.20},
+            {"hubcapBeamSpring":221000, "hubcapBeamDamp":10},
+            {"hubcapBeamDeform":2900, "hubcapBeamStrength":14000},
+            {"hubcapAttachBeamSpring":121000, "hubcapAttachBeamDamp":10},
+            {"hubcapAttachBeamDeform":1200, "hubcapAttachBeamStrength":1800},
+            {"hubcapSupportBeamDeform":3000, "hubcapSupportBeamStrength":5500},
+            {"hubcapNodeWeight":0.12},
+            {"hubcapCenterNodeWeight":0.12},
+            {"hubcapNodeMaterial":"|NM_PLASTIC"},
+            {"hubcapFrictionCoef":0.7},
+    ],
+},
+"ibishu_hubcap_03a_15_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Ibishu Deep Dish Rear Rear Hubcaps",
+        "value":100,
+    },
+    "slotType" : "hubcap_RR_6x6_15",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //hubcaps
+         ["ibishu_hubcap_03a_15", ["hubcap_RRR"], [], {"pos":{"x":-0.487, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+         ["ibishu_hubcap_03a_15", ["hubcap_RRL"], [], {"pos":{"x": 0.487, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            //hubcap options
+            {"enableHubcaps":true},
+            {"hubcapSelfCollision":true},
+            {"hubcapCollision":true,"enableExtraHubcapBeams":false},
+            {"hubcapOffset":0.0},
+            {"hubcapWidth":0.06},
+            {"hubcapRadius":0.20},
+            {"hubcapBeamSpring":221000, "hubcapBeamDamp":10},
+            {"hubcapBeamDeform":2900, "hubcapBeamStrength":14000},
+            {"hubcapAttachBeamSpring":121000, "hubcapAttachBeamDamp":10},
+            {"hubcapAttachBeamDeform":1200, "hubcapAttachBeamStrength":1800},
+            {"hubcapSupportBeamDeform":3000, "hubcapSupportBeamStrength":5500},
+            {"hubcapNodeWeight":0.12},
+            {"hubcapCenterNodeWeight":0.12},
+            {"hubcapNodeMaterial":"|NM_PLASTIC"},
+            {"hubcapFrictionCoef":0.7},
+    ],
+},
+"ibishu_hubcap_05a_15_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Ibishu Straked Rear Rear Hubcaps",
+        "value":80,
+    },
+    "slotType" : "hubcap_RR_6x6_15",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //hubcaps
+         ["ibishu_hubcap_05a_15", ["hubcap_RRR"], [], {"pos":{"x":-0.487, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+         ["ibishu_hubcap_05a_15", ["hubcap_RRL"], [], {"pos":{"x": 0.487, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            //hubcap options
+            {"enableHubcaps":true},
+            {"hubcapSelfCollision":true},
+            {"hubcapCollision":true,"enableExtraHubcapBeams":false},
+            {"hubcapOffset":0.0},
+            {"hubcapWidth":0.06},
+            {"hubcapRadius":0.20},
+            {"hubcapBeamSpring":221000, "hubcapBeamDamp":10},
+            {"hubcapBeamDeform":2900, "hubcapBeamStrength":14000},
+            {"hubcapAttachBeamSpring":121000, "hubcapAttachBeamDamp":10},
+            {"hubcapAttachBeamDeform":1200, "hubcapAttachBeamStrength":1800},
+            {"hubcapSupportBeamDeform":3000, "hubcapSupportBeamStrength":5500},
+            {"hubcapNodeWeight":0.12},
+            {"hubcapCenterNodeWeight":0.12},
+            {"hubcapNodeMaterial":"|NM_PLASTIC"},
+            {"hubcapFrictionCoef":0.7},
+    ],
+},
+"ibishu_hubcap_02a_14_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Ibishu 16 Slot Rear Rear Hubcaps",
+        "value":80,
+    },
+
+    "slotType" : "hubcap_RR_6x6_14",
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["ibishu_hubcap_02a_14", ["hubcap_RRR"], [], {"pos":{"x":-0.558, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["ibishu_hubcap_02a_14", ["hubcap_RRL"], [], {"pos":{"x": 0.558, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            //hubcap options
+            {"enableHubcaps":true},
+            {"hubcapSelfCollision":true},
+            {"hubcapCollision":true,"enableExtraHubcapBeams":false},
+            {"hubcapOffset":0.0},
+            {"hubcapWidth":0.05},
+            {"hubcapRadius":0.19},
+            {"hubcapBeamSpring":191000, "hubcapBeamDamp":10},
+            {"hubcapBeamDeform":2500, "hubcapBeamStrength":12000},
+            {"hubcapAttachBeamSpring":111000, "hubcapAttachBeamDamp":10},
+            {"hubcapAttachBeamDeform":1100, "hubcapAttachBeamStrength":1400},
+            {"hubcapSupportBeamDeform":2500, "hubcapSupportBeamStrength":5000},
+            {"hubcapNodeWeight":0.11},
+            {"hubcapCenterNodeWeight":0.11},
+            {"hubcapNodeMaterial":"|NM_PLASTIC"},
+            {"hubcapFrictionCoef":0.7},
+    ],
+},
+"ibishu_hubcap_03a_14_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Ibishu Deep Dish Rear Rear Hubcaps",
+        "value":90,
+    },
+
+    "slotType" : "hubcap_RR_6x6_14",
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["ibishu_hubcap_03a_14", ["hubcap_RRR"], [], {"pos":{"x":-0.556, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["ibishu_hubcap_03a_14", ["hubcap_RRL"], [], {"pos":{"x": 0.556, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            //hubcap options
+            {"enableHubcaps":true},
+            {"hubcapSelfCollision":true},
+            {"hubcapCollision":true,"enableExtraHubcapBeams":false},
+            {"hubcapOffset":0.0},
+            {"hubcapWidth":0.05},
+            {"hubcapRadius":0.19},
+            {"hubcapBeamSpring":191000, "hubcapBeamDamp":10},
+            {"hubcapBeamDeform":2500, "hubcapBeamStrength":12000},
+            {"hubcapAttachBeamSpring":111000, "hubcapAttachBeamDamp":10},
+            {"hubcapAttachBeamDeform":1100, "hubcapAttachBeamStrength":1400},
+            {"hubcapSupportBeamDeform":2500, "hubcapSupportBeamStrength":5000},
+            {"hubcapNodeWeight":0.11},
+            {"hubcapCenterNodeWeight":0.11},
+            {"hubcapNodeMaterial":"|NM_PLASTIC"},
+            {"hubcapFrictionCoef":0.7},
+    ],
+},
+"ibishu_hubcap_04a_14_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Ibishu White Dish Rear Rear Hubcaps",
+        "value":110,
+    },
+
+    "slotType" : "hubcap_RR_6x6_14",
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["ibishu_hubcap_04a_14", ["hubcap_RRR"], [], {"pos":{"x":-0.556, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":0.999, "z":0.999}}],
+        ["ibishu_hubcap_04a_14", ["hubcap_RRL"], [], {"pos":{"x": 0.556, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":0.999, "z":0.999}}],
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            //hubcap options
+            {"enableHubcaps":true},
+            {"hubcapSelfCollision":true},
+            {"hubcapCollision":true,"enableExtraHubcapBeams":false},
+            {"hubcapOffset":0.0},
+            {"hubcapWidth":0.05},
+            {"hubcapRadius":0.19},
+            {"hubcapBeamSpring":191000, "hubcapBeamDamp":10},
+            {"hubcapBeamDeform":2500, "hubcapBeamStrength":12000},
+            {"hubcapAttachBeamSpring":111000, "hubcapAttachBeamDamp":10},
+            {"hubcapAttachBeamDeform":1100, "hubcapAttachBeamStrength":1400},
+            {"hubcapSupportBeamDeform":2500, "hubcapSupportBeamStrength":5000},
+            {"hubcapNodeWeight":0.11},
+            {"hubcapCenterNodeWeight":0.11},
+            {"hubcapNodeMaterial":"|NM_PLASTIC"},
+            {"hubcapFrictionCoef":0.7},
+    ],
+},
+"ibishu_hubcap_05a_14_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Ibishu Straked Rear Rear Hubcaps",
+        "value":70,
+    },
+
+    "slotType" : "hubcap_RR_6x6_14",
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["ibishu_hubcap_05a_14", ["hubcap_RRR"], [], {"pos":{"x":-0.558, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["ibishu_hubcap_05a_14", ["hubcap_RRL"], [], {"pos":{"x": 0.558, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            //hubcap options
+            {"enableHubcaps":true},
+            {"hubcapSelfCollision":true},
+            {"hubcapCollision":true,"enableExtraHubcapBeams":false},
+            {"hubcapOffset":0.0},
+            {"hubcapWidth":0.05},
+            {"hubcapRadius":0.19},
+            {"hubcapBeamSpring":191000, "hubcapBeamDamp":10},
+            {"hubcapBeamDeform":2500, "hubcapBeamStrength":12000},
+            {"hubcapAttachBeamSpring":111000, "hubcapAttachBeamDamp":10},
+            {"hubcapAttachBeamDeform":1100, "hubcapAttachBeamStrength":1400},
+            {"hubcapSupportBeamDeform":2500, "hubcapSupportBeamStrength":5000},
+            {"hubcapNodeWeight":0.11},
+            {"hubcapCenterNodeWeight":0.11},
+            {"hubcapNodeMaterial":"|NM_PLASTIC"},
+            {"hubcapFrictionCoef":0.7},
+    ],
+},
+"ibishu_hubcap_02a_13_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Ibishu 16 Slot Rear Rear Hubcaps",
+        "value":70,
+    },
+
+    "slotType" : "hubcap_RR_6x6_13",
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["ibishu_hubcap_02a_13", ["hubcap_RRR"], [], {"pos":{"x":-0.552, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1.015, "z":1.015}}],
+        ["ibishu_hubcap_02a_13", ["hubcap_RRL"], [], {"pos":{"x": 0.552, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":1.015, "z":1.015}}],
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            //hubcap options
+            {"enableHubcaps":true},
+            {"hubcapSelfCollision":true},
+            {"hubcapCollision":true,"enableExtraHubcapBeams":false},
+            {"hubcapOffset":0.0},
+            {"hubcapWidth":0.05},
+            {"hubcapRadius":0.175},
+            {"hubcapBeamSpring":181000, "hubcapBeamDamp":10},
+            {"hubcapBeamDeform":2500, "hubcapBeamStrength":12000},
+            {"hubcapAttachBeamSpring":101000, "hubcapAttachBeamDamp":10},
+            {"hubcapAttachBeamDeform":1000, "hubcapAttachBeamStrength":1200},
+            {"hubcapSupportBeamDeform":2500, "hubcapSupportBeamStrength":5000},
+            {"hubcapNodeWeight":0.10},
+            {"hubcapCenterNodeWeight":0.10},
+            {"hubcapNodeMaterial":"|NM_PLASTIC"},
+            {"hubcapFrictionCoef":0.7},
+    ],
+},
+"ibishu_hubcap_03a_13_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Ibishu Deep Dish Rear Rear Hubcaps",
+        "value":80,
+    },
+
+    "slotType" : "hubcap_RR_6x6_13",
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["ibishu_hubcap_03a_13", ["hubcap_RRR"], [], {"pos":{"x":-0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1.015, "z":1.015}}],
+        ["ibishu_hubcap_03a_13", ["hubcap_RRL"], [], {"pos":{"x": 0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":1.015, "z":1.015}}],
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            //hubcap options
+            {"enableHubcaps":true},
+            {"hubcapSelfCollision":true},
+            {"hubcapCollision":true,"enableExtraHubcapBeams":false},
+            {"hubcapOffset":0.0},
+            {"hubcapWidth":0.05},
+            {"hubcapRadius":0.175},
+            {"hubcapBeamSpring":181000, "hubcapBeamDamp":10},
+            {"hubcapBeamDeform":2500, "hubcapBeamStrength":12000},
+            {"hubcapAttachBeamSpring":101000, "hubcapAttachBeamDamp":10},
+            {"hubcapAttachBeamDeform":1000, "hubcapAttachBeamStrength":1200},
+            {"hubcapSupportBeamDeform":2500, "hubcapSupportBeamStrength":5000},
+            {"hubcapNodeWeight":0.10},
+            {"hubcapCenterNodeWeight":0.10},
+            {"hubcapNodeMaterial":"|NM_PLASTIC"},
+            {"hubcapFrictionCoef":0.7},
+    ],
+},
+"ibishu_hubcap_04a_13_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Ibishu White Dish Rear Rear Hubcaps",
+        "value":100,
+    },
+
+    "slotType" : "hubcap_RR_6x6_13",
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["ibishu_hubcap_04a_13", ["hubcap_RRR"], [], {"pos":{"x":-0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1.015, "z":1.015}}],
+        ["ibishu_hubcap_04a_13", ["hubcap_RRL"], [], {"pos":{"x": 0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":1.015, "z":1.015}}],
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            //hubcap options
+            {"enableHubcaps":true},
+            {"hubcapSelfCollision":true},
+            {"hubcapCollision":true,"enableExtraHubcapBeams":false},
+            {"hubcapOffset":0.0},
+            {"hubcapWidth":0.05},
+            {"hubcapRadius":0.175},
+            {"hubcapBeamSpring":181000, "hubcapBeamDamp":10},
+            {"hubcapBeamDeform":2500, "hubcapBeamStrength":12000},
+            {"hubcapAttachBeamSpring":101000, "hubcapAttachBeamDamp":10},
+            {"hubcapAttachBeamDeform":1000, "hubcapAttachBeamStrength":1200},
+            {"hubcapSupportBeamDeform":2500, "hubcapSupportBeamStrength":5000},
+            {"hubcapNodeWeight":0.10},
+            {"hubcapCenterNodeWeight":0.10},
+            {"hubcapNodeMaterial":"|NM_PLASTIC"},
+            {"hubcapFrictionCoef":0.7},
+    ],
+},
+"ibishu_hubcap_05a_13_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Ibishu Straked Rear Rear Hubcaps",
+        "value":60,
+    },
+
+    "slotType" : "hubcap_RR_6x6_13",
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //hubcaps
+        ["ibishu_hubcap_05a_13", ["hubcap_RRR"], [], {"pos":{"x":-0.552, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1.015, "z":1.015}}],
+        ["ibishu_hubcap_05a_13", ["hubcap_RRL"], [], {"pos":{"x": 0.552, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1, "y":1.015, "z":1.015}}],
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            //hubcap options
+            {"enableHubcaps":true},
+            {"hubcapSelfCollision":true},
+            {"hubcapCollision":true,"enableExtraHubcapBeams":false},
+            {"hubcapOffset":0.0},
+            {"hubcapWidth":0.05},
+            {"hubcapRadius":0.175},
+            {"hubcapBeamSpring":181000, "hubcapBeamDamp":10},
+            {"hubcapBeamDeform":2500, "hubcapBeamStrength":12000},
+            {"hubcapAttachBeamSpring":101000, "hubcapAttachBeamDamp":10},
+            {"hubcapAttachBeamDeform":1000, "hubcapAttachBeamStrength":1200},
+            {"hubcapSupportBeamDeform":2500, "hubcapSupportBeamStrength":5000},
+            {"hubcapNodeWeight":0.10},
+            {"hubcapCenterNodeWeight":0.10},
+            {"hubcapNodeMaterial":"|NM_PLASTIC"},
+            {"hubcapFrictionCoef":0.7},
+    ],
+},
+}

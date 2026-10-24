@@ -1,0 +1,41 @@
+{
+  "Body Style":"Fifth Wheel Truck",
+  "BoundingBox":[
+    [
+      -0.8854,
+      -1.136,
+      -0.7234
+    ],
+    [
+      1.7534,
+      5.0361,
+      1.632
+    ]
+  ],
+  "Commercial Class":"Class 8 Truck",
+  "Config Type":"Custom",
+  "Configuration":"MD80 Fifth Wheel Sleeper Tandem Stretched (A)",
+  "Description":"Early model single cab truck with a long sleeper and fifthwheel upfit, tandem rear suspension, and an extremely stretched frame for style and a more comfortable ride",
+  "Drivetrain":"RWD",
+  "Fuel Type":"Diesel",
+  "Induction Type":"Turbo",
+  "Off-Road Score":34,
+  "Population":4000,
+  "Power":357,
+  "PowerPeakRPM":2400,
+  "Propulsion":"ICE",
+  "Top Speed":32.65652803,
+  "Torque":1080,
+  "TorquePeakRPM":"1150 - 1900",
+  "Transmission":"Automatic",
+  "Value":140000,
+  "Weight":7693,
+  "Weight/Power":27.83163265,
+  "Years":{
+    "max":1992,
+    "min":1986
+  },
+  "defaultPaintName1":"Nightshade",
+  "defaultPaintName2":"Nightshade",
+  "defaultPaintName3":"Nightshade"
+}

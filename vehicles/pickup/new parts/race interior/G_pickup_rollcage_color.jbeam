@@ -1,0 +1,28 @@
+{
+"G_pickup_rollcage_color_2": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Secondary Color",
+        "value":1500,
+    },
+    "slotType" : "skin_G_pickup_rollcage_color",
+    "globalSkin" : "secondary"
+},
+"G_pickup_rollcage_color_3": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Teterary Color",
+        "value":1500,
+    },
+    "slotType" : "skin_G_pickup_rollcage_color",
+},
+"G_pickup_rollcage_color_black": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Black",
+        "value":1100,
+    },
+    "slotType" : "skin_G_pickup_rollcage_color",
+    "globalSkin" : "black"
+},
+}

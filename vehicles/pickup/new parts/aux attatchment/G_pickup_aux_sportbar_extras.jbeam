@@ -1,0 +1,45 @@
+{
+"G_pickup_aux_sportbar_chmsl": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Center High Mounted Stop Light",
+        "value":20,
+    },
+    "slotType" : "G_pickup_aux_sportbar_chmsl",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //lights
+         {"deformGroup":"backlight_break_sportbar", "deformMaterialBase":"gavril_lights", "deformMaterialDamaged":"gavril_lights_dmg"},
+         ["G_pickup_aux_sportbar_chmsl", ["pickup_aux_sportbar"]],
+         {"deformGroup":"", "deformMaterialBase":"", "deformMaterialDamaged":""},
+    ],
+},
+"G_pickup_aux_sportbar_lettering": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Lettering",
+        "value":20,
+    },
+    "slotType" : "G_pickup_aux_sportbar_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["G_pickup_aux_sportbar_lettering_L", ["pickup_aux_sportbar_L"], [],{"pos":{"x":0,"y":0,"z":0}, "rot":{"x":0, "y":0, "z":0}}],
+         ["G_pickup_aux_sportbar_lettering_R", ["pickup_aux_sportbar_R"], [],{"pos":{"x":0,"y":0,"z":0}, "rot":{"x":0, "y":0, "z":0}}],
+    ],
+},
+"G_pickup_aux_campershell_chmsl": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Center High Mounted Stop Light",
+        "value":20,
+    },
+    "slotType" : "G_pickup_aux_campershell_chmsl",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //lights
+         {"deformGroup":"backlight_break_sportbar", "deformMaterialBase":"gavril_lights", "deformMaterialDamaged":"gavril_lights_dmg"},
+         ["G_pickup_aux_campershell_chmsl", ["pickup_aux_sportbar"]],
+         {"deformGroup":"", "deformMaterialBase":"", "deformMaterialDamaged":""},
+    ],
+},
+}

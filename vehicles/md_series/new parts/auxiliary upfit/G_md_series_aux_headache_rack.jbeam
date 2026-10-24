@@ -1,0 +1,703 @@
+{
+"G_md_series_aux_headache_rack": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Headache Rack",
+        "value":1500,
+    },
+    "slotType" : "G_md_series_aux_3",
+    "slots2": [
+        ["name",                                    "allowTypes",                                "denyTypes", "default", "description"],
+        ["G_md_series_aux_headache_rack_extention", ["G_md_series_aux_headache_rack_extention"], [],          "",        "Headache Rack Extention", {"nodeMove":{"x":0.0, "y":0.84, "z":0.0}}],
+        ["md_series_headache_rack_L_bulb", ["generic_oval_led_red_5W"], [], "generic_oval_led_red_5W", "Running/brake/signal (L)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighBrakeSignal_L_filament",
+          "$nodeRef": "hr3ll", "$nodeX": "hr4ll", "$nodeY": "hr3l",
+          "$deformGroup": "headache_rack_light_L_break",
+          "$shadowEnable": 1,
+          "$posX": 1.220, "$posY": 0.660, "$posZ": 2.230,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["md_series_headache_rack_R_bulb", ["generic_oval_led_red_5W"], [], "generic_oval_led_red_5W", "Running/brake/signal (R)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighBrakeSignal_R_filament",
+          "$nodeRef": "hr3rr", "$nodeX": "hr4rr", "$nodeY": "hr3r",
+          "$deformGroup": "headache_rack_light_R_break",
+          "$shadowEnable": 1,
+          "$posX": -1.220, "$posY": 0.660, "$posZ": 2.230,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }]
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$aux_HeadacheRack_move_Y", "range", "+m", "Frame", 0.6, 0.0, 0.6, "Move Headache Rack Position", "Position the Headache Rack with any specific setup length", {"stepDis":0.02}],   //, "subCategory":"Rear"
+    ],
+    "components": {
+        "auxHeadacheRackY": "$=$aux_HeadacheRack_move_Y",
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["md_series_logging_headache_rack", ["md_series_aux_headache_rack"],[],{"pos":{"x":0.0, "y":0.84, "z":0.0}}],
+        {"deformGroup":"headache_rack_light_L_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["oval_led_taillight_L", ["md_series_aux_headache_rack"],[],{"pos":{"x":1.220, "y":1.500, "z":2.230}, "rot":{"x":180, "y":90, "z":0}, "scale":{"x":1.55, "y":1.55, "z":1.55}}],
+        {"deformGroup":"headache_rack_light_L_break", "deformMaterialBase":"off_road_lights_glass_dmg", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["oval_led_glass_taillight_L", ["md_series_aux_headache_rack"],[],{"pos":{"x":1.220, "y":1.500, "z":2.230}, "rot":{"x":180, "y":90, "z":0}, "scale":{"x":1.55, "y":1.55, "z":1.55}}],
+        {"deformGroup":"headache_rack_light_R_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["oval_led_taillight_R", ["md_series_aux_headache_rack"],[],{"pos":{"x":-1.220, "y":1.500, "z":2.230}, "rot":{"x":180, "y":90, "z":0}, "scale":{"x":1.55, "y":1.55, "z":1.55}}],
+        {"deformGroup":"headache_rack_light_R_break", "deformMaterialBase":"off_road_lights_glass_dmg", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["oval_led_glass_taillight_R", ["md_series_aux_headache_rack"],[],{"pos":{"x":-1.220, "y":1.500, "z":2.230}, "rot":{"x":180, "y":90, "z":0}, "scale":{"x":1.55, "y":1.55, "z":1.55}}],
+        {"deformGroup":""},
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.75},
+
+         //--HEADACHE RACK--
+         {"group":["md_series_upfitColide","md_series_aux_headache_rack"]},
+
+         //168kg
+
+         //main shape
+         {"nodeWeight":6.4},
+         ["auxhr1ll", 1.188,1.4842, 1.09],
+         ["auxhr1l",  0.434,1.4842, 0.95, {"selfCollision":false}],
+         ["auxhr1r", -0.434,1.4842, 0.95, {"selfCollision":false}],
+         ["auxhr1rr",-1.188,1.4842, 1.09],
+
+         ["auxhr11l",  0.434,1.9762, 0.95, {"selfCollision":false}],
+         ["auxhr11r", -0.434,1.9762, 0.95, {"selfCollision":false}],
+
+         ["auxhr2ll", 1.188,1.4842, 1.4974],
+         ["auxhr2l",  0.434,1.4842, 1.4974],
+         ["auxhr2r", -0.434,1.4842, 1.4974],
+         ["auxhr2rr",-1.188,1.4842, 1.4974],
+
+         ["auxhr3ll", 1.188,1.4842, 1.9776],
+         ["auxhr3l",  0.434,1.4842, 1.9776],
+         ["auxhr3r", -0.434,1.4842, 1.9776],
+         ["auxhr3rr",-1.188,1.4842, 1.9776],
+
+         ["auxhr4ll", 1.188,1.4842, 2.385],
+         ["auxhr4l",  0.434,1.4842, 2.385],
+         ["auxhr4r", -0.434,1.4842, 2.385],
+         ["auxhr4rr",-1.188,1.4842, 2.385],
+         //rigidifier
+         {"collision":false},
+         {"selfCollision":false},
+         {"group":""},
+         ["auxhr0", 0, 2.5402, 1.657],
+    ],
+    "slidenodes": [
+         ["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
+         ["auxhr1l", "AuxfRail1L", true, true, 0, 6400100, 301000, "FLT_MAX"],
+         ["auxhr1r", "AuxfRail1R", true, true, 0, 6400100, 301000, "FLT_MAX"],
+         ["auxhr11l","AuxfRail1L", true, true, 0, 6400100, 301000, "FLT_MAX"],
+         ["auxhr11r","AuxfRail1R", true, true, 0, 6400100, 301000, "FLT_MAX"],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+
+          //--HEADACHE RACK--
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //main shape
+          {"beamSpring":3601000, "beamDamp":1200},
+          {"beamDeform":95000, "beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":1.2},
+
+          //vertical
+          ["auxhr1ll", "auxhr2ll"],
+          ["auxhr2ll", "auxhr3ll"],
+          ["auxhr3ll", "auxhr4ll", {"deformGroup":"headache_rack_light_L_break", "deformationTriggerRatio":0.05}],
+
+          ["auxhr1l", "auxhr2l"],
+          ["auxhr2l", "auxhr3l"],
+          ["auxhr3l", "auxhr4l", {"deformGroup":"headache_rack_light_L_break", "deformationTriggerRatio":0.05}],
+
+          ["auxhr1r", "auxhr2r"],
+          ["auxhr2r", "auxhr3r"],
+          ["auxhr3r", "auxhr4r", {"deformGroup":"headache_rack_light_R_break", "deformationTriggerRatio":0.05}],
+
+          ["auxhr1rr", "auxhr2rr"],
+          ["auxhr2rr", "auxhr3rr"],
+          ["auxhr3rr", "auxhr4rr", {"deformGroup":"headache_rack_light_R_break", "deformationTriggerRatio":0.05}],
+
+          //hrorizontal
+          ["auxhr1ll","auxhr1l"],
+          ["auxhr1l", "auxhr1r"],
+          ["auxhr1rr","auxhr1r"],
+
+          ["auxhr2ll","auxhr2l"],
+          ["auxhr2l", "auxhr2r"],
+          ["auxhr2rr","auxhr2r"],
+
+          ["auxhr3ll","auxhr3l", {"deformGroup":"headache_rack_light_L_break", "deformationTriggerRatio":0.05}],
+          ["auxhr3l", "auxhr3r"],
+          ["auxhr3rr","auxhr3r", {"deformGroup":"headache_rack_light_R_break", "deformationTriggerRatio":0.05}],
+
+          ["auxhr4ll","auxhr4l", {"deformGroup":"headache_rack_light_L_break", "deformationTriggerRatio":0.05}],
+          ["auxhr4l", "auxhr4r"],
+          ["auxhr4rr","auxhr4r", {"deformGroup":"headache_rack_light_R_break", "deformationTriggerRatio":0.05}],
+
+          //supports
+          ["auxhr11l", "auxhr1l"],
+          ["auxhr11r", "auxhr1r"],
+
+          //crossing
+          {"deformLimitExpansion":""},
+          {"beamDeform":70000, "beamStrength":"FLT_MAX"},
+
+          ["auxhr1ll","auxhr2l"],
+          ["auxhr1l", "auxhr2r"],
+          ["auxhr1rr","auxhr2r"],
+
+          ["auxhr2ll","auxhr1l"],
+          ["auxhr2l", "auxhr1r"],
+          ["auxhr2rr","auxhr1r"],
+
+          ["auxhr2ll","auxhr3l"],
+          ["auxhr2l", "auxhr3r"],
+          ["auxhr2rr","auxhr3r"],
+
+          ["auxhr3ll","auxhr2l"],
+          ["auxhr3l", "auxhr2r"],
+          ["auxhr3rr","auxhr2r"],
+
+          ["auxhr3ll","auxhr4l", {"deformGroup":"headache_rack_light_L_break", "deformationTriggerRatio":0.05}],
+          ["auxhr3l", "auxhr4r"],
+          ["auxhr3rr","auxhr4r", {"deformGroup":"headache_rack_light_R_break", "deformationTriggerRatio":0.05}],
+
+          ["auxhr4ll","auxhr3l", {"deformGroup":"headache_rack_light_L_break", "deformationTriggerRatio":0.05}],
+          ["auxhr4l", "auxhr3r"],
+          ["auxhr4rr","auxhr3r", {"deformGroup":"headache_rack_light_R_break", "deformationTriggerRatio":0.05}],
+
+          ["auxhr11r","auxhr2r"],
+          ["auxhr11l","auxhr2l"],
+
+          //rigids
+          {"beamSpring":3601000, "beamDamp":1040},
+          {"beamDeform":50500, "beamStrength":"FLT_MAX"},
+
+          //vertical
+          ["auxhr1ll", "auxhr3ll"],
+          ["auxhr2ll", "auxhr4ll"],
+          ["auxhr1l", "auxhr3l"],
+          ["auxhr2l", "auxhr4l"],
+          ["auxhr1r", "auxhr3r"],
+          ["auxhr2r", "auxhr4r"],
+          ["auxhr1rr", "auxhr3rr"],
+          ["auxhr2rr", "auxhr4rr"],
+
+          //horizontal
+          ["auxhr1ll","auxhr1r"],
+          ["auxhr1rr","auxhr1l"],
+          ["auxhr2ll","auxhr2r"],
+          ["auxhr2rr","auxhr2l"],
+          ["auxhr3ll","auxhr3r"],
+          ["auxhr3rr","auxhr3l"],
+          ["auxhr4ll","auxhr4r"],
+          ["auxhr4rr","auxhr4l"],
+
+
+          //corner rigids
+          {"beamDeform":20000, "beamStrength":"FLT_MAX"},
+          ["auxhr11l","auxhr1ll"],
+          ["auxhr11l","auxhr1r"],
+
+          ["auxhr11r","auxhr1rr"],
+          ["auxhr11r","auxhr1l"],
+
+
+          //rigidifier
+          {"beamDeform":40000, "beamStrength":"FLT_MAX"},
+          ["auxhr0", "auxhr1ll"],
+          ["auxhr0", "auxhr1l"],
+          ["auxhr0", "auxhr1r"],
+          ["auxhr0", "auxhr1rr"],
+
+          ["auxhr0", "auxhr2ll"],
+          ["auxhr0", "auxhr2l"],
+          ["auxhr0", "auxhr2r"],
+          ["auxhr0", "auxhr2rr"],
+
+          ["auxhr0", "auxhr3ll", {"deformGroup":"headache_rack_light_L_break", "deformationTriggerRatio":0.05}],
+          ["auxhr0", "auxhr3l", {"deformGroup":"headache_rack_light_L_break", "deformationTriggerRatio":0.05}],
+          ["auxhr0", "auxhr3r", {"deformGroup":"headache_rack_light_R_break", "deformationTriggerRatio":0.05}],
+          ["auxhr0", "auxhr3rr", {"deformGroup":"headache_rack_light_R_break", "deformationTriggerRatio":0.05}],
+
+          ["auxhr0", "auxhr4ll", {"deformGroup":"headache_rack_light_L_break", "deformationTriggerRatio":0.05}],
+          ["auxhr0", "auxhr4l", {"deformGroup":"headache_rack_light_L_break", "deformationTriggerRatio":0.05}],
+          ["auxhr0", "auxhr4r", {"deformGroup":"headache_rack_light_R_break", "deformationTriggerRatio":0.05}],
+          ["auxhr0", "auxhr4rr", {"deformGroup":"headache_rack_light_R_break", "deformationTriggerRatio":0.05}],
+
+          ["auxhr0", "auxhr11l"],
+          ["auxhr0", "auxhr11r"],
+
+
+          //attach
+          {"beamSpring":2401000, "beamDamp":40},
+          {"deformLimitExpansion":1.2},
+          {"beamDeform":1201000, "beamStrength":601000},
+
+          {"breakGroup":"headache_rack_L"},
+          ["auxhr1l","mf1r"],
+          ["auxhr1l","mf2l"],
+          ["auxhr1l","mf11l"],
+          ["auxhr1ll","mf1r"],
+          ["auxhr1ll","mf2l"],
+          ["auxhr1ll","mf11l"],
+          ["auxhr11l","mf1r"],
+          ["auxhr11l","mf2l"],
+          ["auxhr11l","mf11l"],
+          ["auxhr2l","mf1r"],
+          ["auxhr2l","mf2l"],
+          ["auxhr2l","mf11l"],
+
+          {"breakGroup":"headache_rack_R"},
+          ["auxhr1r","mf1l"],
+          ["auxhr1r","mf2r"],
+          ["auxhr1r","mf11r"],
+          ["auxhr1rr","mf1l"],
+          ["auxhr1rr","mf2r"],
+          ["auxhr1rr","mf11r"],
+          ["auxhr11r","mf1l"],
+          ["auxhr11r","mf2r"],
+          ["auxhr11r","mf11r"],
+          ["auxhr2r","mf1l"],
+          ["auxhr2r","mf2r"],
+          ["auxhr2r","mf11r"],
+
+          {"breakGroup":""},
+          {"deformLimitExpansion":1.2},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+           ["id1:","id2:","id3:"],
+           {"dragCoef":2},
+           {"groundModel":"metal"},
+
+           //--HEADACHE RACK--
+           ["auxhr1rr","auxhr1r", "auxhr2rr"],
+           ["auxhr2rr","auxhr1r", "auxhr2r"],
+           ["auxhr1r", "auxhr1l", "auxhr2r"],
+           ["auxhr2r", "auxhr1l", "auxhr2l"],
+           ["auxhr1l", "auxhr1ll","auxhr2l"],
+           ["auxhr2l", "auxhr1ll","auxhr2ll"],
+
+           ["auxhr2rr","auxhr2r", "auxhr3rr"],
+           ["auxhr3rr","auxhr2r", "auxhr3r"],
+           ["auxhr2r", "auxhr2l", "auxhr3r"],
+           ["auxhr3r", "auxhr2l", "auxhr3l"],
+           ["auxhr2l", "auxhr2ll","auxhr3l"],
+           ["auxhr3l", "auxhr2ll","auxhr3ll"],
+
+           ["auxhr3rr","auxhr3r", "auxhr4rr"],
+           ["auxhr4rr","auxhr3r", "auxhr4r"],
+           ["auxhr3r", "auxhr3l", "auxhr4r"],
+           ["auxhr4r", "auxhr3l", "auxhr4l"],
+           ["auxhr3l", "auxhr3ll","auxhr4l"],
+           ["auxhr4l", "auxhr3ll","auxhr4ll"],
+
+           ["auxhr2l", "auxhr1l", "auxhr11l"],
+           ["auxhr1r", "auxhr2r", "auxhr11r"],
+    ],
+},
+"G_md_series_aux_headache_rack_alt": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Headache Rack",
+        "value":1500,
+    },
+    "slotType" : "G_md_series_aux_frame",
+    "slots2": [
+        ["name",                                    "allowTypes",                                "denyTypes", "default", "description"],
+        ["G_md_series_aux_headache_rack_extention", ["G_md_series_aux_headache_rack_extention"], [],          "",        "Headache Rack Extention"],
+        ["md_series_headache_rack_L_bulb", ["generic_oval_led_red_5W"], [], "generic_oval_led_red_5W", "Running/brake/signal (L)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighBrakeSignal_L_filament",
+          "$nodeRef": "hr3ll", "$nodeX": "hr4ll", "$nodeY": "hr3l",
+          "$deformGroup": "headache_rack_light_L_break",
+          "$shadowEnable": 1,
+          "$posX": 1.220, "$posY": 0.660, "$posZ": 2.230,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }],
+        ["md_series_headache_rack_R_bulb", ["generic_oval_led_red_5W"], [], "generic_oval_led_red_5W", "Running/brake/signal (R)",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric": "lowhighBrakeSignal_R_filament",
+          "$nodeRef": "hr3rr", "$nodeX": "hr4rr", "$nodeY": "hr3r",
+          "$deformGroup": "headache_rack_light_R_break",
+          "$shadowEnable": 1,
+          "$posX": -1.220, "$posY": 0.660, "$posZ": 2.230,
+          "$rotX": 0, "$rotY": 0, "$rotZ": 0
+        }
+        }]
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$aux_frame_move_Y", "range", "+m", "Frame", 0.7, 0.0, 0.8, "Move Auxiliary Frame Length", "Make space for your upfit with any specific setup", {"stepDis":0.02}],   //, "subCategory":"Rear"
+    ],
+    "components": {
+        "auxCabOffsetY": "$=-$aux_frame_move_Y",
+    },
+    "rails": {
+          "AuxfRail1L":{"links:":["ff3l", "ff4l", "mf1l", "mf2l", "mf3l", "mf4l"], "looped":false, "capped":true},
+          "AuxfRail1R":{"links:":["ff3r", "ff4r", "mf1r", "mf2r", "mf3r", "mf4r"], "looped":false, "capped":true},
+          "AuxfRail2L":{"links:":["ff13l", "ff14l", "mf11l", "mf12l", "mf13l", "mf14l"], "looped":false, "capped":true},
+          "AuxfRail2R":{"links:":["ff13r", "ff14r", "mf11r", "mf12r", "mf13r", "mf14r"], "looped":false, "capped":true},
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["md_series_logging_headache_rack", ["md_series_aux_headache_rack"],[],{"pos":{"x":0.0, "y":0.0, "z":0.0}}],
+        {"deformGroup":"headache_rack_light_L_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["oval_led_taillight_L", ["md_series_aux_headache_rack"],[],{"pos":{"x":1.220, "y":0.660, "z":2.230}, "rot":{"x":180, "y":90, "z":0}, "scale":{"x":1.55, "y":1.55, "z":1.55}}],
+        {"deformGroup":"headache_rack_light_L_break", "deformMaterialBase":"off_road_lights_glass_dmg", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["oval_led_glass_taillight_L", ["md_series_aux_headache_rack"],[],{"pos":{"x":1.220, "y":0.660, "z":2.230}, "rot":{"x":180, "y":90, "z":0}, "scale":{"x":1.55, "y":1.55, "z":1.55}}],
+        {"deformGroup":"headache_rack_light_R_break", "deformMaterialBase":"off_road_lights", "deformMaterialDamaged":"off_road_lights"},
+        ["oval_led_taillight_R", ["md_series_aux_headache_rack"],[],{"pos":{"x":-1.220, "y":0.660, "z":2.230}, "rot":{"x":180, "y":90, "z":0}, "scale":{"x":1.55, "y":1.55, "z":1.55}}],
+        {"deformGroup":"headache_rack_light_R_break", "deformMaterialBase":"off_road_lights_glass_dmg", "deformMaterialDamaged":"off_road_lights_glass_dmg"},
+        ["oval_led_glass_taillight_R", ["md_series_aux_headache_rack"],[],{"pos":{"x":-1.220, "y":0.660, "z":2.230}, "rot":{"x":180, "y":90, "z":0}, "scale":{"x":1.55, "y":1.55, "z":1.55}}],
+        {"deformGroup":""},
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.75},
+
+         //--HEADACHE RACK--
+         {"group":["md_series_upfitColide","md_series_aux_headache_rack"]},
+
+         //168kg
+
+         //main shape
+         {"nodeWeight":6.4},
+         ["auxhr1ll", 1.188,0.6442, 1.09],
+         ["auxhr1l",  0.434,0.6442, 0.95, {"selfCollision":false}],
+         ["auxhr1r", -0.434,0.6442, 0.95, {"selfCollision":false}],
+         ["auxhr1rr",-1.188,0.6442, 1.09],
+
+         ["auxhr11l",  0.434,1.1362, 0.95, {"selfCollision":false}],
+         ["auxhr11r", -0.434,1.1362, 0.95, {"selfCollision":false}],
+
+         ["auxhr2ll", 1.188,0.6442, 1.4974],
+         ["auxhr2l",  0.434,0.6442, 1.4974],
+         ["auxhr2r", -0.434,0.6442, 1.4974],
+         ["auxhr2rr",-1.188,0.6442, 1.4974],
+
+         ["auxhr3ll", 1.188,0.6442, 1.9776],
+         ["auxhr3l",  0.434,0.6442, 1.9776],
+         ["auxhr3r", -0.434,0.6442, 1.9776],
+         ["auxhr3rr",-1.188,0.6442, 1.9776],
+
+         ["auxhr4ll", 1.188,0.6442, 2.385],
+         ["auxhr4l",  0.434,0.6442, 2.385],
+         ["auxhr4r", -0.434,0.6442, 2.385],
+         ["auxhr4rr",-1.188,0.6442, 2.385],
+         //rigidifier
+         {"collision":false},
+         {"selfCollision":false},
+         {"group":""},
+         ["auxhr0", 0, 1.7002, 1.657],
+    ],
+    "slidenodes": [
+         ["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
+         ["auxhr1l", "AuxfRail1L", true, true, 0, 6400100, 301000, "FLT_MAX"],
+         ["auxhr1r", "AuxfRail1R", true, true, 0, 6400100, 301000, "FLT_MAX"],
+         ["auxhr11l","AuxfRail1L", true, true, 0, 6400100, 301000, "FLT_MAX"],
+         ["auxhr11r","AuxfRail1R", true, true, 0, 6400100, 301000, "FLT_MAX"],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+
+          //--HEADACHE RACK--
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //main shape
+          {"beamSpring":3601000, "beamDamp":1200},
+          {"beamDeform":95000, "beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":1.2},
+
+          //vertical
+          ["auxhr1ll", "auxhr2ll"],
+          ["auxhr2ll", "auxhr3ll"],
+          ["auxhr3ll", "auxhr4ll", {"deformGroup":"headache_rack_light_L_break", "deformationTriggerRatio":0.05}],
+
+          ["auxhr1l", "auxhr2l"],
+          ["auxhr2l", "auxhr3l"],
+          ["auxhr3l", "auxhr4l", {"deformGroup":"headache_rack_light_L_break", "deformationTriggerRatio":0.05}],
+
+          ["auxhr1r", "auxhr2r"],
+          ["auxhr2r", "auxhr3r"],
+          ["auxhr3r", "auxhr4r", {"deformGroup":"headache_rack_light_R_break", "deformationTriggerRatio":0.05}],
+
+          ["auxhr1rr", "auxhr2rr"],
+          ["auxhr2rr", "auxhr3rr"],
+          ["auxhr3rr", "auxhr4rr", {"deformGroup":"headache_rack_light_R_break", "deformationTriggerRatio":0.05}],
+
+          //hrorizontal
+          ["auxhr1ll","auxhr1l"],
+          ["auxhr1l", "auxhr1r"],
+          ["auxhr1rr","auxhr1r"],
+
+          ["auxhr2ll","auxhr2l"],
+          ["auxhr2l", "auxhr2r"],
+          ["auxhr2rr","auxhr2r"],
+
+          ["auxhr3ll","auxhr3l", {"deformGroup":"headache_rack_light_L_break", "deformationTriggerRatio":0.05}],
+          ["auxhr3l", "auxhr3r"],
+          ["auxhr3rr","auxhr3r", {"deformGroup":"headache_rack_light_R_break", "deformationTriggerRatio":0.05}],
+
+          ["auxhr4ll","auxhr4l", {"deformGroup":"headache_rack_light_L_break", "deformationTriggerRatio":0.05}],
+          ["auxhr4l", "auxhr4r"],
+          ["auxhr4rr","auxhr4r", {"deformGroup":"headache_rack_light_R_break", "deformationTriggerRatio":0.05}],
+
+          //supports
+          ["auxhr11l", "auxhr1l"],
+          ["auxhr11r", "auxhr1r"],
+
+          //crossing
+          {"deformLimitExpansion":""},
+          {"beamDeform":70000, "beamStrength":"FLT_MAX"},
+
+          ["auxhr1ll","auxhr2l"],
+          ["auxhr1l", "auxhr2r"],
+          ["auxhr1rr","auxhr2r"],
+
+          ["auxhr2ll","auxhr1l"],
+          ["auxhr2l", "auxhr1r"],
+          ["auxhr2rr","auxhr1r"],
+
+          ["auxhr2ll","auxhr3l"],
+          ["auxhr2l", "auxhr3r"],
+          ["auxhr2rr","auxhr3r"],
+
+          ["auxhr3ll","auxhr2l"],
+          ["auxhr3l", "auxhr2r"],
+          ["auxhr3rr","auxhr2r"],
+
+          ["auxhr3ll","auxhr4l", {"deformGroup":"headache_rack_light_L_break", "deformationTriggerRatio":0.05}],
+          ["auxhr3l", "auxhr4r"],
+          ["auxhr3rr","auxhr4r", {"deformGroup":"headache_rack_light_R_break", "deformationTriggerRatio":0.05}],
+
+          ["auxhr4ll","auxhr3l", {"deformGroup":"headache_rack_light_L_break", "deformationTriggerRatio":0.05}],
+          ["auxhr4l", "auxhr3r"],
+          ["auxhr4rr","auxhr3r", {"deformGroup":"headache_rack_light_R_break", "deformationTriggerRatio":0.05}],
+
+          ["auxhr11r","auxhr2r"],
+          ["auxhr11l","auxhr2l"],
+
+          //rigids
+          {"beamSpring":3601000, "beamDamp":1040},
+          {"beamDeform":50500, "beamStrength":"FLT_MAX"},
+
+          //vertical
+          ["auxhr1ll", "auxhr3ll"],
+          ["auxhr2ll", "auxhr4ll"],
+          ["auxhr1l", "auxhr3l"],
+          ["auxhr2l", "auxhr4l"],
+          ["auxhr1r", "auxhr3r"],
+          ["auxhr2r", "auxhr4r"],
+          ["auxhr1rr", "auxhr3rr"],
+          ["auxhr2rr", "auxhr4rr"],
+
+          //horizontal
+          ["auxhr1ll","auxhr1r"],
+          ["auxhr1rr","auxhr1l"],
+          ["auxhr2ll","auxhr2r"],
+          ["auxhr2rr","auxhr2l"],
+          ["auxhr3ll","auxhr3r"],
+          ["auxhr3rr","auxhr3l"],
+          ["auxhr4ll","auxhr4r"],
+          ["auxhr4rr","auxhr4l"],
+
+
+          //corner rigids
+          {"beamDeform":20000, "beamStrength":"FLT_MAX"},
+          ["auxhr11l","auxhr1ll"],
+          ["auxhr11l","auxhr1r"],
+
+          ["auxhr11r","auxhr1rr"],
+          ["auxhr11r","auxhr1l"],
+
+
+          //rigidifier
+          {"beamDeform":40000, "beamStrength":"FLT_MAX"},
+          ["auxhr0", "auxhr1ll"],
+          ["auxhr0", "auxhr1l"],
+          ["auxhr0", "auxhr1r"],
+          ["auxhr0", "auxhr1rr"],
+
+          ["auxhr0", "auxhr2ll"],
+          ["auxhr0", "auxhr2l"],
+          ["auxhr0", "auxhr2r"],
+          ["auxhr0", "auxhr2rr"],
+
+          ["auxhr0", "auxhr3ll", {"deformGroup":"headache_rack_light_L_break", "deformationTriggerRatio":0.05}],
+          ["auxhr0", "auxhr3l", {"deformGroup":"headache_rack_light_L_break", "deformationTriggerRatio":0.05}],
+          ["auxhr0", "auxhr3r", {"deformGroup":"headache_rack_light_R_break", "deformationTriggerRatio":0.05}],
+          ["auxhr0", "auxhr3rr", {"deformGroup":"headache_rack_light_R_break", "deformationTriggerRatio":0.05}],
+
+          ["auxhr0", "auxhr4ll", {"deformGroup":"headache_rack_light_L_break", "deformationTriggerRatio":0.05}],
+          ["auxhr0", "auxhr4l", {"deformGroup":"headache_rack_light_L_break", "deformationTriggerRatio":0.05}],
+          ["auxhr0", "auxhr4r", {"deformGroup":"headache_rack_light_R_break", "deformationTriggerRatio":0.05}],
+          ["auxhr0", "auxhr4rr", {"deformGroup":"headache_rack_light_R_break", "deformationTriggerRatio":0.05}],
+
+          ["auxhr0", "auxhr11l"],
+          ["auxhr0", "auxhr11r"],
+
+
+          //attach
+          {"beamSpring":2401000, "beamDamp":40},
+          {"deformLimitExpansion":1.2},
+          {"beamDeform":1201000, "beamStrength":601000},
+
+          {"breakGroup":"headache_rack_L"},
+          ["auxhr1l","mf1r"],
+          ["auxhr1l","mf2l"],
+          ["auxhr1l","mf11l"],
+          ["auxhr1ll","mf1r"],
+          ["auxhr1ll","mf2l"],
+          ["auxhr1ll","mf11l"],
+          ["auxhr11l","mf1r"],
+          ["auxhr11l","mf2l"],
+          ["auxhr11l","mf11l"],
+          ["auxhr2l","mf1r"],
+          ["auxhr2l","mf2l"],
+          ["auxhr2l","mf11l"],
+
+          {"breakGroup":"headache_rack_R"},
+          ["auxhr1r","mf1l"],
+          ["auxhr1r","mf2r"],
+          ["auxhr1r","mf11r"],
+          ["auxhr1rr","mf1l"],
+          ["auxhr1rr","mf2r"],
+          ["auxhr1rr","mf11r"],
+          ["auxhr11r","mf1l"],
+          ["auxhr11r","mf2r"],
+          ["auxhr11r","mf11r"],
+          ["auxhr2r","mf1l"],
+          ["auxhr2r","mf2r"],
+          ["auxhr2r","mf11r"],
+
+          {"breakGroup":""},
+          {"deformLimitExpansion":1.2},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+           ["id1:","id2:","id3:"],
+           {"dragCoef":2},
+           {"groundModel":"metal"},
+
+           //--HEADACHE RACK--
+           ["auxhr1rr","auxhr1r", "auxhr2rr"],
+           ["auxhr2rr","auxhr1r", "auxhr2r"],
+           ["auxhr1r", "auxhr1l", "auxhr2r"],
+           ["auxhr2r", "auxhr1l", "auxhr2l"],
+           ["auxhr1l", "auxhr1ll","auxhr2l"],
+           ["auxhr2l", "auxhr1ll","auxhr2ll"],
+
+           ["auxhr2rr","auxhr2r", "auxhr3rr"],
+           ["auxhr3rr","auxhr2r", "auxhr3r"],
+           ["auxhr2r", "auxhr2l", "auxhr3r"],
+           ["auxhr3r", "auxhr2l", "auxhr3l"],
+           ["auxhr2l", "auxhr2ll","auxhr3l"],
+           ["auxhr3l", "auxhr2ll","auxhr3ll"],
+
+           ["auxhr3rr","auxhr3r", "auxhr4rr"],
+           ["auxhr4rr","auxhr3r", "auxhr4r"],
+           ["auxhr3r", "auxhr3l", "auxhr4r"],
+           ["auxhr4r", "auxhr3l", "auxhr4l"],
+           ["auxhr3l", "auxhr3ll","auxhr4l"],
+           ["auxhr4l", "auxhr3ll","auxhr4ll"],
+
+           ["auxhr2l", "auxhr1l", "auxhr11l"],
+           ["auxhr1r", "auxhr2r", "auxhr11r"],
+    ],
+},
+"G_md_series_aux_headache_rack_extention": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Headache Rack Extension",
+        "value":200,
+    },
+    "slotType" : "G_md_series_aux_headache_rack_extention",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["md_series_logging_headache_rack_extention", ["md_series_aux_headache_rack"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"selfCollision":true},
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.75},
+
+         //--HEADACHE RACK--
+         {"group":["md_series_upfitColide","G_md_series_aux_headache_rack"]},
+         //main shape
+         {"nodeWeight":6.4},
+         ["auxhr5ll", 1.188,0.6442, 2.8085],
+         ["auxhr5rr",-1.188,0.6442, 2.8085],
+         {"collision":false},
+         {"selfCollision":false},
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+
+          //--HEADACHE RACK--
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //main shape
+          {"beamSpring":3601000, "beamDamp":400},
+          {"beamDeform":95000, "beamStrength":"FLT_MAX"},
+          {"deformLimitExpansion":1.2},
+
+          //vertical
+          ["auxhr4ll", "auxhr5ll"],
+          ["auxhr4rr", "auxhr5rr"],
+
+          //crossing
+          {"deformLimitExpansion":""},
+          {"beamDeform":70000, "beamStrength":"FLT_MAX"},
+
+          ["auxhr5ll","auxhr4l"],
+          ["auxhr5rr","auxhr3r"],
+          //rigids
+          {"beamSpring":3601000, "beamDamp":40},
+          {"beamDeform":50500, "beamStrength":"FLT_MAX"},
+
+          //vertical
+          ["auxhr3ll", "auxhr5ll"],
+          ["auxhr3rr", "auxhr5rr"],
+          //rigidifier
+          {"beamDeform":25000, "beamStrength":"FLT_MAX"},
+          ["auxhr0", "auxhr5ll"],
+          ["auxhr0", "auxhr5rr"],
+          {"deformLimitExpansion":1.2},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+           ["id1:","id2:","id3:"],
+           {"dragCoef":2},
+           {"groundModel":"metal"},
+
+           //--HEADACHE RACK--
+
+           ["auxhr5ll","auxhr4l", "auxhr4ll"],
+           ["auxhr5rr","auxhr4rr","auxhr4r"],
+    ],
+},
+}

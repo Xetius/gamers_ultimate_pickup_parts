@@ -1,0 +1,1164 @@
+{
+"G_pickup_bed_cargo_load_box_XL": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"1x Cargo Box XL Slot",
+        "value":0,
+    },
+    "slotType" : "G_pickup_bedextra_6x6",
+    "slots2":[
+        ["name",                      "allowTypes",                  "denyTypes", "default",                   "description"],
+        ["cargo_load_box_XL_A_90deg", ["cargo_load_box_XL_A_90deg"], [],          "cargo_load_box_XL_A_90deg", "Box Type",    {"coreSlot":true,"nodeMove":{"x":0, "y":1.12, "z":0.77},"variables":{"$dragCoef":15}}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        {"deformGroup":"cargo_load_box_xl_FrontStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_bed"],[],{"pos":{"x":0.0, "y":0.72, "z":0.77}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":"cargo_load_box_xl_RearStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_bed"],[],{"pos":{"x":0.0, "y":1.52, "z":0.77}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":""},
+   ],
+   "beams": [
+       ["id1:",   "id2:"],
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":35000,"beamStrength":35000},
+       {"breakGroup":"cargo_load_box_xl_FrontStrap"}
+       {"deformGroup":"cargo_load_box_xl_FrontStrap"}
+       ["box_A_0",  "bd6ll"],
+       ["box_A_0",  "bd7ll"],
+       ["box_A_0",  "bd12ll"],
+       ["box_A_4",  "bd12ll"],
+       ["box_A_4",  "bd7ll"],
+       ["box_A_4",  "bd7rr"],
+       ["box_A_4",  "bd12rr"],
+       ["box_A_2",  "bd12rr"],
+       ["box_A_2",  "bd7rr"],
+       ["box_A_2",  "bd6rr"],
+       {"breakGroup":"cargo_load_box_xl_RearStrap"}
+       {"deformGroup":"cargo_load_box_xl_RearStrap"}
+       ["box_A_15", "bd12ll"],
+       ["box_A_15", "bd13ll"],
+       ["box_A_15", "bd7ll"],
+       ["box_A_7",  "bd13ll"],
+       ["box_A_7",  "bd12ll"],
+       ["box_A_7",  "bd12rr"],
+       ["box_A_7",  "bd13rr"],
+       ["box_A_9",  "bd12rr"],
+       ["box_A_9",  "bd13rr"],
+       ["box_A_9",  "bd7rr"],
+
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+       {"breakGroup":""}
+       {"deformGroup":""}
+   ],
+},
+
+"G_pickup_bed_cargo_load_box_XL_tiny": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"1x Cargo Box XL Slot",
+        "value":0,
+    },
+    "slotType" : ["G_pickup_bedextra_tiny", "G_pickup_bedextra_6x6_tiny"],
+    "slots2":[
+        ["name",                      "allowTypes",                  "denyTypes", "default",                   "description"],
+        ["cargo_load_box_XL_A_90deg", ["cargo_load_box_XL_A_90deg"], [],          "cargo_load_box_XL_A_90deg", "Box Type",    {"coreSlot":true,"nodeMove":{"x":0, "y":1.67, "z":0.77},"variables":{"$dragCoef":15}}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        {"deformGroup":"cargo_load_box_xl_FrontStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_bed"],[],{"pos":{"x":0.0, "y":1.27, "z":0.77}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":"cargo_load_box_xl_RearStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_bed"],[],{"pos":{"x":0.0, "y":2.07, "z":0.77}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":""},
+   ],
+   "beams": [
+       ["id1:",   "id2:"],
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":35000,"beamStrength":35000},
+       {"breakGroup":"cargo_load_box_xl_FrontStrap"}
+       {"deformGroup":"cargo_load_box_xl_FrontStrap"}
+       ["box_A_0",  "bd6ll"],
+       ["box_A_0",  "bd8ll"],
+       ["box_A_0",  "bd12ll"],
+       ["box_A_4",  "bd12ll"],
+       ["box_A_4",  "bd8ll"],
+       ["box_A_4",  "bd8rr"],
+       ["box_A_4",  "bd12rr"],
+       ["box_A_2",  "bd12rr"],
+       ["box_A_2",  "bd8rr"],
+       ["box_A_2",  "bd6rr"],
+       {"breakGroup":"cargo_load_box_xl_RearStrap"}
+       {"deformGroup":"cargo_load_box_xl_RearStrap"}
+       ["box_A_15", "bd12ll"],
+       ["box_A_15", "bd13ll"],
+       ["box_A_15", "bd8ll"],
+       ["box_A_7",  "bd13ll"],
+       ["box_A_7",  "bd12ll"],
+       ["box_A_7",  "bd12rr"],
+       ["box_A_7",  "bd13rr"],
+       ["box_A_9",  "bd12rr"],
+       ["box_A_9",  "bd13rr"],
+       ["box_A_9",  "bd8rr"],
+
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+       {"breakGroup":""}
+       {"deformGroup":""}
+   ],
+},
+
+"G_pickup_bed_cargo_load_box_XL_4L": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"1x Cargo Box XL Slot + 4x Cargo Load Box L",
+        "value":0,
+    },
+    "slotType" : "G_pickup_bedextra_6x6",
+    "slots2":[
+        ["name",                      "allowTypes",                  "denyTypes", "default",                   "description"],
+        ["cargo_load_box_XL_A_90deg", ["cargo_load_box_XL_A_90deg"], [],          "cargo_load_box_XL_A_90deg", "Box A Type",  {"coreSlot":true,"nodeMove":{"x":0, "y":1.12, "z":0.77},"variables":{"$dragCoef":7.5}}],
+        ["cargo_load_box_L_B",        ["cargo_load_box_L_B"],        [],          "cargo_load_box_L_B",        "Cargo Box B", {"coreSlot":true,"nodeMove":{"x": 0.31, "y":2.10, "z":0.77},"variables":{"$dragCoef":0}}],
+        ["cargo_load_box_L_C",        ["cargo_load_box_L_C"],        [],          "cargo_load_box_L_C",        "Cargo Box C", {"coreSlot":true,"nodeMove":{"x":-0.31, "y":2.10, "z":0.77},"variables":{"$dragCoef":0}}],
+        ["cargo_load_box_L_D",        ["cargo_load_box_L_D"],        [],          "cargo_load_box_L_D",        "Cargo Box D", {"coreSlot":true,"nodeMove":{"x": 0.31, "y":2.10, "z":1.27},"variables":{"$dragCoef":0}}],
+        ["cargo_load_box_L_E",        ["cargo_load_box_L_E"],        [],          "cargo_load_box_L_E",        "Cargo Box E", {"coreSlot":true,"nodeMove":{"x":-0.31, "y":2.10, "z":1.27},"variables":{"$dragCoef":0}}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        {"deformGroup":"cargo_load_box_xl_FrontStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_bed"],[],{"pos":{"x":0.0, "y":0.72, "z":0.77}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":"cargo_load_box_xl_RearStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_bed"],[],{"pos":{"x":0.0, "y":1.52, "z":0.77}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+
+        {"deformGroup":"box_B__crate_Strap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_B"],[],{"pos":{"x":0.31, "y":2.10, "z":0.78}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.57, "y":0.60, "z":0.51}}],
+        ["woodplanks_straps_boxutility_small", ["box_D"],[],{"pos":{"x":0.31, "y":2.10, "z":0.78}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.57, "y":0.60, "z":1.01}}],
+        {"deformGroup":"box_C__crate_Strap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_C"],[],{"pos":{"x":-0.31, "y":2.10, "z":0.78}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.57, "y":0.60, "z":0.51}}],
+        ["woodplanks_straps_boxutility_small", ["box_E"],[],{"pos":{"x":-0.31, "y":2.10, "z":0.78}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.57, "y":0.60, "z":1.01}}],
+        {"deformGroup":""},
+   ],
+   "beams": [
+       ["id1:",   "id2:"],
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":35000,"beamStrength":35000},
+       {"breakGroup":"cargo_load_box_xl_FrontStrap"}
+       {"deformGroup":"cargo_load_box_xl_FrontStrap"}
+       ["box_A_0",  "bd6ll"],
+       ["box_A_0",  "bd7ll"],
+       ["box_A_0",  "bd12ll"],
+       ["box_A_4",  "bd12ll"],
+       ["box_A_4",  "bd7ll"],
+       ["box_A_4",  "bd7rr"],
+       ["box_A_4",  "bd12rr"],
+       ["box_A_2",  "bd12rr"],
+       ["box_A_2",  "bd7rr"],
+       ["box_A_2",  "bd6rr"],
+       {"breakGroup":"cargo_load_box_xl_RearStrap"}
+       {"deformGroup":"cargo_load_box_xl_RearStrap"}
+       ["box_A_15", "bd12ll"],
+       ["box_A_15", "bd13ll"],
+       ["box_A_15", "bd7ll"],
+       ["box_A_7",  "bd13ll"],
+       ["box_A_7",  "bd12ll"],
+       ["box_A_7",  "bd12rr"],
+       ["box_A_7",  "bd13rr"],
+       ["box_A_9",  "bd12rr"],
+       ["box_A_9",  "bd13rr"],
+       ["box_A_9",  "bd7rr"],
+
+       //attach straps M cargo Box R
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":22000,"beamStrength":19000},
+       {"breakGroup":"box_B__crate_Strap"}
+       {"deformGroup":"box_B__crate_Strap"}
+       ["box_B_14", "bd7ll"],
+       ["box_B_14", "bd8ll"],
+       ["box_B_14", "bd9ll"],
+       ["box_B_8",  "bd7ll"],
+       ["box_B_8",  "bd8ll"],
+       ["box_B_8",  "bd9ll"],
+       ["box_B_5",  "bd7ll"],
+       ["box_B_5",  "bd8ll"],
+       ["box_B_5",  "bd9ll"],
+       ["box_B_7",  "bd7rr"],
+       ["box_B_7",  "bd8rr"],
+       ["box_B_7",  "bd9rr"],
+       ["box_B_12", "bd7rr"],
+       ["box_B_12", "bd8rr"],
+       ["box_B_12", "bd9rr"],
+       //attach straps M cargo Box L
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":220000,"beamStrength":19000},
+       {"breakGroup":"box_C__crate_Strap"}
+       {"deformGroup":"box_C__crate_Strap"}
+       ["box_C_14", "bd7ll"],
+       ["box_C_14", "bd8ll"],
+       ["box_C_14", "bd9ll"],
+       ["box_C_8",  "bd7rr"],
+       ["box_C_8",  "bd8rr"],
+       ["box_C_8",  "bd9rr"],
+       ["box_C_5",  "bd7ll"],
+       ["box_C_5",  "bd8ll"],
+       ["box_C_5",  "bd9ll"],
+       ["box_C_7",  "bd7rr"],
+       ["box_C_7",  "bd8rr"],
+       ["box_C_7",  "bd9rr"],
+       ["box_C_12", "bd7rr"],
+       ["box_C_12", "bd8rr"],
+       ["box_C_12", "bd9rr"],
+       //attach straps M cargo Box R
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":22000,"beamStrength":19000},
+       {"breakGroup":"box_B__crate_Strap"}
+       {"deformGroup":"box_B__crate_Strap"}
+       ["box_D_14", "bd12ll"],
+       ["box_D_14", "bd13ll"],
+       ["box_D_14", "bd14ll"],
+       ["box_D_8",  "bd12ll"],
+       ["box_D_8",  "bd13ll"],
+       ["box_D_8",  "bd14ll"],
+       ["box_D_5",  "bd12ll"],
+       ["box_D_5",  "bd13ll"],
+       ["box_D_5",  "bd14ll"],
+       ["box_D_7",  "bd12rr"],
+       ["box_D_7",  "bd13rr"],
+       ["box_D_7",  "bd14rr"],
+       ["box_D_12", "bd12rr"],
+       ["box_D_12", "bd13rr"],
+       ["box_D_12", "bd14rr"],
+       //attach straps M cargo Box L
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":220000,"beamStrength":19000},
+       {"breakGroup":"box_C__crate_Strap"}
+       {"deformGroup":"box_C__crate_Strap"}
+       ["box_E_14", "bd12ll"],
+       ["box_E_14", "bd13ll"],
+       ["box_E_14", "bd14ll"],
+       ["box_E_8",  "bd12rr"],
+       ["box_E_8",  "bd13rr"],
+       ["box_E_8",  "bd14rr"],
+       ["box_E_5",  "bd12ll"],
+       ["box_E_5",  "bd13ll"],
+       ["box_E_5",  "bd14ll"],
+       ["box_E_7",  "bd12rr"],
+       ["box_E_7",  "bd13rr"],
+       ["box_E_7",  "bd14rr"],
+       ["box_E_12", "bd12rr"],
+       ["box_E_12", "bd13rr"],
+       ["box_E_12", "bd14rr"],
+
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+       {"breakGroup":""}
+       {"deformGroup":""}
+   ],
+},
+
+"G_pickup_bed_cargo_load_box_XL_4L_tiny": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"1x Cargo Box XL Slot + 4x Cargo Load Box L",
+        "value":0,
+    },
+    "slotType" : "G_pickup_bedextra_6x6_tiny",
+    "slots2":[
+        ["name",                      "allowTypes",                  "denyTypes", "default",                   "description"],
+        ["cargo_load_box_XL_A_90deg", ["cargo_load_box_XL_A_90deg"], [],          "cargo_load_box_XL_A_90deg", "Box A Type",  {"coreSlot":true,"nodeMove":{"x":0, "y":1.67, "z":0.77},"variables":{"$dragCoef":7.5}}],
+        ["cargo_load_box_L_B",        ["cargo_load_box_L_B"],        [],          "cargo_load_box_L_B",        "Cargo Box B", {"coreSlot":true,"nodeMove":{"x": 0.31, "y":2.65, "z":0.77},"variables":{"$dragCoef":0}}],
+        ["cargo_load_box_L_C",        ["cargo_load_box_L_C"],        [],          "cargo_load_box_L_C",        "Cargo Box C", {"coreSlot":true,"nodeMove":{"x":-0.31, "y":2.65, "z":0.77},"variables":{"$dragCoef":0}}],
+        ["cargo_load_box_L_D",        ["cargo_load_box_L_D"],        [],          "cargo_load_box_L_D",        "Cargo Box D", {"coreSlot":true,"nodeMove":{"x": 0.31, "y":2.65, "z":1.27},"variables":{"$dragCoef":0}}],
+        ["cargo_load_box_L_E",        ["cargo_load_box_L_E"],        [],          "cargo_load_box_L_E",        "Cargo Box E", {"coreSlot":true,"nodeMove":{"x":-0.31, "y":2.65, "z":1.27},"variables":{"$dragCoef":0}}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        {"deformGroup":"cargo_load_box_xl_FrontStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_bed"],[],{"pos":{"x":0.0, "y":1.27, "z":0.77}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":"cargo_load_box_xl_RearStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_bed"],[],{"pos":{"x":0.0, "y":2.07, "z":0.77}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+
+        {"deformGroup":"box_B__crate_Strap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_B"],[],{"pos":{"x":0.31, "y":2.65, "z":0.78}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.57, "y":0.60, "z":0.51}}],
+        ["woodplanks_straps_boxutility_small", ["box_D"],[],{"pos":{"x":0.31, "y":2.65, "z":0.78}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.57, "y":0.60, "z":1.01}}],
+        {"deformGroup":"box_C__crate_Strap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_C"],[],{"pos":{"x":-0.31, "y":2.65, "z":0.78}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.57, "y":0.60, "z":0.51}}],
+        ["woodplanks_straps_boxutility_small", ["box_E"],[],{"pos":{"x":-0.31, "y":2.65, "z":0.78}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.57, "y":0.60, "z":1.01}}],
+        {"deformGroup":""},
+   ],
+   "beams": [
+       ["id1:",   "id2:"],
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":35000,"beamStrength":35000},
+       {"breakGroup":"cargo_load_box_xl_FrontStrap"}
+       {"deformGroup":"cargo_load_box_xl_FrontStrap"}
+       ["box_A_0",  "bd6ll"],
+       ["box_A_0",  "bd8ll"],
+       ["box_A_0",  "bd12ll"],
+       ["box_A_4",  "bd12ll"],
+       ["box_A_4",  "bd8ll"],
+       ["box_A_4",  "bd8rr"],
+       ["box_A_4",  "bd12rr"],
+       ["box_A_2",  "bd12rr"],
+       ["box_A_2",  "bd8rr"],
+       ["box_A_2",  "bd6rr"],
+       {"breakGroup":"cargo_load_box_xl_RearStrap"}
+       {"deformGroup":"cargo_load_box_xl_RearStrap"}
+       ["box_A_15", "bd12ll"],
+       ["box_A_15", "bd13ll"],
+       ["box_A_15", "bd8ll"],
+       ["box_A_7",  "bd13ll"],
+       ["box_A_7",  "bd12ll"],
+       ["box_A_7",  "bd12rr"],
+       ["box_A_7",  "bd13rr"],
+       ["box_A_9",  "bd12rr"],
+       ["box_A_9",  "bd13rr"],
+       ["box_A_9",  "bd8rr"],
+
+       //attach straps M cargo Box R
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":22000,"beamStrength":19000},
+       {"breakGroup":"box_B__crate_Strap"}
+       {"deformGroup":"box_B__crate_Strap"}
+       ["box_B_14", "bd6ll"],
+       ["box_B_14", "bd8ll"],
+       ["box_B_14", "bd9ll"],
+       ["box_B_8",  "bd6ll"],
+       ["box_B_8",  "bd8ll"],
+       ["box_B_8",  "bd9ll"],
+       ["box_B_5",  "bd6ll"],
+       ["box_B_5",  "bd8ll"],
+       ["box_B_5",  "bd9ll"],
+       ["box_B_7",  "bd6rr"],
+       ["box_B_7",  "bd8rr"],
+       ["box_B_7",  "bd9rr"],
+       ["box_B_12", "bd6rr"],
+       ["box_B_12", "bd8rr"],
+       ["box_B_12", "bd9rr"],
+       //attach straps M cargo Box L
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":220000,"beamStrength":19000},
+       {"breakGroup":"box_C__crate_Strap"}
+       {"deformGroup":"box_C__crate_Strap"}
+       ["box_C_14", "bd6ll"],
+       ["box_C_14", "bd8ll"],
+       ["box_C_14", "bd9ll"],
+       ["box_C_8",  "bd6rr"],
+       ["box_C_8",  "bd8rr"],
+       ["box_C_8",  "bd9rr"],
+       ["box_C_5",  "bd6ll"],
+       ["box_C_5",  "bd8ll"],
+       ["box_C_5",  "bd9ll"],
+       ["box_C_7",  "bd6rr"],
+       ["box_C_7",  "bd8rr"],
+       ["box_C_7",  "bd9rr"],
+       ["box_C_12", "bd6rr"],
+       ["box_C_12", "bd8rr"],
+       ["box_C_12", "bd9rr"],
+       //attach straps M cargo Box R
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":22000,"beamStrength":19000},
+       {"breakGroup":"box_B__crate_Strap"}
+       {"deformGroup":"box_B__crate_Strap"}
+       ["box_D_14", "bd8ll"],
+       ["box_D_14", "bd13ll"],
+       ["box_D_14", "bd14ll"],
+       ["box_D_8",  "bd8ll"],
+       ["box_D_8",  "bd13ll"],
+       ["box_D_8",  "bd14ll"],
+       ["box_D_5",  "bd8ll"],
+       ["box_D_5",  "bd13ll"],
+       ["box_D_5",  "bd14ll"],
+       ["box_D_7",  "bd8rr"],
+       ["box_D_7",  "bd13rr"],
+       ["box_D_7",  "bd14rr"],
+       ["box_D_12", "bd8rr"],
+       ["box_D_12", "bd13rr"],
+       ["box_D_12", "bd14rr"],
+       //attach straps M cargo Box L
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":220000,"beamStrength":19000},
+       {"breakGroup":"box_C__crate_Strap"}
+       {"deformGroup":"box_C__crate_Strap"}
+       ["box_E_14", "bd8ll"],
+       ["box_E_14", "bd13ll"],
+       ["box_E_14", "bd14ll"],
+       ["box_E_8",  "bd8rr"],
+       ["box_E_8",  "bd13rr"],
+       ["box_E_8",  "bd14rr"],
+       ["box_E_5",  "bd8ll"],
+       ["box_E_5",  "bd13ll"],
+       ["box_E_5",  "bd14ll"],
+       ["box_E_7",  "bd8rr"],
+       ["box_E_7",  "bd13rr"],
+       ["box_E_7",  "bd14rr"],
+       ["box_E_12", "bd8rr"],
+       ["box_E_12", "bd13rr"],
+       ["box_E_12", "bd14rr"],
+
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+       {"breakGroup":""}
+       {"deformGroup":""}
+   ],
+},
+
+"G_pickup_bed_long_cargo_load_box_2XL": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"2x Cargo Box XL Slot",
+        "value":0,
+    },
+    "slotType" : "G_pickup_bedextra_6x6",
+    "slots2":[
+        ["name",                      "allowTypes",                  "denyTypes", "default",                   "description"],
+        ["cargo_load_box_XL_A_90deg", ["cargo_load_box_XL_A_90deg"], [],          "cargo_load_box_XL_A_90deg", "Box A Type",  {"coreSlot":true,"nodeMove":{"x":0, "y":1.12, "z":0.77},"variables":{"$dragCoef":7.5}}],
+        ["cargo_load_box_XL_B_90deg", ["cargo_load_box_XL_B_90deg"], [],          "cargo_load_box_XL_B_90deg", "Box B Type",  {"coreSlot":true,"nodeMove":{"x":0, "y":2.35, "z":0.77},"variables":{"$dragCoef":7.5}}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        {"deformGroup":"cargo_load_box_xl_FrontStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_bed"],[],{"pos":{"x":0.0, "y":0.72, "z":0.77}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":"cargo_load_box_xl_RearStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_bed"],[],{"pos":{"x":0.0, "y":1.52, "z":0.77}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":"cargo_load_box_xl_two_FrontStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_B", "pickup_bed"],[],{"pos":{"x":0.0, "y":1.95, "z":0.77}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":"cargo_load_box_xl_two_RearStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_B", "pickup_bed"],[],{"pos":{"x":0.0, "y":2.75, "z":0.77}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":""},
+   ],
+   "beams": [
+       ["id1:",   "id2:"],
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":35000,"beamStrength":35000},
+       {"breakGroup":"cargo_load_box_xl_FrontStrap"}
+       {"deformGroup":"cargo_load_box_xl_FrontStrap"}
+       ["box_A_0",  "bd6ll"],
+       ["box_A_0",  "bd7ll"],
+       ["box_A_0",  "bd12ll"],
+       ["box_A_4",  "bd12ll"],
+       ["box_A_4",  "bd7ll"],
+       ["box_A_4",  "bd7rr"],
+       ["box_A_4",  "bd12rr"],
+       ["box_A_2",  "bd12rr"],
+       ["box_A_2",  "bd7rr"],
+       ["box_A_2",  "bd6rr"],
+       {"breakGroup":"cargo_load_box_xl_RearStrap"}
+       {"deformGroup":"cargo_load_box_xl_RearStrap"}
+       ["box_A_15", "bd12ll"],
+       ["box_A_15", "bd13ll"],
+       ["box_A_15", "bd7ll"],
+       ["box_A_7",  "bd13ll"],
+       ["box_A_7",  "bd12ll"],
+       ["box_A_7",  "bd12rr"],
+       ["box_A_7",  "bd13rr"],
+       ["box_A_9",  "bd12rr"],
+       ["box_A_9",  "bd13rr"],
+       ["box_A_9",  "bd7rr"],
+
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":35000,"beamStrength":35000},
+       {"breakGroup":"cargo_load_box_xl_two_FrontStrap"}
+       {"deformGroup":"cargo_load_box_xl_two_FrontStrap"}
+       ["box_B_0",  "bd12ll"],
+       ["box_B_0",  "bd13ll"],
+       ["box_B_0",  "bd7ll"],
+       ["box_B_4",  "bd13ll"],
+       ["box_B_4",  "bd12ll"],
+       ["box_B_4",  "bd12rr"],
+       ["box_B_4",  "bd13rr"],
+       ["box_B_2",  "bd12rr"],
+       ["box_B_2",  "bd13rr"],
+       ["box_B_2",  "bd7rr"],
+       {"breakGroup":"cargo_load_box_xl_two_RearStrap"}
+       {"deformGroup":"cargo_load_box_xl_two_RearStrap"}
+       ["box_B_15", "bd14ll"],
+       ["box_B_15", "bd13ll"],
+       ["box_B_15", "bd9ll"],
+       ["box_B_7",  "bd13ll"],
+       ["box_B_7",  "bd14ll"],
+       ["box_B_7",  "bd14rr"],
+       ["box_B_7",  "bd13rr"],
+       ["box_B_9",  "bd14rr"],
+       ["box_B_9",  "bd13rr"],
+       ["box_B_9",  "bd9rr"],
+
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+       {"breakGroup":""}
+       {"deformGroup":""}
+   ],
+},
+
+"G_pickup_flatbed_cargo_load_box_2XL": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"2x Cargo Box XL Slot",
+        "value":0,
+    },
+    "slotType" : "pickup_flatbed_extra",
+    "slots2":[
+        ["name",                      "allowTypes",                  "denyTypes", "default",                   "description"],
+        ["cargo_load_box_XL_A_90deg", ["cargo_load_box_XL_A_90deg"], [],          "cargo_load_box_XL_A_90deg", "Box Type",    {"coreSlot":true,"nodeMove":{"x":0, "y":1.12, "z":0.87},"variables":{"$dragCoef":15}}],
+        ["cargo_load_box_XL_B_90deg", ["cargo_load_box_XL_B_90deg"], [],          "cargo_load_box_XL_B_90deg", "Box Type",    {"coreSlot":true,"nodeMove":{"x":0, "y":2.35, "z":0.87},"variables":{"$dragCoef":15}}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        {"deformGroup":"cargo_load_box_xl_FrontStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":0.72, "z":0.87}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":"cargo_load_box_xl_RearStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":1.52, "z":0.87}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":"cargo_load_box_xl_two_FrontStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":1.95, "z":0.87}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":"cargo_load_box_xl_two_RearStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":2.75, "z":0.87}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":""},
+   ],
+   "beams": [
+       ["id1:",   "id2:"],
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":35000,"beamStrength":35000},
+       {"breakGroup":"cargo_load_box_xl_FrontStrap"}
+       {"deformGroup":"cargo_load_box_xl_FrontStrap"}
+       ["box_A_0",  "flb6ll"],
+       ["box_A_0",  "flb7ll"],
+       ["box_A_0",  "flb12ll"],
+       ["box_A_4",  "flb12ll"],
+       ["box_A_4",  "flb7ll"],
+       ["box_A_4",  "flb7rr"],
+       ["box_A_4",  "flb12rr"],
+       ["box_A_2",  "flb12rr"],
+       ["box_A_2",  "flb7rr"],
+       ["box_A_2",  "flb6rr"],
+       {"breakGroup":"cargo_load_box_xl_RearStrap"}
+       {"deformGroup":"cargo_load_box_xl_RearStrap"}
+       ["box_A_15", "flb12ll"],
+       ["box_A_15", "flb13ll"],
+       ["box_A_15", "flb7ll"],
+       ["box_A_7",  "flb13ll"],
+       ["box_A_7",  "flb12ll"],
+       ["box_A_7",  "flb12rr"],
+       ["box_A_7",  "flb13rr"],
+       ["box_A_9",  "flb12rr"],
+       ["box_A_9",  "flb13rr"],
+       ["box_A_9",  "flb7rr"],
+
+       {"breakGroup":"cargo_load_box_xl_two_FrontStrap"}
+       {"deformGroup":"cargo_load_box_xl_two_FrontStrap"}
+       ["box_B_0",  "flb6ll"],
+       ["box_B_0",  "flb7ll"],
+       ["box_B_0",  "flb12ll"],
+       ["box_B_4",  "flb12ll"],
+       ["box_B_4",  "flb7ll"],
+       ["box_B_4",  "flb7rr"],
+       ["box_B_4",  "flb12rr"],
+       ["box_B_2",  "flb12rr"],
+       ["box_B_2",  "flb7rr"],
+       ["box_B_2",  "flb6rr"],
+       {"breakGroup":"cargo_load_box_xl_two_RearStrap"}
+       {"deformGroup":"cargo_load_box_xl_two_RearStrap"}
+       ["box_B_15", "flb12ll"],
+       ["box_B_15", "flb13ll"],
+       ["box_B_15", "flb7ll"],
+       ["box_B_7",  "flb13ll"],
+       ["box_B_7",  "flb12ll"],
+       ["box_B_7",  "flb12rr"],
+       ["box_B_7",  "flb13rr"],
+       ["box_B_9",  "flb12rr"],
+       ["box_B_9",  "flb13rr"],
+       ["box_B_9",  "flb7rr"],
+
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+       {"breakGroup":""}
+       {"deformGroup":""}
+   ],
+},
+
+"G_pickup_flatbed_cargo_load_box_XL": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"1x Cargo Box XL Slot",
+        "value":0,
+    },
+    "slotType" : "G_pickup_flatbed_extra_6x6",
+    "slots2":[
+        ["name",                      "allowTypes",                  "denyTypes", "default",                   "description"],
+        ["cargo_load_box_XL_A_90deg", ["cargo_load_box_XL_A_90deg"], [],          "cargo_load_box_XL_A_90deg", "Box Type",    {"coreSlot":true,"nodeMove":{"x":0, "y":1.12, "z":0.87},"variables":{"$dragCoef":15}}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        {"deformGroup":"cargo_load_box_xl_FrontStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":0.72, "z":0.87}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":"cargo_load_box_xl_RearStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":1.52, "z":0.87}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":""},
+   ],
+   "beams": [
+       ["id1:",   "id2:"],
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":35000,"beamStrength":35000},
+       {"breakGroup":"cargo_load_box_xl_FrontStrap"}
+       {"deformGroup":"cargo_load_box_xl_FrontStrap"}
+       ["box_A_0",  "flb6ll"],
+       ["box_A_0",  "flb7ll"],
+       ["box_A_0",  "flb12ll"],
+       ["box_A_4",  "flb12ll"],
+       ["box_A_4",  "flb7ll"],
+       ["box_A_4",  "flb7rr"],
+       ["box_A_4",  "flb12rr"],
+       ["box_A_2",  "flb12rr"],
+       ["box_A_2",  "flb7rr"],
+       ["box_A_2",  "flb6rr"],
+       {"breakGroup":"cargo_load_box_xl_RearStrap"}
+       {"deformGroup":"cargo_load_box_xl_RearStrap"}
+       ["box_A_15", "flb12ll"],
+       ["box_A_15", "flb13ll"],
+       ["box_A_15", "flb7ll"],
+       ["box_A_7",  "flb13ll"],
+       ["box_A_7",  "flb12ll"],
+       ["box_A_7",  "flb12rr"],
+       ["box_A_7",  "flb13rr"],
+       ["box_A_9",  "flb12rr"],
+       ["box_A_9",  "flb13rr"],
+       ["box_A_9",  "flb7rr"],
+
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+       {"breakGroup":""}
+       {"deformGroup":""}
+   ],
+},
+
+"G_pickup_flatbed_cargo_load_box_XL_tiny": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"1x Cargo Box XL Slot",
+        "value":0,
+    },
+    "slotType" : ["G_pickup_flatbed_extra_tiny", "G_pickup_flatbed_extra_6x6_tiny"],
+    "slots2":[
+        ["name",                      "allowTypes",                  "denyTypes", "default",                   "description"],
+        ["cargo_load_box_XL_A_90deg", ["cargo_load_box_XL_A_90deg"], [],          "cargo_load_box_XL_A_90deg", "Box Type",    {"coreSlot":true,"nodeMove":{"x":0, "y":1.67, "z":0.87},"variables":{"$dragCoef":15}}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        {"deformGroup":"cargo_load_box_xl_FrontStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":1.27, "z":0.87}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":"cargo_load_box_xl_RearStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":2.07, "z":0.87}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":""},
+   ],
+   "beams": [
+       ["id1:",   "id2:"],
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":35000,"beamStrength":35000},
+       {"breakGroup":"cargo_load_box_xl_FrontStrap"}
+       {"deformGroup":"cargo_load_box_xl_FrontStrap"}
+       ["box_A_0",  "flb6ll"],
+       ["box_A_0",  "flb7ll"],
+       ["box_A_0",  "flb12ll"],
+       ["box_A_4",  "flb12ll"],
+       ["box_A_4",  "flb7ll"],
+       ["box_A_4",  "flb7rr"],
+       ["box_A_4",  "flb12rr"],
+       ["box_A_2",  "flb12rr"],
+       ["box_A_2",  "flb7rr"],
+       ["box_A_2",  "flb6rr"],
+       {"breakGroup":"cargo_load_box_xl_RearStrap"}
+       {"deformGroup":"cargo_load_box_xl_RearStrap"}
+       ["box_A_15", "flb12ll"],
+       ["box_A_15", "flb13ll"],
+       ["box_A_15", "flb7ll"],
+       ["box_A_7",  "flb13ll"],
+       ["box_A_7",  "flb12ll"],
+       ["box_A_7",  "flb12rr"],
+       ["box_A_7",  "flb13rr"],
+       ["box_A_9",  "flb12rr"],
+       ["box_A_9",  "flb13rr"],
+       ["box_A_9",  "flb7rr"],
+
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+       {"breakGroup":""}
+       {"deformGroup":""}
+   ],
+},
+
+"G_pickup_flatbed_cargo_load_box_XL_4L": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"1x Cargo Box XL Slot + 4x Cargo Load Box L",
+        "value":0,
+    },
+    "slotType" : "G_pickup_flatbed_extra_6x6",
+    "slots2":[
+        ["name",                      "allowTypes",                  "denyTypes", "default",                   "description"],
+        ["cargo_load_box_XL_A_90deg", ["cargo_load_box_XL_A_90deg"], [],          "cargo_load_box_XL_A_90deg", "Box A Type",  {"coreSlot":true,"nodeMove":{"x":0, "y":1.12, "z":0.87},"variables":{"$dragCoef":7.5}}],
+        ["cargo_load_box_L_B",        ["cargo_load_box_L_B"],        [],          "cargo_load_box_L_B",        "Cargo Box B", {"coreSlot":true,"nodeMove":{"x": 0.31, "y":2.10, "z":0.87},"variables":{"$dragCoef":0}}],
+        ["cargo_load_box_L_C",        ["cargo_load_box_L_C"],        [],          "cargo_load_box_L_C",        "Cargo Box C", {"coreSlot":true,"nodeMove":{"x":-0.31, "y":2.10, "z":0.87},"variables":{"$dragCoef":0}}],
+        ["cargo_load_box_L_D",        ["cargo_load_box_L_D"],        [],          "cargo_load_box_L_D",        "Cargo Box D", {"coreSlot":true,"nodeMove":{"x": 0.31, "y":2.10, "z":1.37},"variables":{"$dragCoef":0}}],
+        ["cargo_load_box_L_E",        ["cargo_load_box_L_E"],        [],          "cargo_load_box_L_E",        "Cargo Box E", {"coreSlot":true,"nodeMove":{"x":-0.31, "y":2.10, "z":1.37},"variables":{"$dragCoef":0}}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        {"deformGroup":"cargo_load_box_xl_FrontStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":0.72, "z":0.87}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":"cargo_load_box_xl_RearStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":1.52, "z":0.87}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+
+        {"deformGroup":"box_B__crate_Strap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_B"],[],{"pos":{"x":0.31, "y":2.10, "z":0.88}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.57, "y":0.60, "z":0.51}}],
+        ["woodplanks_straps_boxutility_small", ["box_D"],[],{"pos":{"x":0.31, "y":2.10, "z":0.88}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.57, "y":0.60, "z":1.01}}],
+        {"deformGroup":"box_C__crate_Strap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_C"],[],{"pos":{"x":-0.31, "y":2.10, "z":0.88}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.57, "y":0.60, "z":0.51}}],
+        ["woodplanks_straps_boxutility_small", ["box_E"],[],{"pos":{"x":-0.31, "y":2.10, "z":0.88}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.57, "y":0.60, "z":1.01}}],
+        {"deformGroup":""},
+   ],
+   "beams": [
+       ["id1:",   "id2:"],
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":35000,"beamStrength":35000},
+       {"breakGroup":"cargo_load_box_xl_FrontStrap"}
+       {"deformGroup":"cargo_load_box_xl_FrontStrap"}
+       ["box_A_0",  "flb6ll"],
+       ["box_A_0",  "flb7ll"],
+       ["box_A_0",  "flb12ll"],
+       ["box_A_4",  "flb12ll"],
+       ["box_A_4",  "flb7ll"],
+       ["box_A_4",  "flb7rr"],
+       ["box_A_4",  "flb12rr"],
+       ["box_A_2",  "flb12rr"],
+       ["box_A_2",  "flb7rr"],
+       ["box_A_2",  "flb6rr"],
+       {"breakGroup":"cargo_load_box_xl_RearStrap"}
+       {"deformGroup":"cargo_load_box_xl_RearStrap"}
+       ["box_A_15", "flb12ll"],
+       ["box_A_15", "flb13ll"],
+       ["box_A_15", "flb7ll"],
+       ["box_A_7",  "flb13ll"],
+       ["box_A_7",  "flb12ll"],
+       ["box_A_7",  "flb12rr"],
+       ["box_A_7",  "flb13rr"],
+       ["box_A_9",  "flb12rr"],
+       ["box_A_9",  "flb13rr"],
+       ["box_A_9",  "flb7rr"],
+
+       //attach straps M cargo Box R
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":22000,"beamStrength":19000},
+       {"breakGroup":"box_B__crate_Strap"}
+       {"deformGroup":"box_B__crate_Strap"}
+       ["box_B_14", "flb7ll"],
+       ["box_B_14", "flb8ll"],
+       ["box_B_14", "flb9ll"],
+       ["box_B_8",  "flb7ll"],
+       ["box_B_8",  "flb8ll"],
+       ["box_B_8",  "flb9ll"],
+       ["box_B_5",  "flb7ll"],
+       ["box_B_5",  "flb8ll"],
+       ["box_B_5",  "flb9ll"],
+       ["box_B_7",  "flb7rr"],
+       ["box_B_7",  "flb8rr"],
+       ["box_B_7",  "flb9rr"],
+       ["box_B_12", "flb7rr"],
+       ["box_B_12", "flb8rr"],
+       ["box_B_12", "flb9rr"],
+       //attach straps M cargo Box L
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":220000,"beamStrength":19000},
+       {"breakGroup":"box_C__crate_Strap"}
+       {"deformGroup":"box_C__crate_Strap"}
+       ["box_C_14", "flb7ll"],
+       ["box_C_14", "flb8ll"],
+       ["box_C_14", "flb9ll"],
+       ["box_C_8",  "flb7rr"],
+       ["box_C_8",  "flb8rr"],
+       ["box_C_8",  "flb9rr"],
+       ["box_C_5",  "flb7ll"],
+       ["box_C_5",  "flb8ll"],
+       ["box_C_5",  "flb9ll"],
+       ["box_C_7",  "flb7rr"],
+       ["box_C_7",  "flb8rr"],
+       ["box_C_7",  "flb9rr"],
+       ["box_C_12", "flb7rr"],
+       ["box_C_12", "flb8rr"],
+       ["box_C_12", "flb9rr"],
+       //attach straps M cargo Box R
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":22000,"beamStrength":19000},
+       {"breakGroup":"box_B__crate_Strap"}
+       {"deformGroup":"box_B__crate_Strap"}
+       ["box_D_14", "flb12ll"],
+       ["box_D_14", "flb13ll"],
+       ["box_D_14", "flb14ll"],
+       ["box_D_8",  "flb12ll"],
+       ["box_D_8",  "flb13ll"],
+       ["box_D_8",  "flb14ll"],
+       ["box_D_5",  "flb12ll"],
+       ["box_D_5",  "flb13ll"],
+       ["box_D_5",  "flb14ll"],
+       ["box_D_7",  "flb12rr"],
+       ["box_D_7",  "flb13rr"],
+       ["box_D_7",  "flb14rr"],
+       ["box_D_12", "flb12rr"],
+       ["box_D_12", "flb13rr"],
+       ["box_D_12", "flb14rr"],
+       //attach straps M cargo Box L
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":220000,"beamStrength":19000},
+       {"breakGroup":"box_C__crate_Strap"}
+       {"deformGroup":"box_C__crate_Strap"}
+       ["box_E_14", "flb12ll"],
+       ["box_E_14", "flb13ll"],
+       ["box_E_14", "flb14ll"],
+       ["box_E_8",  "flb12rr"],
+       ["box_E_8",  "flb13rr"],
+       ["box_E_8",  "flb14rr"],
+       ["box_E_5",  "flb12ll"],
+       ["box_E_5",  "flb13ll"],
+       ["box_E_5",  "flb14ll"],
+       ["box_E_7",  "flb12rr"],
+       ["box_E_7",  "flb13rr"],
+       ["box_E_7",  "flb14rr"],
+       ["box_E_12", "flb12rr"],
+       ["box_E_12", "flb13rr"],
+       ["box_E_12", "flb14rr"],
+
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+       {"breakGroup":""}
+       {"deformGroup":""}
+   ],
+},
+
+"G_pickup_flatbed_cargo_load_box_XL_4L_tiny": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"1x Cargo Box XL Slot + 4x Cargo Load Box L",
+        "value":0,
+    },
+    "slotType" : "G_pickup_flatbed_extra_6x6_tiny",
+    "slots2":[
+        ["name",                      "allowTypes",                  "denyTypes", "default",                   "description"],
+        ["cargo_load_box_XL_A_90deg", ["cargo_load_box_XL_A_90deg"], [],          "cargo_load_box_XL_A_90deg", "Box A Type",  {"coreSlot":true,"nodeMove":{"x":0, "y":1.67, "z":0.87},"variables":{"$dragCoef":7.5}}],
+        ["cargo_load_box_L_B",        ["cargo_load_box_L_B"],        [],          "cargo_load_box_L_B",        "Cargo Box B", {"coreSlot":true,"nodeMove":{"x": 0.31, "y":2.65, "z":0.87},"variables":{"$dragCoef":0}}],
+        ["cargo_load_box_L_C",        ["cargo_load_box_L_C"],        [],          "cargo_load_box_L_C",        "Cargo Box C", {"coreSlot":true,"nodeMove":{"x":-0.31, "y":2.65, "z":0.87},"variables":{"$dragCoef":0}}],
+        ["cargo_load_box_L_D",        ["cargo_load_box_L_D"],        [],          "cargo_load_box_L_D",        "Cargo Box D", {"coreSlot":true,"nodeMove":{"x": 0.31, "y":2.65, "z":1.37},"variables":{"$dragCoef":0}}],
+        ["cargo_load_box_L_E",        ["cargo_load_box_L_E"],        [],          "cargo_load_box_L_E",        "Cargo Box E", {"coreSlot":true,"nodeMove":{"x":-0.31, "y":2.65, "z":1.37},"variables":{"$dragCoef":0}}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        {"deformGroup":"cargo_load_box_xl_FrontStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":1.27, "z":0.87}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":"cargo_load_box_xl_RearStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":2.07, "z":0.87}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+
+        {"deformGroup":"box_B__crate_Strap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_B"],[],{"pos":{"x":0.31, "y":2.65, "z":0.88}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.57, "y":0.60, "z":0.51}}],
+        ["woodplanks_straps_boxutility_small", ["box_D"],[],{"pos":{"x":0.31, "y":2.65, "z":0.88}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.57, "y":0.60, "z":1.01}}],
+        {"deformGroup":"box_C__crate_Strap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_C"],[],{"pos":{"x":-0.31, "y":2.65, "z":0.88}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.57, "y":0.60, "z":0.51}}],
+        ["woodplanks_straps_boxutility_small", ["box_E"],[],{"pos":{"x":-0.31, "y":2.65, "z":0.88}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.57, "y":0.60, "z":1.01}}],
+        {"deformGroup":""},
+   ],
+   "beams": [
+       ["id1:",   "id2:"],
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":35000,"beamStrength":35000},
+       {"breakGroup":"cargo_load_box_xl_FrontStrap"}
+       {"deformGroup":"cargo_load_box_xl_FrontStrap"}
+       ["box_A_0",  "flb6ll"],
+       ["box_A_0",  "flb7ll"],
+       ["box_A_0",  "flb12ll"],
+       ["box_A_4",  "flb12ll"],
+       ["box_A_4",  "flb7ll"],
+       ["box_A_4",  "flb7rr"],
+       ["box_A_4",  "flb12rr"],
+       ["box_A_2",  "flb12rr"],
+       ["box_A_2",  "flb7rr"],
+       ["box_A_2",  "flb6rr"],
+       {"breakGroup":"cargo_load_box_xl_RearStrap"}
+       {"deformGroup":"cargo_load_box_xl_RearStrap"}
+       ["box_A_15", "flb12ll"],
+       ["box_A_15", "flb13ll"],
+       ["box_A_15", "flb7ll"],
+       ["box_A_7",  "flb13ll"],
+       ["box_A_7",  "flb12ll"],
+       ["box_A_7",  "flb12rr"],
+       ["box_A_7",  "flb13rr"],
+       ["box_A_9",  "flb12rr"],
+       ["box_A_9",  "flb13rr"],
+       ["box_A_9",  "flb7rr"],
+
+       //attach straps M cargo Box R
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":22000,"beamStrength":19000},
+       {"breakGroup":"box_B__crate_Strap"}
+       {"deformGroup":"box_B__crate_Strap"}
+       ["box_B_14", "flb7ll"],
+       ["box_B_14", "flb8ll"],
+       ["box_B_14", "flb9ll"],
+       ["box_B_8",  "flb7ll"],
+       ["box_B_8",  "flb8ll"],
+       ["box_B_8",  "flb9ll"],
+       ["box_B_5",  "flb7ll"],
+       ["box_B_5",  "flb8ll"],
+       ["box_B_5",  "flb9ll"],
+       ["box_B_7",  "flb7rr"],
+       ["box_B_7",  "flb8rr"],
+       ["box_B_7",  "flb9rr"],
+       ["box_B_12", "flb7rr"],
+       ["box_B_12", "flb8rr"],
+       ["box_B_12", "flb9rr"],
+       //attach straps M cargo Box L
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":220000,"beamStrength":19000},
+       {"breakGroup":"box_C__crate_Strap"}
+       {"deformGroup":"box_C__crate_Strap"}
+       ["box_C_14", "flb7ll"],
+       ["box_C_14", "flb8ll"],
+       ["box_C_14", "flb9ll"],
+       ["box_C_8",  "flb7rr"],
+       ["box_C_8",  "flb8rr"],
+       ["box_C_8",  "flb9rr"],
+       ["box_C_5",  "flb7ll"],
+       ["box_C_5",  "flb8ll"],
+       ["box_C_5",  "flb9ll"],
+       ["box_C_7",  "flb7rr"],
+       ["box_C_7",  "flb8rr"],
+       ["box_C_7",  "flb9rr"],
+       ["box_C_12", "flb7rr"],
+       ["box_C_12", "flb8rr"],
+       ["box_C_12", "flb9rr"],
+       //attach straps M cargo Box R
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":22000,"beamStrength":19000},
+       {"breakGroup":"box_B__crate_Strap"}
+       {"deformGroup":"box_B__crate_Strap"}
+       ["box_D_14", "flb12ll"],
+       ["box_D_14", "flb13ll"],
+       ["box_D_14", "flb14ll"],
+       ["box_D_8",  "flb12ll"],
+       ["box_D_8",  "flb13ll"],
+       ["box_D_8",  "flb14ll"],
+       ["box_D_5",  "flb12ll"],
+       ["box_D_5",  "flb13ll"],
+       ["box_D_5",  "flb14ll"],
+       ["box_D_7",  "flb12rr"],
+       ["box_D_7",  "flb13rr"],
+       ["box_D_7",  "flb14rr"],
+       ["box_D_12", "flb12rr"],
+       ["box_D_12", "flb13rr"],
+       ["box_D_12", "flb14rr"],
+       //attach straps M cargo Box L
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":220000,"beamStrength":19000},
+       {"breakGroup":"box_C__crate_Strap"}
+       {"deformGroup":"box_C__crate_Strap"}
+       ["box_E_14", "flb12ll"],
+       ["box_E_14", "flb13ll"],
+       ["box_E_14", "flb14ll"],
+       ["box_E_8",  "flb12rr"],
+       ["box_E_8",  "flb13rr"],
+       ["box_E_8",  "flb14rr"],
+       ["box_E_5",  "flb12ll"],
+       ["box_E_5",  "flb13ll"],
+       ["box_E_5",  "flb14ll"],
+       ["box_E_7",  "flb12rr"],
+       ["box_E_7",  "flb13rr"],
+       ["box_E_7",  "flb14rr"],
+       ["box_E_12", "flb12rr"],
+       ["box_E_12", "flb13rr"],
+       ["box_E_12", "flb14rr"],
+
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+       {"breakGroup":""}
+       {"deformGroup":""}
+   ],
+},
+
+"G_pickup_flatbed_cargo_load_box_2XL": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"2x Cargo Box XL Slot",
+        "value":0,
+    },
+    "slotType" : "G_pickup_flatbed_extra_6x6",
+    "slots2":[
+        ["name",                      "allowTypes",                  "denyTypes", "default",                   "description"],
+        ["cargo_load_box_XL_A_90deg", ["cargo_load_box_XL_A_90deg"], [],          "cargo_load_box_XL_A_90deg", "Box Type",    {"coreSlot":true,"nodeMove":{"x":0, "y":1.12, "z":0.87},"variables":{"$dragCoef":15}}],
+        ["cargo_load_box_XL_B_90deg", ["cargo_load_box_XL_B_90deg"], [],          "cargo_load_box_XL_B_90deg", "Box Type",    {"coreSlot":true,"nodeMove":{"x":0, "y":2.35, "z":0.87},"variables":{"$dragCoef":15}}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        {"deformGroup":"cargo_load_box_xl_FrontStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":0.72, "z":0.87}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":"cargo_load_box_xl_RearStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":1.52, "z":0.87}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":"cargo_load_box_xl_two_FrontStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":2.05, "z":0.87}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":"cargo_load_box_xl_two_RearStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":2.75, "z":0.87}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":""},
+   ],
+   "beams": [
+       ["id1:",   "id2:"],
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":35000,"beamStrength":35000},
+       {"breakGroup":"cargo_load_box_xl_FrontStrap"}
+       {"deformGroup":"cargo_load_box_xl_FrontStrap"}
+       ["box_A_0",  "flb6ll"],
+       ["box_A_0",  "flb7ll"],
+       ["box_A_0",  "flb12ll"],
+       ["box_A_4",  "flb12ll"],
+       ["box_A_4",  "flb7ll"],
+       ["box_A_4",  "flb7rr"],
+       ["box_A_4",  "flb12rr"],
+       ["box_A_2",  "flb12rr"],
+       ["box_A_2",  "flb7rr"],
+       ["box_A_2",  "flb6rr"],
+       {"breakGroup":"cargo_load_box_xl_RearStrap"}
+       {"deformGroup":"cargo_load_box_xl_RearStrap"}
+       ["box_A_15", "flb12ll"],
+       ["box_A_15", "flb13ll"],
+       ["box_A_15", "flb7ll"],
+       ["box_A_7",  "flb13ll"],
+       ["box_A_7",  "flb12ll"],
+       ["box_A_7",  "flb12rr"],
+       ["box_A_7",  "flb13rr"],
+       ["box_A_9",  "flb12rr"],
+       ["box_A_9",  "flb13rr"],
+       ["box_A_9",  "flb7rr"],
+
+       {"breakGroup":"cargo_load_box_xl_two_FrontStrap"}
+       {"deformGroup":"cargo_load_box_xl_two_FrontStrap"}
+       ["box_B_0",  "flb6ll"],
+       ["box_B_0",  "flb7ll"],
+       ["box_B_0",  "flb12ll"],
+       ["box_B_4",  "flb12ll"],
+       ["box_B_4",  "flb7ll"],
+       ["box_B_4",  "flb7rr"],
+       ["box_B_4",  "flb12rr"],
+       ["box_B_2",  "flb12rr"],
+       ["box_B_2",  "flb7rr"],
+       ["box_B_2",  "flb6rr"],
+       {"breakGroup":"cargo_load_box_xl_two_RearStrap"}
+       {"deformGroup":"cargo_load_box_xl_two_RearStrap"}
+       ["box_B_15", "flb12ll"],
+       ["box_B_15", "flb13ll"],
+       ["box_B_15", "flb7ll"],
+       ["box_B_7",  "flb13ll"],
+       ["box_B_7",  "flb12ll"],
+       ["box_B_7",  "flb12rr"],
+       ["box_B_7",  "flb13rr"],
+       ["box_B_9",  "flb12rr"],
+       ["box_B_9",  "flb13rr"],
+       ["box_B_9",  "flb7rr"],
+
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+       {"breakGroup":""}
+       {"deformGroup":""}
+   ],
+},
+
+"G_pickup_flatbed_cargo_load_box_2XL_tiny": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"2x Cargo Box XL Slot",
+        "value":0,
+    },
+    "slotType" : "G_pickup_flatbed_extra_6x6_tiny",
+    "slots2":[
+        ["name",                      "allowTypes",                  "denyTypes", "default",                   "description"],
+        ["cargo_load_box_XL_A_90deg", ["cargo_load_box_XL_A_90deg"], [],          "cargo_load_box_XL_A_90deg", "Box Type",    {"coreSlot":true,"nodeMove":{"x":0, "y":1.65, "z":0.87},"variables":{"$dragCoef":15}}],
+        ["cargo_load_box_XL_B_90deg", ["cargo_load_box_XL_B_90deg"], [],          "cargo_load_box_XL_B_90deg", "Box Type",    {"coreSlot":true,"nodeMove":{"x":0, "y":2.86, "z":0.87},"variables":{"$dragCoef":15}}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        {"deformGroup":"cargo_load_box_xl_FrontStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":1.25, "z":0.87}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":"cargo_load_box_xl_RearStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":2.05, "z":0.87}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":"cargo_load_box_xl_two_FrontStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":2.56, "z":0.87}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":"cargo_load_box_xl_two_RearStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["woodplanks_straps_boxutility_small", ["box_A", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":3.26, "z":0.87}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.0, "y":0.51, "z":1.02}}],
+        {"deformGroup":""},
+   ],
+   "beams": [
+       ["id1:",   "id2:"],
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+
+       {"beamSpring":1501000,"beamDamp":30},
+       {"beamDeform":35000,"beamStrength":35000},
+       {"breakGroup":"cargo_load_box_xl_FrontStrap"}
+       {"deformGroup":"cargo_load_box_xl_FrontStrap"}
+       ["box_A_0",  "flb6ll"],
+       ["box_A_0",  "flb7ll"],
+       ["box_A_0",  "flb12ll"],
+       ["box_A_4",  "flb12ll"],
+       ["box_A_4",  "flb7ll"],
+       ["box_A_4",  "flb7rr"],
+       ["box_A_4",  "flb12rr"],
+       ["box_A_2",  "flb12rr"],
+       ["box_A_2",  "flb7rr"],
+       ["box_A_2",  "flb6rr"],
+       {"breakGroup":"cargo_load_box_xl_RearStrap"}
+       {"deformGroup":"cargo_load_box_xl_RearStrap"}
+       ["box_A_15", "flb12ll"],
+       ["box_A_15", "flb13ll"],
+       ["box_A_15", "flb7ll"],
+       ["box_A_7",  "flb13ll"],
+       ["box_A_7",  "flb12ll"],
+       ["box_A_7",  "flb12rr"],
+       ["box_A_7",  "flb13rr"],
+       ["box_A_9",  "flb12rr"],
+       ["box_A_9",  "flb13rr"],
+       ["box_A_9",  "flb7rr"],
+
+       {"breakGroup":"cargo_load_box_xl_two_FrontStrap"}
+       {"deformGroup":"cargo_load_box_xl_two_FrontStrap"}
+       ["box_B_0",  "flb6ll"],
+       ["box_B_0",  "flb7ll"],
+       ["box_B_0",  "flb12ll"],
+       ["box_B_4",  "flb12ll"],
+       ["box_B_4",  "flb7ll"],
+       ["box_B_4",  "flb7rr"],
+       ["box_B_4",  "flb12rr"],
+       ["box_B_2",  "flb12rr"],
+       ["box_B_2",  "flb7rr"],
+       ["box_B_2",  "flb6rr"],
+       {"breakGroup":"cargo_load_box_xl_two_RearStrap"}
+       {"deformGroup":"cargo_load_box_xl_two_RearStrap"}
+       ["box_B_15", "flb12ll"],
+       ["box_B_15", "flb13ll"],
+       ["box_B_15", "flb7ll"],
+       ["box_B_7",  "flb13ll"],
+       ["box_B_7",  "flb12ll"],
+       ["box_B_7",  "flb12rr"],
+       ["box_B_7",  "flb13rr"],
+       ["box_B_9",  "flb12rr"],
+       ["box_B_9",  "flb13rr"],
+       ["box_B_9",  "flb7rr"],
+
+       {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+       {"breakGroup":""}
+       {"deformGroup":""}
+   ],
+},
+
+}

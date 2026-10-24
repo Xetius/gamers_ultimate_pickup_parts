@@ -1,0 +1,294 @@
+{
+"G_steelwheel_12a_19_5x6_75_F_reg": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"19.5x6.75 Steel Front Wheels (White)",
+        "value":800,
+    },
+    "slotType" : "wheel_F_8_alt",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_F_19_5","G_tire_02c_19.5x6.75_3_F","Front Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["steelwheel_12a_19.5x6.75_bare", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.56, "y":0.00, "z":0.00}, "rot":{"x":12, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["steelwheel_12a_19.5x6.75_bare", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.56, "y":0.00, "z":0.00}, "rot":{"x":-12, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+        ["steelwheel_12a_19.5x6.75_8lug", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.56, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["steelwheel_12a_19.5x6.75_8lug", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.56, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+        //spacers
+        ["G_spacer_heavy_alt", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.597, "y":0.0, "z":0.0}, "rot":{"x":-4, "y":0, "z":180}, "scale":{"x":1.3, "y":1.67, "z":1.67}}],
+        ["G_spacer_heavy_alt", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.597, "y":0.0, "z":0.0}, "rot":{"x":4, "y":0, "z":0}, "scale":{"x":1.3, "y":1.67, "z":1.67}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"collision":true},
+        {"selfCollision":true},
+        {"nodeWeight":5.0},
+        {"group":"wheelhub_FR"},
+        ["fw1r", -0.36, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1l", 0.36, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FR"},
+        ["fw1rr", -0.75, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1ll", 0.75, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"collision":true},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //hub
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":110000,"beamStrength":1400000},
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.262},
+        {"wheelOffset":-0.005},
+        {"hubWidth":0.225},
+        {"numRays":14},
+
+        //hub options
+        {"hubTreadBeamSpring":2001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":2001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":2351000, "hubSideBeamDamp":10},
+        {"hubBeamDeform":35000, "hubBeamStrength":115000},
+        {"hubNodeWeight":0.95},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_steelwheel_12a_19_5x6_75_F_alt_reg": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"19.5x6.75 Steel Front Wheels (Colored)",
+        "value":800,
+    },
+    "slotType" : "wheel_F_8_alt",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_F_19_5","G_tire_02c_19.5x6.75_3_F","Front Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["steelwheel_12a_19.5x6.75", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.56, "y":0.00, "z":0.00}, "rot":{"x":12, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["steelwheel_12a_19.5x6.75", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.56, "y":0.00, "z":0.00}, "rot":{"x":-12, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+        ["steelwheel_12a_19.5x6.75_8lug", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.56, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["steelwheel_12a_19.5x6.75_8lug", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.56, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+        //spacers
+        ["G_spacer_heavy_alt", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.597, "y":0.0, "z":0.0}, "rot":{"x":-4, "y":0, "z":180}, "scale":{"x":1.3, "y":1.67, "z":1.67}}],
+        ["G_spacer_heavy_alt", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.597, "y":0.0, "z":0.0}, "rot":{"x":4, "y":0, "z":0}, "scale":{"x":1.3, "y":1.67, "z":1.67}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"collision":true},
+        {"selfCollision":true},
+        {"nodeWeight":5.0},
+        {"group":"wheelhub_FR"},
+        ["fw1r", -0.36, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1l", 0.36, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FR"},
+        ["fw1rr", -0.75, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1ll", 0.75, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"collision":true},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //hub
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":110000,"beamStrength":1400000},
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.262},
+        {"wheelOffset":-0.005},
+        {"hubWidth":0.225},
+        {"numRays":14},
+
+        //hub options
+        {"hubTreadBeamSpring":2001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":2001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":2351000, "hubSideBeamDamp":10},
+        {"hubBeamDeform":35000, "hubBeamStrength":115000},
+        {"hubNodeWeight":0.95},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_steelwheel_06a_19_5x9_F_reg": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"19.5x9 Aluminium Front wheels",
+        "value":1100,
+    },
+    "slotType" : "wheel_F_8_alt",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_F_19_5","G_tire_02c_19.5x6.75_3_F","Front Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["steelwheel_06a_19.5x6.75_bare", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.56, "y":0.00, "z":0.00}, "rot":{"x":12, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["steelwheel_06a_19.5x6.75_bare", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.56, "y":0.00, "z":0.00}, "rot":{"x":-12, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+        ["steelwheel_06a_19.5x6.75_8lug", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.56, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["steelwheel_06a_19.5x6.75_8lug", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.56, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+        //spacers
+        ["G_spacer_heavy_alt", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.597, "y":0.0, "z":0.0}, "rot":{"x":-4, "y":0, "z":180}, "scale":{"x":1.3, "y":1.67, "z":1.67}}],
+        ["G_spacer_heavy_alt", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.597, "y":0.0, "z":0.0}, "rot":{"x":4, "y":0, "z":0}, "scale":{"x":1.3, "y":1.67, "z":1.67}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"collision":true},
+        {"selfCollision":true},
+        {"nodeWeight":5.0},
+        {"group":"wheelhub_FR"},
+        ["fw1r", -0.36, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1l", 0.36, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FR"},
+        ["fw1rr", -0.75, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1ll", 0.75, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"collision":true},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //hub
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":110000,"beamStrength":1400000},
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.262},
+        {"wheelOffset":-0.005},
+        {"hubWidth":0.225},
+        {"numRays":14},
+
+        //hub options
+        {"hubTreadBeamSpring":2001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":2001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":2351000, "hubSideBeamDamp":10},
+        {"hubBeamDeform":35000, "hubBeamStrength":115000},
+        {"hubNodeWeight":0.95},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+"G_steelwheel_06a_19_5x9_F_alt_reg": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"19.5x9 Aluminium Front wheels (Polished)",
+        "value":1300,
+    },
+    "slotType" : "wheel_F_8_alt",
+
+    "slots": [
+        ["type", "default", "description"],
+        ["G_tire_F_19_5","G_tire_02c_19.5x6.75_3_F","Front Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["steelwheel_06a_19.5x6.75", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.56, "y":0.00, "z":0.00}, "rot":{"x":12, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["steelwheel_06a_19.5x6.75", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.56, "y":0.00, "z":0.00}, "rot":{"x":-12, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+        ["steelwheel_06a_19.5x6.75_8lug", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.56, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["steelwheel_06a_19.5x6.75_8lug", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.56, "y":0.00, "z":0.00}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+        //spacers
+        ["G_spacer_heavy_alt", ["wheel_FR","wheelhub_FR"], [], {"pos":{"x":-0.597, "y":0.0, "z":0.0}, "rot":{"x":-4, "y":0, "z":180}, "scale":{"x":1.3, "y":1.67, "z":1.67}}],
+        ["G_spacer_heavy_alt", ["wheel_FL","wheelhub_FL"], [], {"pos":{"x": 0.597, "y":0.0, "z":0.0}, "rot":{"x":4, "y":0, "z":0}, "scale":{"x":1.3, "y":1.67, "z":1.67}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"collision":true},
+        {"selfCollision":true},
+        {"nodeWeight":5.0},
+        {"group":"wheelhub_FR"},
+        ["fw1r", -0.36, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1l", 0.36, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FR"},
+        ["fw1rr", -0.75, 0.0, 0.0, {"staticCollision":false}],
+        {"group":"wheelhub_FL"},
+        ["fw1ll", 0.75, 0.0, 0.0, {"staticCollision":false}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"collision":true},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        //hub
+        {"beamSpring":1501000,"beamDamp":25},
+        {"beamDeform":110000,"beamStrength":1400000},
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.262},
+        {"wheelOffset":-0.005},
+        {"hubWidth":0.225},
+        {"numRays":14},
+
+        //hub options
+        {"hubTreadBeamSpring":2001000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":2001000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":2351000, "hubSideBeamDamp":10},
+        {"hubBeamDeform":35000, "hubBeamStrength":115000},
+        {"hubNodeWeight":0.95},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+},
+}

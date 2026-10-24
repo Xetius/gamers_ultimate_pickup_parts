@@ -1,0 +1,530 @@
+{
+"G_md_series_driveshaft_R_0.4m": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Fixed Length Rear Driveshaft (0.4m)",
+        "value":550,
+    },
+    "slotType" : ["md_series_driveshaft_R_regCab_RWD", "md_series_driveshaft_R_extCab_RWD"],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //driveshaft
+        ["shaft", "driveshaft", "transRangebox", 1, {"breakTriggerBeam":"driveshaft_R", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":1.74, "dynamicFriction": 0.00378}],
+    ],
+    "components": {
+        //need to declare parent component in case child doesn't exist
+        "driveshaft_R_2WD": {},
+    },
+    "props": [
+        ["func"      , "mesh"           ,             "idRef:", "idX:", "idY:",               "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b", "tra1","tra2l","tra3l", {"x":0, "y":15, "z":-105}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.048, "y":0.036, "z":-0.025},"baseRotationGlobal":{"x":0, "y":0, "z":0},"optional":true}],
+        ["driveshaft", "us_semi_slipshaft_R_0_25",     "tra1","1ax2","1ax2r",  {"x":90, "y":-90, "z":10}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_0_3",    "1ax2","tra1","1ax2r",  {"x":-90, "y":90, "z":-80}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b",    "1ax2","1ax1","1ax2r",  {"x":150.438, "y":140.831, "z":59.524}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.084, "y":-0.009, "z":0.040}"optional":true}],
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //driveshaft
+        {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.60, "beamShortBound":0.60},
+        {"beamSpring":0,"beamDamp":0,"beamDeform":3000,"beamStrength":6000},
+        {"beamLimitSpring":1557000,"beamLimitDamp":250},
+        ["tra1", "1ax2", {"name":"driveshaft_R","optional":true,"breakGroupType":1,"breakGroup":["driveshaft_R","axle_break_DX1"],"deformGroup":"driveshaft_R","boundZone":0.05}],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+},
+"G_md_series_driveshaft_R_0.7m": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Fixed Length Rear Driveshaft (0.7m)",
+        "value":550,
+    },
+    "slotType" : ["md_series_driveshaft_R_regCab_RWD", "md_series_driveshaft_R_extCab_RWD"],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //driveshaft
+        ["shaft", "driveshaft", "transRangebox", 1, {"breakTriggerBeam":"driveshaft_R", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":1.74, "dynamicFriction": 0.00378}],
+    ],
+    "components": {
+        //need to declare parent component in case child doesn't exist
+        "driveshaft_R_2WD": {},
+    },
+    "props": [
+        ["func"      , "mesh"           ,             "idRef:", "idX:", "idY:",               "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b", "tra1","tra2l","tra3l", {"x":0, "y":15, "z":-105}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.048, "y":0.036, "z":-0.025},"baseRotationGlobal":{"x":0, "y":0, "z":0},"optional":true}],
+        ["driveshaft", "us_semi_slipshaft_R_0_42",     "tra1","1ax2","1ax2r",  {"x":90, "y":-90, "z":10}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_0_42",    "1ax2","tra1","1ax2r",  {"x":-90, "y":90, "z":-80}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b",    "1ax2","1ax1","1ax2r",  {"x":150.438, "y":140.831, "z":59.524}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.084, "y":-0.009, "z":0.040}"optional":true}],
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //driveshaft
+        {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.50, "beamShortBound":0.50},
+        {"beamSpring":0,"beamDamp":0,"beamDeform":3000,"beamStrength":6000},
+        {"beamLimitSpring":1557000,"beamLimitDamp":250},
+        ["tra1", "1ax2", {"name":"driveshaft_R","optional":true,"breakGroupType":1,"breakGroup":["driveshaft_R","axle_break_DX1"],"deformGroup":"driveshaft_R","boundZone":0.05}],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+},
+"G_md_series_driveshaft_R_1.0m": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Fixed Length Rear Driveshaft (1.0m)",
+        "value":550,
+    },
+    "slotType" : ["md_series_driveshaft_R_regCab_RWD", "md_series_driveshaft_R_extCab_RWD"],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //driveshaft
+        ["shaft", "driveshaft", "transRangebox", 1, {"breakTriggerBeam":"driveshaft_R", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":1.74, "dynamicFriction": 0.00378}],
+    ],
+    "components": {
+        //need to declare parent component in case child doesn't exist
+        "driveshaft_R_2WD": {},
+    },
+    "props": [
+        ["func"      , "mesh"           ,             "idRef:", "idX:", "idY:",               "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b", "tra1","tra2l","tra3l", {"x":0, "y":15, "z":-105}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.048, "y":0.036, "z":-0.025},"baseRotationGlobal":{"x":0, "y":0, "z":0},"optional":true}],
+        ["driveshaft", "us_semi_slipshaft_R_0_55",     "tra1","1ax2","1ax2r",  {"x":90, "y":-90, "z":10}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_0_6",    "1ax2","tra1","1ax2r",  {"x":-90, "y":90, "z":-80}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b",    "1ax2","1ax1","1ax2r",  {"x":150.438, "y":140.831, "z":59.524}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.084, "y":-0.009, "z":0.040}"optional":true}],
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //driveshaft
+        {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.40, "beamShortBound":0.40},
+        {"beamSpring":0,"beamDamp":0,"beamDeform":3000,"beamStrength":6000},
+        {"beamLimitSpring":1557000,"beamLimitDamp":250},
+        ["tra1", "1ax2", {"name":"driveshaft_R","optional":true,"breakGroupType":1,"breakGroup":["driveshaft_R","axle_break_DX1"],"deformGroup":"driveshaft_R","boundZone":0.05}],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+},
+"G_md_series_driveshaft_R_1.5m": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Fixed Length Rear Driveshaft (1.5m)",
+        "value":550,
+    },
+    "slotType" : ["md_series_driveshaft_R_regCab_RWD", "md_series_driveshaft_R_extCab_RWD"],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //driveshaft
+        ["shaft", "driveshaft", "transRangebox", 1, {"breakTriggerBeam":"driveshaft_R", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":1.74, "dynamicFriction": 0.00378}],
+    ],
+    "components": {
+        //need to declare parent component in case child doesn't exist
+        "driveshaft_R_2WD": {},
+    },
+    "props": [
+        ["func"      , "mesh"           ,             "idRef:", "idX:", "idY:",               "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b", "tra1","tra2l","tra3l", {"x":0, "y":15, "z":-105}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.048, "y":0.036, "z":-0.025},"baseRotationGlobal":{"x":0, "y":0, "z":0},"optional":true}],
+        ["driveshaft", "us_semi_slipshaft_R_1_0",     "tra1","1ax2","1ax2r",  {"x":90, "y":-90, "z":10}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_0_9",    "1ax2","tra1","1ax2r",  {"x":-90, "y":90, "z":-80}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b",    "1ax2","1ax1","1ax2r",  {"x":150.438, "y":140.831, "z":59.524}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.084, "y":-0.009, "z":0.040}"optional":true}],
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //driveshaft
+        {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.30, "beamShortBound":0.30},
+        {"beamSpring":0,"beamDamp":0,"beamDeform":3000,"beamStrength":6000},
+        {"beamLimitSpring":1557000,"beamLimitDamp":250},
+        ["tra1", "1ax2", {"name":"driveshaft_R","optional":true,"breakGroupType":1,"breakGroup":["driveshaft_R","axle_break_DX1"],"deformGroup":"driveshaft_R","boundZone":0.05}],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+},
+"G_md_series_driveshaft_R_2.0m": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Fixed Length Rear Driveshaft (2.0m)",
+        "value":550,
+    },
+    "slotType" : ["md_series_driveshaft_R_regCab_RWD", "md_series_driveshaft_R_extCab_RWD"],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //driveshaft
+        ["shaft", "driveshaft", "transRangebox", 1, {"breakTriggerBeam":"driveshaft_R", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":1.74, "dynamicFriction": 0.00378}],
+    ],
+    "components": {
+        //need to declare parent component in case child doesn't exist
+        "driveshaft_R_2WD": {},
+    },
+    "props": [
+        ["func"      , "mesh"           ,             "idRef:", "idX:", "idY:",               "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b", "tra1","tra2l","tra3l", {"x":0, "y":15, "z":-105}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.048, "y":0.036, "z":-0.025},"baseRotationGlobal":{"x":0, "y":0, "z":0},"optional":true}],
+        ["driveshaft", "us_semi_slipshaft_R_1_0",     "tra1","1ax2","1ax2r",  {"x":90, "y":-90, "z":10}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_1_25",    "1ax2","tra1","1ax2r",  {"x":-90, "y":90, "z":-80}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b",    "1ax2","1ax1","1ax2r",  {"x":150.438, "y":140.831, "z":59.524}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.084, "y":-0.009, "z":0.040}"optional":true}],
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //driveshaft
+        {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.20, "beamShortBound":0.20},
+        {"beamSpring":0,"beamDamp":0,"beamDeform":3000,"beamStrength":6000},
+        {"beamLimitSpring":1557000,"beamLimitDamp":250},
+        ["tra1", "1ax2", {"name":"driveshaft_R","optional":true,"breakGroupType":1,"breakGroup":["driveshaft_R","axle_break_DX1"],"deformGroup":"driveshaft_R","boundZone":0.05}],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+},
+"G_md_series_driveshaft_R_2.5m": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Fixed Length Rear Driveshaft (2.5m)",
+        "value":550,
+    },
+    "slotType" : ["md_series_driveshaft_R_regCab_RWD", "md_series_driveshaft_R_extCab_RWD"],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //driveshaft
+        ["shaft", "driveshaft", "transRangebox", 1, {"breakTriggerBeam":"driveshaft_R", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":1.74, "dynamicFriction": 0.00378}],
+    ],
+    "components": {
+        //need to declare parent component in case child doesn't exist
+        "driveshaft_R_2WD": {},
+    },
+    "props": [
+        ["func"      , "mesh"           ,             "idRef:", "idX:", "idY:",               "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b", "tra1","tra2l","tra3l", {"x":0, "y":15, "z":-105}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.048, "y":0.036, "z":-0.025},"baseRotationGlobal":{"x":0, "y":0, "z":0},"optional":true}],
+        ["driveshaft", "us_semi_slipshaft_R_1_5",     "tra1","1ax2","1ax2r",  {"x":90, "y":-90, "z":10}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_1_25",    "1ax2","tra1","1ax2r",  {"x":-90, "y":90, "z":-80}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b",    "1ax2","1ax1","1ax2r",  {"x":150.438, "y":140.831, "z":59.524}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.084, "y":-0.009, "z":0.040}"optional":true}],
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //driveshaft
+        {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.20, "beamShortBound":0.20},
+        {"beamSpring":0,"beamDamp":0,"beamDeform":3000,"beamStrength":6000},
+        {"beamLimitSpring":1557000,"beamLimitDamp":250},
+        ["tra1", "1ax2", {"name":"driveshaft_R","optional":true,"breakGroupType":1,"breakGroup":["driveshaft_R","axle_break_DX1"],"deformGroup":"driveshaft_R","boundZone":0.05}],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+},
+"G_md_series_driveshaft_R_3.0m": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Fixed Length Rear Driveshaft (3.0m)",
+        "value":550,
+    },
+    "slotType" : ["md_series_driveshaft_R_regCab_RWD", "md_series_driveshaft_R_extCab_RWD"],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //driveshaft
+        ["shaft", "driveshaft", "transRangebox", 1, {"breakTriggerBeam":"driveshaft_R", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":1.74, "dynamicFriction": 0.00378}],
+    ],
+    "components": {
+        //need to declare parent component in case child doesn't exist
+        "driveshaft_R_2WD": {},
+    },
+    "props": [
+        ["func"      , "mesh"           ,             "idRef:", "idX:", "idY:",               "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b", "tra1","tra2l","tra3l", {"x":0, "y":15, "z":-105}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.048, "y":0.036, "z":-0.025},"baseRotationGlobal":{"x":0, "y":0, "z":0},"optional":true}],
+        ["driveshaft", "us_semi_slipshaft_R_1_80",     "tra1","1ax2","1ax2r",  {"x":90, "y":-90, "z":10}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_1_5",    "1ax2","tra1","1ax2r",  {"x":-90, "y":90, "z":-80}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b",    "1ax2","1ax1","1ax2r",  {"x":150.438, "y":140.831, "z":59.524}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.084, "y":-0.009, "z":0.040}"optional":true}],
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //driveshaft
+        {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.20, "beamShortBound":0.20},
+        {"beamSpring":0,"beamDamp":0,"beamDeform":3000,"beamStrength":6000},
+        {"beamLimitSpring":1557000,"beamLimitDamp":250},
+        ["tra1", "1ax2", {"name":"driveshaft_R","optional":true,"breakGroupType":1,"breakGroup":["driveshaft_R","axle_break_DX1"],"deformGroup":"driveshaft_R","boundZone":0.05}],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+},
+"G_md_series_driveshaft_R_3.5m": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Fixed Length Rear Driveshaft (3.5m)",
+        "value":550,
+    },
+    "slotType" : ["md_series_driveshaft_R_regCab_RWD", "md_series_driveshaft_R_extCab_RWD"],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //driveshaft
+        ["shaft", "driveshaft", "transRangebox", 1, {"breakTriggerBeam":"driveshaft_R", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":1.74, "dynamicFriction": 0.00378}],
+    ],
+    "components": {
+        //need to declare parent component in case child doesn't exist
+        "driveshaft_R_2WD": {},
+    },
+    "props": [
+        ["func"      , "mesh"           ,             "idRef:", "idX:", "idY:",               "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b", "tra1","tra2l","tra3l", {"x":0, "y":15, "z":-105}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.048, "y":0.036, "z":-0.025},"baseRotationGlobal":{"x":0, "y":0, "z":0},"optional":true}],
+        ["driveshaft", "us_semi_slipshaft_R_1_80",     "tra1","1ax2","1ax2r",  {"x":90, "y":-90, "z":10}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_2_0",    "1ax2","tra1","1ax2r",  {"x":-90, "y":90, "z":-80}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b",    "1ax2","1ax1","1ax2r",  {"x":150.438, "y":140.831, "z":59.524}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.084, "y":-0.009, "z":0.040}"optional":true}],
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //driveshaft
+        {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.20, "beamShortBound":0.20},
+        {"beamSpring":0,"beamDamp":0,"beamDeform":3000,"beamStrength":6000},
+        {"beamLimitSpring":1557000,"beamLimitDamp":250},
+        ["tra1", "1ax2", {"name":"driveshaft_R","optional":true,"breakGroupType":1,"breakGroup":["driveshaft_R","axle_break_DX1"],"deformGroup":"driveshaft_R","boundZone":0.05}],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+},
+"G_md_series_driveshaft_R_4.0m": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Fixed Length Rear Driveshaft (4.0m)",
+        "value":550,
+    },
+    "slotType" : ["md_series_driveshaft_R_regCab_RWD", "md_series_driveshaft_R_extCab_RWD"],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //driveshaft
+        ["shaft", "driveshaft", "transRangebox", 1, {"breakTriggerBeam":"driveshaft_R", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":1.74, "dynamicFriction": 0.00378}],
+    ],
+    "components": {
+        //need to declare parent component in case child doesn't exist
+        "driveshaft_R_2WD": {},
+    },
+    "props": [
+        ["func"      , "mesh"           ,             "idRef:", "idX:", "idY:",               "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b", "tra1","tra2l","tra3l", {"x":0, "y":15, "z":-105}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.048, "y":0.036, "z":-0.025},"baseRotationGlobal":{"x":0, "y":0, "z":0},"optional":true}],
+        ["driveshaft", "us_semi_slipshaft_R_1_80",     "tra1","1ax2","1ax2r",  {"x":90, "y":-90, "z":10}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_2_5",    "1ax2","tra1","1ax2r",  {"x":-90, "y":90, "z":-80}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b",    "1ax2","1ax1","1ax2r",  {"x":150.438, "y":140.831, "z":59.524}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.084, "y":-0.009, "z":0.040}"optional":true}],
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //driveshaft
+        {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.20, "beamShortBound":0.20},
+        {"beamSpring":0,"beamDamp":0,"beamDeform":3000,"beamStrength":6000},
+        {"beamLimitSpring":1557000,"beamLimitDamp":250},
+        ["tra1", "1ax2", {"name":"driveshaft_R","optional":true,"breakGroupType":1,"breakGroup":["driveshaft_R","axle_break_DX1"],"deformGroup":"driveshaft_R","boundZone":0.05}],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+},
+"G_md_series_driveshaft_R_4.5m": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Fixed Length Rear Driveshaft (4.5m)",
+        "value":550,
+    },
+    "slotType" : ["md_series_driveshaft_R_regCab_RWD", "md_series_driveshaft_R_extCab_RWD"],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //driveshaft
+        ["shaft", "driveshaft", "transRangebox", 1, {"breakTriggerBeam":"driveshaft_R", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":1.74, "dynamicFriction": 0.00378}],
+    ],
+    "components": {
+        //need to declare parent component in case child doesn't exist
+        "driveshaft_R_2WD": {},
+    },
+    "props": [
+        ["func"      , "mesh"           ,             "idRef:", "idX:", "idY:",               "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b", "tra1","tra2l","tra3l", {"x":0, "y":15, "z":-105}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.048, "y":0.036, "z":-0.025},"baseRotationGlobal":{"x":0, "y":0, "z":0},"optional":true}],
+        ["driveshaft", "us_semi_slipshaft_R_2_66",     "tra1","1ax2","1ax2r",  {"x":90, "y":-90, "z":10}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_2_0",    "1ax2","tra1","1ax2r",  {"x":-90, "y":90, "z":-80}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b",    "1ax2","1ax1","1ax2r",  {"x":150.438, "y":140.831, "z":59.524}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.084, "y":-0.009, "z":0.040}"optional":true}],
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //driveshaft
+        {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.20, "beamShortBound":0.20},
+        {"beamSpring":0,"beamDamp":0,"beamDeform":3000,"beamStrength":6000},
+        {"beamLimitSpring":1557000,"beamLimitDamp":250},
+        ["tra1", "1ax2", {"name":"driveshaft_R","optional":true,"breakGroupType":1,"breakGroup":["driveshaft_R","axle_break_DX1"],"deformGroup":"driveshaft_R","boundZone":0.05}],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+},
+"G_md_series_driveshaft_R_5.0m": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Fixed Length Rear Driveshaft (5.0m)",
+        "value":550,
+    },
+    "slotType" : ["md_series_driveshaft_R_regCab_RWD", "md_series_driveshaft_R_extCab_RWD"],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //driveshaft
+        ["shaft", "driveshaft", "transRangebox", 1, {"breakTriggerBeam":"driveshaft_R", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":1.74, "dynamicFriction": 0.00378}],
+    ],
+    "components": {
+        //need to declare parent component in case child doesn't exist
+        "driveshaft_R_2WD": {},
+    },
+    "props": [
+        ["func"      , "mesh"           ,             "idRef:", "idX:", "idY:",               "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b", "tra1","tra2l","tra3l", {"x":0, "y":15, "z":-105}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.048, "y":0.036, "z":-0.025},"baseRotationGlobal":{"x":0, "y":0, "z":0},"optional":true}],
+        ["driveshaft", "us_semi_slipshaft_R_2_66",     "tra1","1ax2","1ax2r",  {"x":90, "y":-90, "z":10}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_2_5",    "1ax2","tra1","1ax2r",  {"x":-90, "y":90, "z":-80}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b",    "1ax2","1ax1","1ax2r",  {"x":150.438, "y":140.831, "z":59.524}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.084, "y":-0.009, "z":0.040}"optional":true}],
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //driveshaft
+        {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.20, "beamShortBound":0.20},
+        {"beamSpring":0,"beamDamp":0,"beamDeform":3000,"beamStrength":6000},
+        {"beamLimitSpring":1557000,"beamLimitDamp":250},
+        ["tra1", "1ax2", {"name":"driveshaft_R","optional":true,"breakGroupType":1,"breakGroup":["driveshaft_R","axle_break_DX1"],"deformGroup":"driveshaft_R","boundZone":0.05}],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+},
+"G_md_series_driveshaft_R_5.5m": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Fixed Length Rear Driveshaft (5.5m)",
+        "value":550,
+    },
+    "slotType" : ["md_series_driveshaft_R_regCab_RWD", "md_series_driveshaft_R_extCab_RWD"],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //driveshaft
+        ["shaft", "driveshaft", "transRangebox", 1, {"breakTriggerBeam":"driveshaft_R", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":1.74, "dynamicFriction": 0.00378}],
+    ],
+    "components": {
+        //need to declare parent component in case child doesn't exist
+        "driveshaft_R_2WD": {},
+    },
+    "props": [
+        ["func"      , "mesh"           ,             "idRef:", "idX:", "idY:",               "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b", "tra1","tra2l","tra3l", {"x":0, "y":15, "z":-105}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.048, "y":0.036, "z":-0.025},"baseRotationGlobal":{"x":0, "y":0, "z":0},"optional":true}],
+        ["driveshaft", "us_semi_slipshaft_R_2_66",     "tra1","1ax2","1ax2r",  {"x":90, "y":-90, "z":10}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "G_us_semi_driveshaft_R_3_0",    "1ax2","tra1","1ax2r",  {"x":-90, "y":90, "z":-80}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b",    "1ax2","1ax1","1ax2r",  {"x":150.438, "y":140.831, "z":59.524}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.084, "y":-0.009, "z":0.040}"optional":true}],
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //driveshaft
+        {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.20, "beamShortBound":0.20},
+        {"beamSpring":0,"beamDamp":0,"beamDeform":3000,"beamStrength":6000},
+        {"beamLimitSpring":1557000,"beamLimitDamp":250},
+        ["tra1", "1ax2", {"name":"driveshaft_R","optional":true,"breakGroupType":1,"breakGroup":["driveshaft_R","axle_break_DX1"],"deformGroup":"driveshaft_R","boundZone":0.05}],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+},
+"G_md_series_driveshaft_R_6.0m": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Fixed Length Rear Driveshaft (6.0m)",
+        "value":550,
+    },
+    "slotType" : ["md_series_driveshaft_R_regCab_RWD", "md_series_driveshaft_R_extCab_RWD"],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //driveshaft
+        ["shaft", "driveshaft", "transRangebox", 1, {"breakTriggerBeam":"driveshaft_R", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":1.74, "dynamicFriction": 0.00378}],
+    ],
+    "components": {
+        //need to declare parent component in case child doesn't exist
+        "driveshaft_R_2WD": {},
+    },
+    "props": [
+        ["func"      , "mesh"           ,             "idRef:", "idX:", "idY:",               "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b", "tra1","tra2l","tra3l", {"x":0, "y":15, "z":-105}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.048, "y":0.036, "z":-0.025},"baseRotationGlobal":{"x":0, "y":0, "z":0},"optional":true}],
+        ["driveshaft", "us_semi_slipshaft_R_2_66",     "tra1","1ax2","1ax2r",  {"x":90, "y":-90, "z":10}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "G_us_semi_driveshaft_R_3_5",    "1ax2","tra1","1ax2r",  {"x":-90, "y":90, "z":-80}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b",    "1ax2","1ax1","1ax2r",  {"x":150.438, "y":140.831, "z":59.524}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.084, "y":-0.009, "z":0.040}"optional":true}],
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //driveshaft
+        {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.20, "beamShortBound":0.20},
+        {"beamSpring":0,"beamDamp":0,"beamDeform":3000,"beamStrength":6000},
+        {"beamLimitSpring":1557000,"beamLimitDamp":250},
+        ["tra1", "1ax2", {"name":"driveshaft_R","optional":true,"breakGroupType":1,"breakGroup":["driveshaft_R","axle_break_DX1"],"deformGroup":"driveshaft_R","boundZone":0.05}],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+},
+"G_md_series_driveshaft_R_6.5m": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Fixed Length Rear Driveshaft (6.5m)",
+        "value":550,
+    },
+    "slotType" : ["md_series_driveshaft_R_regCab_RWD", "md_series_driveshaft_R_extCab_RWD"],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //driveshaft
+        ["shaft", "driveshaft", "transRangebox", 1, {"breakTriggerBeam":"driveshaft_R", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":1.74, "dynamicFriction": 0.00378}],
+    ],
+    "components": {
+        //need to declare parent component in case child doesn't exist
+        "driveshaft_R_2WD": {},
+    },
+    "props": [
+        ["func"      , "mesh"           ,             "idRef:", "idX:", "idY:",               "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b", "tra1","tra2l","tra3l", {"x":0, "y":15, "z":-105}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.048, "y":0.036, "z":-0.025},"baseRotationGlobal":{"x":0, "y":0, "z":0},"optional":true}],
+        ["driveshaft", "us_semi_slipshaft_R_2_66",     "tra1","1ax2","1ax2r",  {"x":90, "y":-90, "z":10}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "G_us_semi_driveshaft_R_4_0",    "1ax2","tra1","1ax2r",  {"x":-90, "y":90, "z":-80}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b",    "1ax2","1ax1","1ax2r",  {"x":150.438, "y":140.831, "z":59.524}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.084, "y":-0.009, "z":0.040}"optional":true}],
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //driveshaft
+        {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.20, "beamShortBound":0.20},
+        {"beamSpring":0,"beamDamp":0,"beamDeform":3000,"beamStrength":6000},
+        {"beamLimitSpring":1557000,"beamLimitDamp":250},
+        ["tra1", "1ax2", {"name":"driveshaft_R","optional":true,"breakGroupType":1,"breakGroup":["driveshaft_R","axle_break_DX1"],"deformGroup":"driveshaft_R","boundZone":0.05}],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+},
+"G_md_series_driveshaft_R_7.0m": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Fixed Length Rear Driveshaft (7.0m)",
+        "value":550,
+    },
+    "slotType" : ["md_series_driveshaft_R_regCab_RWD", "md_series_driveshaft_R_extCab_RWD"],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //driveshaft
+        ["shaft", "driveshaft", "transRangebox", 1, {"breakTriggerBeam":"driveshaft_R", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":1.74, "dynamicFriction": 0.00378}],
+    ],
+    "components": {
+        //need to declare parent component in case child doesn't exist
+        "driveshaft_R_2WD": {},
+    },
+    "props": [
+        ["func"      , "mesh"           ,             "idRef:", "idX:", "idY:",               "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b", "tra1","tra2l","tra3l", {"x":0, "y":15, "z":-105}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.048, "y":0.036, "z":-0.025},"baseRotationGlobal":{"x":0, "y":0, "z":0},"optional":true}],
+        ["driveshaft", "us_semi_slipshaft_R_2_66",     "tra1","1ax2","1ax2r",  {"x":90, "y":-90, "z":10}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "G_us_semi_driveshaft_R_4_5",    "1ax2","tra1","1ax2r",  {"x":-90, "y":90, "z":-80}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b",    "1ax2","1ax1","1ax2r",  {"x":150.438, "y":140.831, "z":59.524}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.084, "y":-0.009, "z":0.040}"optional":true}],
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //driveshaft
+        {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.20, "beamShortBound":0.20},
+        {"beamSpring":0,"beamDamp":0,"beamDeform":3000,"beamStrength":6000},
+        {"beamLimitSpring":1557000,"beamLimitDamp":250},
+        ["tra1", "1ax2", {"name":"driveshaft_R","optional":true,"breakGroupType":1,"breakGroup":["driveshaft_R","axle_break_DX1"],"deformGroup":"driveshaft_R","boundZone":0.05}],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+},
+"G_md_series_driveshaft_R_7.5m": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Fixed Length Rear Driveshaft (7.5m)",
+        "value":550,
+    },
+    "slotType" : ["md_series_driveshaft_R_regCab_RWD", "md_series_driveshaft_R_extCab_RWD"],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        //driveshaft
+        ["shaft", "driveshaft", "transRangebox", 1, {"breakTriggerBeam":"driveshaft_R", "uiName":"Rear Driveshaft", "electricsName":"driveshaft", "friction":1.74, "dynamicFriction": 0.00378}],
+    ],
+    "components": {
+        //need to declare parent component in case child doesn't exist
+        "driveshaft_R_2WD": {},
+    },
+    "props": [
+        ["func"      , "mesh"           ,             "idRef:", "idX:", "idY:",               "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b", "tra1","tra2l","tra3l", {"x":0, "y":15, "z":-105}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.048, "y":0.036, "z":-0.025},"baseRotationGlobal":{"x":0, "y":0, "z":0},"optional":true}],
+        ["driveshaft", "us_semi_slipshaft_R_2_66",     "tra1","1ax2","1ax2r",  {"x":90, "y":-90, "z":10}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "G_us_semi_driveshaft_R_5_0",    "1ax2","tra1","1ax2r",  {"x":-90, "y":90, "z":-80}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "us_semi_driveshaft_R_yoke_b",    "1ax2","1ax1","1ax2r",  {"x":150.438, "y":140.831, "z":59.524}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.084, "y":-0.009, "z":0.040}"optional":true}],
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //driveshaft
+        {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.20, "beamShortBound":0.20},
+        {"beamSpring":0,"beamDamp":0,"beamDeform":3000,"beamStrength":6000},
+        {"beamLimitSpring":1557000,"beamLimitDamp":250},
+        ["tra1", "1ax2", {"name":"driveshaft_R","optional":true,"breakGroupType":1,"breakGroup":["driveshaft_R","axle_break_DX1"],"deformGroup":"driveshaft_R","boundZone":0.05}],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+},
+}

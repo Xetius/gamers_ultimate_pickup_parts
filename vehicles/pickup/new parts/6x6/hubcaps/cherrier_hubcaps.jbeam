@@ -1,0 +1,96 @@
+{
+"cherrier_hubcap_01a_16_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Cherrier Rapide Rear Rear Hubcaps",
+        "value":100,
+    },
+    "slotType" : "hubcap_RR_6x6_16_b",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //hubcaps
+         ["cherrier_hubcap_01a_16", ["hubcap_RRR"], [], {"pos":{"x":-0.480, "y":0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["cherrier_hubcap_01a_16", ["hubcap_RRL"], [], {"pos":{"x": 0.480, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            //hubcap options
+            {"enableHubcaps":true},
+            {"hubcapSelfCollision":true},
+            {"hubcapCollision":true,"enableExtraHubcapBeams":false},
+            {"hubcapOffset":0.0},
+            {"hubcapWidth":0.06},
+            {"hubcapRadius":0.20},
+            {"hubcapBeamSpring":241000, "hubcapBeamDamp":10},
+            {"hubcapBeamDeform":2900, "hubcapBeamStrength":14000},
+            {"hubcapAttachBeamSpring":141000, "hubcapAttachBeamDamp":10},
+            {"hubcapAttachBeamDeform":1300, "hubcapAttachBeamStrength":1900},
+            {"hubcapSupportBeamDeform":3500, "hubcapSupportBeamStrength":5500},
+            {"hubcapNodeWeight":0.13},
+            {"hubcapCenterNodeWeight":0.13},
+            {"hubcapNodeMaterial":"|NM_PLASTIC"},
+            {"hubcapFrictionCoef":0.7},
+    ],
+},
+"cherrier_hubcap_02a_16_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Cherrier Active Rear Rear Hubcaps",
+        "value":70,
+    },
+    "slotType" : "hubcap_RR_6x6_16_b",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //hubcaps
+         ["cherrier_hubcap_02a_16", ["hubcap_RRR"], [], {"pos":{"x":-0.480, "y":0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["cherrier_hubcap_02a_16", ["hubcap_RRL"], [], {"pos":{"x": 0.480, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            //hubcap options
+            {"enableHubcaps":true},
+            {"hubcapSelfCollision":true},
+            {"hubcapCollision":true,"enableExtraHubcapBeams":false},
+            {"hubcapOffset":0.0},
+            {"hubcapWidth":0.06},
+            {"hubcapRadius":0.20},
+            {"hubcapBeamSpring":241000, "hubcapBeamDamp":10},
+            {"hubcapBeamDeform":2900, "hubcapBeamStrength":14000},
+            {"hubcapAttachBeamSpring":141000, "hubcapAttachBeamDamp":10},
+            {"hubcapAttachBeamDeform":1300, "hubcapAttachBeamStrength":1900},
+            {"hubcapSupportBeamDeform":3500, "hubcapSupportBeamStrength":5500},
+            {"hubcapNodeWeight":0.13},
+            {"hubcapCenterNodeWeight":0.13},
+            {"hubcapNodeMaterial":"|NM_PLASTIC"},
+            {"hubcapFrictionCoef":0.7},
+    ],
+},
+"cherrier_hubcap_03a_18_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Cherrier Sport Rear Rear Wheel Trims (Black)",
+        "value":250,
+    },
+    "slotType" : "hubcap_RR_6x6_18_alt",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //hubcaps
+         ["cherrier_hubcap_03a_18x8", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["cherrier_hubcap_03a_18x8", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+"cherrier_hubcap_03b_18_RR_6x6": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Cherrier Sport Rear Rear Wheel Trims (Painted)",
+        "value":250,
+    },
+    "slotType" : "hubcap_RR_6x6_18_alt",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //hubcaps
+         ["cherrier_hubcap_03b_18x8", ["wheel_RRR","wheelhub_RRR"], [], {"pos":{"x":-0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["cherrier_hubcap_03b_18x8", ["wheel_RRL","wheelhub_RRL"], [], {"pos":{"x": 0.48, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+},
+}

@@ -1,0 +1,834 @@
+{
+"G_pickup_6x6_tiny_couch_sideways": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Couch",
+        "value":300,
+    },
+    "slotType" : "G_pickup_bedextra_6x6_tiny",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["couch_body", ["1couch"],[],{"pos":{"x":0.0, "y":2.23, "z":0.7},"rot":{"x":0, "y":0, "z":90}}],
+        ["couch_cushion_M", ["cushion_M"],[],{"pos":{"x":0.0, "y":2.23, "z":0.7},"rot":{"x":0, "y":0, "z":90}}],
+        ["couch_cushion_L", ["cushion_L"],[],{"pos":{"x":0.0, "y":2.23, "z":0.7},"rot":{"x":0, "y":0, "z":90}}],
+        ["couch_cushion_R", ["cushion_R"],[],{"pos":{"x":0.0, "y":2.23, "z":0.7},"rot":{"x":0, "y":0, "z":90}}],
+        {"deformGroup":""},
+    ],
+    "slots": [
+        ["type", "default", "description"],
+        ["G_pickup_bed_6x6_tiny_couch_straps","pickup_bed_6x6_tiny_couch_straps","Straps", {"nodeMove":{"x":0.0,"y":0.55,"z":0}}],
+        ["skin_couch","couch_skin_stripes","Fabric type", {"coreSlot":true}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"frictionCoef":1.0},
+        {"nodeMaterial":"|NM_WOOD"},
+        {"collision":true},
+        {"selfCollision":true},
+        {"group":"1couch"},
+
+        {"nodeWeight":2.5},
+        ["1couch1ll", 0.35, 3.26, 0.72],
+        ["1couch1l", 0.35, 2.58, 0.80],
+        ["1couch1r", 0.35, 1.92, 0.80],
+        ["1couch1rr", 0.35, 1.24, 0.72],
+        ["1couch2ll", -0.35, 3.26, 0.72],
+        ["1couch2l", -0.35, 2.58, 0.80],
+        ["1couch2r", -0.35, 1.92, 0.80],
+        ["1couch2rr", -0.35, 1.24, 0.72],
+        {"nodeMaterial":"|NM_CLOTH"},
+        {"nodeWeight":2},
+        //node layer2
+        ["1couch3l", 0.40, 2.58, 1.01],
+        ["1couch3r", 0.40, 1.92, 1.01],
+        ["1couch4l", -0.20, 2.58, 1.01,{"nodeWeight":4}],
+        ["1couch4r", -0.20, 1.92, 1.01,{"nodeWeight":4}],
+        ["1couch3ll", 0.40, 3.13, 1.01],
+        ["1couch3rr", 0.40, 1.37, 1.01],
+        ["1couch4ll", -0.20, 3.13, 1.01],
+        ["1couch4rr", -0.20, 1.37, 1.01],
+        ["1couch3lll", 0.40, 3.43, 1.40],
+        ["1couch3rrr", 0.40, 1.07, 1.40],
+        ["1couch4lll", -0.35, 3.43, 1.40],
+        ["1couch4rrr", -0.35, 1.07, 1.40],
+
+        ["1couch8l", -0.40, 2.58, 1.60],
+        ["1couch8r", -0.40, 1.92, 1.60],
+
+        ["1couch5ll", 0.40, 3.13, 1.40],
+        ["1couch5rr", 0.40, 1.37, 1.40],
+        ["1couch6l", -0.20, 2.58, 1.40],
+        ["1couch6r", -0.20, 1.92, 1.40],
+        ["1couch6ll", -0.20, 3.13, 1.40],
+        ["1couch6rr", -0.20, 1.37, 1.40],
+        // {"group":""},
+
+
+        {"nodeWeight":1},
+        //cushion
+        {"group":"cushion_M"},
+        ["1couchcshm1l", 0.41, 2.52, 1.04],
+        ["1couchcshm1r", 0.41, 1.98, 1.04],
+        ["1couchcshm2l", -0.17, 2.52, 1.04],
+        ["1couchcshm2r", -0.17, 1.98, 1.04],
+
+        ["1couchcshm3l", 0.41, 2.52, 1.16],
+        ["1couchcshm3r", 0.41, 1.98, 1.16],
+        ["1couchcshm4l", -0.17, 2.52, 1.16],
+        ["1couchcshm4r", -0.17, 1.98, 1.16],
+        {"group":"cushion_L"},
+        ["1couchcshl1l", 0.41, 3.1, 1.04],
+        ["1couchcshl1r", 0.41, 2.535, 1.04],
+        ["1couchcshl2l", -0.17, 3.1, 1.04],
+        ["1couchcshl2r", -0.17, 2.535, 1.04],
+
+        ["1couchcshl3l", 0.41, 3.1, 1.16],
+        ["1couchcshl3r", 0.41, 2.535, 1.16],
+        ["1couchcshl4l", -0.17, 3.1, 1.16],
+        ["1couchcshl4r", -0.17, 2.535, 1.16],
+        {"group":"cushion_R"},
+        ["1couchcshr1l", 0.41, 1.965, 1.04],
+        ["1couchcshr1r", 0.41, 1.4, 1.04],
+        ["1couchcshr2l", -0.17, 1.965, 1.04],
+        ["1couchcshr2r", -0.17, 1.4, 1.04],
+
+        ["1couchcshr3l", 0.41, 1.965, 1.16],
+        ["1couchcshr3r", 0.41, 1.4, 1.16],
+        ["1couchcshr4l", -0.17, 1.965, 1.16],
+        ["1couchcshr4r", -0.17, 1.4, 1.16],
+
+        //cushion guide nodes
+        {"group":""},
+        ["1couchcshg1ll", 0.40, 2.98, 1.01],
+        ["1couchcshg1l", 0.40, 2.35, 1.01],
+        ["1couchcshg1r", 0.40, 2.15, 1.01],
+        ["1couchcshg1rr", 0.40, 1.52, 1.01],
+        ["1couchcshg2l", 0.40, 3.13, 1.09],
+        ["1couchcshg2r", 0.40, 1.37, 1.09],
+
+
+        {"collision":true},
+        {"group":""},
+        {"selfCollision":true},
+
+        ],
+
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+        {"beamSpring":450000,"beamDamp":100},
+        {"beamDeform":2000,"beamStrength":72000},
+        {"deformLimitExpansion":1.2},
+        {"deformLimit":1.5},
+        //middle section
+        //vertical
+        ["1couch1rr", "1couch3rr"],
+        ["1couch2rr", "1couch4rr"],
+        ["1couch1r", "1couch3r"],
+        ["1couch2r", "1couch4r"],
+        ["1couch1l", "1couch3l"],
+        ["1couch2l", "1couch4l"],
+        ["1couch1ll", "1couch3ll"],
+        ["1couch2ll", "1couch4ll"],
+        ["1couch6r", "1couch4r"],
+        ["1couch6l", "1couch4l"],
+        ["1couch6ll", "1couch4ll"],
+        ["1couch4rr", "1couch6rr"],
+        ["1couch5rr", "1couch3rr"],
+        ["1couch5ll", "1couch3ll"],
+
+
+        //backrest node
+
+        ["1couch2r", "1couch8r"],
+        ["1couch2l", "1couch8l"],
+
+        //widthwise
+        ["1couch1rr", "1couch1r"],
+        ["1couch1r", "1couch1l"],
+        ["1couch1l", "1couch1ll"],
+        ["1couch3rr", "1couch3r" {"deformLimitExpansion":1.0}],
+        ["1couch3r", "1couch3l" {"deformLimitExpansion":1.0}],
+        ["1couch3l", "1couch3ll" {"deformLimitExpansion":1.0}],
+        ["1couch2rr", "1couch2r"],
+        ["1couch2l", "1couch2r"],
+        ["1couch2l", "1couch2ll"],
+        ["1couch4rr", "1couch4r"],
+        ["1couch4r", "1couch4l"],
+        ["1couch4l", "1couch4ll"],
+        ["1couch6rr", "1couch6r" {"deformLimitExpansion":1.0}],
+        ["1couch6r", "1couch6l" {"deformLimitExpansion":1.0}],
+        ["1couch6l", "1couch6ll" {"deformLimitExpansion":1.0}],
+        ["1couch8l", "1couch8r"],
+
+
+
+
+        //widthwise diagonals
+        //["1couch3r", "1couch1l"{"beamDeform":3500}],
+        ["1couch3rr", "1couch1r"],
+        ["1couch3r", "1couch1rr"],
+        ["1couch3l", "1couch1ll"],
+        ["1couch3ll", "1couch1l"],
+        ["1couch3l", "1couch1r"],
+        ["1couch3r", "1couch1l"],
+        ["1couch4ll", "1couch2l"],
+        ["1couch4l", "1couch2ll"],
+        ["1couch4l", "1couch2r"],
+        ["1couch4r", "1couch2l"],
+        ["1couch4rr", "1couch2r"],
+        ["1couch4r", "1couch2rr"],
+        ["1couch6rr", "1couch4r"],
+        ["1couch6r", "1couch4rr"],
+        ["1couch6r", "1couch4l"],
+        ["1couch6l", "1couch4r"],
+        ["1couch6l", "1couch4ll"],
+        ["1couch6ll", "1couch4l"],
+        ["1couch8r", "1couch2l"],
+        ["1couch8l", "1couch2r"],
+        //backrest ends
+        ["1couch8l", "1couch4lll"],
+        ["1couch8r", "1couch4rrr"],
+
+        //lenghtwise
+        ["1couch2rr", "1couch1rr"],
+        ["1couch4rr", "1couch3rr"],
+        ["1couch4r", "1couch3r"],
+        ["1couch4l", "1couch3l"],
+        ["1couch4ll", "1couch3ll"],
+        ["1couch2ll", "1couch1ll"],
+        ["1couch2l", "1couch1l"],
+        ["1couch2r", "1couch1r"],
+        ["1couch6ll", "1couch5ll"],
+        ["1couch6rr", "1couch5rr"],
+
+        //lenghtwise diagonals
+        ["1couch6rr", "1couch3rr"],
+        ["1couch5rr", "1couch4rr"],
+        ["1couch6ll", "1couch3ll"],
+        ["1couch5ll", "1couch4ll"],
+        ["1couch4rr", "1couch3r"],
+        ["1couch4r", "1couch3rr"],
+        ["1couch3r", "1couch4l"],
+        ["1couch4r", "1couch3l"],
+        ["1couch3l", "1couch4ll"],
+        ["1couch4l", "1couch3ll"],
+        ["1couch1rr", "1couch2r"],
+        ["1couch2r", "1couch1l"],
+        ["1couch1r", "1couch2l"],
+        ["1couch1l", "1couch2ll"],
+        ["1couch1ll", "1couch2l"],
+
+        //backrest top node to the inner backrest nodes
+        ["1couch8r", "1couch6r"],
+        ["1couch8l", "1couch6l"],
+        ["1couch8l", "1couch6r"],
+        ["1couch8r", "1couch6l"],
+        ["1couch8r", "1couch6rr"],
+        ["1couch8l", "1couch6ll"],
+
+        //inner seat bottom crosses
+        ["1couch4r", "1couch1rr"],
+        ["1couch3rr", "1couch2r"],
+        ["1couch3r", "1couch2rr"],
+        ["1couch4rr", "1couch1r"],
+        ["1couch2l", "1couch3r"],
+        ["1couch4l", "1couch1r"],
+        ["1couch4r", "1couch1l"],
+        ["1couch3l", "1couch2r"],
+        ["1couch4l", "1couch1ll"],
+        ["1couch3ll", "1couch2l"],
+        ["1couch3l", "1couch2ll"],
+        ["1couch4ll", "1couch1l"],
+        ["1couch3ll", "1couch2ll"],
+        ["1couch4ll", "1couch1ll"],
+        ["1couch4rr", "1couch1rr"],
+        ["1couch3rr", "1couch2rr"],
+
+
+        //back seat bottom nodes to top backrest
+        ["1couch4rr", "1couch8r"],
+        ["1couch4r", "1couch8r"],
+        ["1couch4l", "1couch8r"],
+        ["1couch4r", "1couch8l"],
+        ["1couch4l", "1couch8l"],
+        ["1couch4ll", "1couch8l"],
+        //back rest nodes to lower rear nodes
+        ["1couch6ll", "1couch2l"],
+        ["1couch6l", "1couch2ll"],
+        ["1couch6l", "1couch2r"],
+        ["1couch6r", "1couch2l"],
+        ["1couch6l", "1couch2l"],
+        ["1couch6r", "1couch2r"],
+        ["1couch6rr", "1couch2r"],
+        ["1couch6r", "1couch2rr"],
+
+        //right armrest
+        //vertical
+        ["1couch1rr", "1couch3rrr"],
+        ["1couch2rr", "1couch4rrr"],
+        //width
+        ["1couch3rrr", "1couch5rr"],
+        ["1couch4rrr", "1couch6rr"],
+
+
+        //crosses
+        ["1couch3rrr", "1couch3rr"],
+        ["1couch5rr", "1couch1rr"],
+        ["1couch4rrr", "1couch4rr"],
+        ["1couch6rr", "1couch2rr"],
+
+
+        //lenghtwise
+        ["1couch4rrr", "1couch3rrr"],
+        //crosses
+        ["1couch2rr", "1couch3rrr"],
+        ["1couch1rr", "1couch4rrr"],
+        //cross on top of the armrest
+        ["1couch4rrr", "1couch5rr"],
+        ["1couch6rr", "1couch3rrr"],
+
+        //left armrest
+        //vertical
+        ["1couch1ll", "1couch3lll"],
+        ["1couch2ll", "1couch4lll"],
+        //width
+        ["1couch3lll", "1couch5ll"],
+        ["1couch4lll", "1couch6ll"],
+
+
+        //crosses
+        ["1couch3lll", "1couch3ll"],
+        ["1couch5ll", "1couch1ll"],
+        ["1couch4lll", "1couch4ll"],
+        ["1couch6ll", "1couch2ll"],
+
+
+        //lenghtwise
+        ["1couch4lll", "1couch3lll"],
+        //crosses
+        ["1couch2ll", "1couch3lll"],
+        ["1couch1ll", "1couch4lll"],
+        //cross on top of the armrest
+        ["1couch4lll", "1couch5ll"],
+        ["1couch6ll", "1couch3lll"],
+
+        //rigifiers
+        {"beamSpring":500000,"beamDamp":50},
+        {"beamDeform":4500,"beamStrength":72000},
+        //outer armrest nodes anti-invert beams
+        ["1couch3lll", "1couch3l"],
+        ["1couch3rrr", "1couch3r"],
+
+        ["1couch3lll", "1couch3r"],
+        ["1couch3rrr", "1couch3l"],
+        {"beamSpring":450000,"beamDamp":50},
+        {"beamDeform":3000},
+        ["1couch4lll", "1couch6l"],
+        ["1couch4rrr", "1couch6r"],
+        ["1couch4lll", "1couch4l"],
+        ["1couch4rrr", "1couch4r"],
+
+
+
+        {"beamSpring":150000},
+        {"beamDeform":1000},
+        //CushionM
+
+        {"beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":0.3,"boundZone":0.01},
+        {"beamLimitSpring":450000,"beamLimitDamp":500},
+        {"beamSpring":15500,"beamDamp":55},
+        {"beamDeform":26500,"beamStrength":17000},
+        //--EXPANSION DEFORM LIMIT DEFAULT--
+        {"deformLimitExpansion":1.2},
+        //vertical
+        ["1couchcshm1l", "1couchcshm3l"],
+        ["1couchcshm2l", "1couchcshm4l"],
+        ["1couchcshm1r", "1couchcshm3r"],
+        ["1couchcshm2r", "1couchcshm4r"],
+        //horizontal
+        {"beamSpring":15000,"beamDamp":150},
+        ["1couchcshm1l", "1couchcshm1r"],
+        ["1couchcshm2l", "1couchcshm2r"],
+        ["1couchcshm3l", "1couchcshm3r"],
+        ["1couchcshm4l", "1couchcshm4r"],
+
+        ["1couchcshm1l", "1couchcshm2l"],
+        ["1couchcshm1r", "1couchcshm2r"],
+        ["1couchcshm3l", "1couchcshm4l"],
+        ["1couchcshm3r", "1couchcshm4r"],
+        //crossing
+        {"beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":0.05,"boundZone":0.01},
+        {"beamLimitSpring":450000,"beamLimitDamp":800},
+        {"beamSpring":14000,"beamDamp":50},
+        ["1couchcshm1l", "1couchcshm4l"],
+        ["1couchcshm3l", "1couchcshm2l"],
+        ["1couchcshm1r", "1couchcshm4r"],
+        ["1couchcshm3r", "1couchcshm2r"],
+
+        ["1couchcshm1l", "1couchcshm3r"],
+        ["1couchcshm3l", "1couchcshm1r"],
+        ["1couchcshm2l", "1couchcshm4r"],
+        ["1couchcshm4l", "1couchcshm2r"],
+
+        ["1couchcshm1l", "1couchcshm4r"],
+        ["1couchcshm4l", "1couchcshm1r"],
+
+        ["1couchcshm3l", "1couchcshm2r"],
+        ["1couchcshm2l", "1couchcshm3r"],
+
+        //cushion L
+        {"beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":0.3,"boundZone":0.01},
+        {"beamLimitSpring":450000,"beamLimitDamp":500},
+        {"beamSpring":15500,"beamDamp":150},
+        {"beamDeform":6500,"beamStrength":17000},
+        //--EXPANSION DEFORM LIMIT DEFAULT--
+        {"deformLimitExpansion":1.2},
+        //vertical
+        ["1couchcshl1l", "1couchcshl3l"],
+        ["1couchcshl2l", "1couchcshl4l"],
+        ["1couchcshl1r", "1couchcshl3r"],
+        ["1couchcshl2r", "1couchcshl4r"],
+        //horizontal
+        {"beamSpring":5000,"beamDamp":150},
+        ["1couchcshl1l", "1couchcshl1r"],
+        ["1couchcshl2l", "1couchcshl2r"],
+        ["1couchcshl3l", "1couchcshl3r"],
+        ["1couchcshl4l", "1couchcshl4r"],
+
+        ["1couchcshl1l", "1couchcshl2l"],
+        ["1couchcshl1r", "1couchcshl2r"],
+        ["1couchcshl3l", "1couchcshl4l"],
+        ["1couchcshl3r", "1couchcshl4r"],
+        //crossing
+        {"beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":0.05,"boundZone":0.01},
+        {"beamLimitSpring":150000,"beamLimitDamp":800},
+        {"beamSpring":4000,"beamDamp":150},
+        ["1couchcshl1l", "1couchcshl4l"],
+        ["1couchcshl3l", "1couchcshl2l"],
+        ["1couchcshl1r", "1couchcshl4r"],
+        ["1couchcshl3r", "1couchcshl2r"],
+
+        ["1couchcshl1l", "1couchcshl3r"],
+        ["1couchcshl3l", "1couchcshl1r"],
+        ["1couchcshl2l", "1couchcshl4r"],
+        ["1couchcshl4l", "1couchcshl2r"],
+
+        ["1couchcshl1l", "1couchcshl4r"],
+        ["1couchcshl4l", "1couchcshl1r"],
+
+        ["1couchcshl3l", "1couchcshl2r"],
+        ["1couchcshl2l", "1couchcshl3r"],
+
+        //Cushion R
+        {"beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":0.3,"boundZone":0.01},
+        {"beamLimitSpring":450000,"beamLimitDamp":200},
+        {"beamSpring":15500,"beamDamp":55},
+        {"beamDeform":26500,"beamStrength":17000},
+        //--EXPANSION DEFORM LIMIT DEFAULT--
+        {"deformLimitExpansion":1.2},
+        //vertical
+        ["1couchcshr1l", "1couchcshr3l"],
+        ["1couchcshr2l", "1couchcshr4l"],
+        ["1couchcshr1r", "1couchcshr3r"],
+        ["1couchcshr2r", "1couchcshr4r"],
+        //horizontal
+        {"beamSpring":15000,"beamDamp":150},
+        ["1couchcshr1l", "1couchcshr1r"],
+        ["1couchcshr2l", "1couchcshr2r"],
+        ["1couchcshr3l", "1couchcshr3r"],
+        ["1couchcshr4l", "1couchcshr4r"],
+
+        ["1couchcshr1l", "1couchcshr2l"],
+        ["1couchcshr1r", "1couchcshr2r"],
+        ["1couchcshr3l", "1couchcshr4l"],
+        ["1couchcshr3r", "1couchcshr4r"],
+        //crossing
+        {"beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":0.05,"boundZone":0.01},
+        {"beamLimitSpring":450000,"beamLimitDamp":800},
+        {"beamSpring":14000,"beamDamp":50},
+        ["1couchcshr1l", "1couchcshr4l"],
+        ["1couchcshr3l", "1couchcshr2l"],
+        ["1couchcshr1r", "1couchcshr4r"],
+        ["1couchcshr3r", "1couchcshr2r"],
+
+        ["1couchcshr1l", "1couchcshr3r"],
+        ["1couchcshr3l", "1couchcshr1r"],
+        ["1couchcshr2l", "1couchcshr4r"],
+        ["1couchcshr4l", "1couchcshr2r"],
+
+        ["1couchcshr1l", "1couchcshr4r"],
+        ["1couchcshr4l", "1couchcshr1r"],
+
+        ["1couchcshr3l", "1couchcshr2r"],
+        ["1couchcshr2l", "1couchcshr3r"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":100000,"beamDamp":25},
+        {"beamDeform":1500,"beamStrength":7000},
+
+        //cushion guides
+        ["1couchcshg2r", "1couchcshg1rr"],
+        ["1couchcshg2r", "1couch5rr"],
+        ["1couchcshg1rr", "1couch5rr"],
+        ["1couchcshg2r", "1couch3rr"],
+        ["1couchcshg1rr", "1couch3rr"],
+        ["1couchcshg1rr", "1couch3r"],
+        ["1couchcshg1rr", "1couch1rr"],
+        ["1couchcshg2r", "1couch1rr"],
+        ["1couchcshg1rr", "1couch4rr"],
+        ["1couchcshg2r", "1couch4rr"],
+        ["1couch3r", "1couchcshg1r"],
+        ["1couchcshg1r", "1couchcshg1l"],
+        ["1couchcshg1l", "1couch3l"],
+        ["1couchcshg1l", "1couch1l"],
+        ["1couchcshg1r", "1couch1r"],
+        ["1couchcshg1r", "1couch1l"],
+        ["1couchcshg1l", "1couch1r"],
+        ["1couchcshg1l", "1couch4l"],
+        ["1couchcshg1r", "1couch4r"],
+        ["1couchcshg1r", "1couch2r"],
+        ["1couchcshg1l", "1couch2l"],
+
+
+        ["1couchcshg2l", "1couchcshg1ll"],
+        ["1couchcshg2l", "1couch5ll"],
+        ["1couchcshg1ll", "1couch5ll"],
+        ["1couchcshg2l", "1couch3ll"],
+        ["1couchcshg1ll", "1couch3ll"],
+        ["1couchcshg1ll", "1couch3l"],
+        ["1couchcshg1ll", "1couch1ll"],
+        ["1couchcshg2l", "1couch1ll"],
+        ["1couchcshg1ll", "1couch4ll"],
+        ["1couchcshg2l", "1couch4ll"],
+        //cushion support beams - prevent the back cushion nodes from falling through the join between seat bottom and seat back
+        {"beamType":"|SUPPORT","beamLongBound":1.1},
+        {"beamPrecompression":1,"beamSpring":1200,"beamDamp":50},
+        {"breakGroup":"1couchcshl_support"},
+        ["1couchcshl2l", "1couch2ll"],
+        ["1couchcshl2l", "1couch2l"],
+        ["1couchcshl2r", "1couch2ll"],
+        ["1couchcshl2r", "1couch2l"],
+        {"breakGroup":"1couchcshm_support"},
+        ["1couchcshm2l", "1couch2l"],
+        ["1couchcshm2l", "1couch2r"],
+        ["1couchcshm2r", "1couch2l"],
+        ["1couchcshm2r", "1couch2r"],
+        {"beamPrecompression":1.02},
+        ["1couchcshm1l", "1couch1l"],
+        ["1couchcshm1l", "1couch1r"],
+        ["1couchcshm1r", "1couch1l"],
+        ["1couchcshm1r", "1couch1r"],
+        {"beamPrecompression":1.00},
+        {"breakGroup":"1couchcshr_support"},
+        ["1couchcshr2l", "1couch2rr"],
+        ["1couchcshr2l", "1couch2r"],
+        ["1couchcshr2r", "1couch2rr"],
+        ["1couchcshr2r", "1couch2r"],
+
+        {"beamPrecompression":1.01,"beamSpring":800,"beamDamp":5},
+        {"breakGroup":"1couchcshl_support"},
+        ["1couchcshl2l", "1couch1ll"],
+        ["1couchcshl2l", "1couch1l"],
+        ["1couchcshl2r", "1couch1ll"],
+        ["1couchcshl2r", "1couch1l"],
+        {"breakGroup":"1couchcshm_support"},
+        ["1couchcshm2l", "1couch1l"],
+        ["1couchcshm2l", "1couch1r"],
+        ["1couchcshm2r", "1couch1l"],
+        ["1couchcshm2r", "1couch1r"],
+        {"breakGroup":"1couchcshr_support"},
+        ["1couchcshr2l", "1couch1rr"],
+        ["1couchcshr2l", "1couch1r"],
+        ["1couchcshr2r", "1couch1rr"],
+        ["1couchcshr2r", "1couch1r"],
+
+        {"breakGroup":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0}
+    ],
+    "torsionbars": [
+        ["id1:", "id2:", "id3:", "id4:"],
+        {"spring":20, "damp":0.5, "deform":250000, "strength":100000},
+        //Invert prevention for the cushions
+        ["1couchcshl1r", "1couchcshl3r", "1couchcshl3l", "1couchcshl4l"],
+        ["1couchcshl1l", "1couchcshl3l", "1couchcshl3r", "1couchcshl4r"],
+        ["1couchcshl2r", "1couchcshl4r", "1couchcshl4l", "1couchcshl3l"],
+        ["1couchcshl2l", "1couchcshl4l", "1couchcshl4r", "1couchcshl3r"],
+        ["1couchcshl3r", "1couchcshl1r", "1couchcshl1l", "1couchcshl2l"],
+        ["1couchcshl3l", "1couchcshl1l", "1couchcshl1r", "1couchcshl2r"],
+        ["1couchcshl4r", "1couchcshl2r", "1couchcshl2l", "1couchcshl3l"],
+        ["1couchcshl4l", "1couchcshl2l", "1couchcshl2r", "1couchcshl3r"],
+        ["1couchcshl1r", "1couchcshl3r", "1couchcshl4r", "1couchcshl4l"],
+        ["1couchcshl1l", "1couchcshl3l", "1couchcshl4l", "1couchcshl4r"],
+        ["1couchcshl2r", "1couchcshl4r", "1couchcshl3r", "1couchcshl3l"],
+        ["1couchcshl2l", "1couchcshl4l", "1couchcshl3l", "1couchcshl3r"],
+        ["1couchcshl3r", "1couchcshl1r", "1couchcshl2r", "1couchcshl2l"],
+        ["1couchcshl3l", "1couchcshl1l", "1couchcshl2l", "1couchcshl2r"],
+        ["1couchcshl4r", "1couchcshl2r", "1couchcshl1r", "1couchcshl1l"],
+        ["1couchcshl4l", "1couchcshl2l", "1couchcshl1l", "1couchcshl1r"],
+
+        ["1couchcshm1r", "1couchcshm3r", "1couchcshm3l", "1couchcshm4l"],
+        ["1couchcshm1l", "1couchcshm3l", "1couchcshm3r", "1couchcshm4r"],
+        ["1couchcshm2r", "1couchcshm4r", "1couchcshm4l", "1couchcshm3l"],
+        ["1couchcshm2l", "1couchcshm4l", "1couchcshm4r", "1couchcshm3r"],
+        ["1couchcshm3r", "1couchcshm1r", "1couchcshm1l", "1couchcshm2l"],
+        ["1couchcshm3l", "1couchcshm1l", "1couchcshm1r", "1couchcshm2r"],
+        ["1couchcshm4r", "1couchcshm2r", "1couchcshm2l", "1couchcshm3l"],
+        ["1couchcshm4l", "1couchcshm2l", "1couchcshm2r", "1couchcshm3r"],
+        ["1couchcshm1r", "1couchcshm3r", "1couchcshm4r", "1couchcshm4l"],
+        ["1couchcshm1l", "1couchcshm3l", "1couchcshm4l", "1couchcshm4r"],
+        ["1couchcshm2r", "1couchcshm4r", "1couchcshm3r", "1couchcshm3l"],
+        ["1couchcshm2l", "1couchcshm4l", "1couchcshm3l", "1couchcshm3r"],
+        ["1couchcshm3r", "1couchcshm1r", "1couchcshm2r", "1couchcshm2l"],
+        ["1couchcshm3l", "1couchcshm1l", "1couchcshm2l", "1couchcshm2r"],
+        ["1couchcshm4r", "1couchcshm2r", "1couchcshm1r", "1couchcshm1l"],
+        ["1couchcshm4l", "1couchcshm2l", "1couchcshm1l", "1couchcshm1r"],
+
+        ["1couchcshr1r", "1couchcshr3r", "1couchcshr3l", "1couchcshr4l"],
+        ["1couchcshr1l", "1couchcshr3l", "1couchcshr3r", "1couchcshr4r"],
+        ["1couchcshr2r", "1couchcshr4r", "1couchcshr4l", "1couchcshr3l"],
+        ["1couchcshr2l", "1couchcshr4l", "1couchcshr4r", "1couchcshr3r"],
+        ["1couchcshr3r", "1couchcshr1r", "1couchcshr1l", "1couchcshr2l"],
+        ["1couchcshr3l", "1couchcshr1l", "1couchcshr1r", "1couchcshr2r"],
+        ["1couchcshr4r", "1couchcshr2r", "1couchcshr2l", "1couchcshr3l"],
+        ["1couchcshr4l", "1couchcshr2l", "1couchcshr2r", "1couchcshr3r"],
+        ["1couchcshr1r", "1couchcshr3r", "1couchcshr4r", "1couchcshr4l"],
+        ["1couchcshr1l", "1couchcshr3l", "1couchcshr4l", "1couchcshr4r"],
+        ["1couchcshr2r", "1couchcshr4r", "1couchcshr3r", "1couchcshr3l"],
+        ["1couchcshr2l", "1couchcshr4l", "1couchcshr3l", "1couchcshr3r"],
+        ["1couchcshr3r", "1couchcshr1r", "1couchcshr2r", "1couchcshr2l"],
+        ["1couchcshr3l", "1couchcshr1l", "1couchcshr2l", "1couchcshr2r"],
+        ["1couchcshr4r", "1couchcshr2r", "1couchcshr1r", "1couchcshr1l"],
+        ["1couchcshr4l", "1couchcshr2l", "1couchcshr1l", "1couchcshr1r"],
+
+
+
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":10},
+        //front face
+        ["1couch3rrr", "1couch3rr", "1couchcshg2r"],
+        ["1couchcshg2r", "1couch5rr", "1couch3rrr"],
+        ["1couch3rrr", "1couch1rr", "1couch3rr"],
+        ["1couch3rr", "1couch1rr", "1couchcshg1rr"],
+        ["1couchcshg1rr", "1couch1rr", "1couch1r"],
+        ["1couch1r", "1couch3r", "1couchcshg1rr"],
+        ["1couch1r", "1couchcshg1r", "1couch3r"],
+        ["1couch1r", "1couchcshg1l", "1couchcshg1r"],
+        ["1couchcshg1l", "1couch1l", "1couch3l"],
+        ["1couchcshg1l", "1couch1r", "1couch1l"],
+        ["1couch1l", "1couch1ll", "1couch3l"],
+        ["1couch3l", "1couch1ll", "1couchcshg1ll"],
+        ["1couchcshg1ll", "1couch1ll", "1couch3ll"],
+        ["1couch3ll", "1couch1ll", "1couch3lll"],
+        ["1couch3lll", "1couch5ll", "1couchcshg2l"],
+        ["1couchcshg2l", "1couch3ll", "1couch3lll"],
+
+        //seat back
+        ["1couch6rr", "1couch4rr", "1couch4r"],
+        ["1couch4r", "1couch6r", "1couch6rr"],
+        ["1couch4r", "1couch4l", "1couch6l"],
+        ["1couch6l", "1couch6r", "1couch4r"],
+        ["1couch4l", "1couch4ll", "1couch6ll"],
+        ["1couch6ll", "1couch6l", "1couch4l"],
+        ["1couch4rrr", "1couch6rr", "1couch8r"],
+        ["1couch8r", "1couch6rr", "1couch6r"],
+        ["1couch6r", "1couch8l", "1couch8r"],
+        ["1couch6r", "1couch6l", "1couch8l"],
+        ["1couch8l", "1couch6l", "1couch6ll"],
+        ["1couch6ll", "1couch4lll", "1couch8l"],
+
+
+
+
+
+        //back face
+        ["1couch4lll", "1couch2ll", "1couch8l"],
+        ["1couch8l", "1couch2ll", "1couch2l"],
+        ["1couch2l", "1couch2r", "1couch8l"],
+        ["1couch8l", "1couch2r", "1couch8r"],
+        ["1couch8r", "1couch2r", "1couch2rr"],
+        ["1couch2rr", "1couch4rrr", "1couch8r"],
+
+
+        //right side
+        ["1couch4rrr", "1couch2rr", "1couch1rr"],
+        ["1couch1rr", "1couch3rrr", "1couch4rrr"],
+
+
+        {"dragCoef":0},
+        //inner
+        ["1couch5rr", "1couchcshg2r", "1couch4rr"],
+        ["1couch4rr", "1couchcshg2r", "1couch3rr"],
+        ["1couch5rr", "1couch4rr", "1couch6rr"],
+
+        //left side inner
+        ["1couch6ll", "1couch4ll", "1couch3ll"],
+        ["1couch3ll", "1couchcshg2l", "1couch6ll"],
+        ["1couch6ll", "1couchcshg2l", "1couch5ll"],
+
+
+
+        {"dragCoef":10},
+        //outer
+        ["1couch3lll", "1couch1ll", "1couch2ll"],
+        ["1couch2ll", "1couch4lll", "1couch3lll"],
+
+        {"dragCoef":2},
+        //top/seat bottom
+        ["1couch3rrr", "1couch5rr", "1couch6rr"],
+        ["1couch6rr", "1couch4rrr", "1couch3rrr"],
+        ["1couch5ll", "1couch3lll", "1couch6ll"],
+        ["1couch6ll", "1couch3lll", "1couch4lll"],
+        ["1couch4rr", "1couch3rr", "1couchcshg1rr"],
+        ["1couchcshg1rr", "1couch3r", "1couch4rr"],
+        ["1couch4rr", "1couch3r", "1couch4r"],
+        ["1couch4r", "1couch3r", "1couchcshg1r"],
+        ["1couchcshg1r", "1couchcshg1l", "1couch4r"],
+        ["1couch4r", "1couchcshg1l", "1couch3l"],
+        ["1couch3l", "1couch4l", "1couch4r"],
+        ["1couch3l", "1couchcshg1ll", "1couch4l"],
+        ["1couch4l", "1couchcshg1ll", "1couch3ll"],
+        ["1couch3ll", "1couch4ll", "1couch4l"],
+
+
+
+        {"dragCoef":2},
+        //bottom
+        ["1couch2ll", "1couch1ll", "1couch1l"],
+        ["1couch1l", "1couch2l", "1couch2ll"],
+        ["1couch1l", "1couch1r", "1couch2l"],
+        ["1couch2l", "1couch1r", "1couch2r"],
+        ["1couch2r", "1couch1r", "1couch1rr"],
+        ["1couch1rr", "1couch2rr", "1couch2r"],
+
+        {"dragCoef":10},
+        //cushion
+        //L
+        ["1couchcshl4l", "1couchcshl2l", "1couchcshl2r"],
+        ["1couchcshl2r", "1couchcshl4r", "1couchcshl4l"],
+        ["1couchcshl1l", "1couchcshl2l", "1couchcshl4l"],
+        ["1couchcshl3l", "1couchcshl1l", "1couchcshl4l"],
+        ["1couchcshl1r", "1couchcshl1l", "1couchcshl3l"],
+        ["1couchcshl3l", "1couchcshl3r", "1couchcshl1r"],
+        ["1couchcshl2r", "1couchcshl1r", "1couchcshl3r"],
+        ["1couchcshl3r", "1couchcshl4r", "1couchcshl2r"],
+        ["1couchcshl4r", "1couchcshl3r", "1couchcshl3l"],
+        ["1couchcshl3l", "1couchcshl4l", "1couchcshl4r"],
+        ["1couchcshl2r", "1couchcshl2l", "1couchcshl1r"],
+        ["1couchcshl1r", "1couchcshl2l", "1couchcshl1l"],
+        //M
+        ["1couchcshm4l", "1couchcshm2l", "1couchcshm2r"],
+        ["1couchcshm2r", "1couchcshm4r", "1couchcshm4l"],
+        ["1couchcshm1l", "1couchcshm2l", "1couchcshm4l"],
+        ["1couchcshm3l", "1couchcshm1l", "1couchcshm4l"],
+        ["1couchcshm1r", "1couchcshm1l", "1couchcshm3l"],
+        ["1couchcshm3l", "1couchcshm3r", "1couchcshm1r"],
+        ["1couchcshm2r", "1couchcshm1r", "1couchcshm3r"],
+        ["1couchcshm3r", "1couchcshm4r", "1couchcshm2r"],
+        ["1couchcshm4r", "1couchcshm3r", "1couchcshm3l"],
+        ["1couchcshm3l", "1couchcshm4l", "1couchcshm4r"],
+        ["1couchcshm2r", "1couchcshm2l", "1couchcshm1r"],
+        ["1couchcshm1r", "1couchcshm2l", "1couchcshm1l"],
+
+        //cushion
+        ["1couchcshr4l", "1couchcshr2l", "1couchcshr2r"],
+        ["1couchcshr2r", "1couchcshr4r", "1couchcshr4l"],
+        ["1couchcshr1l", "1couchcshr2l", "1couchcshr4l"],
+        ["1couchcshr3l", "1couchcshr1l", "1couchcshr4l"],
+        ["1couchcshr1r", "1couchcshr1l", "1couchcshr3l"],
+        ["1couchcshr3l", "1couchcshr3r", "1couchcshr1r"],
+        ["1couchcshr2r", "1couchcshr1r", "1couchcshr3r"],
+        ["1couchcshr3r", "1couchcshr4r", "1couchcshr2r"],
+        ["1couchcshr4r", "1couchcshr3r", "1couchcshr3l"],
+        ["1couchcshr3l", "1couchcshr4l", "1couchcshr4r"],
+        ["1couchcshr2r", "1couchcshr2l", "1couchcshr1r"],
+        ["1couchcshr1r", "1couchcshr2l", "1couchcshr1l"],
+
+    ],
+},
+"G_pickup_bed_6x6_tiny_couch_straps": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"Straps",
+        "value":300,
+    },
+    "slotType" : "G_pickup_bed_6x6_tiny_couch_straps",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        {"deformGroup":"1couch_rearStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["couch_strap", ["1couch", "pickup_bed"],[],{"pos":{"x":0.0, "y":2.15, "z":0.7}, "scale":{"x":1.0,"y":1.0,"z":1.0},"rot":{"x":0, "y":0, "z":90}}],
+        {"deformGroup":"1couch_frontStrap","deformMaterialBase":"woodplanks","deformMaterialDamaged":"invis"},
+        ["couch_strap", ["1couch", "pickup_bed"],[],{"pos":{"x":0.0, "y":1.25, "z":0.7}, "scale":{"x":1.0,"y":1.0,"z":1.0},"rot":{"x":0, "y":0, "z":90}}],
+        {"deformGroup":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+        //attach straps
+        {"beamPrecompression":1, "beamType":"|ANISOTROPIC", "beamLongBound":0.04},
+        {"beamSpring":201000,"beamDamp":190},
+        {"beamDeform":188000,"beamStrength":"FLT_MAX"},
+        {"springExpansion":95000,"dampExpansion":200,"transitionZone":0.01},
+        {"breakGroup":"1couch_frontStrap"},
+        {"deformGroup":"1couch_frontStrap", "deformationTriggerRatio":0.5}
+        ["1couch3r", "bd6ll"],
+        ["1couch3rr", "bd6ll"],
+        ["1couch3r", "bd6l"],
+        ["1couch3rr", "bd6l"],
+        ["1couch8r", "bd6rr"],
+        ["1couch4rrr", "bd6rr"],
+        ["1couch8r", "bd6r"],
+        ["1couch4rrr", "bd6r"],
+
+
+        ["1couch3r", "bd6"],
+        ["1couch3rr", "bd6"],
+
+        ["1couch8r", "bd6"],
+        ["1couch4rrr", "bd6"],
+
+        ["1couch2l", "bd6"],
+        ["1couch2l", "bd6"],
+
+        {"breakGroup":"1couch_rearStrap"}
+        {"deformGroup":"1couch_rearStrap", "deformationTriggerRatio":0.5}
+        ["1couch3l", "bd9ll"],
+        ["1couch3ll", "bd9ll"],
+        ["1couch3l", "bd9l"],
+        ["1couch3ll", "bd9l"],
+        ["1couch8l", "bd9rr"],
+        ["1couch4ll", "bd9rr"],
+        ["1couch8l", "bd9r"],
+        ["1couch4ll", "bd9r"],
+
+
+        ["1couch3l", "bd9"],
+        ["1couch3ll", "bd9"],
+        ["1couch8l", "bd9"],
+        ["1couch4ll", "bd9"],
+        ["1couch1r", "bd9"],
+        ["1couch2r", "bd9"],
+
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":"1couch_frontStrap"},
+        ["1couchcshl3r", "1couch3l",{"beamSpring":25000,"beamDamp":20,"beamStrength":"FLT_MAX","beamPrecompression":0.9}],
+        ["1couchcshl3l", "1couch3ll",{"beamSpring":25000,"beamDamp":20,"beamStrength":"FLT_MAX","beamPrecompression":0.9}],
+        ["1couchcshl3r", "1couch4l",{"beamSpring":25000,"beamDamp":20,"beamStrength":"FLT_MAX","beamPrecompression":0.9}],
+        ["1couchcshl3l", "1couch4ll",{"beamSpring":25000,"beamDamp":20,"beamStrength":"FLT_MAX","beamPrecompression":0.9}],
+        ["1couchcshl3r", "1couch3ll",{"beamSpring":250000,"beamDamp":20,"beamDeform":18000,"beamStrength":"FLT_MAX"}],
+        ["1couchcshl3l", "1couch3rr",{"beamSpring":250000,"beamDamp":20,"beamDeform":18000,"beamStrength":"FLT_MAX"}],
+        {"breakGroup":"1couch_rearStrap"}
+        ["1couchcshr3r", "1couch3r",{"beamSpring":25000,"beamDamp":20,"beamStrength":"FLT_MAX","beamPrecompression":0.9}],
+        ["1couchcshr3l", "1couch3rr",{"beamSpring":25000,"beamDamp":20,"beamStrength":"FLT_MAX","beamPrecompression":0.9}],
+        ["1couchcshr3r", "1couch4r",{"beamSpring":25000,"beamDamp":20,"beamStrength":"FLT_MAX","beamPrecompression":0.9}],
+        ["1couchcshr3l", "1couch4rr",{"beamSpring":25000,"beamDamp":20,"beamStrength":"FLT_MAX","beamPrecompression":0.9}],
+        ["1couchcshr3r", "1couch3rr",{"beamSpring":250000,"beamDamp":20,"beamDeform":18000,"beamStrength":"FLT_MAX","beamPrecompression":0.9}],
+        ["1couchcshr3l", "1couch3r",{"beamSpring":250000,"beamDamp":20,"beamDeform":18000,"beamStrength":"FLT_MAX","beamPrecompression":0.9}],
+        {"breakGroup":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        ],
+        },
+
+},
+},

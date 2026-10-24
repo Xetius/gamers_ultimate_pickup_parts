@@ -1,0 +1,18 @@
+{
+  "Author": "BeamNG",
+  "Body Style": "SUV",
+  "Brand": "Gavril",
+  "Country": "United States",
+  "Derby Class": "Medium Truck",
+  "Description": "vehiclesData.roamer.Description",
+  "Name": "vehiclesData.roamer.Name",
+  "Type": "Truck",
+  "InsuranceClass": "dailyDriver",
+  "Region": "northAmerica",
+  "defaultMultiPaintSetup": "Cream Two-Tone",
+  "default_pc": "v8_4wd_xt",
+  "paints": {},
+  "multiPaintSetups": [],
+  "libraryPaints": [],
+  "paintCollections": ["roamer_factory", "gavril_twotone_factory", "roamer_custom", "G_pickup_factory_additional", "G_pickup_custom_additional"]
+}

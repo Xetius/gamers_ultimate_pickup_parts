@@ -1,0 +1,49 @@
+{
+  "0-100 km/h":9.8,
+  "0-100 mph":34.9,
+  "0-60 mph":9.2,
+  "100-0 km/h":40.3,
+  "60-0 mph":123.7,
+  "60-100 mph":25.7,
+  "BoundingBox":[
+    [
+      -0.6,
+      -1.42,
+      -0.3099
+    ],
+    [
+      1.7,
+      3.54,
+      1.41
+    ]
+  ],
+  "Braking G":0.975,
+  "Commercial Class":"Class 5 Truck",
+  "Config Type":"Factory",
+  "Configuration":"D50 Kentarch Dually (A)",
+  "Description":"A rare model of Kentarch, only a dozen of these are known to be built. They come with a high trim level, color matched Interior, a 4x4 drivetrain, and everything you need to show your neighbor that you are indeed superior and better with money!",
+  "Drivetrain":"4x4",
+  "Fuel Type":"Diesel",
+  "Induction Type":"TURBO",
+  "Off-Road Score":46,
+  "Performance Class":"4",
+  "Population":4000,
+  "Power":193,
+  "PowerPeakRPM":"3950 - 4600",
+  "Propulsion":"ICE",
+  "Top Speed":48.48723133,
+  "Torque":580,
+  "TorquePeakRPM":"2950 - 3650",
+  "Transmission":"Automatic",
+  "Value":115000,
+  "Weight":3870,
+  "Weight/Power":10.45685279,
+  "Years":{
+    "max":1991,
+    "min":1986
+  },
+  "defaultPaintName1":"Chocolate Brown",
+  "defaultPaintName2":"Chestnut",
+  "defaultPaintName3":"Chocolate Brown",
+  "vehicleSelectorSubGroup":"D50"
+}

@@ -1,0 +1,153 @@
+{
+"G_pickup_fendersignal_R_D55": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Front Right Fender Signal",
+        "value":40,
+    },
+    "slotType" : "G_pickup_fendersignal_R_D55",
+    "slots2": [
+        ["name", "allowTypes", "denyTypes", "default", "description"],
+        ["pickup_fendersignal_R_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Right Turn Signal",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"signal_R_filament",
+          "$nodeRef":"fe1r", "$nodeX":"fe2r", "$nodeY":"fe3r",
+          "$deformGroup":"fendersignal_R_break",
+          "$posX":-1.07, "$posY":-1.25, "$posZ":0.95,
+          "$rotX":0, "$rotY":0, "$rotZ":-90,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_fendermarker_R_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Right Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"fe1r", "$nodeX":"fe2r", "$nodeY":"fe3r",
+          "$deformGroup":"fendersignal_R_break",
+          "$posX":-1.07, "$posY":-1.25, "$posZ":0.95,
+          "$rotX":0, "$rotY":0, "$rotZ":-90,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_fenderflasher_R_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Right Flasher Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"FR",
+          "$nodeRef":"fe1r", "$nodeX":"fe2r", "$nodeY":"fe3r",
+          "$deformGroup":"fendersignal_R_break",
+          "$posX":-1.07, "$posY":-1.25, "$posZ":0.95,
+          "$rotX":0, "$rotY":0, "$rotZ":-90,
+          "$shadowEnable":0,
+        }
+        }]
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ////lights
+         {"deformGroup":"fendersignal_R_break", "deformMaterialBase":"pickup_lights", "deformMaterialDamaged":"pickup_lights"},
+         ["G_pickup_fendersignal_R_D55", ["pickup_fender_R_flared"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+         {"deformGroup":"fendersignal_R_break", "deformMaterialBase":"pickup_lightglass", "deformMaterialDamaged":"pickup_lightglass_dmg"},
+         ["G_pickup_fendersignalglass_R_D55", ["pickup_fender_R_flared"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+         {"deformGroup":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":129869.6,"beamDamp":73.32},
+          {"beamDeform":4175,"beamStrength":"FLT_MAX"},
+          //headlight deform
+          {"deformLimitExpansion":""},
+          {"deformGroup":"fendersignal_R_break","deformationTriggerRatio":0.02},
+          {"optional":true}
+          ["fe2r", "fe3r"],
+          ["fe1r", "fe4r"],
+          {"optional":false}
+          {"deformGroup":""},
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.2},
+    ],
+},
+"G_pickup_fendersignal_L_D55": {
+    "information":{
+        "authors":"Gamer!",
+        "name":"D55 Front Left Fender Signal",
+        "value":40,
+    },
+    "slotType" : "G_pickup_fendersignal_L_D55",
+    "slots2": [
+        ["name", "allowTypes", "denyTypes", "default", "description"],
+        ["pickup_fendersignal_L_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Left Turn Signal",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"signal_L_filament",
+          "$nodeRef":"fe1l", "$nodeX":"fe2l", "$nodeY":"fe3l",
+          "$deformGroup":"fendersignal_L_break",
+          "$posX":1.07, "$posY":-1.25, "$posZ":0.95,
+          "$rotX":0, "$rotY":0, "$rotZ":90,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_fendermarker_L_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Left Marker Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"lowhighbeam_filament",
+          "$nodeRef":"fe1l", "$nodeX":"fe2l", "$nodeY":"fe3l",
+          "$deformGroup":"fendersignal_L_break",
+          "$posX":1.07, "$posY":-1.25, "$posZ":0.95,
+          "$rotX":0, "$rotY":0, "$rotZ":90,
+          "$shadowEnable":0,
+        }
+        }]
+        ["pickup_fenderflasher_L_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Left Flasher Light",
+        {
+        "coreSlot":true,
+        "variables":{
+          "$electric":"FL",
+          "$nodeRef":"fe1l", "$nodeX":"fe2l", "$nodeY":"fe3l",
+          "$deformGroup":"fendersignal_L_break",
+          "$posX":1.07, "$posY":-1.25, "$posZ":0.95,
+          "$rotX":0, "$rotY":0, "$rotZ":90,
+          "$shadowEnable":0,
+        }
+        }]
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ////lights
+         //{"deformGroup":"fendersignal_L_break", "deformMaterialBase":"gavril_lights", "deformMaterialDamaged":"gavril_lights_dmg"},
+         //["G_pickup_fendersignal_L_D55", ["pickup_fender_L_flared"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+         //{"deformGroup":""}
+
+         ////lights
+         {"deformGroup":"fendersignal_L_break", "deformMaterialBase":"pickup_lights", "deformMaterialDamaged":"pickup_lights"},
+         ["G_pickup_fendersignal_L_D55", ["pickup_fender_L_flared"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+         {"deformGroup":"fendersignal_L_break", "deformMaterialBase":"pickup_lightglass", "deformMaterialDamaged":"pickup_lightglass_dmg"},
+         ["G_pickup_fendersignalglass_L_D55", ["pickup_fender_L_flared"],[]{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3", "deformVolume":0.6}],
+         {"deformGroup":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":129869.6,"beamDamp":73.32},
+          {"beamDeform":4175,"beamStrength":"FLT_MAX"},
+          //headlight deform
+          {"deformLimitExpansion":""},
+          {"deformGroup":"fendersignal_L_break","deformationTriggerRatio":0.02},
+          {"optional":true}
+          ["fe2l", "fe3l"],
+          ["fe1l", "fe4l"],
+          {"optional":false}
+          {"deformGroup":""},
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformLimitExpansion":1.2},
+    ],
+},
+}

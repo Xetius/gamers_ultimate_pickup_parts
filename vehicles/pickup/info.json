@@ -1,0 +1,17 @@
+{
+  "Author": "BeamNG",
+  "Body Style": "Pickup",
+  "Brand": "Gavril",
+  "Country": "United States",
+  "Derby Class": "Medium Truck",
+  "Description": "vehiclesData.pickup.Description",
+  "Name": "vehiclesData.pickup.Name",
+  "Type": "Truck",
+  "InsuranceClass": "dailyDriver",
+  "Region": "northAmerica",
+  "defaultPaintName1": "Sea Blue",
+  "default_pc": "d15_4wd_A",
+  "multiPaintSetups": [],
+  "libraryPaints": [],
+  "paintCollections": ["pickup_factory", "gavril_twotone_factory", "pickup_custom", "pickup_twotone_custom", "G_pickup_factory_additional", "G_pickup_custom_additional"]
+}
