@@ -185,7 +185,7 @@
     "pickup_wheeldata_F":"pickup_wheeldata_F",
     "pickup_wheeldata_R":"pickup_wheeldata_R",
     "pickup_windshield":"pickup_windshield",
-    "race_seat_FL":"race_seat_FL",
+    "race_seat_FL":"seat_race_gray",
     "skin_G_pickup_rollcage_color":"G_pickup_rollcage_color_black",
     "skin_glass":"pickup_skin_glass_tint",
     "skin_interior":"pickup_skin_interior_black",

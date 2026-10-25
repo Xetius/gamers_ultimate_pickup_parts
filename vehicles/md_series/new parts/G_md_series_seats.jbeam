@@ -6,6 +6,28 @@
         "value":420,
     },
     "slotType" : "md_series_seat_FL",
+    "slots2": [
+        ["name", "allowTypes", "denyTypes", "default", "description"],
+        ["seat_occupant_FL", ["seat_occupant"], [], "occupant_generic", "Driver Seat Occupant", {
+            "coreSlot":true,
+            "nodeMove":{"x":0.45,"y":-0.1,"z":1.31},
+            "nodeRotate1":{"x":-15, "y":0, "z":0},
+            "variables": {
+                "$seatID": "FL",
+                "$occupant_camPitch": 15,
+                "$TriggerHighlightMesh": "G_md_series_seat_FL",
+                "$occupantDragCoef": 1,
+                "$seatAttachmentStrength": 150000,
+                "$occupant_attachnodeFL": "sf1ll",
+                "$occupant_attachnodeFR": "sf1l",
+                "$occupant_attachnodeRL": "sf2ll",
+                "$occupant_attachnodeRR": "sf2l",
+                "$occupant_attachnodeTL": "sf3ll",
+                "$occupant_attachnodeTR": "sf3l",
+                "$occupant_attachnodeRigifier": "sf4l"
+            }
+        }],
+    ],
     "flexbodies": [
          ["mesh", "[group]:", "nonFlexMaterials"],
          ["G_md_series_seat_FL" ["md_series_floor","md_series_seat_FL"],[]],
@@ -29,6 +51,7 @@
          ["sf3l", 0.15, 0.25, 1.8],
          ["sf3ll", 0.75, 0.25, 1.8],
          {"group":""},
+         ["sf4l", 0.45, 0.625, 1.66, {"collision":false, "selfCollision":false, "group":"", "nodeWeight":1}],
     ],
     "beams":[
         ["id1:", "id2:"],
@@ -101,6 +124,16 @@
 
         {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
         {"deformLimitExpansion":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"optional":false},
+        {"beamSpring":400000,"beamDamp":282},
+        {"beamDeform":20000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":1.2},
+        ["sf4l", "sf2ll"],
+        ["sf4l", "sf2l"],
+        ["sf4l", "sf3ll"],
+        ["sf4l", "sf3l"],
+        {"deformLimitExpansion":""},
     ],
     "triangles":[
         ["id1:", "id2:", "id3:"],
@@ -120,6 +153,28 @@
         "value":420,
     },
     "slotType" : "md_series_seat_FR",
+    "slots2": [
+        ["name", "allowTypes", "denyTypes", "default", "description"],
+        ["seat_occupant_FR", ["seat_occupant"], [], "occupant_generic", "Passenger Seat Occupant", {
+            "coreSlot":true,
+            "nodeMove":{"x":-0.45,"y":-0.1,"z":1.31},
+            "nodeRotate1":{"x":-15, "y":0, "z":0},
+            "variables": {
+                "$seatID": "FR",
+                "$occupant_camPitch": 15,
+                "$TriggerHighlightMesh": "G_md_series_seat_FR",
+                "$occupantDragCoef": 1,
+                "$seatAttachmentStrength": 150000,
+                "$occupant_attachnodeFL": "sf1r",
+                "$occupant_attachnodeFR": "sf1rr",
+                "$occupant_attachnodeRL": "sf2r",
+                "$occupant_attachnodeRR": "sf2rr",
+                "$occupant_attachnodeTL": "sf3r",
+                "$occupant_attachnodeTR": "sf3rr",
+                "$occupant_attachnodeRigifier": "sf4r"
+            }
+        }],
+    ],
     "flexbodies": [
          ["mesh", "[group]:", "nonFlexMaterials"],
          ["G_md_series_seat_FR" ["md_series_floor","md_series_seat_FR"],[]],
@@ -143,6 +198,7 @@
          ["sf3r", -0.15, 0.25, 1.8],
          ["sf3rr", -0.75, 0.25, 1.8],
          {"group":""},
+         ["sf4r", -0.45, 0.625, 1.66, {"collision":false, "selfCollision":false, "group":"", "nodeWeight":1}],
     ],
     "beams":[
         ["id1:", "id2:"],
@@ -213,6 +269,16 @@
         {"beamPrecompression":1},
 
         {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"deformLimitExpansion":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"optional":false},
+        {"beamSpring":400000,"beamDamp":282},
+        {"beamDeform":20000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":1.2},
+        ["sf4r", "sf2r"],
+        ["sf4r", "sf2rr"],
+        ["sf4r", "sf3r"],
+        ["sf4r", "sf3rr"],
         {"deformLimitExpansion":""},
     ],
     "triangles":[

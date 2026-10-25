@@ -17,6 +17,7 @@
         ["G_pickup_D55_airbrakeContols_facelift",   ["G_pickup_D55_airbrakeContols_facelift"],   [],          "G_pickup_D55_airbrakeContols_facelift",  "Airbrake Controls", {"coreSlot":true}],
         ["G_pickup_D55_pto",                        ["G_pickup_D55_pto"],                        [],          "",                                       "PTO Controls"],
         ["G_pickup_D55_fifthwheel_switch_facelift", ["G_pickup_D55_fifthwheel_switch_facelift"], [],          "",                                       "Fifth Wheel Switch"],
+        ["pickup_seat_F",                  ["pickup_seat_F"],                  [],          "pickup_seat_F_facelift",    "Front Seats"],
     ],
     "camerasInternal":[
         ["type", "x", "y", "z", "fov", "id1:", "id2:", "id3:", "id4:", "id5:", "id6:"],
@@ -259,6 +260,7 @@
         ["G_pickup_D55_airbrakeContols_facelift",   ["G_pickup_D55_airbrakeContols_facelift"],   [],          "G_pickup_D55_airbrakeContols_facelift",  "Airbrake Controls", {"coreSlot":true}],
         ["G_pickup_D55_pto_facelift",               ["G_pickup_D55_pto_facelift"],               [],          "",                                       "PTO Controls"],
         ["G_pickup_D55_fifthwheel_switch_facelift", ["G_pickup_D55_fifthwheel_switch_facelift"], [],          "",                                       "Fifth Wheel Switch"],
+        ["pickup_seat_F",                  ["pickup_seat_F"],                  [],          "pickup_seat_F_facelift",    "Front Seats"],
     ],
     "controller": [
         ["fileName"],

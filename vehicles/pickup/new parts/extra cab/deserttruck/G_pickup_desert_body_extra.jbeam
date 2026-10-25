@@ -20,7 +20,6 @@
         ["pickup_spotlight_L",         ["pickup_spotlight_L"],         [],          "",                        "Left Spotlight"],
         ["pickup_spotlight_R",         ["pickup_spotlight_R"],         [],          "",                        "Right Spotlight"],
         ["pickup_hood",                ["pickup_hood"],                [],          "pickup_hood",             "Hood"],
-        ["pickup_seat_F",              ["pickup_seat_F"],              [],          "pickup_seat_F",           "Front Seats"],
         ["G_pickup_seat_R_extra",      ["G_pickup_seat_R_extra"],      [],          "G_pickup_seat_R_extra",   "Rear Jump Seats"],
         ["soundscape_horn",            ["soundscape_horn"],            [],          "soundscape_horn_126",     "Horn"],
         ["pickup_lightbar",            ["pickup_lightbar"],            [],          "",                        "Light Bar"],

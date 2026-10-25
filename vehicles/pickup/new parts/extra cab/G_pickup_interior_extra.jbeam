@@ -9,6 +9,44 @@
     "slots2": [
         ["name",                           "allowTypes",                       "denyTypes",   "default",                   "description"],
         ["G_pickup_extra_shelf_S",         ["G_pickup_extra_shelf_S"],         [],            "G_pickup_extra_shelf_S",    "Shelf"],
+        ["seat_occupant_RL", ["seat_occupant"], [], "occupant_generic", "Rear Left Jump Seat Occupant", {
+            "coreSlot":true,
+            "nodeMove":{"x":0.52,"y":0.455,"z":0.86},
+            "nodeRotate1":{"x":0, "y":10, "z":-90},
+            "variables": {
+                "$seatID": "RL",
+                "$occupant_camPitch": 10,
+                "$TriggerHighlightMesh": "G_pickup_seat_extra_RL",
+                "$occupantDragCoef": 1,
+                "$seatAttachmentStrength": 150000,
+                "$occupant_attachnodeFL": "ser1ll",
+                "$occupant_attachnodeFR": "ser1l",
+                "$occupant_attachnodeRL": "ser2ll",
+                "$occupant_attachnodeRR": "ser2l",
+                "$occupant_attachnodeTL": "ser3ll",
+                "$occupant_attachnodeTR": "ser3l",
+                "$occupant_attachnodeRigifier": "ser4l"
+            }
+        }],
+        ["seat_occupant_RR", ["seat_occupant"], [], "occupant_generic", "Rear Right Jump Seat Occupant", {
+            "coreSlot":true,
+            "nodeMove":{"x":-0.52,"y":0.455,"z":0.86},
+            "nodeRotate1":{"x":0, "y":-10, "z":90},
+            "variables": {
+                "$seatID": "RR",
+                "$occupant_camPitch": 10,
+                "$TriggerHighlightMesh": "G_pickup_seat_extra_RR",
+                "$occupantDragCoef": 1,
+                "$seatAttachmentStrength": 150000,
+                "$occupant_attachnodeFL": "ser1r",
+                "$occupant_attachnodeFR": "ser1rr",
+                "$occupant_attachnodeRL": "ser2r",
+                "$occupant_attachnodeRR": "ser2rr",
+                "$occupant_attachnodeTL": "ser3r",
+                "$occupant_attachnodeTR": "ser3rr",
+                "$occupant_attachnodeRigifier": "ser4r"
+            }
+        }],
     ],
     "flexbodies":[
         ["mesh", "[group]:", "nonFlexMaterials"],
@@ -36,6 +74,8 @@
           ["ser3ll",  0.76, 0.29, 1.37, {"selfCollision":false}],
           ["ser3l",   0.76, 0.62, 1.37],
           {"group":""},
+         ["ser4l", 1.06, 0.455, 1.23, {"collision":false, "selfCollision":false, "group":"", "nodeWeight":1}],
+         ["ser4r", -1.06, 0.455, 1.23, {"collision":false, "selfCollision":false, "group":"", "nodeWeight":1}],
     ],
     "beams":[
           ["id1:", "id2:"],
@@ -150,6 +190,20 @@
           {"beamPrecompression":1},
           {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
           {"deformLimitExpansion":1.2},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"optional":false},
+        {"beamSpring":400000,"beamDamp":282},
+        {"beamDeform":20000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":1.2},
+        ["ser4l", "ser2l"],
+        ["ser4l", "ser2ll"],
+        ["ser4l", "ser3l"],
+        ["ser4l", "ser3ll"],
+        ["ser4r", "ser2r"],
+        ["ser4r", "ser2rr"],
+        ["ser4r", "ser3r"],
+        ["ser4r", "ser3rr"],
+        {"deformLimitExpansion":""},
     ],
     "triangles":[
         ["id1:", "id2:", "id3:"],
@@ -179,6 +233,44 @@
     "slots2": [
         ["name",                           "allowTypes",                       "denyTypes",   "default",                   "description"],
         ["G_pickup_extra_shelf_S",         ["G_pickup_extra_shelf_S"],         [],            "G_pickup_extra_shelf_S",    "Shelf"],
+        ["seat_occupant_RL", ["seat_occupant"], [], "occupant_generic", "Rear Left Jump Seat Occupant", {
+            "coreSlot":true,
+            "nodeMove":{"x":0.51,"y":0.455,"z":0.79},
+            "nodeRotate1":{"x":0, "y":5, "z":-90},
+            "variables": {
+                "$seatID": "RL",
+                "$occupant_camPitch": 5,
+                "$TriggerHighlightMesh": "G_pickup_facelift_seat_extra_RL",
+                "$occupantDragCoef": 1,
+                "$seatAttachmentStrength": 150000,
+                "$occupant_attachnodeFL": "ser1ll",
+                "$occupant_attachnodeFR": "ser1l",
+                "$occupant_attachnodeRL": "ser2ll",
+                "$occupant_attachnodeRR": "ser2l",
+                "$occupant_attachnodeTL": "ser3ll",
+                "$occupant_attachnodeTR": "ser3l",
+                "$occupant_attachnodeRigifier": "ser4l"
+            }
+        }],
+        ["seat_occupant_RR", ["seat_occupant"], [], "occupant_generic", "Rear Right Jump Seat Occupant", {
+            "coreSlot":true,
+            "nodeMove":{"x":-0.51,"y":0.455,"z":0.79},
+            "nodeRotate1":{"x":0, "y":-5, "z":90},
+            "variables": {
+                "$seatID": "RR",
+                "$occupant_camPitch": 5,
+                "$TriggerHighlightMesh": "G_pickup_facelift_seat_extra_RR",
+                "$occupantDragCoef": 1,
+                "$seatAttachmentStrength": 150000,
+                "$occupant_attachnodeFL": "ser1r",
+                "$occupant_attachnodeFR": "ser1rr",
+                "$occupant_attachnodeRL": "ser2r",
+                "$occupant_attachnodeRR": "ser2rr",
+                "$occupant_attachnodeTL": "ser3r",
+                "$occupant_attachnodeTR": "ser3rr",
+                "$occupant_attachnodeRigifier": "ser4r"
+            }
+        }],
     ],
     "flexbodies":[
         ["mesh", "[group]:", "nonFlexMaterials"],
@@ -206,6 +298,8 @@
           ["ser3ll",  0.72, 0.32, 1.50, {"selfCollision":false}],
           ["ser3l",   0.72, 0.59, 1.50],
           {"group":""},
+         ["ser4l", 1.02, 0.455, 1.31, {"collision":false, "selfCollision":false, "group":"", "nodeWeight":1}],
+         ["ser4r", -1.02, 0.455, 1.31, {"collision":false, "selfCollision":false, "group":"", "nodeWeight":1}],
     ],
     "beams":[
           ["id1:", "id2:"],
@@ -320,6 +414,20 @@
           {"beamPrecompression":1},
           {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
           {"deformLimitExpansion":1.2},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"optional":false},
+        {"beamSpring":400000,"beamDamp":282},
+        {"beamDeform":20000,"beamStrength":"FLT_MAX"},
+        {"deformLimitExpansion":1.2},
+        ["ser4l", "ser2l"],
+        ["ser4l", "ser2ll"],
+        ["ser4l", "ser3l"],
+        ["ser4l", "ser3ll"],
+        ["ser4r", "ser2r"],
+        ["ser4r", "ser2rr"],
+        ["ser4r", "ser3r"],
+        ["ser4r", "ser3rr"],
+        {"deformLimitExpansion":""},
     ],
     "triangles":[
         ["id1:", "id2:", "id3:"],

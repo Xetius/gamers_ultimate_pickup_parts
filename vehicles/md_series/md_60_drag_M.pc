@@ -153,7 +153,7 @@
     "n2o_system":"n2o_system",
     "paint_design":"md_series_skin_mismatch",
     "pickup_steer":"pickup_steer_02b",
-    "race_seat_FL":"race_seat_FL",
+    "race_seat_FL":"seat_race_red",
     "skin_G_md_series_rollcage_color":"G_md_series_rollcage_color_black",
     "skin_frame":"md_series_skin_frame_black",
     "skin_glass":"",

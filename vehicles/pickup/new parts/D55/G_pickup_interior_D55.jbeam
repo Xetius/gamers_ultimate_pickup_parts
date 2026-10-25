@@ -17,6 +17,7 @@
         ["G_pickup_D55_airbrakeContols",   ["G_pickup_D55_airbrakeContols"],   [],          "G_pickup_D55_airbrakeContols",  "Airbrake Controls", {"coreSlot":true}],
         ["G_pickup_D55_pto",               ["G_pickup_D55_pto"],               [],          "",                              "PTO Controls"],
         ["G_pickup_D55_fifthwheel_switch", ["G_pickup_D55_fifthwheel_switch"], [],          "",                              "Fifth Wheel Switch"],
+        ["pickup_seat_F",                  ["pickup_seat_F"],                  [],          "pickup_seat_F",    "Front Seats"],
     ],
     "camerasInternal":[
         ["type", "x", "y", "z", "fov", "id1:", "id2:", "id3:", "id4:", "id5:", "id6:"],

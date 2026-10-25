@@ -19,6 +19,7 @@
         ["pickup_interior_accessory",      ["pickup_interior_accessory"],      [],          "",                              "Interior Accessories"],
         ["G_pickup_grp_lettering",         ["G_pickup_grp_lettering"],         [],          "",                              "Lettering"],
         ["G_pickup_grp_thissideup",        ["G_pickup_grp_thissideup"],        [],          "",                              "Dashboard Accessory"],
+        ["pickup_seat_F",                  ["pickup_seat_F"],                  [],          "pickup_seat_F_bucket",          "Front Seats"],
     ],
     "camerasInternal":[
         ["type", "x", "y", "z", "fov", "id1:", "id2:", "id3:", "id4:", "id5:", "id6:"],
