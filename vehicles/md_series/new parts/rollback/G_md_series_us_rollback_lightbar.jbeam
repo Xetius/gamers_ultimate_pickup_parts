@@ -5,7 +5,7 @@
         "name":"Light Bar Mount",
         "value":100,
     },
-    "slotType" : "van_rollback_lightbar",
+    "slotType" : ["van_rollback_lightbar", "G_md_series_us_rollback_lightbar"],
     "slots": [
         ["type", "default", "description"],
         ["us_lightbar_R","us_lightbar_halogen_R", "Light Bar", {"nodeMove2":{"x":0,"y":0.67,"z":2.213}, "variables":{"$scale":1.3}}],

@@ -520,6 +520,7 @@
     "information":{
         "authors":"Gamer!",
         "name":"Rear Guard Lights",
+        "value":160,
     },
     "slotType" : "G_md_series_us_cargobox_taillights",
     "flexbodies": [

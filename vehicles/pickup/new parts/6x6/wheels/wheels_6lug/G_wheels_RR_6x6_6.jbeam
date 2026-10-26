@@ -82,7 +82,7 @@
 
     "slots": [
         ["type", "default", "description"],
-        ["G_tire_RR_6x6_16x7_alt","tire_R_225_75_16_alt_standard","Rear Rear Tires"],
+        ["G_tire_RR_6x6_16x7_alt","tire_RR_6x6_225_75_16_alt_standard","Rear Rear Tires"],
         ["hubcap_RR_6x6_16","", "Rear Rear Hubcaps"],
         ["G_trimring_RR_6x6_16x7","", "Rear Rear Trim Ring"],
     ],

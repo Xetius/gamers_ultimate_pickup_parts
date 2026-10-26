@@ -185,7 +185,7 @@
     "paint_design":"",
     "pickup_receiver_attachment":"pickup_receiver_ball",
     "pickup_rollbar_accessory":"pickup_rollbarlight_square",
-    "pickup_rollbarlight_square_accessory":"pickup_rollbarlight_square_mesh",
+    "pickup_rollbarlight_accessory":"pickup_rollbarlight_mesh",
     "pickup_steer":"pickup_steer",
     "skin_frame":"md_series_skin_frame_black",
     "skin_glass":"md_series_skin_glass_tint",

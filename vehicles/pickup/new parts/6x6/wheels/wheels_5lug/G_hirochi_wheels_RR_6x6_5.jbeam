@@ -9,7 +9,7 @@
 
     "slots": [
         ["type", "default", "description"],
-        ["G_tire_RR_6x6_16x7","tire_RR_6x6_215_55_16_sport", "Rear Rear Tires"],
+        ["G_tire_RR_6x6_16x7","tire_RR_6x6_205_55_16_sport", "Rear Rear Tires"],
     ],
     "flexbodies": [
         ["mesh", "[group]:", "nonFlexMaterials"],

@@ -216,7 +216,7 @@
     "n2o_system":"",
     "paint_design":"md_series_skin_sport",
     "pickup_roofrack_accessory":"pickup_roofracklight_square_quad",
-    "pickup_roofracklight_quadsquare_accessory":"pickup_roofracklight_quadsquare_grille",
+    "pickup_roofrack_light_accessory":"pickup_roofrack_light_grille",
     "pickup_steer":"pickup_steer_05a",
     "skin_frame":"md_series_skin_frame_black",
     "skin_glass":"md_series_skin_glass_tint",

@@ -8,7 +8,7 @@
     "slotType" : "G_md_series_ex_rollcage_lights",
     "slots2": [
         ["name",                          "allowTypes",            "denyTypes", "default",  "description"],
-        ["md_series_roofrack_light_accessory", ["md_series_roofrack_light_accessory","md_series_roofrack_light_accessory_round"], [], "", "Lights Accessory"],
+        ["md_series_roofrack_light_accessory", ["pickup_roofrack_light_accessory","pickup_roofrack_light_accessory_round"], [], "", "Lights Accessory"],
         ["roofrack_light_round_R", ["offroadlight_round"], [],          "offroadlight_round", "Right Light",
         {
             "coreSlot":true,
@@ -127,7 +127,7 @@
     "slotType" : "G_md_series_ex_rollcage_lights",
     "slots2": [
         ["name",                          "allowTypes",            "denyTypes", "default",  "description"],
-        ["md_series_roofrack_light_accessory", ["md_series_roofrack_light_accessory","md_series_roofrack_light_accessory_round"], [], "", "Lights Accessory"],
+        ["md_series_roofrack_light_accessory", ["pickup_roofrack_light_accessory","pickup_roofrack_light_accessory_round"], [], "", "Lights Accessory"],
         ["roofrack_light_round_R_inner", ["offroadlight_round"], [],          "offroadlight_round", "Inner Right Light",
         {
             "coreSlot":true,
@@ -321,7 +321,7 @@
     "slotType" : "G_md_series_ex_rollcage_lights",
     "slots2": [
         ["name",                          "allowTypes",            "denyTypes", "default",  "description"],
-        ["md_series_roofrack_light_accessory", ["md_series_roofrack_light_accessory","md_series_roofrack_light_accessory_square"], [], "", "Lights Accessory"],
+        ["md_series_roofrack_light_accessory", ["pickup_roofrack_light_accessory","pickup_roofrack_light_accessory_square"], [], "", "Lights Accessory"],
         ["roofrack_light_square_R", ["offroadlight_square"], [],          "offroadlight_square", "Right Light",
         {
             "coreSlot":true,
@@ -440,7 +440,7 @@
     "slotType" : "G_md_series_ex_rollcage_lights",
     "slots2": [
         ["name",                          "allowTypes",            "denyTypes", "default",  "description"],
-        ["md_series_roofrack_light_accessory", ["md_series_roofrack_light_accessory","md_series_roofrack_light_accessory_square"], [], "", "Lights Accessory"],
+        ["md_series_roofrack_light_accessory", ["pickup_roofrack_light_accessory","pickup_roofrack_light_accessory_square"], [], "", "Lights Accessory"],
         ["roofrack_light_square_R_inner", ["offroadlight_square"], [],          "offroadlight_square", "Inner Right Light",
         {
             "coreSlot":true,
@@ -634,7 +634,7 @@
     "slotType" : "G_md_series_ex_rollcage_lights",
     "slots2": [
         ["name",                          "allowTypes",            "denyTypes", "default",  "description"],
-        ["md_series_roofrack_light_accessory", ["md_series_roofrack_light_accessory","md_series_roofrack_light_accessory_mixed"], [], "", "Lights Accessory"],
+        ["md_series_roofrack_light_accessory", ["pickup_roofrack_light_accessory","pickup_roofrack_light_accessory_mixed"], [], "", "Lights Accessory"],
         ["roofrack_light_mixed_R_inner", ["offroadlight_square"], [],          "offroadlight_square", "Inner Right Light",
         {
             "coreSlot":true,

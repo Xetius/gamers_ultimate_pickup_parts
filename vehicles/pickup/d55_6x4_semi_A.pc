@@ -171,7 +171,7 @@
     "pickup_rollcage":"",
     "pickup_roofrack":"pickup_rooflights",
     "pickup_runningboard":"G_pickup_runningboard_D55",
-    "pickup_seat_F":"pickup_seat_F_bucket",
+    "pickup_seat_F":"G_pickup_seat_F_bucket",
     "pickup_seat_FL":"pickup_facelift_seat_FL",
     "pickup_seat_FR":"pickup_facelift_seat_FR",
     "pickup_shock_F":"G_pickup_shock_F_D55",

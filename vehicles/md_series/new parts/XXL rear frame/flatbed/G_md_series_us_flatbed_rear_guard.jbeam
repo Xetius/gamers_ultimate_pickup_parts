@@ -422,6 +422,7 @@
     "information":{
         "authors":"Gamer!",
         "name":"Halogen Rear Guard Lights",
+        "value":160,
     },
     "slotType" : "G_md_series_us_flatbed_rear_guard_lights",
     "slots2": [
@@ -629,6 +630,7 @@
     "information":{
         "authors":"Gamer!",
         "name":"LED Rear Guard Lights",
+        "value":200,
     },
     "slotType" : "G_md_series_us_flatbed_rear_guard_lights",
     "slots2": [

@@ -68,7 +68,7 @@
     "pickup_ABS":"pickup_ABS",
     "pickup_ESC":"",
     "pickup_bullbar_accessory":"pickup_bullbar_squarelights",
-    "pickup_bullbarlight_square_accessory":"pickup_bullbarlight_square_grille",
+    "pickup_bullbarlight_accessory":"pickup_bullbarlight_grille",
     "pickup_driveshaft_R":"pickup_driveshaft_R",
     "pickup_engine":"pickup_engine_v8_5.5",
     "pickup_engine_v8_ecu":"pickup_engine_v8_ecu_sport",

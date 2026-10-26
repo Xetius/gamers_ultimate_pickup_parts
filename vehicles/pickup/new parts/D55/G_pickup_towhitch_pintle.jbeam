@@ -3,6 +3,7 @@
     "information":{
         "authors":"Gamer!",
         "name":"Pintle Hitch",
+        "value":100,
     },
     "slotType" : "pickup_towhitch",
     "slots2": [

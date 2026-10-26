@@ -189,7 +189,7 @@
     "pickup_receiver_attachment":"pickup_receiver_drop",
     "pickup_reversewarn":"pickup_reversewarn",
     "pickup_roofrack_accessory":"",
-    "pickup_seat_F":"pickup_seat_F_bucket",
+    "pickup_seat_F":"G_pickup_seat_F_bucket",
     "pickup_seat_FL":"G_pickup_seat_FL",
     "pickup_seat_FR":"G_pickup_seat_FR",
     "pickup_shifter_T":"pickup_shifter_T",

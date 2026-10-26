@@ -9,7 +9,7 @@
 
     "slots": [
         ["type", "default", "description"],
-        ["G_tire_RR_6x6_14x5.5","tire_RR_6x6_185_75_14_standard_ww", "Rear Rear Tires"],
+        ["G_tire_RR_6x6_14x5.5","G_tire_RR_6x6_185_75_14_standard_ww", "Rear Rear Tires"],
         ["hubcap_RR_6x6_14","", "Rear Rear Hubcaps"],
     ],
     "flexbodies": [
@@ -80,7 +80,7 @@
 
     "slots": [
         ["type", "default", "description"],
-        ["G_tire_RR_6x6_14x6","tire_RR_6x6_735_14", "Rear Rear Tires"],
+        ["G_tire_RR_6x6_14x6","G_tire_RR_6x6_735_14", "Rear Rear Tires"],
         //["hubcap_RR_6x6_14","", "Rear Rear Hubcaps"],
     ],
     "flexbodies": [
@@ -222,7 +222,7 @@
 
     "slots": [
         ["type", "default", "description"],
-        ["G_tire_RR_6x6_14x6","tire_RR_6x6_735_14", "Rear Rear Tires"],
+        ["G_tire_RR_6x6_14x6","G_tire_RR_6x6_735_14", "Rear Rear Tires"],
         ["hubcap_RR_6x6_14_alt","", "Rear Rear Hubcaps"],
     ],
     "flexbodies": [
@@ -292,7 +292,7 @@
 
     "slots": [
         ["type", "default", "description"],
-        ["G_tire_RR_6x6_14x6","tire_RR_6x6_735_14_ww", "Rear Rear Tires"],
+        ["G_tire_RR_6x6_14x6","G_tire_RR_6x6_735_14_ww", "Rear Rear Tires"],
         ["hubcap_RR_6x6_14_alt","", "Rear Rear Hubcaps"],
     ],
     "flexbodies": [
@@ -362,7 +362,7 @@
 
     "slots": [
         ["type", "default", "description"],
-        ["G_tire_RR_6x6_14x6","tire_RR_6x6_735_14_ww", "Rear Rear Tires"],
+        ["G_tire_RR_6x6_14x6","G_tire_RR_6x6_735_14_ww", "Rear Rear Tires"],
         ["hubcap_RR_6x6_14_alt","", "Rear Rear Hubcaps"],
     ],
     "flexbodies": [
@@ -2485,7 +2485,7 @@
     "slots": [
         ["type", "default", "description"],
         ["G_tire_RR_6x6_17x8","tire_RR_6x6_235_60_17_standard", "Rear Rear Tires"],
-        ["hubcap_RR_6x6_17","hubcap_10c_R_altg", "Rear Rear Hubcaps"],
+        ["hubcap_RR_6x6_17","hubcap_10c_RR_6x6_altg", "Rear Rear Hubcaps"],
     ],
     "flexbodies": [
         ["mesh", "[group]:", "nonFlexMaterials"],

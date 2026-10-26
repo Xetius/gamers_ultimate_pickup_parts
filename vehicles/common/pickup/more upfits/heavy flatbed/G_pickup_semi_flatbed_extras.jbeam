@@ -522,7 +522,7 @@
          {"deformGroup":"taillight_R_break", "deformMaterialBase":"generic_halogen_glass", "deformMaterialDamaged":"generic_halogen_glass_dmg"},
          ["halogen_taillight_single_round_glass_R", ["pickup_taillight_flatbed", "pickup_flatbed"],[],{"pos":{"x":-1.119, "y":5.692, "z":0.839}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.569, "y":0.569, "z":0.569} "deformSound":"event:>Destruction>Vehicle>Glass>extglassbreaksound2", "deformVolume":0.5}],
          ["halogen_taillight_single_round_glass_R", ["pickup_taillight_flatbed", "pickup_flatbed"],[],{"pos":{"x":-0.995, "y":5.692, "z":0.839}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.569, "y":0.569, "z":0.569} "deformSound":"event:>Destruction>Vehicle>Glass>extglassbreaksound2", "deformVolume":0.5}],
-         ["halogen_reverse_single_round_glass", ["pickup_taillight_flatbed", "pickup_flatbed"],[],{"pos":{"x":-0.0.871, "y":5.692, "z":0.839}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.569, "y":0.569, "z":0.569} "deformSound":"event:>Destruction>Vehicle>Glass>extglassbreaksound2", "deformVolume":0.5}],
+         ["halogen_reverse_single_round_glass", ["pickup_taillight_flatbed", "pickup_flatbed"],[],{"pos":{"x":-0.871, "y":5.692, "z":0.839}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.569, "y":0.569, "z":0.569} "deformSound":"event:>Destruction>Vehicle>Glass>extglassbreaksound2", "deformVolume":0.5}],
 
          //{"deformGroup":"taillight_L_break", "deformMaterialBase":"utility_lights", "deformMaterialDamaged":"utility_lights_dmg"},
          //["G_pickup_semi_flatbed_extension_taillights_L", ["pickup_taillight_flatbed", "pickup_flatbed"],[],{"pos":{"x":0.0, "y":0.0, "z":0.0}, "deformSound":"event:>Destruction>Vehicle>Glass>extglassbreaksound2", "deformVolume":0.5}],

@@ -23,7 +23,7 @@
           "$shadowEnable":0,
         }
         }]
-        ["pickup_duallymarker_FR_bulb", ["incandescent_amber5W"], [], "incandescent_amber_5W", "Front Right Dually Marker Light",
+        ["pickup_duallymarker_FR_bulb", ["incandescent_amber_5W"], [], "incandescent_amber_5W", "Front Right Dually Marker Light",
         {
         "coreSlot":true,
         "variables":{

@@ -17,16 +17,7 @@
         ["G_pickup_D55_airbrakeContols",   ["G_pickup_D55_airbrakeContols"],   [],          "G_pickup_D55_airbrakeContols",  "Airbrake Controls", {"coreSlot":true}],
         ["G_pickup_D55_pto",               ["G_pickup_D55_pto"],               [],          "",                              "PTO Controls"],
         ["G_pickup_D55_fifthwheel_switch", ["G_pickup_D55_fifthwheel_switch"], [],          "",                              "Fifth Wheel Switch"],
-        ["pickup_seat_F",                  ["pickup_seat_F"],                  [],          "pickup_seat_F",    "Front Seats"],
-    ],
-    "camerasInternal":[
-        ["type", "x", "y", "z", "fov", "id1:", "id2:", "id3:", "id4:", "id5:", "id6:"],
-        {"nodeWeight":2.35},
-        {"beamSpring":846, "beamDamp":94},
-        {"selfCollision":true},
-        {"collision":true},
-        //dash cam
-        ["dash", 0.462, 0.1, 1.53, 55, "b1rr","b1ll","b3rr","b3ll","b6rr","b6ll", {"beamDeform":2800560,"beamStrength":"FLT_MAX"}],
+        ["pickup_seat_F",                  ["pickup_seat_F"],                  [],          "G_pickup_seat_F_bench",    "Front Seats"],
     ],
     "soundscape": [
         ["name", "src"],

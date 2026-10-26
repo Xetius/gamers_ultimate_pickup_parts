@@ -1,4 +1,5 @@
 {
+  "Body Style":"Pickup",
   "0-100 km/h":9.8,
   "0-100 mph":34.9,
   "0-60 mph":9.2,
@@ -43,7 +44,7 @@
     "min":1992
   },
   "defaultPaintName1":"Chocolate Brown",
-  "defaultPaintName2":"Champange",
+  "defaultPaintName2":"Champagne",
   "defaultPaintName3":"Chocolate Brown",
   "vehicleSelectorSubGroup":"D55"
 }

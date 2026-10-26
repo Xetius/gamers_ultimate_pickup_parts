@@ -139,7 +139,7 @@
     "pickup_rollcage":"",
     "pickup_roofrack":"",
     "pickup_runningboard":"",
-    "pickup_seat_F":"pickup_seat_F",
+    "pickup_seat_F":"G_pickup_seat_F_bench",
     "pickup_shifter":"pickup_shifter_A",
     "pickup_shifter_T":"",
     "pickup_shock_R":"pickup_shock_R",

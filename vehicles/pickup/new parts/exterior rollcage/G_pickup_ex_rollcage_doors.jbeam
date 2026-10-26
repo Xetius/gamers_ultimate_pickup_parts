@@ -139,7 +139,7 @@
     "slotType" : "G_pickup_ex_rollcage_door_ext",
     "slots": [
         ["type", "default", "description"],
-        ["G_pickup_ex_rollcage_door_ext_reinforcement","G_pickup_ex_rollcage_door_ext_reinforcement", "In-Cab Reinforcements"],
+        ["G_pickup_ex_rollcage_door_ext_reinforcement","G_md_series_ex_rollcage_door_ext_reinforcement", "In-Cab Reinforcements"],
 
     ],
     "flexbodies": [
@@ -174,7 +174,7 @@
     "slotType" : "G_pickup_ex_rollcage_door_ext",
     "slots": [
         ["type", "default", "description"],
-        ["G_pickup_ex_rollcage_door_ext_reinforcement","G_pickup_ex_rollcage_door_ext_reinforcement", "In-Cab Reinforcements"],
+        ["G_pickup_ex_rollcage_door_ext_reinforcement","G_md_series_ex_rollcage_door_ext_reinforcement", "In-Cab Reinforcements"],
 
     ],
     "flexbodies": [
@@ -224,7 +224,7 @@
     "slotType" : "G_pickup_ex_rollcage_door_ext",
     "slots": [
         ["type", "default", "description"],
-        ["G_pickup_ex_rollcage_door_ext_reinforcement","G_pickup_ex_rollcage_door_ext_reinforcement", "In-Cab Reinforcements"],
+        ["G_pickup_ex_rollcage_door_ext_reinforcement","G_md_series_ex_rollcage_door_ext_reinforcement", "In-Cab Reinforcements"],
 
     ],
     "flexbodies": [
@@ -272,7 +272,7 @@
     "slotType" : "G_pickup_ex_rollcage_door_ext",
     "slots": [
         ["type", "default", "description"],
-        ["G_pickup_ex_rollcage_door_ext_reinforcement","G_pickup_ex_rollcage_door_ext_reinforcement", "In-Cab Reinforcements"],
+        ["G_pickup_ex_rollcage_door_ext_reinforcement","G_md_series_ex_rollcage_door_ext_reinforcement", "In-Cab Reinforcements"],
 
     ],
     "flexbodies": [

@@ -147,7 +147,7 @@
     "pickup_licenseplate_F":"",
     "pickup_licenseplate_F_bullbar":"pickup_licenseplate_F_bullbar",
     "pickup_licenseplate_R":"pickup_licenseplate_R",
-    "pickup_lightbar":"pickup_modern_lightbar",
+    "pickup_lightbar":"pickup_lightbar_police",
     "pickup_lip_F":"",
     "pickup_mirror_L":"pickup_mirror_L_facelift",
     "pickup_mirror_R":"pickup_mirror_R_facelift",

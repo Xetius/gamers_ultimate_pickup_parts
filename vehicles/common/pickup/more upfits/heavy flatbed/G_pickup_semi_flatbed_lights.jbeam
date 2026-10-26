@@ -3,6 +3,7 @@
     "information":{
         "authors":"Gamer!",
         "name":"Halogen Rear Lights",
+        "value":160,
     },
     "slotType" : "G_pickup_semi_flatbed_lights_R",
     "slots2": [
@@ -225,6 +226,7 @@
     "information":{
         "authors":"Gamer!",
         "name":"LED Rear Lights",
+        "value":200,
     },
     "slotType" : "G_pickup_semi_flatbed_lights_R",
     "slots2": [

@@ -103,7 +103,7 @@
     "G_pickup_radiator_rear_postype":"G_pickup_radiator_rear_aux",
     "G_pickup_radiator_rear_type":"G_pickup_radiator_rear_race",
     "G_pickup_rollcagelight_F_square_accessory":"G_pickup_rollcagelight_F_square_grille",
-    "G_pickup_rollcagelight_quadsquare_accessory":"G_pickup_rollcagelight_quadsquare_grille",
+    "pickup_roofrack_light_accessory":"pickup_roofrack_light_grille",
     "brakepad_F":"brakepad_F_premium",
     "brakepad_R":"brakepad_R_premium",
     "gps":"",

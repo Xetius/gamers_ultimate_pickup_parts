@@ -1,4 +1,5 @@
 {
+  "Body Style":"Pickup",
   "0-100 km/h":9.8,
   "0-100 mph":34.9,
   "0-60 mph":9.2,
@@ -43,6 +44,6 @@
   },
   "defaultPaintName1":"Opal Green",
   "defaultPaintName2":"Silver",
-  "defaultPaintName3":"opal Green",
+  "defaultPaintName3":"Opal Green",
   "vehicleSelectorSubGroup":"vehiclesData.pickup.d35_4WD_ext_longbed_A.vehicleSelectorSubGroup"
 }

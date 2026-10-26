@@ -3025,7 +3025,7 @@
 
     "slots": [
         ["type", "default", "description"],
-        ["G_tire_RR_6x6_15x7_alt","tire_RR_6x6_185_75_15_alt_standard", "Rear Rear Tires"],
+        ["G_tire_RR_6x6_15x7_alt","tire_RR_6x6_205_75_15_alt_standard", "Rear Rear Tires"],
     ],
     "flexbodies": [
         ["mesh", "[group]:", "nonFlexMaterials"],
@@ -8983,7 +8983,7 @@
     "slotType" : "G_wheel_RR_6x6_5",
     "slots": [
         ["type", "default", "description"],
-        ["G_tire_RR_6x6_17x8","tire_RR_6x6_225_40_17_sport", "Rear Rear Tires"],
+        ["G_tire_RR_6x6_17x8","tire_RR_6x6_225_45_17_sport", "Rear Rear Tires"],
     ],
     "flexbodies": [
         ["mesh", "[group]:", "nonFlexMaterials"],
@@ -9051,7 +9051,7 @@
     "slotType" : "G_wheel_RR_6x6_5",
     "slots": [
         ["type", "default", "description"],
-        ["G_tire_RR_6x6_17x8","tire_RR_6x6_225_40_17_sport", "Rear Rear Tires"],
+        ["G_tire_RR_6x6_17x8","tire_RR_6x6_225_45_17_sport", "Rear Rear Tires"],
     ],
     "flexbodies": [
         ["mesh", "[group]:", "nonFlexMaterials"],
@@ -9119,7 +9119,7 @@
     "slotType" : "G_wheel_RR_6x6_5",
     "slots": [
         ["type", "default", "description"],
-        ["G_tire_RR_6x6_17x8","tire_RR_6x6_225_40_17_sport", "Rear Rear Tires"],
+        ["G_tire_RR_6x6_17x8","tire_RR_6x6_225_45_17_sport", "Rear Rear Tires"],
     ],
     "flexbodies": [
         ["mesh", "[group]:", "nonFlexMaterials"],

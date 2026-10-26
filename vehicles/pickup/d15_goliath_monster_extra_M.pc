@@ -151,7 +151,7 @@
     "pickup_radiator":"pickup_radiator_race",
     "pickup_radsupport":"G_pickup_radsupport_tube",
     "pickup_reversewarn":"",
-    "pickup_seat_F":"pickup_seat_F_bucket",
+    "pickup_seat_F":"G_pickup_seat_F_bucket",
     "pickup_seat_FL":"pickup_race_seat_FL",
     "pickup_seat_FR":"pickup_race_seat_FR",
     "pickup_signal_FL_prefacelift":"pickup_signal_FL_prefacelift",

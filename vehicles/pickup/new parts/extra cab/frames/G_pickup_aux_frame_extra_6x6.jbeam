@@ -15,7 +15,7 @@
         ["pickup_ESC","", "Electronic Stability & Traction Control"],
         ["pickup_fueltank","pickup_fueltank","Fuel Tank", {"nodeOffset":{"x":0.0,"y":0.98,"z":0}}],
         ["pickup_engine","pickup_engine_v8_4.5","Engine"],
-        ["G_pickup_muffler_6x6_extra","G_pickup_muffler_6x6","Muffler", {"nodeOffset":{"x":0.0,"y":0.7,"z":0}}],
+        ["G_pickup_muffler_6x6_extra","G_pickup_muffler_v8_6x6","Muffler", {"nodeOffset":{"x":0.0,"y":0.7,"z":0}}],
         ["G_pickup_suspension_R_6x6","G_pickup_axle_R_6x6","Rear Suspension", {"nodeMove":{"x":0.0,"y":"$=0.98-$suspension_move_R_6x6","z":0}}],
         ["G_pickup_suspension_RR_6x6","G_pickup_axle_RR_6x6","Rear Rear Suspension", {"nodeMove":{"x":0.0,"y":"$=0.98+$suspension_move_RR_6x6","z":0}}],
         ["pickup_suspension_F","pickup_IFS","Front Suspension"],

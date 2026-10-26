@@ -31,7 +31,7 @@
         ["pickup_fender_L","pickup_fender_L","Front Left Fender"],
         ["pickup_hood","pickup_hood","Hood"],
         ["pickup_lightbar","","Light Bar"],
-        ["pickup_seat_R","pickup_seat_R","Middle Seats", {"nodeOffset":{"x":0.0, "y":0.28, "z":0.0}}],
+        ["pickup_seat_R","G_pickup_seat_R_bench","Middle Seats", {"nodeOffset":{"x":0.0, "y":0.28, "z":0.0}}],
         ["G_pickup_seats_R_6door","G_pickup_bench_R_6door","Rear Seats", {"nodeOffset":{"x":0.0, "y":0.28, "z":0.0}}],
         ["pickup_lettering_fender","pickup_lettering_d15","Fender Lettering"],
         ["soundscape_horn", "soundscape_horn_3", "Horn"],

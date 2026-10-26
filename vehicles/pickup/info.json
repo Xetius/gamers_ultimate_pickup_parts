@@ -13,5 +13,27 @@
   "default_pc": "d15_4wd_A",
   "multiPaintSetups": [],
   "libraryPaints": [],
-  "paintCollections": ["pickup_factory", "gavril_twotone_factory", "pickup_custom", "pickup_twotone_custom", "G_pickup_factory_additional", "G_pickup_custom_additional"]
+  "paintCollections": [
+    "pickup_factory",
+    "gavril_twotone_factory",
+    "pickup_custom",
+    "pickup_twotone_custom",
+    "G_pickup_factory_additional",
+    "G_pickup_custom_additional"
+  ],
+  "thumbnailConfig": {
+    "cameraConfig": {
+      "posOffset": {
+        "x": -6.865419639,
+        "y": -5.452926011,
+        "z": 0.9036478024
+      },
+      "rotOffset": {
+        "w": -0.9050493886,
+        "x": -0.02170426132,
+        "y": 0.01470419432,
+        "z": -0.424497722
+      }
+    }
+  }
 }

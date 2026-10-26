@@ -14,7 +14,7 @@
     "slots": [
         ["type", "default", "description"],
         ["G_pickup_duallysignals_R_6x6","G_pickup_duallysignals_R_6x6","Marker Lights"],
-        ["G_pickup_fenderflares_dually_R_6x6","G_pickup_fenderflare_dually_R_6x6","Rear Fender Flares"],
+        ["G_pickup_fenderflares_dually_R_6x6","G_pickup_fenderflares_dually_R_6x6","Rear Fender Flares"],
         ["G_pickup_mudflaps_dually_R_6x6","","Rear Dually Mudflaps"],
     ],
     "nodes": [

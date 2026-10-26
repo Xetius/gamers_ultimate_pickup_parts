@@ -95,7 +95,7 @@
       "solar_yellow",
       "G_summer_sky",
       "G_dark_lime",
-	  "G_ambitious_yellow",
+	  "G_ambitious_yellow"
       ]
     },
     "G_pickup_custom_additional": {
@@ -108,8 +108,8 @@
       "G_lead",
       "G_nightshade",
       "G_royal_magenta",
-      "G_grassland_green",
+      "G_grassland_green"
       ]
-    },
-},
+    }
+}
 }

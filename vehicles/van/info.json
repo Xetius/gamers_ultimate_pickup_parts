@@ -14,5 +14,11 @@
   "paints": {},
   "multiPaintSetups": [],
   "libraryPaints": [],
-  "paintCollections": ["van_factory", "gavril_twotone_factory", "van_custom", "G_pickup_factory_additional", "G_pickup_custom_additional"],
+  "paintCollections": [
+    "van_factory",
+    "gavril_twotone_factory",
+    "van_custom",
+    "G_pickup_factory_additional",
+    "G_pickup_custom_additional"
+  ]
 }

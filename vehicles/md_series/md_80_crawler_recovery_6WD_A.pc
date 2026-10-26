@@ -246,7 +246,7 @@
     "skin_race_seat_FR":"skin_race_seat_FR_green",
     "soundscape_horn":"soundscape_horn_120",
     "us_lightbar_R":"us_lightbar_halogen_R",
-    "van_rollback_lightbar":"van_rollback_lightbar_a"
+    "van_rollback_lightbar":"G_md_series_flatbed_lightbar_a"
   },
   "vars":{
     "$brakestrength":1,

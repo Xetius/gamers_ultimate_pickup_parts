@@ -3,6 +3,7 @@
     "information":{
         "authors":"Gamer!",
         "name":"Fridge"
+        "value":150,
 
     },
     "slotType" : "G_pickup_big_roofrack_top_front_load",

@@ -182,7 +182,7 @@
     "pickup_roofmarker_RR_bulb":"incandescent_amber_5W",
     "pickup_roofmarker_R_bulb":"incandescent_amber_5W",
     "pickup_roofrack_accessory":"",
-    "pickup_seat_F":"pickup_seat_F",
+    "pickup_seat_F":"G_pickup_seat_F_bench",
     "pickup_shifter_T":"pickup_shifter_T",
     "pickup_shock_F":"G_pickup_shock_F_D55",
     "pickup_shock_R":"G_pickup_shock_R_D55",

@@ -1,8 +1,8 @@
 {
-"van_rollback_lightbar_a": {
+"G_md_series_flatbed_lightbar_a": {
     "information":{
         "authors":"Gamer!",
-        "name":"Light Bar Mount",
+        "name":"Light Bar Mount (MD Tuned)",
         "value":100,
     },
     "slotType" : "van_rollback_lightbar",

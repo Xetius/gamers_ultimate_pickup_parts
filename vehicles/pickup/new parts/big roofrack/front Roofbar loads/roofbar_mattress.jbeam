@@ -3,6 +3,7 @@
     "information":{
         "authors":"Gamer!",
         "name":"Mattress",
+        "value":50,
     },
     "slotType" : "G_pickup_big_roofrack_top_front_load",
     "flexbodies":[

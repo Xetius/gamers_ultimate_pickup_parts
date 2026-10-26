@@ -1,4 +1,5 @@
 {
+  "Body Style":"Pickup",
   "0-100 km/h":9.8,
   "0-100 mph":34.9,
   "0-60 mph":9.2,
@@ -41,7 +42,7 @@
     "max":1991,
     "min":1986
   },
-  "defaultPaintName1":"Carbon Cray",
+  "defaultPaintName1":"Carbon Gray",
   "defaultPaintName2":"Gray",
   "defaultPaintName3":"Lead",
   "vehicleSelectorSubGroup":"vehiclesData.pickup.d15_423sport_A.vehicleSelectorSubGroup"

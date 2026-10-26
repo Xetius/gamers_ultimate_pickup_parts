@@ -1,4 +1,5 @@
 {
+  "Body Style":"Pickup",
   "0-100 km/h":9.8,
   "0-100 mph":34.9,
   "0-60 mph":9.2,
@@ -43,6 +44,6 @@
   },
   "defaultPaintName1":"Ambitious Orange",
   "defaultPaintName2":"Matte Black",
-  "defaultPaintName3":"Flame Orange",
+  "defaultPaintName3":"Orange",
   "vehicleSelectorSubGroup":"vehiclesData.pickup.d25_crew_4wd_A.vehicleSelectorSubGroup"
 }

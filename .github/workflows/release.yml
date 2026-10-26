@@ -1,0 +1,89 @@
+# Builds the mod zip and publishes it as a GitHub Release whenever mod files change on main.
+# Version: the latest vX.Y.Z tag (or mod_info info.json if there are no tags yet) plus one patch.
+# Put #minor or #major in a commit message to bump those instead; [skip ci] skips the run entirely.
+# The version is written only into the packaged info.json, the repo's copy is never changed.
+name: Release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "vehicles/**"
+      - "mod_info/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      MOD_NAME: gamers_ultimate_pickup_parts
+    steps:
+      - name: Check out (with tags)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate mod files
+        run: node .github/scripts/validate.js .
+
+      - name: Work out the next version
+        id: version
+        run: |
+          version="$(node .github/scripts/version.js next)"
+          if git rev-parse -q --verify "refs/tags/v$version" >/dev/null; then
+            echo "::error::Tag v$version already exists"
+            exit 1
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "Releasing v$version"
+
+      - name: Build the mod zip
+        id: build
+        run: |
+          version="${{ steps.version.outputs.version }}"
+          stage="$RUNNER_TEMP/stage"
+          zip="$RUNNER_TEMP/${MOD_NAME}_v$version.zip"
+          mkdir -p "$stage"
+          cp -r mod_info vehicles "$stage/"
+          node .github/scripts/version.js stamp "$stage" "$version"
+          # mod_info/ and vehicles/ at the zip root, which is the layout BeamNG expects
+          (cd "$stage" && zip -q -r -X -9 "$zip" mod_info vehicles)
+          ls -lh "$zip"
+          echo "zip=$zip" >> "$GITHUB_OUTPUT"
+
+      - name: Write release notes
+        run: |
+          previous="$(git tag --list 'v*.*.*' --sort=-v:refname | head -n1)"
+          {
+            if [ -n "$previous" ]; then
+              echo "Changes since $previous:"
+              echo
+              git log --no-merges --format='- %s' "$previous..HEAD"
+            else
+              echo "Changes:"
+              echo
+              git log --no-merges --format='- %s' -n 20
+            fi
+          } > "$RUNNER_TEMP/notes.md"
+          cat "$RUNNER_TEMP/notes.md"
+
+      - name: Tag and publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="${{ steps.version.outputs.version }}"
+          gh release create "v$version" "${{ steps.build.outputs.zip }}" \
+            --target "$GITHUB_SHA" \
+            --title "v$version" \
+            --notes-file "$RUNNER_TEMP/notes.md"

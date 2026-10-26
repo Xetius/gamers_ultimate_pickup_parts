@@ -17,8 +17,8 @@
     },
     "props": [
         ["func"      , "mesh"           , "idRef:", "idX:", "idY:", "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
-        ["driveshaft", "G_pickup_driveshaft_D55_segment_0.38m",     "ax3i","axg3","axg3r",  {"x":90, "y":-90, "z":10}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
-        ["driveshaft", "G_pickup_driveshaft_D55_segment_0.38m",    "axg3","ax3i","axg3r",  {"x":-90, "y":90, "z":-80}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "G_pickup_driveshaft_D55_segment_0.38m",     "ax3i","axg3","axg3r",  {"x":90, "y":-90, "z":10}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_RR","deformGroup":"driveshaft_RR","optional":true}],
+        ["driveshaft", "G_pickup_driveshaft_D55_segment_0.38m",    "axg3","ax3i","axg3r",  {"x":-90, "y":90, "z":-80}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_RR","deformGroup":"driveshaft_RR","optional":true}],
     ],
     "beams": [
           ["id1:", "id2:"],
@@ -48,8 +48,8 @@
     },
     "props": [
         ["func"      , "mesh"           , "idRef:", "idX:", "idY:", "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
-        ["driveshaft", "G_pickup_driveshaft_D55_segment_0.5m",     "ax3i","axg3","axg3r",  {"x":90, "y":-90, "z":10}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
-        ["driveshaft", "G_pickup_driveshaft_D55_segment_0.5m",    "axg3","ax3i","axg3r",  {"x":-90, "y":90, "z":-80}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "G_pickup_driveshaft_D55_segment_0.5m",     "ax3i","axg3","axg3r",  {"x":90, "y":-90, "z":10}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_RR","deformGroup":"driveshaft_RR","optional":true}],
+        ["driveshaft", "G_pickup_driveshaft_D55_segment_0.5m",    "axg3","ax3i","axg3r",  {"x":-90, "y":90, "z":-80}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_RR","deformGroup":"driveshaft_RR","optional":true}],
     ],
     "beams": [
           ["id1:", "id2:"],
@@ -79,8 +79,8 @@
     },
     "props": [
         ["func"      , "mesh"           , "idRef:", "idX:", "idY:", "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
-        ["driveshaft", "G_pickup_driveshaft_D55_segment_1m",     "ax3i","axg3","axg3r",  {"x":90, "y":-90, "z":10}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
-        ["driveshaft", "G_pickup_driveshaft_D55_segment_1m",    "axg3","ax3i","axg3r",  {"x":-90, "y":90, "z":-80}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_R","deformGroup":"driveshaft_R","optional":true}],
+        ["driveshaft", "G_pickup_driveshaft_D55_segment_1m",     "ax3i","axg3","axg3r",  {"x":90, "y":-90, "z":10}, {"x":0, "y":-1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_RR","deformGroup":"driveshaft_RR","optional":true}],
+        ["driveshaft", "G_pickup_driveshaft_D55_segment_1m",    "axg3","ax3i","axg3r",  {"x":-90, "y":90, "z":-80}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.00, "y":-0.00, "z":0.0},"breakGroup":"driveshaft_RR","deformGroup":"driveshaft_RR","optional":true}],
     ],
     "beams": [
           ["id1:", "id2:"],

@@ -16,7 +16,7 @@
         //rear diff
         ["differential", "differential_RR_6x6", "driveshaft_RR_6x6", 1, {"diffType":"open", "uiName":"Rear Rear Differential","defaultVirtualInertia":0.5}],
     ],
-    "differential_RR__6x6": {
+    "differential_RR_6x6": {
         "friction": 6.6,
         "dynamicFriction": 0.00311,
         "torqueLossCoef": 0.03,
@@ -39,7 +39,7 @@
         //rear diff
         ["differential", "differential_RR_6x6", "driveshaft_RR_6x6", 1, {"diffType":"lsd", "lsdPreload":150, "lsdLockCoef":0.15, "lsdRevLockCoef":0.075, "uiName":"Rear Rear Differential","defaultVirtualInertia":0.5}],
     ],
-    "differential_RR__6x6": {
+    "differential_RR_6x6": {
         "friction": 6.6,
         "dynamicFriction": 0.00311,
         "torqueLossCoef": 0.03,

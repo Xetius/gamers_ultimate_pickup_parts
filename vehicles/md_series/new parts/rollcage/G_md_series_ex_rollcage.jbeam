@@ -504,7 +504,7 @@
         ["G_md_series_ex_rollcage_lights","", "Roof Lights", {"nodeOffset2":{"x":0.0,"y":-0.23,"z":-0.06}}],
         ["G_md_series_ex_rollcage_door_crew_F","", "Front Door Cage"],
         ["G_md_series_ex_rollcage_door_crew_R","", "Rear Door Cage"],
-        ["G_md_series_ex_rollcage_door_ext_reinforcement","G_pickup_ex_rollcage_door_ext_reinforcement", "In-Cab Reinforcement"],
+        ["G_md_series_ex_rollcage_door_ext_reinforcement","G_md_series_ex_rollcage_door_ext_reinforcement", "In-Cab Reinforcement"],
         ["skin_G_md_series_rollcage_color", "G_md_series_rollcage_color_3", "Roll Cage Color", {"coreSlot":true}],
 
     ],

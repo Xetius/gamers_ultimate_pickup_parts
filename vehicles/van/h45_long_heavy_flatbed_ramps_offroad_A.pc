@@ -62,7 +62,7 @@
     "n2o_system":"",
     "paint_design":"van_skin_vandal",
     "pickup_bullbar_accessory":"pickup_bullbar_squarelights",
-    "pickup_bullbarlight_square_accessory":"pickup_bullbarlight_square_grille",
+    "pickup_bullbarlight_accessory":"pickup_bullbarlight_grille",
     "pickup_engine_v8_6.9_ecu":"pickup_engine_v8_6.9_ecu",
     "pickup_engine_v8_internals":"pickup_engine_v8_internals_heavy",
     "pickup_enginemounts":"pickup_enginemounts_heavy",

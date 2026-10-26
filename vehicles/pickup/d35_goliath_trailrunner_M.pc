@@ -165,7 +165,7 @@
     "pickup_rollcage_bedbars":"G_pickup_rollcage_bedbars_alt",
     "pickup_roofrack":"",
     "pickup_runningboard":"pickup_rockslider",
-    "pickup_seat_F":"pickup_seat_F_bucket",
+    "pickup_seat_F":"G_pickup_seat_F_bucket",
     "pickup_seat_FL":"pickup_race_seat_FL",
     "pickup_seat_FR":"pickup_race_seat_FR",
     "pickup_signal_FL_prefacelift":"pickup_signal_FL_prefacelift",

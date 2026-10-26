@@ -163,7 +163,7 @@
     "pickup_radiator":"G_pickup_radiator_D55",
     "pickup_radsupport":"pickup_radsupport",
     "pickup_reversewarn":"pickup_reversewarn",
-    "pickup_seat_F":"pickup_seat_F",
+    "pickup_seat_F":"G_pickup_seat_F_bench",
     "pickup_shifter_T":"pickup_shifter_T",
     "pickup_signal_FL_prefacelift":"pickup_signal_FL_prefacelift",
     "pickup_signal_FR_prefacelift":"pickup_signal_FR_prefacelift",

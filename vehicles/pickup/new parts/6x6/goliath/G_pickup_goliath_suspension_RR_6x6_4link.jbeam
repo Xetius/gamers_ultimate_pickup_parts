@@ -12,7 +12,7 @@
         ["G_pickup_goliath_coilover_RR_6x6","G_pickup_goliath_coilover_RR_6x6_offroad","Rear Rear Coilovers"],
         ["G_pickup_goliath_swaybar_RR_6x6","G_pickup_goliath_swaybar_RR_6x6_offroad","Rear Rear Sway Bar"],
         ["G_pickup_goliath_differential_RR_6x6","G_pickup_goliath_differential_RR_6x6_locking","Rear Rear Differential"],
-        ["G_pickup_goliath_links_RR_6x6_4link","G_pickup_goliath_links_RR_6x6_4link_offroad","Rear Rear Links", {"coreSlot":true}],
+        ["G_pickup_goliath_links_RR_6x6_4link","G_pickup_goliath_links_RR_6x6_4link_offroad_RS","Rear Rear Links", {"coreSlot":true}],
     ],
     "variables": [
         ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],

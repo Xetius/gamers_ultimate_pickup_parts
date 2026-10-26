@@ -202,7 +202,7 @@
     "paint_design":"md_series_skin_stripes",
     "pickup_receiver_attachment":"pickup_receiver_ball",
     "pickup_rollbar_accessory":"pickup_rollbarlight_mixed_quad",
-    "pickup_rollbarlight_quadmixed_accessory":"pickup_rollbarlight_quadmixed_halogen",
+    "pickup_rollbarlight_accessory":"",
     "pickup_steer":"pickup_steer",
     "skin_frame":"md_series_skin_frame_black",
     "skin_glass":"",

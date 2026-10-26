@@ -625,7 +625,7 @@
           {"deformGroup":"", "deformationTriggerRatio":""},
     ],
 },
-"pickup_roofrack_light_mixed_quad": {
+"G_pickup_ex_rollcage_lights_mixed_quad": {
     "information":{
         "authors":"Gamer!",
         "name":"Quad Mixed Lights",

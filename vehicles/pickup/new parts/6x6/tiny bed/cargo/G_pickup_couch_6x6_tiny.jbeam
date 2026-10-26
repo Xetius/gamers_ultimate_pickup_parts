@@ -16,7 +16,7 @@
     ],
     "slots": [
         ["type", "default", "description"],
-        ["G_pickup_bed_6x6_tiny_couch_straps","pickup_bed_6x6_tiny_couch_straps","Straps", {"nodeMove":{"x":0.0,"y":0.55,"z":0}}],
+        ["G_pickup_bed_6x6_tiny_couch_straps","G_pickup_bed_6x6_tiny_couch_straps","Straps", {"nodeMove":{"x":0.0,"y":0.55,"z":0}}],
         ["skin_couch","couch_skin_stripes","Fabric type", {"coreSlot":true}],
     ],
     "nodes": [
@@ -830,5 +830,4 @@
         ],
         },
 
-},
-},
+}

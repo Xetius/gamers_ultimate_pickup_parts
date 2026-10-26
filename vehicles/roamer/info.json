@@ -14,5 +14,14 @@
   "paints": {},
   "multiPaintSetups": [],
   "libraryPaints": [],
-  "paintCollections": ["roamer_factory", "gavril_twotone_factory", "roamer_custom", "G_pickup_factory_additional", "G_pickup_custom_additional"]
+  "paintCollections": [
+    "roamer_factory",
+    "gavril_twotone_factory",
+    "roamer_custom",
+    "G_pickup_factory_additional",
+    "G_pickup_custom_additional"
+  ],
+  "vehicleSelectorSubGroupOrder": {
+    "vehiclesData.roamer.4wd_facelift.vehicleSelectorSubGroup": -1
+  }
 }

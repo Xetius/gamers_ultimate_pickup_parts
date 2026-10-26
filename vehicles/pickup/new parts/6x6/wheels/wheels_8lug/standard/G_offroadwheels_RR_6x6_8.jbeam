@@ -9,7 +9,7 @@
 
     "slots": [
         ["type", "default", "description"],
-        ["G_tire_RR_6x6_17x9_offroad","G_tire_RR_6x6_33_12_17_offroad","Rear Rear Tires"],
+        ["G_tire_RR_6x6_17x9_offroad","tire_RR_6x6_33_12_17_offroad","Rear Rear Tires"],
     ],
     "flexbodies": [
         ["mesh", "[group]:", "nonFlexMaterials"],
